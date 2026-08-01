@@ -1,24 +1,32 @@
 # Wave Runbook — Threads Engine
 
-Self-contained instructions for one generation wave. Project folder: `C:\Users\vdomo\threads poster`.
-Waves: **morning** (~08:00 Kyiv) and **evening** (~18:00 Kyiv). Also used for manual runs.
+Self-contained instructions for one generation wave.
+Repo: https://github.com/dayvan777/threads-engine (public). Local checkout: `C:\Users\vdomo\threads poster`.
+Dashboard: `docs/index.html`, served at **https://dayvan777.github.io/threads-engine/** via GitHub Pages (master, /docs). Pushing to master IS the deploy.
+Waves: **morning** (~08:00 Kyiv = 05:00 UTC) and **evening** (~18:00 Kyiv = 15:00 UTC). Cloud runs execute in a fresh clone; local runs must `git pull` first.
 
 ## Steps
 
-1. **Read state.** Read `viral-patterns.md` (formula + scoring rubric) and `posts-history.md` (skip stories already used in any previous wave; check the Rejected list too — a rejected story may return only if there is a major new development).
+1. **Sync.** `git pull` (local) or work in the fresh clone (cloud). Read `viral-patterns.md` (formula + scoring rubric) and `posts-history.md` (skip stories already used; check the Rejected list — a rejected story returns only on a major new development).
 
-2. **Hunt news.** WebSearch 4-6 queries for AI/tech news from the last 12 hours. Query mix: "AI news today <date>", "OpenAI OR Anthropic OR Nvidia OR DeepSeek announcement", "tech IPO OR funding OR price change today", "AI layoffs OR jobs news", plus one query chasing whatever yesterday's biggest story was. Priority per patterns: money/access for regular people, job displacement, company conflict/drama, leaks & quiet changes — NOT press-release feature recaps. Collect 5-6 candidates with source URLs and publication dates. Verify freshness: discard anything older than ~24h unless it's a major escalation.
+2. **Hunt news.** WebSearch 4-6 queries for AI/tech news from the last 12 hours. Query mix: "AI news today <date>", "OpenAI OR Anthropic OR Nvidia OR DeepSeek announcement", "tech IPO OR funding OR price change today", "AI layoffs OR jobs news", plus one query chasing yesterday's biggest story. Priority per patterns: money/access for regular people, job displacement, company conflict/drama, leaks & quiet changes — NOT press-release feature recaps. Collect 5-6 candidates with source URLs and dates. Discard anything older than ~24h unless it's a major escalation.
 
-3. **Score and select.** Score each candidate with the rubric in `viral-patterns.md`. Keep top 3 (2 main + 1 backup). At least one post per wave should target a broad audience (money/jobs), at most one niche dev topic.
+3. **Score and select.** Score candidates with the rubric in `viral-patterns.md`. Keep top 3 (2 main + 1 backup). At least one post per wave targets a broad audience (money/jobs), at most one niche dev topic.
 
-4. **Write posts** in the account voice (see Post formula in `viral-patterns.md`): English, hook line with a number or named conflict, then 2-3 punchy sentences OR ≤6 "→" bullets, quotable punchline, ≤500 chars, no hashtags, no threads. Exactly one post in every 3 (track across waves in posts-history.md) gets the X CTA line: `I track this stuff daily on my X → x.com/dayvanxd` or an organic variant.
+4. **Write posts** in the account voice (Post formula in `viral-patterns.md`): English, hook line with a number or named conflict, then 2-3 punchy sentences OR ≤6 "→" bullets, quotable punchline, ≤500 chars, no hashtags, no threads. Exactly one post in every 3 (track across waves) gets the X CTA: `I track this stuff daily on my X → x.com/dayvanxd` or an organic variant.
 
-5. **Update `posts-history.md`.** Append the new wave section (same format as existing entries: score, pattern, status draft/backup, source, text). Mark all posts of the previous wave `[status: expired]` unless already marked `[status: posted]`. Record rejected candidates with one-line reasons.
+5. **Find media for each post** — 1-2 direct-download image links Vlad can attach. In order of preference:
+   - Wikimedia Commons logo/photo of the companies involved: `https://commons.wikimedia.org/wiki/Special:FilePath/<File_Name>.svg?width=1200` (verify the file exists via search before using).
+   - The news article's og:image (extract via WebFetch) if it's a direct image URL.
+   Every link must be a direct image download (opens as an image, not a webpage). Verify each with WebFetch or a browser tab if unsure.
 
-6. **Update the dashboard.** Edit `dashboard/dashboard.html`: replace the three post cards with the new wave (keep card markup: score badge s-high ≥8 / s-mid otherwise, pattern tags, CTA tag if applicable, source link with host + date, copy button). Update the status line (date + wave name + next wave time). Move the previous wave's posts into the "Прошлые волны" details section (keep only the most recent previous wave there). If viral-patterns.md changed, refresh the "Твои viral-паттерны" section.
+6. **Update `posts-history.md`.** Append the new wave section (same format: score, patterns, status draft/backup, source, media links, text). Mark previous wave posts `[status: expired]` unless `[status: posted]`. Record rejected candidates with one-line reasons.
 
-7. **Republish the artifact.** Read `dashboard/artifact-url.md` and follow its rules: same-session republish by file path, cross-session republish MUST pass the `url` parameter. Keep favicon 🧵.
+7. **Update `docs/index.html`.** Replace the three post cards with the new wave (keep markup: score badge s-high ≥8 / s-mid otherwise, pattern tags, CTA tag if applicable, media row with download links, source link host + date, copy button). Update the status line (date + wave name + next wave time). Move the previous wave into "Прошлые волны" (keep only the most recent previous wave there). If `viral-patterns.md` changed, refresh "Твои viral-паттерны".
 
-8. **On failure** (search down, publish error): write the error into the dashboard status line (`● error: <short text>` instead of `● ok`), republish if possible, and still commit whatever state changed. Never leave posts-history.md half-written.
+8. **Commit and push.** `git add -A && git commit -m "wave: <date> <morning|evening>" && git push`. The push deploys GitHub Pages automatically (may take 1-2 min).
 
-9. **Commit.** `git add -A && git commit -m "wave: <date> <morning|evening>"`.
+9. **On failure** (search down, push rejected): put the error into the dashboard status line (`● error: <short text>` instead of `● ok`), still commit and push whatever state changed. On push conflict: `git pull --rebase` then push again. Never leave posts-history.md half-written.
+
+## Deprecated
+The old Claude Artifact dashboard (see `dashboard/artifact-url.md`) is no longer updated — GitHub Pages is canonical.
