@@ -15,10 +15,10 @@ Waves: **morning** (~08:00 Kyiv = 05:00 UTC) and **evening** (~18:00 Kyiv = 15:0
 
 4. **Write posts** in the account voice (Post formula in `viral-patterns.md`): English, hook line with a number or named conflict, then 2-3 punchy sentences OR ≤6 "→" bullets, quotable punchline, ≤500 chars, no hashtags, no threads. Exactly one post in every 3 (track across waves) gets the X CTA: `I track this stuff daily on my X → x.com/dayvanxd` or an organic variant.
 
-5. **Find media for each post** — 1-2 direct-download image links Vlad can attach. In order of preference:
-   - Wikimedia Commons logo/photo of the companies involved: `https://commons.wikimedia.org/wiki/Special:FilePath/<File_Name>.svg?width=1200` (verify the file exists via search before using).
-   - The news article's og:image (extract via WebFetch) if it's a direct image URL.
-   Every link must be a direct image download (opens as an image, not a webpage). Verify each with WebFetch or a browser tab if unsure.
+5. **Find media for each post** — 1-2 direct-download image links Vlad can attach. **PNG or JPG only — Threads does not accept SVG attachments.** In order of preference:
+   - Wikimedia Commons logo/photo of the companies involved via `https://commons.wikimedia.org/wiki/Special:FilePath/<File_Name>.svg?width=1200` — the `?width=` parameter makes Commons render a PNG even for SVG files (verify the file exists via search before using).
+   - The news article's og:image (extract via WebFetch) if it's a direct PNG/JPG URL.
+   Never link a raw `.svg` file (e.g. raw.githubusercontent.com icons). Every link must open as a PNG/JPG image, not a webpage. Verify with WebFetch if unsure.
 
 6. **Update `posts-history.md`.** Append the new wave section (same format: score, patterns, status draft/backup, source, media links, text). Mark previous wave posts `[status: expired]` unless `[status: posted]`. Record rejected candidates with one-line reasons.
 
