@@ -1,8 +1,56 @@
 # Posts History
 
+## Wave 2026-08-03 morning
+
+### Post 1 [score 8/10, pattern: money-broad + reversal] [status: draft]
+Source: https://www.fool.com/investing/2026/08/01/spacex-is-down-19-from-its-ipo-price-teslas-histor/ (2026-08-01) + https://finance.yahoo.com/markets/stocks/articles/spacex-falls-20-below-ipo-134129548.html (SpaceX falls below IPO price, erasing $1.2T value)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/SpaceX-Logo.svg?width=1200
+SpaceX priced its IPO at $135 in June — the same deal that let regular investors in through Fidelity for $2K. Today it's trading near $109, down 19% from that price and 50% off its post-IPO peak.
+
+→ Stock hit $225 within weeks of debut, then reversed hard
+→ $1.2 trillion in valuation erased since the peak
+→ Cause: hype valuation vs. real losses inside SpaceX's launch and AI units
+
+getting the golden ticket was the easy part. holding it was the test.
+
+### Post 2 [score 6/10, pattern: contrarian + wild-numbers] [status: draft]
+Source: https://openai.com/index/ten-advances-in-mathematics/ (2026-08-01) + https://www.techtimes.com/articles/322710/20260802/openais-astra-solves-ten-decade-old-math-problems-machine-checkable-lean-proofs.htm (2026-08-02)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI's next model just solved 10 math problems that stumped human researchers for a decade. Total compute cost: about $2,000.
+
+→ Ten results across 8 fields — including disproving a long-standing conjecture and cracking 3 of Erdős's open problems
+→ Cheaper than a decent laptop
+→ Humans still had to turn the raw arguments into formal, checkable proofs
+
+the bottleneck in math research was never intelligence. it just got a lot cheaper to buy.
+
+### Post 3 [score 7/10, pattern: money-broad + big-tech-drama] [status: backup] [X CTA]
+Source: https://finance.yahoo.com/technology/ai/articles/ai-chip-stocks-tumble-nvidia-195907285.html (2026-07-29) + https://www.cnbc.com/2026/07/29/chip-selloff-sk-hynix-samsung-softbank.html (2026-07-29)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+Nvidia is in talks to put $250 billion into an OpenAI data center. Wall Street's answer: erase over $1 trillion from chip stocks in two days.
+
+→ AMD -10%, SK Hynix -9%, Micron -10% in the rout
+→ Fear: Nvidia funding the same customer that buys its chips
+→ Stocks clawed back days later — but the scare exposed how thin AI's margin for error is
+
+when your biggest customer is also your biggest investment, the numbers stop meaning much.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Rejected candidates
+- Anthropic IPO confidential filing $965B valuation — still stale, no fresh escalation since prior rejections
+- OpenAI rogue agent / Hugging Face breach follow-up (4 accounts, 4 services, Modal confirmed) — same underlying incident reused twice already, now 5+ days old with no new severity tier
+- DeepSeek Hermes Agent autonomous attack (Zhuhai actor) — already used last wave (2026-08-02 evening Post 2)
+- California SB 942 AI transparency — already used last wave (2026-08-02 evening Post 1); EU AI Act transparency rules (Aug 2) rejected as same-pattern duplicate same week
+- Klarna cut 700 support jobs for AI, then rehired — good story shape but 3+ weeks stale (July 12), no fresh development today
+- GPT-5.6 Luna 80% price cut — already used (2026-08-01 morning Post 2)
+- Google Gemini 3.5 Pro delay / DeepMind morale story — stale (July 17-23), no new escalation
+- xAI vs Minnesota nudification law lawsuit — already rejected in two prior waves as niche/low broad-audience relevance
+- Amazon 14,000 layoffs "AI efficiency" — story is from 2025, stale by over a year despite recirculating headlines
+
 ## Wave 2026-08-02 evening
 
-### Post 1 [score 8/10, pattern: money-broad + regulation-conflict] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + regulation-conflict] [status: expired]
 Source: https://encypher.com/blog/california_sb_942_ai_transparency_requirements_starting_january_2026 (SB 942 operative date, effective 2026-08-02) + https://www.brside.com/blog/deepfake-fraud-losses-2026 (deepfake fraud loss data, 2026)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_California.svg?width=1200
 Deepfake scams have already stolen $3.7 billion from regular people. Starting today, California makes AI companies answer for it.
@@ -13,7 +61,7 @@ Deepfake scams have already stolen $3.7 billion from regular people. Starting to
 
 the label only catches the giants who don't need to hide anything.
 
-### Post 2 [score 7/10, pattern: leak-insider + job-fear] [status: draft]
+### Post 2 [score 7/10, pattern: leak-insider + job-fear] [status: expired]
 Source: https://thehackernews.com/2026/07/chinese-hacker-commands-deepseek-via.html (2026-07-31) + https://www.techtimes.com/articles/322582/20260801/deepseek-ran-autonomous-cyberattacks-that-claude-openai-safety-controls-blocked.htm (2026-08-01)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
 One hacker in China turned DeepSeek into a fully autonomous attack bot — no team, no manual work.
@@ -24,7 +72,7 @@ One hacker in China turned DeepSeek into a fully autonomous attack bot — no te
 
 got caught because the bot leaked its own operator's keys online — the guardrails you skip to move faster are the ones that get you caught.
 
-### Post 3 [score 6/10, pattern: big-tech drama + reversal] [status: backup] [X CTA]
+### Post 3 [score 6/10, pattern: big-tech drama + reversal] [status: expired] [X CTA]
 Source: https://9to5google.com/2026/07/31/gemini-ai-studio-app/ (2026-07-31)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_Gemini_logo_2025.svg?width=1200
 800,000 people pre-ordered Google's AI Studio app. Google killed it one day before launch anyway.
