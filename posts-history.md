@@ -1,8 +1,55 @@
 # Posts History
 
+## Wave 2026-08-03 evening
+
+### Post 1 [score 7/10, pattern: money-broad + market-correlation] [status: draft]
+Source: https://ts2.tech/en/stock-market-today-03-08-2026/ (2026-08-03) + https://www.crowdfundinsider.com/2026/08/294634-ai-stock-pullback-weighs-on-bitcoin-btc-and-broader-digital-assets-markets-as-august-begins/ (AI stock pullback weighs on Bitcoin)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Bitcoin.svg?width=1200
+Bitcoin just dropped to $62,706, extending its slide into August. Crypto didn't cause it — AI and chip stocks cooled off, and Bitcoin fell right along with them.
+
+→ Fear & Greed Index: 25, "extreme fear" — down from 28 a week ago
+→ Ethereum -2.8%, Solana -2%, same stretch
+→ The "uncorrelated asset" pitch doesn't hold when AI stocks sneeze
+
+turns out your Bitcoin wallet and your Nvidia shares are betting on the same thing.
+
+### Post 2 [score 7/10, pattern: job-fear + hypocrisy-conflict] [status: draft]
+Source: https://www.lightreading.com/ai-machine-learning/at-t-and-verizon-cut-thousands-more-jobs-as-ai-backlash-grows (AT&T and Verizon cut thousands more jobs as AI backlash grows) + https://www.techtimes.com/articles/320972/20260719/verizon-cuts-16600-jobs-nine-months-its-ai-stack-nears-completion.htm (2026-07-19)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Verizon_2024.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/AT%26T_logo_2016.svg?width=1200
+Verizon's CEO says AI could push unemployment to 30% within five years. His own company just cut 3,000 more jobs — and says this round has nothing to do with AI.
+
+→ Verizon: 16,600+ jobs cut since October 2025, more cuts effective Aug 16
+→ AT&T: another 2,100 gone this year, on top of 8,000 last year
+→ Same CEO built a $20M "age of AI" retraining fund
+
+when the guy warning about AI unemployment is also the guy signing the layoff memo, the warning isn't a warning. it's cover.
+
+### Post 3 [score 6/10, pattern: contrarian + named-conflict] [status: backup] [X CTA]
+Source: https://www.techtimes.com/articles/322674/20260802/ai4-2026-opens-tuesday-hinton-ng-face-off-ais-existential-stakes.htm (2026-08-02)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Geoffrey_E._Hinton,_2024_Nobel_Prize_Laureate_in_Physics.jpg?width=1200
+Two of AI's founding fathers share a stage this week — and can't agree if AI might end humanity.
+
+→ Hinton: 10-20% chance AI causes human extinction — no company can fix it alone
+→ Ng: told the US Senate there's no plausible extinction path — calls the doom talk a competitive weapon
+→ Same stage, opposite conclusions
+
+the people who built this can't agree if it's dangerous. that should worry you more than either answer.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Rejected candidates
+- SpaceX IPO decline — already used this morning (2026-08-03 morning Post 1), same story
+- Nvidia $250B OpenAI financing risk — already used prior wave (2026-08-02 morning Post 3), same underlying story continuing
+- Anthropic confidential IPO filing $965B valuation — still stale, no fresh escalation since multiple prior rejections
+- OpenAI ChatGPT for Academic Researchers (100K free access) — announced July 29, 5 days stale, no new escalation today
+- OpenAI/Anthropic rogue-agent cybersecurity disclosures — same incidents already used in two prior waves
+- Microsoft Project Perception public preview — pure enterprise product launch, reads like a press-release recap, no conflict or regular-people stake
+- OpenAI coding-agents-modernize-research-software field report — niche dev/research audience, no broad hook, and wave already has two broad-audience posts
+- Intuit 3,000 layoffs / AI restructuring — stale (announced May 20, 2026), no fresh development today
+
 ## Wave 2026-08-03 morning
 
-### Post 1 [score 8/10, pattern: money-broad + reversal] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + reversal] [status: expired]
 Source: https://www.fool.com/investing/2026/08/01/spacex-is-down-19-from-its-ipo-price-teslas-histor/ (2026-08-01) + https://finance.yahoo.com/markets/stocks/articles/spacex-falls-20-below-ipo-134129548.html (SpaceX falls below IPO price, erasing $1.2T value)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/SpaceX-Logo.svg?width=1200
 SpaceX priced its IPO at $135 in June — the same deal that let regular investors in through Fidelity for $2K. Today it's trading near $109, down 19% from that price and 50% off its post-IPO peak.
@@ -13,7 +60,7 @@ SpaceX priced its IPO at $135 in June — the same deal that let regular investo
 
 getting the golden ticket was the easy part. holding it was the test.
 
-### Post 2 [score 6/10, pattern: contrarian + wild-numbers] [status: draft]
+### Post 2 [score 6/10, pattern: contrarian + wild-numbers] [status: expired]
 Source: https://openai.com/index/ten-advances-in-mathematics/ (2026-08-01) + https://www.techtimes.com/articles/322710/20260802/openais-astra-solves-ten-decade-old-math-problems-machine-checkable-lean-proofs.htm (2026-08-02)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI's next model just solved 10 math problems that stumped human researchers for a decade. Total compute cost: about $2,000.
@@ -24,7 +71,7 @@ OpenAI's next model just solved 10 math problems that stumped human researchers 
 
 the bottleneck in math research was never intelligence. it just got a lot cheaper to buy.
 
-### Post 3 [score 7/10, pattern: money-broad + big-tech-drama] [status: backup] [X CTA]
+### Post 3 [score 7/10, pattern: money-broad + big-tech-drama] [status: expired] [X CTA]
 Source: https://finance.yahoo.com/technology/ai/articles/ai-chip-stocks-tumble-nvidia-195907285.html (2026-07-29) + https://www.cnbc.com/2026/07/29/chip-selloff-sk-hynix-samsung-softbank.html (2026-07-29)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 Nvidia is in talks to put $250 billion into an OpenAI data center. Wall Street's answer: erase over $1 trillion from chip stocks in two days.
