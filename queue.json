@@ -1,0 +1,16 @@
+[
+  {
+    "id": "2026-08-04-evening-1",
+    "wave": "2026-08-04 evening",
+    "text": "Nvidia dropped 5% in two days — spooked by a $250 billion promise it made to itself.\n\n→ Reported deal: Nvidia backstops $250B so OpenAI can lease AI data center capacity\n→ Translation: the chipmaker is now financing the customer who buys its chips\n→ Analysts flag $800B+ of these circular deals across the whole AI industry\n→ BIS's own 2026 report named this exact structure a top financial risk\n\nif you hold an index fund, you're betting on a company betting on the company betting on it.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-04-evening-2",
+    "wave": "2026-08-04 evening",
+    "text": "A task that costs $3.15 on Claude costs 3 cents on a Chinese model — Anthropic can't match that price without losing money.\n\n→ DeepSeek V4 Flash: ~$0.03 per complex workload vs Claude Fable 5's $3.15 — about 100x cheaper\n→ Alibaba's Qwen3.8-Max, launched this week, already beats Fable 5 on several benchmarks\n→ Anthropic is projecting its first-ever profitable quarter — a real price war erases that\n\nthe moat was capability. china just made capability cheap too.",
+    "image_url": null,
+    "status": "queued"
+  }
+]
