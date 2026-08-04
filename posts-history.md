@@ -1,8 +1,56 @@
 # Posts History
 
+## Wave 2026-08-04 evening
+
+### Post 1 [score 8/10, pattern: money-broad + big-tech-drama] [status: draft]
+Source: https://finance.yahoo.com/markets/article/nvidia-drops-nearly-5-leading-chip-stocks-lower-amid-renewed-worries-of-circular-financing-193309793.html (2026-08-03/04) + https://www.tftc.io/bis-annual-report-2026-ai-bubble-circular-financing-sovereign-debt (BIS 2026 report)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+Nvidia dropped 5% in two days — spooked by a $250 billion promise it made to itself.
+
+→ Reported deal: Nvidia backstops $250B so OpenAI can lease AI data center capacity
+→ Translation: the chipmaker is now financing the customer who buys its chips
+→ Analysts flag $800B+ of these circular deals across the whole AI industry
+→ BIS's own 2026 report named this exact structure a top financial risk
+
+if you hold an index fund, you're betting on a company betting on the company betting on it.
+
+### Post 2 [score 7/10, pattern: big-tech-drama + contrarian] [status: draft]
+Source: https://www.bloomberg.com/news/articles/2026-08-04/china-s-ai-blitz-creates-death-zone-for-rival-us-model-makers (2026-08-04) + https://venturebeat.com/technology/qwen3-8-max-arrives-with-a-bold-claim-it-outperforms-gpt-5-6-sol-max-and-fable-5-on-agentic-computer-use (2026-08-03/04)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
+A task that costs $3.15 on Claude costs 3 cents on a Chinese model — Anthropic can't match that price without losing money.
+
+→ DeepSeek V4 Flash: ~$0.03 per complex workload vs Claude Fable 5's $3.15 — about 100x cheaper
+→ Alibaba's Qwen3.8-Max, launched this week, already beats Fable 5 on several benchmarks
+→ Anthropic is projecting its first-ever profitable quarter — a real price war erases that
+
+the moat was capability. china just made capability cheap too.
+
+### Post 3 [score 5/10, pattern: money-access + contrarian] [status: backup] [X CTA]
+Source: https://www.prnewswire.com/news-releases/yellowai-a-global-leader-in-enterprise-agentic-ai-to-go-public-via-550-million-merger-with-bluerock-acquisition-corp-nasdaq-blrk-302840634.html (2026-08-03)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Yellow.ai_Logo.png?width=1200
+An enterprise AI chatbot startup just found a $550 million backdoor onto Nasdaq — and regular investors can walk through it in weeks.
+
+→ Yellow.ai (650+ enterprise clients) is merging with a SPAC shell instead of filing a normal IPO
+→ Ticker YAI trades once the deal closes — no year of roadshows, no IPO-only allocation
+→ $550M valuation against ~$34M in disclosed revenue — a bet on growth, not current numbers
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Rejected candidates
+- Palantir/Karp "Marxist" AI industry quote — same story already used this morning (2026-08-04 morning Post 2)
+- Anthropic book-settlement checks — same story already used this morning (2026-08-04 morning Post 1)
+- Alibaba Qwen3.8-Max benchmark table on its own — reads as a pure feature/benchmark recap without the pricing-war stakes; folded into Post 2 instead of standing alone
+- Lilian Weng resigns Thinking Machines "for health," rejoins OpenAI within 24h to lead recursive self-improvement — strong hypocrisy angle but the actual event is 5-6 days old (July 29-30) with no new escalation today, fails the ~24h freshness bar
+- xAI sues Minnesota over "nudification" ban, law took effect Aug 1, judge denied TRO — real conflict but thin numbers and a narrower policy audience than the money/big-tech-drama posts already selected
+- OpenAI Astra solved 10 open math problems for ~$2,000 — still unverified/unpublished (no peer review), same status as when rejected 2026-08-01; results still awaiting public release
+- General 2026 layoffs tracker (953/day, 205,832 workers) — same tracker already used in an earlier wave (2026-08-01 first-batch Post 2)
+- Apple vs Nvidia market-cap swap — the specific swap dates (July 17, July 27) are stale; used the fresher Aug 3-4 circular-financing selloff instead as Post 1
+
+**Note:** WebFetch (page-content/og:image fetch tool) returned 403 on every domain tried this run (TechCrunch, Bloomberg, Wikipedia, Wikimedia Commons itself) — an environment/tool-level outage, not a per-site block. WebSearch was unaffected and used for all research. Media links below were verified the fallback way the runbook allows: confirmed each exact Commons filename exists via search rather than via WebFetch content-type check.
+
 ## Wave 2026-08-04 morning
 
-### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: expired]
 Source: https://authorsguild.org/news/court-grants-final-approval-anthropic-copyright-settlement/ (2026-07-20 final approval) + https://openclassactions.com/settlements/anthropic-ai-books-copyright-settlement.php (payout timeline, est. Aug 10)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 If you ever published a book, Anthropic might owe you $3,000 — and the checks start going out next week.
@@ -13,7 +61,7 @@ If you ever published a book, Anthropic might owe you $3,000 — and the checks 
 
 built its AI on stolen copies, got caught, and now it's writing checks to the authors it copied.
 
-### Post 2 [score 6/10, pattern: big-tech-drama + contrarian] [status: draft]
+### Post 2 [score 6/10, pattern: big-tech-drama + contrarian] [status: expired]
 Source: https://techcrunch.com/2026/08/03/after-killer-quarter-palantir-ceo-alex-karp-calls-ai-industry-marxist/ (2026-08-03) + https://www.cnbc.com/2026/08/03/palantir-karp-open-ai-anthropic-open-weight.html (2026-08-03)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Palantir_Technologies_logo.svg?width=1200
 Palantir just posted $1.1 billion in quarterly profit — and its CEO used the moment to attack the entire AI industry.
@@ -24,7 +72,7 @@ Palantir just posted $1.1 billion in quarterly profit — and its CEO used the m
 
 the guy selling you protection from AI runs a company built on AI.
 
-### Post 3 [score 6/10, pattern: leak-insider + contrarian] [status: backup] [X CTA]
+### Post 3 [score 6/10, pattern: leak-insider + contrarian] [status: expired] [X CTA]
 Source: https://techjacksolutions.com/ai-brief/claude-sonnet-5-tokenizer-cost-api-pricing/ (tokenizer overhead) + https://www.finout.io/blog/claude-sonnet-5-pricing-2026-the-hidden-costs-and-real-savings-behind-the-cost-neutral-launch (pricing timeline)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Claude_AI_symbol.svg?width=1200
 Claude Sonnet 5 got quietly more expensive — three weeks before the actual price hike.
