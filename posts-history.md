@@ -1,8 +1,55 @@
 # Posts History
 
+## Wave 2026-08-04 morning
+
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft]
+Source: https://authorsguild.org/news/court-grants-final-approval-anthropic-copyright-settlement/ (2026-07-20 final approval) + https://openclassactions.com/settlements/anthropic-ai-books-copyright-settlement.php (payout timeline, est. Aug 10)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+If you ever published a book, Anthropic might owe you $3,000 — and the checks start going out next week.
+
+→ $1.5B settlement over pirated books used to train Claude, finalized July 20
+→ ~482,460 works covered, ~$3,000 each
+→ First payments estimated by August 10
+
+built its AI on stolen copies, got caught, and now it's writing checks to the authors it copied.
+
+### Post 2 [score 6/10, pattern: big-tech-drama + contrarian] [status: draft]
+Source: https://techcrunch.com/2026/08/03/after-killer-quarter-palantir-ceo-alex-karp-calls-ai-industry-marxist/ (2026-08-03) + https://www.cnbc.com/2026/08/03/palantir-karp-open-ai-anthropic-open-weight.html (2026-08-03)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Palantir_Technologies_logo.svg?width=1200
+Palantir just posted $1.1 billion in quarterly profit — and its CEO used the moment to attack the entire AI industry.
+
+→ Alex Karp says frontier labs like OpenAI and Anthropic want to "colonize your enterprise"
+→ His words: they're "trying to drug addict us" to their platforms
+→ Palantir revenue up 93% year-over-year, a record quarter
+
+the guy selling you protection from AI runs a company built on AI.
+
+### Post 3 [score 6/10, pattern: leak-insider + contrarian] [status: backup] [X CTA]
+Source: https://techjacksolutions.com/ai-brief/claude-sonnet-5-tokenizer-cost-api-pricing/ (tokenizer overhead) + https://www.finout.io/blog/claude-sonnet-5-pricing-2026-the-hidden-costs-and-real-savings-behind-the-cost-neutral-launch (pricing timeline)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Claude_AI_symbol.svg?width=1200
+Claude Sonnet 5 got quietly more expensive — three weeks before the actual price hike.
+
+→ New tokenizer burns ~35% more tokens for the same text vs Sonnet 4.6
+→ Official price still jumps 50% on September 1 ($2→$3 per million tokens)
+→ Users only noticed from bigger bills on identical work
+
+the sticker price didn't move. the meter just started spinning faster.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Rejected candidates
+- Bitcoin/AI stock pullback continuation — same underlying story already used last wave (2026-08-03 evening Post 1), no major new escalation (BTC recovering, not extending the drop)
+- Hinton vs Ng AI4 2026 extinction debate — already used last wave (2026-08-03 evening Post 3, backup), conference opening today isn't a major new development over the framing already posted
+- OpenAI additional AI containment breach disclosures — same underlying incident already used twice (2026-08-02 morning Post 1, 2026-08-02 evening Post 2); Reuters follow-up is 3 days old and explicitly "limited in scope," not a major escalation
+- Verizon/AT&T layoffs — same story, same figures already used last wave (2026-08-03 evening Post 2)
+- EU AI Act high-risk provisions enforceable — 2 days old, compliance-focused, reads like a regulation recap with no regular-people stake (SB 942 already covered similar ground)
+- Monday.com AI layoffs — stale (announced July 22), Altman "AI washing" quote is good but story itself isn't from the last 24h
+- Google Gemini free video trial ending tonight — real deadline but thin numbers (10 free videos), weaker hook than the settlement story already covering money/access
+- General 2026 layoffs tracker (957/day) — same pattern and same tracker already used in an earlier wave (2026-08-01 first-batch Post 2)
+
 ## Wave 2026-08-03 evening
 
-### Post 1 [score 7/10, pattern: money-broad + market-correlation] [status: draft]
+### Post 1 [score 7/10, pattern: money-broad + market-correlation] [status: expired]
 Source: https://ts2.tech/en/stock-market-today-03-08-2026/ (2026-08-03) + https://www.crowdfundinsider.com/2026/08/294634-ai-stock-pullback-weighs-on-bitcoin-btc-and-broader-digital-assets-markets-as-august-begins/ (AI stock pullback weighs on Bitcoin)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Bitcoin.svg?width=1200
 Bitcoin just dropped to $62,706, extending its slide into August. Crypto didn't cause it — AI and chip stocks cooled off, and Bitcoin fell right along with them.
@@ -13,7 +60,7 @@ Bitcoin just dropped to $62,706, extending its slide into August. Crypto didn't 
 
 turns out your Bitcoin wallet and your Nvidia shares are betting on the same thing.
 
-### Post 2 [score 7/10, pattern: job-fear + hypocrisy-conflict] [status: draft]
+### Post 2 [score 7/10, pattern: job-fear + hypocrisy-conflict] [status: expired]
 Source: https://www.lightreading.com/ai-machine-learning/at-t-and-verizon-cut-thousands-more-jobs-as-ai-backlash-grows (AT&T and Verizon cut thousands more jobs as AI backlash grows) + https://www.techtimes.com/articles/320972/20260719/verizon-cuts-16600-jobs-nine-months-its-ai-stack-nears-completion.htm (2026-07-19)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Verizon_2024.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/AT%26T_logo_2016.svg?width=1200
 Verizon's CEO says AI could push unemployment to 30% within five years. His own company just cut 3,000 more jobs — and says this round has nothing to do with AI.
@@ -24,7 +71,7 @@ Verizon's CEO says AI could push unemployment to 30% within five years. His own 
 
 when the guy warning about AI unemployment is also the guy signing the layoff memo, the warning isn't a warning. it's cover.
 
-### Post 3 [score 6/10, pattern: contrarian + named-conflict] [status: backup] [X CTA]
+### Post 3 [score 6/10, pattern: contrarian + named-conflict] [status: expired] [X CTA]
 Source: https://www.techtimes.com/articles/322674/20260802/ai4-2026-opens-tuesday-hinton-ng-face-off-ais-existential-stakes.htm (2026-08-02)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Geoffrey_E._Hinton,_2024_Nobel_Prize_Laureate_in_Physics.jpg?width=1200
 Two of AI's founding fathers share a stage this week — and can't agree if AI might end humanity.
