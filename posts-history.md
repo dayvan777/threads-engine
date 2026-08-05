@@ -1,8 +1,60 @@
 # Posts History
 
+## Wave 2026-08-05 morning
+
+### Post 1 [score 9/10, pattern: money-access + urgency-deadline] [status: draft]
+Source: https://www.roic.ai/news/spacex-faces-lock-up-selling-pressure-as-insider-shares-become-eligible-for-trading-08-03-2026 + https://www.bloomberg.com/news/articles/2026-08-04/spacex-exceeds-revenue-estimates-in-first-earnings-since-ipo (2026-08-04)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/SpaceX-Logo.svg?width=1200
+Tomorrow, $116 billion of SpaceX stock unlocks for insiders to sell.
+
+→ Aug 6: 911.5M shares become eligible — the first of several staggered unlocks
+→ Trigger: tied to Tuesday's earnings, which beat estimates but showed $18.4B in quarterly AI/data-center spending
+→ Stock is already down ~50% from its post-IPO peak
+→ Musk's own shares stay locked until mid-2027 — this unlock is everyone else's
+
+the same Fidelity door that let regular people in at $135 now swings both ways.
+
+### Post 2 [score 7/10, pattern: money-broad + contrarian] [status: draft] [X CTA]
+Source: https://www.tradingkey.com/analysis/stocks/us-stocks/262074451-amd-q2-2026-earnings-double-beat-stock-falls-tradingkey + https://wmbdradio.com/2026/08/04/amd-forecasts-revenue-above-estimates-on-ai-chip-demand-but-shares-fall/ (2026-08-04)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/AMD_Logo.svg?width=1200
+AMD just beat every earnings estimate on the board — and lost 8% of its value overnight.
+
+→ Revenue $11.54B, up 52% YoY, beat estimates
+→ Data-center revenue more than doubled to $6.72B
+→ Adjusted profit beat too: $1.66/share vs $1.62 expected
+→ Stock fell anyway — investors wanted a bigger AI number than "beat"
+
+beating Wall Street isn't enough anymore. you have to out-hype it too.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 5/10, pattern: leak-insider + niche-dev] [status: backup]
+Source: https://therouter.ai/news/anthropic-deprecates-claude-opus-4-1-august-5-migration-guide/ + https://platform.claude.com/docs/en/about-claude/model-deprecations (retirement date 2026-08-05)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Claude Opus 4.1 died today — quietly, on schedule, exactly 60 days after Anthropic warned it would.
+
+→ Retired August 5: the exact date named in the June 5 deprecation notice
+→ API calls to the old model now just fail
+→ Anthropic's fix: migrate to Opus 4.8 — or the newer Opus 5, already out weeks ago at the same price
+→ Opus 5 already beats 4.8 on reasoning and agentic coding
+
+the models don't get obituaries. they just stop answering.
+
+### Rejected candidates
+- Nvidia $250B circular-financing guarantee for OpenAI — same story already used last wave (2026-08-04 evening Post 1)
+- DeepSeek V4 Flash / Qwen3.8-Max price war — same story already used last wave (2026-08-04 evening Post 2)
+- General 2026 layoffs tracker (322 events, 205,832 workers) — identical numbers to the July 31 snapshot already used (2026-08-01 first-batch Post 2); tracker hasn't updated, not fresh
+- EU AI Act disclosure rules (Aug 2) — rejected as stale/duplicate twice already (2026-08-02, 2026-08-04 morning)
+- Claude Opus 5 launch (half price of Fable 5, step-change reasoning gains) — real but launched July 24, ~12 days old, no new escalation today
+- Monday.com AI layoffs — still stale (announced July 22), already rejected before
+- Goldman Sachs/MIT AI job-displacement stats (25M jobs, 11.7% of labor) — evergreen aggregator claims, not pegged to a dated event in the last 24h
+- NVIDIA Open Secure AI Alliance membership drama — continued coverage of a story already rejected as stale in prior waves, no new escalation
+
+**Note:** WebFetch (page-content fetch tool) returned 403 on every domain tried this run, including non-news domains (example.com, Wikipedia) — an environment/tool-level outage, not a per-site block, matching the same outage noted in the 2026-08-04 evening wave. WebSearch was unaffected and used for all research and media verification. Media links below use the fallback the runbook allows: confirmed each exact Commons filename exists via search rather than via WebFetch content-type check.
+
 ## Wave 2026-08-04 evening
 
-### Post 1 [score 8/10, pattern: money-broad + big-tech-drama] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + big-tech-drama] [status: expired]
 Source: https://finance.yahoo.com/markets/article/nvidia-drops-nearly-5-leading-chip-stocks-lower-amid-renewed-worries-of-circular-financing-193309793.html (2026-08-03/04) + https://www.tftc.io/bis-annual-report-2026-ai-bubble-circular-financing-sovereign-debt (BIS 2026 report)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 Nvidia dropped 5% in two days — spooked by a $250 billion promise it made to itself.
@@ -14,7 +66,7 @@ Nvidia dropped 5% in two days — spooked by a $250 billion promise it made to i
 
 if you hold an index fund, you're betting on a company betting on the company betting on it.
 
-### Post 2 [score 7/10, pattern: big-tech-drama + contrarian] [status: draft]
+### Post 2 [score 7/10, pattern: big-tech-drama + contrarian] [status: expired]
 Source: https://www.bloomberg.com/news/articles/2026-08-04/china-s-ai-blitz-creates-death-zone-for-rival-us-model-makers (2026-08-04) + https://venturebeat.com/technology/qwen3-8-max-arrives-with-a-bold-claim-it-outperforms-gpt-5-6-sol-max-and-fable-5-on-agentic-computer-use (2026-08-03/04)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
 A task that costs $3.15 on Claude costs 3 cents on a Chinese model — Anthropic can't match that price without losing money.
@@ -25,7 +77,7 @@ A task that costs $3.15 on Claude costs 3 cents on a Chinese model — Anthropic
 
 the moat was capability. china just made capability cheap too.
 
-### Post 3 [score 5/10, pattern: money-access + contrarian] [status: backup] [X CTA]
+### Post 3 [score 5/10, pattern: money-access + contrarian] [status: expired] [X CTA]
 Source: https://www.prnewswire.com/news-releases/yellowai-a-global-leader-in-enterprise-agentic-ai-to-go-public-via-550-million-merger-with-bluerock-acquisition-corp-nasdaq-blrk-302840634.html (2026-08-03)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Yellow.ai_Logo.png?width=1200
 An enterprise AI chatbot startup just found a $550 million backdoor onto Nasdaq — and regular investors can walk through it in weeks.
