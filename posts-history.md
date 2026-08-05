@@ -1,8 +1,57 @@
 # Posts History
 
+## Wave 2026-08-05 evening
+
+### Post 1 [score 6/10, pattern: money-broad + drama-conflict] [status: draft]
+Source: https://www.forbes.com/sites/tylerroush/2026/08/04/palantir-ceo-alex-karp-surges-67-places-in-forbes-billionaire-ranks-as-stock-skyrockets-30/ (2026-08-04) + https://techcrunch.com/2026/08/03/after-killer-quarter-palantir-ceo-alex-karp-calls-ai-industry-marxist/ (2026-08-03)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Palantir_Technologies_logo.svg?width=1200
+Palantir's CEO called the AI industry "Marxist" on Monday. By Tuesday his own AI stock had made him $3.1 billion richer — in a single day.
+
+→ Shares surged ~30% Tuesday — the stock's best day in a year
+→ Revenue up 93% YoY, commercial revenue up 149% to $764M
+→ Karp's net worth: $12.2B → $15.3B overnight
+→ Jumped 67 spots on Forbes' billionaire list, now the 199th-richest person alive
+
+calling it a drug dealer hits different when you're holding $15B of the product.
+
+### Post 2 [score 5/10, pattern: big-tech-drama + contrarian] [status: draft]
+Source: https://www.tftc.io/ninth-circuit-cfaa-amazon-perplexity-comet-browser-ruling (2026-08-04) + https://dataconomy.com/2026/08/05/perplexity-amazon-injunction-court-ruling/ (2026-08-05)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Perplexity_AI_logo.svg?width=1200
+AI shopping agents don't need Amazon's permission anymore — a federal court says the developer isn't liable either.
+
+→ Ninth Circuit vacated Amazon's injunction against Perplexity's Comet agent
+→ Ruling: users, not Perplexity, "access" Amazon under federal hacking law
+→ Reverses a March order blocking Comet from logged-in Amazon accounts
+→ First federal appeals ruling on AI-agent liability
+
+your agent can shop without asking the store — the store just has to live with it.
+
+### Post 3 [score 4/10, pattern: contrarian-dev + niche-dev] [status: backup]
+Source: https://www.rust-lang.org (LLM policy, published 2026-08-05) + https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html (context, unrelated)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Rust_programming_language_black_logo.svg?width=1200
+Rust just told AI: you can help, but you can't create.
+
+→ rust-lang's new LLM policy: models may "answer, analyze, distill, refine, check, suggest, review" — not write the actual code
+→ Published August 5, after months of maintainer debate over AI-generated PRs
+→ Aimed at one of the most safety-critical languages in systems programming
+→ No blanket ban — just a hard line around authorship
+
+the compiler will still catch your bugs. the maintainers just don't want your commits.
+
+### Rejected candidates
+- SpaceX $116B insider unlock (Aug 6) — same story already used this morning (2026-08-05 morning Post 1), unlock is still a day away, no new escalation since
+- AMD earnings beat / stock drop — same story already used this morning (2026-08-05 morning Post 2)
+- OpenAI GPT-5.6 Luna 80% price cut, undercutting Anthropic Haiku 4.5 — real price-war story but the cut happened July 30, ~6 days old with no new escalation today; fails the ~24h freshness bar
+- Anaconda acquires Enkrypt AI (AI security) — no disclosed deal price, reads as a press-release feature/acquisition recap with no conflict or stakes
+- General 2026 layoffs tracker (322 events, 205,832 workers, 953/day) — same aggregator numbers already rejected repeatedly as stale/duplicate
+- Nvidia stock +4.31% today — pure price move with no news trigger or conflict, too thin to carry a post
+- AI subscription pricing roundup (Google AI Plus, ChatGPT Go, Claude Pro annual discount) — evergreen aggregator content, not pegged to a single dated event in the last 24h
+
+**Note:** WebFetch (page-content fetch tool) returned 403 again this run (tested on Wikimedia Commons directly) — the same environment-level outage noted in every recent wave. WebSearch was unaffected and used for all research and media verification. Media links below use the fallback the runbook allows: confirmed each exact Commons filename exists via search rather than via WebFetch content-type check.
+
 ## Wave 2026-08-05 morning
 
-### Post 1 [score 9/10, pattern: money-access + urgency-deadline] [status: draft]
+### Post 1 [score 9/10, pattern: money-access + urgency-deadline] [status: expired]
 Source: https://www.roic.ai/news/spacex-faces-lock-up-selling-pressure-as-insider-shares-become-eligible-for-trading-08-03-2026 + https://www.bloomberg.com/news/articles/2026-08-04/spacex-exceeds-revenue-estimates-in-first-earnings-since-ipo (2026-08-04)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/SpaceX-Logo.svg?width=1200
 Tomorrow, $116 billion of SpaceX stock unlocks for insiders to sell.
@@ -14,7 +63,7 @@ Tomorrow, $116 billion of SpaceX stock unlocks for insiders to sell.
 
 the same Fidelity door that let regular people in at $135 now swings both ways.
 
-### Post 2 [score 7/10, pattern: money-broad + contrarian] [status: draft] [X CTA]
+### Post 2 [score 7/10, pattern: money-broad + contrarian] [status: expired] [X CTA]
 Source: https://www.tradingkey.com/analysis/stocks/us-stocks/262074451-amd-q2-2026-earnings-double-beat-stock-falls-tradingkey + https://wmbdradio.com/2026/08/04/amd-forecasts-revenue-above-estimates-on-ai-chip-demand-but-shares-fall/ (2026-08-04)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/AMD_Logo.svg?width=1200
 AMD just beat every earnings estimate on the board — and lost 8% of its value overnight.
@@ -28,7 +77,7 @@ beating Wall Street isn't enough anymore. you have to out-hype it too.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 5/10, pattern: leak-insider + niche-dev] [status: backup]
+### Post 3 [score 5/10, pattern: leak-insider + niche-dev] [status: expired]
 Source: https://therouter.ai/news/anthropic-deprecates-claude-opus-4-1-august-5-migration-guide/ + https://platform.claude.com/docs/en/about-claude/model-deprecations (retirement date 2026-08-05)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Claude Opus 4.1 died today — quietly, on schedule, exactly 60 days after Anthropic warned it would.

@@ -4,14 +4,14 @@
     "wave": "2026-08-04 evening",
     "text": "Nvidia dropped 5% in two days — spooked by a $250 billion promise it made to itself.\n\n→ Reported deal: Nvidia backstops $250B so OpenAI can lease AI data center capacity\n→ Translation: the chipmaker is now financing the customer who buys its chips\n→ Analysts flag $800B+ of these circular deals across the whole AI industry\n→ BIS's own 2026 report named this exact structure a top financial risk\n\nif you hold an index fund, you're betting on a company betting on the company betting on it.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-04-evening-2",
     "wave": "2026-08-04 evening",
     "text": "A task that costs $3.15 on Claude costs 3 cents on a Chinese model — Anthropic can't match that price without losing money.\n\n→ DeepSeek V4 Flash: ~$0.03 per complex workload vs Claude Fable 5's $3.15 — about 100x cheaper\n→ Alibaba's Qwen3.8-Max, launched this week, already beats Fable 5 on several benchmarks\n→ Anthropic is projecting its first-ever profitable quarter — a real price war erases that\n\nthe moat was capability. china just made capability cheap too.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-05-morning-1",
@@ -24,6 +24,20 @@
     "id": "2026-08-05-morning-2",
     "wave": "2026-08-05 morning",
     "text": "AMD just beat every earnings estimate on the board — and lost 8% of its value overnight.\n\n→ Revenue $11.54B, up 52% YoY, beat estimates\n→ Data-center revenue more than doubled to $6.72B\n→ Adjusted profit beat too: $1.66/share vs $1.62 expected\n→ Stock fell anyway — investors wanted a bigger AI number than \"beat\"\n\nbeating Wall Street isn't enough anymore. you have to out-hype it too.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-05-evening-1",
+    "wave": "2026-08-05 evening",
+    "text": "Palantir's CEO called the AI industry \"Marxist\" on Monday. By Tuesday his own AI stock had made him $3.1 billion richer — in a single day.\n\n→ Shares surged ~30% Tuesday — the stock's best day in a year\n→ Revenue up 93% YoY, commercial revenue up 149% to $764M\n→ Karp's net worth: $12.2B → $15.3B overnight\n→ Jumped 67 spots on Forbes' billionaire list, now the 199th-richest person alive\n\ncalling it a drug dealer hits different when you're holding $15B of the product.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-05-evening-2",
+    "wave": "2026-08-05 evening",
+    "text": "AI shopping agents don't need Amazon's permission anymore — a federal court says the developer isn't liable either.\n\n→ Ninth Circuit vacated Amazon's injunction against Perplexity's Comet agent\n→ Ruling: users, not Perplexity, \"access\" Amazon under federal hacking law\n→ Reverses a March order blocking Comet from logged-in Amazon accounts\n→ First federal appeals ruling on AI-agent liability\n\nyour agent can shop without asking the store — the store just has to live with it.",
     "image_url": null,
     "status": "queued"
   }
