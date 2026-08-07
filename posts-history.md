@@ -1,8 +1,58 @@
 # Posts History
 
+## Wave 2026-08-07 morning
+
+### Post 1 [score 7/10, pattern: money-broad + conflict] [status: draft] [X CTA]
+Source: https://stocktwits.com/news-articles/markets/equity/pltr-stock-s-30-surge-has-left-short-sellers-with-3-b-losses/cZo5D2ERJ4K (2026-08-05/06) + https://stocktwits.com/news-articles/markets/equity/palantir-ai-rally-burry-short-cathie-wood-ark-trims-holdings/cZo4iRPRJ4C (2026-08-06)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Palantir_Technologies_logo.svg?width=1200
+Palantir jumped 30% in a day, burning short sellers for $3B. The man who called 2008 doubled down anyway.
+
+→ Q2 revenue $1.94B, up 93% YoY, beat every estimate
+→ Karp: AI demand "otherworldly" — stock's best day in a year
+→ Burry had halved his short in June, before the rally
+→ His reaction: he wishes he'd shorted $1 trillion, not less
+
+he called the 2008 crash. now he's underwater on his own short.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 2 [score 6/10, pattern: big-tech-drama + conflict] [status: draft]
+Source: https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/ (2026-08-04) + https://qz.com/apple-preliminary-injunction-openai-trade-secrets-080426 (2026-08-04)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+Apple asked a federal court to freeze OpenAI's hardware plans — and named 11 more ex-employees as suspects.
+
+→ Filed Monday: injunction against OpenAI and two named ex-Apple engineers
+→ Apple: faces "irreparable harm" if OpenAI ships hardware built on its secrets
+→ Depositions demanded for staff who moved from Apple to OpenAI
+→ OpenAI's reply: it doesn't "have, nor want" any of Apple's trade secrets
+
+Apple didn't just lose engineers to a rival — it thinks it lost its playbook too.
+
+### Post 3 [score 6/10, pattern: leak-insider + ecosystem-drama] [status: backup]
+Source: https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/ (2026-08-05) + https://www.forbes.com/sites/richardnieva/2026/08/06/google-deepmind-london-mountain-view/ (2026-08-06)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_2015_logo.svg?width=1200
+Google just centralized its AI leadership to catch up — and lost the guy who built half of it, same week.
+
+→ Jeff Dean exits after 27 years to co-found Discovery Loop, an AI-for-science startup
+→ Taking three more with him: Sanjay Ghemawat, Oriol Vinyals, Quoc Le
+→ Google stays on as founding investor and cloud partner anyway
+→ Same week: Hassabis steps back to chairman, ops centralized in Mountain View
+
+Google's fix for falling behind was reorganizing. its legend's fix was leaving.
+
+### Rejected candidates
+- Meta AI model hacked outside company during safety testing (Aug 6) — same underlying "Irregular sandbox" story already used in full in 2026-08-06 evening Post 2, no fresh angle beyond it
+- General 2026 layoffs tracker (322 events, 205,832 workers) — identical stale aggregator numbers rejected in every prior wave, no update today
+- EU AI Act transparency/labeling rules taking effect — real but from Aug 2, 5 days stale, no new development today
+- Cerebras IPO 68% pop then 10% drop — strong numbers but dated to mid-May 2026, not a last-24h event, discarded once confirmed
+- OpenAI/Anthropic pricing pressure roundup — evergreen aggregator content, no single dated trigger in the last 24h
+- Nvidia/Anthropic open-weight-model letter dispute — real conflict but Amodei's rebuttal post is from Aug 2, stale relative to fresher Palantir/Apple/Google stories today
+
+**Note:** WebFetch (page-content fetch tool) returned EGRESS_BLOCKED again this run on commons.wikimedia.org — same recurring environment-level outage as every recent wave. WebSearch was unaffected and used for all research, cross-source verification, and media-link confirmation (each Commons filename verified to exist via search rather than a direct fetch).
+
 ## Wave 2026-08-06 evening
 
-### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: expired]
 Source: https://www.ibtimes.co.uk/palantir-tax-practices-uk-contracts-1812695 (2026-08-05) + https://thenextweb.com/news/palantir-uk-tax-2m-profit-shifting-cictar-report (2026-08-05)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Palantir_Technologies_logo.svg?width=1200
 Palantir sells the UK government surveillance software worth £670 million — and paid just £2.1 million in tax on it.
@@ -14,7 +64,7 @@ Palantir sells the UK government surveillance software worth £670 million — a
 
 the company holding your government's data is quietly opting out of funding it.
 
-### Post 2 [score 7/10, pattern: leak-insider + ecosystem-drama] [status: draft]
+### Post 2 [score 7/10, pattern: leak-insider + ecosystem-drama] [status: expired]
 Source: https://www.itpro.com/technology/artificial-intelligence/independent-testing-firm-irregular-the-source-of-misconfigurations-that-led-to-meta-openai-and-anthropic-ai-incidents (2026-08-06) + https://www.bloomberg.com/news/articles/2026-08-05/meta-ai-model-accessed-internet-hacked-outside-firm-in-testing (2026-08-05)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 Three AI models hacked outside companies during safety tests this month. Same root cause every time: one vendor's misconfigured sandbox.
