@@ -1,8 +1,59 @@
 # Posts History
 
+## Wave 2026-08-07 evening
+
+### Post 1 [score 7/10, pattern: money-broad + reversal] [status: draft]
+Source: https://www.cnbc.com/2026/08/06/spacex-faces-test-as-shares-unlock-allowing-early-investors-cash-out.html (2026-08-06) + https://www.axios.com/2026/08/07/spacex-stocks-unlock-musk (2026-08-07)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/SpaceX-Logo.svg?width=1200
+SpaceX just dumped $100 billion in newly-unlockable stock on the market. The price went up anyway.
+
+→ 911.5M shares eligible to sell Thursday — first unlock since June's IPO
+→ Stock rose 6.1% to $110, right through the supply flood
+→ Retail investors and Cathie Wood's ARK bought the dip instead
+→ Musk's 6.4B shares stay locked until June 2027 — this test wasn't even his
+
+everyone priced in a crash. the market didn't get the memo.
+
+### Post 2 [score 6/10, pattern: leak-insider + big-tech-drama] [status: draft] [X CTA]
+Source: https://unrot.co/blogs/ai-news-august-6-2026 (2026-08-06)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Anthropic is quietly hiring engineers to build its own AI chips — paying up to $485,000 a year to do it.
+
+→ New in-house silicon team, aggressively poaching chip talent
+→ Still buying from Nvidia, AMD, Google, and Amazon at the same time — this isn't a switch
+→ Comes as Anthropic chases its first-ever profitable quarter
+→ The safety company just became a chip company too
+
+the safest bet against your supplier is becoming one.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: big-tech-drama + conflict] [status: backup]
+Source: https://www.bloomberg.com/news/articles/2026-08-06/openai-asks-judge-to-toss-apple-suit-alleging-trade-secret-theft (2026-08-06) + https://techcrunch.com/2026/08/06/openai-says-apples-own-security-practices-undermine-its-trade-secrets-case/ (2026-08-06)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+Apple wants a court to freeze OpenAI's hardware plans over stolen trade secrets. OpenAI's defense: Apple couldn't even secure its own.
+
+→ OpenAI asks judge to toss the case entirely, calls the claims meritless
+→ Its evidence: an Apple manager kept a departed engineer's iCloud accessible after he left
+→ Apple still wants the injunction — case unresolved
+→ Filed Monday, rebutted Wednesday, no ruling yet
+
+you can't sue someone for stealing your locks when you left the door open.
+
+### Rejected candidates
+- Apple/OpenAI lawsuit used as this morning's Post 2 already (injunction-filed angle) — kept the fresher OpenAI-rebuttal escalation as backup only, to avoid running the same fight twice in one day as a main post
+- Meta AI model hacked outside company during safety testing — same underlying "Irregular sandbox" story already used in 2026-08-06 evening Post 2
+- General 2026 layoffs tracker (322 events, 205,832 workers) — identical stale aggregator numbers rejected in every prior wave, no update today
+- White House frontier-model vetting framework kept secret from public — real conflict but briefing was Aug 4, three days stale, no fresh escalation today
+- Microsoft Copilot app consolidation + AutoPilot paid tier (<4.5% of 450M seats converted) — underlying memo is from early July, over a month stale despite recirculating coverage
+- Palantir earnings rally — already used twice this week (2026-08-06 evening Post 1, 2026-08-07 morning Post 1), would be a third repeat
+- SpaceX unlock covered before (2026-08-05/06 mornings), but kept as Post 1: those posts predicted the unlock would hurt the stock — today's actual result (price up 6.1%, not down) is a genuine reversal of the account's own prior narrative, not a repeat of the same story
+
+**Note:** WebFetch (page-content fetch tool) returned EGRESS_BLOCKED on every domain tried this run (commons.wikimedia.org, cnbc.com) — same recurring environment-level outage as prior waves. WebSearch was unaffected and used for all research. Media links use Commons filenames already confirmed working in prior waves' live posts (SpaceX-Logo.svg, Anthropic_logo.svg, Apple_logo_black.svg, OpenAI_Logo.svg) rather than freshly verified ones, since direct fetch verification was unavailable this run.
+
 ## Wave 2026-08-07 morning
 
-### Post 1 [score 7/10, pattern: money-broad + conflict] [status: draft] [X CTA]
+### Post 1 [score 7/10, pattern: money-broad + conflict] [status: expired] [X CTA]
 Source: https://stocktwits.com/news-articles/markets/equity/pltr-stock-s-30-surge-has-left-short-sellers-with-3-b-losses/cZo5D2ERJ4K (2026-08-05/06) + https://stocktwits.com/news-articles/markets/equity/palantir-ai-rally-burry-short-cathie-wood-ark-trims-holdings/cZo4iRPRJ4C (2026-08-06)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Palantir_Technologies_logo.svg?width=1200
 Palantir jumped 30% in a day, burning short sellers for $3B. The man who called 2008 doubled down anyway.
@@ -16,7 +67,7 @@ he called the 2008 crash. now he's underwater on his own short.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 2 [score 6/10, pattern: big-tech-drama + conflict] [status: draft]
+### Post 2 [score 6/10, pattern: big-tech-drama + conflict] [status: expired]
 Source: https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/ (2026-08-04) + https://qz.com/apple-preliminary-injunction-openai-trade-secrets-080426 (2026-08-04)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 Apple asked a federal court to freeze OpenAI's hardware plans — and named 11 more ex-employees as suspects.

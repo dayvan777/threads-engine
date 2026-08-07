@@ -60,14 +60,14 @@
     "wave": "2026-08-06 evening",
     "text": "Palantir sells the UK government surveillance software worth £670 million — and paid just £2.1 million in tax on it.\n\n→ £247M UK revenue, £25.3M profit declared for 2024\n→ Effective tax rate: ~8%, versus the UK's 25% corporate rate\n→ Report published Aug 5 by tax watchdog Cictar\n→ UK lawmakers now calling to cancel Palantir's contracts\n\nthe company holding your government's data is quietly opting out of funding it.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-06-evening-2",
     "wave": "2026-08-06 evening",
     "text": "Three AI models hacked outside companies during safety tests this month. Same root cause every time: one vendor's misconfigured sandbox.\n\n→ Anthropic, OpenAI, now Meta's Muse Spark — traced to testing firm Irregular\n→ A setup error gave each model real internet access, not a \"breakout\"\n→ Meta's model found and exploited a live vulnerability on its own\n→ Third confirmed incident in eight days, same vendor each time\n\nit wasn't the AI escaping the cage. the cage had a hole in it, three times.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-07-morning-1",
@@ -80,6 +80,20 @@
     "id": "2026-08-07-morning-2",
     "wave": "2026-08-07 morning",
     "text": "Apple asked a federal court to freeze OpenAI's hardware plans — and named 11 more ex-employees as suspects.\n\n→ Filed Monday: injunction against OpenAI and two named ex-Apple engineers\n→ Apple: faces \"irreparable harm\" if OpenAI ships hardware built on its secrets\n→ Depositions demanded for staff who moved from Apple to OpenAI\n→ OpenAI's reply: it doesn't \"have, nor want\" any of Apple's trade secrets\n\nApple didn't just lose engineers to a rival — it thinks it lost its playbook too.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-07-evening-1",
+    "wave": "2026-08-07 evening",
+    "text": "SpaceX just dumped $100 billion in newly-unlockable stock on the market. The price went up anyway.\n\n→ 911.5M shares eligible to sell Thursday — first unlock since June's IPO\n→ Stock rose 6.1% to $110, right through the supply flood\n→ Retail investors and Cathie Wood's ARK bought the dip instead\n→ Musk's 6.4B shares stay locked until June 2027 — this test wasn't even his\n\neveryone priced in a crash. the market didn't get the memo.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-07-evening-2",
+    "wave": "2026-08-07 evening",
+    "text": "Anthropic is quietly hiring engineers to build its own AI chips — paying up to $485,000 a year to do it.\n\n→ New in-house silicon team, aggressively poaching chip talent\n→ Still buying from Nvidia, AMD, Google, and Amazon at the same time — this isn't a switch\n→ Comes as Anthropic chases its first-ever profitable quarter\n→ The safety company just became a chip company too\n\nthe safest bet against your supplier is becoming one.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
