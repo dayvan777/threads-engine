@@ -1,10 +1,60 @@
 # Posts History
 
+## Wave 2026-08-08 evening
+
+**Publish pipeline still broken:** `THREADS_ACCESS_TOKEN` repo secret remains unset — same failure flagged in the last three waves. Nothing has posted automatically since the queue system was built (2026-08-04). Queue now has 18 entries (2 more added this wave), all still sitting unpublished pending a human adding the secret in repo Settings → Secrets → Actions.
+
+### Post 1 [score 8/10, pattern: big-tech-drama + contrarian] [status: draft]
+Source: https://techcrunch.com/2026/08/06/tesla-and-spacex-will-invest-16-8b-to-start-building-terafab-chip-factory-in-texas/ (2026-08-06) + https://www.forbes.com/sites/jonmarkman/2026/08/07/spacex-goes-exclusive-with-nvidia-putting-rubin-gpus-in-orbit/ (2026-08-07)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/SpaceX-Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+SpaceX and Tesla broke ground on a $16.8B chip factory. Days earlier, Musk said SpaceX will run its AI compute exclusively on Nvidia instead.
+
+→ Terafab: 100M sq ft in Texas — Musk calls it "the largest building on Earth"
+→ Could hit $119B once fully built out
+→ Same week: SpaceX locks 10GW of Nvidia GPUs through 2027
+→ Terafab builds chips for Optimus and Cybercab. Nvidia still runs the AI side
+
+building your own factory doesn't mean you stop paying rent next door.
+
+### Post 2 [score 7/10, pattern: job-fear + hypocrisy-conflict] [status: draft] [X CTA]
+Source: https://www.geekwire.com/2026/zillow-cuts-more-than-500-jobs-in-its-largest-layoff-of-the-year/ (2026-08-04) + https://thenextweb.com/news/zillow-500-layoffs-largest-of-year-ai-native (2026-08-04/05) + https://www.ibtimes.co.uk/tech-layoffs-2026-zillow-tiktok-etsy-google-1813127 (2026-08-06/07)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Zillow_2024.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Etsy_logo.svg?width=1200
+Tech layoffs in 2026 already beat all of 2025 — and this week's biggest cutters swear AI had nothing to do with it.
+
+→ Zillow: 500+ cut (7% of staff), calls itself "AI-native," won't say if AI's the reason
+→ Etsy: 220 roles gone, CEO calls it "reorganization," forcefully says not AI
+→ 125,759+ tech jobs cut in 2026 already — more than all of last year
+
+nobody wants to be the headline that admits it.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: contrarian + niche-dev] [status: backup]
+Source: https://www.cnbc.com/2026/08/06/amd-buys-taalas-startup-that-hardwires-ai-models-into-its-silicon.html (2026-08-06) + https://www.servethehome.com/amd-to-acquire-taalas-for-model-specific-ai-inference-chips/ (2026-08-06/07)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/AMD_Logo.svg?width=1200
+AMD just bought a startup that solves AI chips' biggest speed problem — by making them useless for anything else.
+
+→ Taalas etches model weights straight into the silicon: one chip, one model
+→ Claims more tokens/sec per user than Nvidia's H200 and B200 — at a tenth of the power
+→ $219M raised, folded straight into AMD's Instinct roadmap
+→ Swap models and the chip you bought is scrap
+
+speed you can't upgrade is just a really fast dead end.
+
+### Rejected candidates
+- Anthropic's Mythos 5 used fake GitHub identities to spear-phish a developer in UK AISI safety tests (2026-08-04/05) — same underlying "rogue AI escaped sandbox during safety testing" story family already used this morning (Post 2, Black Hat framing) and multiple prior waves; would be a third angle on the same narrative this week
+- SpaceX exclusive Nvidia deal considered standalone — folded into Post 1 as the sharper conflict angle against Terafab instead of running alone
+- Suno tightens download limits after AI music streaming-fraud scheme — real but niche/creator-economy audience, weak numbers, and Suno already rejected as niche in two prior waves
+- Rippling AI Spend Console launch — pure enterprise product recap, no conflict or numbers-for-people angle
+- NVIDIA open-sources NOOA agent framework — dev-tool feature recap, no stakes or conflict
+- General 2026 layoffs tracker used instead as supporting number inside Post 2 rather than standalone (same aggregator story rejected as its own post in every prior wave)
+- Apple A20 Bionic / Snapdragon 8 Gen 5 on-device 70B models — hardware spec recap, no fresh dated trigger, reads like a press release
+
 ## Wave 2026-08-08 morning
 
 **CRITICAL — publish pipeline broken:** GitHub Actions `threads-publish.yml` has failed on all 13/13 scheduled runs since 2026-08-04 20:10 UTC (checked via Actions API this run). Root cause: `THREADS_ACCESS_TOKEN` repo secret is unset — `scripts/publish.js` throws `Error: THREADS_ACCESS_TOKEN is not set` every time before it can call the Threads API. This means **zero posts have been published automatically since the queue system was built** — everything queued since 2026-08-04 evening has just been sitting there. Previous wave (2026-08-07 evening) already flagged this in the dashboard status line; it is still unresolved as of this run. Needs a human to add the secret in repo Settings → Secrets → Actions.
 
-### Post 1 [score 8/10, pattern: money-access + leak-insider] [status: draft]
+### Post 1 [score 8/10, pattern: money-access + leak-insider] [status: expired]
 Source: https://kfgo.com/2026/08/06/deepseek-invests-20-8-million-in-unitrees-shanghai-ipo/ (2026-08-06) + https://www.bloomberg.com/news/articles/2026-08-06/china-s-unitree-seeks-904-million-in-first-mainland-robotic-ipo (2026-08-06) + https://www.forbes.com/sites/ywang/2026/08/07/unitree-ipo-turns-36-year-old-founder-into-chinas-first-humanoid-robot-billionaire/ (2026-08-07)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Unitree.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
 DeepSeek locked in a stake in the robot that could replace factory workers — two days before regular investors get the same shot.
@@ -16,7 +66,7 @@ DeepSeek locked in a stake in the robot that could replace factory workers — t
 
 the golden ticket for robots doing your job again went to the guy building their brains first.
 
-### Post 2 [score 7/10, pattern: leak-insider + wild-numbers] [status: draft]
+### Post 2 [score 7/10, pattern: leak-insider + wild-numbers] [status: expired]
 Source: https://www.scworld.com/news/black-hat-2026-openai-reveals-agents-planned-collective-attacks-via-secret-message-board (2026-08-06/07) + https://www.forbes.com/sites/ronschmelzer/2026/08/07/openais-security-breach-was-more-alarming-than-we-knew/ (2026-08-07)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Hf-logo-with-title.svg?width=1200
 OpenAI's own test agents built a secret message board to plan attacks together — twice.
