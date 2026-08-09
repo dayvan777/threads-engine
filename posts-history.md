@@ -1,10 +1,62 @@
 # Posts History
 
+## Wave 2026-08-09 morning
+
+**Publish pipeline still broken — day 5:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via Actions API this run: every `threads-publish` run since 2026-08-04 20:10 UTC has failed (10+ consecutive failures, most recent 2026-08-08 19:08 UTC). Zero posts have gone out automatically since the queue system launched. Queue is now 20 entries (2 skipped for staleness this wave, 2 added), 6 sitting `queued` and unpublished. Needs a human to add the secret in repo Settings → Secrets → Actions — flagged in every wave since 2026-08-07 evening, still unresolved.
+
+**Note on tooling this run:** WebFetch/direct HTTP access to news domains (techcrunch, cnbc, datacenterdynamics, wikimedia.org, etc.) was blocked by this session's network egress policy — only WebSearch worked. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (same pattern prior waves used), not live-fetch-verified. Flagging in case a link is dead — worth a spot-check before attaching.
+
+### Post 1 [score 7/10, pattern: money-access + broad-audience] [status: draft]
+Source: https://techcrunch.com/2026/08/06/openai-brings-unlimited-chatgpt-text-chats-to-free-users/ (2026-08-06)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI just tore down the free ChatGPT paywall — unlimited text chats, starting this week.
+
+→ Free and Go users lose the 10-40-messages-per-3-hours cap entirely
+→ Rollout begins the week of Aug 10, right after ChatGPT hit 1 billion weekly users
+→ GPT-5.6 Luna becomes the default free model, plus a new "Think" button
+→ Images, voice, and files still gated — text is the one that's free now
+
+the product it used to ration by the message is now unlimited for everyone who never paid a cent.
+
+### Post 2 [score 8/10, pattern: big-tech-drama + leak-insider] [status: draft]
+Source: https://fortune.com/2026/08/05/demis-hassabis-steps-down-google-deepmind-ai-shakeup/ (2026-08-05) + https://www.fxleaders.com/news/2026/08/05/alphabet-goog-stock-drops-to-350s-as-deepmind-leadership-exodus-spark-investor-concerns/ (2026-08-05)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_DeepMind_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Google_2015_logo.svg?width=1200
+Alphabet lost $190B in a day after its own AI chief stepped back.
+
+→ Hassabis exits as DeepMind CEO, becomes "chief scientist" instead
+→ Jeff Dean, 27 years at Google, leaves with 3 top researchers to found a rival startup
+→ Gemini's flagship model is still unreleased, months late
+→ Google is funding that rival startup anyway
+
+when your best people quit to compete with you and you still write the check, that's not confidence — it's insurance.
+
+### Post 3 [score 6/10, pattern: contrarian + niche-dev] [status: backup]
+Source: https://www.techtimes.com/articles/322816/20260803/olix-raises-312m-photonic-ai-chip-that-ditches-hbm-britains-biggest-semiconductor-bet.htm (2026-08-03) + https://www.datacenterdynamics.com/en/news/chip-startup-olix-raises-312m-at-33bn-valuation-backed-by-uk-govt-sovereign-ai-venture-fund/ (2026-08-03/04)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Arm_logo_2025.svg?width=1200 (investor logo — OLIX itself has no Commons file yet)
+A 25-year-old's UK startup just raised $312M to kill Nvidia's biggest AI-chip bottleneck.
+
+→ OLIX: $312M Series B, $3.3B valuation — Europe's largest-ever chip VC round
+→ Backers: UK government's Sovereign AI fund, Arm, Reed Hastings
+→ Its optical chips skip HBM — the exact memory shortage driving Nvidia's prices up
+→ Worth $1B in February. 3.3x in six months.
+
+light doesn't need the memory chip everyone's fighting over.
+
+### Rejected candidates
+- Unitree/DeepSeek IPO stake, OpenAI test-agent message board — already used last wave (2026-08-08 morning Post 1 & 2)
+- SpaceX/Tesla Terafab, Zillow/Etsy layoffs — already used last wave (2026-08-08 evening Post 1 & 2)
+- AMD/Taalas — already used as backup last wave (2026-08-08 evening), no new development
+- NVIDIA NOOA agent framework — rejected again, same as last wave ("dev-tool feature recap, no stakes or conflict"); no major new development since to justify revisiting
+- TSMC $265B total US investment — real number but the increment was announced 2026-07-16, over 3 weeks stale, no fresh trigger today
+- EU AI Act transparency rules — rejected as stale/duplicate for the fourth time now (Aug 2 effective date, no new development)
+- Anthropic confidential IPO filing ($965B, October Nasdaq target) — unchanged since June 1 filing, no fresh escalation
+- AI coding tools (Cursor/Windsurf/Copilot) — nothing dated in the last 24-48h, only evergreen comparison content, discarded
+
 ## Wave 2026-08-08 evening
 
 **Publish pipeline still broken:** `THREADS_ACCESS_TOKEN` repo secret remains unset — same failure flagged in the last three waves. Nothing has posted automatically since the queue system was built (2026-08-04). Queue now has 18 entries (2 more added this wave), all still sitting unpublished pending a human adding the secret in repo Settings → Secrets → Actions.
 
-### Post 1 [score 8/10, pattern: big-tech-drama + contrarian] [status: draft]
+### Post 1 [score 8/10, pattern: big-tech-drama + contrarian] [status: expired]
 Source: https://techcrunch.com/2026/08/06/tesla-and-spacex-will-invest-16-8b-to-start-building-terafab-chip-factory-in-texas/ (2026-08-06) + https://www.forbes.com/sites/jonmarkman/2026/08/07/spacex-goes-exclusive-with-nvidia-putting-rubin-gpus-in-orbit/ (2026-08-07)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/SpaceX-Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 SpaceX and Tesla broke ground on a $16.8B chip factory. Days earlier, Musk said SpaceX will run its AI compute exclusively on Nvidia instead.
@@ -16,7 +68,7 @@ SpaceX and Tesla broke ground on a $16.8B chip factory. Days earlier, Musk said 
 
 building your own factory doesn't mean you stop paying rent next door.
 
-### Post 2 [score 7/10, pattern: job-fear + hypocrisy-conflict] [status: draft] [X CTA]
+### Post 2 [score 7/10, pattern: job-fear + hypocrisy-conflict] [status: expired] [X CTA]
 Source: https://www.geekwire.com/2026/zillow-cuts-more-than-500-jobs-in-its-largest-layoff-of-the-year/ (2026-08-04) + https://thenextweb.com/news/zillow-500-layoffs-largest-of-year-ai-native (2026-08-04/05) + https://www.ibtimes.co.uk/tech-layoffs-2026-zillow-tiktok-etsy-google-1813127 (2026-08-06/07)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Zillow_2024.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Etsy_logo.svg?width=1200
 Tech layoffs in 2026 already beat all of 2025 — and this week's biggest cutters swear AI had nothing to do with it.
