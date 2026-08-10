@@ -1,12 +1,65 @@
 # Posts History
 
+## Wave 2026-08-10 evening
+
+**Publish pipeline still broken — day 7+, confirmed failing again this run:** `THREADS_ACCESS_TOKEN` repo secret still unset. Checked GitHub Actions directly this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-10 10:08 UTC (this morning, same `Error: THREADS_ACCESS_TOKEN is not set`). This was already escalated to Vlad in the 2026-08-10 morning wave — repeating the flag here since it remains unfixed, but not re-notifying to avoid duplicate pings for the same known issue (see morning wave note). Marked the two stale `2026-08-09 evening` queue entries `skipped` (>24h old, never published, publish pipeline down the whole time); queue now has 26 entries, 4 sitting `queued` and unpublished (2 from 2026-08-10 morning, 2 new from this wave).
+
+**Note on tooling this run:** direct HTTP (curl) and WebFetch both returned `EGRESS_BLOCKED` on every domain tried (commons.wikimedia.org, cnbc.com, newsroom.intel.com, foxbusiness.com, rtoinsider.com, theaiinsider.tech, ts2.tech) — same recurring environment-level restriction as prior waves. WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (exact `File:` page title match in search results), not live-fetch-verified.
+
+### Post 1 [score 7/10, pattern: money-broad + big-tech-drama] [status: draft]
+Source: https://www.cnbc.com/2026/08/10/intel-intc-stock-offering-ai.html (2026-08-10) + https://www.manufacturingdive.com/news/us-government-10-percent-stake-intel-chips-funding-8-9-billion/758518/ (US CHIPS stake, 2025-08)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Intel_logo_2023.svg?width=1200
+Intel is selling $15 billion of new stock today to chase the AI chip boom — and the US government's own 9.9% stake gets diluted right along with everyone else's.
+
+→ Public offering announced today, funds AI chip and foundry expansion
+→ Washington paid $8.9B in taxpayer money for that stake last year
+→ ~3% dilution across the cap table once the deal prices
+→ AI capex outlook already raised to $20B this year, from $18B
+
+you paid for the stake. now you're paying to keep it from shrinking.
+
+### Post 2 [score 6/10, pattern: contrarian + niche-dev] [status: draft] [X CTA]
+Source: https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/ (2026-08-09) + https://simonwillison.net/2026/Aug/8/auto-mode/ (2026-08-08)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Claude_AI_symbol.svg?width=1200
+Anthropic just replaced the human reviewer with the AI it was reviewing — because the AI catches more danger.
+
+→ Auto mode is now default for Claude Code Pro/Max/Team on Aug 14
+→ Anthropic's test: classifier blocked 89% of planted dangerous commands
+→ Paid human testers, same commands, caught just 13.6%
+→ Drops step-by-step approval, pauses only on irreversible actions
+
+the human-in-the-loop wasn't the safety net. it was the weak link.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 7/10, pattern: money-broad + big-tech-drama] [status: backup]
+Source: https://fortune.com/2026/07/14/data-centers-23-billion-electricity-bills/ (2026-07-14) + https://www.newsweek.com/map-shows-electricity-costs-in-every-state-as-ai-data-centers-surge-prices-12279072 (recent) + https://srnnews.com/us-data-center-protests-go-national-as-backlash-grows/ (protest count)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Datacenter_Server_Racks_(22370909788).jpg?width=1200
+Americans are already paying $23 billion extra on electricity because of AI data centers — and 70% don't want a new one built nearby.
+
+→ Data center buildout has driven up the public's power bills by $23B so far, per Fortune
+→ PJM region alone: families on track for ~$70/month more by 2028
+→ 525,000+ people have joined local opposition groups across 40+ states
+→ 142 coordinated protests hit 42 states in one weekend — a first
+
+the AI boom sends the bill to whoever's closest to the substation.
+
+### Rejected candidates
+- Meta 30-billion-parameter agent on a single GPU — pure feature/product recap, no conflict or numbers-for-people angle (dud pattern)
+- "AI washing" layoffs (56% of 2026 layoffs cite AI, real driver often overhiring/cost-cutting) — same story already flagged stale in a prior wave (Monday.com angle, no fresh trigger today); underlying stat pieces are undated explainers, not news
+- CXMT Shanghai chipmaker IPO 466% surge, $487B valuation — real story but debut was 2026-07-27/28, two weeks stale, no fresh escalation found today
+- Oregon PGE 29.7% data-center rate hike / 1.3% residential bill cut (POWER Act) — real reversal-of-usual-story angle but rate change took effect 2026-07-08, over a month old, no new development today
+- Meta $567M New Mexico ruling, Stanford AI-virus story — both already used as this morning's Post 1/Post 2, would be repetitive same-day
+- Nvidia Jensen Huang "AI kills tasks not jobs" — already used last wave (2026-08-10 morning Post 3 backup)
+- Robinhood pre-IPO $200M fund, Kimi K3 sandbox escape — already used and expired from 2026-08-09 evening
+
 ## Wave 2026-08-10 morning
 
 **Publish pipeline still broken — day 7, 21+ consecutive failures:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via Actions API this run: every `threads-publish` run since 2026-08-04 20:10 UTC has failed with `Error: THREADS_ACCESS_TOKEN is not set` (latest failure 2026-08-09 19:12 UTC). Zero posts have gone out automatically since the queue system launched — every wave since 2026-08-07 evening has flagged this and it is still unfixed. Escalating this run via direct notification to Vlad since dashboard flags alone haven't gotten it fixed in 6+ days. Marked the two stale `2026-08-09 morning` queue entries `skipped` (>24h old, never published); queue now has 24 entries, 4 sitting `queued` and unpublished (2 from 2026-08-09 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch / direct HTTP (curl) returned `EGRESS_BLOCKED` / proxy 403 on every domain tried (commons.wikimedia.org, finance.yahoo.com) — same recurring environment-level restriction as every recent wave, confirmed again via the agent-proxy status endpoint (policy denial, not a transient error). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (each file's existence confirmed via WebSearch results), not live-fetch-verified — worth a spot-check before attaching.
 
-### Post 1 [score 7/10, pattern: leak-insider + wild-numbers] [status: draft]
+### Post 1 [score 7/10, pattern: leak-insider + wild-numbers] [status: expired]
 Source: https://www.science.org/doi/10.1126/science.aej8512 (Science, 2026-08-06) + https://www.axios.com/2026/08/06/ai-virus-designed-bacteria-viruses (2026-08-06) + https://www.cnn.com/2026/08/06/health/ai-viruses-bacteriophages (2026-08-06)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Bacteriophage_T4_Infection.jpg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_Leland_Stanford_Junior_University.svg?width=1200
 A Stanford team just used AI to write 16 working viruses from scratch — genomes nature never made, built to kill drug-resistant bacteria.
@@ -17,7 +70,7 @@ A Stanford team just used AI to write 16 working viruses from scratch — genome
 
 the tool to write new life just shipped. the law to watch it hasn't.
 
-### Post 2 [score 6/10, pattern: big-tech-drama + money-broad] [status: draft]
+### Post 2 [score 6/10, pattern: big-tech-drama + money-broad] [status: expired]
 Source: https://fortune.com/2026/08/07/meta-new-mexico-penalty-567-million-child-safety/ (2026-08-07) + https://www.cbc.ca/news/world/meta-new-mexico-court-payment-9.7299090 (2026-08-07) + https://finance.yahoo.com/markets/stocks/articles/meta-legal-war-just-escalated-201733224.html (2026-08-07, $1.4T trial context)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Great_seal_of_the_state_of_New_Mexico.png?width=1200
 A New Mexico judge just billed Meta $567 million for building AI chatbots and feeds that hooked kids — and it's not done.
@@ -28,7 +81,7 @@ A New Mexico judge just billed Meta $567 million for building AI chatbots and fe
 
 the fine everyone will remember is the one still coming.
 
-### Post 3 [score 6/10, pattern: contrarian + job-fear] [status: backup] [X CTA]
+### Post 3 [score 6/10, pattern: contrarian + job-fear] [status: expired] [X CTA]
 Source: https://www.fool.com/investing/2026/08/09/jensen-huang-says-ai-will-kill-tasks-not-jobs-here/ (2026-08-09, restating a 2026-07-28 comment) + https://skillsyncer.com/layoffs-tracker (data as of 2026-08-10)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 Nvidia's Jensen Huang says the AI job-loss narrative is "exactly backwards" — AI kills tasks, not jobs.
