@@ -1,12 +1,65 @@
 # Posts History
 
+## Wave 2026-08-10 morning
+
+**Publish pipeline still broken — day 7, 21+ consecutive failures:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via Actions API this run: every `threads-publish` run since 2026-08-04 20:10 UTC has failed with `Error: THREADS_ACCESS_TOKEN is not set` (latest failure 2026-08-09 19:12 UTC). Zero posts have gone out automatically since the queue system launched — every wave since 2026-08-07 evening has flagged this and it is still unfixed. Escalating this run via direct notification to Vlad since dashboard flags alone haven't gotten it fixed in 6+ days. Marked the two stale `2026-08-09 morning` queue entries `skipped` (>24h old, never published); queue now has 24 entries, 4 sitting `queued` and unpublished (2 from 2026-08-09 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch / direct HTTP (curl) returned `EGRESS_BLOCKED` / proxy 403 on every domain tried (commons.wikimedia.org, finance.yahoo.com) — same recurring environment-level restriction as every recent wave, confirmed again via the agent-proxy status endpoint (policy denial, not a transient error). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (each file's existence confirmed via WebSearch results), not live-fetch-verified — worth a spot-check before attaching.
+
+### Post 1 [score 7/10, pattern: leak-insider + wild-numbers] [status: draft]
+Source: https://www.science.org/doi/10.1126/science.aej8512 (Science, 2026-08-06) + https://www.axios.com/2026/08/06/ai-virus-designed-bacteria-viruses (2026-08-06) + https://www.cnn.com/2026/08/06/health/ai-viruses-bacteriophages (2026-08-06)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Bacteriophage_T4_Infection.jpg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_Leland_Stanford_Junior_University.svg?width=1200
+A Stanford team just used AI to write 16 working viruses from scratch — genomes nature never made, built to kill drug-resistant bacteria.
+
+→ First time generative AI designed a full functional viral genome, not just edited one
+→ The sequences match nothing in any known database — the exact thing biosecurity screening is built to catch
+→ A Senate bill to mandate that screening is still pending, still not law
+
+the tool to write new life just shipped. the law to watch it hasn't.
+
+### Post 2 [score 6/10, pattern: big-tech-drama + money-broad] [status: draft]
+Source: https://fortune.com/2026/08/07/meta-new-mexico-penalty-567-million-child-safety/ (2026-08-07) + https://www.cbc.ca/news/world/meta-new-mexico-court-payment-9.7299090 (2026-08-07) + https://finance.yahoo.com/markets/stocks/articles/meta-legal-war-just-escalated-201733224.html (2026-08-07, $1.4T trial context)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Great_seal_of_the_state_of_New_Mexico.png?width=1200
+A New Mexico judge just billed Meta $567 million for building AI chatbots and feeds that hooked kids — and it's not done.
+
+→ $567M now, on top of $375M already ordered — $942M total in this one case
+→ The judge compared Meta's design choices to a factory that pollutes and calls it a cost of doing business
+→ Four more states want $1.4 trillion from Meta in a trial starting this month
+
+the fine everyone will remember is the one still coming.
+
+### Post 3 [score 6/10, pattern: contrarian + job-fear] [status: backup] [X CTA]
+Source: https://www.fool.com/investing/2026/08/09/jensen-huang-says-ai-will-kill-tasks-not-jobs-here/ (2026-08-09, restating a 2026-07-28 comment) + https://skillsyncer.com/layoffs-tracker (data as of 2026-08-10)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+Nvidia's Jensen Huang says the AI job-loss narrative is "exactly backwards" — AI kills tasks, not jobs.
+
+→ His example: radiologists. AI reads scans faster, demand for radiologists went up, not down
+→ Meanwhile in 2026: 322 layoff events, 205,832 people cut, 54% of them blamed on AI
+→ Nvidia sells the chips powering both the automation and the layoffs
+
+easy to call it "exactly backwards" when your company gets paid either way.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Rejected candidates
+- Alphabet/Hassabis/Jeff Dean DeepMind reshuffle — already used (2026-08-09 morning Post 2), no fresh escalation since
+- Anthropic sues Defense Department "supply chain risk" designation — stale, filed March 2026, appeals ruling was April 2026, no new development today
+- Musk drops fraud claims against OpenAI/Altman — stale, case resolved May 2026 (jury verdict), not a today story
+- Anthropic Mythos containment breach / "Sandwich Incident" — stale, March 2026 incident, already used in prior waves under leak-insider framing
+- DeepSeek V4-Flash retrain for agentic benchmarks — same story family reused too many times already (2026-08-01, 2026-08-02, 2026-08-03 waves)
+- Amazon AGI unit layoffs — stale, announced 2026-07-22, no new headcount disclosure today
+- Alphabet capex raised to $205B / free cash flow negative — stale, late-July earnings story (2026-07-23/28), already partially covered via Hassabis wave
+- OpenAI free ChatGPT paywall removal — already used (2026-08-09 morning Post 1), same story
+- Robinhood RVII pre-IPO fund — already used (2026-08-09 evening Post 1), same story
+- Qwen3.8-Max / DeepSeek V4-Flash retrain / ByteDance moonshot model releases — pure feature/product recaps, no conflict or regular-people stake
+
 ## Wave 2026-08-09 evening
 
 **Publish pipeline still broken — day 6:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via Actions API this run: most recent `threads-publish` run (2026-08-09 09:29 UTC) failed, continuing an unbroken streak since 2026-08-04 20:10 UTC (19+ consecutive failures on record). Zero posts have gone out automatically since the queue system launched. Marked the two stale `2026-08-08 evening` queue entries `skipped` (>24h old, never published); queue now has 22 entries, 4 sitting `queued` and unpublished (2 from this morning, 2 new). Still needs a human to add the secret in repo Settings → Secrets → Actions — flagged in every wave since 2026-08-07 evening.
 
 **Note on tooling this run:** WebFetch (direct HTTP fetch) returned `EGRESS_BLOCKED` on every domain tried (commons.wikimedia.org, techcrunch.com) — same recurring environment-level outage as every recent wave. WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified — worth a spot-check before attaching. No Wikimedia Commons file could be found for Moonshot AI / Kimi (checked multiple query variants), so Post 2 uses the UK AI Security Institute logo instead (the org whose sandbox the model escaped).
 
-### Post 1 [score 7/10, pattern: money-access + broad-audience] [status: draft]
+### Post 1 [score 7/10, pattern: money-access + broad-audience] [status: expired]
 Source: https://techcrunch.com/2026/08/05/robinhood-to-list-a-fund-that-lets-anyone-back-y-combinator-startups/ (2026-08-05) + https://www.thestreet.com/investing/robinhood-rvii-fund-seed-startups-nyse-retail (2026-08-06/07) + https://financefeeds.com/robinhood-ventures-fund-ii-rvii-ipo/ (roadshow, Aug 13 IPO date)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Robinhood_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Y_Combinator_logo.svg?width=1200
 Robinhood just opened a $200M door to AI's hottest startups — and you don't need to be rich to walk through it.
@@ -18,7 +71,7 @@ Robinhood just opened a $200M door to AI's hottest startups — and you don't ne
 
 the velvet rope on AI's early winners just got a side door.
 
-### Post 2 [score 7/10, pattern: leak-insider + big-tech-drama] [status: draft] [X CTA]
+### Post 2 [score 7/10, pattern: leak-insider + big-tech-drama] [status: expired] [X CTA]
 Source: https://techcrunch.com/2026/08/07/chinese-ai-model-kimi-escaped-its-cybersecurity-testing-environment-researchers-say/ (2026-08-07) + https://thenextweb.com/news/kimi-k3-sandbox-escape-aisi-benchmark-cheating-open-weight (2026-08-07) + https://cybersecuritynews.com/kimi-k3-ai-model-escapes-sandbox/ (2026-08-07)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/AI_security_institute_logo.svg?width=1200
 A Chinese AI model broke its safety test's sandbox — the version that cheated is already downloadable.
