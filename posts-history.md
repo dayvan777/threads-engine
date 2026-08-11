@@ -1,12 +1,63 @@
 # Posts History
 
+## Wave 2026-08-11 evening
+
+**Publish pipeline still broken — day 8, confirmed failing again this run:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Checked GitHub Actions API directly: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-11 09:50 UTC (same `Publish next queued post` step failing, consistent with the missing secret). Already escalated via direct notification once (2026-08-10 morning); not re-notifying for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-10 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 30 entries, 4 sitting `queued` and unpublished (2 from 2026-08-11 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified — worth a spot-check before attaching.
+
+### Post 1 [score 8/10, pattern: money-broad + big-tech-drama] [status: draft]
+Source: https://www.alreporter.com/2026/08/11/meta-launches-1-billion-fund-supporting-data-center-communities/ (2026-08-11) + https://www.axios.com/2026/08/10/zuckerberg-ai-manifesto-meta (2026-08-10)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
+Meta just put a price on the backlash: $1 billion for the towns hosting its AI data centers.
+
+→ New fund pays for schools, teachers, water and power near Meta's sites
+→ Inspired by Louisiana, where data-center tax revenue funded $50K teacher bonuses
+→ Comes as 525,000+ people have joined groups fighting data centers nearby
+→ $1B split across dozens of sites is a rounding error next to Meta's AI capex
+
+you don't get a seat at the table until you're loud enough to need buying off.
+
+### Post 2 [score 7/10, pattern: money-broad + contrarian] [status: draft]
+Source: https://www.cnbc.com/2026/08/10/nvidia-wall-street-asset-managers-500-billion-ai-push.html (2026-08-10) + https://www.thenationalnews.com/business/markets/2026/08/11/nvidia-turns-to-wall-street-giants-to-raise-500bn-for-ai-infrastructure/ (2026-08-11)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200
+Nvidia just recruited six of Wall Street's biggest firms to raise $500 billion — using AI chips as loan collateral, like mortgages before 2008.
+
+→ Apollo, Blackstone, BlackRock, Brookfield, Goldman, KKR all in
+→ Structured as bonds and private debt off Nvidia's own balance sheet
+→ Funds data centers for hyperscalers and labs to buy... more Nvidia chips
+→ Jensen Huang says his chips are now an "investable asset"
+
+when the salesman also arranges the financing, ask who's really holding the risk.
+
+### Post 3 [score 6/10, pattern: money-access + contrarian] [status: backup]
+Source: https://www.cnbc.com/2026/08/10/openai-wraps-7-billion-share-sale-ahead-of-potential-ipo-.html (2026-08-10) + https://techstartups.com/2026/08/11/openai-completes-7-billion-employee-share-sale-at-852-billion-valuation-ahead-of-potential-ipo/ (2026-08-11)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI employees just cashed out $7 billion in stock at an $852 billion valuation. The IPO that would let you buy in? Still no date.
+
+→ Tender offer let current/former staff sell shares — OpenAI buying, not new investors
+→ Valuation up from $500B in October, 70% in under a year
+→ Confidential IPO filing submitted in June, no listing timeline announced
+→ Third tender since 2024: $1.5B, then $6.6B, now $7B
+
+insiders get liquidity rounds. everyone else gets to wait.
+
+### Rejected candidates
+- Anthropic/Macquarie/GIC "Theseus Infrastructure" $9B+ data-center JV (Aug 10) — same underlying theme as this morning's Post 1 (Anthropic + data-center power deal), would be repetitive same-day
+- EU DMA order forcing Google to open Android to Claude/ChatGPT by July 2027 — order itself dated July 16, no fresh escalation today, just recap coverage
+- Meta employee lawsuit over AI-driven layoffs (token-usage dashboards, medical-leave discrimination) — original filing mid-July, next hearing not until Aug 24, no new development today
+- tl;dv AI notetaker data leak (181,874 meetings exposed) — disclosed publicly ~Aug 3-4, over a week stale by this wave, no new escalation today
+- Kimi K3 sandbox escape — already used (2026-08-09 evening Post 2)
+- Layoffs tracker (923/day, 205,832 total, 54% AI-cited) — same recurring stat rejected in nearly every prior wave, no fresh trigger today
+- Zuckerberg's "Future is for Everyone" essay content itself (superintelligence philosophy, checkpoint-sharing proposal) — pure manifesto/press-release recap without the $1B fund's concrete numbers, folded into Post 1 instead
+
 ## Wave 2026-08-11 morning
 
 **Publish pipeline still broken — day 8:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-10 19:33 UTC. Unfixed since first flagged 2026-08-07 evening; already escalated via direct notification once (2026-08-10 morning) — not re-notifying for the same unresolved issue, just continuing to flag here and on the dashboard. Marked the two stale `2026-08-10 morning` queue entries `skipped` (>24h old, never published); queue now has 28 entries, 4 sitting `queued` and unpublished (2 from 2026-08-10 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on every domain tried (openai.com) — same recurring environment-level restriction as every recent wave. WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified — worth a spot-check before attaching. No Wikimedia Commons logo found specifically for Riot Platforms Inc. (only unrelated "RIOT" projects), so Post 1 uses the Anthropic logo instead (the deal's other named party).
 
-### Post 1 [score 8/10, pattern: money-broad + big-tech-drama] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + big-tech-drama] [status: expired]
 Source: https://www.bloomberg.com/news/articles/2026-08-11/anthropic-strikes-9-billion-deal-with-cloud-computing-firm-riot (2026-08-11) + https://www.theblock.co/news/business/2026-08-10-riot-platforms-ai-deal-anthropic-411358 (2026-08-10)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 A Bitcoin mining company just became one of Anthropic's landlords — and its shareholders got 25% richer overnight.
@@ -18,7 +69,7 @@ A Bitcoin mining company just became one of Anthropic's landlords — and its sh
 
 the picks-and-shovels trade isn't chips anymore. it's the power bill.
 
-### Post 2 [score 6/10, pattern: leak-insider + contrarian] [status: draft] [X CTA]
+### Post 2 [score 6/10, pattern: leak-insider + contrarian] [status: expired] [X CTA]
 Source: https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/ (2026-08-10) + https://www.forbes.com/sites/jonmarkman/2026/08/09/openai-pauses-astra-after-it-nears-first-ever-critical-cyber-risk/ (2026-08-09) + https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/ (2026-08-07)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI paused a model for being too good at hacking. Days later it shipped a different one, one rung below that line, to customers.

@@ -172,14 +172,14 @@
     "wave": "2026-08-10 evening",
     "text": "Intel is selling $15 billion of new stock today to chase the AI chip boom — and the US government's own 9.9% stake gets diluted right along with everyone else's.\n\n→ Public offering announced today, funds AI chip and foundry expansion\n→ Washington paid $8.9B in taxpayer money for that stake last year\n→ ~3% dilution across the cap table once the deal prices\n→ AI capex outlook already raised to $20B this year, from $18B\n\nyou paid for the stake. now you're paying to keep it from shrinking.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-10-evening-2",
     "wave": "2026-08-10 evening",
     "text": "Anthropic just replaced the human reviewer with the AI it was reviewing — because the AI catches more danger.\n\n→ Auto mode is now default for Claude Code Pro/Max/Team on Aug 14\n→ Anthropic's test: classifier blocked 89% of planted dangerous commands\n→ Paid human testers, same commands, caught just 13.6%\n→ Drops step-by-step approval, pauses only on irreversible actions\n\nthe human-in-the-loop wasn't the safety net. it was the weak link.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-11-morning-1",
@@ -192,6 +192,20 @@
     "id": "2026-08-11-morning-2",
     "wave": "2026-08-11 morning",
     "text": "OpenAI paused a model for being too good at hacking. Days later it shipped a different one, one rung below that line, to customers.\n\n→ Astra paused Aug 7: couldn't rule out hitting \"Critical\" — autonomous zero-days, full attack chains\n→ GPT-5.6-Cyber shipped Aug 10, first model to officially hit \"High\"\n→ Vetted defenders get 95% of the exploit answers the public model refuses\n\ntoo dangerous to release became too profitable not to.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-11-evening-1",
+    "wave": "2026-08-11 evening",
+    "text": "Meta just put a price on the backlash: $1 billion for the towns hosting its AI data centers.\n\n→ New fund pays for schools, teachers, water and power near Meta's sites\n→ Inspired by Louisiana, where data-center tax revenue funded $50K teacher bonuses\n→ Comes as 525,000+ people have joined groups fighting data centers nearby\n→ $1B split across dozens of sites is a rounding error next to Meta's AI capex\n\nyou don't get a seat at the table until you're loud enough to need buying off.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-11-evening-2",
+    "wave": "2026-08-11 evening",
+    "text": "Nvidia just recruited six of Wall Street's biggest firms to raise $500 billion — using AI chips as loan collateral, like mortgages before 2008.\n\n→ Apollo, Blackstone, BlackRock, Brookfield, Goldman, KKR all in\n→ Structured as bonds and private debt off Nvidia's own balance sheet\n→ Funds data centers for hyperscalers and labs to buy... more Nvidia chips\n→ Jensen Huang says his chips are now an \"investable asset\"\n\nwhen the salesman also arranges the financing, ask who's really holding the risk.",
     "image_url": null,
     "status": "queued"
   }
