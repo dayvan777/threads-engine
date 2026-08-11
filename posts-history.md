@@ -1,12 +1,65 @@
 # Posts History
 
+## Wave 2026-08-11 morning
+
+**Publish pipeline still broken — day 8:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-10 19:33 UTC. Unfixed since first flagged 2026-08-07 evening; already escalated via direct notification once (2026-08-10 morning) — not re-notifying for the same unresolved issue, just continuing to flag here and on the dashboard. Marked the two stale `2026-08-10 morning` queue entries `skipped` (>24h old, never published); queue now has 28 entries, 4 sitting `queued` and unpublished (2 from 2026-08-10 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on every domain tried (openai.com) — same recurring environment-level restriction as every recent wave. WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified — worth a spot-check before attaching. No Wikimedia Commons logo found specifically for Riot Platforms Inc. (only unrelated "RIOT" projects), so Post 1 uses the Anthropic logo instead (the deal's other named party).
+
+### Post 1 [score 8/10, pattern: money-broad + big-tech-drama] [status: draft]
+Source: https://www.bloomberg.com/news/articles/2026-08-11/anthropic-strikes-9-billion-deal-with-cloud-computing-firm-riot (2026-08-11) + https://www.theblock.co/news/business/2026-08-10-riot-platforms-ai-deal-anthropic-411358 (2026-08-10)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+A Bitcoin mining company just became one of Anthropic's landlords — and its shareholders got 25% richer overnight.
+
+→ Riot Platforms: 20-year lease, 191 megawatts from its Rockdale, Texas site
+→ ~$9.1B in contract revenue through 2048, up to $16.1B with two extension options
+→ Riot's stock jumped 25% after-hours the second Anthropic's name leaked
+→ Built on mining coins, now renting out electricity to AI instead
+
+the picks-and-shovels trade isn't chips anymore. it's the power bill.
+
+### Post 2 [score 6/10, pattern: leak-insider + contrarian] [status: draft] [X CTA]
+Source: https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/ (2026-08-10) + https://www.forbes.com/sites/jonmarkman/2026/08/09/openai-pauses-astra-after-it-nears-first-ever-critical-cyber-risk/ (2026-08-09) + https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/ (2026-08-07)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI paused a model for being too good at hacking. Days later it shipped a different one, one rung below that line, to customers.
+
+→ Astra paused Aug 7: couldn't rule out hitting "Critical" — autonomous zero-days, full attack chains
+→ GPT-5.6-Cyber shipped Aug 10, first model to officially hit "High"
+→ Vetted defenders get 95% of the exploit answers the public model refuses
+
+too dangerous to release became too profitable not to.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 5/10, pattern: leak-insider + contrarian] [status: backup]
+Source: https://www.scientificamerican.com/article/openais-latest-math-breakthroughs-commit-research-misconduct-experts-say/ (2026-08, this week) + https://www.yahoo.com/news/science/articles/openai-latest-math-breakthroughs-commit-184300525.html (same)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+Two mathematicians say OpenAI's biggest "AI proved it" headlines this month were built on their work — uncredited.
+
+→ Steven Miller: sphere-packing proof reuses his 2016 argument, calls it "completely systematic," not an oversight
+→ Francesco Fournier-Facio: the soficity "breakthrough" just restitches a 2016 and a 2019 paper
+→ OpenAI's response: it'll "take responsibility for correctness" and post minor updates
+
+the AI didn't discover new math. it laundered old math through a press release.
+
+### Rejected candidates
+- Meta Muse Glimmer 30B open-weight model — pure feature/product recap, no conflict or numbers-for-people angle (dud pattern)
+- AMD acquires Taalas (weights baked into silicon) — real but pure M&A/product story, no regular-people stake
+- Layoffs tracker (927/day, 205,832 total, 54% AI-cited) — same recurring stat reused and rejected in nearly every prior wave, no fresh escalation today
+- Data center opposition/protests (525K+ joined groups, 142 protests) — already used as backup in 2026-08-10 evening, would be repetitive
+- Anthropic "Ode With Anthropic" $1.5B banking JV with Blackstone/H&F — same-day duplicate theme with Post 1 (another Anthropic money deal), less dramatic, would crowd the wave
+- Anthropic hires Tino Cuéllar as Chief Global Affairs Officer — personnel news, no numbers or conflict, low engagement pattern
+- Google Pixel 11 / Made by Google event — hardware launch, not AI-conflict relevant, event is tomorrow (Aug 12) not today
+- CoreWeave Vera Rubin NVL72 benchmark results — pure spec/benchmark recap, niche, no regular-people angle
+- DeepSeek V4-Flash retrain for agentic benchmarks — same story family reused too many times already across prior waves
+
 ## Wave 2026-08-10 evening
 
 **Publish pipeline still broken — day 7+, confirmed failing again this run:** `THREADS_ACCESS_TOKEN` repo secret still unset. Checked GitHub Actions directly this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-10 10:08 UTC (this morning, same `Error: THREADS_ACCESS_TOKEN is not set`). This was already escalated to Vlad in the 2026-08-10 morning wave — repeating the flag here since it remains unfixed, but not re-notifying to avoid duplicate pings for the same known issue (see morning wave note). Marked the two stale `2026-08-09 evening` queue entries `skipped` (>24h old, never published, publish pipeline down the whole time); queue now has 26 entries, 4 sitting `queued` and unpublished (2 from 2026-08-10 morning, 2 new from this wave).
 
 **Note on tooling this run:** direct HTTP (curl) and WebFetch both returned `EGRESS_BLOCKED` on every domain tried (commons.wikimedia.org, cnbc.com, newsroom.intel.com, foxbusiness.com, rtoinsider.com, theaiinsider.tech, ts2.tech) — same recurring environment-level restriction as prior waves. WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (exact `File:` page title match in search results), not live-fetch-verified.
 
-### Post 1 [score 7/10, pattern: money-broad + big-tech-drama] [status: draft]
+### Post 1 [score 7/10, pattern: money-broad + big-tech-drama] [status: expired]
 Source: https://www.cnbc.com/2026/08/10/intel-intc-stock-offering-ai.html (2026-08-10) + https://www.manufacturingdive.com/news/us-government-10-percent-stake-intel-chips-funding-8-9-billion/758518/ (US CHIPS stake, 2025-08)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Intel_logo_2023.svg?width=1200
 Intel is selling $15 billion of new stock today to chase the AI chip boom — and the US government's own 9.9% stake gets diluted right along with everyone else's.
@@ -18,7 +71,7 @@ Intel is selling $15 billion of new stock today to chase the AI chip boom — an
 
 you paid for the stake. now you're paying to keep it from shrinking.
 
-### Post 2 [score 6/10, pattern: contrarian + niche-dev] [status: draft] [X CTA]
+### Post 2 [score 6/10, pattern: contrarian + niche-dev] [status: expired] [X CTA]
 Source: https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/ (2026-08-09) + https://simonwillison.net/2026/Aug/8/auto-mode/ (2026-08-08)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Claude_AI_symbol.svg?width=1200
 Anthropic just replaced the human reviewer with the AI it was reviewing — because the AI catches more danger.

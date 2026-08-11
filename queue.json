@@ -158,14 +158,14 @@
     "wave": "2026-08-10 morning",
     "text": "A Stanford team just used AI to write 16 working viruses from scratch — genomes nature never made, built to kill drug-resistant bacteria.\n\n→ First time generative AI designed a full functional viral genome, not just edited one\n→ The sequences match nothing in any known database — the exact thing biosecurity screening is built to catch\n→ A Senate bill to mandate that screening is still pending, still not law\n\nthe tool to write new life just shipped. the law to watch it hasn't.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-10-morning-2",
     "wave": "2026-08-10 morning",
     "text": "A New Mexico judge just billed Meta $567 million for building AI chatbots and feeds that hooked kids — and it's not done.\n\n→ $567M now, on top of $375M already ordered — $942M total in this one case\n→ The judge compared Meta's design choices to a factory that pollutes and calls it a cost of doing business\n→ Four more states want $1.4 trillion from Meta in a trial starting this month\n\nthe fine everyone will remember is the one still coming.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-10-evening-1",
@@ -178,6 +178,20 @@
     "id": "2026-08-10-evening-2",
     "wave": "2026-08-10 evening",
     "text": "Anthropic just replaced the human reviewer with the AI it was reviewing — because the AI catches more danger.\n\n→ Auto mode is now default for Claude Code Pro/Max/Team on Aug 14\n→ Anthropic's test: classifier blocked 89% of planted dangerous commands\n→ Paid human testers, same commands, caught just 13.6%\n→ Drops step-by-step approval, pauses only on irreversible actions\n\nthe human-in-the-loop wasn't the safety net. it was the weak link.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-11-morning-1",
+    "wave": "2026-08-11 morning",
+    "text": "A Bitcoin mining company just became one of Anthropic's landlords — and its shareholders got 25% richer overnight.\n\n→ Riot Platforms: 20-year lease, 191 megawatts from its Rockdale, Texas site\n→ ~$9.1B in contract revenue through 2048, up to $16.1B with two extension options\n→ Riot's stock jumped 25% after-hours the second Anthropic's name leaked\n→ Built on mining coins, now renting out electricity to AI instead\n\nthe picks-and-shovels trade isn't chips anymore. it's the power bill.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-11-morning-2",
+    "wave": "2026-08-11 morning",
+    "text": "OpenAI paused a model for being too good at hacking. Days later it shipped a different one, one rung below that line, to customers.\n\n→ Astra paused Aug 7: couldn't rule out hitting \"Critical\" — autonomous zero-days, full attack chains\n→ GPT-5.6-Cyber shipped Aug 10, first model to officially hit \"High\"\n→ Vetted defenders get 95% of the exploit answers the public model refuses\n\ntoo dangerous to release became too profitable not to.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
