@@ -1,12 +1,64 @@
 # Posts History
 
+## Wave 2026-08-12 morning
+
+**Publish pipeline still broken — day 9:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-11 19:36 UTC (same `THREADS_ACCESS_TOKEN is not set` error at `scripts/publish.js:27`). Already escalated via direct notification once (2026-08-10 morning); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-11 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 32 entries, 4 sitting `queued` and unpublished (2 from 2026-08-11 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified — worth a spot-check before attaching.
+
+### Post 1 [score 7/10, pattern: money-access + broad] [status: draft]
+Source: https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/ (2026-08-06) + https://www.macrumors.com/2026/08/06/chatgpt-free-unlimited-text-chats/ (2026-08-06)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI just deleted the wall between free ChatGPT and paying for it.
+
+→ GPT-5.6 Luna is now the default for every Free and Go user — unlimited text chats, no cap
+→ Free users get "Think" mode too: the model spends real time reasoning on hard questions
+→ Only images, files and some tools stay behind the paywall
+→ Full rollout completes this week, announced Aug 6
+
+Free used to mean the worse model on a leash. now it just means no picture uploads.
+
+### Post 2 [score 7/10, pattern: big-tech-drama + contrarian] [status: draft] [X CTA]
+Source: https://www.usnews.com/news/top-news/articles/2026-08-10/us-appeals-court-allows-thousands-of-lawsuits-against-social-media-companies-over-user-addiction-claims-to-proceed (2026-08-10) + https://english.aawsat.com/technology/5305189-meta-will-soon-face-another-high-stakes-trial-us (2026-08-10)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
+A federal appeals court just ruled Meta, Google, TikTok and Snap can't dodge trial anymore.
+
+→ 9th Circuit: 3,000+ "addictive by design" lawsuits can proceed
+→ Section 230 is a defense to argue in court, not a shield from being sued
+→ Meta already owes ~$1B from earlier related cases
+→ New federal trial (29 state AGs) starts jury selection Wednesday
+
+years of arguing they can't be sued for this. a court just said: prove it to a jury.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 5/10, pattern: contrarian + niche-dev] [status: backup]
+Source: https://www.ghacks.net/2026/08/11/meta-releases-muse-glimmer-a-30-billion-parameter-open-weight-ai-model-that-runs-on-a-single-consumer-gpu/ (2026-08-11) + https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model (2026-08-10)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_AI_logo.png?width=1200
+Meta just open-sourced a 30B AI agent that runs on one gaming GPU — while Zuckerberg published an essay trashing closed AI labs.
+
+→ Muse Glimmer: 30B params, compressed to ~20GB, runs on a single 24GB consumer GPU
+→ No cloud subscription, no API key — decodes 3.1x faster than comparable models
+→ Apache 2.0 license, works with vLLM day one
+→ Ships days after Zuckerberg's manifesto attacking "closed" AI labs
+
+give away the model, own the ecosystem. that's the actual play.
+
+### Rejected candidates
+- Nvidia $500B Wall Street financing consortium — same story already used last wave (2026-08-11 evening Post 2), no repost same-topic
+- DeepSeek "significant" API price hike warning — announced Aug 6, still no rate/date disclosed as of this run, no fresh escalation today, would be third wave touching the same non-event
+- Microsoft shareholder class-action over AI/Copilot overhype — real but driven by law-firm "lead plaintiff deadline" PR spam (deadline itself was Aug 11), underlying complaint filed back in June, no substantive new development today
+- Rapid7 12% workforce cut (AI-first restructuring pivot) — real job-fear number but board approved Aug 7, already 5 days old and a mid-cap cybersecurity name with limited broad-audience recognition
+- Anthropic Riot Platforms $9.1B data-center lease — same story already used (2026-08-11 morning Post 1)
+- Layoffs tracker (923/day, 205,832 total, 54% AI-cited) — same recurring stat rejected in nearly every prior wave, no fresh trigger today
+
 ## Wave 2026-08-11 evening
 
 **Publish pipeline still broken — day 8, confirmed failing again this run:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Checked GitHub Actions API directly: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-11 09:50 UTC (same `Publish next queued post` step failing, consistent with the missing secret). Already escalated via direct notification once (2026-08-10 morning); not re-notifying for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-10 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 30 entries, 4 sitting `queued` and unpublished (2 from 2026-08-11 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified — worth a spot-check before attaching.
 
-### Post 1 [score 8/10, pattern: money-broad + big-tech-drama] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + big-tech-drama] [status: expired]
 Source: https://www.alreporter.com/2026/08/11/meta-launches-1-billion-fund-supporting-data-center-communities/ (2026-08-11) + https://www.axios.com/2026/08/10/zuckerberg-ai-manifesto-meta (2026-08-10)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
 Meta just put a price on the backlash: $1 billion for the towns hosting its AI data centers.
@@ -18,7 +70,7 @@ Meta just put a price on the backlash: $1 billion for the towns hosting its AI d
 
 you don't get a seat at the table until you're loud enough to need buying off.
 
-### Post 2 [score 7/10, pattern: money-broad + contrarian] [status: draft]
+### Post 2 [score 7/10, pattern: money-broad + contrarian] [status: expired]
 Source: https://www.cnbc.com/2026/08/10/nvidia-wall-street-asset-managers-500-billion-ai-push.html (2026-08-10) + https://www.thenationalnews.com/business/markets/2026/08/11/nvidia-turns-to-wall-street-giants-to-raise-500bn-for-ai-infrastructure/ (2026-08-11)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200
 Nvidia just recruited six of Wall Street's biggest firms to raise $500 billion — using AI chips as loan collateral, like mortgages before 2008.
