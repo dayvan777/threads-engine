@@ -1,12 +1,65 @@
 # Posts History
 
+## Wave 2026-08-12 evening
+
+**Publish pipeline still broken — day 9:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-12 09:53 UTC (same `THREADS_ACCESS_TOKEN is not set` error at `scripts/publish.js:27`, job logs checked directly). Escalated via direct notification this run — over a week unresolved with content piling up unpublished. Marked the two 24h+-old `2026-08-11 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 34 entries, 4 sitting `queued` and unpublished (2 from 2026-08-12 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (both reused from prior waves' confirmed paths), not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 8/10, pattern: money-broad + regular-people-access] [status: draft]
+Source: https://www.macrumors.com/2026/07/24/apple-to-pay-owners-of-these-iphone-models/ (2026-07-24) + https://finance.yahoo.com/technology/ai/articles/apple-may-owe-95-250-154500062.html (2026-08)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200
+Apple sold you an AI-powered Siri in its 2024 iPhone ads. It never shipped — a judge just approved your refund.
+
+→ $250M settlement, preliminarily approved July 24
+→ Payout: up to $95 per eligible iPhone (less if claims run high)
+→ Covers the "personal context" and on-screen-awareness Siri features Apple advertised, then quietly delayed
+→ Claim notices go out by Aug 31 — 90 days to file once yours lands
+
+they advertised the AI. now they're refunding the ad.
+
+### Post 2 [score 7/10, pattern: leak-insider + contrarian] [status: draft]
+Source: https://venturebeat.com/technology/openai-launches-gpt-5-6-cyber-with-reduced-refusals-95-completion-on-advanced-cybersecurity-tasks (2026-08-11) + https://securityboulevard.com/2026/08/openai-ties-gpt-5-6-cyber-access-to-new-daybreak-red-tier/ (2026-08-11)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI just shipped an AI built to hack — and used it on Google's browser first.
+
+→ GPT-5.6-Cyber: 95% completion on advanced cybersecurity tasks, refusals stripped by design
+→ Found two unknown zero-days in Chrome's V8 engine, reported to Google
+→ $12.50 in / $75 out per million tokens — gated by ID checks, hardware keys from Sept 1
+→ Only "vetted defenders" get in — the capability itself is now just a model file
+
+the safety company built the exploit. it's betting the lock outlasts the key.
+
+### Post 3 [score 6/10, pattern: contrarian + niche-finance] [status: backup]
+Source: https://qz.com/nebius-stock-earnings-revenue-beat-ai-cloud-081226 (2026-08-12) + https://www.digitimes.com/news/a20260812PD224/foxconn-revenue-earnings-server-rack-apple-2026.html (2026-08-12)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Foxconn_Logo.svg?width=1200
+Everyone's been calling the AI chip trade a bubble about to pop. Today one cloud startup grew revenue 454% in a year and the market believed it.
+
+→ Nebius Q2 revenue: $582.3M, up 454% YoY, stock +12-16% premarket
+→ Closed 4 new AI cloud deals worth $1B+ each this quarter alone
+→ Same day: Foxconn posts record $27.9B monthly revenue on AI server racks
+→ Nasdaq climbed on the news — the doom headlines and the earnings disagree
+
+the correction keeps getting predicted. the checks keep clearing anyway.
+
+### Rejected candidates
+- Nvidia $500B Wall Street financing consortium (new detail: 25% residual-value guarantee) — same underlying story already used and already rejected once as a repeat (2026-08-11 evening Post 2, rejected again in 2026-08-12 morning); not a large enough escalation to reuse a third time
+- Meta Muse Glimmer open-weight 30B model — already drafted as this morning's backup post, would be a same-day duplicate
+- Chip stock selloff ($1T wiped, Nvidia/SK Hynix/Samsung/Micron) — same underlying July 29 selloff already used (2026-08-02 evening Post 2)
+- Google "Let Google Call" AI shopping/phone-calling agents — feature page dated Nov 2025, updated July 24; reads as a product recap without a fresh trigger today
+- Amazon 600,000 jobs replaced by robots by 2033 — leaked NYT documents story is from October 2025, over 9 months stale despite recirculating
+- Health insurer (UnitedHealth/Cigna/Humana) AI claim-denial lawsuits — real and broad-audience but no fresh ruling or escalation found this week, most recent coverage from April 2026
+- Treasury Department draft report warning of AI bubble risk to 401(k)s — draft leaked July 6-9, over a month stale, no new development today
+- Layoffs tracker (919/day, 205,832 total, 54% AI-cited) — same recurring stat rejected in nearly every prior wave, no fresh trigger today
+- Rapid7 12% workforce cut — already rejected last wave (2026-08-12 morning) as stale and low-recognition
+
 ## Wave 2026-08-12 morning
 
 **Publish pipeline still broken — day 9:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-11 19:36 UTC (same `THREADS_ACCESS_TOKEN is not set` error at `scripts/publish.js:27`). Already escalated via direct notification once (2026-08-10 morning); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-11 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 32 entries, 4 sitting `queued` and unpublished (2 from 2026-08-11 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified — worth a spot-check before attaching.
 
-### Post 1 [score 7/10, pattern: money-access + broad] [status: draft]
+### Post 1 [score 7/10, pattern: money-access + broad] [status: expired]
 Source: https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/ (2026-08-06) + https://www.macrumors.com/2026/08/06/chatgpt-free-unlimited-text-chats/ (2026-08-06)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI just deleted the wall between free ChatGPT and paying for it.
@@ -18,7 +71,7 @@ OpenAI just deleted the wall between free ChatGPT and paying for it.
 
 Free used to mean the worse model on a leash. now it just means no picture uploads.
 
-### Post 2 [score 7/10, pattern: big-tech-drama + contrarian] [status: draft] [X CTA]
+### Post 2 [score 7/10, pattern: big-tech-drama + contrarian] [status: expired] [X CTA]
 Source: https://www.usnews.com/news/top-news/articles/2026-08-10/us-appeals-court-allows-thousands-of-lawsuits-against-social-media-companies-over-user-addiction-claims-to-proceed (2026-08-10) + https://english.aawsat.com/technology/5305189-meta-will-soon-face-another-high-stakes-trial-us (2026-08-10)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
 A federal appeals court just ruled Meta, Google, TikTok and Snap can't dodge trial anymore.
