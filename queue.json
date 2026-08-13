@@ -228,14 +228,14 @@
     "wave": "2026-08-12 evening",
     "text": "Apple sold you an AI-powered Siri in its 2024 iPhone ads. It never shipped — a judge just approved your refund.\n\n→ $250M settlement, preliminarily approved July 24\n→ Payout: up to $95 per eligible iPhone (less if claims run high)\n→ Covers the \"personal context\" and on-screen-awareness Siri features Apple advertised, then quietly delayed\n→ Claim notices go out by Aug 31 — 90 days to file once yours lands\n\nthey advertised the AI. now they're refunding the ad.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-12-evening-2",
     "wave": "2026-08-12 evening",
     "text": "OpenAI just shipped an AI built to hack — and used it on Google's browser first.\n\n→ GPT-5.6-Cyber: 95% completion on advanced cybersecurity tasks, refusals stripped by design\n→ Found two unknown zero-days in Chrome's V8 engine, reported to Google\n→ $12.50 in / $75 out per million tokens — gated by ID checks, hardware keys from Sept 1\n→ Only \"vetted defenders\" get in — the capability itself is now just a model file\n\nthe safety company built the exploit. it's betting the lock outlasts the key.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-13-morning-1",
@@ -248,6 +248,20 @@
     "id": "2026-08-13-morning-2",
     "wave": "2026-08-13 morning",
     "text": "OpenAI's own COO is walking away right before the company's biggest IPO ever.\n\n→ Brad Lightcap: 9 years in, CFO then COO, leaving to \"start something new\"\n→ 6th major exec out since April — Weil, Peebles, Narayanan, Simo, now him\n→ Exit lands weeks before a possible trillion-dollar IPO push\n→ His reason: \"the next horizon\" — nothing more specific\n\nwhen people closest to the money leave before the payout, that's not burnout.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-13-evening-1",
+    "wave": "2026-08-13 evening",
+    "text": "Twitch just flipped on a setting that feeds every one of your streams into Amazon's AI — and buried the switch to turn it off.\n\n→ Aug 12: default-on for every creator — streams, VODs, clips, even chat logs\n→ No email, no popup — just switched on quietly\n→ Off switch: Settings → Security & Privacy → \"Training for Generative AI\"\n→ Twitch's own product chief, live on stream: \"if this was opt-in, nobody would opt in\"\n\nthat's not a bug. that's the business model, said out loud by accident.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-13-evening-2",
+    "wave": "2026-08-13 evening",
+    "text": "DeepSeek released a model that matches Elon Musk's Grok 4.6 — at one-seventh the price, same day.\n\n→ Grok 4.6 (SpaceXAI): ties GPT-5.6 Sol on benchmarks, $6 per million output tokens\n→ DeepSeek V4 Pro: nearly identical scores, $0.87 per million — 7x cheaper, same day\n→ 35x cheaper than GPT-5.6 Sol, 57x cheaper than Claude Fable 5\n→ Chinese state media called it a direct offensive against Musk, not a coincidence\n\nfrontier intelligence is converging. the price is what's actually collapsing.",
     "image_url": null,
     "status": "queued"
   }

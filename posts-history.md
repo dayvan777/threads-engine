@@ -1,12 +1,64 @@
 # Posts History
 
+## Wave 2026-08-13 evening
+
+**Publish pipeline still broken — day 10:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-13 09:53 UTC (same `THREADS_ACCESS_TOKEN is not set` error at `scripts/publish.js:27`, job logs checked directly). Already escalated via direct notification (2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-12 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 38 entries, 4 sitting `queued` and unpublished (2 from 2026-08-13 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on techcrunch.com and pressgazette.co.uk when trying to pull primary-source details (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research, including a direct quote pulled via search snippet. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 6/10, pattern: leak-insider + regular-people] [status: draft]
+Source: https://www.techtimes.com/articles/324235/20260813/twitch-streams-feed-amazon-ai-default-opt-out-your-content-already-used.htm (2026-08-13) + https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/ (2026-08-12)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Twitch_logo_2019.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_2024.svg?width=1200
+Twitch just flipped on a setting that feeds every one of your streams into Amazon's AI — and buried the switch to turn it off.
+
+→ Aug 12: default-on for every creator — streams, VODs, clips, even chat logs
+→ No email, no popup — just switched on quietly
+→ Off switch: Settings → Security & Privacy → "Training for Generative AI"
+→ Twitch's own product chief, live on stream: "if this was opt-in, nobody would opt in"
+
+that's not a bug. that's the business model, said out loud by accident.
+
+### Post 2 [score 7/10, pattern: big-tech-drama + money-broad] [status: draft]
+Source: https://finance.biggo.com/news/3dd94d75-f0d8-4a36-949c-0b372d8aed7d (2026-08-12) + https://www.cryptopolitan.com/deepseek-v4-pro-price-undercuts-grok-4-6/ (2026-08-12)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/XAI_Logo.svg?width=1200
+DeepSeek released a model that matches Elon Musk's Grok 4.6 — at one-seventh the price, same day.
+
+→ Grok 4.6 (SpaceXAI): ties GPT-5.6 Sol on benchmarks, $6 per million output tokens
+→ DeepSeek V4 Pro: nearly identical scores, $0.87 per million — 7x cheaper, same day
+→ 35x cheaper than GPT-5.6 Sol, 57x cheaper than Claude Fable 5
+→ Chinese state media called it a direct offensive against Musk, not a coincidence
+
+frontier intelligence is converging. the price is what's actually collapsing.
+
+### Post 3 [score 6/10, pattern: money-broad + big-tech-drama] [status: backup]
+Source: https://www.bnnbloomberg.ca/business/company-news/2026/08/13/vantage-data-centers-explores-ipo-at-us100-billion-valuation-or-sale-sources-say/ (2026-08-13)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Vantage_Data_Centers_Logo.png?width=1200
+The company you've never heard of that owns the buildings your AI runs in might go public at $100B — the biggest data center IPO ever.
+
+→ Vantage Data Centers: exploring an IPO or sale, backed by Silver Lake + DigitalBridge
+→ Would raise ~$10B at a ~$100B valuation
+→ Already raised $11B in equity since 2023, before selling one public share
+→ Early-stage talks only, no formal process or timeline yet
+
+everyone watches who trains the models. the landlord is about to be worth more than the tenants.
+
+### Rejected candidates
+- Anthropic cancels scheduled Claude Sonnet 5 price increase (Aug 10) — genuinely money/access relevant but 3 days stale by this run and reads as a routine pricing-page update rather than a fresh trigger; niche-dev framing also crowds this wave's money-broad slot
+- Cohere publishers copyright lawsuit ($150K/article, up to $600M exposure) — huge numbers but the actual motion-to-dismiss ruling traces back to November 2025, recirculating in aggregator roundups today, not a fresh legal development
+- Apple vs OpenAI trade secrets lawsuit — same fight reused in three-plus straight prior waves, no new escalation today
+- Anthropic confidential IPO filing ($965B, October target) — unchanged since June, rejected as stale in nearly every prior wave
+- Nvidia Open Secure AI Alliance (OpenAI/Anthropic/Google absent) — launch dates back to ~July 27, still no fresh escalation
+- Oracle August layoffs / layoffs tracker (919/day, 205,832 total) — same recurring stat, no fresh trigger today
+- VideoVerse $250M acquisition fraud collapse — real drama but not AI-related and low brand recognition (VideoVerse, Minute Media) for this account's audience
+- Grok 4.6 launch on its own (without the DeepSeek same-day pricing contrast) — pure feature/benchmark recap, dud pattern per viral-patterns.md
+
 ## Wave 2026-08-13 morning
 
 **Publish pipeline still broken — day 10:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-12 19:39 UTC (same `THREADS_ACCESS_TOKEN is not set` error at `scripts/publish.js:27`, job logs checked directly). Already escalated via direct notification last wave (2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-12 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 36 entries, 4 sitting `queued` and unpublished (2 from 2026-08-12 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 7/10, pattern: money-broad + job-fear] [status: draft]
+### Post 1 [score 7/10, pattern: money-broad + job-fear] [status: expired]
 Source: https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/ (2026-08-12)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Lovable_Logo_+_Wordmark_Black.png?width=1200
 A startup that lets you build real software just by typing what you want is now worth $13.3 billion — double what it was eight months ago.
@@ -18,7 +70,7 @@ A startup that lets you build real software just by typing what you want is now 
 
 the junior dev job you're worried about isn't being automated. it's being priced out.
 
-### Post 2 [score 7/10, pattern: big-tech-drama + leak-insider] [status: draft] [X CTA]
+### Post 2 [score 7/10, pattern: big-tech-drama + leak-insider] [status: expired] [X CTA]
 Source: https://techcrunch.com/2026/08/11/brad-lightcap-openais-longtime-coo-is-leaving-to-start-something-new/ (2026-08-11)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI's own COO is walking away right before the company's biggest IPO ever.
