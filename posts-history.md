@@ -1,12 +1,65 @@
 # Posts History
 
+## Wave 2026-08-13 morning
+
+**Publish pipeline still broken — day 10:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-12 19:39 UTC (same `THREADS_ACCESS_TOKEN is not set` error at `scripts/publish.js:27`, job logs checked directly). Already escalated via direct notification last wave (2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-12 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 36 entries, 4 sitting `queued` and unpublished (2 from 2026-08-12 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 7/10, pattern: money-broad + job-fear] [status: draft]
+Source: https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/ (2026-08-12)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Lovable_Logo_+_Wordmark_Black.png?width=1200
+A startup that lets you build real software just by typing what you want is now worth $13.3 billion — double what it was eight months ago.
+
+→ Series C: $400M raised, valuation $6.6B (Dec) → $13.3B now
+→ Revenue nearly tripled: $200M → a projected $600M by month end
+→ No code, no engineers hired — just a prompt and a live app
+→ Backers this round: Menlo Ventures, EQT, Tencent, Balderton
+
+the junior dev job you're worried about isn't being automated. it's being priced out.
+
+### Post 2 [score 7/10, pattern: big-tech-drama + leak-insider] [status: draft] [X CTA]
+Source: https://techcrunch.com/2026/08/11/brad-lightcap-openais-longtime-coo-is-leaving-to-start-something-new/ (2026-08-11)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI's own COO is walking away right before the company's biggest IPO ever.
+
+→ Brad Lightcap: 9 years in, CFO then COO, leaving to "start something new"
+→ 6th major exec out since April — Weil, Peebles, Narayanan, Simo, now him
+→ Exit lands weeks before a possible trillion-dollar IPO push
+→ His reason: "the next horizon" — nothing more specific
+
+when people closest to the money leave before the payout, that's not burnout.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: leak-insider + niche-dev] [status: backup]
+Source: https://www.cloudsek.com/blog/ai-supply-chain-breach-2500-companies-434000-cicd-pipelines (report ~2026-08-11)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+The tool devs use to connect AI models to apps was secretly backdoored for weeks — 2,500 companies didn't notice.
+
+→ LiteLLM's build pipeline was hit through its own security scanner, Trivy
+→ Malicious packages lived ~40 min — enough to backdoor 434,000 CI/CD pipelines
+→ Confirmed victims: Nvidia, AWS, Cisco, Salesforce, Siemens, X Corp
+→ Breach happened in March. Nobody caught it until this month.
+
+the tool that was supposed to secure your pipeline was the entry point.
+
+### Rejected candidates
+- Anthropic pre-IPO retail exposure via ETFs (AGIX, VCX, DXYZ) — genuinely strong money-access angle (echoes the account's top-ever SpaceX/Fidelity hit) but the sourcing traces back to May-July reporting recirculating, not a fresh trigger in the last 12-24h; revisit if a fresh escalation (S-1 filing, new valuation mark) lands
+- Anthropic Claude invisible text watermarking under EU AI Act — fresh (Aug 11) and genuinely broad-audience (any Claude user, survives copy-paste) but weak on hard numbers/conflict once the compliance framing is stripped out; scored below the cutoff this wave
+- Google Gemini app crosses 1 billion monthly users (Aug 11), 14th Google product to do so — fresh but reads as a metrics/press-release recap once the ChatGPT-weekly-vs-Gemini-monthly angle is accounted for; no real conflict or stakes
+- Nvidia $500B Wall Street financing consortium — same story already used and rejected as a repeat in multiple prior waves (2026-08-11 evening, 2026-08-12 morning); still no large enough escalation to reuse again
+- Anthropic-Riot Platforms $9.1B data-center lease — same story already used (2026-08-11 morning Post 1)
+- Layoffs tracker (919/day, 205,832 total, 54% AI-cited) — same recurring stat rejected in nearly every prior wave, no fresh trigger today
+- Meta AI model hacked another company during testing (Aug 6) — same "rogue AI attacks real company" story family already used repeatedly (OpenAI/Hugging Face, Anthropic disclosures); would be a fourth near-identical entry
+
 ## Wave 2026-08-12 evening
 
 **Publish pipeline still broken — day 9:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-12 09:53 UTC (same `THREADS_ACCESS_TOKEN is not set` error at `scripts/publish.js:27`, job logs checked directly). Escalated via direct notification this run — over a week unresolved with content piling up unpublished. Marked the two 24h+-old `2026-08-11 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 34 entries, 4 sitting `queued` and unpublished (2 from 2026-08-12 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (both reused from prior waves' confirmed paths), not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 8/10, pattern: money-broad + regular-people-access] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + regular-people-access] [status: expired]
 Source: https://www.macrumors.com/2026/07/24/apple-to-pay-owners-of-these-iphone-models/ (2026-07-24) + https://finance.yahoo.com/technology/ai/articles/apple-may-owe-95-250-154500062.html (2026-08)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200
 Apple sold you an AI-powered Siri in its 2024 iPhone ads. It never shipped — a judge just approved your refund.
@@ -18,7 +71,7 @@ Apple sold you an AI-powered Siri in its 2024 iPhone ads. It never shipped — a
 
 they advertised the AI. now they're refunding the ad.
 
-### Post 2 [score 7/10, pattern: leak-insider + contrarian] [status: draft]
+### Post 2 [score 7/10, pattern: leak-insider + contrarian] [status: expired]
 Source: https://venturebeat.com/technology/openai-launches-gpt-5-6-cyber-with-reduced-refusals-95-completion-on-advanced-cybersecurity-tasks (2026-08-11) + https://securityboulevard.com/2026/08/openai-ties-gpt-5-6-cyber-access-to-new-daybreak-red-tier/ (2026-08-11)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI just shipped an AI built to hack — and used it on Google's browser first.
