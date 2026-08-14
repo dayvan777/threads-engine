@@ -242,14 +242,14 @@
     "wave": "2026-08-13 morning",
     "text": "A startup that lets you build real software just by typing what you want is now worth $13.3 billion — double what it was eight months ago.\n\n→ Series C: $400M raised, valuation $6.6B (Dec) → $13.3B now\n→ Revenue nearly tripled: $200M → a projected $600M by month end\n→ No code, no engineers hired — just a prompt and a live app\n→ Backers this round: Menlo Ventures, EQT, Tencent, Balderton\n\nthe junior dev job you're worried about isn't being automated. it's being priced out.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-13-morning-2",
     "wave": "2026-08-13 morning",
     "text": "OpenAI's own COO is walking away right before the company's biggest IPO ever.\n\n→ Brad Lightcap: 9 years in, CFO then COO, leaving to \"start something new\"\n→ 6th major exec out since April — Weil, Peebles, Narayanan, Simo, now him\n→ Exit lands weeks before a possible trillion-dollar IPO push\n→ His reason: \"the next horizon\" — nothing more specific\n\nwhen people closest to the money leave before the payout, that's not burnout.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-13-evening-1",
@@ -262,6 +262,20 @@
     "id": "2026-08-13-evening-2",
     "wave": "2026-08-13 evening",
     "text": "DeepSeek released a model that matches Elon Musk's Grok 4.6 — at one-seventh the price, same day.\n\n→ Grok 4.6 (SpaceXAI): ties GPT-5.6 Sol on benchmarks, $6 per million output tokens\n→ DeepSeek V4 Pro: nearly identical scores, $0.87 per million — 7x cheaper, same day\n→ 35x cheaper than GPT-5.6 Sol, 57x cheaper than Claude Fable 5\n→ Chinese state media called it a direct offensive against Musk, not a coincidence\n\nfrontier intelligence is converging. the price is what's actually collapsing.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-14-morning-1",
+    "wave": "2026-08-14 morning",
+    "text": "Oracle cut 21,000 jobs this year and is quietly lining up another round before September — while borrowing tens of billions to build AI data centers.\n\n→ Headcount: 162,000 → 141,000 in the last 12 months\n→ New cuts leaked internally, not yet public — double digits on some teams\n→ FY26 AI capex: $55.7B, up from $21.2B — burned $23.7B more cash than it made\n→ Target: trim payroll before the new fiscal quarter starts Sept 1\n\nthe cash goes into servers. the people who ran the old systems don't.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-14-morning-2",
+    "wave": "2026-08-14 morning",
+    "text": "OpenAI, Anthropic and Google encrypt hidden AI reasoning with one shared key — researchers picked it 315,320 times.\n\n→ One key covers the whole platform, not per user or session\n→ Feed a strong model's trace to a weaker sibling — it reads the secret thoughts out loud\n→ 6,708 public logs scraped: 182 real API keys and passwords recovered\n→ No jailbreak needed. Just a copy-paste\n\nthe reasoning was hidden. the lock protecting it wasn't.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }

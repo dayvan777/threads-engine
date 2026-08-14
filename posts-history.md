@@ -1,12 +1,67 @@
 # Posts History
 
+## Wave 2026-08-14 morning
+
+**Publish pipeline still broken — day 11:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-13 19:36 UTC (same `THREADS_ACCESS_TOKEN is not set` error pattern as every prior run). Already escalated via direct notification twice (2026-08-10 morning, 2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-13 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 40 entries, 4 sitting `queued` and unpublished (2 from 2026-08-13 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 7/10, pattern: job-fear + leak-insider] [status: draft]
+Source: https://finance.yahoo.com/technology/ai/articles/oracle-planning-round-layoffs-august-134527039.html (2026-08-11) + https://www.forbes.com/sites/maryroeloffs/2026/06/23/ai-cost-21000-jobs-at-oracle-this-year-and-more-layoffs-could-be-coming/ (headcount trend, 2026-06-23, recirculating)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Oracle_logo.svg?width=1200
+Oracle cut 21,000 jobs this year and is quietly lining up another round before September — while borrowing tens of billions to build AI data centers.
+
+→ Headcount: 162,000 → 141,000 in the last 12 months
+→ New cuts leaked internally, not yet public — double digits on some teams
+→ FY26 AI capex: $55.7B, up from $21.2B — burned $23.7B more cash than it made
+→ Target: trim payroll before the new fiscal quarter starts Sept 1
+
+the cash goes into servers. the people who ran the old systems don't.
+
+### Post 2 [score 7/10, pattern: leak-insider + niche-dev] [status: draft] [X CTA]
+Source: https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html (2026-08-12) + https://cybersecuritynews.com/top-ai-models-apis-flaw-exposes-hidden-reasoning/ (2026-08-12)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+OpenAI, Anthropic and Google encrypt hidden AI reasoning with one shared key — researchers picked it 315,320 times.
+
+→ One key covers the whole platform, not per user or session
+→ Feed a strong model's trace to a weaker sibling — it reads the secret thoughts out loud
+→ 6,708 public logs scraped: 182 real API keys and passwords recovered
+→ No jailbreak needed. Just a copy-paste
+
+the reasoning was hidden. the lock protecting it wasn't.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: money-broad + contrarian] [status: backup]
+Source: https://venturebeat.com/technology/googles-gemini-3-7-flash-targets-coding-and-agents-with-a-50-introductory-price-cut (2026-08-13) + https://www.techtimes.com/articles/324387/20260813/google-cuts-gemini-37-flash-price-half-it-claims-top-claude-business-workflows.htm (2026-08-13)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_Gemini_logo_2025.svg?width=1200
+Google just cut Gemini's price in half — and already scheduled the day it triples back.
+
+→ Gemini 3.7 Flash: $0.75 / $3.75 per million tokens through Dec 31, 2026
+→ Jan 1, 2027 it reverts to $1.50 / $7.50 — permanently
+→ Ships just 3 weeks after its predecessor, Google's fastest turnaround yet
+→ Google claims it beats Claude Sonnet 5 and GPT-5.6 on business workflows
+
+the intro price is the hook. the invoice lands after you're dependent on it.
+
+### Rejected candidates
+- Google DeepMind / Hassabis-Jeff Dean leadership shakeup — already used twice (2026-08-06 evening, 2026-08-09 morning), no material new escalation since despite continued analysis coverage (Fortune Aug 10 morale piece is deeper color on the same already-used story, not a fresh trigger)
+- Anthropic "first profitable quarter," $10.9B Q2 revenue — traces back to a May 20 CNBC leak of investor projections, still not a confirmed final result as of this run; recirculating in aggregator roundups today without a fresh confirmation
+- Anthropic $30B round / $900B valuation — unchanged since May-June reporting, rejected as stale in nearly every prior wave
+- OpenAI confidential S-1 filing, ~$852B-$1T IPO — filed June 8, still not public on EDGAR, no new escalation today; same story rejected repeatedly
+- Palantir "otherworldly" Q2 earnings, stock +29-40% — real but the underlying Aug 3-10 earnings pop is 4-11 days old and the company's Karp/wealth angle was already used as its own post (2026-08-05 evening Post 1); would be a rehash
+- Snap 1,000 jobs / 16% AI-driven layoffs — turned out to be a stale April 15, 2026 announcement recirculating in aggregator layoff trackers, not a fresh trigger
+- Layoffs tracker aggregate (322 events, 205,832 workers, ~915/day) — same recurring stat rejected in nearly every prior wave; used only as a supporting number inside Post 1 instead
+- Google Pixel 11 / Gemini "Magic Capture" launch — pure product/feature recap, no conflict or stakes, dud pattern per viral-patterns.md
+- Google Gemini app crosses 1B monthly users — already rejected last wave (2026-08-13 morning) as a metrics recap with no real conflict
+
 ## Wave 2026-08-13 evening
 
 **Publish pipeline still broken — day 10:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-13 09:53 UTC (same `THREADS_ACCESS_TOKEN is not set` error at `scripts/publish.js:27`, job logs checked directly). Already escalated via direct notification (2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-12 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 38 entries, 4 sitting `queued` and unpublished (2 from 2026-08-13 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on techcrunch.com and pressgazette.co.uk when trying to pull primary-source details (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research, including a direct quote pulled via search snippet. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 6/10, pattern: leak-insider + regular-people] [status: draft]
+### Post 1 [score 6/10, pattern: leak-insider + regular-people] [status: expired]
 Source: https://www.techtimes.com/articles/324235/20260813/twitch-streams-feed-amazon-ai-default-opt-out-your-content-already-used.htm (2026-08-13) + https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/ (2026-08-12)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Twitch_logo_2019.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_2024.svg?width=1200
 Twitch just flipped on a setting that feeds every one of your streams into Amazon's AI — and buried the switch to turn it off.
@@ -18,7 +73,7 @@ Twitch just flipped on a setting that feeds every one of your streams into Amazo
 
 that's not a bug. that's the business model, said out loud by accident.
 
-### Post 2 [score 7/10, pattern: big-tech-drama + money-broad] [status: draft]
+### Post 2 [score 7/10, pattern: big-tech-drama + money-broad] [status: expired]
 Source: https://finance.biggo.com/news/3dd94d75-f0d8-4a36-949c-0b372d8aed7d (2026-08-12) + https://www.cryptopolitan.com/deepseek-v4-pro-price-undercuts-grok-4-6/ (2026-08-12)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/XAI_Logo.svg?width=1200
 DeepSeek released a model that matches Elon Musk's Grok 4.6 — at one-seventh the price, same day.
@@ -30,7 +85,7 @@ DeepSeek released a model that matches Elon Musk's Grok 4.6 — at one-seventh t
 
 frontier intelligence is converging. the price is what's actually collapsing.
 
-### Post 3 [score 6/10, pattern: money-broad + big-tech-drama] [status: backup]
+### Post 3 [score 6/10, pattern: money-broad + big-tech-drama] [status: expired]
 Source: https://www.bnnbloomberg.ca/business/company-news/2026/08/13/vantage-data-centers-explores-ipo-at-us100-billion-valuation-or-sale-sources-say/ (2026-08-13)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Vantage_Data_Centers_Logo.png?width=1200
 The company you've never heard of that owns the buildings your AI runs in might go public at $100B — the biggest data center IPO ever.
