@@ -1,12 +1,64 @@
 # Posts History
 
+## Wave 2026-08-14 evening
+
+**Publish pipeline still broken — day 11:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-14 09:51 UTC (same `THREADS_ACCESS_TOKEN is not set` error pattern as every prior run). Already escalated via direct notification twice (2026-08-10 morning, 2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-13 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 42 entries, 4 sitting `queued` and unpublished (2 from 2026-08-14 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 7/10, pattern: big-tech-drama + money-broad] [status: draft]
+Source: https://www.macrumors.com/2026/08/14/apple-trained-own-ai-model-for-china/ (2026-08-14) + https://ts2.tech/en/alibaba-gains-about-17b-after-apple-ai-clearance-revenue-still-to-come/ (2026-08-14)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Alibaba_en_logo.svg?width=1200
+Apple just built its own AI model for China — and handed the keys to Alibaba to run it.
+
+→ First foreign company ever approved to run a proprietary AI model inside China
+→ Alibaba's Qwen powers it — the stock added $16.7B in value the day it broke
+→ 22 months locked out of its own China AI market, unblocked by trusting a rival
+→ Greater China revenue already back to $20.5B this quarter, up 28% YoY
+
+the company that sells "we don't need anyone" just needed Alibaba.
+
+### Post 2 [score 7/10, pattern: leak-insider + regular-people] [status: draft] [X CTA]
+Source: https://www.forbes.com/sites/johnkoetsier/2026/08/13/ai-can-now-make-deepfake-biological-viruses-we-are-not-prepared/ (2026-08-13) + https://phys.org/news/2026-08-sixteen-ai-viruses-route-drug.html (2026-08-14)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Bacteriophage_structure.png?width=1200
+AI just designed new viruses from scratch — 16 came out alive.
+
+→ Stanford + Arc Institute trained an AI on raw DNA, like ChatGPT trains on text
+→ ~300 candidate genomes designed; 16 synthesized into working viruses
+→ Those 16 killed drug-resistant E. coli natural viruses couldn't touch
+→ A biosecurity researcher's warning: the same model could design something worse
+
+the cure for superbugs and the blueprint for one came from the same model.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: job-fear + regular-people] [status: backup]
+Source: https://cnevpost.com/2026/08/14/pony-ai-uber-2000-robotaxis-europe/ (2026-08-14) + https://tech.eu/2026/08/14/uber-ups-robotaxi-offensive-in-europe-with-partnership-expansion/ (2026-08-14)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Uber_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Ponyai.png?width=1200
+Uber and Pony.ai are putting 2,000+ driverless robotaxis on European streets — zero drivers in any of them.
+
+→ Expanding past Zagreb, Europe's first robotaxi city, into 4 more this year
+→ Middle East rollout planned next
+→ Uber doesn't own a single car — Pony.ai builds them, a local operator runs them, Uber just takes the app cut
+→ Cities and exact dates: still undisclosed
+
+the taxi industry isn't getting automated. it's getting subletted.
+
+### Rejected candidates
+- OpenAI Astra paused over "Critical" cyber-risk classification — same underlying story already used (2026-08-11 morning Post 2), no fresh escalation since
+- Nvidia $500B Wall Street infrastructure consortium (Apollo/BlackRock/Blackstone/Brookfield/Goldman/KKR) — same story already used and rejected as a repeat in multiple prior waves (2026-08-11 evening, 2026-08-12 morning, 2026-08-13 morning), still no new escalation
+- OpenAI "Ultrafast" API tier preview (14x faster GPT-5.6 Sol) — pure feature/speed recap, no conflict or stakes, dud pattern per viral-patterns.md
+- xAI Grok 4.6 launch on its own — same story already used in the DeepSeek same-day pricing contrast (2026-08-13 evening Post 2); would be a rehash without the new angle
+- Layoffs tracker aggregate (205,832 workers, 40% AI-cited) — same recurring stat rejected in nearly every prior wave
+- Anthropic automatic watermarking under EU AI Act — already rejected last-but-one wave (2026-08-13 morning) as weak on hard numbers/conflict once compliance framing is stripped out; no new escalation since
+
 ## Wave 2026-08-14 morning
 
 **Publish pipeline still broken — day 11:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-13 19:36 UTC (same `THREADS_ACCESS_TOKEN is not set` error pattern as every prior run). Already escalated via direct notification twice (2026-08-10 morning, 2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-13 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 40 entries, 4 sitting `queued` and unpublished (2 from 2026-08-13 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 7/10, pattern: job-fear + leak-insider] [status: draft]
+### Post 1 [score 7/10, pattern: job-fear + leak-insider] [status: expired]
 Source: https://finance.yahoo.com/technology/ai/articles/oracle-planning-round-layoffs-august-134527039.html (2026-08-11) + https://www.forbes.com/sites/maryroeloffs/2026/06/23/ai-cost-21000-jobs-at-oracle-this-year-and-more-layoffs-could-be-coming/ (headcount trend, 2026-06-23, recirculating)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Oracle_logo.svg?width=1200
 Oracle cut 21,000 jobs this year and is quietly lining up another round before September — while borrowing tens of billions to build AI data centers.
@@ -18,7 +70,7 @@ Oracle cut 21,000 jobs this year and is quietly lining up another round before S
 
 the cash goes into servers. the people who ran the old systems don't.
 
-### Post 2 [score 7/10, pattern: leak-insider + niche-dev] [status: draft] [X CTA]
+### Post 2 [score 7/10, pattern: leak-insider + niche-dev] [status: expired] [X CTA]
 Source: https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html (2026-08-12) + https://cybersecuritynews.com/top-ai-models-apis-flaw-exposes-hidden-reasoning/ (2026-08-12)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 OpenAI, Anthropic and Google encrypt hidden AI reasoning with one shared key — researchers picked it 315,320 times.

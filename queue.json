@@ -256,14 +256,14 @@
     "wave": "2026-08-13 evening",
     "text": "Twitch just flipped on a setting that feeds every one of your streams into Amazon's AI — and buried the switch to turn it off.\n\n→ Aug 12: default-on for every creator — streams, VODs, clips, even chat logs\n→ No email, no popup — just switched on quietly\n→ Off switch: Settings → Security & Privacy → \"Training for Generative AI\"\n→ Twitch's own product chief, live on stream: \"if this was opt-in, nobody would opt in\"\n\nthat's not a bug. that's the business model, said out loud by accident.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-13-evening-2",
     "wave": "2026-08-13 evening",
     "text": "DeepSeek released a model that matches Elon Musk's Grok 4.6 — at one-seventh the price, same day.\n\n→ Grok 4.6 (SpaceXAI): ties GPT-5.6 Sol on benchmarks, $6 per million output tokens\n→ DeepSeek V4 Pro: nearly identical scores, $0.87 per million — 7x cheaper, same day\n→ 35x cheaper than GPT-5.6 Sol, 57x cheaper than Claude Fable 5\n→ Chinese state media called it a direct offensive against Musk, not a coincidence\n\nfrontier intelligence is converging. the price is what's actually collapsing.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-14-morning-1",
@@ -276,6 +276,20 @@
     "id": "2026-08-14-morning-2",
     "wave": "2026-08-14 morning",
     "text": "OpenAI, Anthropic and Google encrypt hidden AI reasoning with one shared key — researchers picked it 315,320 times.\n\n→ One key covers the whole platform, not per user or session\n→ Feed a strong model's trace to a weaker sibling — it reads the secret thoughts out loud\n→ 6,708 public logs scraped: 182 real API keys and passwords recovered\n→ No jailbreak needed. Just a copy-paste\n\nthe reasoning was hidden. the lock protecting it wasn't.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-14-evening-1",
+    "wave": "2026-08-14 evening",
+    "text": "Apple just built its own AI model for China — and handed the keys to Alibaba to run it.\n\n→ First foreign company ever approved to run a proprietary AI model inside China\n→ Alibaba's Qwen powers it — the stock added $16.7B in value the day it broke\n→ 22 months locked out of its own China AI market, unblocked by trusting a rival\n→ Greater China revenue already back to $20.5B this quarter, up 28% YoY\n\nthe company that sells \"we don't need anyone\" just needed Alibaba.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-14-evening-2",
+    "wave": "2026-08-14 evening",
+    "text": "AI just designed new viruses from scratch — 16 came out alive.\n\n→ Stanford + Arc Institute trained an AI on raw DNA, like ChatGPT trains on text\n→ ~300 candidate genomes designed; 16 synthesized into working viruses\n→ Those 16 killed drug-resistant E. coli natural viruses couldn't touch\n→ A biosecurity researcher's warning: the same model could design something worse\n\nthe cure for superbugs and the blueprint for one came from the same model.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
