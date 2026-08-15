@@ -1,12 +1,66 @@
 # Posts History
 
+## Wave 2026-08-15 evening
+
+**Publish pipeline still broken — day 12:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-15 09:16:16 UTC (same `THREADS_ACCESS_TOKEN is not set` error pattern as every prior run). Already escalated via direct notification twice (2026-08-10 morning, 2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-14 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 46 entries, 4 sitting `queued` and unpublished (2 from 2026-08-15 morning, 2 new from this wave).
+
+**Note on tooling this run:** direct HTTP (curl) to commons.wikimedia.org returned exit 56 / connection failure again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI_Logo.svg`, `File:Anthropic_logo.svg`, `File:Decart_Logo.svg`, `File:Cerebras_logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 6/10, pattern: regular-people + big-tech-drama] [status: draft]
+Source: https://ppc.land/chatgpt-free-and-go-users-in-europe-face-ads-from-later-this-month/ (2026-08-15) + https://openai.com/index/testing-ads-in-chatgpt/ (2026-08-15)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI just told millions of free ChatGPT users in Europe: ads start this month.
+
+→ Notices went out today to Free and Go users across the EU, EEA and Switzerland
+→ Ads already live in the UK, Mexico, Brazil, Japan and South Korea since Aug 11
+→ Plus, Pro, Business and Enterprise stay ad-free — only the free tier gets them
+→ Personalized targeting needs your opt-in; contextual ads roll out regardless
+
+the free chatbot just found its business model. it's you.
+
+### Post 2 [score 6/10, pattern: leak-insider + big-tech-drama] [status: draft] [X CTA]
+Source: https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion (2026-08-13) + https://fortune.com/2026/08/13/anthropic-said-in-talks-to-buy-startup-decart-for-6-billion/ (2026-08-13)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Decart_Logo.svg?width=1200
+Anthropic is about to spend $6 billion on a startup most people never heard of.
+
+→ Decart: Israeli AI infra startup, valued near $4B a month ago
+→ $6B would be Anthropic's largest deal ever — still just "in talks"
+→ Its software squeezes more speed out of Nvidia, TPUs, even Amazon's silicon
+→ Lands as Anthropic reportedly preps an IPO as soon as October
+
+compute is the new war chest. Anthropic just found a way to stretch every dollar of it.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 5/10, pattern: contrarian + niche-finance] [status: backup]
+Source: https://www.stocktitan.net/news/CBRS/cerebras-systems-fast-inference-cloud-business-nearly-quadruples-in-6s5hs32fdiz0.html (2026-08-12) + https://mlq.ai/news/openai-previews-cerebras-powered-gpt-56-sol-tier-at-up-to-750-tokens-per-second/ (2026-08-13)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Cerebras_logo.svg?width=1200
+The chip company that just started powering OpenAI's newest speed tier lost $450 million last quarter.
+
+→ Cerebras cloud revenue: $126M in Q2, up 281% year over year
+→ Net loss: $450.5M, mostly stock-comp costs from May's IPO
+→ Stock already down from a post-IPO high of $350 to $244
+→ Same week it started running OpenAI's 750-tokens/sec "Ultrafast" tier
+
+the AI boom pays everyone's bills except the company holding up the speed.
+
+### Rejected candidates
+- Reddit S&P 500 inclusion, DeepSeek V4 Flash price hike — both already used this morning (2026-08-15 morning Post 1 & 2), no fresh escalation since
+- Gemini app crosses 1 billion MAU — pure milestone recap, already rejected repeatedly, dud pattern per viral-patterns.md
+- Intel $20B stock offering closing / $19.7B net proceeds — same underlying offering already used (2026-08-10 evening Post 1) at the $15B proposal stage; this is just the deal closing, not a fresh escalation
+- OpenAI Ultrafast API tier (14x faster GPT-5.6 Sol via Cerebras) on its own — no price or GA date disclosed, pure feature/speed recap, dud pattern; folded the Cerebras financial angle into Post 3 instead
+- Cisco 4,000 job cuts for AI pivot — announced May 13, 2026, three months stale, no fresh escalation today
+- Atlassian 1,600 layoffs, Intuit 3,000 layoffs — both already months-old (March and May 2026 respectively), recirculating in aggregator trackers, not fresh triggers
+- Layoffs tracker aggregate (322 events, 205,832 workers) — same recurring stat rejected in nearly every prior wave
+- AMD Q2 data-center revenue doubling to $6.7B — real but pure earnings recap with no conflict or regular-people stake, weaker than the Cerebras angle for the same "AI infra" theme
+
 ## Wave 2026-08-15 morning
 
 **Publish pipeline still broken — day 12:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-14 19:30:16 UTC (same `THREADS_ACCESS_TOKEN is not set` error pattern as every prior run). Already escalated via direct notification twice (2026-08-10 morning, 2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-14 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 44 entries, 4 sitting `queued` and unpublished (2 from 2026-08-14 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 7/10, pattern: money-broad + regular-people] [status: draft]
+### Post 1 [score 7/10, pattern: money-broad + regular-people] [status: expired]
 Source: https://www.cnbc.com/2026/08/13/reddit-shares-jump-11percent-on-inclusion-in-sp-500.html (2026-08-13) + https://www.forbes.com/sites/tylerroush/2026/08/14/reddit-joins-the-sp-500-next-week-heres-what-that-means-for-shares/ (2026-08-14)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Reddit_logo.svg?width=1200
 Reddit just got added to the same list as Apple and Microsoft — the S&P 500.
@@ -18,7 +72,7 @@ Reddit just got added to the same list as Apple and Microsoft — the S&P 500.
 
 you didn't have to pick the winner. the index just picked it for you.
 
-### Post 2 [score 8/10, pattern: contrarian + niche-dev] [status: draft]
+### Post 2 [score 8/10, pattern: contrarian + niche-dev] [status: expired]
 Source: https://wccftech.com/deepseek-forced-to-raise-prices-as-its-recent-price-cuts-to-snub-openai-unleashed-a-demand-tsnunami-that-its-20000-gpu-stash-cant-handle/ (2026-08-14) + https://finance.biggo.com/news/7e9f1d12-cf40-4852-a49a-ed69b6925090 (2026-08-14)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
 DeepSeek won the AI price war by undercutting everyone. In 2 days it has to hike prices up to 1,100% just to survive its own success.
