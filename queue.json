@@ -270,14 +270,14 @@
     "wave": "2026-08-14 morning",
     "text": "Oracle cut 21,000 jobs this year and is quietly lining up another round before September — while borrowing tens of billions to build AI data centers.\n\n→ Headcount: 162,000 → 141,000 in the last 12 months\n→ New cuts leaked internally, not yet public — double digits on some teams\n→ FY26 AI capex: $55.7B, up from $21.2B — burned $23.7B more cash than it made\n→ Target: trim payroll before the new fiscal quarter starts Sept 1\n\nthe cash goes into servers. the people who ran the old systems don't.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-14-morning-2",
     "wave": "2026-08-14 morning",
     "text": "OpenAI, Anthropic and Google encrypt hidden AI reasoning with one shared key — researchers picked it 315,320 times.\n\n→ One key covers the whole platform, not per user or session\n→ Feed a strong model's trace to a weaker sibling — it reads the secret thoughts out loud\n→ 6,708 public logs scraped: 182 real API keys and passwords recovered\n→ No jailbreak needed. Just a copy-paste\n\nthe reasoning was hidden. the lock protecting it wasn't.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-14-evening-1",
@@ -290,6 +290,20 @@
     "id": "2026-08-14-evening-2",
     "wave": "2026-08-14 evening",
     "text": "AI just designed new viruses from scratch — 16 came out alive.\n\n→ Stanford + Arc Institute trained an AI on raw DNA, like ChatGPT trains on text\n→ ~300 candidate genomes designed; 16 synthesized into working viruses\n→ Those 16 killed drug-resistant E. coli natural viruses couldn't touch\n→ A biosecurity researcher's warning: the same model could design something worse\n\nthe cure for superbugs and the blueprint for one came from the same model.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-15-morning-1",
+    "wave": "2026-08-15 morning",
+    "text": "Reddit just got added to the same list as Apple and Microsoft — the S&P 500.\n\n→ Shares jumped up to 15% just on the announcement\n→ Joins the index before the bell Aug 18, replacing AvalonBay Communities\n→ Every index fund and 401k tracking the S&P 500 has to buy it now, no choice\n→ Only the second pure social media stock in the index, after Meta\n\nyou didn't have to pick the winner. the index just picked it for you.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-15-morning-2",
+    "wave": "2026-08-15 morning",
+    "text": "DeepSeek won the AI price war by undercutting everyone. In 2 days it has to hike prices up to 1,100% just to survive its own success.\n\n→ V4 Flash processed 7.22 trillion tokens in one week — most of any model on OpenRouter\n→ Demand blew past its ~20,000 GPU cluster\n→ New peak/off-peak pricing hits Aug 17, some tiers 11x higher\n→ OpenAI and Anthropic are moving the opposite direction — cutting prices\n\nbeing the cheapest model on earth wasn't the win. it was the bottleneck.",
     "image_url": null,
     "status": "queued"
   }

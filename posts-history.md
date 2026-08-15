@@ -1,12 +1,63 @@
 # Posts History
 
+## Wave 2026-08-15 morning
+
+**Publish pipeline still broken — day 12:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-14 19:30:16 UTC (same `THREADS_ACCESS_TOKEN is not set` error pattern as every prior run). Already escalated via direct notification twice (2026-08-10 morning, 2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-14 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 44 entries, 4 sitting `queued` and unpublished (2 from 2026-08-14 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 7/10, pattern: money-broad + regular-people] [status: draft]
+Source: https://www.cnbc.com/2026/08/13/reddit-shares-jump-11percent-on-inclusion-in-sp-500.html (2026-08-13) + https://www.forbes.com/sites/tylerroush/2026/08/14/reddit-joins-the-sp-500-next-week-heres-what-that-means-for-shares/ (2026-08-14)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Reddit_logo.svg?width=1200
+Reddit just got added to the same list as Apple and Microsoft — the S&P 500.
+
+→ Shares jumped up to 15% just on the announcement
+→ Joins the index before the bell Aug 18, replacing AvalonBay Communities
+→ Every index fund and 401k tracking the S&P 500 has to buy it now, no choice
+→ Only the second pure social media stock in the index, after Meta
+
+you didn't have to pick the winner. the index just picked it for you.
+
+### Post 2 [score 8/10, pattern: contrarian + niche-dev] [status: draft]
+Source: https://wccftech.com/deepseek-forced-to-raise-prices-as-its-recent-price-cuts-to-snub-openai-unleashed-a-demand-tsnunami-that-its-20000-gpu-stash-cant-handle/ (2026-08-14) + https://finance.biggo.com/news/7e9f1d12-cf40-4852-a49a-ed69b6925090 (2026-08-14)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
+DeepSeek won the AI price war by undercutting everyone. In 2 days it has to hike prices up to 1,100% just to survive its own success.
+
+→ V4 Flash processed 7.22 trillion tokens in one week — most of any model on OpenRouter
+→ Demand blew past its ~20,000 GPU cluster
+→ New peak/off-peak pricing hits Aug 17, some tiers 11x higher
+→ OpenAI and Anthropic are moving the opposite direction — cutting prices
+
+being the cheapest model on earth wasn't the win. it was the bottleneck.
+
+### Post 3 [score 6/10, pattern: big-tech-drama + china-conflict] [status: backup]
+Source: https://www.cnbc.com/2026/08/11/manus-china-meta-acquisition.html (2026-08-11) + https://finance.biggo.com/news/30e0d0ca-9072-45c1-adb9-397099dd6397 (2026-08-13)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/MANUS_logo.svg?width=1200
+Beijing just proved moving overseas doesn't get you out of Chinese jurisdiction — it forced Meta to unwind a $2 billion AI acquisition.
+
+→ Meta bought Manus for $2B in December. China's regulator ordered it undone in April.
+→ Manus was founded in China, relocated to Singapore — didn't matter
+→ A Tencent-led group is now buying back Meta's stake at the original price
+→ User data from the Meta era gets deleted by end of August
+
+the company moved. the jurisdiction didn't let go.
+
+### Rejected candidates
+- OpenAI Astra critical-cyber-capability pause — same underlying story already used and rejected as a repeat multiple times (2026-08-11 morning Post 2, 2026-08-14 evening rejected list), no fresh escalation since
+- Google Gemini app crosses 1 billion MAU — pure milestone/feature recap, no conflict or numbers-for-people stake, dud pattern per viral-patterns.md
+- Uber/Pony.ai 2,000+ robotaxis in Europe — same story already used as backup last wave (2026-08-14 evening Post 3), no material new development since
+- Apple AI China model + Alibaba, AI-designed viruses (Stanford/Arc) — both used as main posts last wave (2026-08-14 evening Post 1 & 2), too soon to reuse
+- Oracle new August layoffs — same story already used (2026-08-14 morning Post 1), no fresh escalation since
+- SMIC raising chip manufacturing prices on AI demand — real but reads as industrial/supply-chain recap, weak regular-people hook and no named conflict
+- Nu Holdings record Q2 earnings, AMD/Ouster stock pops — real market moves but no clean AI-news hook beyond generic "stocks up," weaker than Reddit's index-inclusion story
+
 ## Wave 2026-08-14 evening
 
 **Publish pipeline still broken — day 11:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-14 09:51 UTC (same `THREADS_ACCESS_TOKEN is not set` error pattern as every prior run). Already escalated via direct notification twice (2026-08-10 morning, 2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-13 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 42 entries, 4 sitting `queued` and unpublished (2 from 2026-08-14 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch / direct HTTP returned `EGRESS_BLOCKED` on commons.wikimedia.org again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles, not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 7/10, pattern: big-tech-drama + money-broad] [status: draft]
+### Post 1 [score 7/10, pattern: big-tech-drama + money-broad] [status: expired]
 Source: https://www.macrumors.com/2026/08/14/apple-trained-own-ai-model-for-china/ (2026-08-14) + https://ts2.tech/en/alibaba-gains-about-17b-after-apple-ai-clearance-revenue-still-to-come/ (2026-08-14)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Alibaba_en_logo.svg?width=1200
 Apple just built its own AI model for China — and handed the keys to Alibaba to run it.
@@ -18,7 +69,7 @@ Apple just built its own AI model for China — and handed the keys to Alibaba t
 
 the company that sells "we don't need anyone" just needed Alibaba.
 
-### Post 2 [score 7/10, pattern: leak-insider + regular-people] [status: draft] [X CTA]
+### Post 2 [score 7/10, pattern: leak-insider + regular-people] [status: expired] [X CTA]
 Source: https://www.forbes.com/sites/johnkoetsier/2026/08/13/ai-can-now-make-deepfake-biological-viruses-we-are-not-prepared/ (2026-08-13) + https://phys.org/news/2026-08-sixteen-ai-viruses-route-drug.html (2026-08-14)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Bacteriophage_structure.png?width=1200
 AI just designed new viruses from scratch — 16 came out alive.
