@@ -298,14 +298,14 @@
     "wave": "2026-08-15 morning",
     "text": "Reddit just got added to the same list as Apple and Microsoft — the S&P 500.\n\n→ Shares jumped up to 15% just on the announcement\n→ Joins the index before the bell Aug 18, replacing AvalonBay Communities\n→ Every index fund and 401k tracking the S&P 500 has to buy it now, no choice\n→ Only the second pure social media stock in the index, after Meta\n\nyou didn't have to pick the winner. the index just picked it for you.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-15-morning-2",
     "wave": "2026-08-15 morning",
     "text": "DeepSeek won the AI price war by undercutting everyone. In 2 days it has to hike prices up to 1,100% just to survive its own success.\n\n→ V4 Flash processed 7.22 trillion tokens in one week — most of any model on OpenRouter\n→ Demand blew past its ~20,000 GPU cluster\n→ New peak/off-peak pricing hits Aug 17, some tiers 11x higher\n→ OpenAI and Anthropic are moving the opposite direction — cutting prices\n\nbeing the cheapest model on earth wasn't the win. it was the bottleneck.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-15-evening-1",
@@ -318,6 +318,20 @@
     "id": "2026-08-15-evening-2",
     "wave": "2026-08-15 evening",
     "text": "Anthropic is about to spend $6 billion on a startup most people never heard of.\n\n→ Decart: Israeli AI infra startup, valued near $4B a month ago\n→ $6B would be Anthropic's largest deal ever — still just \"in talks\"\n→ Its software squeezes more speed out of Nvidia, TPUs, even Amazon's silicon\n→ Lands as Anthropic reportedly preps an IPO as soon as October\n\ncompute is the new war chest. Anthropic just found a way to stretch every dollar of it.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-16-morning-1",
+    "wave": "2026-08-16 morning",
+    "text": "OpenAI, Anthropic and Google encrypted their models' hidden thinking with one shared key — researchers just read it.\n\n→ 315,320 hidden reasoning blocks decoded from public AI logs\n→ 182 real API keys and passwords recovered, plus 367 personal-data artifacts\n→ A weaker model could be tricked into revealing a rival's private reasoning\n→ All three vendors reused the same global key across sessions and users\n\nthe part of the AI built to think in private was never actually private.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-16-morning-2",
+    "wave": "2026-08-16 morning",
+    "text": "The S&P 500 just closed at the highest point in its history — 7,798.99 — and AI chip stocks did almost all the lifting.\n\n→ Record close Aug 13, third all-time high in two weeks\n→ Semiconductor and AI-infrastructure names led practically alone\n→ Cooling inflation data added fuel, but AI earnings drove the record\n→ Own an index fund or a 401k? You already own the record, no picks required\n\nwall street isn't debating whether there's an AI bubble anymore. it's just riding it to the top.",
     "image_url": null,
     "status": "queued"
   }

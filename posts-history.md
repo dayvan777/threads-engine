@@ -1,12 +1,66 @@
 # Posts History
 
+## Wave 2026-08-16 morning
+
+**Publish pipeline still broken — day 13:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-15 18:58:13 UTC (same `THREADS_ACCESS_TOKEN is not set` error pattern as every prior run, 45+ consecutive failures on record). Already escalated via direct notification twice (2026-08-10 morning, 2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-15 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 48 entries, 4 sitting `queued` and unpublished (2 from 2026-08-15 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI_Logo.svg`, `File:Anthropic_logo.svg`, `File:NY_Stock_Exchange_logo.svg`, `File:Cognition_AI.png` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 7/10, pattern: leak-insider + big-tech-drama] [status: draft]
+Source: https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html (2026-08-12) + https://www.techtimes.com/articles/324182/20260812/single-shared-encryption-key-let-anyone-read-ai-reasoning-buried-published-logs.htm (2026-08-12)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+OpenAI, Anthropic and Google encrypted their models' hidden thinking with one shared key — researchers just read it.
+
+→ 315,320 hidden reasoning blocks decoded from public AI logs
+→ 182 real API keys and passwords recovered, plus 367 personal-data artifacts
+→ A weaker model could be tricked into revealing a rival's private reasoning
+→ All three vendors reused the same global key across sessions and users
+
+the part of the AI built to think in private was never actually private.
+
+### Post 2 [score 6/10, pattern: money-broad + record-numbers] [status: draft]
+Source: https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-13-2026 (2026-08-13) + https://finance.yahoo.com/markets/live/stock-market-today-thursday-august-13-sp-500-record-high-nasdaq-dow-inflation-100145282.html (2026-08-13)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NY_Stock_Exchange_logo.svg?width=1200
+The S&P 500 just closed at the highest point in its history — 7,798.99 — and AI chip stocks did almost all the lifting.
+
+→ Record close Aug 13, third all-time high in two weeks
+→ Semiconductor and AI-infrastructure names led practically alone
+→ Cooling inflation data added fuel, but AI earnings drove the record
+→ Own an index fund or a 401k? You already own the record, no picks required
+
+wall street isn't debating whether there's an AI bubble anymore. it's just riding it to the top.
+
+### Post 3 [score 5/10, pattern: contrarian + niche-dev] [status: backup]
+Source: https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/ (2026-08-12) + https://www.bloomberg.com/news/articles/2026-08-12/ai-startup-cognition-in-new-funding-talks-at-40-billion-value (2026-08-12)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Cognition_AI.png?width=1200
+The AI that writes code for you might soon be worth more than most banks.
+
+→ Cognition (Devin's maker) in talks to raise at a $40B valuation
+→ Up from $26B just three months ago — 50%+ jump in one funding cycle
+→ Tied to hitting a $1B annualized revenue run rate
+→ Investors are pricing in a future with far fewer human engineers on payroll
+
+the more code AI writes, the more the humans writing it start looking optional.
+
+### Rejected candidates
+- Manus/Meta $2B acquisition collapse, founders barred from leaving China — same story already fully written up last wave (2026-08-15 morning Post 3 backup), no material new development since beyond a travel-restriction detail
+- Robinhood Ventures Fund II (RVII) pre-IPO fund — already used (2026-08-09 evening Post 1), same story
+- Anthropic-Riot Platforms $9.1B data-center lease — already used (2026-08-11 morning Post 1), rejected as repeat twice since
+- SK Hynix/Samsung +8-9% on Temasek stake report — Temasek itself pushed back on the report as unconfirmed, and it's 4 days old; too shaky to lead a post on
+- GPT-5.6 Luna free-tier default + unlimited chats — announced Aug 6, 10 days stale, no fresh trigger today
+- Anthropic first profitable quarter ($10.9B revenue) — original investor disclosure was May 2026, re-covered Aug 13, not a today story
+- Google Gemini app crosses 1 billion MAU — pure milestone/feature recap, no conflict or numbers-for-people stake, dud pattern per viral-patterns.md
+- tl;dv Firestore leak (181,874 meetings exposed) — already rejected last wave as stale (disclosed ~Aug 3-4); a "newly discovered alternate exploitation path" surfaced in tl;dv's own response post but without a confirmed fresh date, not enough to justify reuse
+- Oracle new August layoffs round — same story already used and rejected multiple times (2026-08-14 morning Post 1, 2026-08-15 morning rejected), no new headcount disclosed
+- Klarna quietly rehiring human support after AI-first reversal — already rejected as stale (2026-08-05 wave), still no fresh dated trigger, just retrospective coverage
+
 ## Wave 2026-08-15 evening
 
 **Publish pipeline still broken — day 12:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-15 09:16:16 UTC (same `THREADS_ACCESS_TOKEN is not set` error pattern as every prior run). Already escalated via direct notification twice (2026-08-10 morning, 2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-14 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 46 entries, 4 sitting `queued` and unpublished (2 from 2026-08-15 morning, 2 new from this wave).
 
 **Note on tooling this run:** direct HTTP (curl) to commons.wikimedia.org returned exit 56 / connection failure again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI_Logo.svg`, `File:Anthropic_logo.svg`, `File:Decart_Logo.svg`, `File:Cerebras_logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 6/10, pattern: regular-people + big-tech-drama] [status: draft]
+### Post 1 [score 6/10, pattern: regular-people + big-tech-drama] [status: expired]
 Source: https://ppc.land/chatgpt-free-and-go-users-in-europe-face-ads-from-later-this-month/ (2026-08-15) + https://openai.com/index/testing-ads-in-chatgpt/ (2026-08-15)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI just told millions of free ChatGPT users in Europe: ads start this month.
@@ -18,7 +72,7 @@ OpenAI just told millions of free ChatGPT users in Europe: ads start this month.
 
 the free chatbot just found its business model. it's you.
 
-### Post 2 [score 6/10, pattern: leak-insider + big-tech-drama] [status: draft] [X CTA]
+### Post 2 [score 6/10, pattern: leak-insider + big-tech-drama] [status: expired] [X CTA]
 Source: https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion (2026-08-13) + https://fortune.com/2026/08/13/anthropic-said-in-talks-to-buy-startup-decart-for-6-billion/ (2026-08-13)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Decart_Logo.svg?width=1200
 Anthropic is about to spend $6 billion on a startup most people never heard of.
