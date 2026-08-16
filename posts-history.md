@@ -1,12 +1,70 @@
 # Posts History
 
+## Wave 2026-08-16 evening
+
+**Publish pipeline still broken — day 13:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-16 09:17:30 UTC (identical `THREADS_ACCESS_TOKEN is not set` error, confirmed by reading the job log directly this run). Already escalated via direct notification twice (2026-08-10 morning, 2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-15 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 50 entries, 4 sitting `queued` and unpublished (2 from 2026-08-16 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Anthropic_logo.svg`, `File:Apple_logo_black.svg`, `File:OpenAI_Logo.svg`, `File:Google_Chrome_icon_(February_2022).svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 7/10, pattern: money-broad + leak-insider] [status: draft] [X CTA]
+Source: https://www.investing.com/news/stock-market-news/anthropic-ipo-valuation-rests-on-up-to-200-billion-2028-revenue-target--reuters-4861731 (Reuters exclusive, 2026-08-14) + https://qz.com/anthropic-ipo-2-trillion-valuation-october-081326 (2026-08-13)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Anthropic just told its bankers it wants a $2 trillion IPO — bigger than SpaceX's record $1.77T listing in June.
+
+→ Priced off a 2028 revenue forecast: $190-200B, ~4x this year's run rate
+→ Morgan Stanley, Goldman Sachs and JPMorgan are leading the offering
+→ Target date: October, same year SpaceX just set the record
+→ Skeptics: hitting $2T is possible, holding it is the real question
+
+the biggest IPO in history might happen twice in one year.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 2 [score 6/10, pattern: big-tech-drama + conflict] [status: draft]
+Source: https://www.bloomberg.com/news/articles/2026-08-06/openai-asks-judge-to-toss-apple-suit-alleging-trade-secret-theft (2026-08-06) + https://www.axios.com/2026/08/06/openai-apple-motion-to-dismiss (2026-08-06)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI has one day left to convince a judge Apple's trade-secrets lawsuit should be thrown out.
+
+→ Court-ordered deadline: August 17 — tomorrow
+→ OpenAI's own defense: "we have no use, need or desire for Apple's trade secrets"
+→ Apple says two ex-employee hires used job interviews to extract confidential info
+→ Judge hears arguments on the dismissal itself October 1
+
+two of the most valuable companies on earth, fighting over a job interview.
+
+### Post 3 [score 6/10, pattern: leak-insider + niche-dev] [status: backup]
+Source: https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/ (2026-08-10) + https://timestabloid.com/openais-new-cyber-model-found-real-chrome-vulnerabilities/ (2026-08-11)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Google_Chrome_icon_(February_2022).svg?width=1200
+OpenAI just built an AI that finds real zero-days in Chrome — then locked the front door behind it.
+
+→ GPT-5.6-Cyber found 2 previously unknown V8 vulnerabilities before anyone else did
+→ Two access tiers: Daybreak Blue (defense), Daybreak Red (offense-grade)
+→ Hardware security keys become mandatory for every account Sept 1 — SMS codes won't cut it
+→ The same tool that hardens the internet could be the fastest way to break it
+
+they shipped the lockpick and the deadbolt in the same release.
+
+### Rejected candidates
+- Encrypted AI reasoning key leak (315,320 blocks decoded) — same story already used last wave (2026-08-16 morning Post 1)
+- S&P 500 record close / chip stocks — same story already used last wave (2026-08-16 morning Post 2)
+- Anthropic-Decart $6B acquisition talks — already used (2026-08-15 evening Post 2), no material update since
+- Oracle new August layoffs round — rejected again, still no confirmed headcount number, just "could reach double-digit percentages on some teams" — same vague framing rejected in 3 prior waves
+- Meta delays "Avocado" AI model — stale, delay was announced in March 2026, no fresh trigger today
+- Anthropic cofounders' 80%-of-wealth pledge — real but announced late January 2026, re-covered this week without a new dated trigger
+- AI-vs-100,000-humans creativity study (Université de Montréal/Bengio) — published January 2026, stale despite recirculating today
+- DARPA/Air Force VENOM F-16 fully-AI-controlled flight — genuinely interesting but first flight was July 20, over three weeks old, no fresh escalation
+- CoreWeave/Supermicro Q2 earnings beat, AI infra rally — real but earnings were Aug 11-12, market closed Sunday so no fresher trading data; similar money-broad/index-fund framing already used last wave (S&P record)
+- AMD acquires Taalas (AI inference chip startup) — announced Aug 6, financial terms undisclosed, weak hook without a number
+- Palantir Q2 "otherworldly" earnings surge — real but earnings were Aug 3-4, now 12 days old, no fresh trigger this week
+- tl;dv Firestore leak — rejected again as stale, same incident flagged in multiple prior waves
+
 ## Wave 2026-08-16 morning
 
 **Publish pipeline still broken — day 13:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-15 18:58:13 UTC (same `THREADS_ACCESS_TOKEN is not set` error pattern as every prior run, 45+ consecutive failures on record). Already escalated via direct notification twice (2026-08-10 morning, 2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-15 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 48 entries, 4 sitting `queued` and unpublished (2 from 2026-08-15 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI_Logo.svg`, `File:Anthropic_logo.svg`, `File:NY_Stock_Exchange_logo.svg`, `File:Cognition_AI.png` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 7/10, pattern: leak-insider + big-tech-drama] [status: draft]
+### Post 1 [score 7/10, pattern: leak-insider + big-tech-drama] [status: expired]
 Source: https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html (2026-08-12) + https://www.techtimes.com/articles/324182/20260812/single-shared-encryption-key-let-anyone-read-ai-reasoning-buried-published-logs.htm (2026-08-12)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 OpenAI, Anthropic and Google encrypted their models' hidden thinking with one shared key — researchers just read it.
@@ -18,7 +76,7 @@ OpenAI, Anthropic and Google encrypted their models' hidden thinking with one sh
 
 the part of the AI built to think in private was never actually private.
 
-### Post 2 [score 6/10, pattern: money-broad + record-numbers] [status: draft]
+### Post 2 [score 6/10, pattern: money-broad + record-numbers] [status: expired]
 Source: https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-13-2026 (2026-08-13) + https://finance.yahoo.com/markets/live/stock-market-today-thursday-august-13-sp-500-record-high-nasdaq-dow-inflation-100145282.html (2026-08-13)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NY_Stock_Exchange_logo.svg?width=1200
 The S&P 500 just closed at the highest point in its history — 7,798.99 — and AI chip stocks did almost all the lifting.
