@@ -340,14 +340,14 @@
     "wave": "2026-08-16 evening",
     "text": "Anthropic just told its bankers it wants a $2 trillion IPO — bigger than SpaceX's record $1.77T listing in June.\n\n→ Priced off a 2028 revenue forecast: $190-200B, ~4x this year's run rate\n→ Morgan Stanley, Goldman Sachs and JPMorgan are leading the offering\n→ Target date: October, same year SpaceX just set the record\n→ Skeptics: hitting $2T is possible, holding it is the real question\n\nthe biggest IPO in history might happen twice in one year.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-16-evening-2",
     "wave": "2026-08-16 evening",
     "text": "OpenAI has one day left to convince a judge Apple's trade-secrets lawsuit should be thrown out.\n\n→ Court-ordered deadline: August 17 — tomorrow\n→ OpenAI's own defense: \"we have no use, need or desire for Apple's trade secrets\"\n→ Apple says two ex-employee hires used job interviews to extract confidential info\n→ Judge hears arguments on the dismissal itself October 1\n\ntwo of the most valuable companies on earth, fighting over a job interview.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-17-morning-1",
@@ -360,6 +360,20 @@
     "id": "2026-08-17-morning-2",
     "wave": "2026-08-17 morning",
     "text": "The cheapest frontier AI on earth just got up to 11x more expensive — starting today.\n\n→ DeepSeek's V4 price hike takes effect August 17\n→ Input: $0.14 → up to $0.44 per million tokens (+214%)\n→ Output: $0.28 → up to $1.32 per million tokens (+371%)\n→ Three weeks ago this was \"70x cheaper than Claude\"\n\nturns out too-cheap-to-compete-with was never a permanent price. it was a land grab.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-17-evening-1",
+    "wave": "2026-08-17 evening",
+    "text": "OpenAI wants a $1 trillion IPO valuation — while telling bankers it'll lose $14 billion this year, no profit before 2029.\n\n→ Anthropic, still private, just posted its first operating profit ever: $559M in Q2\n→ OpenAI: bigger valuation talk, bigger burn, IPO as early as 2027\n→ Anthropic: no IPO date set, actual black ink instead\n→ Wall Street about to bet a trillion dollars on the one still losing money\n\nthe \"AI winner\" and the \"profitable AI company\" turned out to be two different companies.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-17-evening-2",
+    "wave": "2026-08-17 evening",
+    "text": "Stripe just spent $7 billion on a company that didn't exist as a business three months ago.\n\n→ OpenRouter raised its Series B in May at a $1.3B valuation\n→ Stripe agreed to buy it this week for $7B+ — more than 5x that number\n→ It routes 8 million developers across 400+ AI models from every major lab\n→ A payments company now owns the pipe that decides which AI model gets your traffic\n\nthe middleman just became worth more than most of the models it routes to.",
     "image_url": null,
     "status": "queued"
   }

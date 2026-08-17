@@ -1,12 +1,63 @@
 # Posts History
 
+## Wave 2026-08-17 evening
+
+**Publish pipeline still broken — day 15:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-17 09:30:12 UTC (identical `THREADS_ACCESS_TOKEN is not set` error, confirmed by reading the job log directly this run). Not re-notifying since this is the same unresolved issue already escalated twice (2026-08-10 morning, 2026-08-12 evening); continuing to flag on the dashboard status line only. Marked the two now-24h-old `2026-08-16 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 54 entries, 4 sitting `queued` and unpublished (2 from 2026-08-17 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org and to news domains (e.g. techcrunch.com) returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI_Logo.svg`, `File:Anthropic_logo.svg`, `File:Stripe_Logo,_revised_2016.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. No Commons logo found for OpenRouter or Higgsfield (both too new); no media link attached for those companies in Post 2/Post 3.
+
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft]
+Source: https://finance.biggo.com/news/356f0a3b-e7dc-444d-8eee-709a3b49bd34 (2026-08-17) + https://www.beri.net/article/anthropic-turns-profit-openai-14b-loss (2026-08-17) + https://www.techtimes.com/articles/320493/20260714/openais-1-trillion-ipo-bet-faces-apple-lawsuit-market-doubt-rivals-profit.htm (2026-07-14)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+OpenAI wants a $1 trillion IPO valuation — while telling bankers it'll lose $14 billion this year, no profit before 2029.
+
+→ Anthropic, still private, just posted its first operating profit ever: $559M in Q2
+→ OpenAI: bigger valuation talk, bigger burn, IPO as early as 2027
+→ Anthropic: no IPO date set, actual black ink instead
+→ Wall Street about to bet a trillion dollars on the one still losing money
+
+the "AI winner" and the "profitable AI company" turned out to be two different companies.
+
+### Post 2 [score 6/10, pattern: big-tech-drama + niche-dev] [status: draft]
+Source: https://techstartups.com/2026/08/17/stripe-acquires-openrouter-for-over-7-billion-more-than-5x-its-valuation-three-months-ago/ (2026-08-17) + https://dataconomy.com/2026/08/17/stripe-acquire-openrouter-deal-7-billion/ (2026-08-17)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Stripe_Logo,_revised_2016.svg?width=1200
+Stripe just spent $7 billion on a company that didn't exist as a business three months ago.
+
+→ OpenRouter raised its Series B in May at a $1.3B valuation
+→ Stripe agreed to buy it this week for $7B+ — more than 5x that number
+→ It routes 8 million developers across 400+ AI models from every major lab
+→ A payments company now owns the pipe that decides which AI model gets your traffic
+
+the middleman just became worth more than most of the models it routes to.
+
+### Post 3 [score 5/10, pattern: contrarian + niche] [status: backup]
+Source: https://www.prnewswire.com/news-releases/higgsfield-raises-400-million-series-b-financing-at-5-4-billion-valuation-with-annualized-revenue-reaching-700-million-302852430.html (2026-08-17) + https://finance.yahoo.com/technology/ai/articles/higgsfield-hits-5-4-billion-061508226.html (2026-08-17)
+Media: none found (no Wikimedia Commons file for Higgsfield)
+Higgsfield just raised $400M at a $5.4B valuation — on revenue that didn't exist a year ago.
+
+→ Annualized revenue: $20M last August → $700M now, 35x in twelve months
+→ Backers: Goldman Sachs, Intel, DST Global
+→ The product: AI video generation brands use to batch-generate marketing content daily
+→ The company didn't exist before March 2025
+
+turns out "AI video is just a demo toy" was the wrong take — someone built the factory instead.
+
+### Rejected candidates
+- Anthropic $2T IPO / Q2 $10.9-11.5B revenue, $559M operating profit — the profit number is reused as a comparison point in Post 1, but the "$2T IPO" framing itself was already used as the lead story (2026-08-16 evening Post 1); no fresh escalation on that specific angle today
+- Michael Burry circular-financing alarm ($879B hyperscaler commitments, CDS spreads doubling, Aug 13 note) — same story family already used and rejected multiple times in prior waves (2026-08-03/04, 2026-08-04 evening); no qualitatively new development since the Aug 13 note itself, which is now 4 days old
+- Nvidia $100B OpenAI financing "deal" — muddled/recycled framing (same $100B figure first floated Sept 2025, never materialized then $30B did; current reporting conflicts with the $120B scale-back already covered in 2026-08-17 morning Post 3); too tangled to state cleanly as a fresh fact
+- 2026 layoff tracker (322 events, 205,832 workers, ~903/day) — same running tally used in multiple prior waves, no new single-event trigger today
+- Google retiring 3 Imagen 4 model IDs, migration to gemini-3.1-flash-image — pure API/product housekeeping, no conflict or numbers-for-people angle
+- OpenAI Ultrafast mode (GPT-5.6 Sol, Cerebras, 750 tok/s) — pure feature/product recap, reads like a press release
+- Apple vs OpenAI trade-secrets deadline (Aug 17 filing) — same story already used last wave (2026-08-16 evening Post 2); today is the deadline itself with no ruling yet, would be repetitive without escalation
+
 ## Wave 2026-08-17 morning
 
 **Publish pipeline still broken — day 14:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-16 18:57:09 UTC (same error pattern as every prior check). Not re-notifying since this is the same unresolved issue already escalated twice; continuing to flag on the dashboard status line only. Marked the two now-24h-old `2026-08-16 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 52 entries, 4 sitting `queued` and unpublished (2 from 2026-08-16 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave); curl to the same host also failed at the proxy layer. WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:NVIDIA_logo.svg`, `File:Intel_logo_2023.svg`, `File:DeepSeek_logo.svg`, `File:OpenAI_Logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 6/10, pattern: money-broad + leak-insider] [status: draft]
+### Post 1 [score 6/10, pattern: money-broad + leak-insider] [status: expired]
 Source: https://www.techspot.com/news/113498-nvidia-5-billion-intel-bet-now-worth-nearly.html (2026-08-15) + https://www.tomshardware.com/tech-industry/nvidia-turns-usd5b-intel-stock-bet-into-usd30b-windfall-filing-reveals-new-usd21b-spacex-stake-and-complete-exit-from-arm-stock (SEC filing, 2026-08-15)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Intel_logo_2023.svg?width=1200
 Nvidia's $5 billion bet on Intel is now worth $25 billion — and that's not even the biggest number in the filing.
@@ -18,7 +69,7 @@ Nvidia's $5 billion bet on Intel is now worth $25 billion — and that's not eve
 
 if you own an index fund with Nvidia in it, you already own a piece of Intel and SpaceX — you just never got a vote.
 
-### Post 2 [score 6/10, pattern: contrarian + niche-dev] [status: draft] [X CTA]
+### Post 2 [score 6/10, pattern: contrarian + niche-dev] [status: expired] [X CTA]
 Source: https://www.infoworld.com/article/4209439/deepseek-raises-some-v4-prices-by-more-than-10x-as-ai-demand-strains-capacity.html (2026-08-14) + https://www.engadget.com/2236912/deepseek-ai-models-get-four-times-pricier/ (2026-08-14)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
 The cheapest frontier AI on earth just got up to 11x more expensive — starting today.
@@ -32,7 +83,7 @@ turns out too-cheap-to-compete-with was never a permanent price. it was a land g
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 5/10, pattern: big-tech-drama + leak-insider] [status: backup]
+### Post 3 [score 5/10, pattern: big-tech-drama + leak-insider] [status: expired, backup]
 Source: https://www.investing.com/news/stock-market-news/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-4861638 (WSJ via Reuters, 2026-08-16) + https://interestingengineering.com/ai-robotics/nvidia-cuts-130b-openai-ohio-campus (2026-08-16)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 Nvidia was about to guarantee $250 billion of OpenAI's biggest data center. It just cut that number by more than half.
