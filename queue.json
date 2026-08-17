@@ -326,14 +326,14 @@
     "wave": "2026-08-16 morning",
     "text": "OpenAI, Anthropic and Google encrypted their models' hidden thinking with one shared key — researchers just read it.\n\n→ 315,320 hidden reasoning blocks decoded from public AI logs\n→ 182 real API keys and passwords recovered, plus 367 personal-data artifacts\n→ A weaker model could be tricked into revealing a rival's private reasoning\n→ All three vendors reused the same global key across sessions and users\n\nthe part of the AI built to think in private was never actually private.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-16-morning-2",
     "wave": "2026-08-16 morning",
     "text": "The S&P 500 just closed at the highest point in its history — 7,798.99 — and AI chip stocks did almost all the lifting.\n\n→ Record close Aug 13, third all-time high in two weeks\n→ Semiconductor and AI-infrastructure names led practically alone\n→ Cooling inflation data added fuel, but AI earnings drove the record\n→ Own an index fund or a 401k? You already own the record, no picks required\n\nwall street isn't debating whether there's an AI bubble anymore. it's just riding it to the top.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-16-evening-1",
@@ -346,6 +346,20 @@
     "id": "2026-08-16-evening-2",
     "wave": "2026-08-16 evening",
     "text": "OpenAI has one day left to convince a judge Apple's trade-secrets lawsuit should be thrown out.\n\n→ Court-ordered deadline: August 17 — tomorrow\n→ OpenAI's own defense: \"we have no use, need or desire for Apple's trade secrets\"\n→ Apple says two ex-employee hires used job interviews to extract confidential info\n→ Judge hears arguments on the dismissal itself October 1\n\ntwo of the most valuable companies on earth, fighting over a job interview.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-17-morning-1",
+    "wave": "2026-08-17 morning",
+    "text": "Nvidia's $5 billion bet on Intel is now worth $25 billion — and that's not even the biggest number in the filing.\n\n→ Intel stake up 5x in under a year, still just \"unrealized\" on paper\n→ New disclosure: a previously unrevealed $21B stake in SpaceX\n→ Nvidia also fully exited its entire Arm position in the same filing\n→ It's now bankrolling the same companies it sells chips to\n\nif you own an index fund with Nvidia in it, you already own a piece of Intel and SpaceX — you just never got a vote.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-17-morning-2",
+    "wave": "2026-08-17 morning",
+    "text": "The cheapest frontier AI on earth just got up to 11x more expensive — starting today.\n\n→ DeepSeek's V4 price hike takes effect August 17\n→ Input: $0.14 → up to $0.44 per million tokens (+214%)\n→ Output: $0.28 → up to $1.32 per million tokens (+371%)\n→ Three weeks ago this was \"70x cheaper than Claude\"\n\nturns out too-cheap-to-compete-with was never a permanent price. it was a land grab.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }

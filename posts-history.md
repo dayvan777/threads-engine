@@ -1,12 +1,66 @@
 # Posts History
 
+## Wave 2026-08-17 morning
+
+**Publish pipeline still broken — day 14:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-16 18:57:09 UTC (same error pattern as every prior check). Not re-notifying since this is the same unresolved issue already escalated twice; continuing to flag on the dashboard status line only. Marked the two now-24h-old `2026-08-16 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 52 entries, 4 sitting `queued` and unpublished (2 from 2026-08-16 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave); curl to the same host also failed at the proxy layer. WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:NVIDIA_logo.svg`, `File:Intel_logo_2023.svg`, `File:DeepSeek_logo.svg`, `File:OpenAI_Logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 6/10, pattern: money-broad + leak-insider] [status: draft]
+Source: https://www.techspot.com/news/113498-nvidia-5-billion-intel-bet-now-worth-nearly.html (2026-08-15) + https://www.tomshardware.com/tech-industry/nvidia-turns-usd5b-intel-stock-bet-into-usd30b-windfall-filing-reveals-new-usd21b-spacex-stake-and-complete-exit-from-arm-stock (SEC filing, 2026-08-15)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Intel_logo_2023.svg?width=1200
+Nvidia's $5 billion bet on Intel is now worth $25 billion — and that's not even the biggest number in the filing.
+
+→ Intel stake up 5x in under a year, still just "unrealized" on paper
+→ New disclosure: a previously unrevealed $21B stake in SpaceX
+→ Nvidia also fully exited its entire Arm position in the same filing
+→ It's now bankrolling the same companies it sells chips to
+
+if you own an index fund with Nvidia in it, you already own a piece of Intel and SpaceX — you just never got a vote.
+
+### Post 2 [score 6/10, pattern: contrarian + niche-dev] [status: draft] [X CTA]
+Source: https://www.infoworld.com/article/4209439/deepseek-raises-some-v4-prices-by-more-than-10x-as-ai-demand-strains-capacity.html (2026-08-14) + https://www.engadget.com/2236912/deepseek-ai-models-get-four-times-pricier/ (2026-08-14)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
+The cheapest frontier AI on earth just got up to 11x more expensive — starting today.
+
+→ DeepSeek's V4 price hike takes effect August 17
+→ Input: $0.14 → up to $0.44 per million tokens (+214%)
+→ Output: $0.28 → up to $1.32 per million tokens (+371%)
+→ Three weeks ago this was "70x cheaper than Claude"
+
+turns out too-cheap-to-compete-with was never a permanent price. it was a land grab.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 5/10, pattern: big-tech-drama + leak-insider] [status: backup]
+Source: https://www.investing.com/news/stock-market-news/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-4861638 (WSJ via Reuters, 2026-08-16) + https://interestingengineering.com/ai-robotics/nvidia-cuts-130b-openai-ohio-campus (2026-08-16)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+Nvidia was about to guarantee $250 billion of OpenAI's biggest data center. It just cut that number by more than half.
+
+→ New backstop: under $120B, covering only phase one of a 10-gigawatt Ohio campus
+→ Investors pushed back on Nvidia's exposure to a single customer
+→ A separate $350B GPU financing deal is still being negotiated alongside it
+→ Neither company has confirmed the revised numbers publicly
+
+even Nvidia is asking how much OpenAI exposure is too much.
+
+### Rejected candidates
+- Apple vs OpenAI trade-secrets deadline (Aug 17 response) — same story already used last wave (2026-08-16 evening Post 2); today is just the filing deadline itself with no new ruling or development yet, would be repetitive without escalation
+- Anthropic Q2 revenue $10.9-11.5B, first operating profit $559M — real and fresh-ish (~Aug 13 filing) but IPO/financials angle already covered heavily the last two waves (Anthropic $2T IPO, Anthropic-Decart $6B deal)
+- Google AI Plus/Ultra subscription price cuts ($7.99→$4.99, $250→$200) — stale, announced back in June 2026
+- OpenAI/Anthropic/Google shared reasoning-encryption key leak — same story already used (2026-08-16 morning Post 1)
+- Alibaba Qwen crosses 3B downloads, passes Google+Meta combined — real (Aug 14-15, Hugging Face report) but pure usage-stats/product-adoption story, no conflict or money angle, reads close to a recap
+- ChatGPT Ads carousel format expands to Brazil/Mexico — pure product-feature rollout, no conflict or numbers-for-people angle
+- Meta Muse Glimmer 30B open-weight model — product launch, over a week old (Aug 10), no fresh trigger
+- 2026 layoff tracker (322 events, 205,832 workers) — same running tally already used in multiple prior waves, no new single-event trigger today
+
 ## Wave 2026-08-16 evening
 
 **Publish pipeline still broken — day 13:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-16 09:17:30 UTC (identical `THREADS_ACCESS_TOKEN is not set` error, confirmed by reading the job log directly this run). Already escalated via direct notification twice (2026-08-10 morning, 2026-08-12 evening); not re-notifying again for the same unresolved issue since nothing has changed — continuing to flag here and on the dashboard only. Marked the two now-24h-old `2026-08-15 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 50 entries, 4 sitting `queued` and unpublished (2 from 2026-08-16 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Anthropic_logo.svg`, `File:Apple_logo_black.svg`, `File:OpenAI_Logo.svg`, `File:Google_Chrome_icon_(February_2022).svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 7/10, pattern: money-broad + leak-insider] [status: draft] [X CTA]
+### Post 1 [score 7/10, pattern: money-broad + leak-insider] [status: expired] [X CTA]
 Source: https://www.investing.com/news/stock-market-news/anthropic-ipo-valuation-rests-on-up-to-200-billion-2028-revenue-target--reuters-4861731 (Reuters exclusive, 2026-08-14) + https://qz.com/anthropic-ipo-2-trillion-valuation-october-081326 (2026-08-13)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Anthropic just told its bankers it wants a $2 trillion IPO — bigger than SpaceX's record $1.77T listing in June.
@@ -20,7 +74,7 @@ the biggest IPO in history might happen twice in one year.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 2 [score 6/10, pattern: big-tech-drama + conflict] [status: draft]
+### Post 2 [score 6/10, pattern: big-tech-drama + conflict] [status: expired]
 Source: https://www.bloomberg.com/news/articles/2026-08-06/openai-asks-judge-to-toss-apple-suit-alleging-trade-secret-theft (2026-08-06) + https://www.axios.com/2026/08/06/openai-apple-motion-to-dismiss (2026-08-06)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI has one day left to convince a judge Apple's trade-secrets lawsuit should be thrown out.
@@ -32,7 +86,7 @@ OpenAI has one day left to convince a judge Apple's trade-secrets lawsuit should
 
 two of the most valuable companies on earth, fighting over a job interview.
 
-### Post 3 [score 6/10, pattern: leak-insider + niche-dev] [status: backup]
+### Post 3 [score 6/10, pattern: leak-insider + niche-dev] [status: expired, backup]
 Source: https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/ (2026-08-10) + https://timestabloid.com/openais-new-cyber-model-found-real-chrome-vulnerabilities/ (2026-08-11)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Google_Chrome_icon_(February_2022).svg?width=1200
 OpenAI just built an AI that finds real zero-days in Chrome — then locked the front door behind it.
