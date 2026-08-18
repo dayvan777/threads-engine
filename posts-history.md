@@ -1,12 +1,61 @@
 # Posts History
 
+## Wave 2026-08-18 evening
+
+**Publish pipeline still broken — day 17:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`) and by reading the latest job log directly: every run since 2026-08-04 has failed, latest failure 2026-08-18 09:22:12 UTC, identical `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`. This has now been silently broken for 17 days straight with zero successful publishes — escalating this via push notification this run since dashboard-only flagging across two prior escalations (2026-08-10 morning, 2026-08-12 evening) hasn't resolved it. Marked the two now-24h-old `2026-08-17 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 58 entries, 4 sitting `queued` and unpublished (2 from 2026-08-18 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Meta Platforms Inc. logo.svg`, `File:Anthropic logo.svg` both confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft]
+Source: https://www.tradingkey.com/news/market-movers/262115381-market-movers-meta-20260818 (2026-08-18) + https://www.datacenterdynamics.com/en/news/meta-boosts-ai-data-center-capex-forecasts-130-145bn-spend/ (2026-08-18)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
+Meta just told investors it's spending $130-145 billion this year building AI data centers. The stock dropped 3.6% today anyway.
+
+→ Free cash flow is getting crushed by the capex
+→ Reality Labs still losing $4B+ a quarter
+→ Same week: a federal trial over addictive app design aimed at teens
+→ Wall Street's patience with "trust us, the ROI is coming" is thinning
+
+If you own an S&P 500 fund, you just ate this dip without touching a button.
+
+### Post 2 [score 6/10, pattern: job-fear + regular-people] [status: draft]
+Source: https://sfstandard.com/2026/08/17/ai-boss-fires-worker/ (2026-08-17) + https://x.com/andonlabs/status/2088325008355676662 (Andon Labs, 2026-08-17)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+17 of 23 shifts late. That's what got a real employee fired — by an AI.
+
+Luna runs Andon Labs' store in San Francisco: $100K budget, a corporate card, full autonomy. It hired the staff, designed the shop, set the prices. Now it decided who stays.
+
+"most models would have done the same," the founders said.
+
+the manager isn't coming for your job. it already has one.
+
+### Post 3 [score 5/10, pattern: leak-insider + niche] [status: backup]
+Source: https://www.anthropic.com/aug-2026-risk-report (Anthropic, 2026-08-14) + https://www.techtimes.com/articles/324573/20260815/anthropic-upgrades-misalignment-risk-key-safety-benchmarks-saturate.htm (2026-08-15)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Anthropic just admitted its own bio-weapons safety filter was off for 11 months — and nobody caught it.
+
+→ 133M contractor conversations, May 2025-April 2026, zero blocking classifiers active
+→ ~50,000 human-feedback workers, unfiltered the whole time
+→ Same week: Anthropic raised its own "misalignment" risk rating from very low to low
+
+the company selling AI safety just found the hole in its own safety net.
+
+### Rejected candidates
+- Nvidia $105B OpenAI Ohio data center financing — already used as lead story last wave (2026-08-18 morning Post 1), no fresh escalation today
+- Palantir/Nvidia sector-rotation story — already used last wave (2026-08-18 morning Post 2)
+- OpenAI ChatGPT for Teens launch — real and dated today, but reads as a safety/product-policy recap without a sharp conflict or number hook; softer than the other three candidates
+- Reddit AI-narrated video "Play" toggle — pure feature launch, no conflict or stakes, would read as a press-release recap
+- Etched chip startup $21B valuation surge — VC/funding recap, no regular-people hook
+- DeepSeek dynamic peak/off-peak pricing — same underlying V4 price-hike story already used (2026-08-17 morning Post 2)
+- 2026 layoff tracker (205,832 workers, Oracle 30,000) — same running tally used in multiple prior waves, no new single-event trigger today
+
 ## Wave 2026-08-18 morning
 
 **Publish pipeline still broken — day 16:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`) and by reading the job log directly: every run since 2026-08-04 has failed, latest failure 2026-08-17 19:08:35 UTC, identical `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`. Not re-notifying since this is the same unresolved issue already escalated twice (2026-08-10 morning, 2026-08-12 evening); continuing to flag on the dashboard status line only. Marked the two now-24h-old `2026-08-17 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 56 entries, 4 sitting `queued` and unpublished (2 from 2026-08-17 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:NVIDIA_logo.svg`, `File:OpenAI_Logo.svg`, `File:Palantir_Technologies_logo.svg`, `File:Microsoft_logo_(2012).svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: expired]
 Source: https://www.cnbc.com/2026/08/17/nvidia-financing-open-ai-data-center-ohio.html (CNBC, 2026-08-17) + https://techcrunch.com/2026/08/17/nvidia-investing-1-5b-in-softbank-data-center-developer-behind-openai-project/ (2026-08-17) + https://www.benzinga.com/markets/prediction-markets/26/08/61256057/nvidia-openai-deal-circular-financing (2026-08-17)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 Nvidia just promised OpenAI $105B for a data center — then put $1.5B into the company building it.
@@ -18,7 +67,7 @@ Nvidia just promised OpenAI $105B for a data center — then put $1.5B into the 
 
 lender, landlord, and chip supplier — same company. the debt doesn't vanish, it just changes address.
 
-### Post 2 [score 6/10, pattern: money-broad + record-numbers] [status: draft] [X CTA]
+### Post 2 [score 6/10, pattern: money-broad + record-numbers] [status: expired] [X CTA]
 Source: https://www.startuphub.ai/ai-news/ai-stocks-daily/2026/ai-stocks-2026-08-17 (2026-08-17) + https://stocksdownunder.com/palantir-nvidia-ai-software-rotation/ (2026-08-17) + https://www.ad-hoc-news.de/boerse/news/corporate-news/palantir-stock-trades-near-record-high-as-investors-digest-q2-2026-ai/69960117 (2026-08-17)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Palantir_Technologies_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 Palantir is down 16% from its record high this month — even as revenue grew 93% and Nvidia keeps hitting new highs.
@@ -32,7 +81,7 @@ the AI trade didn't cool off. it just switched pockets.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 6/10, pattern: job-fear + contrarian] [status: backup]
+### Post 3 [score 6/10, pattern: job-fear + contrarian] [status: expired, backup]
 Source: https://www.cnbc.com/amp/2026/08/13/cnbc-poll-shows-half-of-18-to-34-year-olds-view-socialism-positively.html (CNBC/Generation Lab, 2026-08-13) + https://www.forbes.com/sites/zacharyfolk/2026/08/13/young-americans-dont-trust-billionaire-ai-leaders-new-poll-finds/ (2026-08-13)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_logo_(2012).svg?width=1200
 81% of young Americans don't trust Palantir's CEO to handle AI responsibly. Only one tech leader scored net-positive.
