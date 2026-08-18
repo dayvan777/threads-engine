@@ -354,14 +354,14 @@
     "wave": "2026-08-17 morning",
     "text": "Nvidia's $5 billion bet on Intel is now worth $25 billion — and that's not even the biggest number in the filing.\n\n→ Intel stake up 5x in under a year, still just \"unrealized\" on paper\n→ New disclosure: a previously unrevealed $21B stake in SpaceX\n→ Nvidia also fully exited its entire Arm position in the same filing\n→ It's now bankrolling the same companies it sells chips to\n\nif you own an index fund with Nvidia in it, you already own a piece of Intel and SpaceX — you just never got a vote.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-17-morning-2",
     "wave": "2026-08-17 morning",
     "text": "The cheapest frontier AI on earth just got up to 11x more expensive — starting today.\n\n→ DeepSeek's V4 price hike takes effect August 17\n→ Input: $0.14 → up to $0.44 per million tokens (+214%)\n→ Output: $0.28 → up to $1.32 per million tokens (+371%)\n→ Three weeks ago this was \"70x cheaper than Claude\"\n\nturns out too-cheap-to-compete-with was never a permanent price. it was a land grab.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-17-evening-1",
@@ -374,6 +374,20 @@
     "id": "2026-08-17-evening-2",
     "wave": "2026-08-17 evening",
     "text": "Stripe just spent $7 billion on a company that didn't exist as a business three months ago.\n\n→ OpenRouter raised its Series B in May at a $1.3B valuation\n→ Stripe agreed to buy it this week for $7B+ — more than 5x that number\n→ It routes 8 million developers across 400+ AI models from every major lab\n→ A payments company now owns the pipe that decides which AI model gets your traffic\n\nthe middleman just became worth more than most of the models it routes to.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-18-morning-1",
+    "wave": "2026-08-18 morning",
+    "text": "Nvidia just promised OpenAI $105B for a data center — then put $1.5B into the company building it.\n\n→ Credit line backs a 4.25GW Ohio campus\n→ Nvidia also takes a stake in SB Energy, the SoftBank-backed developer\n→ OpenAI pays the lease — Nvidia's own chips fill the building Nvidia financed\n→ Jensen Huang: \"not circular financing\" — he calls it $600B of future Nvidia compute\n\nlender, landlord, and chip supplier — same company. the debt doesn't vanish, it just changes address.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-18-morning-2",
+    "wave": "2026-08-18 morning",
+    "text": "Palantir is down 16% from its record high this month — even as revenue grew 93% and Nvidia keeps hitting new highs.\n\n→ Palantir: $418B market cap, P/E near 150 — \"too expensive\" despite the growth\n→ Nvidia, Applied Materials, Micron all rallying the same week\n→ Same AI boom, opposite verdict: software priced in the future, chips hadn't\n→ Own an S&P 500 fund? You're long both sides\n\nthe AI trade didn't cool off. it just switched pockets.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }

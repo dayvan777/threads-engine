@@ -1,12 +1,66 @@
 # Posts History
 
+## Wave 2026-08-18 morning
+
+**Publish pipeline still broken — day 16:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`) and by reading the job log directly: every run since 2026-08-04 has failed, latest failure 2026-08-17 19:08:35 UTC, identical `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`. Not re-notifying since this is the same unresolved issue already escalated twice (2026-08-10 morning, 2026-08-12 evening); continuing to flag on the dashboard status line only. Marked the two now-24h-old `2026-08-17 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 56 entries, 4 sitting `queued` and unpublished (2 from 2026-08-17 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:NVIDIA_logo.svg`, `File:OpenAI_Logo.svg`, `File:Palantir_Technologies_logo.svg`, `File:Microsoft_logo_(2012).svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft]
+Source: https://www.cnbc.com/2026/08/17/nvidia-financing-open-ai-data-center-ohio.html (CNBC, 2026-08-17) + https://techcrunch.com/2026/08/17/nvidia-investing-1-5b-in-softbank-data-center-developer-behind-openai-project/ (2026-08-17) + https://www.benzinga.com/markets/prediction-markets/26/08/61256057/nvidia-openai-deal-circular-financing (2026-08-17)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+Nvidia just promised OpenAI $105B for a data center — then put $1.5B into the company building it.
+
+→ Credit line backs a 4.25GW Ohio campus
+→ Nvidia also takes a stake in SB Energy, the SoftBank-backed developer
+→ OpenAI pays the lease — Nvidia's own chips fill the building Nvidia financed
+→ Jensen Huang: "not circular financing" — he calls it $600B of future Nvidia compute
+
+lender, landlord, and chip supplier — same company. the debt doesn't vanish, it just changes address.
+
+### Post 2 [score 6/10, pattern: money-broad + record-numbers] [status: draft] [X CTA]
+Source: https://www.startuphub.ai/ai-news/ai-stocks-daily/2026/ai-stocks-2026-08-17 (2026-08-17) + https://stocksdownunder.com/palantir-nvidia-ai-software-rotation/ (2026-08-17) + https://www.ad-hoc-news.de/boerse/news/corporate-news/palantir-stock-trades-near-record-high-as-investors-digest-q2-2026-ai/69960117 (2026-08-17)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Palantir_Technologies_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+Palantir is down 16% from its record high this month — even as revenue grew 93% and Nvidia keeps hitting new highs.
+
+→ Palantir: $418B market cap, P/E near 150 — "too expensive" despite the growth
+→ Nvidia, Applied Materials, Micron all rallying the same week
+→ Same AI boom, opposite verdict: software priced in the future, chips hadn't
+→ Own an S&P 500 fund? You're long both sides
+
+the AI trade didn't cool off. it just switched pockets.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: job-fear + contrarian] [status: backup]
+Source: https://www.cnbc.com/amp/2026/08/13/cnbc-poll-shows-half-of-18-to-34-year-olds-view-socialism-positively.html (CNBC/Generation Lab, 2026-08-13) + https://www.forbes.com/sites/zacharyfolk/2026/08/13/young-americans-dont-trust-billionaire-ai-leaders-new-poll-finds/ (2026-08-13)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_logo_(2012).svg?width=1200
+81% of young Americans don't trust Palantir's CEO to handle AI responsibly. Only one tech leader scored net-positive.
+
+→ CNBC/Generation Lab polled 1,088 Americans age 18-34
+→ Distrust: Karp 81%, Thiel 79%, Zuckerberg 71%, Musk 70%, Altman 69%
+→ Satya Nadella: the only one people trust more than they distrust
+→ 45% think AI will hurt their own career. 10% think it'll help.
+
+the people building AI's future are the least trusted messengers for it — and they know it.
+
+### Rejected candidates
+- Stripe/OpenRouter $7B acquisition, OpenAI $1T IPO burn-rate story, Anthropic Ode $1.5B venture — all already used as lead stories in the prior wave (2026-08-17 evening) or earlier; no fresh escalation today
+- Apple vs OpenAI trade-secrets deadline (Aug 17 response) — same story already rejected twice as repetitive; still no ruling
+- DeepSeek dynamic peak/off-peak pricing (effective Aug 17) — same underlying V4 price-hike story already used (2026-08-17 morning Post 2)
+- NVIDIA NeMo Switchyard routing library — announced Aug 11, seven days old, no fresh escalation, would read as a product recap
+- Citigroup 20,000-job AI-driven restructuring — genuine story but the "1,000 cuts this week" figure traces back to January 2026 coverage; couldn't confirm a fresh August trigger, dropped to avoid misdating stale news as current
+- xAI sues Minnesota over nudification-tech ban — real and dated today, but sensitive subject matter (AI-generated child sexual abuse material context) unsuited to this account's tone; skipped
+- 2026 layoff tracker (322 events, 205,832 workers) — same running tally used in multiple prior waves, no new single-event trigger today
+- AI job-displacement stat roundups (paralegals 80% risk, manufacturing −2M globally) — generic evergreen stats, not tied to a dated news trigger, reads like a recap
+
 ## Wave 2026-08-17 evening
 
 **Publish pipeline still broken — day 15:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again via GitHub Actions API this run: every `threads-publish` run since 2026-08-04 has failed, latest failure 2026-08-17 09:30:12 UTC (identical `THREADS_ACCESS_TOKEN is not set` error, confirmed by reading the job log directly this run). Not re-notifying since this is the same unresolved issue already escalated twice (2026-08-10 morning, 2026-08-12 evening); continuing to flag on the dashboard status line only. Marked the two now-24h-old `2026-08-16 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 54 entries, 4 sitting `queued` and unpublished (2 from 2026-08-17 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org and to news domains (e.g. techcrunch.com) returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI_Logo.svg`, `File:Anthropic_logo.svg`, `File:Stripe_Logo,_revised_2016.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. No Commons logo found for OpenRouter or Higgsfield (both too new); no media link attached for those companies in Post 2/Post 3.
 
-### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: expired]
 Source: https://finance.biggo.com/news/356f0a3b-e7dc-444d-8eee-709a3b49bd34 (2026-08-17) + https://www.beri.net/article/anthropic-turns-profit-openai-14b-loss (2026-08-17) + https://www.techtimes.com/articles/320493/20260714/openais-1-trillion-ipo-bet-faces-apple-lawsuit-market-doubt-rivals-profit.htm (2026-07-14)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 OpenAI wants a $1 trillion IPO valuation — while telling bankers it'll lose $14 billion this year, no profit before 2029.
@@ -18,7 +72,7 @@ OpenAI wants a $1 trillion IPO valuation — while telling bankers it'll lose $1
 
 the "AI winner" and the "profitable AI company" turned out to be two different companies.
 
-### Post 2 [score 6/10, pattern: big-tech-drama + niche-dev] [status: draft]
+### Post 2 [score 6/10, pattern: big-tech-drama + niche-dev] [status: expired]
 Source: https://techstartups.com/2026/08/17/stripe-acquires-openrouter-for-over-7-billion-more-than-5x-its-valuation-three-months-ago/ (2026-08-17) + https://dataconomy.com/2026/08/17/stripe-acquire-openrouter-deal-7-billion/ (2026-08-17)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Stripe_Logo,_revised_2016.svg?width=1200
 Stripe just spent $7 billion on a company that didn't exist as a business three months ago.
@@ -30,7 +84,7 @@ Stripe just spent $7 billion on a company that didn't exist as a business three 
 
 the middleman just became worth more than most of the models it routes to.
 
-### Post 3 [score 5/10, pattern: contrarian + niche] [status: backup]
+### Post 3 [score 5/10, pattern: contrarian + niche] [status: expired, backup]
 Source: https://www.prnewswire.com/news-releases/higgsfield-raises-400-million-series-b-financing-at-5-4-billion-valuation-with-annualized-revenue-reaching-700-million-302852430.html (2026-08-17) + https://finance.yahoo.com/technology/ai/articles/higgsfield-hits-5-4-billion-061508226.html (2026-08-17)
 Media: none found (no Wikimedia Commons file for Higgsfield)
 Higgsfield just raised $400M at a $5.4B valuation — on revenue that didn't exist a year ago.
