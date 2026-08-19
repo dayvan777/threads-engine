@@ -1,12 +1,65 @@
 # Posts History
 
+## Wave 2026-08-19 morning
+
+**Publish pipeline still broken — day 18:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`) and by reading the latest job log directly: every run since 2026-08-04 has failed, latest failure 2026-08-18 19:08:09 UTC, identical `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad last wave (2026-08-18 evening), nothing new to report — continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-18 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 60 entries, 4 sitting `queued` and unpublished (2 from 2026-08-18 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Anthropic logo.svg`, `File:OpenAI_Logo.svg`, `File:Unitree.svg` all confirmed to exist via search and previously verified working in live posts), not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft]
+Source: https://siliconangle.com/2026/08/18/openai-falls-further-behind-anthropic-with-disappointing-revenue-growth-and-mounting-losses/ (2026-08-18) + https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-beats-openai-in-revenue-for-first-time/ (2026-08-18) + https://www.benzinga.com/Opinion/26/08/61256549/anthropic-revenue-jumps-14x-chinese-ai-targets-nvidias-moat (2026-08-18)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+Anthropic just out-earned OpenAI for the first time — $11.6 billion to $6.7 billion, one quarter.
+
+→ Anthropic's revenue run rate: $9B last December → $65B by end of July, 7x in a year
+→ OpenAI's Q2 revenue grew 18% quarter over quarter — losses grew faster
+→ Both still private, both racing toward IPOs nobody's seen filed yet
+→ The lab everyone calls "behind" just out-earned the one everyone calls the leader
+
+being first to ship isn't the same as being first to get paid.
+
+### Post 2 [score 7/10, pattern: money-broad + record-numbers] [status: draft] [X CTA]
+Source: https://www.bloomberg.com/news/articles/2026-08-18/unitree-robotics-set-to-debut-after-904-million-shanghai-ipo (2026-08-18) + https://www.forbes.com/sites/jonmarkman/2026/08/18/unitree-starts-trading-tomorrow-in-shanghai-after-8000x-ipo-demand/ (2026-08-18) + https://www.cnn.com/2026/08/18/tech/china-unitree-ipo-intl-hnk (2026-08-18)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Unitree.svg?width=1200
+Unitree's stock jumped 629% within minutes of its Shanghai trading debut today.
+
+→ IPO priced at 150.8 yuan a share; opened at 1,100 yuan
+→ Priced at a $9B valuation — worth roughly $65B the moment it opened
+→ Retail investors oversubscribed the IPO 8,000x, a STAR Market record
+→ First humanoid robot maker ever to list on mainland China
+
+the robots you've seen dancing on stage just became a stock regular people could actually buy.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 5/10, pattern: leak-insider + niche] [status: backup]
+Source: https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug (Wiz, 2026-08-17) + https://thenextweb.com/news/snowflake-copilot-autofix-wiz-red-agent-github-dispute (2026-08-18)
+Media: none found (no clean Wikimedia Commons logo match for Wiz; skipped rather than force a weak link)
+An AI agent found a vulnerability another AI reportedly wrote — then GitHub called foul.
+
+→ Wiz's autonomous "Red Agent" broke into Snowflake's internal Jira through a bug live since June 18
+→ Wiz says GitHub Copilot Autofix approved the flawed patch that opened the hole
+→ GitHub says a human wrote it — Copilot never touched it
+→ Either way: the bug sat live 5 days before an AI found it first
+
+when AI patches AI's mistakes, who do you even blame.
+
+### Rejected candidates
+- Unitree IPO pricing / DeepSeek stake / founder-billionaire angle — the pricing story already used twice in prior waves (2026-08-06, 2026-08-08 morning); reused only the fresh trading-debut escalation (actual market pop) as Post 2, not the old pricing framing
+- UK sovereign-AI dependence / Anthropic access-cutoff warning — real ongoing story but the underlying event (Commerce Dept directive) is from June 12, over two months old; no fresh escalation in the last 24h found, just continued committee commentary
+- Meta 29-state addictive-design trial — already referenced as a supporting point in last wave's Meta capex post (2026-08-18 evening Post 1); no standalone fresh numbers today
+- Apple rumored camera-equipped AirPods — unconfirmed rumor, no hard numbers or named conflict, reads as speculative feature recap
+- Etched chip startup $21B valuation — already rejected last wave as VC/funding recap with no regular-people hook, still no new angle
+- 2026 layoff tracker (205,832+ workers) — same running tally used in multiple prior waves, no new single-event trigger today
+- OpenAI ChatGPT for Teens — already rejected last wave as a soft product/policy recap without sharp conflict; still true today
+
 ## Wave 2026-08-18 evening
 
 **Publish pipeline still broken — day 17:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`) and by reading the latest job log directly: every run since 2026-08-04 has failed, latest failure 2026-08-18 09:22:12 UTC, identical `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`. This has now been silently broken for 17 days straight with zero successful publishes — escalating this via push notification this run since dashboard-only flagging across two prior escalations (2026-08-10 morning, 2026-08-12 evening) hasn't resolved it. Marked the two now-24h-old `2026-08-17 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 58 entries, 4 sitting `queued` and unpublished (2 from 2026-08-18 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Meta Platforms Inc. logo.svg`, `File:Anthropic logo.svg` both confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: expired]
 Source: https://www.tradingkey.com/news/market-movers/262115381-market-movers-meta-20260818 (2026-08-18) + https://www.datacenterdynamics.com/en/news/meta-boosts-ai-data-center-capex-forecasts-130-145bn-spend/ (2026-08-18)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
 Meta just told investors it's spending $130-145 billion this year building AI data centers. The stock dropped 3.6% today anyway.
@@ -18,7 +71,7 @@ Meta just told investors it's spending $130-145 billion this year building AI da
 
 If you own an S&P 500 fund, you just ate this dip without touching a button.
 
-### Post 2 [score 6/10, pattern: job-fear + regular-people] [status: draft]
+### Post 2 [score 6/10, pattern: job-fear + regular-people] [status: expired]
 Source: https://sfstandard.com/2026/08/17/ai-boss-fires-worker/ (2026-08-17) + https://x.com/andonlabs/status/2088325008355676662 (Andon Labs, 2026-08-17)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 17 of 23 shifts late. That's what got a real employee fired — by an AI.
@@ -29,7 +82,7 @@ Luna runs Andon Labs' store in San Francisco: $100K budget, a corporate card, fu
 
 the manager isn't coming for your job. it already has one.
 
-### Post 3 [score 5/10, pattern: leak-insider + niche] [status: backup]
+### Post 3 [score 5/10, pattern: leak-insider + niche] [status: expired, backup]
 Source: https://www.anthropic.com/aug-2026-risk-report (Anthropic, 2026-08-14) + https://www.techtimes.com/articles/324573/20260815/anthropic-upgrades-misalignment-risk-key-safety-benchmarks-saturate.htm (2026-08-15)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Anthropic just admitted its own bio-weapons safety filter was off for 11 months — and nobody caught it.

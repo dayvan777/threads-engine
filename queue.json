@@ -382,14 +382,14 @@
     "wave": "2026-08-18 morning",
     "text": "Nvidia just promised OpenAI $105B for a data center — then put $1.5B into the company building it.\n\n→ Credit line backs a 4.25GW Ohio campus\n→ Nvidia also takes a stake in SB Energy, the SoftBank-backed developer\n→ OpenAI pays the lease — Nvidia's own chips fill the building Nvidia financed\n→ Jensen Huang: \"not circular financing\" — he calls it $600B of future Nvidia compute\n\nlender, landlord, and chip supplier — same company. the debt doesn't vanish, it just changes address.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-18-morning-2",
     "wave": "2026-08-18 morning",
     "text": "Palantir is down 16% from its record high this month — even as revenue grew 93% and Nvidia keeps hitting new highs.\n\n→ Palantir: $418B market cap, P/E near 150 — \"too expensive\" despite the growth\n→ Nvidia, Applied Materials, Micron all rallying the same week\n→ Same AI boom, opposite verdict: software priced in the future, chips hadn't\n→ Own an S&P 500 fund? You're long both sides\n\nthe AI trade didn't cool off. it just switched pockets.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-18-evening-1",
@@ -402,6 +402,20 @@
     "id": "2026-08-18-evening-2",
     "wave": "2026-08-18 evening",
     "text": "17 of 23 shifts late. That's what got a real employee fired — by an AI.\n\nLuna runs Andon Labs' store in San Francisco: $100K budget, a corporate card, full autonomy. It hired the staff, designed the shop, set the prices. Now it decided who stays.\n\n\"most models would have done the same,\" the founders said.\n\nthe manager isn't coming for your job. it already has one.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-19-morning-1",
+    "wave": "2026-08-19 morning",
+    "text": "Anthropic just out-earned OpenAI for the first time — $11.6 billion to $6.7 billion, one quarter.\n\n→ Anthropic's revenue run rate: $9B last December → $65B by end of July, 7x in a year\n→ OpenAI's Q2 revenue grew 18% quarter over quarter — losses grew faster\n→ Both still private, both racing toward IPOs nobody's seen filed yet\n→ The lab everyone calls \"behind\" just out-earned the one everyone calls the leader\n\nbeing first to ship isn't the same as being first to get paid.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-19-morning-2",
+    "wave": "2026-08-19 morning",
+    "text": "Unitree's stock jumped 629% within minutes of its Shanghai trading debut today.\n\n→ IPO priced at 150.8 yuan a share; opened at 1,100 yuan\n→ Priced at a $9B valuation — worth roughly $65B the moment it opened\n→ Retail investors oversubscribed the IPO 8,000x, a STAR Market record\n→ First humanoid robot maker ever to list on mainland China\n\nthe robots you've seen dancing on stage just became a stock regular people could actually buy.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
