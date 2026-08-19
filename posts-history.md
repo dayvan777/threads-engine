@@ -1,12 +1,63 @@
 # Posts History
 
+## Wave 2026-08-19 evening
+
+**Publish pipeline still broken — day 19:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every run since 2026-08-04 has failed, latest failure 2026-08-19 09:22:48 UTC, identical `THREADS_ACCESS_TOKEN is not set` pattern. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-18 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 62 entries, 4 sitting `queued` and unpublished (2 from 2026-08-19 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Anthropic logo.svg`, `File:NVIDIA logo.svg`, `File:Apple logo black.svg`, `File:Meta Platforms Inc. logo.svg` all confirmed to exist via search and previously verified working in live posts), not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 9/10, pattern: money-broad + conflict] [status: draft]
+Source: https://www.bloomberg.com/news/articles/2026-08-18/anthropic-plans-to-give-ceo-extra-voting-power-information-says (Bloomberg/The Information, 2026-08-18) + https://www.techtimes.com/articles/324928/20260819/anthropic-ipo-buyers-get-no-board-control-super-voting-founders-three-member-trust-govern.htm (2026-08-19)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Anthropic's IPO could be the biggest ever. The people buying the stock won't get a vote.
+
+→ CEO Dario Amodei owns just 2% of the company after $85B+ raised since 2021 diluted him down
+→ New plan: super-voting shares for him and 6 co-founders — a first for Anthropic
+→ A separate 3-person trust keeps the power to elect the board majority
+→ Same setup Zuckerberg and Spiegel use — just at a $2 trillion scale
+
+you can buy the stock. you don't get a say.
+
+### Post 2 [score 7/10, pattern: big-tech-drama + china-conflict] [status: draft]
+Source: https://www.gurufocus.com/news/9042544/nvidia-nvda-secures-h200-chip-exports-to-china-amid-tech-competition (2026-08-19) + https://finance.yahoo.com/technology/ai/articles/nvidia-starts-h200-ai-chip-100704048.html (2026-08-19)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+Nvidia's H200 chips just started reaching China — the export ban didn't stop it, it just added a middleman.
+
+→ ByteDance and Tencent each got roughly 10,000 H200 chips in recent weeks
+→ Washington caps it at 100,000 chips per firm, taxed 25% on exit
+→ Beijing's workaround: route hardware through Hong Kong, outside mainland customs
+→ First real shipments since the ban, after months of "approved but not delivered"
+
+the chip war didn't end. it just found a shipping route.
+
+### Post 3 [score 6/10, pattern: leak-insider + niche] [status: backup]
+Source: https://www.theregister.com/security/2026/08/18/apple-plugs-image-processing-hole-ripe-for-spyware-abuse/5289031 (The Register, 2026-08-18) + https://www.brinztech.com/breach-alerts/brinztech-alert-apple-issues-critical-security-updates-to-patch-imageio-integer-overflow-vulnerability-cve-2026-65346 (2026-08-18)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
+Meta's own security team just found the bug that could've turned any iPhone photo into a break-in.
+
+→ CVE-2026-65346: an integer-overflow flaw in Apple's ImageIO framework
+→ One malicious image, zero clicks needed, full code execution
+→ Hits iPhone 11 and later, iPad Pro/Air/mini, macOS Tahoe
+→ Found by Meta's Red Team, patched by Apple August 17
+
+the company that wants your data just found the hole that would've let anyone else take it too.
+
+### Rejected candidates
+- Anthropic $2T IPO valuation (revenue-multiple framing) — same underlying story already used 3 days ago (2026-08-16 evening Post 1); reused only the fresh governance/super-voting angle (new development, not yet covered) instead of the old valuation-number framing
+- Unitree closing-day numbers (460% close vs 629% intraday peak, $47.9B final cap) — same underlying IPO event already used as this morning's Post 2; reusing the identical story twice same day would be repetitive
+- CoreWeave Q2 earnings rally ($104B backlog, stock +19%) — earnings were Aug 11, over a week old, no fresh trigger this week; same reasoning it was rejected 2026-08-16 evening
+- AI memory-chip shortage driving PC/smartphone price hikes (Gartner 130% surge, Apple MacBook price hikes) — real and strong money-broad angle, but the Gartner forecast is from February and Apple's price hikes from June; no fresh dated trigger in the last 24h, reads as an evergreen recap rather than news
+- Samsung raises advanced chipmaking/DRAM contract prices — same underlying memory-shortage story as above, no single fresh news event today
+- OpenAI pauses Astra development, tightens safeguards (30-min alert rule, mandatory sandboxing) tied to Hugging Face breach — same underlying Astra-pause story already used and rejected as repetitive many times (2026-08-11 morning Post 2, 2026-08-14 evening, 2026-08-16 evening rejected list); the new safeguard details are incremental, not a major enough escalation to revisit
+- 2026 layoff tracker (322 events, 205,832 workers) — same running tally used in multiple prior waves, no new single-event trigger today
+
 ## Wave 2026-08-19 morning
 
 **Publish pipeline still broken — day 18:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`) and by reading the latest job log directly: every run since 2026-08-04 has failed, latest failure 2026-08-18 19:08:09 UTC, identical `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad last wave (2026-08-18 evening), nothing new to report — continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-18 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 60 entries, 4 sitting `queued` and unpublished (2 from 2026-08-18 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Anthropic logo.svg`, `File:OpenAI_Logo.svg`, `File:Unitree.svg` all confirmed to exist via search and previously verified working in live posts), not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: expired]
 Source: https://siliconangle.com/2026/08/18/openai-falls-further-behind-anthropic-with-disappointing-revenue-growth-and-mounting-losses/ (2026-08-18) + https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-beats-openai-in-revenue-for-first-time/ (2026-08-18) + https://www.benzinga.com/Opinion/26/08/61256549/anthropic-revenue-jumps-14x-chinese-ai-targets-nvidias-moat (2026-08-18)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 Anthropic just out-earned OpenAI for the first time — $11.6 billion to $6.7 billion, one quarter.
@@ -18,7 +69,7 @@ Anthropic just out-earned OpenAI for the first time — $11.6 billion to $6.7 bi
 
 being first to ship isn't the same as being first to get paid.
 
-### Post 2 [score 7/10, pattern: money-broad + record-numbers] [status: draft] [X CTA]
+### Post 2 [score 7/10, pattern: money-broad + record-numbers] [status: expired] [X CTA]
 Source: https://www.bloomberg.com/news/articles/2026-08-18/unitree-robotics-set-to-debut-after-904-million-shanghai-ipo (2026-08-18) + https://www.forbes.com/sites/jonmarkman/2026/08/18/unitree-starts-trading-tomorrow-in-shanghai-after-8000x-ipo-demand/ (2026-08-18) + https://www.cnn.com/2026/08/18/tech/china-unitree-ipo-intl-hnk (2026-08-18)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Unitree.svg?width=1200
 Unitree's stock jumped 629% within minutes of its Shanghai trading debut today.
@@ -32,7 +83,7 @@ the robots you've seen dancing on stage just became a stock regular people could
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 5/10, pattern: leak-insider + niche] [status: backup]
+### Post 3 [score 5/10, pattern: leak-insider + niche] [status: expired, backup]
 Source: https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug (Wiz, 2026-08-17) + https://thenextweb.com/news/snowflake-copilot-autofix-wiz-red-agent-github-dispute (2026-08-18)
 Media: none found (no clean Wikimedia Commons logo match for Wiz; skipped rather than force a weak link)
 An AI agent found a vulnerability another AI reportedly wrote — then GitHub called foul.
