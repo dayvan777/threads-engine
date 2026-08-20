@@ -424,14 +424,14 @@
     "wave": "2026-08-19 evening",
     "text": "Anthropic's IPO could be the biggest ever. The people buying the stock won't get a vote.\n\n\u2192 CEO Dario Amodei owns just 2% of the company after $85B+ raised since 2021 diluted him down\n\u2192 New plan: super-voting shares for him and 6 co-founders \u2014 a first for Anthropic\n\u2192 A separate 3-person trust keeps the power to elect the board majority\n\u2192 Same setup Zuckerberg and Spiegel use \u2014 just at a $2 trillion scale\n\nyou can buy the stock. you don't get a say.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-19-evening-2",
     "wave": "2026-08-19 evening",
     "text": "Nvidia's H200 chips just started reaching China \u2014 the export ban didn't stop it, it just added a middleman.\n\n\u2192 ByteDance and Tencent each got roughly 10,000 H200 chips in recent weeks\n\u2192 Washington caps it at 100,000 chips per firm, taxed 25% on exit\n\u2192 Beijing's workaround: route hardware through Hong Kong, outside mainland customs\n\u2192 First real shipments since the ban, after months of \"approved but not delivered\"\n\nthe chip war didn't end. it just found a shipping route.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-20-morning-1",
@@ -444,6 +444,34 @@
     "id": "2026-08-20-morning-2",
     "wave": "2026-08-20 morning",
     "text": "Google just bought 600M pieces of Spirit Airlines' internal data for $10M. The employees in those emails were never asked.\n\n\u2192 The haul: 100M emails, 500M Teams chats, 175K employee records back to 1986\n\u2192 Bought out of Spirit's 2025 bankruptcy, headed into Google's AI training data\n\u2192 10,000 former employees, zero consultation\n\u2192 Runner-up bid: $7.5M, from an AI data-labeling startup\n\nyour work chats have a price tag. you don't see the invoice.\n\nI track this stuff daily on my X \u2192 x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-20-evening-1",
+    "wave": "2026-08-20 evening",
+    "text": "The FBI just confirmed it for the first time: hackers are using AI to write the code hitting America's water supply.\n\n\u2192 Five federal agencies, one joint advisory naming AI as the weapon\n\u2192 30+ Minnesota water systems struck in a single night \u2014 one city's plant went down\n\u2192 Targets: the Siemens controllers running water, power and chemical plants\n\u2192 The malware arrived disguised as ordinary monitoring tools\n\nfor years AI was what defended the network. now it's what writes the break-in.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-20-evening-2",
+    "wave": "2026-08-20 evening",
+    "text": "Google just paid $12.2 billion to stop depending on Nvidia for AI chips.\n\n\u2192 Marvell gave Google a warrant to buy a $12.2B stake, tied to how many chips Google buys through 2033\n\u2192 The plan: custom accelerators built around Google's own TPUs, not Nvidia GPUs\n\u2192 Marvell jumped 11% on the news. Broadcom, the incumbent, dropped 3%\n\u2192 Google becomes Marvell's 5th-largest shareholder\n\nthe AI giants are done renting their chips. now they're buying the supplier.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-20-evening-1",
+    "wave": "2026-08-20 evening",
+    "text": "The FBI just confirmed it for the first time: hackers are using AI to write the code hitting America's water supply.\n\n\u2192 Five federal agencies, one joint advisory naming AI as the weapon\n\u2192 30+ Minnesota water systems struck in a single night \u2014 one city's plant went down\n\u2192 Targets: the Siemens controllers running water, power and chemical plants\n\u2192 The malware arrived disguised as ordinary monitoring tools\n\nfor years AI was what defended the network. now it's what writes the break-in.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-20-evening-2",
+    "wave": "2026-08-20 evening",
+    "text": "Google just paid $12.2 billion to stop depending on Nvidia for AI chips.\n\n\u2192 Marvell gave Google a warrant to buy a $12.2B stake, tied to how many chips Google buys through 2033\n\u2192 The plan: custom accelerators built around Google's own TPUs, not Nvidia GPUs\n\u2192 Marvell jumped 11% on the news. Broadcom, the incumbent, dropped 3%\n\u2192 Google becomes Marvell's 5th-largest shareholder\n\nthe AI giants are done renting their chips. now they're buying the supplier.",
     "image_url": null,
     "status": "queued"
   }

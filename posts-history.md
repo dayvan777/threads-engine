@@ -1,12 +1,63 @@
 # Posts History
 
+## Wave 2026-08-20 evening
+
+**Publish pipeline still broken — day 21:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`list_workflow_runs` on `threads-publish.yml`): every run since 2026-08-04 has failed (latest run #63, 2026-08-20 09:23:38 UTC, conclusion `failure`), same `THREADS_ACCESS_TOKEN is not set` pattern at `scripts/publish.js:27`. Not re-escalating via push notification — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-19 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 66 entries, 4 sitting `queued` and unpublished (2 from 2026-08-20 morning, 2 new from this wave). No X CTA this wave — cadence already sat at ~1-in-3 across recent main posts (08-19 morning and 08-20 morning each carried one), so holding it here keeps it ≤1/3.
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org / techstartups.com returned `EGRESS_BLOCKED` again (same recurring environment-level restriction). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Siemens AG logo.svg`, `File:Seal of the Federal Bureau of Investigation.svg`, `File:Google Logo.svg`, `File:Marvell Logo.svg`, `File:NVIDIA logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 8/10, pattern: money-broad + conflict + leak-insider] [status: draft]
+Source: https://techcrunch.com/2026/08/20/us-says-hackers-are-targeting-vulnerable-water-systems-with-the-help-of-ai/ (TechCrunch, 2026-08-20) + https://www.cybersecuritydive.com/news/cisa-fbi-iran-hackers-target-water-energy/826025/ (2026-08-19) + https://www.techtimes.com/articles/325080/20260820/feds-confirm-ai-writing-exploits-siemens-plcs-used-water-energy.htm (2026-08-20)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Siemens_AG_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_Federal_Bureau_of_Investigation.svg?width=1200
+The FBI just confirmed it for the first time: hackers are using AI to write the code hitting America's water supply.
+
+→ Five federal agencies, one joint advisory naming AI as the weapon
+→ 30+ Minnesota water systems struck in a single night — one city's plant went down
+→ Targets: the Siemens controllers running water, power and chemical plants
+→ The malware arrived disguised as ordinary monitoring tools
+
+for years AI was what defended the network. now it's what writes the break-in.
+
+### Post 2 [score 7/10, pattern: big-tech-drama + hard-numbers] [status: draft]
+Source: https://www.cnbc.com/2026/08/19/marvell-google-ai-chips.html (CNBC, 2026-08-19) + https://finance.yahoo.com/technology/articles/marvell-grants-google-12-2-123812695.html (2026-08-19)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Marvell_Logo.svg?width=1200
+Google just paid $12.2 billion to stop depending on Nvidia for AI chips.
+
+→ Marvell gave Google a warrant to buy a $12.2B stake, tied to how many chips Google buys through 2033
+→ The plan: custom accelerators built around Google's own TPUs, not Nvidia GPUs
+→ Marvell jumped 11% on the news. Broadcom, the incumbent, dropped 3%
+→ Google becomes Marvell's 5th-largest shareholder
+
+the AI giants are done renting their chips. now they're buying the supplier.
+
+### Post 3 [score 5/10, pattern: leak-insider + niche] [status: backup]
+Source: https://siliconangle.com/2026/08/19/sanja-fidlers-world-model-startup-veeda-ai-raises-90m-in-seed-funding/ (SiliconANGLE, 2026-08-19) + https://www.unite.ai/veeda-ai-raises-90m-seed-backed-by-khosla-and-radical-to-build-world-models-for-physical-ai/ (2026-08-19)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+An ex-Nvidia VP quit, started a company, and raised $90 million before it turned three months old.
+
+→ Sanja Fidler ran AI research at Nvidia — walked out and took two colleagues with her
+→ Veeda AI: one of the largest seed rounds in Canadian history, backed by Khosla and Radical
+→ The pitch: "world models" that simulate reality to train robots and self-driving AI
+→ Incorporated in May. $90M by August.
+
+the fastest way to raise a fortune in AI right now is to leave the lab that trained you.
+
+### Rejected candidates
+- OpenAI pauses frontier RL training / Astra crossed "Critical" cyber threshold (Aug 18-19) — same Astra-pause story already used and rejected as repetitive across many prior waves (2026-08-11 morning, 2026-08-14 evening, 2026-08-19 evening rejected list); safeguard details are incremental, not a fresh escalation
+- Nvidia backs $105B for OpenAI's Ohio data center (Aug 17) — over 24h old, no fresh trigger this run; strong but stale by evening
+- Unitree founder Wang Xingxing wealth surges ~7x to $16B on IPO (Forbes, Aug 19) — same Unitree IPO event already used this cycle (2026-08-19 morning Post 2, 629% debut); reusing the same event with a wealth angle would be repetitive
+- ChatGPT 1B users / Gemini 1B MAU milestones — pure growth-milestone recaps, no conflict or numbers-with-stakes, classic dud pattern
+- GPT-5.6 Luna 80% price cut + free-tier default — rollout was 2026-07-30 to ~08-10, well over a week old, reads as stale recap (rejected same reason in prior waves)
+- Amazon drone delivery expanding to ~500 US cities — product-expansion recap, no conflict or regular-people money hook with stakes
+- 2026 layoff tracker (322 events, 205,832 workers) — same running tally used in multiple prior waves, no new single-event trigger today
+
 ## Wave 2026-08-20 morning
 
 **Publish pipeline still broken — day 20:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`) and by reading the latest job log directly: every run since 2026-08-04 has failed, latest failure 2026-08-19 19:03:49 UTC, identical `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-19 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 64 entries, 4 sitting `queued` and unpublished (2 from 2026-08-19 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI logo 2025.svg`, `File:Google Logo.svg`, `File:Andreessen Horowitz new logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: expired]
 Source: https://www.cnbc.com/2026/08/19/open-ai-ipo-timing-2027-friar.html (CNBC, 2026-08-19) + https://www.cryptopolitan.com/openai-could-go-public-before-2027-if-business-continues-to-inflect-cfo-friar-tells-staff/ (2026-08-19)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_logo_2025.svg?width=1200
 OpenAI's CFO just told staff the IPO isn't happening this year — Sam Altman wanted it in 2026.
@@ -18,7 +69,7 @@ OpenAI's CFO just told staff the IPO isn't happening this year — Sam Altman wa
 
 the CFO just overruled the CEO's timeline, in writing, to the whole company.
 
-### Post 2 [score 7/10, pattern: big-tech-drama + regular-people] [status: draft] [X CTA]
+### Post 2 [score 7/10, pattern: big-tech-drama + regular-people] [status: expired] [X CTA]
 Source: https://www.axios.com/2026/08/17/google-spirit-airlines-bankruptcy (Axios, 2026-08-17) + https://www.tomshardware.com/tech-industry/artificial-intelligence/google-buys-spirit-airlines-data-for-ai-training-for-just-usd10-million-purchase-includes-hundreds-of-millions-of-emails-microsoft-teams-chats-billions-of-flight-pricing-records-and-anonymized-passenger-records (2026-08-18)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_Logo.svg?width=1200
 Google just bought 600M pieces of Spirit Airlines' internal data for $10M. The employees in those emails were never asked.
@@ -32,7 +83,7 @@ your work chats have a price tag. you don't see the invoice.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 5/10, pattern: leak-insider + niche] [status: backup]
+### Post 3 [score 5/10, pattern: leak-insider + niche] [status: expired, backup]
 Source: https://www.axios.com/2026/08/18/doj-andreessen-horowitz (Axios, 2026-08-18) + https://techcrunch.com/2026/08/18/dojs-probe-into-andreessen-horowitz-over-board-seats-baffles-vcs/ (2026-08-18)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Andreessen_Horowitz_new_logo.svg?width=1200
 The DOJ is investigating Andreessen Horowitz — over two board seats.
