@@ -1,12 +1,65 @@
 # Posts History
 
+## Wave 2026-08-20 morning
+
+**Publish pipeline still broken — day 20:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`) and by reading the latest job log directly: every run since 2026-08-04 has failed, latest failure 2026-08-19 19:03:49 UTC, identical `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-19 morning` queue entries `skipped` (never published, pipeline down the whole time); queue now has 64 entries, 4 sitting `queued` and unpublished (2 from 2026-08-19 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI logo 2025.svg`, `File:Google Logo.svg`, `File:Andreessen Horowitz new logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft]
+Source: https://www.cnbc.com/2026/08/19/open-ai-ipo-timing-2027-friar.html (CNBC, 2026-08-19) + https://www.cryptopolitan.com/openai-could-go-public-before-2027-if-business-continues-to-inflect-cfo-friar-tells-staff/ (2026-08-19)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_logo_2025.svg?width=1200
+OpenAI's CFO just told staff the IPO isn't happening this year — Sam Altman wanted it in 2026.
+
+→ Sarah Friar to staff: "we will be a public company in 2027," sooner only if growth "inflects"
+→ OpenAI raised $122B in March — Friar calls an IPO "not a finish line, just another fundraise"
+→ Anthropic filed confidentially too, could go public first, as soon as September
+→ Friar's own words: "we are running our own race"
+
+the CFO just overruled the CEO's timeline, in writing, to the whole company.
+
+### Post 2 [score 7/10, pattern: big-tech-drama + regular-people] [status: draft] [X CTA]
+Source: https://www.axios.com/2026/08/17/google-spirit-airlines-bankruptcy (Axios, 2026-08-17) + https://www.tomshardware.com/tech-industry/artificial-intelligence/google-buys-spirit-airlines-data-for-ai-training-for-just-usd10-million-purchase-includes-hundreds-of-millions-of-emails-microsoft-teams-chats-billions-of-flight-pricing-records-and-anonymized-passenger-records (2026-08-18)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_Logo.svg?width=1200
+Google just bought 600M pieces of Spirit Airlines' internal data for $10M. The employees in those emails were never asked.
+
+→ The haul: 100M emails, 500M Teams chats, 175K employee records back to 1986
+→ Bought out of Spirit's 2025 bankruptcy, headed into Google's AI training data
+→ 10,000 former employees, zero consultation
+→ Runner-up bid: $7.5M, from an AI data-labeling startup
+
+your work chats have a price tag. you don't see the invoice.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 5/10, pattern: leak-insider + niche] [status: backup]
+Source: https://www.axios.com/2026/08/18/doj-andreessen-horowitz (Axios, 2026-08-18) + https://techcrunch.com/2026/08/18/dojs-probe-into-andreessen-horowitz-over-board-seats-baffles-vcs/ (2026-08-18)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Andreessen_Horowitz_new_logo.svg?width=1200
+The DOJ is investigating Andreessen Horowitz — over two board seats.
+
+→ Ben Horowitz sits on Databricks' board, partner Martin Casado sits on Fivetran's — direct competitors
+→ The law: the Clayton Act's century-old ban on "interlocking directorates"
+→ First time DOJ has aimed that specific law at a VC firm instead of corporate execs
+→ a16z has deep Trump-administration ties — didn't stop the probe
+
+even the friendliest VC in Washington isn't above the org chart.
+
+### Rejected candidates
+- Anthropic super-voting shares IPO governance — same underlying story already used as this wave's predecessor (2026-08-19 evening Post 1), no major new development since
+- Nvidia H200 China shipments (ByteDance/Tencent ~10K chips each) — same underlying story already used as 2026-08-19 evening Post 2, no fresh escalation
+- DeepSeek dynamic/peak-hour pricing hike (up to 371-500% at peak) — real story but the price change took effect 2026-08-16, over 24h old with no fresh trigger this run, reads as stale by the time of this wave
+- Nvidia weighing investment in Mercor at $20B valuation — talks-stage funding rumor first reported back on 2026-07-09, no confirmed deal or fresh trigger, weak regular-people hook
+- GPT-5.6 Luna free-tier default + 80% price cut — real news but the rollout was 2026-07-30 to 2026-08-10, well over a week old by this wave, reads as stale recap
+- Waymo's next-gen "Ojai" robotaxi opens to all riders in LA/Phoenix/SF — pure product-expansion recap, no conflict or numbers with stakes, classic dud pattern
+- 2026 layoff tracker (205,000+ workers) — same running tally used in multiple prior waves, no new single-event trigger today
+
 ## Wave 2026-08-19 evening
 
 **Publish pipeline still broken — day 19:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every run since 2026-08-04 has failed, latest failure 2026-08-19 09:22:48 UTC, identical `THREADS_ACCESS_TOKEN is not set` pattern. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-18 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 62 entries, 4 sitting `queued` and unpublished (2 from 2026-08-19 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Anthropic logo.svg`, `File:NVIDIA logo.svg`, `File:Apple logo black.svg`, `File:Meta Platforms Inc. logo.svg` all confirmed to exist via search and previously verified working in live posts), not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 9/10, pattern: money-broad + conflict] [status: draft]
+### Post 1 [score 9/10, pattern: money-broad + conflict] [status: expired]
 Source: https://www.bloomberg.com/news/articles/2026-08-18/anthropic-plans-to-give-ceo-extra-voting-power-information-says (Bloomberg/The Information, 2026-08-18) + https://www.techtimes.com/articles/324928/20260819/anthropic-ipo-buyers-get-no-board-control-super-voting-founders-three-member-trust-govern.htm (2026-08-19)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Anthropic's IPO could be the biggest ever. The people buying the stock won't get a vote.
@@ -18,7 +71,7 @@ Anthropic's IPO could be the biggest ever. The people buying the stock won't get
 
 you can buy the stock. you don't get a say.
 
-### Post 2 [score 7/10, pattern: big-tech-drama + china-conflict] [status: draft]
+### Post 2 [score 7/10, pattern: big-tech-drama + china-conflict] [status: expired]
 Source: https://www.gurufocus.com/news/9042544/nvidia-nvda-secures-h200-chip-exports-to-china-amid-tech-competition (2026-08-19) + https://finance.yahoo.com/technology/ai/articles/nvidia-starts-h200-ai-chip-100704048.html (2026-08-19)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 Nvidia's H200 chips just started reaching China — the export ban didn't stop it, it just added a middleman.
@@ -30,7 +83,7 @@ Nvidia's H200 chips just started reaching China — the export ban didn't stop i
 
 the chip war didn't end. it just found a shipping route.
 
-### Post 3 [score 6/10, pattern: leak-insider + niche] [status: backup]
+### Post 3 [score 6/10, pattern: leak-insider + niche] [status: expired, backup]
 Source: https://www.theregister.com/security/2026/08/18/apple-plugs-image-processing-hole-ripe-for-spyware-abuse/5289031 (The Register, 2026-08-18) + https://www.brinztech.com/breach-alerts/brinztech-alert-apple-issues-critical-security-updates-to-patch-imageio-integer-overflow-vulnerability-cve-2026-65346 (2026-08-18)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
 Meta's own security team just found the bug that could've turned any iPhone photo into a break-in.

@@ -410,14 +410,14 @@
     "wave": "2026-08-19 morning",
     "text": "Anthropic just out-earned OpenAI for the first time \u2014 $11.6 billion to $6.7 billion, one quarter.\n\n\u2192 Anthropic's revenue run rate: $9B last December \u2192 $65B by end of July, 7x in a year\n\u2192 OpenAI's Q2 revenue grew 18% quarter over quarter \u2014 losses grew faster\n\u2192 Both still private, both racing toward IPOs nobody's seen filed yet\n\u2192 The lab everyone calls \"behind\" just out-earned the one everyone calls the leader\n\nbeing first to ship isn't the same as being first to get paid.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-19-morning-2",
     "wave": "2026-08-19 morning",
     "text": "Unitree's stock jumped 629% within minutes of its Shanghai trading debut today.\n\n\u2192 IPO priced at 150.8 yuan a share; opened at 1,100 yuan\n\u2192 Priced at a $9B valuation \u2014 worth roughly $65B the moment it opened\n\u2192 Retail investors oversubscribed the IPO 8,000x, a STAR Market record\n\u2192 First humanoid robot maker ever to list on mainland China\n\nthe robots you've seen dancing on stage just became a stock regular people could actually buy.\n\nI track this stuff daily on my X \u2192 x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-19-evening-1",
@@ -430,6 +430,20 @@
     "id": "2026-08-19-evening-2",
     "wave": "2026-08-19 evening",
     "text": "Nvidia's H200 chips just started reaching China \u2014 the export ban didn't stop it, it just added a middleman.\n\n\u2192 ByteDance and Tencent each got roughly 10,000 H200 chips in recent weeks\n\u2192 Washington caps it at 100,000 chips per firm, taxed 25% on exit\n\u2192 Beijing's workaround: route hardware through Hong Kong, outside mainland customs\n\u2192 First real shipments since the ban, after months of \"approved but not delivered\"\n\nthe chip war didn't end. it just found a shipping route.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-20-morning-1",
+    "wave": "2026-08-20 morning",
+    "text": "OpenAI's CFO just told staff the IPO isn't happening this year \u2014 Sam Altman wanted it in 2026.\n\n\u2192 Sarah Friar to staff: \"we will be a public company in 2027,\" sooner only if growth \"inflects\"\n\u2192 OpenAI raised $122B in March \u2014 Friar calls an IPO \"not a finish line, just another fundraise\"\n\u2192 Anthropic filed confidentially too, could go public first, as soon as September\n\u2192 Friar's own words: \"we are running our own race\"\n\nthe CFO just overruled the CEO's timeline, in writing, to the whole company.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-20-morning-2",
+    "wave": "2026-08-20 morning",
+    "text": "Google just bought 600M pieces of Spirit Airlines' internal data for $10M. The employees in those emails were never asked.\n\n\u2192 The haul: 100M emails, 500M Teams chats, 175K employee records back to 1986\n\u2192 Bought out of Spirit's 2025 bankruptcy, headed into Google's AI training data\n\u2192 10,000 former employees, zero consultation\n\u2192 Runner-up bid: $7.5M, from an AI data-labeling startup\n\nyour work chats have a price tag. you don't see the invoice.\n\nI track this stuff daily on my X \u2192 x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
