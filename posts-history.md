@@ -1,12 +1,65 @@
 # Posts History
 
+## Wave 2026-08-21 morning
+
+**Publish pipeline still broken — day 22:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`) and by reading the job log directly: every run since 2026-08-04 has failed, latest failure run #65, 2026-08-20 19:11:27 UTC, identical `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-20 morning` queue entries `skipped` (never published, pipeline down the whole time). Also found and removed two exact-duplicate `2026-08-20 evening` queue entries (the same two posts had been appended twice, likely from a prior rebase) — deduped rather than skipped, since removing an outright duplicate is not the same as marking stale news skipped. Queue now has 68 entries, 4 sitting `queued` and unpublished (2 from 2026-08-20 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org and defenseone.com returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Governor Shapiro.jpg`, `File:Seal of Pennsylvania.svg`, `File:US Department of the Army Seal.png` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft] [X CTA]
+Source: https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-signs-executive-order-on-data-center-developmen (Commonwealth of PA, 2026-08-18) + https://thenextweb.com/news/pennsylvania-shapiro-executive-order-ai-data-centres (2026-08-20) + https://decrypt.co/375923/pennsylvania-ai-data-centers-backlash (2026-08-20)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Governor_Shapiro.jpg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_Pennsylvania.svg?width=1200
+Pennsylvania just told AI data centers: pay your own power bill, or don't build here.
+
+→ Data centers over 25MW must bring their own power, not lean on the grid
+→ Developers eat 100% of new grid costs — not your utility bill
+→ Grid stress? Data centers get cut off first, not households
+→ Local communities must approve before construction starts
+
+the AI boom finally sent someone else the invoice.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 2 [score 7/10, pattern: leak-insider + conflict] [status: draft]
+Source: https://www.nextgov.com/acquisition/2026/08/contractor-alleges-army-inappropriately-used-ai-make-450m-contract-award/415225/ (Nextgov/FCW, 2026-08-20) + https://news.bloomberglaw.com/federal-contracting/ai-hallucinations-tainted-armys-missile-test-award-suit-says (Bloomberg Law, 2026-08-20) + https://www.defenseone.com/policy/2026/08/ai-army-contract-lawsuit/415261/ (Defense One, 2026-08-20)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/US_Department_of_the_Army_Seal.png?width=1200
+The Army just awarded a $450 million contract using an AI that hallucinated the losing bid's weaknesses.
+
+→ TRAX International lost White Sands Missile Range to a bid $29.4M higher
+→ The AI invented fake weaknesses in TRAX's proposal — made-up references, nobody on the board caught it
+→ GAO already denied TRAX's protest in May. Now it's in federal court
+
+hallucinate a government contract and the taxpayer eats the price gap.
+
+### Post 3 [score 5/10, pattern: contrarian + niche] [status: backup]
+Source: https://linear.app/data (Linear "How teams build" report, 2026-08) + https://www.techstartups.com/2026/08/20/top-tech-news-today-august-20-2026-amazon-google-openai-openrouter-siemens-stripe-tdk-more/ (2026-08-20)
+Media: none found (no clean Wikimedia Commons file for Linear's own product logo — only an unrelated Italian insurance company shares the name)
+Linear just measured two years of AI in software teams — it now writes almost half of everything created there.
+
+→ Two years ago: 1 in 1,000 issues were AI-written. Today: nearly 1 in 2
+→ CEOs at 200+ person companies using AI features: 9% in January, 36% by June
+→ AI now changes how teams execute far more than what they decide to build
+
+the machine isn't picking your roadmap yet. it's just writing every ticket on it.
+
+### Rejected candidates
+- FBI/CISA AI water-system hacking advisory (Siemens PLCs, Minnesota) — same story already used as this wave's predecessor (2026-08-20 evening Post 1), no fresh escalation since
+- Google-Marvell $12.2B chip warrant deal / Broadcom $87B market-cap drop — same underlying deal already used as 2026-08-20 evening Post 2, no fresh escalation
+- OpenAI frontier RL training pause (Hugging Face breach, Astra threshold) — same Astra-pause story already used and rejected as repetitive across many prior waves (2026-08-11 morning, 2026-08-14 evening, 2026-08-19 evening, 2026-08-20 evening rejected lists); no material new development
+- "Near-autonomous" AI agent cyberattack on Taiwan (Dream research) — real and striking, but first reported 2026-08-12/13, over a week old with no fresh trigger in the last 24h
+- Cerebras CS-4 "Nexus" inference server launch — pure product/spec launch, no conflict or money-for-regular-people angle, classic dud pattern (press-release recap)
+- ChatGPT ads expanding to 31 European countries, opt-out mechanics detail — same underlying ads-in-Europe story already used 2026-08-15 evening Post 1; the opt-out-doesn't-mean-no-ads detail is a real but minor escalation, not enough to justify a repeat this soon
+- Veeda AI $90M seed (ex-Nvidia VP) — same story already used as 2026-08-20 evening Post 3 backup, no new development
+- Fireworks AI $1.5B Series D at $17.5B valuation — round closed 2026-07-16, over a month old, no fresh trigger
+- 2026 layoff tracker (322 events, 205,832 workers) — same running tally used in multiple prior waves, no new single-event trigger today
+
 ## Wave 2026-08-20 evening
 
 **Publish pipeline still broken — day 21:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`list_workflow_runs` on `threads-publish.yml`): every run since 2026-08-04 has failed (latest run #63, 2026-08-20 09:23:38 UTC, conclusion `failure`), same `THREADS_ACCESS_TOKEN is not set` pattern at `scripts/publish.js:27`. Not re-escalating via push notification — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-19 evening` queue entries `skipped` (never published, pipeline down the whole time); queue now has 66 entries, 4 sitting `queued` and unpublished (2 from 2026-08-20 morning, 2 new from this wave). No X CTA this wave — cadence already sat at ~1-in-3 across recent main posts (08-19 morning and 08-20 morning each carried one), so holding it here keeps it ≤1/3.
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org / techstartups.com returned `EGRESS_BLOCKED` again (same recurring environment-level restriction). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Siemens AG logo.svg`, `File:Seal of the Federal Bureau of Investigation.svg`, `File:Google Logo.svg`, `File:Marvell Logo.svg`, `File:NVIDIA logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 8/10, pattern: money-broad + conflict + leak-insider] [status: draft]
+### Post 1 [score 8/10, pattern: money-broad + conflict + leak-insider] [status: expired]
 Source: https://techcrunch.com/2026/08/20/us-says-hackers-are-targeting-vulnerable-water-systems-with-the-help-of-ai/ (TechCrunch, 2026-08-20) + https://www.cybersecuritydive.com/news/cisa-fbi-iran-hackers-target-water-energy/826025/ (2026-08-19) + https://www.techtimes.com/articles/325080/20260820/feds-confirm-ai-writing-exploits-siemens-plcs-used-water-energy.htm (2026-08-20)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Siemens_AG_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_Federal_Bureau_of_Investigation.svg?width=1200
 The FBI just confirmed it for the first time: hackers are using AI to write the code hitting America's water supply.
@@ -18,7 +71,7 @@ The FBI just confirmed it for the first time: hackers are using AI to write the 
 
 for years AI was what defended the network. now it's what writes the break-in.
 
-### Post 2 [score 7/10, pattern: big-tech-drama + hard-numbers] [status: draft]
+### Post 2 [score 7/10, pattern: big-tech-drama + hard-numbers] [status: expired]
 Source: https://www.cnbc.com/2026/08/19/marvell-google-ai-chips.html (CNBC, 2026-08-19) + https://finance.yahoo.com/technology/articles/marvell-grants-google-12-2-123812695.html (2026-08-19)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Marvell_Logo.svg?width=1200
 Google just paid $12.2 billion to stop depending on Nvidia for AI chips.
@@ -30,7 +83,7 @@ Google just paid $12.2 billion to stop depending on Nvidia for AI chips.
 
 the AI giants are done renting their chips. now they're buying the supplier.
 
-### Post 3 [score 5/10, pattern: leak-insider + niche] [status: backup]
+### Post 3 [score 5/10, pattern: leak-insider + niche] [status: expired, backup]
 Source: https://siliconangle.com/2026/08/19/sanja-fidlers-world-model-startup-veeda-ai-raises-90m-in-seed-funding/ (SiliconANGLE, 2026-08-19) + https://www.unite.ai/veeda-ai-raises-90m-seed-backed-by-khosla-and-radical-to-build-world-models-for-physical-ai/ (2026-08-19)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 An ex-Nvidia VP quit, started a company, and raised $90 million before it turned three months old.
