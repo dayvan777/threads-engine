@@ -1,12 +1,65 @@
 # Posts History
 
+## Wave 2026-08-21 evening
+
+**Publish pipeline still broken — day 22:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #67, 2026-08-21 09:25:51 UTC, identical `THREADS_ACCESS_TOKEN is not set` pattern. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-20 evening` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 70 entries, 4 sitting `queued` and unpublished (2 from 2026-08-21 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to techcrunch.com, axios.com and electrek.co returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research, including for exact figures on both stories below. Media links are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Binance Logo.svg`, `File:Tesla logo.png`, `File:NVIDIA logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
+
+### Post 1 [score 7/10, pattern: money-access + contrarian] [status: draft]
+Source: https://techcrunch.com/2026/08/20/binance-now-lets-ai-agents-trade-but-keeping-them-in-check-is-largely-up-to-users/ (TechCrunch, 2026-08-20) + https://www.cryptopolitan.com/binance-agent-os-ai-crypto-trading/ (2026-08-20)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Binance_Logo.svg?width=1200
+Binance just gave AI agents a login to trade your crypto — and there's no loss limit except what you deposit.
+
+→ Agent OS launched Thursday: ChatGPT, Claude and other agents can now execute real trades
+→ Withdrawals blocked by default, but trading losses aren't capped at all
+→ Wallet activity capped at $50K/day for swaps, $100K for DeFi — trading itself has no ceiling
+→ Whatever you fund the subaccount with is the whole safety net
+
+the exchange built the rails. you're still the brakes.
+
+### Post 2 [score 6/10, pattern: money-broad + reversal] [status: draft] [X CTA]
+Source: https://techcrunch.com/2026/08/20/tesla-uber-and-waymo-all-get-the-ok-to-operate-thousands-of-robotaxis-in-nevada/ (TechCrunch, 2026-08-20) + https://electrek.co/2026/08/17/tesla-nevada-robotaxi-permit-10-vehicles-las-vegas/ (2026-08-17)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Tesla_logo.png?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_Nevada.svg?width=1200
+Nevada capped Tesla's Vegas robotaxi permit at 10 vehicles last week. This week it approved 5,000.
+
+→ Tesla, Uber and Waymo can now run up to 8,000 robotaxis across Clark County
+→ Uber's share runs through partners Motional and Zoox, not its own fleet
+→ Tesla's own engineer told regulators 5,000 was "always a ceiling" — expects maybe 2,500
+→ Rollout window: the next 12 months
+
+Vegas just became the biggest live robotaxi bet in the country.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 5/10, pattern: big-tech-drama + numbers] [status: backup]
+Source: https://www.theinformation.com/briefings/nvidia-reportedly-pay-6-billion-licensing-hiring-deal-ai-model-startup-poolside (The Information, 2026-08-21) + https://thenextweb.com/news/nvidia-poolside-6bn-model-factory-licence (2026-08-21)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+Nvidia just paid $6 billion to license AI coding startup Poolside's tech — without buying the company.
+
+→ $6B licensing deal + $1B investment at a $12B valuation
+→ 109 Poolside employees get job offers straight from Nvidia
+→ Poolside keeps operating independently — no acquisition, no antitrust review
+→ Third time Nvidia's structured a deal this way this year
+
+acquire the team, skip the paperwork — the acquihire got a rebrand.
+
+### Rejected candidates
+- Anthropic's Mythos 5 fake GitHub identities / UK AISI phishing incident, resurfaced with new named-victim detail (Sinan Can Demir, UT Austin) — same underlying July AISI safety-test story already used and explicitly rejected as repetitive in multiple prior waves (2026-08-05, 2026-08-21 morning family); today's coverage is deeper reporting on the same incident, not a fresh escalation
+- Anthropic confidential IPO filing, $65B revenue run rate, potential $2T valuation exceeding SpaceX — real and huge, but the run-rate/valuation figures are all dated 2026-08-17/18, over 48h old with no new trigger today; also close to the already-rejected June IPO-filing story from a prior wave
+- DeepSeek experimental multimodal model rivaling Opus 4.8 — pure feature/capability launch, no conflict or numbers-for-people angle, classic dud pattern
+- OpenAI frontier RL training pause (security-boundary crossing) — same Astra-pause story family already rejected as repetitive across many prior waves, no material new development
+- SK Hynix 40 trillion won ($28.6B) share buyback — real number but pure shareholder-return mechanics, no regular-people or conflict hook
+- xAI suing Colorado over new AI regulation law — same genre already covered via the Minnesota nudification-law lawsuit in a prior wave; legal-procedural with no fresh numbers today
+- 2026 AI layoff tracker (205,000 workers) — same running tally used in multiple prior waves, no new single-event trigger today
+
 ## Wave 2026-08-21 morning
 
 **Publish pipeline still broken — day 22:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`) and by reading the job log directly: every run since 2026-08-04 has failed, latest failure run #65, 2026-08-20 19:11:27 UTC, identical `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-20 morning` queue entries `skipped` (never published, pipeline down the whole time). Also found and removed two exact-duplicate `2026-08-20 evening` queue entries (the same two posts had been appended twice, likely from a prior rebase) — deduped rather than skipped, since removing an outright duplicate is not the same as marking stale news skipped. Queue now has 68 entries, 4 sitting `queued` and unpublished (2 from 2026-08-20 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org and defenseone.com returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Governor Shapiro.jpg`, `File:Seal of Pennsylvania.svg`, `File:US Department of the Army Seal.png` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 8/10, pattern: money-broad + conflict] [status: draft] [X CTA]
+### Post 1 [score 8/10, pattern: money-broad + conflict] [status: expired] [X CTA]
 Source: https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-signs-executive-order-on-data-center-developmen (Commonwealth of PA, 2026-08-18) + https://thenextweb.com/news/pennsylvania-shapiro-executive-order-ai-data-centres (2026-08-20) + https://decrypt.co/375923/pennsylvania-ai-data-centers-backlash (2026-08-20)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Governor_Shapiro.jpg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_Pennsylvania.svg?width=1200
 Pennsylvania just told AI data centers: pay your own power bill, or don't build here.
@@ -20,7 +73,7 @@ the AI boom finally sent someone else the invoice.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 2 [score 7/10, pattern: leak-insider + conflict] [status: draft]
+### Post 2 [score 7/10, pattern: leak-insider + conflict] [status: expired]
 Source: https://www.nextgov.com/acquisition/2026/08/contractor-alleges-army-inappropriately-used-ai-make-450m-contract-award/415225/ (Nextgov/FCW, 2026-08-20) + https://news.bloomberglaw.com/federal-contracting/ai-hallucinations-tainted-armys-missile-test-award-suit-says (Bloomberg Law, 2026-08-20) + https://www.defenseone.com/policy/2026/08/ai-army-contract-lawsuit/415261/ (Defense One, 2026-08-20)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/US_Department_of_the_Army_Seal.png?width=1200
 The Army just awarded a $450 million contract using an AI that hallucinated the losing bid's weaknesses.
@@ -31,7 +84,7 @@ The Army just awarded a $450 million contract using an AI that hallucinated the 
 
 hallucinate a government contract and the taxpayer eats the price gap.
 
-### Post 3 [score 5/10, pattern: contrarian + niche] [status: backup]
+### Post 3 [score 5/10, pattern: contrarian + niche] [status: expired]
 Source: https://linear.app/data (Linear "How teams build" report, 2026-08) + https://www.techstartups.com/2026/08/20/top-tech-news-today-august-20-2026-amazon-google-openai-openrouter-siemens-stripe-tdk-more/ (2026-08-20)
 Media: none found (no clean Wikimedia Commons file for Linear's own product logo — only an unrelated Italian insurance company shares the name)
 Linear just measured two years of AI in software teams — it now writes almost half of everything created there.

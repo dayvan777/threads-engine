@@ -452,14 +452,14 @@
     "wave": "2026-08-20 evening",
     "text": "The FBI just confirmed it for the first time: hackers are using AI to write the code hitting America's water supply.\n\n→ Five federal agencies, one joint advisory naming AI as the weapon\n→ 30+ Minnesota water systems struck in a single night — one city's plant went down\n→ Targets: the Siemens controllers running water, power and chemical plants\n→ The malware arrived disguised as ordinary monitoring tools\n\nfor years AI was what defended the network. now it's what writes the break-in.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-20-evening-2",
     "wave": "2026-08-20 evening",
     "text": "Google just paid $12.2 billion to stop depending on Nvidia for AI chips.\n\n→ Marvell gave Google a warrant to buy a $12.2B stake, tied to how many chips Google buys through 2033\n→ The plan: custom accelerators built around Google's own TPUs, not Nvidia GPUs\n→ Marvell jumped 11% on the news. Broadcom, the incumbent, dropped 3%\n→ Google becomes Marvell's 5th-largest shareholder\n\nthe AI giants are done renting their chips. now they're buying the supplier.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-21-morning-1",
@@ -473,6 +473,20 @@
     "wave": "2026-08-21 morning",
     "text": "The Army just awarded a $450 million contract using an AI that hallucinated the losing bid's weaknesses.\n\n→ TRAX International lost White Sands Missile Range to a bid $29.4M higher\n→ The AI invented fake weaknesses in TRAX's proposal — made-up references, nobody on the board caught it\n→ GAO already denied TRAX's protest in May. Now it's in federal court\n\nhallucinate a government contract and the taxpayer eats the price gap.",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/US_Department_of_the_Army_Seal.png?width=1200",
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-21-evening-1",
+    "wave": "2026-08-21 evening",
+    "text": "Binance just gave AI agents a login to trade your crypto — and there's no loss limit except what you deposit.\n\n→ Agent OS launched Thursday: ChatGPT, Claude and other agents can now execute real trades\n→ Withdrawals blocked by default, but trading losses aren't capped at all\n→ Wallet activity capped at $50K/day for swaps, $100K for DeFi — trading itself has no ceiling\n→ Whatever you fund the subaccount with is the whole safety net\n\nthe exchange built the rails. you're still the brakes.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Binance_Logo.svg?width=1200",
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-21-evening-2",
+    "wave": "2026-08-21 evening",
+    "text": "Nevada capped Tesla's Vegas robotaxi permit at 10 vehicles last week. This week it approved 5,000.\n\n→ Tesla, Uber and Waymo can now run up to 8,000 robotaxis across Clark County\n→ Uber's share runs through partners Motional and Zoox, not its own fleet\n→ Tesla's own engineer told regulators 5,000 was \"always a ceiling\" — expects maybe 2,500\n→ Rollout window: the next 12 months\n\nVegas just became the biggest live robotaxi bet in the country.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tesla_logo.png?width=1200",
     "status": "queued"
   }
 ]
