@@ -1,12 +1,62 @@
 # Posts History
 
+## Wave 2026-08-22 morning
+
+**Publish pipeline still broken — day 23:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`) and by reading the job log directly: every scheduled run since 2026-08-04 has failed, latest failure run #69, 2026-08-21 19:07:33 UTC, identical `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. The `2026-08-21 morning` and `2026-08-21 evening` queue entries are still under 24h old, so left `queued` (not marked stale). Queue now has 72 entries, 6 sitting `queued` and unpublished (2 from 2026-08-21 morning, 2 from 2026-08-21 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Google 2026 logo.svg`, `File:Apple logo black.svg`, `File:Seal of Illinois.svg`, `File:OpenAI logo 2025.svg`, `File:Anthropic logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. No X CTA this wave — both 2026-08-21 morning and 2026-08-21 evening main posts carried one, so skipping here keeps cadence at ~1-in-3.
+
+### Post 1 [score 8/10, pattern: money-access + contrarian] [status: draft]
+Source: https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/ (Google, 2026-08-19) + https://www.macrumors.com/2026/08/19/students-free-year-google-ai-pro/ (2026-08-19)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_2026_logo.svg?width=1200
+Google just made Gemini AI Pro free for every college student in America — for a year.
+
+→ Normally $19.99/month, free through gemini.google.com/students with a school email
+→ Students outside the US get AI Plus free instead — still a $60/year value
+→ Offer runs through December 31, but it needs a card on file, and auto-renews to paid after 12 months
+
+the smartest AI in your pocket is free until it isn't.
+
+### Post 2 [score 8/10, pattern: big-tech-drama + money-access] [status: draft]
+Source: https://americanbazaaronline.com/2026/08/21/apple-meta-and-7-tech-giants-face-lawsuit-over-ai-voice-training-data/ (2026-08-21) + https://cryptobriefing.com/tech-giants-lawsuit-ai-voice-training-bipa/ (2026-08-20)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_Illinois.svg?width=1200
+Apple, Meta, Amazon, Microsoft, Nvidia and Samsung are all being sued for one thing: training AI on your voice without asking.
+
+→ Illinois law: $1,000 per accident, $5,000 if deliberate
+→ Plaintiffs are journalists, podcasters, voice actors — anyone whose voice is online
+→ All nine defendants filed to dismiss, say nobody proved their voice was used
+→ Apple wants all nine cases merged before one judge
+
+your voice just became a line item worth up to $5,000 — if you can prove it was heard.
+
+### Post 3 [score 5/10, pattern: contrarian + niche-dev] [status: backup]
+Source: https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/ (TechCrunch, 2026-08-20) + https://ramp.com/data/ai-index-august-2026 (Ramp AI Index, 2026-08)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_logo_2025.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+OpenAI just closed a gap on Anthropic that looked unclosable three months ago.
+
+→ Anthropic: 43.5% of US businesses now pay for it, still growing
+→ OpenAI: 39.7%, but growing 82% quarter-over-quarter vs Anthropic's 76%
+→ Anthropic quadrupled its business share in twelve months — the growth curve just flipped
+→ OpenAI's newest model already pulls 25% of all corporate AI tokens vs Anthropic's 6%
+
+adoption says Anthropic won the year. usage says OpenAI just won the quarter.
+
+### Rejected candidates
+- Nvidia $6B Poolside licensing deal — same story already used as 2026-08-21 evening Post 3 backup, no fresh escalation
+- Anthropic confidential IPO filing / ~$965B-$2T valuation talk — same story family rejected repeatedly in prior waves (08-17, 08-18, 08-21 evening), no new trigger in the last 24h
+- SK Hynix 40 trillion won ($28.6B) buyback — same story already rejected in 08-21 evening, pure shareholder-return mechanics, no regular-people or conflict hook
+- 2026 AI layoff tracker (205,000 workers) — same running tally used and rejected in multiple prior waves, no new single-event trigger today
+- OpenAI/Anthropic/Google API flaw letting weaker models decode stronger models' reasoning — real but technical/niche, no clean numbers-for-people hook, and already a crowded "niche dev" field this wave (Post 3 covers OpenAI vs Anthropic)
+- CISA Ray framework RCE (CVE-2025-62593) added to Known Exploited Vulnerabilities catalog — real but disclosed Aug 17, over 24h old with no fresh escalation, and reads as a pure infosec advisory rather than a Threads hook
+- Anthropic protein-design/lab-automation demo (1,300 protein designs) — pure capability/feature showcase, no conflict or money angle, classic dud pattern
+
 ## Wave 2026-08-21 evening
 
 **Publish pipeline still broken — day 22:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #67, 2026-08-21 09:25:51 UTC, identical `THREADS_ACCESS_TOKEN is not set` pattern. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-20 evening` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 70 entries, 4 sitting `queued` and unpublished (2 from 2026-08-21 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to techcrunch.com, axios.com and electrek.co returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research, including for exact figures on both stories below. Media links are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Binance Logo.svg`, `File:Tesla logo.png`, `File:NVIDIA logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching.
 
-### Post 1 [score 7/10, pattern: money-access + contrarian] [status: draft]
+### Post 1 [score 7/10, pattern: money-access + contrarian] [status: expired]
 Source: https://techcrunch.com/2026/08/20/binance-now-lets-ai-agents-trade-but-keeping-them-in-check-is-largely-up-to-users/ (TechCrunch, 2026-08-20) + https://www.cryptopolitan.com/binance-agent-os-ai-crypto-trading/ (2026-08-20)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Binance_Logo.svg?width=1200
 Binance just gave AI agents a login to trade your crypto — and there's no loss limit except what you deposit.
@@ -18,7 +68,7 @@ Binance just gave AI agents a login to trade your crypto — and there's no loss
 
 the exchange built the rails. you're still the brakes.
 
-### Post 2 [score 6/10, pattern: money-broad + reversal] [status: draft] [X CTA]
+### Post 2 [score 6/10, pattern: money-broad + reversal] [status: expired] [X CTA]
 Source: https://techcrunch.com/2026/08/20/tesla-uber-and-waymo-all-get-the-ok-to-operate-thousands-of-robotaxis-in-nevada/ (TechCrunch, 2026-08-20) + https://electrek.co/2026/08/17/tesla-nevada-robotaxi-permit-10-vehicles-las-vegas/ (2026-08-17)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Tesla_logo.png?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_Nevada.svg?width=1200
 Nevada capped Tesla's Vegas robotaxi permit at 10 vehicles last week. This week it approved 5,000.
@@ -32,7 +82,7 @@ Vegas just became the biggest live robotaxi bet in the country.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 5/10, pattern: big-tech-drama + numbers] [status: backup]
+### Post 3 [score 5/10, pattern: big-tech-drama + numbers] [status: expired, backup]
 Source: https://www.theinformation.com/briefings/nvidia-reportedly-pay-6-billion-licensing-hiring-deal-ai-model-startup-poolside (The Information, 2026-08-21) + https://thenextweb.com/news/nvidia-poolside-6bn-model-factory-licence (2026-08-21)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 Nvidia just paid $6 billion to license AI coding startup Poolside's tech — without buying the company.
