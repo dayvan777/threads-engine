@@ -466,28 +466,28 @@
     "wave": "2026-08-21 morning",
     "text": "Pennsylvania just told AI data centers: pay your own power bill, or don't build here.\n\n→ Data centers over 25MW must bring their own power, not lean on the grid\n→ Developers eat 100% of new grid costs — not your utility bill\n→ Grid stress? Data centers get cut off first, not households\n→ Local communities must approve before construction starts\n\nthe AI boom finally sent someone else the invoice.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Governor_Shapiro.jpg?width=1200",
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-21-morning-2",
     "wave": "2026-08-21 morning",
     "text": "The Army just awarded a $450 million contract using an AI that hallucinated the losing bid's weaknesses.\n\n→ TRAX International lost White Sands Missile Range to a bid $29.4M higher\n→ The AI invented fake weaknesses in TRAX's proposal — made-up references, nobody on the board caught it\n→ GAO already denied TRAX's protest in May. Now it's in federal court\n\nhallucinate a government contract and the taxpayer eats the price gap.",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/US_Department_of_the_Army_Seal.png?width=1200",
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-21-evening-1",
     "wave": "2026-08-21 evening",
     "text": "Binance just gave AI agents a login to trade your crypto — and there's no loss limit except what you deposit.\n\n→ Agent OS launched Thursday: ChatGPT, Claude and other agents can now execute real trades\n→ Withdrawals blocked by default, but trading losses aren't capped at all\n→ Wallet activity capped at $50K/day for swaps, $100K for DeFi — trading itself has no ceiling\n→ Whatever you fund the subaccount with is the whole safety net\n\nthe exchange built the rails. you're still the brakes.",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Binance_Logo.svg?width=1200",
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-21-evening-2",
     "wave": "2026-08-21 evening",
     "text": "Nevada capped Tesla's Vegas robotaxi permit at 10 vehicles last week. This week it approved 5,000.\n\n→ Tesla, Uber and Waymo can now run up to 8,000 robotaxis across Clark County\n→ Uber's share runs through partners Motional and Zoox, not its own fleet\n→ Tesla's own engineer told regulators 5,000 was \"always a ceiling\" — expects maybe 2,500\n→ Rollout window: the next 12 months\n\nVegas just became the biggest live robotaxi bet in the country.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tesla_logo.png?width=1200",
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-22-morning-1",
@@ -500,6 +500,20 @@
     "id": "2026-08-22-morning-2",
     "wave": "2026-08-22 morning",
     "text": "Apple, Meta, Amazon, Microsoft, Nvidia and Samsung are all being sued for one thing: training AI on your voice without asking.\n\n→ Illinois law: $1,000 per accident, $5,000 if deliberate\n→ Plaintiffs are journalists, podcasters, voice actors — anyone whose voice is online\n→ All nine defendants filed to dismiss, say nobody proved their voice was used\n→ Apple wants all nine cases merged before one judge\n\nyour voice just became a line item worth up to $5,000 — if you can prove it was heard.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-22-evening-1",
+    "wave": "2026-08-22 evening",
+    "text": "Broadcom just walked into the bond market asking for $70 billion — to build AI chips nobody's ordered yet.\n\n→ The debt deal could reach $70-80B, one of the biggest AI financings this year\n→ AMD raised $4.75B days earlier — its biggest-ever bond sale, also for AI\n→ AI-linked debt now makes up ~15% of all US investment-grade bond issuance\n→ Nearly $500B in AI debt printed in 2026 alone, market trackers say\n\nif you own a bond fund, you already own a slice of the AI bet you never signed up for.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-22-evening-2",
+    "wave": "2026-08-22 evening",
+    "text": "Robinhood just had its best day in months — stock up 13% Friday — because tens of thousands let an AI agent start trading their money.\n\n→ HOOD closed at $108, up from the mid-$80s three weeks ago\n→ Its AI agents have placed real trades for 27.5M customers since May\n→ Past 50,000 users already — Goldman just raised its target to $123\n→ Quarterly revenue $1.3B, net income $549M\n\nthe pitch used to be \"commission-free.\" now it's \"don't even watch.\"\n\nI track this daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }

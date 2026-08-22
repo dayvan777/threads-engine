@@ -1,12 +1,67 @@
 # Posts History
 
+## Wave 2026-08-22 evening
+
+**Publish pipeline still broken — day 24:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #71, 2026-08-22 09:17:34 UTC, same head commit as this morning's wave. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. Marked the four now-24h+-old `2026-08-21 morning` and `2026-08-21 evening` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 74 entries, 4 sitting `queued` and unpublished (2 from 2026-08-22 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Broadcom logo (2016-present).svg`, `File:Robinhood (company) logo.svg`, `File:Microsoft Copilot.png` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 2 this wave — last one was 2026-08-21 evening Post 2, two main posts ago, keeping cadence at ~1-in-3.
+
+### Post 1 [score 6/10, pattern: money-broad + big-tech-drama] [status: draft]
+Source: https://www.cnbc.com/2026/08/21/broadcom-debt-deal-expected-to-reach-upwards-of-70-billion-sources.html (CNBC, 2026-08-21) + https://www.bloomberg.com/news/articles/2026-08-20/broadcom-seeks-more-than-60-billion-in-latest-ai-debt-deal (Bloomberg, 2026-08-20)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Broadcom_logo_(2016-present).svg?width=1200
+Broadcom just walked into the bond market asking for $70 billion — to build AI chips nobody's ordered yet.
+
+→ The debt deal could reach $70-80B, one of the biggest AI financings this year
+→ AMD raised $4.75B days earlier — its biggest-ever bond sale, also for AI
+→ AI-linked debt now makes up ~15% of all US investment-grade bond issuance
+→ Nearly $500B in AI debt printed in 2026 alone, market trackers say
+
+if you own a bond fund, you already own a slice of the AI bet you never signed up for.
+
+### Post 2 [score 7/10, pattern: money-broad + regular-people] [status: draft] [X CTA]
+Source: https://www.benzinga.com/trading-ideas/movers/26/08/61359191/why-is-robinhood-stock-surging-friday (Benzinga, 2026-08-21) + https://www.tradingkey.com/news/market-movers/262124791-market-movers-hood-20260821 (2026-08-21)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Robinhood_(company)_logo.svg?width=1200
+Robinhood just had its best day in months — stock up 13% Friday — because tens of thousands let an AI agent start trading their money.
+
+→ HOOD closed at $108, up from the mid-$80s three weeks ago
+→ Its AI agents have placed real trades for 27.5M customers since May
+→ Past 50,000 users already — Goldman just raised its target to $123
+→ Quarterly revenue $1.3B, net income $549M
+
+the pitch used to be "commission-free." now it's "don't even watch."
+
+I track this daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: leak-insider + niche-dev] [status: backup]
+Source: https://cybersecuritynews.com/copilot-cosnitch-vulnerability/ (2026-08-18) + https://www.csoonline.com/article/4211342/microsoft-finally-patches-critical-one-click-copilot-vulnerability-more-than-eight-months-after-learning-of-it-2.html (CSO Online, 2026-08-19)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_Copilot.png?width=1200
+Microsoft just patched a Copilot bug that let one click drain your Gmail, Drive and Calendar — and Copilot itself ratted it out.
+
+→ Varonis asked Copilot why the exploit shouldn't work — it explained the bypass, mid-refusal
+→ Chain of 3 flaws, reported Dec 2025, patched Aug 18 — 8 months later
+→ Third Copilot bug Varonis found this year, after "Reprompt" and "SearchLeak"
+→ Microsoft says no evidence of exploitation before the patch
+
+the assistant guarding your data also confessed how to rob it.
+
+### Rejected candidates
+- Google-Marvell $12.2B chip warrant deal / Broadcom drop — same story already used as 2026-08-20 evening Post 2, no fresh escalation despite continued coverage this week
+- Anthropic vs Trump administration "supply chain risk" lawsuit — real conflict but filed and already resolved back in March 2026 (judge blocked the designation); recirculating coverage, no new trigger today
+- Monday.com AI-blamed layoffs, 630 jobs / 20% of workforce — announced late July 2026, over 3 weeks stale, and the generic "company blames AI for layoffs" pattern is already overused in the running tracker theme
+- Optifye.ai factory-surveillance YC demo backlash — turned out to be a recirculating story from February 2025, over a year stale
+- Palantir Q2 revenue +93%, stock +30% — real but earnings landed 2026-08-03/04, over two weeks old with no fresh trigger today
+- CISA Ray framework RCE (CVE-2025-62593), 3-day patch deadline — deadline was 2026-08-20, already passed; same story already rejected as stale in the prior wave
+- Taiwan autonomous AI cyberattack (nuclear safety agency) — first reported 2026-08-12/13, over a week old, already rejected as stale in a prior wave
+- New York overtakes Bay Area as top US tech-talent market (CBRE) — solid job-market story with hard numbers, considered for Post 1 but Broadcom's AI-debt angle scored higher on regular-people financial stakes; keep in mind for a future wave
+- DeepSeek V4 API peak-pricing hike (up to 1,100%) — real and steep, but pricing shifted 2026-08-16/17, nearly a week old with no new trigger today
+
 ## Wave 2026-08-22 morning
 
 **Publish pipeline still broken — day 23:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`) and by reading the job log directly: every scheduled run since 2026-08-04 has failed, latest failure run #69, 2026-08-21 19:07:33 UTC, identical `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. The `2026-08-21 morning` and `2026-08-21 evening` queue entries are still under 24h old, so left `queued` (not marked stale). Queue now has 72 entries, 6 sitting `queued` and unpublished (2 from 2026-08-21 morning, 2 from 2026-08-21 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Google 2026 logo.svg`, `File:Apple logo black.svg`, `File:Seal of Illinois.svg`, `File:OpenAI logo 2025.svg`, `File:Anthropic logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. No X CTA this wave — both 2026-08-21 morning and 2026-08-21 evening main posts carried one, so skipping here keeps cadence at ~1-in-3.
 
-### Post 1 [score 8/10, pattern: money-access + contrarian] [status: draft]
+### Post 1 [score 8/10, pattern: money-access + contrarian] [status: expired]
 Source: https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/ (Google, 2026-08-19) + https://www.macrumors.com/2026/08/19/students-free-year-google-ai-pro/ (2026-08-19)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_2026_logo.svg?width=1200
 Google just made Gemini AI Pro free for every college student in America — for a year.
@@ -17,7 +72,7 @@ Google just made Gemini AI Pro free for every college student in America — for
 
 the smartest AI in your pocket is free until it isn't.
 
-### Post 2 [score 8/10, pattern: big-tech-drama + money-access] [status: draft]
+### Post 2 [score 8/10, pattern: big-tech-drama + money-access] [status: expired]
 Source: https://americanbazaaronline.com/2026/08/21/apple-meta-and-7-tech-giants-face-lawsuit-over-ai-voice-training-data/ (2026-08-21) + https://cryptobriefing.com/tech-giants-lawsuit-ai-voice-training-bipa/ (2026-08-20)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_Illinois.svg?width=1200
 Apple, Meta, Amazon, Microsoft, Nvidia and Samsung are all being sued for one thing: training AI on your voice without asking.
@@ -29,7 +84,7 @@ Apple, Meta, Amazon, Microsoft, Nvidia and Samsung are all being sued for one th
 
 your voice just became a line item worth up to $5,000 — if you can prove it was heard.
 
-### Post 3 [score 5/10, pattern: contrarian + niche-dev] [status: backup]
+### Post 3 [score 5/10, pattern: contrarian + niche-dev] [status: expired, backup]
 Source: https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/ (TechCrunch, 2026-08-20) + https://ramp.com/data/ai-index-august-2026 (Ramp AI Index, 2026-08)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_logo_2025.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 OpenAI just closed a gap on Anthropic that looked unclosable three months ago.
