@@ -1,12 +1,61 @@
 # Posts History
 
+## Wave 2026-08-23 morning
+
+**Publish pipeline still broken — day 25:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`list_workflow_runs` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #73, 2026-08-22 18:59:26 UTC, same head commit as last night's wave. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-22 morning` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 76 entries, 4 sitting `queued` and unpublished (2 from 2026-08-22 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to tomshardware.com and cybernews.com returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:NVIDIA logo.svg`, `File:OpenAI logo 2025.svg`, `File:Anthropic logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. No X CTA this wave — last one was 2026-08-22 evening Post 2, keeping cadence at ~1-in-3. News cycle was quiet on fresh broad-audience money/jobs stories today (Oracle's new layoff round rejected again — see below; Amazon 14K and UPS 30K cuts confirmed stale, dated Oct 2025/Jan 2026); today's top 3 skew toward big-tech conflict and dev-pricing instead.
+
+### Post 1 [score 6/10, pattern: leak-insider + big-tech-drama] [status: draft]
+Source: https://www.tomshardware.com/tech-industry/semiconductors/nvidia-denies-report-it-will-ship-groq-based-lpus-to-china-by-year-end (Tom's Hardware, 2026-08-22) + https://www.techtimes.com/articles/325078/20260820/nvidia-h200-chips-enter-china-13-quota-beijing-not-washington-controls-rest.htm (2026-08-20)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+Nvidia says it has zero plans to sell AI chips to China. Its own employees told reporters otherwise — with orders already placed.
+
+→ The Information: a China-only chip, small-batch shipments by year-end
+→ Nvidia's on-record reply: "no China-specific LPU product in our roadmap"
+→ Days earlier, ByteDance and Tencent quietly got 10,000 H200 chips each — stuck in Hong Kong, banned from the mainland
+
+nobody's sure anymore who decides what China gets — Washington, Beijing, or Nvidia's own sales team.
+
+### Post 2 [score 6/10, pattern: big-tech-drama + regular-people] [status: draft]
+Source: https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/ (TechCrunch, 2026-08-19) + https://cybernews.com/ai-news/openai-zero-data-retention-update/ (2026-08-19)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_logo_2025.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+OpenAI built a way to catch AI misuse without keeping a single one of your chats — a shot at Anthropic's policy of keeping yours for 30 days.
+
+→ "Private Safety Processing" scans patterns across chats for abuse, zero data retained
+→ Anthropic's policy: up to 30 days retention for "covered models"
+→ Flags something? OpenAI asks first — you choose whether to hand it over
+
+the AI safety pitch just turned into a privacy pitch — a race over who forgets you faster.
+
+### Post 3 [score 5/10, pattern: money-access + contrarian, niche-dev] [status: backup]
+Source: https://www.business-standard.com/technology/tech-news/openai-cuts-developer-pricing-for-gpt-5-6-sol-model-by-more-than-20-126082200107_1.html (Business Standard, 2026-08-22)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_logo_2025.svg?width=1200
+OpenAI just cut GPT-5.6 Sol's price for the third time this year — now $4 in, $20 out per million tokens.
+
+→ Down from $5/$30 — a 20-33% cut, locked in as a promo through November 21
+→ Lands days after DeepSeek hiked its own peak-hour prices up to 4x
+→ Frontier AI pricing now swings both directions in the same month
+
+the price war stopped being one-directional — it's a tug of war, and developers are the rope.
+
+### Rejected candidates
+- Oracle new August layoffs round (double-digit % cuts on some teams, before Sept 1 deadline) — same story already used and rejected repeatedly (2026-08-14 morning Post 1, and rejected again in at least 3 subsequent waves), still no confirmed headcount number, just the same vague "could reach double-digit percentages" framing
+- Anthropic first operating profit, $10.9-11.5B Q2 revenue, $65B annualized run rate — real milestone but reported 2026-08-13/17, over a week stale with no fresh trigger today
+- DeepSeek V4 peak-hour price hike up to 4x — same story already rejected as stale in 2026-08-22 evening wave, pricing shifted 2026-08-16
+- Broadcom $60-80B AI debt deal — same story already used as this wave's own previous-wave Post 1 (2026-08-22 evening), no new escalation since
+- Amazon 600,000 jobs-by-2033 AI/robotics plan, Amazon 14,000 layoffs, UPS 30,000 job cuts — all confirmed stale on fact-check (Oct 2025 and Jan 2026 announcements respectively), recirculating as "2026 layoffs" roundups without a fresh trigger
+- OpenAI ChatGPT UI updates (plugin ranking, time-awareness, faster long chats) — pure feature/UX recap, no conflict or numbers-for-people angle, classic dud pattern
+- Bitcoin surge past $77K, Coinbase stock +8% — real and fresh but not an AI story; White House crypto summit and CLARITY Act are the actual drivers, off-topic for this account
+- Grok Bot general availability expansion (Cursor plans) — pure product/feature rollout, no conflict or stakes
+
 ## Wave 2026-08-22 evening
 
 **Publish pipeline still broken — day 24:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #71, 2026-08-22 09:17:34 UTC, same head commit as this morning's wave. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. Marked the four now-24h+-old `2026-08-21 morning` and `2026-08-21 evening` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 74 entries, 4 sitting `queued` and unpublished (2 from 2026-08-22 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Broadcom logo (2016-present).svg`, `File:Robinhood (company) logo.svg`, `File:Microsoft Copilot.png` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 2 this wave — last one was 2026-08-21 evening Post 2, two main posts ago, keeping cadence at ~1-in-3.
 
-### Post 1 [score 6/10, pattern: money-broad + big-tech-drama] [status: draft]
+### Post 1 [score 6/10, pattern: money-broad + big-tech-drama] [status: expired]
 Source: https://www.cnbc.com/2026/08/21/broadcom-debt-deal-expected-to-reach-upwards-of-70-billion-sources.html (CNBC, 2026-08-21) + https://www.bloomberg.com/news/articles/2026-08-20/broadcom-seeks-more-than-60-billion-in-latest-ai-debt-deal (Bloomberg, 2026-08-20)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Broadcom_logo_(2016-present).svg?width=1200
 Broadcom just walked into the bond market asking for $70 billion — to build AI chips nobody's ordered yet.
@@ -18,7 +67,7 @@ Broadcom just walked into the bond market asking for $70 billion — to build AI
 
 if you own a bond fund, you already own a slice of the AI bet you never signed up for.
 
-### Post 2 [score 7/10, pattern: money-broad + regular-people] [status: draft] [X CTA]
+### Post 2 [score 7/10, pattern: money-broad + regular-people] [status: expired] [X CTA]
 Source: https://www.benzinga.com/trading-ideas/movers/26/08/61359191/why-is-robinhood-stock-surging-friday (Benzinga, 2026-08-21) + https://www.tradingkey.com/news/market-movers/262124791-market-movers-hood-20260821 (2026-08-21)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Robinhood_(company)_logo.svg?width=1200
 Robinhood just had its best day in months — stock up 13% Friday — because tens of thousands let an AI agent start trading their money.
@@ -32,7 +81,7 @@ the pitch used to be "commission-free." now it's "don't even watch."
 
 I track this daily on my X → x.com/dayvanxd
 
-### Post 3 [score 6/10, pattern: leak-insider + niche-dev] [status: backup]
+### Post 3 [score 6/10, pattern: leak-insider + niche-dev] [status: expired, backup]
 Source: https://cybersecuritynews.com/copilot-cosnitch-vulnerability/ (2026-08-18) + https://www.csoonline.com/article/4211342/microsoft-finally-patches-critical-one-click-copilot-vulnerability-more-than-eight-months-after-learning-of-it-2.html (CSO Online, 2026-08-19)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_Copilot.png?width=1200
 Microsoft just patched a Copilot bug that let one click drain your Gmail, Drive and Calendar — and Copilot itself ratted it out.
