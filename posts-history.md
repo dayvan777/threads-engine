@@ -1,12 +1,65 @@
 # Posts History
 
+## Wave 2026-08-23 evening
+
+**Publish pipeline still broken — day 26:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #75, 2026-08-23 09:18:15 UTC, same head commit as this morning's wave. Re-escalating via push notification this run — last escalation was 2026-08-18 evening (5 days / 10 waves ago), queue backlog has kept growing since with zero posts actually reaching Threads the entire time. Marked the two now-24h+-old `2026-08-22 evening` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 78 entries, 4 sitting `queued` and unpublished (2 from 2026-08-23 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Google 2015 logo.svg`, `File:Alibaba en logo.svg`, `File:Seal of the United States Department of State.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 2 this wave — last one was 2026-08-22 evening Post 2, two main posts ago (both 2026-08-23 morning posts had none), keeping cadence at ~1-in-3. Today's top stories skewed toward a genuine broad-audience money angle (Google's student AI giveaway) and a big-tech/investor drama (Alibaba's AI-capex earnings hit) — both land outside the niche-dev zone that's dominated recent waves.
+
+### Post 1 [score 7/10, pattern: money-access + regular-people] [status: draft]
+Source: https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/ (Google, relaunched 2026-08-19) + https://www.tomsguide.com/ai/google-gemini/google-is-giving-students-a-free-year-of-gemini-pro-plus-new-ai-study-features (Tom's Guide, 2026-08-19)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_2015_logo.svg?width=1200
+Google just gave every US college student a free year of its $20/month AI plan — with an auto-renew trap waiting at the end.
+
+→ Google AI Pro free in the US, AI Plus free in 140+ other countries
+→ Unlocks 4x usage limits, Gemini in Gmail/Docs/Sheets, 5TB storage
+→ Redeem by Dec 31 — verify via SheerID, card required upfront
+→ 2025 trial already expired? You qualify again
+
+hook them free while they're studying, bill them the day they graduate.
+
+### Post 2 [score 8/10, pattern: money-broad + big-tech-drama] [status: draft] [X CTA]
+Source: https://ts2.tech/en/alibaba-stock-loses-21-billion-as-ai-capex-outruns-new-cloud-revenue-4-5-to-1/ (2026-08-21) + https://technode.com/2026/08/21/alibabas-ai-spending-lifts-capex-75-as-quarterly-profit-falls-76/ (TechNode, 2026-08-21)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Alibaba_en_logo.svg?width=1200
+Alibaba lost $21 billion in a single day — not despite the AI boom, but because of it.
+
+→ Cloud revenue grew 45%, fastest in 22 quarters
+→ AI spending grew faster still — capex up 75%, now 4.5x cloud's revenue growth
+→ Quarterly profit fell 75% as a result
+→ Alibaba's AI Labs alone lost 2.5x what the cloud unit earned
+
+growth used to mean profit. now it means a bigger bill.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: big-tech-drama + conflict, niche-geopolitics] [status: backup]
+Source: https://www.cnbc.com/2026/08/15/us-to-tell-allies-they-must-pick-sides-in-ai-race-with-china-reuters.html (Reuters/CNBC, 2026-08-15) + https://timesca.com/kazakhstan-ai-rivalry-us-china/ (Times of Central Asia)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Department_of_State.svg?width=1200
+The US just told 35 allied countries: pick America's AI alliance or China's. Not both.
+
+→ State Dept letter: Pax Silica membership "cannot be held alongside" China's rival bloc
+→ ~24 countries already signed with Washington, including Japan, Australia, South Korea
+→ Kazakhstan is the only country in both — now Washington's test case
+→ China's rival bloc launched in July with 29 founding members
+
+the AI race just became a loyalty test, and neutral isn't on the menu anymore.
+
+### Rejected candidates
+- Z.ai GLM-5.3 finds 2,436 vulnerabilities (1,097 critical) in Linux/WebKit/FreeBSD, weights delayed for cyber hardening — real and striking numbers but launched 2026-08-14, over a week stale with no fresh trigger today; also same "leak-insider" niche-dev pattern already heavy in recent waves
+- OpenAI GPT-5.6 Sol third price cut (20-33%, $4/$20 per M tokens) — same story already used as this morning's wave backup (2026-08-23 morning Post 3), would be a repeat
+- DeepSeek V4-Pro exits limited preview to full production, adds peak/off-peak billing — real but thin on hard numbers so far, niche-dev pricing theme overused lately
+- Nvidia NOOA open-source agent framework (Apache 2.0) — pure feature/product launch, no conflict or stakes, classic dud pattern
+- Pinecone Nexus "beats OpenAI/Anthropic/Google agents on enterprise knowledge" — vendor-benchmark PR framing, no independent verification found, reads like a press release
+- Monday.com AI-blamed layoffs, Meta 8,000 cuts, Amazon/UPS job-cut roundups — all previously confirmed stale (May-July 2026), still recirculating without a fresh trigger
+- Oracle new August layoffs round — same story rejected repeatedly in at least 5 prior waves, still no confirmed headcount number
+
 ## Wave 2026-08-23 morning
 
 **Publish pipeline still broken — day 25:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`list_workflow_runs` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #73, 2026-08-22 18:59:26 UTC, same head commit as last night's wave. Not re-escalating via push notification this run — same unresolved issue already pushed to Vlad on 2026-08-18 evening, nothing new to report since. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-22 morning` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 76 entries, 4 sitting `queued` and unpublished (2 from 2026-08-22 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to tomshardware.com and cybernews.com returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:NVIDIA logo.svg`, `File:OpenAI logo 2025.svg`, `File:Anthropic logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. No X CTA this wave — last one was 2026-08-22 evening Post 2, keeping cadence at ~1-in-3. News cycle was quiet on fresh broad-audience money/jobs stories today (Oracle's new layoff round rejected again — see below; Amazon 14K and UPS 30K cuts confirmed stale, dated Oct 2025/Jan 2026); today's top 3 skew toward big-tech conflict and dev-pricing instead.
 
-### Post 1 [score 6/10, pattern: leak-insider + big-tech-drama] [status: draft]
+### Post 1 [score 6/10, pattern: leak-insider + big-tech-drama] [status: expired]
 Source: https://www.tomshardware.com/tech-industry/semiconductors/nvidia-denies-report-it-will-ship-groq-based-lpus-to-china-by-year-end (Tom's Hardware, 2026-08-22) + https://www.techtimes.com/articles/325078/20260820/nvidia-h200-chips-enter-china-13-quota-beijing-not-washington-controls-rest.htm (2026-08-20)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 Nvidia says it has zero plans to sell AI chips to China. Its own employees told reporters otherwise — with orders already placed.
@@ -17,7 +70,7 @@ Nvidia says it has zero plans to sell AI chips to China. Its own employees told 
 
 nobody's sure anymore who decides what China gets — Washington, Beijing, or Nvidia's own sales team.
 
-### Post 2 [score 6/10, pattern: big-tech-drama + regular-people] [status: draft]
+### Post 2 [score 6/10, pattern: big-tech-drama + regular-people] [status: expired]
 Source: https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/ (TechCrunch, 2026-08-19) + https://cybernews.com/ai-news/openai-zero-data-retention-update/ (2026-08-19)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_logo_2025.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 OpenAI built a way to catch AI misuse without keeping a single one of your chats — a shot at Anthropic's policy of keeping yours for 30 days.
@@ -28,7 +81,7 @@ OpenAI built a way to catch AI misuse without keeping a single one of your chats
 
 the AI safety pitch just turned into a privacy pitch — a race over who forgets you faster.
 
-### Post 3 [score 5/10, pattern: money-access + contrarian, niche-dev] [status: backup]
+### Post 3 [score 5/10, pattern: money-access + contrarian, niche-dev] [status: expired, backup]
 Source: https://www.business-standard.com/technology/tech-news/openai-cuts-developer-pricing-for-gpt-5-6-sol-model-by-more-than-20-126082200107_1.html (Business Standard, 2026-08-22)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_logo_2025.svg?width=1200
 OpenAI just cut GPT-5.6 Sol's price for the third time this year — now $4 in, $20 out per million tokens.
