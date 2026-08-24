@@ -1,12 +1,64 @@
 # Posts History
 
+## Wave 2026-08-24 evening
+
+**Publish pipeline still broken — day 27:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #79, 2026-08-24 09:36:33 UTC, same head commit as this morning's wave. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening (yesterday), nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-23 evening` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 82 entries, 4 sitting `queued` and unpublished (2 from 2026-08-24 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI Logo.svg`, `File:NVIDIA logo.svg`, `File:XPeng logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 1 this wave — last one was 2026-08-23 evening Post 2, two main posts ago (both 2026-08-24 morning posts had none), keeping cadence at ~1-in-3. Today's freshest developments: OpenAI's ChatGPT Ads expansion into Europe goes live today, and Nvidia is reportedly in talks to invest in Perplexity — a company it also supplies chips to. Anthropic's Blackstone/H&F "Ode" enterprise JV and Intuit's AI-driven layoffs both surfaced in research but are stale (July/May 2026) with no fresh escalation, so they're skipped rather than reused.
+
+### Post 1 [score 7/10, pattern: money-access + regular-people] [status: draft] [X CTA]
+Source: https://openai.com/index/chatgpt-ads-expands-across-europe/ (OpenAI, announced 2026-08-18, live 2026-08-24) + https://searchengineland.com/chatgpt-ads-are-expanding-to-31-european-countries-485468 (2026-08-18)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI just brought ads into ChatGPT across 31 European countries — but only if you're on the free tier.
+
+→ Ads roll out today in Germany, France, Spain, Italy, and 27 more countries
+→ Free and Go users see them under every answer, labeled "sponsored"
+→ Plus, Pro, Business, Enterprise stay ad-free — pay $20/month and you're the customer, not the product
+
+"free" AI was never free. now you know exactly which tier makes you the product.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 2 [score 7/10, pattern: money-broad + big-tech-drama] [status: draft]
+Source: https://www.benzinga.com/markets/tech/26/08/61374579/nvidia-perplexity-30-billion-valuation-750-million-revenue-bezos (2026-08-23/24) + https://en.cryptonomist.ch/2026/08/24/nvidia-investment-perplexity/ (2026-08-24)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+Nvidia is now in talks to invest in Perplexity at a $30B+ valuation — the same AI startup it sells chips to.
+
+→ Valuation up 50% from ~$20B a year ago
+→ Perplexity's revenue: $750M annualized, up from $250M in January
+→ Nvidia would be both supplier and shareholder — profiting twice on the same AI boom
+
+when your chip customer becomes your investment, the AI bubble isn't a rumor anymore — it's the balance sheet.
+
+### Post 3 [score 6/10, pattern: job-fear + physical-AI, backup] [status: backup]
+Source: https://www.bloomberg.com/news/articles/2026-08-24/xpeng-robot-unit-to-raise-900-million-from-likes-of-alibaba (2026-08-24) + https://electrek.co/2026/08/24/xpeng-robotics-900m-iron-humanoid-robot-valuation/ (2026-08-24)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/XPeng_logo.svg?width=1200
+XPeng's robotics unit just raised $900M at a $6.3B valuation — the largest private robotics funding round in China's history.
+
+→ IRON humanoid robot: 76 degrees of freedom, 21 per hand, 2,250 TOPS of onboard AI compute
+→ Backers: Alibaba, Tencent, IDG Capital
+→ Mass production by end of 2026, starting in XPeng's own stores and campuses
+
+the round wasn't about the robot walking. it was about the robot working.
+
+### Rejected candidates
+- Anthropic/Blackstone/Hellman & Friedman "Ode with Anthropic" $1.5B enterprise JV (banks, health systems) — launched under its official name 2026-07-15, over a month stale, no fresh development today
+- Intuit 3,000-job AI restructuring layoffs — announced 2026-05-20, over 3 months stale
+- AI-linked layoffs 205,000 workers in 2026 tracker stat — same aggregate stat already used verbatim in multiple prior waves (most recently 2026-08-01 first-batch Post 2)
+- Reddit vs Perplexity/SerpApi copyright suit, judge mostly denies motion to dismiss — ruling from 2026-07-31, over 3 weeks stale, no new development today
+- DeepSeek V4-Flash-Vision-exp release — pure feature/product recap, no conflict or numbers-for-people angle
+- Nvidia Q2 FY27 earnings preview (reports 2026-08-26) — forward-looking, nothing to post yet, rejected in prior waves for the same reason
+- Google A2A protocol joining Agentic AI Foundation — standards/infrastructure story, no conflict or regular-people hook
+- OpenAI Apple Messages agentic plug-in — feature recap, no numbers or stakes
+- US "pick sides" tech-coalition pressure on allies re: Chinese AI — same story rejected as backup in two prior waves, no fresh escalation found today
+
 ## Wave 2026-08-24 morning
 
 **Publish pipeline still broken — day 27:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #77, 2026-08-23 18:58:15 UTC, same head commit as last night's wave. Not re-escalating via push notification this run — already escalated 2026-08-23 evening (last night), nothing new to report on the pipeline itself. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-23 morning` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 80 entries, 4 sitting `queued` and unpublished (2 from 2026-08-23 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to finance.yahoo.com and benzinga.com returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Robinhood (company) logo.svg`, `File:Alibaba en logo.svg`, `File:Seal of the United States Department of Homeland Security.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. No X CTA this wave — last one was 2026-08-23 evening Post 2, keeping cadence at roughly 1-in-3. News cycle was thin on brand-new (<12h) stories today — most searches surfaced items already 1-3 weeks stale (Anthropic chip team, Suno breach reveal, DeepSeek pricing, Pax Silica ultimatum, AI-vs-Bitcoin volatility). Today's top 3 lean on the freshest genuinely new developments found: a retail pre-IPO fund now trading underwater, and Alibaba's follow-on capital raise a day after its earnings miss.
 
-### Post 1 [score 7/10, pattern: money-access + contrarian] [status: draft]
+### Post 1 [score 7/10, pattern: money-access + contrarian] [status: expired]
 Source: https://www.stocktitan.net/news/HOOD/introducing-robinhood-ventures-fund-ii-44qoe0bfdry4.html (Robinhood/StockTitan, IPO priced 2026-08-13) + https://www.mexc.com/stocks/rvii (current price, 2026-08-24)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Robinhood_(company)_logo.svg?width=1200
 Robinhood sold regular people a ticket into pre-IPO startups — no accreditation, no minimum, just an app.
@@ -17,7 +69,7 @@ Robinhood sold regular people a ticket into pre-IPO startups — no accreditatio
 
 turns out the velvet rope wasn't the problem. the price was.
 
-### Post 2 [score 6/10, pattern: money-broad + big-tech-drama] [status: draft]
+### Post 2 [score 6/10, pattern: money-broad + big-tech-drama] [status: expired]
 Source: https://www.businessday.co.za/world/international-companies/2026-08-23-alibaba-launches-102bn-share-sale-to-fund-ai-expansion/ (2026-08-23) + https://moneycheck.com/alibaba-baba-stock-plunges-9-on-10-2b-capital-raise-for-ai-expansion/ (2026-08-23)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Alibaba_en_logo.svg?width=1200
 Alibaba just found a new way to pay for its AI bet: sell more of the company.
@@ -29,7 +81,7 @@ Alibaba just found a new way to pay for its AI bet: sell more of the company.
 
 the AI bill doesn't come due later. it comes due in shares, now.
 
-### Post 3 [score 5/10, pattern: job-fear + regular-people, backup] [status: backup]
+### Post 3 [score 5/10, pattern: job-fear + regular-people, backup] [status: expired]
 Source: https://www.forbes.com/sites/stuartanderson/2026/02/08/new-immigration-limits-loom-as-ai-drives-h-1b-visas-for-tech-companies/ (Forbes) + general H-1B FY2026 cap coverage (USCIS cap reached July 2026)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Department_of_Homeland_Security.svg?width=1200
 This year, if you got a US work visa, there's a good chance it was for an AI job.
