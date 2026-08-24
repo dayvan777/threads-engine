@@ -1,12 +1,64 @@
 # Posts History
 
+## Wave 2026-08-24 morning
+
+**Publish pipeline still broken — day 27:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #77, 2026-08-23 18:58:15 UTC, same head commit as last night's wave. Not re-escalating via push notification this run — already escalated 2026-08-23 evening (last night), nothing new to report on the pipeline itself. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-23 morning` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 80 entries, 4 sitting `queued` and unpublished (2 from 2026-08-23 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to finance.yahoo.com and benzinga.com returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Robinhood (company) logo.svg`, `File:Alibaba en logo.svg`, `File:Seal of the United States Department of Homeland Security.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. No X CTA this wave — last one was 2026-08-23 evening Post 2, keeping cadence at roughly 1-in-3. News cycle was thin on brand-new (<12h) stories today — most searches surfaced items already 1-3 weeks stale (Anthropic chip team, Suno breach reveal, DeepSeek pricing, Pax Silica ultimatum, AI-vs-Bitcoin volatility). Today's top 3 lean on the freshest genuinely new developments found: a retail pre-IPO fund now trading underwater, and Alibaba's follow-on capital raise a day after its earnings miss.
+
+### Post 1 [score 7/10, pattern: money-access + contrarian] [status: draft]
+Source: https://www.stocktitan.net/news/HOOD/introducing-robinhood-ventures-fund-ii-44qoe0bfdry4.html (Robinhood/StockTitan, IPO priced 2026-08-13) + https://www.mexc.com/stocks/rvii (current price, 2026-08-24)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Robinhood_(company)_logo.svg?width=1200
+Robinhood sold regular people a ticket into pre-IPO startups — no accreditation, no minimum, just an app.
+
+→ RVII launched Aug 13 at $25/share, ~80 early-stage companies bundled in, mostly Y Combinator
+→ $200M+ raised from retail investors chasing the SpaceX-IPO dream
+→ 11 days later: trading around $23, already underwater
+
+turns out the velvet rope wasn't the problem. the price was.
+
+### Post 2 [score 6/10, pattern: money-broad + big-tech-drama] [status: draft]
+Source: https://www.businessday.co.za/world/international-companies/2026-08-23-alibaba-launches-102bn-share-sale-to-fund-ai-expansion/ (2026-08-23) + https://moneycheck.com/alibaba-baba-stock-plunges-9-on-10-2b-capital-raise-for-ai-expansion/ (2026-08-23)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Alibaba_en_logo.svg?width=1200
+Alibaba just found a new way to pay for its AI bet: sell more of the company.
+
+→ $10.2B Hong Kong share placement announced Aug 23, every dollar earmarked for AI chips and infrastructure
+→ 710M new shares priced at a 3.6% discount — pure dilution
+→ Comes two days after quarterly profit fell 75% on AI capex
+→ Stock down another 8.6% since the news broke
+
+the AI bill doesn't come due later. it comes due in shares, now.
+
+### Post 3 [score 5/10, pattern: job-fear + regular-people, backup] [status: backup]
+Source: https://www.forbes.com/sites/stuartanderson/2026/02/08/new-immigration-limits-loom-as-ai-drives-h-1b-visas-for-tech-companies/ (Forbes) + general H-1B FY2026 cap coverage (USCIS cap reached July 2026)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Department_of_Homeland_Security.svg?width=1200
+This year, if you got a US work visa, there's a good chance it was for an AI job.
+
+→ Over 80% of H-1B applications certified for Amazon, Meta, Google, Microsoft and Apple in the latest cycle were AI-related roles
+→ USCIS hit the FY2026 H-1B cap back in July — the window's already shut
+→ Wage-weighted selection now favors the highest earners first
+
+the immigration system just became a filter for who gets to build AI — and who doesn't.
+
+### Rejected candidates
+- Alibaba AI-capex-vs-cloud-revenue earnings story (4.5x ratio, 75% profit drop) — already used verbatim as main post last night (2026-08-23 evening Post 2); today's capital-raise/dilution angle is a distinct follow-on event so it's used here instead, framed differently
+- US State Dept "pick sides" Pax Silica ultimatum to 35 allies, Kazakhstan dual-membership flashpoint — same story already drafted as backup last night (2026-08-23 evening Post 3), no fresh escalation found today, would be a repeat
+- Suno AI 55.3M-account data breach — breach itself is from November 2025; became public via HaveIBeenPwned on 2026-07-20, over a month stale with no new development today
+- Anthropic in-house AI chip design team — confirmed 2026-08-05/06, over two weeks stale, no fresh trigger today
+- Anthropic confidential IPO (S-1 filed June 1, ~$965B-$1.1T secondary valuation) — same filing rejected as stale in multiple prior waves, still no public S-1 or roadshow news
+- DeepSeek V4 pricing (cuts and a rumored "significant" hike) — same pricing-war story already used/rejected repeatedly in prior waves, conflicting reports on cut-vs-hike suggest stale/mixed sourcing
+- "AI stocks now more volatile than Bitcoin" (SOXX 70% realized vol vs BTC 30%) — Benzinga/Crowdfund Insider piece dated "as August begins," over 3 weeks stale; Bitcoin has since recovered from the ~$63K level cited to ~$77K today, so the framing no longer holds
+- Nvidia Q2 FY27 earnings preview — real but forward-looking, reports August 26, nothing to post yet
+- Oracle new August layoffs round — rejected again, same story rejected in at least 6 prior waves, still no confirmed headcount number
+- Meta Zuckerberg "superintelligence manifesto" — dated ~2026-08-10, over two weeks stale, pure philosophy/PR piece with no conflict or numbers hook anyway
+
 ## Wave 2026-08-23 evening
 
 **Publish pipeline still broken — day 26:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #75, 2026-08-23 09:18:15 UTC, same head commit as this morning's wave. Re-escalating via push notification this run — last escalation was 2026-08-18 evening (5 days / 10 waves ago), queue backlog has kept growing since with zero posts actually reaching Threads the entire time. Marked the two now-24h+-old `2026-08-22 evening` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 78 entries, 4 sitting `queued` and unpublished (2 from 2026-08-23 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Google 2015 logo.svg`, `File:Alibaba en logo.svg`, `File:Seal of the United States Department of State.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 2 this wave — last one was 2026-08-22 evening Post 2, two main posts ago (both 2026-08-23 morning posts had none), keeping cadence at ~1-in-3. Today's top stories skewed toward a genuine broad-audience money angle (Google's student AI giveaway) and a big-tech/investor drama (Alibaba's AI-capex earnings hit) — both land outside the niche-dev zone that's dominated recent waves.
 
-### Post 1 [score 7/10, pattern: money-access + regular-people] [status: draft]
+### Post 1 [score 7/10, pattern: money-access + regular-people] [status: expired]
 Source: https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/ (Google, relaunched 2026-08-19) + https://www.tomsguide.com/ai/google-gemini/google-is-giving-students-a-free-year-of-gemini-pro-plus-new-ai-study-features (Tom's Guide, 2026-08-19)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_2015_logo.svg?width=1200
 Google just gave every US college student a free year of its $20/month AI plan — with an auto-renew trap waiting at the end.
@@ -18,7 +70,7 @@ Google just gave every US college student a free year of its $20/month AI plan �
 
 hook them free while they're studying, bill them the day they graduate.
 
-### Post 2 [score 8/10, pattern: money-broad + big-tech-drama] [status: draft] [X CTA]
+### Post 2 [score 8/10, pattern: money-broad + big-tech-drama] [status: expired] [X CTA]
 Source: https://ts2.tech/en/alibaba-stock-loses-21-billion-as-ai-capex-outruns-new-cloud-revenue-4-5-to-1/ (2026-08-21) + https://technode.com/2026/08/21/alibabas-ai-spending-lifts-capex-75-as-quarterly-profit-falls-76/ (TechNode, 2026-08-21)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Alibaba_en_logo.svg?width=1200
 Alibaba lost $21 billion in a single day — not despite the AI boom, but because of it.
@@ -32,7 +84,7 @@ growth used to mean profit. now it means a bigger bill.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 6/10, pattern: big-tech-drama + conflict, niche-geopolitics] [status: backup]
+### Post 3 [score 6/10, pattern: big-tech-drama + conflict, niche-geopolitics] [status: expired, backup]
 Source: https://www.cnbc.com/2026/08/15/us-to-tell-allies-they-must-pick-sides-in-ai-race-with-china-reuters.html (Reuters/CNBC, 2026-08-15) + https://timesca.com/kazakhstan-ai-rivalry-us-china/ (Times of Central Asia)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Department_of_State.svg?width=1200
 The US just told 35 allied countries: pick America's AI alliance or China's. Not both.
