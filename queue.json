@@ -550,14 +550,14 @@
     "wave": "2026-08-24 morning",
     "text": "Robinhood sold regular people a ticket into pre-IPO startups — no accreditation, no minimum, just an app.\n\n→ RVII launched Aug 13 at $25/share, ~80 early-stage companies bundled in, mostly Y Combinator\n→ $200M+ raised from retail investors chasing the SpaceX-IPO dream\n→ 11 days later: trading around $23, already underwater\n\nturns out the velvet rope wasn't the problem. the price was.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-24-morning-2",
     "wave": "2026-08-24 morning",
     "text": "Alibaba just found a new way to pay for its AI bet: sell more of the company.\n\n→ $10.2B Hong Kong share placement announced Aug 23, every dollar earmarked for AI chips and infrastructure\n→ 710M new shares priced at a 3.6% discount — pure dilution\n→ Comes two days after quarterly profit fell 75% on AI capex\n→ Stock down another 8.6% since the news broke\n\nthe AI bill doesn't come due later. it comes due in shares, now.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-24-evening-1",
@@ -570,6 +570,20 @@
     "id": "2026-08-24-evening-2",
     "wave": "2026-08-24 evening",
     "text": "Nvidia is now in talks to invest in Perplexity at a $30B+ valuation — the same AI startup it sells chips to.\n\n→ Valuation up 50% from ~$20B a year ago\n→ Perplexity's revenue: $750M annualized, up from $250M in January\n→ Nvidia would be both supplier and shareholder — profiting twice on the same AI boom\n\nwhen your chip customer becomes your investment, the AI bubble isn't a rumor anymore — it's the balance sheet.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-25-morning-1",
+    "wave": "2026-08-25 morning",
+    "text": "Shein just priced its Hong Kong IPO at $27 billion — 70% below what investors paid for it in 2022.\n\n→ 2022 private valuation: $98.2B\n→ 2026 IPO valuation: up to $27B\n→ Revenue growth: 20.7% → 8%, tipping the company into a $99M loss\n→ Trading starts Sept 1 — regular investors get the same shares that wiped out the growth-round backers\n\nthe SpaceX IPO sold access to a winner. this one sells access to a $71B loss, already priced in.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-25-morning-2",
+    "wave": "2026-08-25 morning",
+    "text": "Hugging Face turned down Nvidia last year. Now it's shopping itself for nearly triple the price.\n\n→ Nov 2025: rejected Nvidia's $500M at a $7B valuation, didn't want one company controlling it\n→ Aug 2026: hired a bank to find buyers at $13B+\n→ Almost 3x the valuation it said no to nine months ago\n→ Still no buyer — just a \"for sale\" sign on AI's biggest open-model hub\n\nturning down the money was the leverage. now it's cashing in on saying no.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }

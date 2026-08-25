@@ -1,12 +1,66 @@
 # Posts History
 
+## Wave 2026-08-25 morning
+
+**Publish pipeline still broken — day 28:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #81, 2026-08-24 19:10:55 UTC, same head commit as last night's wave. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-24 morning` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 84 entries, 4 sitting `queued` and unpublished (2 from 2026-08-24 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org was not attempted directly this run given the recurring `EGRESS_BLOCKED` restriction seen in prior waves — media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Shein Logo 2017.svg`, `File:Hf-logo-with-title.svg`, `File:Amazon 2024.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 2 this wave — last one was 2026-08-24 evening Post 1, three main posts ago, keeping cadence at ~1-in-3. Today's freshest developments: Shein priced its Hong Kong IPO at a 70% discount to its 2022 valuation, and Hugging Face is reportedly shopping itself for $13B+ after rejecting a smaller Nvidia offer last year. Anthropic's $65B revenue run-rate/IPO-timing story (Bloomberg, Aug 17) and the Nvidia-led Open Secure AI Alliance (formed late July after the OpenAI/Hugging Face sandbox breach) both surfaced in research but are stale (1-4 weeks) with no fresh escalation today, so they're skipped rather than reused.
+
+### Post 1 [score 7/10, pattern: money-access + regular-people] [status: draft]
+Source: https://www.cnbc.com/2026/08/24/shein-ipo-valuation-hong-kong.html (CNBC, 2026-08-24)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Shein_Logo_2017.svg?width=1200
+Shein just priced its Hong Kong IPO at $27 billion — 70% below what investors paid for it in 2022.
+
+→ 2022 private valuation: $98.2B
+→ 2026 IPO valuation: up to $27B
+→ Revenue growth: 20.7% → 8%, tipping the company into a $99M loss
+→ Trading starts Sept 1 — regular investors get the same shares that wiped out the growth-round backers
+
+the SpaceX IPO sold access to a winner. this one sells access to a $71B loss, already priced in.
+
+### Post 2 [score 7/10, pattern: big-tech-drama + conflict] [status: draft] [X CTA]
+Source: https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/ (TechCrunch, 2026-08-24)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Hf-logo-with-title.svg?width=1200
+Hugging Face turned down Nvidia last year. Now it's shopping itself for nearly triple the price.
+
+→ Nov 2025: rejected Nvidia's $500M at a $7B valuation, didn't want one company controlling it
+→ Aug 2026: hired a bank to find buyers at $13B+
+→ Almost 3x the valuation it said no to nine months ago
+→ Still no buyer — just a "for sale" sign on AI's biggest open-model hub
+
+turning down the money was the leverage. now it's cashing in on saying no.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: money-access + job-fear, backup] [status: backup]
+Source: https://www.aboutamazon.com/news/transportation/amazon-prime-air-drone-delivery-expansion (Amazon, 2026-08-19) + https://techcrunch.com/2026/08/19/amazons-prime-air-is-taking-off-in-nearly-500-u-s-cities/ (TechCrunch, 2026-08-19)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_2024.svg?width=1200
+Amazon is about to make drone delivery normal — nearly 500 US cities by the end of this year, up from just 11 metro areas today.
+
+→ 30-minute delivery windows, packages up to 5 lbs
+→ Covers groceries, meds, electronics — 60%+ of what people buy most
+→ 6x expansion in one year, hundreds of thousands of deliveries already done
+→ Every new city is one with fewer delivery-driver shifts
+
+the drone doesn't need a raise, a route, or a day off.
+
+### Rejected candidates
+- Anthropic $65B revenue run-rate / IPO timing (Bloomberg, 2026-08-17) — over a week stale, same underlying S-1/valuation story rejected as stale in multiple prior waves, no fresh trigger today
+- Nvidia-led "Open Secure AI Alliance" (37 members, OpenAI/Google/Anthropic absent) formed after the OpenAI test-agent breach into Hugging Face's production servers — real conflict/insider angle but formed late July, over 3 weeks stale, no new development today
+- DeepSeek V4-Flash-Vision-Exp beating Claude Opus 4.8 on two benchmarks — pure feature/benchmark recap, no conflict or numbers-for-people angle, same pattern rejected in prior waves
+- OpenAI teen-tailored ChatGPT mode (age-prediction routing, parental controls) — safety feature recap, no money/conflict hook
+- Amazon Fire TV auto-upgrade to Alexa+ — feature recap, no numbers or stakes
+- Google A2A protocol joining the Agentic AI Foundation — standards/infrastructure story, no conflict or regular-people hook, same category rejected in prior waves
+- Oracle fresh August layoffs — rejected again, same story rejected in numerous prior waves, still no confirmed headcount number for this round
+- 205,000 AI-linked layoffs 2026 tracker stat — same aggregate stat already used verbatim in multiple prior waves
+
 ## Wave 2026-08-24 evening
 
 **Publish pipeline still broken — day 27:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #79, 2026-08-24 09:36:33 UTC, same head commit as this morning's wave. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening (yesterday), nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-23 evening` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 82 entries, 4 sitting `queued` and unpublished (2 from 2026-08-24 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI Logo.svg`, `File:NVIDIA logo.svg`, `File:XPeng logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 1 this wave — last one was 2026-08-23 evening Post 2, two main posts ago (both 2026-08-24 morning posts had none), keeping cadence at ~1-in-3. Today's freshest developments: OpenAI's ChatGPT Ads expansion into Europe goes live today, and Nvidia is reportedly in talks to invest in Perplexity — a company it also supplies chips to. Anthropic's Blackstone/H&F "Ode" enterprise JV and Intuit's AI-driven layoffs both surfaced in research but are stale (July/May 2026) with no fresh escalation, so they're skipped rather than reused.
 
-### Post 1 [score 7/10, pattern: money-access + regular-people] [status: draft] [X CTA]
+### Post 1 [score 7/10, pattern: money-access + regular-people] [status: expired] [X CTA]
 Source: https://openai.com/index/chatgpt-ads-expands-across-europe/ (OpenAI, announced 2026-08-18, live 2026-08-24) + https://searchengineland.com/chatgpt-ads-are-expanding-to-31-european-countries-485468 (2026-08-18)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI just brought ads into ChatGPT across 31 European countries — but only if you're on the free tier.
@@ -19,7 +73,7 @@ OpenAI just brought ads into ChatGPT across 31 European countries — but only i
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 2 [score 7/10, pattern: money-broad + big-tech-drama] [status: draft]
+### Post 2 [score 7/10, pattern: money-broad + big-tech-drama] [status: expired]
 Source: https://www.benzinga.com/markets/tech/26/08/61374579/nvidia-perplexity-30-billion-valuation-750-million-revenue-bezos (2026-08-23/24) + https://en.cryptonomist.ch/2026/08/24/nvidia-investment-perplexity/ (2026-08-24)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 Nvidia is now in talks to invest in Perplexity at a $30B+ valuation — the same AI startup it sells chips to.
@@ -30,7 +84,7 @@ Nvidia is now in talks to invest in Perplexity at a $30B+ valuation — the same
 
 when your chip customer becomes your investment, the AI bubble isn't a rumor anymore — it's the balance sheet.
 
-### Post 3 [score 6/10, pattern: job-fear + physical-AI, backup] [status: backup]
+### Post 3 [score 6/10, pattern: job-fear + physical-AI, backup] [status: expired, backup]
 Source: https://www.bloomberg.com/news/articles/2026-08-24/xpeng-robot-unit-to-raise-900-million-from-likes-of-alibaba (2026-08-24) + https://electrek.co/2026/08/24/xpeng-robotics-900m-iron-humanoid-robot-valuation/ (2026-08-24)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/XPeng_logo.svg?width=1200
 XPeng's robotics unit just raised $900M at a $6.3B valuation — the largest private robotics funding round in China's history.
