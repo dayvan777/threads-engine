@@ -564,14 +564,14 @@
     "wave": "2026-08-24 evening",
     "text": "OpenAI just brought ads into ChatGPT across 31 European countries — but only if you're on the free tier.\n\n→ Ads roll out today in Germany, France, Spain, Italy, and 27 more countries\n→ Free and Go users see them under every answer, labeled \"sponsored\"\n→ Plus, Pro, Business, Enterprise stay ad-free — pay $20/month and you're the customer, not the product\n\n\"free\" AI was never free. now you know exactly which tier makes you the product.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-24-evening-2",
     "wave": "2026-08-24 evening",
     "text": "Nvidia is now in talks to invest in Perplexity at a $30B+ valuation — the same AI startup it sells chips to.\n\n→ Valuation up 50% from ~$20B a year ago\n→ Perplexity's revenue: $750M annualized, up from $250M in January\n→ Nvidia would be both supplier and shareholder — profiting twice on the same AI boom\n\nwhen your chip customer becomes your investment, the AI bubble isn't a rumor anymore — it's the balance sheet.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-25-morning-1",
@@ -584,6 +584,20 @@
     "id": "2026-08-25-morning-2",
     "wave": "2026-08-25 morning",
     "text": "Hugging Face turned down Nvidia last year. Now it's shopping itself for nearly triple the price.\n\n→ Nov 2025: rejected Nvidia's $500M at a $7B valuation, didn't want one company controlling it\n→ Aug 2026: hired a bank to find buyers at $13B+\n→ Almost 3x the valuation it said no to nine months ago\n→ Still no buyer — just a \"for sale\" sign on AI's biggest open-model hub\n\nturning down the money was the leverage. now it's cashing in on saying no.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-25-evening-1",
+    "wave": "2026-08-25 evening",
+    "text": "California just told AI bosses: no signature, no firing.\n\n→ SB 947 cleared the state Senate 29-9 — bars employers from using AI alone to fire or discipline workers\n→ Also bans AI systems that use your data to \"predict\" what you'll do next\n→ Round two: a near-identical bill passed both chambers last year, then got vetoed\n→ Backed by California's biggest labor federation, now headed to the Assembly\n\nthe algorithm can still watch you work. it just can't be the one who lets you go.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-25-evening-2",
+    "wave": "2026-08-25 evening",
+    "text": "An Nvidia employee just got indicted — for helping smuggle Nvidia's own chips to China.\n\n→ Taiwan charged 9 people, including an Nvidia manager and two Supermicro sales staff\n→ 74 servers packed with Nvidia's high-end B300 chips, routed through Japan and Indonesia to dodge US export bans\n→ 56 more servers seized before they ever left Taiwan\n→ Third such smuggling case exposed this year alone\n\nthe chip war doesn't leak from Beijing. it leaks from inside the supply chain.",
     "image_url": null,
     "status": "queued"
   }

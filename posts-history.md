@@ -1,12 +1,64 @@
 # Posts History
 
+## Wave 2026-08-25 evening
+
+**Publish pipeline still broken — day 29:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #83, 2026-08-25 09:24:42 UTC, same head commit as this morning's wave. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-24 evening` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 86 entries, 4 sitting `queued` and unpublished (2 from 2026-08-25 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Seal of California.svg`, `File:Nvidia logo.svg`, `File:Super Micro Computer Logo.svg`, `File:Cloudflare Logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. No X CTA this wave — last one was 2026-08-25 morning Post 2, keeping cadence at ~1-in-3 (due again in ~1 more wave). Today's freshest developments: California's SB 947 "No Robo Bosses Act" cleared the state Senate 29-9, Taiwan indicted 9 people (including an Nvidia employee) over AI server smuggling to China, and Cloudflare rolled out x402-based wallets letting AI agents pay for services with no human approval. Meta's 29-state addictive-design trial (jury already seated, opening arguments were Aug 18) and the DeepSeek V4 multimodal preview both surfaced in research but are stale/recap-only with no fresh trigger today, so they're skipped rather than reused.
+
+### Post 1 [score 7/10, pattern: job-fear + regular-people] [status: draft]
+Source: https://sd05.senate.ca.gov/news/ca-senate-approves-no-robo-bosses-act-2026-ensure-human-oversight-ai-workplace (Sen. McNerney office, 2026-08-2x) + https://www.crowell.com/en/insights/client-alerts/california-sb-947-no-robo-bosses-act-new-proposed-guardrails-on-use-of-automated-decision-systems-in-employer-discipline-and-termination-decisions (Crowell & Moring, 2026-08)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_California.svg?width=1200
+California just told AI bosses: no signature, no firing.
+
+→ SB 947 cleared the state Senate 29-9 — bars employers from using AI alone to fire or discipline workers
+→ Also bans AI systems that use your data to "predict" what you'll do next
+→ Round two: a near-identical bill passed both chambers last year, then got vetoed
+→ Backed by California's biggest labor federation, now headed to the Assembly
+
+the algorithm can still watch you work. it just can't be the one who lets you go.
+
+### Post 2 [score 7/10, pattern: leak-insider + big-tech-drama] [status: draft]
+Source: https://www.bloomberg.com/news/articles/2026-08-24/taiwan-indicts-nvidia-manager-following-chip-smuggling-probe (Bloomberg, 2026-08-24) + https://www.aljazeera.com/economy/2026/8/25/nvidia-supermicro-employees-charged-over-export-of-ai-servers-to-china (Al Jazeera, 2026-08-25)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Super_Micro_Computer_Logo.svg?width=1200
+An Nvidia employee just got indicted — for helping smuggle Nvidia's own chips to China.
+
+→ Taiwan charged 9 people, including an Nvidia manager and two Supermicro sales staff
+→ 74 servers packed with Nvidia's high-end B300 chips, routed through Japan and Indonesia to dodge US export bans
+→ 56 more servers seized before they ever left Taiwan
+→ Third such smuggling case exposed this year alone
+
+the chip war doesn't leak from Beijing. it leaks from inside the supply chain.
+
+### Post 3 [score 6/10, pattern: money-access + contrarian, backup] [status: backup]
+Source: https://blog.cloudflare.com/wallets/ (Cloudflare, 2026-08) + https://www.digitalapplied.com/blog/x402-payment-protocol-ai-agents-pay-coinbase-cloudflare (2026-08)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Cloudflare_Logo.svg?width=1200
+Your AI agent can now spend your money without asking you first.
+
+→ Cloudflare and Coinbase's x402 protocol lets agents pay per-request — no card, no subscription, no human approval
+→ Hit a paywall? The agent just pays in stablecoin and keeps going
+→ 20+ companies already plugged in, from APIs to pay-per-article content
+→ Micropayments too small for card networks just became AI's native currency
+
+we spent a decade teaching AI to think. we just gave it a wallet.
+
+### Rejected candidates
+- Meta 29-state addictive-design trial (potential $1.4T damages) — real and huge, but jury was already seated and opening arguments were 2026-08-18, over a week stale by this wave with no fresh escalation today (jury selection referenced across multiple recent news roundups is recap, not new)
+- DeepSeek V4 Flash multimodal preview (approaching Opus 4.8 on some benchmarks) — pure feature/capability recap, no conflict or numbers-for-people angle, same pattern rejected in prior waves
+- Google A2A protocol formally joining the Agentic AI Foundation (250+ members) — standards/infrastructure recap, no conflict or regular-people hook, same category rejected in prior waves
+- Nvidia Jensen Huang "final private investment" in OpenAI/Anthropic before their IPOs — real quote but from a March 2026 conference, over 5 months stale, resurfacing in recap roundups today with no new trigger
+- OpenAI Astra reaching "Critical" cyber-risk tier / RL training pause — same Astra-pause story family rejected as repetitive across many prior waves, no material new development
+- Cloudflare Kitesurf browser runtime for AI agents — pure product-launch recap, no conflict or money-for-people angle, classic dud pattern
+- Rackspace securities fraud class action over AI guidance miss — real but filed early August, over 3 weeks stale, no fresh trigger today
+- 205,832 AI-linked layoffs 2026 tracker stat — same aggregate stat already used verbatim in multiple prior waves
+
 ## Wave 2026-08-25 morning
 
 **Publish pipeline still broken — day 28:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #81, 2026-08-24 19:10:55 UTC, same head commit as last night's wave. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-24 morning` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 84 entries, 4 sitting `queued` and unpublished (2 from 2026-08-24 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org was not attempted directly this run given the recurring `EGRESS_BLOCKED` restriction seen in prior waves — media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Shein Logo 2017.svg`, `File:Hf-logo-with-title.svg`, `File:Amazon 2024.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 2 this wave — last one was 2026-08-24 evening Post 1, three main posts ago, keeping cadence at ~1-in-3. Today's freshest developments: Shein priced its Hong Kong IPO at a 70% discount to its 2022 valuation, and Hugging Face is reportedly shopping itself for $13B+ after rejecting a smaller Nvidia offer last year. Anthropic's $65B revenue run-rate/IPO-timing story (Bloomberg, Aug 17) and the Nvidia-led Open Secure AI Alliance (formed late July after the OpenAI/Hugging Face sandbox breach) both surfaced in research but are stale (1-4 weeks) with no fresh escalation today, so they're skipped rather than reused.
 
-### Post 1 [score 7/10, pattern: money-access + regular-people] [status: draft]
+### Post 1 [score 7/10, pattern: money-access + regular-people] [status: expired]
 Source: https://www.cnbc.com/2026/08/24/shein-ipo-valuation-hong-kong.html (CNBC, 2026-08-24)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Shein_Logo_2017.svg?width=1200
 Shein just priced its Hong Kong IPO at $27 billion — 70% below what investors paid for it in 2022.
@@ -18,7 +70,7 @@ Shein just priced its Hong Kong IPO at $27 billion — 70% below what investors 
 
 the SpaceX IPO sold access to a winner. this one sells access to a $71B loss, already priced in.
 
-### Post 2 [score 7/10, pattern: big-tech-drama + conflict] [status: draft] [X CTA]
+### Post 2 [score 7/10, pattern: big-tech-drama + conflict] [status: expired] [X CTA]
 Source: https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/ (TechCrunch, 2026-08-24)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Hf-logo-with-title.svg?width=1200
 Hugging Face turned down Nvidia last year. Now it's shopping itself for nearly triple the price.
@@ -32,7 +84,7 @@ turning down the money was the leverage. now it's cashing in on saying no.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 6/10, pattern: money-access + job-fear, backup] [status: backup]
+### Post 3 [score 6/10, pattern: money-access + job-fear, backup] [status: expired, backup]
 Source: https://www.aboutamazon.com/news/transportation/amazon-prime-air-drone-delivery-expansion (Amazon, 2026-08-19) + https://techcrunch.com/2026/08/19/amazons-prime-air-is-taking-off-in-nearly-500-u-s-cities/ (TechCrunch, 2026-08-19)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_2024.svg?width=1200
 Amazon is about to make drone delivery normal — nearly 500 US cities by the end of this year, up from just 11 metro areas today.
