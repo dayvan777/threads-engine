@@ -1,12 +1,61 @@
 # Posts History
 
+## Wave 2026-08-26 morning
+
+**Publish pipeline still broken — day 30:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #85, 2026-08-25 19:09:45 UTC (evening wave's own slot), same head commit as last night's wave. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-25 morning` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-25 evening` entries are still under 24h old and stay `queued`. Queue now has 88 entries, 4 sitting `queued` and unpublished (2 from 2026-08-25 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:NVIDIA_logo.svg`, `File:OpenAI_Logo.svg` both confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 2 this wave — last one was 2026-08-25 morning Post 2, three main posts ago (both 2026-08-25 evening posts had none), keeping cadence at ~1-in-3. Today's freshest developments: Nvidia reports Q2 earnings after the close today with Wall Street expecting ~$91.9B revenue (97% YoY) after the S&P 500 logged 25 record highs in 2026 largely on AI-chip demand, and OpenAI disclosed disrupting a Russian covert influence operation that used ChatGPT to run a fake think tank ("International Burke Institute") falsely citing real academics. A Coddy developer survey (80% of devs describe AI-coding use as dependence, not advantage) surfaced as a solid niche-dev contrarian angle but scored lower on the rubric (no conflict/money hook), so it's this wave's backup. Several stories were confirmed stale and skipped: Apple's Siri/Vision Pro layoffs (~200 people, reported Aug 21, five days old with no new escalation), Nvidia's talks to invest in Perplexity at $30B+ (same story already used as the main pattern in the 2026-08-24 evening wave, no fresh development since), and the Meta 29-state addictive-design trial (still mid-trial, no new ruling today).
+
+### Post 1 [score 7/10, pattern: money-access + regular-people] [status: draft]
+Source: https://finance.yahoo.com/markets/stocks/articles/p-500-climbs-ahead-nvidia-173327249.html (Yahoo Finance, 2026-08-25) + https://intellectia.ai/blog/nvidia-earnings-august-26-2026-preview (2026-08-26)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+Nvidia reports earnings today — and your 401k already made the bet.
+
+→ Wall Street expects $91.9B revenue, up 97% from a year ago
+→ S&P 500 already logged 25 record highs in 2026, most of them riding Nvidia's chip demand
+→ Miss the number after close today and the whole "AI bubble" narrative flips fast
+
+one earnings call moves more retirement money than any election does.
+
+### Post 2 [score 7/10, pattern: leak-insider + big-tech-drama] [status: draft] [X CTA]
+Source: https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia/ (OpenAI, 2026-08-25) + https://www.cnbc.com/2026/08/25/openai-russia-chatgpt-influence-campaign.html (CNBC, 2026-08-25)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI just caught Russia running a fake think tank through ChatGPT.
+
+→ "International Burke Institute" — a fake expert group, Israel address on paper only
+→ Falsely credited real academics like Francis Fukuyama and Noam Chomsky
+→ 34 of 36 "expert" articles were just copied from elsewhere online
+→ Scrubbed of AI tells, then spread across X, Substack, LinkedIn
+
+the propaganda wasn't the AI. it was the fake experts standing behind it.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 4/10, pattern: contrarian + niche-dev, backup] [status: backup]
+Source: https://www.ico-optics.org/ai-coding-tools-spark-dev-burnout-and-dependency-crisis/ (Aug 2026)
+Media: none (Coddy has no notable Commons-hosted logo; no direct-download PNG/JPG found for the survey itself)
+80% of developers say coding with AI feels less like a tool and more like a dependency.
+
+A new Coddy survey found 43% keep coding with AI after hours even when they meant to stop — the complaint isn't bad output, it's that there's no natural stopping point anymore.
+
+the tool that was supposed to save you time just moved into your evenings.
+
+### Rejected candidates
+- Apple Siri/Vision Pro layoffs (~200 people) — reported 2026-08-21, five days stale, no fresh escalation today
+- Nvidia in talks to invest in Perplexity at $30B+ valuation — same story already used as the main pattern in the 2026-08-24 evening wave (Post 2), no material new development since
+- Meta 29-state addictive-design trial — still mid-trial (opened Aug 18, verdict expected ~October), no new ruling today, same as prior waves' rejection
+- Nvidia Vera CPU / Groq 3 LPX production ramp (Hot Chips 2026) — pure hardware feature recap, no conflict or regular-people money hook
+- Apple new Mac Mini/Studio AI refresh — pure product recap, classic dud pattern
+- Infineon acquiring C2i Semiconductors — niche supply-chain M&A, no conflict or broad relevance
+- 205,832 AI-linked layoffs 2026 tracker stat — same aggregate stat already used verbatim in multiple prior waves
+
 ## Wave 2026-08-25 evening
 
 **Publish pipeline still broken — day 29:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #83, 2026-08-25 09:24:42 UTC, same head commit as this morning's wave. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-24 evening` queue entries `skipped` (never published, pipeline down the whole time). Queue now has 86 entries, 4 sitting `queued` and unpublished (2 from 2026-08-25 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Seal of California.svg`, `File:Nvidia logo.svg`, `File:Super Micro Computer Logo.svg`, `File:Cloudflare Logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. No X CTA this wave — last one was 2026-08-25 morning Post 2, keeping cadence at ~1-in-3 (due again in ~1 more wave). Today's freshest developments: California's SB 947 "No Robo Bosses Act" cleared the state Senate 29-9, Taiwan indicted 9 people (including an Nvidia employee) over AI server smuggling to China, and Cloudflare rolled out x402-based wallets letting AI agents pay for services with no human approval. Meta's 29-state addictive-design trial (jury already seated, opening arguments were Aug 18) and the DeepSeek V4 multimodal preview both surfaced in research but are stale/recap-only with no fresh trigger today, so they're skipped rather than reused.
 
-### Post 1 [score 7/10, pattern: job-fear + regular-people] [status: draft]
+### Post 1 [score 7/10, pattern: job-fear + regular-people] [status: expired]
 Source: https://sd05.senate.ca.gov/news/ca-senate-approves-no-robo-bosses-act-2026-ensure-human-oversight-ai-workplace (Sen. McNerney office, 2026-08-2x) + https://www.crowell.com/en/insights/client-alerts/california-sb-947-no-robo-bosses-act-new-proposed-guardrails-on-use-of-automated-decision-systems-in-employer-discipline-and-termination-decisions (Crowell & Moring, 2026-08)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_California.svg?width=1200
 California just told AI bosses: no signature, no firing.
@@ -18,7 +67,7 @@ California just told AI bosses: no signature, no firing.
 
 the algorithm can still watch you work. it just can't be the one who lets you go.
 
-### Post 2 [score 7/10, pattern: leak-insider + big-tech-drama] [status: draft]
+### Post 2 [score 7/10, pattern: leak-insider + big-tech-drama] [status: expired]
 Source: https://www.bloomberg.com/news/articles/2026-08-24/taiwan-indicts-nvidia-manager-following-chip-smuggling-probe (Bloomberg, 2026-08-24) + https://www.aljazeera.com/economy/2026/8/25/nvidia-supermicro-employees-charged-over-export-of-ai-servers-to-china (Al Jazeera, 2026-08-25)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Super_Micro_Computer_Logo.svg?width=1200
 An Nvidia employee just got indicted — for helping smuggle Nvidia's own chips to China.
@@ -30,7 +79,7 @@ An Nvidia employee just got indicted — for helping smuggle Nvidia's own chips 
 
 the chip war doesn't leak from Beijing. it leaks from inside the supply chain.
 
-### Post 3 [score 6/10, pattern: money-access + contrarian, backup] [status: backup]
+### Post 3 [score 6/10, pattern: money-access + contrarian, backup] [status: expired, backup]
 Source: https://blog.cloudflare.com/wallets/ (Cloudflare, 2026-08) + https://www.digitalapplied.com/blog/x402-payment-protocol-ai-agents-pay-coinbase-cloudflare (2026-08)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Cloudflare_Logo.svg?width=1200
 Your AI agent can now spend your money without asking you first.

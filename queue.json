@@ -578,14 +578,14 @@
     "wave": "2026-08-25 morning",
     "text": "Shein just priced its Hong Kong IPO at $27 billion — 70% below what investors paid for it in 2022.\n\n→ 2022 private valuation: $98.2B\n→ 2026 IPO valuation: up to $27B\n→ Revenue growth: 20.7% → 8%, tipping the company into a $99M loss\n→ Trading starts Sept 1 — regular investors get the same shares that wiped out the growth-round backers\n\nthe SpaceX IPO sold access to a winner. this one sells access to a $71B loss, already priced in.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-25-morning-2",
     "wave": "2026-08-25 morning",
     "text": "Hugging Face turned down Nvidia last year. Now it's shopping itself for nearly triple the price.\n\n→ Nov 2025: rejected Nvidia's $500M at a $7B valuation, didn't want one company controlling it\n→ Aug 2026: hired a bank to find buyers at $13B+\n→ Almost 3x the valuation it said no to nine months ago\n→ Still no buyer — just a \"for sale\" sign on AI's biggest open-model hub\n\nturning down the money was the leverage. now it's cashing in on saying no.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-25-evening-1",
@@ -598,6 +598,20 @@
     "id": "2026-08-25-evening-2",
     "wave": "2026-08-25 evening",
     "text": "An Nvidia employee just got indicted — for helping smuggle Nvidia's own chips to China.\n\n→ Taiwan charged 9 people, including an Nvidia manager and two Supermicro sales staff\n→ 74 servers packed with Nvidia's high-end B300 chips, routed through Japan and Indonesia to dodge US export bans\n→ 56 more servers seized before they ever left Taiwan\n→ Third such smuggling case exposed this year alone\n\nthe chip war doesn't leak from Beijing. it leaks from inside the supply chain.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-26-morning-1",
+    "wave": "2026-08-26 morning",
+    "text": "Nvidia reports earnings today — and your 401k already made the bet.\n\n→ Wall Street expects $91.9B revenue, up 97% from a year ago\n→ S&P 500 already logged 25 record highs in 2026, most of them riding Nvidia's chip demand\n→ Miss the number after close today and the whole \"AI bubble\" narrative flips fast\n\none earnings call moves more retirement money than any election does.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-26-morning-2",
+    "wave": "2026-08-26 morning",
+    "text": "OpenAI just caught Russia running a fake think tank through ChatGPT.\n\n→ \"International Burke Institute\" — a fake expert group, Israel address on paper only\n→ Falsely credited real academics like Francis Fukuyama and Noam Chomsky\n→ 34 of 36 \"expert\" articles were just copied from elsewhere online\n→ Scrubbed of AI tells, then spread across X, Substack, LinkedIn\n\nthe propaganda wasn't the AI. it was the fake experts standing behind it.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
