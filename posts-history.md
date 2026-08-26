@@ -1,12 +1,61 @@
 # Posts History
 
+## Wave 2026-08-26 evening
+
+**Publish pipeline still broken — day 31:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #87, 2026-08-26 09:30:49 UTC (this morning wave's own slot), same head commit as this morning's wave. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening (3 days / 6 waves ago), nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-25 evening` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-26 morning` entries are still under 24h old and stay `queued`. Queue now has 90 entries, 4 sitting `queued` and unpublished (2 from 2026-08-26 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:SpaceX-Logo.svg`, `File:OpenAI Logo.svg`, `File:Broadcom logo (2016-present).svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. No X CTA this wave — last one was 2026-08-26 morning Post 2, the immediately preceding main post, so holding it here keeps cadence at ~1-in-3 (due again next wave). Today's freshest developments: SpaceX announced a $100B second Starbase spaceport in Vermilion Parish, Louisiana, projected to create 11,100 total jobs; OpenAI disclosed a new ChatGPT safety-monitoring system that can escalate flagged conversations to human reviewers and, in narrow cases, to law enforcement; and OpenAI/Broadcom unveiled the "Jalapeño" custom inference chip, claiming 1.5-1.9x better throughput-per-watt and 1.7-3.6x lower latency than Nvidia's GB200/GB300 racks — landing hours before Nvidia's own Q2 FY2027 earnings tonight. Checked for Nvidia's actual earnings results directly (searches returned only pre-earnings previews and one inconsistent/likely-stale figure that didn't match consensus estimates) — the report lands after market close today, past this wave's writing window, so it's left for the next wave rather than risk publishing an unverified number. A Coddy dev-dependency survey (used as backup this morning) and a couple of stale reruns (Anthropic's confidential S-1, filed June 1 with only speculative "could go public late August" chatter and no confirmed filing today; Amazon's 500-city Prime Air expansion, first reported Aug 19) were considered and skipped as repeats or not-yet-fresh.
+
+### Post 1 [score 7/10, pattern: money-access + regular-people] [status: draft]
+Source: https://www.cnbc.com/2026/08/25/spacex-louisiana-spaceport.html (CNBC, 2026-08-25) + https://pulse2.com/spacex-to-invest-100-billion-in-louisiana-spaceport-with-3000-direct-jobs-and-capacity-for-thousands-of-annual-launches/ (2026-08-25)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/SpaceX-Logo.svg?width=1200
+SpaceX just promised Louisiana 11,100 jobs to build rockets that won't fly until 2029.
+
+→ $100B spaceport in Vermilion Parish — SpaceX's fourth and largest launch site
+→ 3,000 direct jobs, avg salary $92,600, plus 8,100 more indirect
+→ 30,000 construction jobs at peak buildout, starting 2027
+→ First Starship launch from the site: 2029
+
+every other AI-adjacent headline this year is jobs disappearing. this one's building 11,100 of them to launch rockets.
+
+### Post 2 [score 8/10, pattern: leak-insider + regular-people] [status: draft]
+Source: https://openai.com/index/helping-people-when-they-need-it-most/ (OpenAI, 2026-08) + https://futurism.com/openai-scanning-conversations-police (Futurism, 2026-08-26)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI just admitted it's reading your ChatGPT conversations — and some now go straight to the police.
+
+→ Automated filters flag chats that show plans to seriously harm someone else
+→ Flagged cases go to human reviewers who can loop in law enforcement
+→ Self-harm chats stay private for now, OpenAI says
+→ New "Trusted Contact" feature lets you name someone to be alerted instead
+
+the app that felt like a diary just got a mandatory reporter clause.
+
+### Post 3 [score 7/10, pattern: big-tech-drama + contrarian, niche-dev, backup] [status: backup]
+Source: https://openai.com/index/openai-broadcom-jalapeno-inference-chip/ (OpenAI/Broadcom, 2026-08-25) + https://www.cnbc.com/2026/08/26/openai-jalapeno-ai-chip-nvidia.html (CNBC, 2026-08-26)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Broadcom_logo_(2016-present).svg?width=1200
+OpenAI just said its own AI chip beats Nvidia's — hours before Nvidia reports earnings tonight.
+
+→ Jalapeño, co-built with Broadcom, went from design to tape-out in 9 months
+→ 1.5-1.9x more AI throughput per kilowatt than Nvidia's GB200/GB300 racks
+→ 1.7-3.6x lower latency in the same tests
+→ Small-volume rollout by end of 2026, wider in 2027
+
+Nvidia's biggest customer just built its replacement.
+
+### Rejected candidates
+- Nvidia Q2 FY2027 earnings (actual results) — reports after market close today, past this wave's writing window; a search returned one figure set that didn't match consensus estimates and looked stale/mismatched, so left unverified rather than risk publishing a wrong number. Revisit next wave.
+- Anthropic confidential S-1 "could go public as early as late August" — same underlying June 1 filing already rejected as stale in multiple prior waves; only speculative timeline chatter today, no confirmed new filing
+- Amazon Prime Air drone delivery expansion to ~500 cities — first reported 2026-08-19, a week stale, no fresh trigger today, reads as product-expansion recap
+- Coddy developer AI-dependency survey (80% describe usage as dependence) — same story already used as this morning's backup post, would be a repeat
+- X Corp/xAI vs Apple/OpenAI antitrust suit — original filing is over a year old (Aug 2025), resurfacing in recap coverage with no fresh escalation today
+
 ## Wave 2026-08-26 morning
 
 **Publish pipeline still broken — day 30:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #85, 2026-08-25 19:09:45 UTC (evening wave's own slot), same head commit as last night's wave. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-25 morning` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-25 evening` entries are still under 24h old and stay `queued`. Queue now has 88 entries, 4 sitting `queued` and unpublished (2 from 2026-08-25 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:NVIDIA_logo.svg`, `File:OpenAI_Logo.svg` both confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 2 this wave — last one was 2026-08-25 morning Post 2, three main posts ago (both 2026-08-25 evening posts had none), keeping cadence at ~1-in-3. Today's freshest developments: Nvidia reports Q2 earnings after the close today with Wall Street expecting ~$91.9B revenue (97% YoY) after the S&P 500 logged 25 record highs in 2026 largely on AI-chip demand, and OpenAI disclosed disrupting a Russian covert influence operation that used ChatGPT to run a fake think tank ("International Burke Institute") falsely citing real academics. A Coddy developer survey (80% of devs describe AI-coding use as dependence, not advantage) surfaced as a solid niche-dev contrarian angle but scored lower on the rubric (no conflict/money hook), so it's this wave's backup. Several stories were confirmed stale and skipped: Apple's Siri/Vision Pro layoffs (~200 people, reported Aug 21, five days old with no new escalation), Nvidia's talks to invest in Perplexity at $30B+ (same story already used as the main pattern in the 2026-08-24 evening wave, no fresh development since), and the Meta 29-state addictive-design trial (still mid-trial, no new ruling today).
 
-### Post 1 [score 7/10, pattern: money-access + regular-people] [status: draft]
+### Post 1 [score 7/10, pattern: money-access + regular-people] [status: expired]
 Source: https://finance.yahoo.com/markets/stocks/articles/p-500-climbs-ahead-nvidia-173327249.html (Yahoo Finance, 2026-08-25) + https://intellectia.ai/blog/nvidia-earnings-august-26-2026-preview (2026-08-26)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 Nvidia reports earnings today — and your 401k already made the bet.
@@ -17,7 +66,7 @@ Nvidia reports earnings today — and your 401k already made the bet.
 
 one earnings call moves more retirement money than any election does.
 
-### Post 2 [score 7/10, pattern: leak-insider + big-tech-drama] [status: draft] [X CTA]
+### Post 2 [score 7/10, pattern: leak-insider + big-tech-drama] [status: expired] [X CTA]
 Source: https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia/ (OpenAI, 2026-08-25) + https://www.cnbc.com/2026/08/25/openai-russia-chatgpt-influence-campaign.html (CNBC, 2026-08-25)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI just caught Russia running a fake think tank through ChatGPT.
@@ -31,7 +80,7 @@ the propaganda wasn't the AI. it was the fake experts standing behind it.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 4/10, pattern: contrarian + niche-dev, backup] [status: backup]
+### Post 3 [score 4/10, pattern: contrarian + niche-dev, backup] [status: expired, backup]
 Source: https://www.ico-optics.org/ai-coding-tools-spark-dev-burnout-and-dependency-crisis/ (Aug 2026)
 Media: none (Coddy has no notable Commons-hosted logo; no direct-download PNG/JPG found for the survey itself)
 80% of developers say coding with AI feels less like a tool and more like a dependency.

@@ -592,14 +592,14 @@
     "wave": "2026-08-25 evening",
     "text": "California just told AI bosses: no signature, no firing.\n\n→ SB 947 cleared the state Senate 29-9 — bars employers from using AI alone to fire or discipline workers\n→ Also bans AI systems that use your data to \"predict\" what you'll do next\n→ Round two: a near-identical bill passed both chambers last year, then got vetoed\n→ Backed by California's biggest labor federation, now headed to the Assembly\n\nthe algorithm can still watch you work. it just can't be the one who lets you go.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-25-evening-2",
     "wave": "2026-08-25 evening",
     "text": "An Nvidia employee just got indicted — for helping smuggle Nvidia's own chips to China.\n\n→ Taiwan charged 9 people, including an Nvidia manager and two Supermicro sales staff\n→ 74 servers packed with Nvidia's high-end B300 chips, routed through Japan and Indonesia to dodge US export bans\n→ 56 more servers seized before they ever left Taiwan\n→ Third such smuggling case exposed this year alone\n\nthe chip war doesn't leak from Beijing. it leaks from inside the supply chain.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-26-morning-1",
@@ -612,6 +612,20 @@
     "id": "2026-08-26-morning-2",
     "wave": "2026-08-26 morning",
     "text": "OpenAI just caught Russia running a fake think tank through ChatGPT.\n\n→ \"International Burke Institute\" — a fake expert group, Israel address on paper only\n→ Falsely credited real academics like Francis Fukuyama and Noam Chomsky\n→ 34 of 36 \"expert\" articles were just copied from elsewhere online\n→ Scrubbed of AI tells, then spread across X, Substack, LinkedIn\n\nthe propaganda wasn't the AI. it was the fake experts standing behind it.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-26-evening-1",
+    "wave": "2026-08-26 evening",
+    "text": "SpaceX just promised Louisiana 11,100 jobs to build rockets that won't fly until 2029.\n\n→ $100B spaceport in Vermilion Parish — SpaceX's fourth and largest launch site\n→ 3,000 direct jobs, avg salary $92,600, plus 8,100 more indirect\n→ 30,000 construction jobs at peak buildout, starting 2027\n→ First Starship launch from the site: 2029\n\nevery other AI-adjacent headline this year is jobs disappearing. this one's building 11,100 of them to launch rockets.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-26-evening-2",
+    "wave": "2026-08-26 evening",
+    "text": "OpenAI just admitted it's reading your ChatGPT conversations — and some now go straight to the police.\n\n→ Automated filters flag chats that show plans to seriously harm someone else\n→ Flagged cases go to human reviewers who can loop in law enforcement\n→ Self-harm chats stay private for now, OpenAI says\n→ New \"Trusted Contact\" feature lets you name someone to be alerted instead\n\nthe app that felt like a diary just got a mandatory reporter clause.",
     "image_url": null,
     "status": "queued"
   }
