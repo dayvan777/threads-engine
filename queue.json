@@ -620,14 +620,14 @@
     "wave": "2026-08-26 evening",
     "text": "SpaceX just promised Louisiana 11,100 jobs to build rockets that won't fly until 2029.\n\n→ $100B spaceport in Vermilion Parish — SpaceX's fourth and largest launch site\n→ 3,000 direct jobs, avg salary $92,600, plus 8,100 more indirect\n→ 30,000 construction jobs at peak buildout, starting 2027\n→ First Starship launch from the site: 2029\n\nevery other AI-adjacent headline this year is jobs disappearing. this one's building 11,100 of them to launch rockets.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-26-evening-2",
     "wave": "2026-08-26 evening",
     "text": "OpenAI just admitted it's reading your ChatGPT conversations — and some now go straight to the police.\n\n→ Automated filters flag chats that show plans to seriously harm someone else\n→ Flagged cases go to human reviewers who can loop in law enforcement\n→ Self-harm chats stay private for now, OpenAI says\n→ New \"Trusted Contact\" feature lets you name someone to be alerted instead\n\nthe app that felt like a diary just got a mandatory reporter clause.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-27-morning-1",
@@ -640,6 +640,20 @@
     "id": "2026-08-27-morning-2",
     "wave": "2026-08-27 morning",
     "text": "Meta just wrote a $16.68 billion check to admit it built Instagram to hook your kids.\n\n→ 29 states sued over addictive design, deceptive safety claims, harvesting minors' data\n→ Settlement forces daily time caps, overnight lockouts, stronger age checks for teens\n→ Instagram's own chief testified before the deal landed\n→ Snapchat, YouTube, TikTok still fighting the identical claims in court\n\nthe algorithm didn't get smarter this year. it just got expensive.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-27-evening-1",
+    "wave": "2026-08-27 evening",
+    "text": "SpaceX stock fell back below its $135 IPO price today, as 319 million insider shares hit the market.\n\n→ Second post-IPO lockup expiration — stock dropped to $134\n→ Wipes out the entire IPO pop, down ~40% from June's $225.64 high\n→ The first unlock (900M+ shares, early August) sent the stock UP 6%. This one sent it underwater.\n\nthe exit ramp opens for insiders first. retail finds out after the price already moved.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-27-evening-2",
+    "wave": "2026-08-27 evening",
+    "text": "Hugging Face turned down a smaller Nvidia offer last year. Today they're reportedly saying yes — for $13 billion.\n\n→ Deal values Hugging Face at $12.9-13B, Bloomberg reports\n→ ~3x its last funding valuation of $4.5B, set in 2023\n→ Nvidia was already a backer — this makes it the owner\n→ The platform devs treated as neutral ground just got bought by the company that makes the chips everyone needs\n\nopen source's landlord just changed.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }

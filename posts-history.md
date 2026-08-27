@@ -1,12 +1,63 @@
 # Posts History
 
+## Wave 2026-08-27 evening
+
+**Publish pipeline still broken — day 33:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`, `get_job_logs` on the latest failed run #89): error is still `Error: THREADS_ACCESS_TOKEN is not set` in `scripts/publish.js`, identical to every run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. One new wrinkle worth noting: as of this wave's write time (2026-08-27 15:15 UTC), the scheduled workflow shows no runs at all for today's 06:00 UTC or 09:00 UTC slots — the last recorded run (#89) is from 2026-08-26 20:58:54 UTC. This reads like a GitHub Actions scheduling delay under load rather than a new failure mode (the workflow itself is still `active`, not disabled), but it means today's morning-wave queue items haven't even attempted to publish yet, let alone failed cleanly. Worth a spot-check next wave if the gap persists. Marked the two now-24h-old `2026-08-26 evening` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-27 morning` entries are still under 24h old and stay `queued`. Queue now has 94 entries, 4 sitting `queued` and unpublished (2 from 2026-08-27 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:SpaceX-Logo.svg` and `File:Nvidia_logo.svg` reused from prior waves' confirmed titles, `File:Hf-logo-with-title.svg` and `File:Anthropic_logo.svg` freshly confirmed to exist via search this run), not live-fetch-verified — worth a spot-check before attaching. X CTA on Post 2 this wave — last one was 2026-08-27 morning Post 1, three main posts ago (2026-08-27 morning Post 2 had none), keeping cadence at ~1-in-3. Today's freshest developments: SpaceX stock fell back below its $135 IPO price on the second post-IPO lockup expiration (319M insider shares unlocked today, a sharp contrast to the first unlock in early August which sent the stock up); Nvidia is reportedly buying/in advanced talks to buy Hugging Face for ~$12.9-13B (Bloomberg, CNBC, The Information, Forbes all reporting today), after Hugging Face turned down a smaller Nvidia offer last year; and Anthropic signed a $45B six-year cloud deal with Nscale for a West Virginia data center site that Microsoft had a letter of intent on before backing out this summer. Considered and rejected: an MIT/Iceberg Index study on AI replacing 11.7% of the workforce (dated November 2025, nearly a year stale, and the same style of aggregate stat already overused in prior waves); Google Cloud's "quiet" cybersecurity-team layoffs (Threat Intelligence Group, Mandiant) — real and on-pattern but the cuts trace to June 3, over two months stale with no fresh trigger today; Monday.com's 620-person AI-driven layoff — announced July 22, over a month stale; and Nvidia's actual Q2 earnings reaction / Meta settlement follow-through, both already used as this wave's own predecessor's main posts (2026-08-27 morning).
+
+### Post 1 [score 8/10, pattern: money-access + big-tech-drama + regular-people] [status: draft]
+Source: https://finance.yahoo.com/markets/stocks/articles/spacex-drops-6-dips-below-152822462.html (Yahoo Finance, 2026-08-27) + https://www.ibtimes.com/spacex-stock-falls-back-below-ipo-price-319-million-more-shares-hit-market-3806633 (IBTimes, 2026-08-27)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/SpaceX-Logo.svg?width=1200
+SpaceX stock fell back below its $135 IPO price today, as 319 million insider shares hit the market.
+
+→ Second post-IPO lockup expiration — stock dropped to $134
+→ Wipes out the entire IPO pop, down ~40% from June's $225.64 high
+→ The first unlock (900M+ shares, early August) sent the stock UP 6%. This one sent it underwater.
+
+the exit ramp opens for insiders first. retail finds out after the price already moved.
+
+### Post 2 [score 7/10, pattern: big-tech-drama + leak-insider] [status: draft] [X CTA]
+Source: https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html (CNBC, 2026-08-27) + https://www.bloomberg.com/news/articles/2026-08-27/nvidia-discussed-buying-ai-startup-hugging-face-insider-says (Bloomberg, 2026-08-27) + https://www.forbes.com/sites/siladityaray/2026/08/27/nvidia-has-reportedly-agreed-to-buy-ai-model-hosting-platform-hugging-face-for-13-billion/ (Forbes, 2026-08-27)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Hf-logo-with-title.svg?width=1200
+Hugging Face turned down a smaller Nvidia offer last year. Today they're reportedly saying yes — for $13 billion.
+
+→ Deal values Hugging Face at $12.9-13B, Bloomberg reports
+→ ~3x its last funding valuation of $4.5B, set in 2023
+→ Nvidia was already a backer — this makes it the owner
+→ The platform devs treated as neutral ground just got bought by the company that makes the chips everyone needs
+
+open source's landlord just changed.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: big-tech-drama + niche-dev, backup] [status: backup]
+Source: https://www.cnbc.com/2026/08/26/anthropic-and-nscale-strike-45-billion-cloud-deal-sources-say.html (CNBC, 2026-08-26) + https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/ (TechCrunch, 2026-08-26)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Microsoft walked away from a West Virginia data center. Anthropic signed a $45 billion deal for it instead.
+
+→ Six-year cloud deal with Nscale — about 460 megawatts of compute capacity
+→ Runs on Nvidia's next-gen Vera Rubin chips, online by end of 2027
+→ Microsoft had a letter of intent on the same site in March, then backed out this summer
+→ Part of Anthropic's compute-buying spree to keep pace with OpenAI
+
+one company's leftovers just became another company's arms race.
+
+### Rejected candidates
+- MIT/Iceberg Index study — AI can replace 11.7% of US workforce, $1.2T in wages — dated 2025-11-26, nearly a year stale, and the same aggregate-stat pattern already overused in prior waves
+- Google Cloud "quietly" cutting cybersecurity teams (Threat Intelligence Group, Mandiant staff) to redirect budget to AI — real and on-pattern (leak/insider + job-fear) but the cuts trace back to 2026-06-03, over two months stale with no fresh escalation today
+- Monday.com laying off ~620 employees (20% of workforce) to fund its AI platform — announced 2026-07-22, over a month stale
+- Nvidia Q2 FY2027 earnings reaction (stock +6% after beating estimates) and Meta's $16.68B settlement follow-through coverage — both already used as this wave's own predecessor's main posts (2026-08-27 morning Post 1 and Post 2)
+- DeepSeek V4-Flash-Vision-Exp beating Opus 4.8 on ALE/ZeroBench, OpenAI's GPT-Live voice model, AWS+MiniMax on Bedrock — pure product/feature recaps, no conflict or money-for-regular-people angle
+- Anthropic founders' pre-IPO super-voting share structure — genuinely on-pattern (insider/leak + big-tech-drama) but the underlying report is from 2026-08-18/19, over a week stale by this wave with only recap coverage today, no fresh trigger
+
 ## Wave 2026-08-27 morning
 
 **Publish pipeline still broken — day 32:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #89, 2026-08-26 20:58:54 UTC, same head commit as last night's wave. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening (4 days / 8 waves ago), nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-26 morning` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-26 evening` entries are still under 24h old and stay `queued`. Queue now has 92 entries, 4 sitting `queued` and unpublished (2 from 2026-08-26 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Nvidia_logo.svg`, `File:Meta_Platforms_Inc._logo.svg`, `File:Amazon_logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 1 this wave — last one was 2026-08-26 morning Post 2, two main posts ago (both 2026-08-26 evening posts had none), keeping cadence at ~1-in-3. Today's freshest developments: Nvidia's actual Q2 FY2027 results landed after yesterday's writing window closed — $96.2B revenue (vs $92.2B expected), $89B data center, stock +4% to $218.77 after hours, $108B next-quarter guidance — a clean follow-through on the pre-earnings post used two waves ago; Meta agreed to a $16.68B multistate settlement over addictive design and child-safety claims, with mandated teen time caps and age checks; and Amazon is shutting down Mechanical Turk on September 30 after 21 years, the crowdsourced-labor platform Bezos once called "artificial artificial intelligence," now made obsolete by the AI it helped train.
 
-### Post 1 [score 7/10, pattern: money-access + regular-people] [status: draft] [X CTA]
+### Post 1 [score 7/10, pattern: money-access + regular-people] [status: expired] [X CTA]
 Source: https://fortune.com/2026/08/26/nvidia-results-q2-earnings/ (Fortune, 2026-08-26) + https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html (CNBC, 2026-08-26)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200
 Nvidia just answered the $92 billion question — and beat it by $4 billion.
@@ -20,7 +71,7 @@ if you own an index fund, you just got a raise nobody voted on.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 2 [score 7/10, pattern: big-tech-drama + regular-people] [status: draft]
+### Post 2 [score 7/10, pattern: big-tech-drama + regular-people] [status: expired]
 Source: https://www.forbes.com/sites/zacharyfolk/2026/08/26/meta-agrees-to-1668-billion-settlement-in-social-media-addiction-trial/ (Forbes, 2026-08-26) + https://www.nbcnews.com/tech/social-media/meta-settles-social-media-addiction-suit-16-billion-rcna594492 (NBC News, 2026-08-26)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
 Meta just wrote a $16.68 billion check to admit it built Instagram to hook your kids.
@@ -32,7 +83,7 @@ Meta just wrote a $16.68 billion check to admit it built Instagram to hook your 
 
 the algorithm didn't get smarter this year. it just got expensive.
 
-### Post 3 [score 6/10, pattern: job-fear + contrarian, backup] [status: backup]
+### Post 3 [score 6/10, pattern: job-fear + contrarian, backup] [status: expired]
 Source: https://www.fastcompany.com/91596625/amazon-is-shutting-down-mechanical-turk-after-21-years-quietly-ending-the-human-powered-platform (Fast Company, 2026-08-26) + https://techstartups.com/2026/08/26/amazon-is-shutting-down-mechanical-turk-after-21-years-as-ai-reshapes-crowdsourced-work/ (2026-08-26)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_logo.svg?width=1200
 Amazon just killed the platform Jeff Bezos called "artificial artificial intelligence" — because real AI made it obsolete.
