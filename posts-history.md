@@ -1,12 +1,63 @@
 # Posts History
 
+## Wave 2026-08-27 morning
+
+**Publish pipeline still broken — day 32:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #89, 2026-08-26 20:58:54 UTC, same head commit as last night's wave. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening (4 days / 8 waves ago), nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-26 morning` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-26 evening` entries are still under 24h old and stay `queued`. Queue now has 92 entries, 4 sitting `queued` and unpublished (2 from 2026-08-26 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Nvidia_logo.svg`, `File:Meta_Platforms_Inc._logo.svg`, `File:Amazon_logo.svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 1 this wave — last one was 2026-08-26 morning Post 2, two main posts ago (both 2026-08-26 evening posts had none), keeping cadence at ~1-in-3. Today's freshest developments: Nvidia's actual Q2 FY2027 results landed after yesterday's writing window closed — $96.2B revenue (vs $92.2B expected), $89B data center, stock +4% to $218.77 after hours, $108B next-quarter guidance — a clean follow-through on the pre-earnings post used two waves ago; Meta agreed to a $16.68B multistate settlement over addictive design and child-safety claims, with mandated teen time caps and age checks; and Amazon is shutting down Mechanical Turk on September 30 after 21 years, the crowdsourced-labor platform Bezos once called "artificial artificial intelligence," now made obsolete by the AI it helped train.
+
+### Post 1 [score 7/10, pattern: money-access + regular-people] [status: draft] [X CTA]
+Source: https://fortune.com/2026/08/26/nvidia-results-q2-earnings/ (Fortune, 2026-08-26) + https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html (CNBC, 2026-08-26)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200
+Nvidia just answered the $92 billion question — and beat it by $4 billion.
+
+→ Q2 revenue: $96.2B, up 106% year over year
+→ Data center alone: $89B — 92% of total sales
+→ Stock popped 4% after hours to $218.77
+→ Next quarter guidance: $108B, still above what Wall Street expected
+
+if you own an index fund, you just got a raise nobody voted on.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 2 [score 7/10, pattern: big-tech-drama + regular-people] [status: draft]
+Source: https://www.forbes.com/sites/zacharyfolk/2026/08/26/meta-agrees-to-1668-billion-settlement-in-social-media-addiction-trial/ (Forbes, 2026-08-26) + https://www.nbcnews.com/tech/social-media/meta-settles-social-media-addiction-suit-16-billion-rcna594492 (NBC News, 2026-08-26)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
+Meta just wrote a $16.68 billion check to admit it built Instagram to hook your kids.
+
+→ 29 states sued over addictive design, deceptive safety claims, harvesting minors' data
+→ Settlement forces daily time caps, overnight lockouts, stronger age checks for teens
+→ Instagram's own chief testified before the deal landed
+→ Snapchat, YouTube, TikTok still fighting the identical claims in court
+
+the algorithm didn't get smarter this year. it just got expensive.
+
+### Post 3 [score 6/10, pattern: job-fear + contrarian, backup] [status: backup]
+Source: https://www.fastcompany.com/91596625/amazon-is-shutting-down-mechanical-turk-after-21-years-quietly-ending-the-human-powered-platform (Fast Company, 2026-08-26) + https://techstartups.com/2026/08/26/amazon-is-shutting-down-mechanical-turk-after-21-years-as-ai-reshapes-crowdsourced-work/ (2026-08-26)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_logo.svg?width=1200
+Amazon just killed the platform Jeff Bezos called "artificial artificial intelligence" — because real AI made it obsolete.
+
+→ Mechanical Turk closes September 30, after 21 years and 500,000+ workers
+→ Paid humans cents per task to label images, transcribe audio, sort data
+→ New signups cut off back in July
+→ Scale AI, Mercor and Prolific now do the same work — training the models that replaced MTurk's own workers
+
+the company that outsourced thinking to humans just automated the outsourcing.
+
+### Rejected candidates
+- OpenAI/Broadcom Jalapeño chip beating Nvidia — already used as this wave's predecessor backup (2026-08-26 evening Post 3), no fresh escalation since
+- Unitree stock cooling off after IPO surge (down ~45% from peak, still up huge from debut) — same underlying IPO story already used multiple times (2026-08-06, 2026-08-08 morning), the pullback is a continuation not a fresh trigger
+- Nvidia Vera CPU architecture disclosure at Hot Chips 2026 — briefing was 2026-08-24, two days stale by this wave's freshness bar, and reads as a spec/product recap without conflict or numbers-for-people angle
+- DeepSeek V4-Flash-Vision-Exp (adds image understanding) — pure feature/product recap, no conflict or numbers-for-people angle
+- Robinhood Ventures Fund II $200M IPO (retail access to private tech startups) — genuinely money-access relevant but priced August 13, two weeks stale, no fresh trigger today
+
 ## Wave 2026-08-26 evening
 
 **Publish pipeline still broken — day 31:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): every scheduled run since 2026-08-04 has failed, latest failure run #87, 2026-08-26 09:30:49 UTC (this morning wave's own slot), same head commit as this morning's wave. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening (3 days / 6 waves ago), nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-25 evening` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-26 morning` entries are still under 24h old and stay `queued`. Queue now has 90 entries, 4 sitting `queued` and unpublished (2 from 2026-08-26 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:SpaceX-Logo.svg`, `File:OpenAI Logo.svg`, `File:Broadcom logo (2016-present).svg` all confirmed to exist via search), not live-fetch-verified this run — worth a spot-check before attaching. No X CTA this wave — last one was 2026-08-26 morning Post 2, the immediately preceding main post, so holding it here keeps cadence at ~1-in-3 (due again next wave). Today's freshest developments: SpaceX announced a $100B second Starbase spaceport in Vermilion Parish, Louisiana, projected to create 11,100 total jobs; OpenAI disclosed a new ChatGPT safety-monitoring system that can escalate flagged conversations to human reviewers and, in narrow cases, to law enforcement; and OpenAI/Broadcom unveiled the "Jalapeño" custom inference chip, claiming 1.5-1.9x better throughput-per-watt and 1.7-3.6x lower latency than Nvidia's GB200/GB300 racks — landing hours before Nvidia's own Q2 FY2027 earnings tonight. Checked for Nvidia's actual earnings results directly (searches returned only pre-earnings previews and one inconsistent/likely-stale figure that didn't match consensus estimates) — the report lands after market close today, past this wave's writing window, so it's left for the next wave rather than risk publishing an unverified number. A Coddy dev-dependency survey (used as backup this morning) and a couple of stale reruns (Anthropic's confidential S-1, filed June 1 with only speculative "could go public late August" chatter and no confirmed filing today; Amazon's 500-city Prime Air expansion, first reported Aug 19) were considered and skipped as repeats or not-yet-fresh.
 
-### Post 1 [score 7/10, pattern: money-access + regular-people] [status: draft]
+### Post 1 [score 7/10, pattern: money-access + regular-people] [status: expired]
 Source: https://www.cnbc.com/2026/08/25/spacex-louisiana-spaceport.html (CNBC, 2026-08-25) + https://pulse2.com/spacex-to-invest-100-billion-in-louisiana-spaceport-with-3000-direct-jobs-and-capacity-for-thousands-of-annual-launches/ (2026-08-25)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/SpaceX-Logo.svg?width=1200
 SpaceX just promised Louisiana 11,100 jobs to build rockets that won't fly until 2029.
@@ -18,7 +69,7 @@ SpaceX just promised Louisiana 11,100 jobs to build rockets that won't fly until
 
 every other AI-adjacent headline this year is jobs disappearing. this one's building 11,100 of them to launch rockets.
 
-### Post 2 [score 8/10, pattern: leak-insider + regular-people] [status: draft]
+### Post 2 [score 8/10, pattern: leak-insider + regular-people] [status: expired]
 Source: https://openai.com/index/helping-people-when-they-need-it-most/ (OpenAI, 2026-08) + https://futurism.com/openai-scanning-conversations-police (Futurism, 2026-08-26)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI just admitted it's reading your ChatGPT conversations — and some now go straight to the police.
@@ -30,7 +81,7 @@ OpenAI just admitted it's reading your ChatGPT conversations — and some now go
 
 the app that felt like a diary just got a mandatory reporter clause.
 
-### Post 3 [score 7/10, pattern: big-tech-drama + contrarian, niche-dev, backup] [status: backup]
+### Post 3 [score 7/10, pattern: big-tech-drama + contrarian, niche-dev, backup] [status: expired]
 Source: https://openai.com/index/openai-broadcom-jalapeno-inference-chip/ (OpenAI/Broadcom, 2026-08-25) + https://www.cnbc.com/2026/08/26/openai-jalapeno-ai-chip-nvidia.html (CNBC, 2026-08-26)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Broadcom_logo_(2016-present).svg?width=1200
 OpenAI just said its own AI chip beats Nvidia's — hours before Nvidia reports earnings tonight.

@@ -606,14 +606,14 @@
     "wave": "2026-08-26 morning",
     "text": "Nvidia reports earnings today — and your 401k already made the bet.\n\n→ Wall Street expects $91.9B revenue, up 97% from a year ago\n→ S&P 500 already logged 25 record highs in 2026, most of them riding Nvidia's chip demand\n→ Miss the number after close today and the whole \"AI bubble\" narrative flips fast\n\none earnings call moves more retirement money than any election does.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-26-morning-2",
     "wave": "2026-08-26 morning",
     "text": "OpenAI just caught Russia running a fake think tank through ChatGPT.\n\n→ \"International Burke Institute\" — a fake expert group, Israel address on paper only\n→ Falsely credited real academics like Francis Fukuyama and Noam Chomsky\n→ 34 of 36 \"expert\" articles were just copied from elsewhere online\n→ Scrubbed of AI tells, then spread across X, Substack, LinkedIn\n\nthe propaganda wasn't the AI. it was the fake experts standing behind it.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-26-evening-1",
@@ -626,6 +626,20 @@
     "id": "2026-08-26-evening-2",
     "wave": "2026-08-26 evening",
     "text": "OpenAI just admitted it's reading your ChatGPT conversations — and some now go straight to the police.\n\n→ Automated filters flag chats that show plans to seriously harm someone else\n→ Flagged cases go to human reviewers who can loop in law enforcement\n→ Self-harm chats stay private for now, OpenAI says\n→ New \"Trusted Contact\" feature lets you name someone to be alerted instead\n\nthe app that felt like a diary just got a mandatory reporter clause.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-27-morning-1",
+    "wave": "2026-08-27 morning",
+    "text": "Nvidia just answered the $92 billion question — and beat it by $4 billion.\n\n→ Q2 revenue: $96.2B, up 106% year over year\n→ Data center alone: $89B — 92% of total sales\n→ Stock popped 4% after hours to $218.77\n→ Next quarter guidance: $108B, still above what Wall Street expected\n\nif you own an index fund, you just got a raise nobody voted on.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-27-morning-2",
+    "wave": "2026-08-27 morning",
+    "text": "Meta just wrote a $16.68 billion check to admit it built Instagram to hook your kids.\n\n→ 29 states sued over addictive design, deceptive safety claims, harvesting minors' data\n→ Settlement forces daily time caps, overnight lockouts, stronger age checks for teens\n→ Instagram's own chief testified before the deal landed\n→ Snapchat, YouTube, TikTok still fighting the identical claims in court\n\nthe algorithm didn't get smarter this year. it just got expensive.",
     "image_url": null,
     "status": "queued"
   }
