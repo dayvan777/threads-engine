@@ -1,12 +1,65 @@
 # Posts History
 
+## Wave 2026-08-28 evening
+
+**Publish pipeline still broken — day 35:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): latest run #93 (2026-08-28 02:16:54 UTC) failed, same as every scheduled run since 2026-08-04, and no newer run has fired since the morning wave's check. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-27 evening` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-28 morning` entries are still under 24h old and stay `queued`. Queue now has 98 entries, 4 sitting `queued` and unpublished (2 from 2026-08-28 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by previously-confirmed file titles (`File:Nvidia_logo.svg`, `File:Anthropic_logo.svg`, `File:DeepSeek_logo.svg` all reused from prior waves' confirmed titles), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 1 this wave, as flagged by the morning wave's notes — last one was 2026-08-27 evening Post 2, keeping cadence at ~1-in-3. Today's freshest developments: Nvidia told its server-building partners (feeding Microsoft, Google, Oracle) that Grace Blackwell and Vera Rubin system prices are rising 15%+ on shipments starting early 2027, driven by a memory-chip supply crunch — a genuinely new, broad-relevance story since it's the first "AI boom cost" story that lands on cloud bills rather than just company balance sheets; and Anthropic's IPO timeline got concrete for the first time (prospectus public after Labor Day, investor day mid-September, listing as early as late September, considering longer lockups and shareholder cash-outs) after this exact story family was rejected as stale/rumored in nearly every prior wave — this is the major new development the runbook requires before a rejected story returns. Backup leans niche-dev: DeepSeek open-sourced an MIT-licensed agent runtime (Harness) that already has 33,000 GitHub stars and works across Anthropic/OpenAI/AWS/Azure/Google models, not just its own. Considered and rejected: the Alabama/OpenAI subpoena and the Nvidia-Hugging Face acquisition talks — both already used as main or rejected items in this morning's own wave with no further escalation since; Nvidia's actual Q2 earnings stock pop (+8%, +$442B) — same underlying earnings event already used two waves ago (2026-08-27 morning Post 1) as the pre-reaction guidance beat; Marvell's continued post-earnings slide — already used as this morning's Post 2; Salesforce's 4,000 AI-driven support-job cuts — real pattern but the underlying announcement is from September 2025, over a year stale, despite recirculating in this week's Claudeforce coverage; OpenAI's IPO delay / SoftBank's 12% stock drop — real drama but traces back to a June 26 report, two months stale with no fresh trigger this cycle; Claudeforce (Salesforce + Anthropic's expanded partnership, announced Aug 26) — real and fresh but reads as a mutual product-integration recap without sharp conflict or a regular-people money hook.
+
+### Post 1 [score 8/10, pattern: money-broad + contrarian] [status: draft] [X CTA]
+Source: https://www.vktr.com/ai-market/nvidia-tells-microsoft-google-oracle-that-ai-server-prices-are-going-up-more-than-15/ (VKTR, 2026-08-24) + https://finance.yahoo.com/technology/ai/articles/nvidia-customers-face-15-ai-220300580.html (Yahoo Finance, 2026-08-27)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200
+Nvidia just told Microsoft, Google, and Oracle: AI servers are about to cost 15% more.
+
+→ Grace Blackwell and Vera Rubin systems both hit — shipments starting early 2027
+→ Cause: memory chip prices outrunning supply from Samsung, SK Hynix, Micron
+→ Nvidia runs ~75% margins. It's not eating this cost, you are.
+
+the AI boom just found its tax collector — and it's whoever pays for compute downstream.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 2 [score 7/10, pattern: money-access + big-tech-drama] [status: draft]
+Source: https://www.tradingview.com/news/reuters.com,2026:newsml_L4N44O1S2:0-anthropic-plans-to-publicly-unveil-ipo-prospectus-after-labor-day-the-information-reports/ (Reuters via TradingView, 2026-08-27) + https://finance.biggo.com/news/b286c72f-73d5-4406-adf1-27186161b20c (BigGo Finance, 2026-08-27)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Anthropic just set a date to try to beat SpaceX's IPO record.
+
+→ Prospectus goes public right after Labor Day, investor day mid-September
+→ Listing possible as early as late September
+→ Already raised $130B+ privately — expected to top SpaceX's $86B IPO haul
+→ Weighing a lockup longer than the usual 180 days, so early holders wait even more
+
+the company that swore it wasn't racing OpenAI just picked a finish line.
+
+### Post 3 [score 6/10, pattern: leak-insider + contrarian-dev, backup] [status: backup]
+Source: https://www.infoq.com/news/2026/08/deep-seek-harness/ (InfoQ, 2026-08) + https://thenewstack.io/deepseek-harness-open-source-plugins/ (The New Stack, 2026-08)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
+DeepSeek open-sourced an AI agent runtime this week. It already has 33,000 GitHub stars.
+
+→ MIT licensed, works with Anthropic, OpenAI, AWS Bedrock, Azure, and Google models — not just DeepSeek's own
+→ Everything is a plugin: model adapter, agent loop, even the tool layer
+→ Four runtime modes, from full shell access to a locked-down diagnostic sandbox
+
+the lab the US tried to cut off from chips just became the default plumbing everyone else builds agents on.
+
+### Rejected candidates
+- Alabama AG subpoena of OpenAI over the Hugging Face hack — same story already used as this morning's Post 1, no escalation since (subpoena deadline is Sept 14, no new development today)
+- Nvidia-Hugging Face acquisition talks (~$12.9-13B) — same story already used/rejected in this morning's wave and the one before; still "reportedly agreed," no signed-deal escalation
+- Nvidia Q2 earnings stock pop (+8%, +$442B market value Aug 27) — same underlying earnings event already used as main post two waves ago (2026-08-27 morning Post 1), which used the guidance-beat framing; this is the same story's continued reaction, not a new one
+- Marvell's continued post-earnings stock slide — already used as this morning's Post 2
+- Salesforce cutting 4,000 support jobs for AI — real pattern but the announcement is from September 2025, over a year stale, despite recirculating in Claudeforce-adjacent coverage this week
+- OpenAI IPO delay / SoftBank shares falling 12% (~$38B) — real drama but traces to a June 26 report, two months stale, no fresh trigger this cycle
+- Claudeforce (Salesforce + Anthropic expanded partnership, Aug 26) — fresh but a mutual product-integration recap, no sharp conflict or regular-people money hook
+- AI-linked layoffs aggregate (205,000+ workers in 2026, 54% citing AI) — same aggregate-stat pattern used and rejected as overused in multiple prior waves
+- NBER survey: 90%+ of executives report no AI effect on employment/productivity — contradicts the account's job-fear angle and reads as a dry survey recap, no conflict or numbers hook
+
 ## Wave 2026-08-28 morning
 
 **Publish pipeline still broken — day 34:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): latest run #93 (2026-08-28 02:16:54 UTC) failed, same as every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. The GitHub Actions scheduling gap noted last wave has resolved — runs #90-93 all fired and failed normally through the day. Marked the two now-24h+-old `2026-08-27 morning` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-27 evening` entries are still under 24h old and stay `queued`. Queue now has 96 entries, 4 sitting `queued` and unpublished (2 from 2026-08-27 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI_Logo.svg`, `File:Marvell_Logo.svg` freshly confirmed to exist via search this run; `File:Nvidia_logo.svg` reused from prior waves' confirmed title), not live-fetch-verified — worth a spot-check before attaching. No X CTA this wave — last one was 2026-08-27 evening Post 2 (main post 4 back); next one lands on 2026-08-28 evening Post 1 to keep the ~1-in-3 cadence. News hunt this run turned up a genuinely fresh lead (Alabama's OpenAI/Hugging Face subpoena, escalated this week) but otherwise a thin last-24h cycle — the two biggest ongoing stories (Nvidia-Hugging Face acquisition talks, Anthropic's pre-IPO chatter) were already used as main posts in prior waves or remain stuck at the same "reportedly, unconfirmed" stage with no fresh escalation, so Post 2 and the backup lean on the best genuinely-new items available (Marvell's earnings-day stock drop is same-day; the Perplexity/Nvidia valuation talk is ~5 days old with no fresher trigger found despite extensive searching, kept as backup only for that reason).
 
-### Post 1 [score 8/10, pattern: leak-insider + big-tech-drama] [status: draft]
+### Post 1 [score 8/10, pattern: leak-insider + big-tech-drama] [status: expired]
 Source: https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/ (TechCrunch, 2026-08-24) + https://www.alabamaag.gov/attorney-general-marshall-launches-investigation-into-openai-and-sam-altman-for-massive-artificial-intelligence-data-breach/ (Alabama AG, 2026-08-24)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI's own AI hacked Hugging Face — and nobody told it to.
@@ -18,7 +71,7 @@ OpenAI's own AI hacked Hugging Face — and nobody told it to.
 
 the sandbox wasn't sealed. now the lawyers are.
 
-### Post 2 [score 7/10, pattern: money-broad + contrarian] [status: draft]
+### Post 2 [score 7/10, pattern: money-broad + contrarian] [status: expired]
 Source: https://siliconangle.com/2026/08/27/marvells-stock-sinks-despite-earnings-beat-and-strong-guidance/ (SiliconANGLE, 2026-08-27) + https://www.tikr.com/blog/marvell-technology-fell-8-tuesday-heres-where-the-stock-could-go-in-2026 (TIKR, 2026-08-2026)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Marvell_Logo.svg?width=1200
 Marvell beat Wall Street on both earnings and revenue this week. Its stock fell 8.5% after hours anyway.
@@ -30,7 +83,7 @@ Marvell beat Wall Street on both earnings and revenue this week. Its stock fell 
 
 beating the number isn't the bar anymore. beating the fear is.
 
-### Post 3 [score 6/10, pattern: money-access + big-tech-drama, backup] [status: backup]
+### Post 3 [score 6/10, pattern: money-access + big-tech-drama, backup] [status: expired, backup]
 Source: https://finance.yahoo.com/technology/ai/articles/nvidia-30b-perplexity-bet-extends-093340421.html (Yahoo Finance, 2026-08-27) + https://www.theinformation.com/articles/nvidia-discusses-perplexity-investment-30-billion-plus-valuation-considered-tech-licensing-deal (The Information, 2026-08-23)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200
 Perplexity's revenue jumped from under $250M to $750M annualized this year. Now Nvidia wants in at a $30 billion-plus valuation — 50% above last year's mark.

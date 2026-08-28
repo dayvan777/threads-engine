@@ -648,14 +648,14 @@
     "wave": "2026-08-27 evening",
     "text": "SpaceX stock fell back below its $135 IPO price today, as 319 million insider shares hit the market.\n\n\u2192 Second post-IPO lockup expiration \u2014 stock dropped to $134\n\u2192 Wipes out the entire IPO pop, down ~40% from June's $225.64 high\n\u2192 The first unlock (900M+ shares, early August) sent the stock UP 6%. This one sent it underwater.\n\nthe exit ramp opens for insiders first. retail finds out after the price already moved.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-27-evening-2",
     "wave": "2026-08-27 evening",
     "text": "Hugging Face turned down a smaller Nvidia offer last year. Today they're reportedly saying yes \u2014 for $13 billion.\n\n\u2192 Deal values Hugging Face at $12.9-13B, Bloomberg reports\n\u2192 ~3x its last funding valuation of $4.5B, set in 2023\n\u2192 Nvidia was already a backer \u2014 this makes it the owner\n\u2192 The platform devs treated as neutral ground just got bought by the company that makes the chips everyone needs\n\nopen source's landlord just changed.\n\nI track this stuff daily on my X \u2192 x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-28-morning-1",
@@ -668,6 +668,20 @@
     "id": "2026-08-28-morning-2",
     "wave": "2026-08-28 morning",
     "text": "Marvell beat Wall Street on both earnings and revenue this week. Its stock fell 8.5% after hours anyway.\n\n\u2192 $2.74B revenue, $0.94 EPS \u2014 both above estimates\n\u2192 Guidance: margins shrink next quarter as custom AI chip production ramps up\n\u2192 Stock still up 175% this year \u2014 investors took the excuse to cash out\n\u2192 Same week Nvidia beat by $4B and popped 4%. Not every AI chip story ends the same way.\n\nbeating the number isn't the bar anymore. beating the fear is.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-28-evening-1",
+    "wave": "2026-08-28 evening",
+    "text": "Nvidia just told Microsoft, Google, and Oracle: AI servers are about to cost 15% more.\n\n\u2192 Grace Blackwell and Vera Rubin systems both hit \u2014 shipments starting early 2027\n\u2192 Cause: memory chip prices outrunning supply from Samsung, SK Hynix, Micron\n\u2192 Nvidia runs ~75% margins. It's not eating this cost, you are.\n\nthe AI boom just found its tax collector \u2014 and it's whoever pays for compute downstream.\n\nI track this stuff daily on my X \u2192 x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-28-evening-2",
+    "wave": "2026-08-28 evening",
+    "text": "Anthropic just set a date to try to beat SpaceX's IPO record.\n\n\u2192 Prospectus goes public right after Labor Day, investor day mid-September\n\u2192 Listing possible as early as late September\n\u2192 Already raised $130B+ privately \u2014 expected to top SpaceX's $86B IPO haul\n\u2192 Weighing a lockup longer than the usual 180 days, so early holders wait even more\n\nthe company that swore it wasn't racing OpenAI just picked a finish line.",
     "image_url": null,
     "status": "queued"
   }
