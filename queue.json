@@ -676,14 +676,14 @@
     "wave": "2026-08-28 evening",
     "text": "Nvidia just told Microsoft, Google, and Oracle: AI servers are about to cost 15% more.\n\n→ Grace Blackwell and Vera Rubin systems both hit — shipments starting early 2027\n→ Cause: memory chip prices outrunning supply from Samsung, SK Hynix, Micron\n→ Nvidia runs ~75% margins. It's not eating this cost, you are.\n\nthe AI boom just found its tax collector — and it's whoever pays for compute downstream.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-28-evening-2",
     "wave": "2026-08-28 evening",
     "text": "Anthropic just set a date to try to beat SpaceX's IPO record.\n\n→ Prospectus goes public right after Labor Day, investor day mid-September\n→ Listing possible as early as late September\n→ Already raised $130B+ privately — expected to top SpaceX's $86B IPO haul\n→ Weighing a lockup longer than the usual 180 days, so early holders wait even more\n\nthe company that swore it wasn't racing OpenAI just picked a finish line.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-29-morning-1",
@@ -696,6 +696,20 @@
     "id": "2026-08-29-morning-2",
     "wave": "2026-08-29 morning",
     "text": "The Pentagon labeled Anthropic a national security threat — a tag usually reserved for foreign adversaries. A judge just called it illegal.\n\n→ DoD blocked up to $200M in contracts after Anthropic refused to let Claude run US surveillance or weapons\n→ Judge Rita Lin: retaliation dressed as policy, a First Amendment violation\n→ First American firm ever hit with that label\n\nsay no to weapons, get called a threat — until a judge reads the receipts.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-29-evening-1",
+    "wave": "2026-08-29 evening",
+    "text": "CrowdStrike just had its best trading day ever — stock up 20% in a session. Okta jumped 29% the same week.\n\n→ One Okta customer's Claude agent count exploded from 50 to 1,500 in weeks\n→ CrowdStrike's CEO: ~90 new digital identities to secure per employee, from AI agents alone\n→ Both companies beat earnings and raised guidance on the same trend\n\nevery AI agent you spin up is a new door somebody has to lock — that's now the fastest-growing business in tech.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-29-evening-2",
+    "wave": "2026-08-29 evening",
+    "text": "Waymo just published numbers that directly call out Tesla: 220M driverless miles, 94% fewer serious crashes than human drivers.\n\n→ Waymo's case: cameras + lidar + radar together, non-negotiable per its own engineers\n→ Tesla's bet: camera-only \"Tesla Vision\" — dropped radar in 2021, Musk calls lidar \"a fool's errand\"\n→ Tesla's own crash rate: roughly 3x worse than human drivers\n\none of them already carries 500,000 paying riders a week. the other bets your safety on a sensor Musk chose to skip.",
     "image_url": null,
     "status": "queued"
   }

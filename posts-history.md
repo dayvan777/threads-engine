@@ -1,12 +1,61 @@
 # Posts History
 
+## Wave 2026-08-29 evening
+
+**Publish pipeline still broken — day 37:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): latest run #99 (2026-08-29 14:04:18 UTC) failed, same as every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-28 evening` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-29 morning` entries are still under 24h old and stay `queued`. Queue now has 102 entries, 4 sitting `queued` and unpublished (2 from 2026-08-29 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch returned `EGRESS_BLOCKED` on every external domain tried this run (commons.wikimedia.org, cnbc.com, barchart.com, aol.com, cset.georgetown.edu) — same recurring environment-level restriction as every recent wave, now confirmed to block WebFetch broadly rather than just Commons. WebSearch was unaffected and used for all research, including for dating individual articles. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:CrowdStrike_logo.svg`, `File:Waymo_logo.svg`, `File:Alibaba_en_logo.svg` all freshly confirmed to exist via search this run), not live-fetch-verified — worth a spot-check before attaching. No X CTA this wave — last one was 2026-08-29 morning Post 2 (immediately preceding main post); next one lands on 2026-08-30 morning Post 1 to keep the ~1-in-3 cadence (CTA, no, no, CTA, no, no, CTA...). Today's freshest developments: CrowdStrike had its best trading day ever (+20%) and Okta jumped ~29% the same week after both beat Q2 earnings and raised guidance, tying the rally directly to AI agents — one Okta customer's Claude agent count went from 50 to 1,500 in weeks, and CrowdStrike's CEO put a number on the new attack surface (~90 digital identities to secure per employee) — a fresh (2026-08-27/28), broad money-relevant story (both are stocks regular people can own) with a clean contrarian angle: AI creates the very problem these companies get paid to solve; and Waymo's VP of onboard software published a direct rebuttal to Tesla's camera-only approach on 2026-08-27, backed by hard safety numbers (220M+ driverless miles, 94% fewer serious-injury crashes than human drivers, ~500,000 paid rides/week) against Tesla's reported crash rate of roughly 3x worse than human drivers — a genuine company-vs-company safety dispute with real numbers on both sides, relevant to anyone who might ride in either company's cars. Backup: Alibaba raised $10.2B in new shares (Hong Kong sale, 2026-08-23/28) earmarked for AI infrastructure, alongside a new Qwen3.8-Flash model release benchmarked against Anthropic's Opus 4.6 and DeepSeek's V4-Flash — fresh but leans niche/finance (Chinese share issuance mechanics), kept as backup since the two main slots already had strong broad-audience stories. Considered and rejected: Amazon Mechanical Turk shutdown — already used as this wave's immediate predecessor (2026-08-29 morning Post 1), no new escalation since; the Pentagon/Anthropic Rita Lin ruling — already used as this wave's immediate predecessor (2026-08-29 morning Post 2); DOJ reportedly planning to appeal that ruling, and AP sources reporting Hegseth once again pressuring Anthropic — investigated as a possible fresh escalation, but the underlying "Friday deadline" ultimatum and Defense Production Act threat trace back to a Hegseth-Amodei meeting on 2026-02-25, six months stale and just recirculating in this week's recap coverage of the court ruling, not a new event; Nvidia-Hugging Face acquisition (~$12.9B) — still "reportedly agreed," no signed-deal escalation, rejected in multiple prior waves on the same grounds; Google's A2A protocol joining the Agentic AI Foundation — real but a pure standards/protocol-consolidation recap (250+ members), no conflict or numbers hook, matches the account's "product feature recap" dud pattern; HSBC's 20,000-job AI-driven cut — real story but originally reported March 19-20, 2026, over five months stale despite recirculating; recent-graduate unemployment (5.7%, AI blamed by grads but disputed by economists) — same recycled narrative rejected in the immediately preceding wave, still traces to an August 18 NPR piece with no new trigger today; News Corp's $50M/year Meta content-licensing deal — real but originally reported March 2026, over five months stale.
+
+### Post 1 [score 7/10, pattern: money-broad + contrarian]
+Source: https://www.cnbc.com/2026/08/27/okta-skyrockets-20percent-and-crowdstrike-surges-15percent-leading-cyber-rally.html (CNBC, 2026-08-27) + https://247wallst.com/investing/2026/08/28/crowdstrike-and-okta-soar-as-ai-could-create-about-90-new-identities-per-worker/ (24/7 Wall St, 2026-08-28)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/CrowdStrike_logo.svg?width=1200
+CrowdStrike just had its best trading day ever — stock up 20% in a session. Okta jumped 29% the same week.
+
+→ One Okta customer's Claude agent count exploded from 50 to 1,500 in weeks
+→ CrowdStrike's CEO: ~90 new digital identities to secure per employee, from AI agents alone
+→ Both companies beat earnings and raised guidance on the same trend
+
+every AI agent you spin up is a new door somebody has to lock — that's now the fastest-growing business in tech.
+
+### Post 2 [score 8/10, pattern: big-tech-drama + money-broad]
+Source: https://theelectricviking.com/waymo-challenges-teslas-camera-only-self-driving-approach-200-million/ (The Electric Viking, 2026-08-27) + https://www.carscoops.com/2026/08/waymo-camera-only-self-driving/ (Carscoops, 2026-08-28)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Waymo_logo.svg?width=1200
+Waymo just published numbers that directly call out Tesla: 220M driverless miles, 94% fewer serious crashes than human drivers.
+
+→ Waymo's case: cameras + lidar + radar together, non-negotiable per its own engineers
+→ Tesla's bet: camera-only "Tesla Vision" — dropped radar in 2021, Musk calls lidar "a fool's errand"
+→ Tesla's own crash rate: roughly 3x worse than human drivers
+
+one of them already carries 500,000 paying riders a week. the other bets your safety on a sensor Musk chose to skip.
+
+### Post 3 [score 6/10, pattern: money-access + big-tech-drama, backup]
+Source: https://www.bloomberg.com/news/articles/2026-08-23/alibaba-to-raise-10-billion-by-selling-shares-for-ai-expansion (Bloomberg, 2026-08-23) + https://www.bloomberg.com/news/articles/2026-08-26/alibaba-releases-smaller-cost-effective-qwen-ai-model (Bloomberg, 2026-08-26)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Alibaba_en_logo.svg?width=1200
+Alibaba just raised $10.2 billion in new shares — every dollar earmarked for one goal: catching up to Anthropic and DeepSeek.
+
+→ New Qwen3.8-Flash model, 125B parameters, benchmarked directly against Opus 4.6 and DeepSeek V4-Flash
+→ Qwen family: 3 billion downloads worldwide — more than any other AI model family
+→ Cash goes straight into chips, cloud, and more models, not stock buybacks
+
+the AI race stopped being US vs China a while ago. now it's whoever can print the most shares fastest.
+
+### Rejected candidates
+- Amazon Mechanical Turk shutdown — already used as this wave's immediate predecessor (2026-08-29 morning Post 1), no new escalation since
+- Pentagon/Anthropic Rita Lin ruling — already used as this wave's immediate predecessor (2026-08-29 morning Post 2)
+- DOJ appeal of the ruling + renewed Hegseth pressure on Anthropic — investigated as a possible fresh escalation, but the "Friday deadline"/Defense Production Act threat traces back to a Hegseth-Amodei meeting on 2026-02-25, six months stale and just recirculating in this week's court-ruling recap coverage
+- Nvidia-Hugging Face acquisition (~$12.9B) — still "reportedly agreed," no signed-deal escalation, rejected on the same grounds in multiple prior waves
+- Google's A2A protocol joining the Agentic AI Foundation (250+ members) — real but a pure standards/protocol-consolidation recap, no conflict or numbers hook
+- HSBC's 20,000-job AI-driven cut — real but originally reported March 19-20, 2026, over five months stale despite recirculating
+- Recent-graduate unemployment (5.7%, AI blamed but disputed by economists) — same recycled narrative rejected in the immediately preceding wave, still traces to an August 18 NPR piece with no new trigger today
+- News Corp's $50M/year Meta content-licensing deal — real but originally reported March 2026, over five months stale
+
 ## Wave 2026-08-29 morning
 
 **Publish pipeline still broken — day 36:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): latest run #97 (2026-08-29 01:51:42 UTC) failed, same as every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-28 morning` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-28 evening` entries are still under 24h old and stay `queued`. Queue now has 100 entries, 4 sitting `queued` and unpublished (2 from 2026-08-28 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Amazon_logo.svg` and `File:Meta_Platforms_Inc._logo.svg` freshly confirmed to exist via search this run; `File:Anthropic_logo.svg` reused from prior waves' confirmed title), not live-fetch-verified — worth a spot-check before attaching. X CTA on Post 2 this wave — last one was 2026-08-28 evening Post 1, three main posts back (2026-08-28 evening Post 2 and 2026-08-28 morning's two posts had none), keeping cadence at ~1-in-3. Today's freshest developments: Amazon set a September 30 shutdown date for Mechanical Turk (plus SageMaker Ground Truth and Augmented AI, exiting human-data work entirely) — a fresh, broad-audience-relevant story with a strong irony hook since the platform Bezos once called "artificial artificial intelligence" is being killed by the AI it helped train; a federal judge (Rita Lin) ruled the Pentagon's blacklisting of Anthropic as a "supply chain risk" was illegal and violated the First Amendment, after Anthropic refused to let Claude be used for US surveillance or autonomous weapons and lost up to $200M in contracts over it — fresh (2026-08-28) and a clean company-vs-government conflict with a real legal outcome. Backup: Meta closed a privacy loophole in its AI smart glasses that let people keep recording after covering the capture LED, following months of TikTok tutorials teaching the workaround — fresh (2026-08-28) and broadly relatable as a consent/privacy story, kept as backup since two strong broad-audience posts already covered the main slots. Considered and rejected: Nvidia's AI server price hike (15%+, memory chip crunch) — same story already used as this wave's immediate predecessor (2026-08-28 evening Post 1), no new escalation since; Anthropic's IPO prospectus timeline — same story already used as this wave's immediate predecessor (2026-08-28 evening Post 2), still the same "after Labor Day" framing with no actual filing yet; Anthropic's first profitable quarter ($11.5B Q2 revenue) — real milestone but the announcement traces to August 17, over a week stale with only recap coverage since; Andreessen Horowitz's $1.1B hardware infrastructure fund — real but a VC-fundraising recap with no regular-people money hook or conflict; Amazon's acquisition of DuckLabs (DuckDB) — fresh (Aug 26) but a pure product/team acquisition with no disclosed price, no conflict, reads as a niche dev-tool recap; AI-linked layoffs aggregate (209,000+ workers in 2026, 54% citing AI) — same aggregate-stat pattern used and rejected as overused in multiple prior waves; recent-graduate unemployment (5.6-5.7%, AI blamed by grads but disputed by economists) — real ongoing narrative but not a single fresh news event, recycled from an April ZipRecruiter survey and multiple recap pieces through August with no new trigger today.
 
-### Post 1 [score 7/10, pattern: job-fear + contrarian]
+### Post 1 [score 7/10, pattern: job-fear + contrarian] [status: expired]
 Source: https://www.cnbc.com/2026/08/25/amazon-service-that-jeff-bezos-called-artificial-ai-is-shutting-down.html (CNBC, 2026-08-25) + https://www.techtimes.com/articles/325645/20260826/amazon-mechanical-turk-will-close-september-30-shutting-down-sagemaker-ground-truth-too.htm (Tech Times, 2026-08-26)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_logo.svg?width=1200
 Amazon just set a shutdown date for Mechanical Turk: Sept 30 — 21 years after Bezos launched it as "artificial artificial intelligence."
@@ -17,7 +66,7 @@ Amazon just set a shutdown date for Mechanical Turk: Sept 30 — 21 years after 
 
 the workforce that trained AI just got replaced by the thing it trained.
 
-### Post 2 [score 8/10, pattern: leak-insider + big-tech-drama] [X CTA]
+### Post 2 [score 8/10, pattern: leak-insider + big-tech-drama] [status: expired] [X CTA]
 Source: https://www.forbes.com/sites/siladityaray/2026/08/28/federal-judge-blocks-pentagons-illegal-designation-of-anthropic-as-a-supply-chain-risk/ (Forbes, 2026-08-28) + https://www.nbcnews.com/business/business-news/anthropic-pentagon-blacklist-claude-judge-rcna594825 (NBC News, 2026-08-28)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 The Pentagon labeled Anthropic a national security threat — a tag usually reserved for foreign adversaries. A judge just called it illegal.
@@ -30,7 +79,7 @@ say no to weapons, get called a threat — until a judge reads the receipts.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 6/10, pattern: leak-insider + privacy-broad, backup]
+### Post 3 [score 6/10, pattern: leak-insider + privacy-broad, backup] [status: expired, backup]
 Source: https://9to5google.com/2026/08/28/meta-ray-ban-smart-glasses-privacy-led-loophole-update/ (9to5Google, 2026-08-28) + https://www.engadget.com/2245776/meta-closing-loophole-that-allowed-people-to-record-with-smart-glasses-light-covered/ (Engadget, 2026-08-28)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
 Meta just closed the loophole that let people record you and hide it.
