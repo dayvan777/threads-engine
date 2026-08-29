@@ -1,12 +1,62 @@
 # Posts History
 
+## Wave 2026-08-29 morning
+
+**Publish pipeline still broken — day 36:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): latest run #97 (2026-08-29 01:51:42 UTC) failed, same as every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-28 morning` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-28 evening` entries are still under 24h old and stay `queued`. Queue now has 100 entries, 4 sitting `queued` and unpublished (2 from 2026-08-28 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Amazon_logo.svg` and `File:Meta_Platforms_Inc._logo.svg` freshly confirmed to exist via search this run; `File:Anthropic_logo.svg` reused from prior waves' confirmed title), not live-fetch-verified — worth a spot-check before attaching. X CTA on Post 2 this wave — last one was 2026-08-28 evening Post 1, three main posts back (2026-08-28 evening Post 2 and 2026-08-28 morning's two posts had none), keeping cadence at ~1-in-3. Today's freshest developments: Amazon set a September 30 shutdown date for Mechanical Turk (plus SageMaker Ground Truth and Augmented AI, exiting human-data work entirely) — a fresh, broad-audience-relevant story with a strong irony hook since the platform Bezos once called "artificial artificial intelligence" is being killed by the AI it helped train; a federal judge (Rita Lin) ruled the Pentagon's blacklisting of Anthropic as a "supply chain risk" was illegal and violated the First Amendment, after Anthropic refused to let Claude be used for US surveillance or autonomous weapons and lost up to $200M in contracts over it — fresh (2026-08-28) and a clean company-vs-government conflict with a real legal outcome. Backup: Meta closed a privacy loophole in its AI smart glasses that let people keep recording after covering the capture LED, following months of TikTok tutorials teaching the workaround — fresh (2026-08-28) and broadly relatable as a consent/privacy story, kept as backup since two strong broad-audience posts already covered the main slots. Considered and rejected: Nvidia's AI server price hike (15%+, memory chip crunch) — same story already used as this wave's immediate predecessor (2026-08-28 evening Post 1), no new escalation since; Anthropic's IPO prospectus timeline — same story already used as this wave's immediate predecessor (2026-08-28 evening Post 2), still the same "after Labor Day" framing with no actual filing yet; Anthropic's first profitable quarter ($11.5B Q2 revenue) — real milestone but the announcement traces to August 17, over a week stale with only recap coverage since; Andreessen Horowitz's $1.1B hardware infrastructure fund — real but a VC-fundraising recap with no regular-people money hook or conflict; Amazon's acquisition of DuckLabs (DuckDB) — fresh (Aug 26) but a pure product/team acquisition with no disclosed price, no conflict, reads as a niche dev-tool recap; AI-linked layoffs aggregate (209,000+ workers in 2026, 54% citing AI) — same aggregate-stat pattern used and rejected as overused in multiple prior waves; recent-graduate unemployment (5.6-5.7%, AI blamed by grads but disputed by economists) — real ongoing narrative but not a single fresh news event, recycled from an April ZipRecruiter survey and multiple recap pieces through August with no new trigger today.
+
+### Post 1 [score 7/10, pattern: job-fear + contrarian]
+Source: https://www.cnbc.com/2026/08/25/amazon-service-that-jeff-bezos-called-artificial-ai-is-shutting-down.html (CNBC, 2026-08-25) + https://www.techtimes.com/articles/325645/20260826/amazon-mechanical-turk-will-close-september-30-shutting-down-sagemaker-ground-truth-too.htm (Tech Times, 2026-08-26)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_logo.svg?width=1200
+Amazon just set a shutdown date for Mechanical Turk: Sept 30 — 21 years after Bezos launched it as "artificial artificial intelligence."
+
+→ Peaked at 500,000+ workers doing tasks for cents each: labeling data, transcribing audio — the grunt work behind AI training
+→ SageMaker Ground Truth dies the same day — Amazon exits human-data work entirely
+→ Real AI got good enough to do what those humans were paid to teach it
+
+the workforce that trained AI just got replaced by the thing it trained.
+
+### Post 2 [score 8/10, pattern: leak-insider + big-tech-drama] [X CTA]
+Source: https://www.forbes.com/sites/siladityaray/2026/08/28/federal-judge-blocks-pentagons-illegal-designation-of-anthropic-as-a-supply-chain-risk/ (Forbes, 2026-08-28) + https://www.nbcnews.com/business/business-news/anthropic-pentagon-blacklist-claude-judge-rcna594825 (NBC News, 2026-08-28)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+The Pentagon labeled Anthropic a national security threat — a tag usually reserved for foreign adversaries. A judge just called it illegal.
+
+→ DoD blocked up to $200M in contracts after Anthropic refused to let Claude run US surveillance or weapons
+→ Judge Rita Lin: retaliation dressed as policy, a First Amendment violation
+→ First American firm ever hit with that label
+
+say no to weapons, get called a threat — until a judge reads the receipts.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: leak-insider + privacy-broad, backup]
+Source: https://9to5google.com/2026/08/28/meta-ray-ban-smart-glasses-privacy-led-loophole-update/ (9to5Google, 2026-08-28) + https://www.engadget.com/2245776/meta-closing-loophole-that-allowed-people-to-record-with-smart-glasses-light-covered/ (Engadget, 2026-08-28)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
+Meta just closed the loophole that let people record you and hide it.
+
+→ Old trick: start filming with the LED lit, then cover it — recording kept going, light stayed dark
+→ New update kills that: cover the LED mid-recording now and it stops automatically
+→ Workaround had been circulating on TikTok for months before Meta patched it
+
+the light was never the real safeguard — the software finally is.
+
+### Rejected candidates
+- Nvidia AI server price hike (15%+, memory chip crunch) — same story already used as this wave's immediate predecessor (2026-08-28 evening Post 1), no new escalation since
+- Anthropic IPO prospectus timeline — same story already used as this wave's immediate predecessor (2026-08-28 evening Post 2), still the same "after Labor Day" framing, no actual filing yet
+- Anthropic's first profitable quarter ($11.5B Q2 revenue) — real milestone but dated August 17, over a week stale with only recap coverage since
+- Andreessen Horowitz's $1.1B hardware infrastructure fund — real but a VC-fundraising recap, no regular-people money hook or conflict
+- Amazon's acquisition of DuckLabs (DuckDB) — fresh (Aug 26) but a pure product/team acquisition, no disclosed price, no conflict, niche dev-tool recap
+- AI-linked layoffs aggregate (209,000+ workers in 2026, 54% citing AI) — same aggregate-stat pattern used and rejected as overused in multiple prior waves
+- Recent-graduate unemployment (5.6-5.7%, AI blamed but disputed by economists) — real ongoing narrative but not a single fresh news event, recycled from an April survey with no new trigger today
+
 ## Wave 2026-08-28 evening
 
 **Publish pipeline still broken — day 35:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): latest run #93 (2026-08-28 02:16:54 UTC) failed, same as every scheduled run since 2026-08-04, and no newer run has fired since the morning wave's check. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-27 evening` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-28 morning` entries are still under 24h old and stay `queued`. Queue now has 98 entries, 4 sitting `queued` and unpublished (2 from 2026-08-28 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch to commons.wikimedia.org returned `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every recent wave). WebSearch was unaffected and used for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by previously-confirmed file titles (`File:Nvidia_logo.svg`, `File:Anthropic_logo.svg`, `File:DeepSeek_logo.svg` all reused from prior waves' confirmed titles), not live-fetch-verified this run — worth a spot-check before attaching. X CTA on Post 1 this wave, as flagged by the morning wave's notes — last one was 2026-08-27 evening Post 2, keeping cadence at ~1-in-3. Today's freshest developments: Nvidia told its server-building partners (feeding Microsoft, Google, Oracle) that Grace Blackwell and Vera Rubin system prices are rising 15%+ on shipments starting early 2027, driven by a memory-chip supply crunch — a genuinely new, broad-relevance story since it's the first "AI boom cost" story that lands on cloud bills rather than just company balance sheets; and Anthropic's IPO timeline got concrete for the first time (prospectus public after Labor Day, investor day mid-September, listing as early as late September, considering longer lockups and shareholder cash-outs) after this exact story family was rejected as stale/rumored in nearly every prior wave — this is the major new development the runbook requires before a rejected story returns. Backup leans niche-dev: DeepSeek open-sourced an MIT-licensed agent runtime (Harness) that already has 33,000 GitHub stars and works across Anthropic/OpenAI/AWS/Azure/Google models, not just its own. Considered and rejected: the Alabama/OpenAI subpoena and the Nvidia-Hugging Face acquisition talks — both already used as main or rejected items in this morning's own wave with no further escalation since; Nvidia's actual Q2 earnings stock pop (+8%, +$442B) — same underlying earnings event already used two waves ago (2026-08-27 morning Post 1) as the pre-reaction guidance beat; Marvell's continued post-earnings slide — already used as this morning's Post 2; Salesforce's 4,000 AI-driven support-job cuts — real pattern but the underlying announcement is from September 2025, over a year stale, despite recirculating in this week's Claudeforce coverage; OpenAI's IPO delay / SoftBank's 12% stock drop — real drama but traces back to a June 26 report, two months stale with no fresh trigger this cycle; Claudeforce (Salesforce + Anthropic's expanded partnership, announced Aug 26) — real and fresh but reads as a mutual product-integration recap without sharp conflict or a regular-people money hook.
 
-### Post 1 [score 8/10, pattern: money-broad + contrarian] [status: draft] [X CTA]
+### Post 1 [score 8/10, pattern: money-broad + contrarian] [status: expired] [X CTA]
 Source: https://www.vktr.com/ai-market/nvidia-tells-microsoft-google-oracle-that-ai-server-prices-are-going-up-more-than-15/ (VKTR, 2026-08-24) + https://finance.yahoo.com/technology/ai/articles/nvidia-customers-face-15-ai-220300580.html (Yahoo Finance, 2026-08-27)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200
 Nvidia just told Microsoft, Google, and Oracle: AI servers are about to cost 15% more.
@@ -19,7 +69,7 @@ the AI boom just found its tax collector — and it's whoever pays for compute d
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 2 [score 7/10, pattern: money-access + big-tech-drama] [status: draft]
+### Post 2 [score 7/10, pattern: money-access + big-tech-drama] [status: expired]
 Source: https://www.tradingview.com/news/reuters.com,2026:newsml_L4N44O1S2:0-anthropic-plans-to-publicly-unveil-ipo-prospectus-after-labor-day-the-information-reports/ (Reuters via TradingView, 2026-08-27) + https://finance.biggo.com/news/b286c72f-73d5-4406-adf1-27186161b20c (BigGo Finance, 2026-08-27)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Anthropic just set a date to try to beat SpaceX's IPO record.
@@ -31,7 +81,7 @@ Anthropic just set a date to try to beat SpaceX's IPO record.
 
 the company that swore it wasn't racing OpenAI just picked a finish line.
 
-### Post 3 [score 6/10, pattern: leak-insider + contrarian-dev, backup] [status: backup]
+### Post 3 [score 6/10, pattern: leak-insider + contrarian-dev, backup] [status: expired, backup]
 Source: https://www.infoq.com/news/2026/08/deep-seek-harness/ (InfoQ, 2026-08) + https://thenewstack.io/deepseek-harness-open-source-plugins/ (The New Stack, 2026-08)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
 DeepSeek open-sourced an AI agent runtime this week. It already has 33,000 GitHub stars.
