@@ -1,12 +1,68 @@
 # Posts History
 
+## Wave 2026-08-30 evening
+
+**Publish pipeline still broken — day 27:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` + `get_job_logs` on `threads-publish.yml`): latest run #103 (2026-08-30 14:05:14 UTC) failed with the identical error (`Error: THREADS_ACCESS_TOKEN is not set`), same as every scheduled run since 2026-08-04. Not re-escalating via push notification this run — the morning wave already escalated today (first re-escalation since 2026-08-23 evening) and nothing has changed about the failure itself since then. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-29 evening` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-30 morning` entries are still under 24h old and stay `queued`. Queue now has 106 entries, 4 sitting `queued` and unpublished (2 from 2026-08-30 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; WebFetch was not attempted (prior waves consistently report EGRESS_BLOCKED on external domains). Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:SoftBank_Group_logo.svg`, `File:Cursor_logo.svg` confirmed to exist via search this run; `File:Nvidia_logo.svg` reused from prior waves' confirmed title), not live-fetch-verified — worth a spot-check before attaching. X CTA on Post 2 this wave, keeping the ~1-in-3 cadence (last one was 2026-08-30 morning Post 1). Today's freshest developments: SoftBank is selling a record ¥1 trillion ($6.3B) retail bond in Japan, pricing September 4 — the biggest retail bond ever issued there — to help fund its $64.6B, ~13% stake in OpenAI (final $10B tranche due in October); retail buyers get a 4.3-4.9% coupon while SoftBank keeps all the equity upside, and the company still faces a $20B+ shortfall even after this raise — a fresh (reported 2026-08-24, pricing date brand new context), genuine money-access-for-regular-people story with a real deadline. And a fresh angle on this morning's own Cursor/OpenAI story: analysis piece (thestateofai.com, 2026-08-29) points out Anthropic's own track record — it cut Windsurf's Claude access on five days' notice in 2025 while OpenAI was circling it, and separately revoked OpenAI's own API access over unauthorized Claude benchmarking — undercuts its newly-announced move to increase Claude compute inside SpaceX-owned Cursor; kept as Post 2 despite touching the same underlying Cursor/SpaceX story as this morning's Post 2 because the actual content (Anthropic's own history, not OpenAI's decision) is a materially different angle. Backup leans money/big-tech-drama: Nvidia is reportedly finalizing a follow-on investment in Perplexity at a $30B+ valuation — the same company it supplies chips to — with a tech critic's "bailing out AI firms" framing and confirmed US/EU antitrust scrutiny of Nvidia's investor-supplier double role; kept as backup only since this exact story (Nvidia-Perplexity investment talks) was already used as a backup in the 2026-08-27 evening wave with no qualitatively new development beyond the critic quote and regulatory-scrutiny detail. Considered and rejected: the DeepSeek V4 Flash price hike (up to 1,100%, effective Aug 16-17) — same story family used and rejected as stale in numerous prior waves, still no fresh trigger; the Pentagon/Anthropic Rita Lin ruling (blacklist struck down) — already used as a main post in the 2026-08-29 morning wave, no new escalation since; Musk's "couldn't care less" reaction to the OpenAI/Cursor cutoff — same underlying story as this morning's Post 2, reaction quotes alone don't constitute a fresh angle; Nvidia's 15%+ AI server price hike — same story already used and rejected as stale in multiple prior waves (first used 2026-08-27 evening); Nvidia-Hugging Face acquisition (~$12.9B) — still "reportedly agreed," no signed-deal escalation, rejected in multiple prior waves on the same grounds; AI-linked layoffs aggregate (209,000+ workers, 54% citing AI) — same aggregate-stat pattern overused and rejected in multiple prior waves; JPMorgan's AI-bubble/dot-com warning and the Buffett-indicator/CAPE-ratio records — real but an ongoing sentiment narrative rather than a single fresh news event, same dud pattern as other aggregate-stat rejections; AWS Mechanical Turk shutdown — already used as a main post (2026-08-29 morning Post 1); Meta's smart-glasses LED-loophole fix — already used as backup (2026-08-29 morning Post 3); xAI's lawsuit against a photographer over Grok-generated CSAM allegations — real and fresh (2026-08-24) but too legally/morally fraught for this account's tone, no clean money or job-fear hook.
+
+### Post 1 [score 8/10, pattern: money-broad + contrarian]
+Source: https://www.bloomberg.com/news/articles/2026-08-24/softbank-plans-record-1-trillion-retail-bond-offering-in-japan (Bloomberg, 2026-08-24) + https://www.japantimes.co.jp/business/2026/08/24/companies/softbank-plan-bond-sale/ (Japan Times, 2026-08-24)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/SoftBank_Group_logo.svg?width=1200
+SoftBank just opened a $6.3 billion door for regular people to fund OpenAI — as bondholders, not owners.
+
+→ ¥1 trillion retail bond, prices Sept 4 — the biggest retail bond ever sold in Japan
+→ Funds part of SoftBank's $64.6B OpenAI stake (already ~13%)
+→ You get a 4.3-4.9% coupon. SoftBank keeps 100% of the equity upside
+→ SoftBank still faces a $20B+ shortfall on this bet even after the raise
+
+"invest in OpenAI" finally has a retail price tag — you just don't own any of it.
+
+### Post 2 [score 6/10, pattern: ecosystem-drama + contrarian] [X CTA]
+Source: https://www.thestateofai.com/news/openai-cursor-cutoff-anthropic-compute-bill (The State of AI, 2026-08-29) + https://wccftech.com/anthropic-pounces-as-openai-abandons-spacexs-cursor-vowing-to-increase-claude-compute-even-as-openai-cites-contract-distrust/ (WCCFTech, 2026-08-29)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Cursor_logo.svg?width=1200
+OpenAI cut Cursor off for being owned by Musk. Anthropic's own playbook says it should too — it just doesn't want to.
+
+→ 2025: Anthropic cut Windsurf's Claude access on 5 days' notice
+→ Also revoked OpenAI's own API access over Claude benchmarking
+→ SpaceX now owns Cursor — same red flag OpenAI walked away from
+→ Anthropic's move instead: increase Claude compute inside Cursor
+
+principles are for competitors. compute bills are for everyone else.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: money-broad + big-tech-drama, backup] [backup]
+Source: https://www.tradingview.com/news/stocktwits:3a1a9ca03094b:0-nvidia-reportedly-plans-to-put-more-money-in-perplexity-amid-circular-deal-concerns-critic-says-chipmaker-bailing-out-ai-firms/ (TradingView, 2026-08-29) + https://www.benzinga.com/markets/tech/26/08/61374579/nvidia-perplexity-30-billion-valuation-750-million-revenue-bezos (Benzinga, 2026-08-23)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200
+Nvidia sells AI chips to Perplexity. Now it wants a $30 billion stake in Perplexity too.
+
+→ Perplexity's revenue: $750M annualized, up from under $250M in January
+→ Nvidia already backs OpenAI's compute and Anthropic's infrastructure — stake #3
+→ A tech critic's line stuck: Nvidia is "bailing out" AI firms to keep them buying its chips
+→ US and EU regulators are already watching Nvidia's investor-supplier role
+
+when your supplier becomes your shareholder, whose numbers are you trusting?
+
+### Rejected candidates
+- DeepSeek V4 Flash price hike (up to 1,100%, effective Aug 16-17) — same story family used and rejected as stale in numerous prior waves
+- Pentagon/Anthropic Rita Lin ruling (blacklist struck down) — already used as a main post in the 2026-08-29 morning wave, no new escalation since
+- Musk's "couldn't care less" reaction to the OpenAI/Cursor cutoff — same underlying story as this morning's Post 2, reaction quotes alone aren't a fresh angle
+- Nvidia's 15%+ AI server price hike — same story already used and rejected as stale in multiple prior waves
+- Nvidia-Hugging Face acquisition (~$12.9B) — still "reportedly agreed," no signed-deal escalation, rejected in multiple prior waves
+- AI-linked layoffs aggregate (209,000+ workers, 54% citing AI) — same overused aggregate-stat pattern, rejected in multiple prior waves
+- JPMorgan AI-bubble/dot-com warning, Buffett-indicator/CAPE-ratio records — ongoing sentiment narrative, not a single fresh news event
+- AWS Mechanical Turk shutdown — already used as a main post (2026-08-29 morning Post 1)
+- Meta smart-glasses LED-loophole fix — already used as backup (2026-08-29 morning Post 3)
+- xAI lawsuit against a photographer over Grok-generated CSAM allegations — real and fresh but too legally/morally fraught for this account's tone, no clean money or job-fear hook
+
 ## Wave 2026-08-30 morning
 
 **Publish pipeline still broken — day 27 (calendar days since 2026-08-04; the "day N" count in prior waves had drifted to counting waves instead of calendar days, corrected here):** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` + `get_job_logs` on `threads-publish.yml`): latest run #101 (2026-08-29 21:05:27 UTC) failed with the identical error (`Error: THREADS_ACCESS_TOKEN is not set`), same as every scheduled run since 2026-08-04. **Re-escalating via push notification this run** — last escalation was 2026-08-23 evening, one week ago, and the secret is still unset with zero posts published in that window. Marked the two now-24h+-old `2026-08-29 morning` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-29 evening` entries are still under 24h old and stay `queued`. Queue now has 104 entries, 4 sitting `queued` and unpublished (2 from 2026-08-29 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research. WebFetch was not attempted this run (prior waves report it EGRESS_BLOCKED on external domains including Wikimedia); media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Anthropic_logo.svg`, `File:OpenAI_Logo.svg`, `File:Broadcom_logo_(2016-present).svg` all confirmed to exist via search this run), not live-fetch-verified — worth a spot-check before attaching. X CTA on Post 1 this wave, as flagged by the prior wave's notes — last one was 2026-08-29 morning Post 2, keeping cadence at ~1-in-3. Today's freshest developments: Anthropic is reportedly pitching IPO investors on a $30 trillion total-addressable-market opportunity — bigger than the $28.5T SpaceX itself pitched before its own record IPO — while targeting a ~$2 trillion valuation and up to $100B raised, with Q2 revenue more than doubling to $11.6B and 2028 revenue projected at $190-200B; a fresh (2026-08-27) escalation with concrete new numbers beyond the "after Labor Day" timeline used in a prior wave. And OpenAI announced (2026-08-29) it is ending Cursor's direct access to its models by November 12, after Cursor's acquisition by Elon Musk's SpaceX — OpenAI's stated reason is distrust that SpaceX will honor its terms of service, citing X's own prior contract breach after Musk's takeover; Anthropic immediately offered Cursor more Claude access, and OpenAI models reportedly made up only ~5% of Cursor's traffic anyway — a genuine, fresh company-vs-company conflict escalating the broader Musk-Altman feud. Backup leans niche-dev: OpenAI published first benchmarks (2026-08-25/26) claiming its Broadcom-built Jalapeño inference chip beats Nvidia's Blackwell on efficiency (1.5-3.6x) and latency, though Nvidia partisans note the comparison skips Nvidia's newer Rubin chip which uses the same HBM4 memory — kept as backup since the two main slots already had strong broad-audience stories. Considered and rejected: Nvidia-Hugging Face acquisition (~$12.9B) — still "reportedly agreed," no signed-deal escalation, rejected in multiple prior waves on the same grounds; Microsoft's 4,800-role Xbox-unit layoffs — real and fresh (reported this week) but the company explicitly said the cuts are not AI-replacement driven, weak fit for the job-fear pattern; AI-linked layoffs aggregate (209,000+ workers in 2026, 54% citing AI) — same aggregate-stat pattern used and rejected as overused in multiple prior waves; ChatGPT brief outage (2026-08-29) — minor, no numbers or stakes; OpenAI retiring DALL-E in ChatGPT (2026-08-30) — pure product-deprecation recap, matches the account's dud pattern; Andreessen Horowitz's $1.1B hardware infrastructure fund — already rejected in the immediately preceding wave, no new escalation since.
 
-### Post 1 [score 8/10, pattern: money-broad + big-tech-drama] [X CTA]
+### Post 1 [score 8/10, pattern: money-broad + big-tech-drama] [status: expired] [X CTA]
 Source: https://www.tipranks.com/news/anthropic-pitches-investors-a-30t-revenue-opportunity-bigger-than-spacexs-spcx-ipo-record (TipRanks, 2026-08-27) + https://qz.com/anthropic-ipo-investors-30-trillion-market-opportunity-082526 (Quartz, 2026-08-27)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Anthropic just pitched IPO investors a market bigger than SpaceX's record pitch: $30 trillion.
@@ -20,7 +76,7 @@ if you own an index fund, you're about to own a slice of whichever number turns 
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 2 [score 7/10, pattern: big-tech-drama + conflict]
+### Post 2 [score 7/10, pattern: big-tech-drama + conflict] [status: expired]
 Source: https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html (CNBC, 2026-08-29) + https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/ (OpenAI, 2026-08-29)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI just cut off Cursor — because SpaceX bought it.
@@ -32,7 +88,7 @@ OpenAI just cut off Cursor — because SpaceX bought it.
 
 the Musk-Altman feud just found its next casualty: your coding tool's model picker.
 
-### Post 3 [score 6/10, pattern: contrarian-dev + big-tech-drama, backup] [backup]
+### Post 3 [score 6/10, pattern: contrarian-dev + big-tech-drama, backup] [status: expired, backup]
 Source: https://www.cnbc.com/2026/08/26/openai-jalapeno-ai-chip-nvidia.html (CNBC, 2026-08-26) + https://www.forbes.com/sites/jonmarkman/2026/08/27/openai-publishes-first-jalapeo-benchmarks-against-nvidia-blackwell/ (Forbes, 2026-08-27)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Broadcom_logo_%282016-present%29.svg?width=1200
 OpenAI just published benchmarks claiming its own chip beats Nvidia's Blackwell.
