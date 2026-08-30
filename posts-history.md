@@ -1,12 +1,64 @@
 # Posts History
 
+## Wave 2026-08-30 morning
+
+**Publish pipeline still broken — day 27 (calendar days since 2026-08-04; the "day N" count in prior waves had drifted to counting waves instead of calendar days, corrected here):** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` + `get_job_logs` on `threads-publish.yml`): latest run #101 (2026-08-29 21:05:27 UTC) failed with the identical error (`Error: THREADS_ACCESS_TOKEN is not set`), same as every scheduled run since 2026-08-04. **Re-escalating via push notification this run** — last escalation was 2026-08-23 evening, one week ago, and the secret is still unset with zero posts published in that window. Marked the two now-24h+-old `2026-08-29 morning` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-29 evening` entries are still under 24h old and stay `queued`. Queue now has 104 entries, 4 sitting `queued` and unpublished (2 from 2026-08-29 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research. WebFetch was not attempted this run (prior waves report it EGRESS_BLOCKED on external domains including Wikimedia); media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Anthropic_logo.svg`, `File:OpenAI_Logo.svg`, `File:Broadcom_logo_(2016-present).svg` all confirmed to exist via search this run), not live-fetch-verified — worth a spot-check before attaching. X CTA on Post 1 this wave, as flagged by the prior wave's notes — last one was 2026-08-29 morning Post 2, keeping cadence at ~1-in-3. Today's freshest developments: Anthropic is reportedly pitching IPO investors on a $30 trillion total-addressable-market opportunity — bigger than the $28.5T SpaceX itself pitched before its own record IPO — while targeting a ~$2 trillion valuation and up to $100B raised, with Q2 revenue more than doubling to $11.6B and 2028 revenue projected at $190-200B; a fresh (2026-08-27) escalation with concrete new numbers beyond the "after Labor Day" timeline used in a prior wave. And OpenAI announced (2026-08-29) it is ending Cursor's direct access to its models by November 12, after Cursor's acquisition by Elon Musk's SpaceX — OpenAI's stated reason is distrust that SpaceX will honor its terms of service, citing X's own prior contract breach after Musk's takeover; Anthropic immediately offered Cursor more Claude access, and OpenAI models reportedly made up only ~5% of Cursor's traffic anyway — a genuine, fresh company-vs-company conflict escalating the broader Musk-Altman feud. Backup leans niche-dev: OpenAI published first benchmarks (2026-08-25/26) claiming its Broadcom-built Jalapeño inference chip beats Nvidia's Blackwell on efficiency (1.5-3.6x) and latency, though Nvidia partisans note the comparison skips Nvidia's newer Rubin chip which uses the same HBM4 memory — kept as backup since the two main slots already had strong broad-audience stories. Considered and rejected: Nvidia-Hugging Face acquisition (~$12.9B) — still "reportedly agreed," no signed-deal escalation, rejected in multiple prior waves on the same grounds; Microsoft's 4,800-role Xbox-unit layoffs — real and fresh (reported this week) but the company explicitly said the cuts are not AI-replacement driven, weak fit for the job-fear pattern; AI-linked layoffs aggregate (209,000+ workers in 2026, 54% citing AI) — same aggregate-stat pattern used and rejected as overused in multiple prior waves; ChatGPT brief outage (2026-08-29) — minor, no numbers or stakes; OpenAI retiring DALL-E in ChatGPT (2026-08-30) — pure product-deprecation recap, matches the account's dud pattern; Andreessen Horowitz's $1.1B hardware infrastructure fund — already rejected in the immediately preceding wave, no new escalation since.
+
+### Post 1 [score 8/10, pattern: money-broad + big-tech-drama] [X CTA]
+Source: https://www.tipranks.com/news/anthropic-pitches-investors-a-30t-revenue-opportunity-bigger-than-spacexs-spcx-ipo-record (TipRanks, 2026-08-27) + https://qz.com/anthropic-ipo-investors-30-trillion-market-opportunity-082526 (Quartz, 2026-08-27)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Anthropic just pitched IPO investors a market bigger than SpaceX's record pitch: $30 trillion.
+
+→ Targeting a $2T valuation, up to $100B raised
+→ Q2 revenue: $11.6B, more than doubled from Q1's $4.73B
+→ Projecting $190-200B in revenue by 2028
+→ SpaceX pitched $28.5T before its own IPO — this beats it before Anthropic's even filed
+
+if you own an index fund, you're about to own a slice of whichever number turns out real.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 2 [score 7/10, pattern: big-tech-drama + conflict]
+Source: https://www.cnbc.com/2026/08/29/openai-cursor-spacex-model-access.html (CNBC, 2026-08-29) + https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/ (OpenAI, 2026-08-29)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI just cut off Cursor — because SpaceX bought it.
+
+→ Nov 12: the date Cursor's direct access to OpenAI's models ends
+→ OpenAI's stated reason: Musk's companies don't honor contract terms — pointing to X's own breach after his takeover
+→ Anthropic immediately stepped in, promising more Claude support
+→ OpenAI models were only ~5% of Cursor's traffic anyway
+
+the Musk-Altman feud just found its next casualty: your coding tool's model picker.
+
+### Post 3 [score 6/10, pattern: contrarian-dev + big-tech-drama, backup] [backup]
+Source: https://www.cnbc.com/2026/08/26/openai-jalapeno-ai-chip-nvidia.html (CNBC, 2026-08-26) + https://www.forbes.com/sites/jonmarkman/2026/08/27/openai-publishes-first-jalapeo-benchmarks-against-nvidia-blackwell/ (Forbes, 2026-08-27)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Broadcom_logo_%282016-present%29.svg?width=1200
+OpenAI just published benchmarks claiming its own chip beats Nvidia's Blackwell.
+
+→ Jalapeño (built with Broadcom): 1.5-3.6x more efficient, far lower latency in OpenAI's own tests
+→ Nvidia's rebuttal: the comparison skips its newer Rubin chip, which uses the same HBM4 memory
+→ Low-volume production starts late 2026
+→ the real target: Nvidia's inference margins, not its flagship training chips
+
+the company paying Nvidia billions a year just published a benchmark arguing it shouldn't have to.
+
+### Rejected candidates
+- Nvidia-Hugging Face acquisition (~$12.9B) — still "reportedly agreed," no signed-deal escalation, rejected in multiple prior waves on the same grounds
+- Microsoft's 4,800-role Xbox-unit layoffs — real and fresh but company explicitly said not AI-replacement driven, weak fit for job-fear pattern
+- AI-linked layoffs aggregate (209,000+ workers in 2026, 54% citing AI) — same aggregate-stat pattern used and rejected as overused in multiple prior waves
+- ChatGPT brief outage (2026-08-29) — minor, no numbers or stakes
+- OpenAI retiring DALL-E in ChatGPT (2026-08-30) — pure product-deprecation recap, matches the account's dud pattern
+- Andreessen Horowitz's $1.1B hardware infrastructure fund — already rejected in the immediately preceding wave, no new escalation since
+
 ## Wave 2026-08-29 evening
 
 **Publish pipeline still broken — day 37:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): latest run #99 (2026-08-29 14:04:18 UTC) failed, same as every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself, still the same missing secret. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-28 evening` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-29 morning` entries are still under 24h old and stay `queued`. Queue now has 102 entries, 4 sitting `queued` and unpublished (2 from 2026-08-29 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch returned `EGRESS_BLOCKED` on every external domain tried this run (commons.wikimedia.org, cnbc.com, barchart.com, aol.com, cset.georgetown.edu) — same recurring environment-level restriction as every recent wave, now confirmed to block WebFetch broadly rather than just Commons. WebSearch was unaffected and used for all research, including for dating individual articles. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:CrowdStrike_logo.svg`, `File:Waymo_logo.svg`, `File:Alibaba_en_logo.svg` all freshly confirmed to exist via search this run), not live-fetch-verified — worth a spot-check before attaching. No X CTA this wave — last one was 2026-08-29 morning Post 2 (immediately preceding main post); next one lands on 2026-08-30 morning Post 1 to keep the ~1-in-3 cadence (CTA, no, no, CTA, no, no, CTA...). Today's freshest developments: CrowdStrike had its best trading day ever (+20%) and Okta jumped ~29% the same week after both beat Q2 earnings and raised guidance, tying the rally directly to AI agents — one Okta customer's Claude agent count went from 50 to 1,500 in weeks, and CrowdStrike's CEO put a number on the new attack surface (~90 digital identities to secure per employee) — a fresh (2026-08-27/28), broad money-relevant story (both are stocks regular people can own) with a clean contrarian angle: AI creates the very problem these companies get paid to solve; and Waymo's VP of onboard software published a direct rebuttal to Tesla's camera-only approach on 2026-08-27, backed by hard safety numbers (220M+ driverless miles, 94% fewer serious-injury crashes than human drivers, ~500,000 paid rides/week) against Tesla's reported crash rate of roughly 3x worse than human drivers — a genuine company-vs-company safety dispute with real numbers on both sides, relevant to anyone who might ride in either company's cars. Backup: Alibaba raised $10.2B in new shares (Hong Kong sale, 2026-08-23/28) earmarked for AI infrastructure, alongside a new Qwen3.8-Flash model release benchmarked against Anthropic's Opus 4.6 and DeepSeek's V4-Flash — fresh but leans niche/finance (Chinese share issuance mechanics), kept as backup since the two main slots already had strong broad-audience stories. Considered and rejected: Amazon Mechanical Turk shutdown — already used as this wave's immediate predecessor (2026-08-29 morning Post 1), no new escalation since; the Pentagon/Anthropic Rita Lin ruling — already used as this wave's immediate predecessor (2026-08-29 morning Post 2); DOJ reportedly planning to appeal that ruling, and AP sources reporting Hegseth once again pressuring Anthropic — investigated as a possible fresh escalation, but the underlying "Friday deadline" ultimatum and Defense Production Act threat trace back to a Hegseth-Amodei meeting on 2026-02-25, six months stale and just recirculating in this week's recap coverage of the court ruling, not a new event; Nvidia-Hugging Face acquisition (~$12.9B) — still "reportedly agreed," no signed-deal escalation, rejected in multiple prior waves on the same grounds; Google's A2A protocol joining the Agentic AI Foundation — real but a pure standards/protocol-consolidation recap (250+ members), no conflict or numbers hook, matches the account's "product feature recap" dud pattern; HSBC's 20,000-job AI-driven cut — real story but originally reported March 19-20, 2026, over five months stale despite recirculating; recent-graduate unemployment (5.7%, AI blamed by grads but disputed by economists) — same recycled narrative rejected in the immediately preceding wave, still traces to an August 18 NPR piece with no new trigger today; News Corp's $50M/year Meta content-licensing deal — real but originally reported March 2026, over five months stale.
 
-### Post 1 [score 7/10, pattern: money-broad + contrarian]
+### Post 1 [score 7/10, pattern: money-broad + contrarian] [status: expired]
 Source: https://www.cnbc.com/2026/08/27/okta-skyrockets-20percent-and-crowdstrike-surges-15percent-leading-cyber-rally.html (CNBC, 2026-08-27) + https://247wallst.com/investing/2026/08/28/crowdstrike-and-okta-soar-as-ai-could-create-about-90-new-identities-per-worker/ (24/7 Wall St, 2026-08-28)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/CrowdStrike_logo.svg?width=1200
 CrowdStrike just had its best trading day ever — stock up 20% in a session. Okta jumped 29% the same week.
@@ -17,7 +69,7 @@ CrowdStrike just had its best trading day ever — stock up 20% in a session. Ok
 
 every AI agent you spin up is a new door somebody has to lock — that's now the fastest-growing business in tech.
 
-### Post 2 [score 8/10, pattern: big-tech-drama + money-broad]
+### Post 2 [score 8/10, pattern: big-tech-drama + money-broad] [status: expired]
 Source: https://theelectricviking.com/waymo-challenges-teslas-camera-only-self-driving-approach-200-million/ (The Electric Viking, 2026-08-27) + https://www.carscoops.com/2026/08/waymo-camera-only-self-driving/ (Carscoops, 2026-08-28)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Waymo_logo.svg?width=1200
 Waymo just published numbers that directly call out Tesla: 220M driverless miles, 94% fewer serious crashes than human drivers.
@@ -28,7 +80,7 @@ Waymo just published numbers that directly call out Tesla: 220M driverless miles
 
 one of them already carries 500,000 paying riders a week. the other bets your safety on a sensor Musk chose to skip.
 
-### Post 3 [score 6/10, pattern: money-access + big-tech-drama, backup]
+### Post 3 [score 6/10, pattern: money-access + big-tech-drama, backup] [status: expired, backup]
 Source: https://www.bloomberg.com/news/articles/2026-08-23/alibaba-to-raise-10-billion-by-selling-shares-for-ai-expansion (Bloomberg, 2026-08-23) + https://www.bloomberg.com/news/articles/2026-08-26/alibaba-releases-smaller-cost-effective-qwen-ai-model (Bloomberg, 2026-08-26)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Alibaba_en_logo.svg?width=1200
 Alibaba just raised $10.2 billion in new shares — every dollar earmarked for one goal: catching up to Anthropic and DeepSeek.
