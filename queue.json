@@ -732,14 +732,14 @@
     "wave": "2026-08-30 evening",
     "text": "SoftBank just opened a $6.3 billion door for regular people to fund OpenAI — as bondholders, not owners.\n\n→ ¥1 trillion retail bond, prices Sept 4 — the biggest retail bond ever sold in Japan\n→ Funds part of SoftBank's $64.6B OpenAI stake (already ~13%)\n→ You get a 4.3-4.9% coupon. SoftBank keeps 100% of the equity upside\n→ SoftBank still faces a $20B+ shortfall on this bet even after the raise\n\n\"invest in OpenAI\" finally has a retail price tag — you just don't own any of it.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-30-evening-2",
     "wave": "2026-08-30 evening",
     "text": "OpenAI cut Cursor off for being owned by Musk. Anthropic's own playbook says it should too — it just doesn't want to.\n\n→ 2025: Anthropic cut Windsurf's Claude access on 5 days' notice\n→ Also revoked OpenAI's own API access over Claude benchmarking\n→ SpaceX now owns Cursor — same red flag OpenAI walked away from\n→ Anthropic's move instead: increase Claude compute inside Cursor\n\nprinciples are for competitors. compute bills are for everyone else.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-31-morning-1",
@@ -752,6 +752,20 @@
     "id": "2026-08-31-morning-2",
     "wave": "2026-08-31 morning",
     "text": "DeepSeek just tripled its own valuation in two months — from $50 billion in June to $74 billion now.\n\n→ Raising $7.4B (¥50B) from Tencent, CATL and state-backed funds\n→ Cash earmarked for more compute and model research\n→ Setting up a 2027 IPO on Shanghai's STAR Market\n\nThe US spent two years trying to choke China's AI chip supply. The lab it was supposed to slow down just got $24 billion richer.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-31-evening-1",
+    "wave": "2026-08-31 evening",
+    "text": "Nvidia just spent $3.5B tightening its grip on the AI chip ecosystem — and its own stock dropped 5% the same day.\n\n→ Buying convertible bonds in MediaTek, expanding a years-long partnership\n→ MediaTek plugs into Nvidia's data centers via NVLink Fusion\n→ Investors sold the stock like it was bad news, not good\n\nwriting checks to your own supply chain isn't confidence. it's insurance.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-31-evening-2",
+    "wave": "2026-08-31 evening",
+    "text": "Anthropic's IPO — as big as SpaceX's record $86B debut, maybe bigger — is about to swallow the entire fall listing calendar.\n\n→ Targeting September or early October, ~$965B private valuation talks underway\n→ Bankers warn of a jammed September: Labor Day, a Fed meeting, and the election all competing for attention\n→ Last time this happened, 14 companies rushed IPOs before SpaceX's debut — average loss: 9.5%\n\ngetting out before the biggest listing of the year isn't a strategy. it's a stampede.",
     "image_url": null,
     "status": "queued"
   }

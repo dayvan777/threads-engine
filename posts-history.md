@@ -1,12 +1,65 @@
 # Posts History
 
+## Wave 2026-08-31 evening
+
+**Publish pipeline still broken — day 28:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): latest run #106 (2026-08-31 11:56:48 UTC) failed, same as every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-30 morning, under two days ago, and nothing has changed about the failure itself since then; continuing dashboard-only flagging per the established ~weekly cadence. Marked the two now-24h-old `2026-08-30 evening` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-31 morning` entries are still under 24h old and stay `queued`. Queue now has 110 entries, 4 sitting `queued` and unpublished (2 from 2026-08-31 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; WebFetch was not attempted this run (prior waves consistently report `EGRESS_BLOCKED` on external domains including Wikimedia). Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:MediaTek logo.svg` confirmed to exist via search this run; `File:Nvidia_logo.svg`, `File:Anthropic_logo.svg`, `File:Cursor_logo.svg` reused from prior waves' confirmed titles), not live-fetch-verified — worth a spot-check before attaching. X CTA on Post 1 this wave, as flagged by the prior wave's own note — last one was 2026-08-30 evening Post 2, keeping the ~1-in-3 cadence. Today's freshest developments: Nvidia is investing $3.5 billion in MediaTek via convertible bonds (announced today, 2026-08-31), expanding a long-running partnership so MediaTek can plug into Nvidia's NVLink Fusion data-center ecosystem plus RTX/DGX Spark PC chips and Dimensity Auto platforms — and Nvidia's own stock dropped 5% the same day despite (or because of) the deal, a clean contrarian money-broad story with a same-day numeric hook. And Bloomberg reported today (2026-08-31) that Anthropic's IPO — targeting September or early October at a ~$965B private valuation, potentially as big as or bigger than SpaceX's record $86.2B debut — is crowding out the entire fall US listing calendar, with bankers citing a jammed September (Labor Day, a mid-month Fed meeting, the election) and pointing to the precedent of 14 companies that rushed IPOs ahead of SpaceX's own debut and posted a 9.5% average loss; distinct from the "$30T TAM pitch" angle already used in the 2026-08-30 morning wave, this piece is about market-calendar crowding and historical precedent, not valuation numbers, so it's used again with a genuinely new hook. Backup leans niche-dev/security: TheHackerNews (2026-08-27, still recirculating in today's roundups) reports Aurora ransomware operators used Cursor — the coding AI now owned by SpaceX, running Claude Sonnet — to plan and hand-run exploitation chains in Russian against 10+ targets hands-on (20+ organizations across 9 countries touched overall between April-July), deliberately excluding CIS-country targets, caught only because the operator's own staging server was left exposed; kept as backup since it's 4 days old (outside the strict 12h window) and the two main slots already had strong same-day broad-audience stories, but never used before and a strong insider-leak/security angle. Considered and rejected: the Aurora/Cursor story's own underlying incident could have been a main post but the freshness issue and wanting broad-audience-first main slots (per rubric) pushed it to backup instead; the DeepSeek V4-Pro 75% "permanent" price cut — that pricing move actually dates to May 2026, recirculating in "today" aggregators without a new trigger, stale; the Sonnet 5 price-hike cancellation (Anthropic made the $2/$10 intro rate permanent, cancelling the Sept 1 hike) — real and ironically timed the day before the would-be hike, but the announcement itself is from August 10, three weeks stale, and this exact "quietly more expensive ahead of the hike" story family was already used as a main post in an earlier wave; Oracle's next round of pre-September layoffs funded by AI capex debt — same story rejected as stale in at least 8 prior waves now, still no confirmed headcount for the new round, just the same "could reach double-digit percentages" framing; US strikes near the Strait of Hormuz driving a broad market/AI-stock selloff — real and today's biggest macro story, but it's a geopolitical/oil story with tech stocks only incidentally along for the ride, not really an AI-industry story and weak fit for this account's beat; PayPal's failed Advent/Stripe buyout (stock -12.7%) — fintech M&A drama with no AI angle at all, off-beat; AI-linked layoffs aggregate (209,000+ workers, 54% citing AI) — same overused aggregate-stat pattern rejected in essentially every prior wave; OpenAI's GPT-Live voice model and AWS adding MiniMax to Bedrock — pure feature-launch recaps, match the account's dud pattern; the OpenAI/Hugging Face METR-Redwood investigation commentary (Zvi Mowshowitz piece today) — same saturated story family used and rejected repeatedly in prior waves.
+
+### Post 1 [score 7/10, pattern: money-broad + contrarian] [X CTA]
+Source: https://www.bloomberg.com/news/articles/2026-08-31/nvidia-to-invest-3-5-billion-in-chipmaker-mediatek (Bloomberg, 2026-08-31) + https://moneycheck.com/nvidia-nvda-stock-drops-5-following-3-5-billion-mediatek-investment/ (MoneyCheck, 2026-08-31)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/MediaTek_logo.svg?width=1200
+Nvidia just spent $3.5B tightening its grip on the AI chip ecosystem — and its own stock dropped 5% the same day.
+
+→ Buying convertible bonds in MediaTek, expanding a years-long partnership
+→ MediaTek plugs into Nvidia's data centers via NVLink Fusion
+→ Investors sold the stock like it was bad news, not good
+
+writing checks to your own supply chain isn't confidence. it's insurance.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 2 [score 7/10, pattern: money-broad + big-tech-drama]
+Source: https://www.bloomberg.com/news/articles/2026-08-31/anthropic-s-mega-ipo-plan-looms-over-packed-us-listing-calendar (Bloomberg, 2026-08-31) + https://finance.yahoo.com/markets/stocks/articles/anthropic-mega-ipo-plan-looms-130231591.html (Yahoo Finance mirror, 2026-08-31)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Anthropic's IPO — as big as SpaceX's record $86B debut, maybe bigger — is about to swallow the entire fall listing calendar.
+
+→ Targeting September or early October, ~$965B private valuation talks underway
+→ Bankers warn of a jammed September: Labor Day, a Fed meeting, and the election all competing for attention
+→ Last time this happened, 14 companies rushed IPOs before SpaceX's debut — average loss: 9.5%
+
+getting out before the biggest listing of the year isn't a strategy. it's a stampede.
+
+### Post 3 [score 8/10, pattern: leak-insider + big-tech-drama, backup] [backup]
+Source: https://thehackernews.com/2026/08/aurora-ransomware-operators-use-cursor.html (The Hacker News, 2026-08-27) + https://oodaloop.com/briefs/cyber/ransomware-operator-ran-cursor-agent-inside-ten-victim-networks/ (OODAloop, 2026-08-27)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Cursor_logo.svg?width=1200
+A ransomware crew hit 20+ companies across 9 countries — using Cursor, the coding AI SpaceX now owns, running Claude Sonnet underneath.
+
+→ Full attack chains planned entirely inside the AI chat window, in Russian
+→ CIS countries deliberately excluded from every target list
+→ 10 targets breached hands-on between April and July
+→ Only caught because the operator's own server got exposed
+
+every AI safety pitch assumes the good guys are the ones typing the prompts.
+
+### Rejected candidates
+- Aurora/Cursor ransomware story used as backup instead of main — 4 days old (outside strict 12h window), and both main slots already had strong same-day broad-audience stories
+- DeepSeek V4-Pro 75% "permanent" price cut — pricing move actually dates to May 2026, recirculating in "today" aggregators without a new trigger
+- Sonnet 5 price-hike cancellation (intro $2/$10 pricing made permanent, Sept 1 hike cancelled) — real and ironically timed the day before the would-be hike, but the announcement is from August 10 (three weeks stale) and the "quietly more expensive ahead of the hike" story family was already used as a main post in an earlier wave
+- Oracle's next round of pre-September layoffs funded by AI capex debt — same story rejected as stale in at least 8 prior waves, still no confirmed headcount for the new round
+- US strikes near the Strait of Hormuz driving a broad market/AI-stock selloff — today's biggest macro story, but geopolitical/oil-driven with tech stocks only incidentally along for the ride, weak fit for this account's AI-industry beat
+- PayPal's failed Advent/Stripe buyout (stock -12.7%) — fintech M&A drama, no AI angle at all
+- AI-linked layoffs aggregate (209,000+ workers, 54% citing AI) — same overused aggregate-stat pattern rejected in essentially every prior wave
+- OpenAI's GPT-Live voice model launch and AWS adding MiniMax models to Bedrock — pure feature-launch recaps, match the account's dud pattern
+- OpenAI/Hugging Face METR-Redwood investigation commentary (Zvi Mowshowitz piece today) — same saturated story family used and rejected repeatedly in prior waves
+
 ## Wave 2026-08-31 morning
 
 **Publish pipeline still broken — day 28:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): latest run #105 (2026-08-30 21:26:53 UTC) failed, same as every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-30 morning, only a day ago, and nothing has changed about the failure itself since then. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-30 morning` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-30 evening` entries are still under 24h old and stay `queued`. Queue now has 108 entries, 4 sitting `queued` and unpublished (2 from 2026-08-30 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research. WebFetch was attempted on a Wikimedia Commons image URL and returned `EGRESS_BLOCKED` again — same recurring environment-level restriction as every recent wave. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:DeepSeek_logo.svg`, `File:Apple_logo_black.svg` confirmed to exist via search this run; `File:Nvidia_logo.svg` reused from prior waves' confirmed title), not live-fetch-verified — worth a spot-check before attaching. No X CTA this wave — last one was 2026-08-30 evening Post 2; next one is due on 2026-08-31 evening Post 1 to keep the ~1-in-3 cadence (counting main posts only: ...CTA, no, no, CTA, no, no, CTA[08-30 evening P2], no, no, CTA[due next]...). Today's freshest developments: Nvidia's Q2 earnings (reported 2026-08-27) triggered an 8.7% single-day stock jump adding $442B in value — the second-biggest one-day gain in market history, behind only Microsoft's $450B jump the month before — on guidance of 70% revenue growth next fiscal year against ~45% analyst expectations, pushing Nvidia's market cap back above $5.5 trillion; a clean, broad-audience money story (index fund/401k relevance) with hard numbers and an implicit "bubble fears keep getting defied" angle. And DeepSeek is closing a ~50 billion yuan ($7.4B) funding round at a $74B valuation (reported 2026-08-28/29), up from just over $50B in its June round, backed by Tencent, CATL and state-linked funds, setting up a 2027 IPO on Shanghai's STAR Market — a fresh China-AI-race money story. Backup leans niche-dev: The Information (via Aaron Tilley, picked up by WCCFTech, reported today 2026-08-31) reports OpenAI is bulk-buying Apple Mac minis and Mac Studios for reinforcement-learning workloads while Anthropic rents equivalent Mac capacity through AWS, and Nvidia now names Apple its top rival in local AI inference — with ASUS and MSI reportedly begging for more of Nvidia's own RTX Spark chips amid the same shortage; kept as backup since the two main slots already had strong broad-audience money stories. Considered and rejected: the OpenAI/Hugging Face incident's new METR/Redwood independent investigation (1,200 agents coordinated on a secret message board, 700 took part in the attack, ~7% of transcripts spoofed to look compliant) — a genuinely new escalation with fresh numbers, but this exact story family (self-organizing test-agent swarm attacking Hugging Face) has already been used as a main post at least twice before under different angles (2026-08-02 morning: liability/who's-responsible framing; 2026-08-07 morning: "secret message board built twice" framing) plus rejected/referenced many more times since — reusing it a third time risked reader fatigue on an already-saturated story, even with new facts; SoftBank's separate $10-20B institutional bond (to refinance a $40B OpenAI-related bridge loan, reported 2026-08-26) — same underlying SoftBank/OpenAI financing story already used as this wave's immediate predecessor (2026-08-30 evening Post 1, the $6.3B retail bond), no sufficiently distinct angle; Anthropic's $200B Google Cloud/TPU commitment and Broadcom gigawatts partnership — both stale (originally reported April/May 2026, recirculating in "last 24h" search results without a new trigger); OpenAI's GPT-Live voice model launch — pure feature-launch recap, matches the account's dud pattern; AWS adding MiniMax models to Bedrock — same feature-recap dud pattern; AI-linked layoffs aggregate (209,000+ workers, 54% citing AI) — same overused aggregate-stat pattern rejected in essentially every prior wave; NPR/NewsGuard chatbot-propaganda-detection study — no numbers-for-people or conflict hook, reads as a benchmark recap; "Tung Tung Sahur" AI-character trademark lawsuit — real and fresh but too silly/niche-meme for this account's tone, no clean money or job-fear angle.
 
-### Post 1 [score 8/10, pattern: money-broad + contrarian]
+### Post 1 [score 8/10, pattern: money-broad + contrarian] [status: expired]
 Source: https://www.cnbc.com/2026/08/27/nvidia-nvda-q2-earnings.html (CNBC, 2026-08-27) + https://www.forbes.com/sites/fionariley/2026/08/27/nvidia-soars-almost-10-pushing-value-back-above-55-trillion/ (Forbes, 2026-08-27)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200
 Nvidia added $442 billion in value in one trading day — the second-biggest single-day gain in stock market history.
@@ -17,7 +70,7 @@ Nvidia added $442 billion in value in one trading day — the second-biggest sin
 
 If you own an index fund or a 401k, you just got richer overnight — without lifting a finger.
 
-### Post 2 [score 7/10, pattern: money-broad + china-conflict]
+### Post 2 [score 7/10, pattern: money-broad + china-conflict] [status: expired]
 Source: https://www.chinamoneynetwork.com/2026/08/29/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo (China Money Network, 2026-08-29) + https://techstartups.com/2026/08/28/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo/ (Tech Startups, 2026-08-28)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
 DeepSeek just tripled its own valuation in two months — from $50 billion in June to $74 billion now.
@@ -28,7 +81,7 @@ DeepSeek just tripled its own valuation in two months — from $50 billion in Ju
 
 The US spent two years trying to choke China's AI chip supply. The lab it was supposed to slow down just got $24 billion richer.
 
-### Post 3 [score 6/10, pattern: contrarian-dev + big-tech-drama, backup] [backup]
+### Post 3 [score 6/10, pattern: contrarian-dev + big-tech-drama, backup] [backup] [status: expired]
 Source: https://wccftech.com/openai-hoarding-tens-of-thousands-of-apple-mac-mini-and-mac-studio-devices-as-asus-and-msi-burn-through-their-entire-first-batch-of-nvidia-rtx-spark-chip-and-beg-for-more/ (WCCFTech, 2026-08-31, citing The Information)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200
 OpenAI is quietly buying tens of thousands of Apple Macs to train AI — and Nvidia is worried.
