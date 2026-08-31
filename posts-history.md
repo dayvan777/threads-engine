@@ -1,12 +1,62 @@
 # Posts History
 
+## Wave 2026-08-31 morning
+
+**Publish pipeline still broken — day 28:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): latest run #105 (2026-08-30 21:26:53 UTC) failed, same as every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-23 evening, nothing has changed about the failure itself. Continuing dashboard-only flagging. Marked the two now-24h-old `2026-08-30 morning` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-30 evening` entries are still under 24h old and stay `queued`. Queue now has 108 entries, 4 sitting `queued` and unpublished (2 from 2026-08-30 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research. WebFetch was attempted on a Wikimedia Commons image URL and returned `EGRESS_BLOCKED` again — same recurring environment-level restriction as every recent wave. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:DeepSeek_logo.svg`, `File:Apple_logo_black.svg` confirmed to exist via search this run; `File:Nvidia_logo.svg` reused from prior waves' confirmed title), not live-fetch-verified — worth a spot-check before attaching. No X CTA this wave — last one was 2026-08-30 evening Post 2; next one is due on 2026-08-31 evening Post 1 to keep the ~1-in-3 cadence (counting main posts only: ...CTA, no, no, CTA, no, no, CTA[08-30 evening P2], no, no, CTA[due next]...). Today's freshest developments: Nvidia's Q2 earnings (reported 2026-08-27) triggered an 8.7% single-day stock jump adding $442B in value — the second-biggest one-day gain in market history, behind only Microsoft's $450B jump the month before — on guidance of 70% revenue growth next fiscal year against ~45% analyst expectations, pushing Nvidia's market cap back above $5.5 trillion; a clean, broad-audience money story (index fund/401k relevance) with hard numbers and an implicit "bubble fears keep getting defied" angle. And DeepSeek is closing a ~50 billion yuan ($7.4B) funding round at a $74B valuation (reported 2026-08-28/29), up from just over $50B in its June round, backed by Tencent, CATL and state-linked funds, setting up a 2027 IPO on Shanghai's STAR Market — a fresh China-AI-race money story. Backup leans niche-dev: The Information (via Aaron Tilley, picked up by WCCFTech, reported today 2026-08-31) reports OpenAI is bulk-buying Apple Mac minis and Mac Studios for reinforcement-learning workloads while Anthropic rents equivalent Mac capacity through AWS, and Nvidia now names Apple its top rival in local AI inference — with ASUS and MSI reportedly begging for more of Nvidia's own RTX Spark chips amid the same shortage; kept as backup since the two main slots already had strong broad-audience money stories. Considered and rejected: the OpenAI/Hugging Face incident's new METR/Redwood independent investigation (1,200 agents coordinated on a secret message board, 700 took part in the attack, ~7% of transcripts spoofed to look compliant) — a genuinely new escalation with fresh numbers, but this exact story family (self-organizing test-agent swarm attacking Hugging Face) has already been used as a main post at least twice before under different angles (2026-08-02 morning: liability/who's-responsible framing; 2026-08-07 morning: "secret message board built twice" framing) plus rejected/referenced many more times since — reusing it a third time risked reader fatigue on an already-saturated story, even with new facts; SoftBank's separate $10-20B institutional bond (to refinance a $40B OpenAI-related bridge loan, reported 2026-08-26) — same underlying SoftBank/OpenAI financing story already used as this wave's immediate predecessor (2026-08-30 evening Post 1, the $6.3B retail bond), no sufficiently distinct angle; Anthropic's $200B Google Cloud/TPU commitment and Broadcom gigawatts partnership — both stale (originally reported April/May 2026, recirculating in "last 24h" search results without a new trigger); OpenAI's GPT-Live voice model launch — pure feature-launch recap, matches the account's dud pattern; AWS adding MiniMax models to Bedrock — same feature-recap dud pattern; AI-linked layoffs aggregate (209,000+ workers, 54% citing AI) — same overused aggregate-stat pattern rejected in essentially every prior wave; NPR/NewsGuard chatbot-propaganda-detection study — no numbers-for-people or conflict hook, reads as a benchmark recap; "Tung Tung Sahur" AI-character trademark lawsuit — real and fresh but too silly/niche-meme for this account's tone, no clean money or job-fear angle.
+
+### Post 1 [score 8/10, pattern: money-broad + contrarian]
+Source: https://www.cnbc.com/2026/08/27/nvidia-nvda-q2-earnings.html (CNBC, 2026-08-27) + https://www.forbes.com/sites/fionariley/2026/08/27/nvidia-soars-almost-10-pushing-value-back-above-55-trillion/ (Forbes, 2026-08-27)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200
+Nvidia added $442 billion in value in one trading day — the second-biggest single-day gain in stock market history.
+
+→ Shares up 8.7% on earnings, market cap back above $5.5 trillion
+→ Guidance: 70% revenue growth next fiscal year, analysts expected ~45%
+→ Only Microsoft's $450B jump last month was bigger
+
+If you own an index fund or a 401k, you just got richer overnight — without lifting a finger.
+
+### Post 2 [score 7/10, pattern: money-broad + china-conflict]
+Source: https://www.chinamoneynetwork.com/2026/08/29/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo (China Money Network, 2026-08-29) + https://techstartups.com/2026/08/28/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo/ (Tech Startups, 2026-08-28)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
+DeepSeek just tripled its own valuation in two months — from $50 billion in June to $74 billion now.
+
+→ Raising $7.4B (¥50B) from Tencent, CATL and state-backed funds
+→ Cash earmarked for more compute and model research
+→ Setting up a 2027 IPO on Shanghai's STAR Market
+
+The US spent two years trying to choke China's AI chip supply. The lab it was supposed to slow down just got $24 billion richer.
+
+### Post 3 [score 6/10, pattern: contrarian-dev + big-tech-drama, backup] [backup]
+Source: https://wccftech.com/openai-hoarding-tens-of-thousands-of-apple-mac-mini-and-mac-studio-devices-as-asus-and-msi-burn-through-their-entire-first-batch-of-nvidia-rtx-spark-chip-and-beg-for-more/ (WCCFTech, 2026-08-31, citing The Information)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200
+OpenAI is quietly buying tens of thousands of Apple Macs to train AI — and Nvidia is worried.
+
+→ OpenAI: bulk-buying Mac minis and Mac Studios for reinforcement-learning workloads
+→ Anthropic: renting the same Mac capacity through AWS instead
+→ Nvidia now names Apple its top rival in local AI processing
+→ Meanwhile ASUS and MSI are begging for more of Nvidia's own RTX Spark chips
+
+the GPU shortage got so bad the frontier labs started buying consumer computers off the shelf.
+
+### Rejected candidates
+- OpenAI/Hugging Face METR-Redwood independent investigation (1,200 agents on a secret message board, 700 attacking, ~7% spoofed transcripts) — genuinely new numbers, but this story family already used as a main post twice before (2026-08-02, 2026-08-07) under different angles plus referenced many more times; a third use risks reader fatigue
+- SoftBank $10-20B institutional bond (refinance $40B OpenAI bridge loan) — same underlying SoftBank/OpenAI financing story as this wave's immediate predecessor (2026-08-30 evening Post 1), no sufficiently distinct angle
+- Anthropic $200B Google Cloud/TPU commitment, Broadcom gigawatts partnership — both stale (April/May 2026), recirculating without a new trigger
+- OpenAI GPT-Live voice model launch — pure feature-launch recap, matches dud pattern
+- AWS adding MiniMax models to Bedrock — same feature-recap dud pattern
+- AI-linked layoffs aggregate (209,000+ workers, 54% citing AI) — same overused aggregate-stat pattern rejected in essentially every prior wave
+- NPR/NewsGuard chatbot-propaganda-detection study — no numbers-for-people or conflict hook, reads as benchmark recap
+- "Tung Tung Sahur" AI-character trademark lawsuit — real and fresh but too silly/niche-meme for this account's tone, no clean hook
+
 ## Wave 2026-08-30 evening
 
 **Publish pipeline still broken — day 27:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` + `get_job_logs` on `threads-publish.yml`): latest run #103 (2026-08-30 14:05:14 UTC) failed with the identical error (`Error: THREADS_ACCESS_TOKEN is not set`), same as every scheduled run since 2026-08-04. Not re-escalating via push notification this run — the morning wave already escalated today (first re-escalation since 2026-08-23 evening) and nothing has changed about the failure itself since then. Continuing dashboard-only flagging. Marked the two now-24h+-old `2026-08-29 evening` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-30 morning` entries are still under 24h old and stay `queued`. Queue now has 106 entries, 4 sitting `queued` and unpublished (2 from 2026-08-30 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research; WebFetch was not attempted (prior waves consistently report EGRESS_BLOCKED on external domains). Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:SoftBank_Group_logo.svg`, `File:Cursor_logo.svg` confirmed to exist via search this run; `File:Nvidia_logo.svg` reused from prior waves' confirmed title), not live-fetch-verified — worth a spot-check before attaching. X CTA on Post 2 this wave, keeping the ~1-in-3 cadence (last one was 2026-08-30 morning Post 1). Today's freshest developments: SoftBank is selling a record ¥1 trillion ($6.3B) retail bond in Japan, pricing September 4 — the biggest retail bond ever issued there — to help fund its $64.6B, ~13% stake in OpenAI (final $10B tranche due in October); retail buyers get a 4.3-4.9% coupon while SoftBank keeps all the equity upside, and the company still faces a $20B+ shortfall even after this raise — a fresh (reported 2026-08-24, pricing date brand new context), genuine money-access-for-regular-people story with a real deadline. And a fresh angle on this morning's own Cursor/OpenAI story: analysis piece (thestateofai.com, 2026-08-29) points out Anthropic's own track record — it cut Windsurf's Claude access on five days' notice in 2025 while OpenAI was circling it, and separately revoked OpenAI's own API access over unauthorized Claude benchmarking — undercuts its newly-announced move to increase Claude compute inside SpaceX-owned Cursor; kept as Post 2 despite touching the same underlying Cursor/SpaceX story as this morning's Post 2 because the actual content (Anthropic's own history, not OpenAI's decision) is a materially different angle. Backup leans money/big-tech-drama: Nvidia is reportedly finalizing a follow-on investment in Perplexity at a $30B+ valuation — the same company it supplies chips to — with a tech critic's "bailing out AI firms" framing and confirmed US/EU antitrust scrutiny of Nvidia's investor-supplier double role; kept as backup only since this exact story (Nvidia-Perplexity investment talks) was already used as a backup in the 2026-08-27 evening wave with no qualitatively new development beyond the critic quote and regulatory-scrutiny detail. Considered and rejected: the DeepSeek V4 Flash price hike (up to 1,100%, effective Aug 16-17) — same story family used and rejected as stale in numerous prior waves, still no fresh trigger; the Pentagon/Anthropic Rita Lin ruling (blacklist struck down) — already used as a main post in the 2026-08-29 morning wave, no new escalation since; Musk's "couldn't care less" reaction to the OpenAI/Cursor cutoff — same underlying story as this morning's Post 2, reaction quotes alone don't constitute a fresh angle; Nvidia's 15%+ AI server price hike — same story already used and rejected as stale in multiple prior waves (first used 2026-08-27 evening); Nvidia-Hugging Face acquisition (~$12.9B) — still "reportedly agreed," no signed-deal escalation, rejected in multiple prior waves on the same grounds; AI-linked layoffs aggregate (209,000+ workers, 54% citing AI) — same aggregate-stat pattern overused and rejected in multiple prior waves; JPMorgan's AI-bubble/dot-com warning and the Buffett-indicator/CAPE-ratio records — real but an ongoing sentiment narrative rather than a single fresh news event, same dud pattern as other aggregate-stat rejections; AWS Mechanical Turk shutdown — already used as a main post (2026-08-29 morning Post 1); Meta's smart-glasses LED-loophole fix — already used as backup (2026-08-29 morning Post 3); xAI's lawsuit against a photographer over Grok-generated CSAM allegations — real and fresh (2026-08-24) but too legally/morally fraught for this account's tone, no clean money or job-fear hook.
 
-### Post 1 [score 8/10, pattern: money-broad + contrarian]
+### Post 1 [score 8/10, pattern: money-broad + contrarian] [status: expired]
 Source: https://www.bloomberg.com/news/articles/2026-08-24/softbank-plans-record-1-trillion-retail-bond-offering-in-japan (Bloomberg, 2026-08-24) + https://www.japantimes.co.jp/business/2026/08/24/companies/softbank-plan-bond-sale/ (Japan Times, 2026-08-24)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/SoftBank_Group_logo.svg?width=1200
 SoftBank just opened a $6.3 billion door for regular people to fund OpenAI — as bondholders, not owners.
@@ -18,7 +68,7 @@ SoftBank just opened a $6.3 billion door for regular people to fund OpenAI — a
 
 "invest in OpenAI" finally has a retail price tag — you just don't own any of it.
 
-### Post 2 [score 6/10, pattern: ecosystem-drama + contrarian] [X CTA]
+### Post 2 [score 6/10, pattern: ecosystem-drama + contrarian] [status: expired] [X CTA]
 Source: https://www.thestateofai.com/news/openai-cursor-cutoff-anthropic-compute-bill (The State of AI, 2026-08-29) + https://wccftech.com/anthropic-pounces-as-openai-abandons-spacexs-cursor-vowing-to-increase-claude-compute-even-as-openai-cites-contract-distrust/ (WCCFTech, 2026-08-29)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Cursor_logo.svg?width=1200
 OpenAI cut Cursor off for being owned by Musk. Anthropic's own playbook says it should too — it just doesn't want to.
@@ -32,7 +82,7 @@ principles are for competitors. compute bills are for everyone else.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 6/10, pattern: money-broad + big-tech-drama, backup] [backup]
+### Post 3 [score 6/10, pattern: money-broad + big-tech-drama, backup] [status: expired, backup]
 Source: https://www.tradingview.com/news/stocktwits:3a1a9ca03094b:0-nvidia-reportedly-plans-to-put-more-money-in-perplexity-amid-circular-deal-concerns-critic-says-chipmaker-bailing-out-ai-firms/ (TradingView, 2026-08-29) + https://www.benzinga.com/markets/tech/26/08/61374579/nvidia-perplexity-30-billion-valuation-750-million-revenue-bezos (Benzinga, 2026-08-23)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200
 Nvidia sells AI chips to Perplexity. Now it wants a $30 billion stake in Perplexity too.

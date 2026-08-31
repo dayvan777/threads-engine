@@ -718,14 +718,14 @@
     "wave": "2026-08-30 morning",
     "text": "Anthropic just pitched IPO investors a market bigger than SpaceX's record pitch: $30 trillion.\n\n→ Targeting a $2T valuation, up to $100B raised\n→ Q2 revenue: $11.6B, more than doubled from Q1's $4.73B\n→ Projecting $190-200B in revenue by 2028\n→ SpaceX pitched $28.5T before its own IPO — this beats it before Anthropic's even filed\n\nif you own an index fund, you're about to own a slice of whichever number turns out real.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-30-morning-2",
     "wave": "2026-08-30 morning",
     "text": "OpenAI just cut off Cursor — because SpaceX bought it.\n\n→ Nov 12: the date Cursor's direct access to OpenAI's models ends\n→ OpenAI's stated reason: Musk's companies don't honor contract terms — pointing to X's own breach after his takeover\n→ Anthropic immediately stepped in, promising more Claude support\n→ OpenAI models were only ~5% of Cursor's traffic anyway\n\nthe Musk-Altman feud just found its next casualty: your coding tool's model picker.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-30-evening-1",
@@ -738,6 +738,20 @@
     "id": "2026-08-30-evening-2",
     "wave": "2026-08-30 evening",
     "text": "OpenAI cut Cursor off for being owned by Musk. Anthropic's own playbook says it should too — it just doesn't want to.\n\n→ 2025: Anthropic cut Windsurf's Claude access on 5 days' notice\n→ Also revoked OpenAI's own API access over Claude benchmarking\n→ SpaceX now owns Cursor — same red flag OpenAI walked away from\n→ Anthropic's move instead: increase Claude compute inside Cursor\n\nprinciples are for competitors. compute bills are for everyone else.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-31-morning-1",
+    "wave": "2026-08-31 morning",
+    "text": "Nvidia added $442 billion in value in one trading day — the second-biggest single-day gain in stock market history.\n\n→ Shares up 8.7% on earnings, market cap back above $5.5 trillion\n→ Guidance: 70% revenue growth next fiscal year, analysts expected ~45%\n→ Only Microsoft's $450B jump last month was bigger\n\nIf you own an index fund or a 401k, you just got richer overnight — without lifting a finger.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-08-31-morning-2",
+    "wave": "2026-08-31 morning",
+    "text": "DeepSeek just tripled its own valuation in two months — from $50 billion in June to $74 billion now.\n\n→ Raising $7.4B (¥50B) from Tencent, CATL and state-backed funds\n→ Cash earmarked for more compute and model research\n→ Setting up a 2027 IPO on Shanghai's STAR Market\n\nThe US spent two years trying to choke China's AI chip supply. The lab it was supposed to slow down just got $24 billion richer.",
     "image_url": null,
     "status": "queued"
   }
