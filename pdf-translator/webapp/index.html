@@ -253,7 +253,8 @@ function itemFragments(items, styles, fontNames) {
   frags.sort((a, b) => b.baseline - a.baseline || a.x0 - b.x0);
   const out = [];
   for (const f of frags) {
-    let row = rows.find(r => Math.abs(r.baseline - f.baseline) <= 0.4 * Math.max(r.size, f.size));
+    let row = rows.find(r => Math.abs(r.baseline - f.baseline)
+      <= Math.max(1.2, 0.4 * Math.min(r.size, f.size)));
     if (!row) { row = { baseline: f.baseline, size: f.size, parts: [] }; rows.push(row); }
     row.parts.push(f);
   }
@@ -293,12 +294,23 @@ function joinLines(lines) {
   return text;
 }
 
-function buildSegments(frags, pageW) {
+function ruleBetween(probe, viewport, above, below, x0, x1) {
+  // a drawn table rule between two lines means they belong to different rows
+  if (!probe || above.bot - below.top < 1) return false;
+  const [ca, cy0] = viewport.convertToViewportPoint(x0, above.bot);
+  const [cb, cy1] = viewport.convertToViewportPoint(x1, below.top);
+  const yA = Math.ceil(Math.min(cy0, cy1)), yB = Math.floor(Math.max(cy0, cy1));
+  for (let y = yA; y <= yB; y++)
+    if (probe.darkFrac(Math.min(ca, cb), y, Math.max(ca, cb), y + 1) > 0.3) return true;
+  return false;
+}
+
+function buildSegments(frags, pageW, probe, viewport) {
   // group fragments (reading order: top first) into paragraphs
   frags.sort((a, b) => b.top - a.top || a.x0 - b.x0);
   const paras = [];
   for (const f of frags) {
-    let home = null;
+    let home = null, homeDy = Infinity;
     for (const p of paras) {
       const last = p.lines[p.lines.length - 1];
       const size = Math.max(last.size, f.size);
@@ -307,7 +319,12 @@ function buildSegments(frags, pageW) {
       if (!sizesClose(last.size, f.size) || last.bold !== f.bold) continue;
       const ov = Math.min(p.x1, f.x1) - Math.max(p.x0, f.x0);
       if (ov <= 0.3 * Math.min(p.x1 - p.x0, f.x1 - f.x0)) continue;
-      home = p; break;
+      if (dy < homeDy) { home = p; homeDy = dy; }
+    }
+    if (home) {
+      const last = home.lines[home.lines.length - 1];
+      const ox0 = Math.max(home.x0, f.x0), ox1 = Math.min(home.x1, f.x1);
+      if (ruleBetween(probe, viewport, last, f, ox0, ox1)) home = null;
     }
     if (home) {
       home.lines.push(f);
@@ -346,6 +363,7 @@ function buildSegments(frags, pageW) {
 function guessAlign(lines, rect, pageW) {
   const size = lines[0].size, tol = Math.max(2, size * 0.6);
   if (lines.length === 1) {
+    if (rect.x1 - rect.x0 > 0.75 * pageW) return "left";  // full-width line tells nothing
     const center = (rect.x0 + rect.x1) / 2;
     if (Math.abs(center - pageW / 2) <= Math.max(6, pageW * 0.02) && rect.x0 > pageW * 0.15) return "center";
     if (pageW - rect.x1 < pageW * 0.12 && rect.x0 > pageW * 0.3) return "right";
@@ -380,58 +398,236 @@ function detectRightColumns(segments) {
   flush();
 }
 
-function widenSingles(segments) {
+/* Geometry planning: widen single-line boxes into free space, allow growing
+   downward into clean space, and clamp cover paddings — every extension is
+   verified against the rendered page pixels, so translated text can never
+   land on an image, a drawn line or other content. */
+function planGeometry(segments, probe, viewport, imgs = []) {
   if (!segments.length) return;
+  const S = RENDER_SCALE;
   const cx0 = Math.min(...segments.map(s => s.rect.x0));
   const cx1 = Math.max(...segments.map(s => s.rect.x1));
+  const cvs = (x, y) => viewport.convertToViewportPoint(x, y);
+
+  const stripClean = (seg, xa, xb) => {
+    const [c0x, c0y] = cvs(xa, seg.rect.y1), [c1x, c1y] = cvs(xb, seg.rect.y0);
+    return probe.dirtyFrac(Math.min(c0x, c1x), Math.min(c0y, c1y),
+                           Math.max(c0x, c1x), Math.max(c0y, c1y), seg.bg) < 0.02;
+  };
+  const crawl = (seg, from, target, dir) => {
+    let x = from;
+    const step = 2.5 * dir;
+    while (dir > 0 ? x + step <= target : x + step >= target) {
+      if (!stripClean(seg, Math.min(x, x + step), Math.max(x, x + step))) break;
+      x += step;
+    }
+    return x;
+  };
+
   for (const seg of segments) {
     seg.insertRect = Object.assign({}, seg.rect);
-    if (!seg.translatable || seg.lines > 1) continue;
+    seg.growDown = 0;
+    seg.padTop = 0; seg.padBot = 0;
+    if (!seg.translatable || seg.bgComplex) continue;
     const r = seg.rect;
-    const band = segments.filter(o => o !== seg && yOverlap(o.rect, r) > 0.3 * (r.y1 - r.y0)).map(o => o.rect);
-    const rightLim = Math.min(...band.filter(o => o.x0 >= r.x1 - 1).map(o => o.x0 - 2), Math.max(cx1, r.x1));
-    const leftLim = Math.max(...band.filter(o => o.x1 <= r.x0 + 1).map(o => o.x1 + 2), Math.min(cx0, r.x0));
-    if (seg.align === "right") seg.insertRect.x0 = Math.min(r.x0, leftLim);
-    else if (seg.align === "center") {
-      const room = Math.min(r.x0 - leftLim, rightLim - r.x1);
-      if (room > 0) { seg.insertRect.x0 -= room; seg.insertRect.x1 += room; }
-    } else seg.insertRect.x1 = Math.max(r.x1, rightLim);
+
+    // cover paddings. Ascender/descender ink often pokes slightly past the
+    // reported bbox — the very ink the cover must hide — so a small pad is
+    // unconditional, limited only by real obstacles (images, other text);
+    // beyond it the pad grows while the pixels stay clean.
+    const others = segments.map(o => o === seg ? null : o.rect)
+      .filter(Boolean).concat(imgs);
+    let roomT = 0.28 * seg.size, roomB = 0.18 * seg.size;
+    for (const o of others) {
+      const ov = Math.min(r.x1, o.x1) - Math.max(r.x0, o.x0);
+      if (ov <= 1) continue;
+      if (o.y0 >= r.y1) roomT = Math.min(roomT, o.y0 - r.y1 - 0.3);
+      if (o.y1 <= r.y0) roomB = Math.min(roomB, r.y0 - o.y1 - 0.3);
+    }
+    const minPadT = Math.max(0, Math.min(0.15 * seg.size, roomT));
+    const minPadB = Math.max(0, Math.min(0.12 * seg.size, roomB));
+    const [rx0] = cvs(r.x0, r.y1), [rx1] = cvs(r.x1, r.y1);
+    const topRow = cvs(r.x0, r.y1)[1], botRow = cvs(r.x0, r.y0)[1];
+    let pad = minPadT;
+    while (pad + 1 / S <= roomT &&
+           probe.dirtyFrac(rx0, topRow - (pad + 1 / S) * S, rx1, topRow - pad * S, seg.bg) < 0.03)
+      pad += 1 / S;
+    seg.padTop = pad;
+    pad = minPadB;
+    while (pad + 1 / S <= roomB &&
+           probe.dirtyFrac(rx0, botRow + pad * S, rx1, botRow + (pad + 1 / S) * S, seg.bg) < 0.03)
+      pad += 1 / S;
+    seg.padBot = pad;
+
+    // horizontal widening for single-line segments
+    if (seg.lines === 1) {
+      const band = segments.filter(o => o !== seg &&
+        yOverlap(o.rect, r) > 0.3 * (r.y1 - r.y0));
+      let rightLim = Math.max(cx1, r.x1), leftLim = Math.min(cx0, r.x0);
+      for (const o of band) {
+        if (o.rect.x0 >= r.x1 - 1) {
+          // translatable single-line neighbours share the free strip halfway
+          const edge = (o.translatable && o.lines === 1)
+            ? (r.x1 + o.rect.x0) / 2 - 1 : o.rect.x0 - 2;
+          rightLim = Math.min(rightLim, edge);
+        }
+        if (o.rect.x1 <= r.x0 + 1) {
+          const edge = (o.translatable && o.lines === 1)
+            ? (o.rect.x1 + r.x0) / 2 + 1 : o.rect.x1 + 2;
+          leftLim = Math.max(leftLim, edge);
+        }
+      }
+      for (const ir of imgs) {
+        if (yOverlap(ir, r) <= 0) continue;
+        if (ir.x0 >= r.x1 - 1) rightLim = Math.min(rightLim, ir.x0 - 2);
+        if (ir.x1 <= r.x0 + 1) leftLim = Math.max(leftLim, ir.x1 + 2);
+      }
+      if (seg.align === "right") {
+        if (leftLim < r.x0) seg.insertRect.x0 = crawl(seg, r.x0, leftLim, -1);
+      } else if (seg.align === "center") {
+        const roomL = r.x0 - crawl(seg, r.x0, leftLim, -1);
+        const roomR = crawl(seg, r.x1, rightLim, 1) - r.x1;
+        const room = Math.min(roomL, roomR);
+        if (room > 0) { seg.insertRect.x0 -= room; seg.insertRect.x1 += room; }
+      } else {
+        seg.insertRect.x1 = crawl(seg, r.x1, rightLim, 1);
+      }
+    }
+
+    // downward growth: clean rows below let long translations wrap instead
+    // of shrinking hard; capped and re-checked against other segments
+    let growCap = 1.6 * seg.lineHeight * seg.size;
+    const belowObstacles = segments.map(o => o === seg ? null : o.rect)
+      .filter(Boolean).concat(imgs);
+    for (const o of belowObstacles) {
+      if (o.y1 > r.y0) continue; // only content entirely below
+      const ov = Math.min(seg.insertRect.x1, o.x1) - Math.max(seg.insertRect.x0, o.x0);
+      if (ov > 2) growCap = Math.min(growCap, r.y0 - o.y1 - 2);
+    }
+    // start past the covered descender zone so the segment's own ink does
+    // not read as an obstacle
+    let grow = seg.padBot;
+    const [gx0] = cvs(seg.insertRect.x0, r.y0), [gx1] = cvs(seg.insertRect.x1, r.y0);
+    const baseRow = cvs(r.x0, r.y0)[1];
+    while (grow + 1 <= growCap &&
+           probe.dirtyFrac(gx0, baseRow + grow * S, gx1, baseRow + (grow + 1) * S, seg.bg) < 0.02)
+      grow += 1;
+    seg.growDown = Math.max(0, grow - 1);
   }
 }
 
-/* ============================ color sampling ============================ */
-function samplePageColors(segments, canvas, viewport) {
+/* ============================ pixel probe =============================== */
+function makeProbe(canvas) {
   const ctx = canvas.getContext("2d", { willReadFrequently: true });
   const img = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const W = canvas.width, H = canvas.height, data = img.data;
   const px = (x, y) => {
-    const i = (Math.min(canvas.height - 1, Math.max(0, y)) * canvas.width +
-               Math.min(canvas.width - 1, Math.max(0, x))) * 4;
-    return [img.data[i], img.data[i + 1], img.data[i + 2]];
+    x = x < 0 ? 0 : x >= W ? W - 1 : x | 0;
+    y = y < 0 ? 0 : y >= H ? H - 1 : y | 0;
+    const i = (y * W + x) * 4;
+    return [data[i], data[i + 1], data[i + 2]];
   };
-  const key = c => ((c[0] >> 4) << 8) | ((c[1] >> 4) << 4) | (c[2] >> 4);
-  const dist2 = (a, b) => (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2 + (a[2] - b[2]) ** 2;
+  const dist2 = (a, b) =>
+    (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2 + (a[2] - b[2]) ** 2;
+  // fraction of sampled pixels in the rect differing from `bg`
+  function dirtyFrac(x0, y0, x1, y1, bg, thr2 = 2500) {
+    x0 = Math.max(0, Math.floor(x0)); y0 = Math.max(0, Math.floor(y0));
+    x1 = Math.min(W, Math.ceil(x1)); y1 = Math.min(H, Math.ceil(y1));
+    if (x1 <= x0 || y1 <= y0) return 0;
+    const sx = Math.max(1, Math.floor((x1 - x0) / 60));
+    const sy = Math.max(1, Math.floor((y1 - y0) / 12));
+    let n = 0, dirty = 0;
+    for (let y = y0; y < y1; y += sy)
+      for (let x = x0; x < x1; x += sx) {
+        n++;
+        if (dist2(px(x, y), bg) > thr2) dirty++;
+      }
+    return n ? dirty / n : 0;
+  }
+  function darkFrac(x0, y0, x1, y1) {
+    x0 = Math.max(0, Math.floor(x0)); y0 = Math.max(0, Math.floor(y0));
+    x1 = Math.min(W, Math.ceil(x1)); y1 = Math.min(H, Math.ceil(y1));
+    if (x1 <= x0 || y1 <= y0) return 0;
+    const sx = Math.max(1, Math.floor((x1 - x0) / 80));
+    let n = 0, dark = 0;
+    for (let y = y0; y < y1; y++)
+      for (let x = x0; x < x1; x += sx) {
+        n++;
+        const c = px(x, y);
+        if (0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2] < 160) dark++;
+      }
+    return n ? dark / n : 0;
+  }
+  return { px, dirtyFrac, darkFrac, dist2 };
+}
+
+/* Exact image rectangles (PDF space) from the page's operator list, so the
+   no-text-over-images rule is structural, not just pixel-guessed. */
+async function imageRects(page) {
+  const rects = [];
+  try {
+    const ops = await page.getOperatorList();
+    const OPS = pdfjsLib.OPS;
+    const mul = (m, n) => [
+      m[0] * n[0] + m[2] * n[1], m[1] * n[0] + m[3] * n[1],
+      m[0] * n[2] + m[2] * n[3], m[1] * n[2] + m[3] * n[3],
+      m[0] * n[4] + m[2] * n[5] + m[4], m[1] * n[4] + m[3] * n[5] + m[5],
+    ];
+    const stack = [];
+    let ctm = [1, 0, 0, 1, 0, 0];
+    const painters = new Set([
+      OPS.paintImageXObject, OPS.paintInlineImageXObject,
+      OPS.paintImageMaskXObject, OPS.paintJpegXObject,
+      OPS.paintImageXObjectRepeat,
+    ].filter(v => v !== undefined));
+    for (let i = 0; i < ops.fnArray.length; i++) {
+      const fn = ops.fnArray[i];
+      if (fn === OPS.save) stack.push(ctm.slice());
+      else if (fn === OPS.restore) ctm = stack.pop() || [1, 0, 0, 1, 0, 0];
+      else if (fn === OPS.transform) ctm = mul(ctm, ops.argsArray[i]);
+      else if (painters.has(fn)) {
+        const pts = [[0, 0], [1, 0], [0, 1], [1, 1]].map(([x, y]) =>
+          [ctm[0] * x + ctm[2] * y + ctm[4], ctm[1] * x + ctm[3] * y + ctm[5]]);
+        const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
+        const r = { x0: Math.min(...xs), y0: Math.min(...ys),
+                    x1: Math.max(...xs), y1: Math.max(...ys) };
+        if (r.x1 - r.x0 > 2 && r.y1 - r.y0 > 2) rects.push(r);
+      }
+    }
+  } catch (e) {
+    console.warn("imageRects failed", e);
+  }
+  return rects;
+}
+
+/* ============================ color sampling ============================ */
+function samplePageColors(segments, probe, viewport) {
   for (const seg of segments) {
     const [ax, ay] = viewport.convertToViewportPoint(seg.rect.x0, seg.rect.y1);
     const [bx, by] = viewport.convertToViewportPoint(seg.rect.x1, seg.rect.y0);
     const x0 = Math.floor(Math.min(ax, bx)), x1 = Math.ceil(Math.max(ax, bx));
     const y0 = Math.floor(Math.min(ay, by)), y1 = Math.ceil(Math.max(ay, by));
-    // background: the ring just outside the box
-    const counts = new Map(); let bestKey = null, bestN = 0, bestC = [255, 255, 255];
+    // background: mode of the ring just outside the box
+    const counts = new Map(); let bestN = 0, bestC = [255, 255, 255];
+    const key = c => ((c[0] >> 4) << 8) | ((c[1] >> 4) << 4) | (c[2] >> 4);
     const ringStep = Math.max(1, Math.floor((x1 - x0) / 48));
     for (let x = x0 - 3; x <= x1 + 3; x += ringStep)
       for (const y of [y0 - 3, y0 - 2, y1 + 2, y1 + 3]) {
-        const c = px(x, y), k = key(c), n = (counts.get(k) || 0) + 1;
+        const c = probe.px(x, y), k = key(c);
+        const n = (counts.get(k) || 0) + 1;
         counts.set(k, n);
-        if (n > bestN) { bestN = n; bestKey = k; bestC = c; }
+        if (n > bestN) { bestN = n; bestC = c; }
       }
     seg.bg = bestC;
     // text color: interior pixels far from the background
     const stepX = Math.max(1, Math.floor((x1 - x0) / 70));
     const stepY = Math.max(1, Math.floor((y1 - y0) / 24));
-    const inks = []; let far = null, farD = 0;
+    const samples = [], inks = [];
+    let far = null, farD = 0;
     for (let y = y0 + 1; y < y1; y += stepY)
       for (let x = x0 + 1; x < x1; x += stepX) {
-        const c = px(x, y), d = dist2(c, bestC);
+        const c = probe.px(x, y), d = probe.dist2(c, bestC);
+        samples.push(c);
         if (d > farD) { farD = d; far = c; }
         if (d > 3600) inks.push(c);
       }
@@ -444,6 +640,24 @@ function samplePageColors(segments, canvas, viewport) {
       const lum = 0.2126 * bestC[0] + 0.7152 * bestC[1] + 0.0722 * bestC[2];
       seg.color = lum > 128 ? [0, 0, 0] : [255, 255, 255];
     }
+    // photo behind the text? many interior pixels lie OFF the bg<->ink
+    // blend line (anti-aliased glyph edges lie on it and must not count)
+    const v = [seg.color[0] - seg.bg[0], seg.color[1] - seg.bg[1],
+               seg.color[2] - seg.bg[2]];
+    const len2 = v[0] * v[0] + v[1] * v[1] + v[2] * v[2];
+    let other = 0;
+    for (const c of samples) {
+      const w = [c[0] - seg.bg[0], c[1] - seg.bg[1], c[2] - seg.bg[2]];
+      if (len2 < 100) {
+        if (w[0] * w[0] + w[1] * w[1] + w[2] * w[2] > 2500) other++;
+        continue;
+      }
+      const t = (w[0] * v[0] + w[1] * v[1] + w[2] * v[2]) / len2;
+      const px2 = [w[0] - t * v[0], w[1] - t * v[1], w[2] - t * v[2]];
+      const perp2 = px2[0] * px2[0] + px2[1] * px2[1] + px2[2] * px2[2];
+      if (t < -0.2 || t > 1.25 || perp2 > 2200) other++;
+    }
+    seg.bgComplex = samples.length > 8 && other / samples.length > 0.25;
   }
 }
 
@@ -586,9 +800,18 @@ function wrapWords(text, font, size, maxWidth) {
 
 function fitText(text, font, seg) {
   const r = seg.insertRect;
-  const boxW = r.x1 - r.x0 + 1, boxH = r.y1 - r.y0 + 1.2;
-  let size = seg.size;
+  const boxW = r.x1 - r.x0 + 1;
+  const boxH = r.y1 - r.y0 + (seg.growDown || 0) + 1.2;
   const minSize = Math.max(4, seg.size * 0.4);
+  let size = seg.size;
+  if (seg.lines === 1) {
+    // a one-line label/heading stays one line while the shrink is mild
+    while (font.widthOfTextAtSize(text, size) > boxW + 0.6 && size > seg.size * 0.72)
+      size *= 0.97;
+    if (font.widthOfTextAtSize(text, size) <= boxW + 0.6)
+      return { lines: [text], size };
+    size = seg.size; // otherwise wrap into verified-clean space below
+  }
   for (;;) {
     const lines = wrapWords(text, font, size, boxW);
     const lh = seg.lineHeight * size;
@@ -611,17 +834,18 @@ async function rebuildPdf(bytes, pageSegs, fontsCache) {
   const pages = doc.getPages();
   let shrunk = 0, minScale = 1;
   for (let i = 0; i < pages.length; i++) {
-    const segs = (pageSegs[i] || []).filter(s => s.translatable && s.translation);
+    const segs = (pageSegs[i] || [])
+      .filter(s => s.translatable && s.translation && !s.bgComplex);
     if (!segs.length) continue;
     const page = pages[i];
     for (const seg of segs) {
       const r = seg.rect;
-      // ascender/umlaut tops and descenders often poke past the metrics
-      // pdf.js reports, so the cover box gets size-relative padding
-      const padTop = 0.28 * seg.size, padBot = 0.18 * seg.size;
+      // cover paddings were verified against page pixels in planGeometry,
+      // so the box hides ascenders/descenders without touching neighbours
       page.drawRectangle({
-        x: r.x0 - 1, y: r.y0 - padBot,
-        width: r.x1 - r.x0 + 2, height: r.y1 - r.y0 + padTop + padBot,
+        x: r.x0 - 1, y: r.y0 - seg.padBot,
+        width: r.x1 - r.x0 + 2,
+        height: r.y1 - r.y0 + seg.padTop + seg.padBot,
         color: rgb(seg.bg[0] / 255, seg.bg[1] / 255, seg.bg[2] / 255),
       });
     }
@@ -742,13 +966,25 @@ async function runPipeline() {
         catch (e) { fontNames[it.fontName] = ""; }
       }
     }
+    const probe = makeProbe(canvas);
+    const imgs = await imageRects(page);
     const frags = itemFragments(tc.items, tc.styles, fontNames);
-    const segs = buildSegments(frags, page.view[2] - page.view[0]);
+    const segs = buildSegments(frags, page.view[2] - page.view[0], probe, viewport);
     detectRightColumns(segs);
-    widenSingles(segs);
-    samplePageColors(segs, canvas, viewport);
+    samplePageColors(segs, probe, viewport);
+    // text intersecting an image stays untouched — replacing it would put
+    // a patch or new text over the picture, which is forbidden
+    for (const seg of segs) {
+      if (!seg.translatable) continue;
+      for (const ir of imgs) {
+        const ox = Math.min(seg.rect.x1, ir.x1) - Math.max(seg.rect.x0, ir.x0);
+        const oy = Math.min(seg.rect.y1, ir.y1) - Math.max(seg.rect.y0, ir.y0);
+        if (ox > 1 && oy > 1) { seg.bgComplex = true; break; }
+      }
+    }
+    planGeometry(segs, probe, viewport, imgs);
     state.pageSegs.push(segs);
-    totalSegs += segs.filter(s => s.translatable).length;
+    totalSegs += segs.filter(s => s.translatable && !s.bgComplex).length;
     if (p <= PREVIEW_PAGES) state.previews.push(canvas);
     setBar(0.25 * (p / pdf.numPages));
   }
@@ -760,7 +996,10 @@ async function runPipeline() {
   }
 
   // -- 2: translate --------------------------------------------------------
-  const unique = [...new Set(state.pageSegs.flat().filter(s => s.translatable).map(s => s.text))];
+  const flat = state.pageSegs.flat();
+  const skippedPhoto = flat.filter(s => s.translatable && s.bgComplex).length;
+  const unique = [...new Set(flat.filter(s => s.translatable && !s.bgComplex)
+    .map(s => s.text))];
   $("segCount").textContent = `(сегментів: ${unique.length})`;
   setStep(2, "active");
   const t0 = performance.now();
@@ -768,9 +1007,9 @@ async function runPipeline() {
     setBar(0.25 + 0.6 * (done / total));
     $("counts").textContent = `Перекладено ${done} з ${total} сегментів`;
   });
-  for (const segs of state.pageSegs)
-    for (const seg of segs)
-      if (seg.translatable) seg.translation = map.get(seg.text) || seg.text;
+  for (const seg of flat)
+    if (seg.translatable && !seg.bgComplex)
+      seg.translation = map.get(seg.text) || seg.text;
   setStep(2, "done");
 
   // -- 3: rebuild ----------------------------------------------------------
@@ -784,7 +1023,8 @@ async function runPipeline() {
   $("counts").textContent = "";
   const sum = $("summary");
   sum.innerHTML = `<strong>Готово.</strong> Сторінок: ${state.numPages}, сегментів перекладено: ${unique.length}, час: ${secs} с.` +
-    (shrunk ? ` Стиснено, щоб вмістити: ${shrunk} (мін. ${Math.round(minScale * 100)}%).` : "");
+    (shrunk ? ` Стиснено, щоб вмістити: ${shrunk} (мін. ${Math.round(minScale * 100)}%).` : "") +
+    (skippedPhoto ? ` Залишено мовою оригіналу поверх зображень: ${skippedPhoto}.` : "");
   sum.hidden = false;
   $("saveBtn").hidden = !state.downloads;
   if (!state.downloads && state.sample)
