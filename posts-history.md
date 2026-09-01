@@ -1,12 +1,65 @@
 # Posts History
 
+## Wave 2026-09-01 morning
+
+**Publish pipeline still broken — day 29:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` + `get_job_logs` on `threads-publish.yml`): latest run #109 (2026-08-31 22:59:21 UTC) failed with the identical error (`Error: THREADS_ACCESS_TOKEN is not set`), same as every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-30 morning, two days ago, and nothing has changed about the failure itself since then; continuing dashboard-only flagging per the established ~weekly cadence (next due around 2026-09-06 if still unresolved). Marked the two now-24h+-old `2026-08-31 morning` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-31 evening` entries are still under 24h old and stay `queued`. Queue now has 112 entries, 4 sitting `queued` and unpublished (2 from 2026-08-31 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; WebFetch was not attempted this run (prior waves consistently report `EGRESS_BLOCKED` on external domains including Wikimedia) — media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI logo 2025 (wordmark).svg`, `File:Apple logo black.svg`, `File:Google Gemini logo 2025.svg` all confirmed to exist via search this run; `File:Cloudflare_Logo.svg` reused from a prior wave's confirmed title), not live-fetch-verified — worth a spot-check before attaching. No X CTA on Post 1 this wave; CTA lands on Post 2, keeping the ~1-in-3 cadence (last one was 2026-08-31 evening Post 1: ...CTA, no, no, CTA[due here]...). Today's freshest developments: OpenAI's ChatGPT ad business hit a $1 billion annualized revenue run rate after only 200 days of existence (reported 2026-08-31), with ads now live in 40+ countries, a $2.5B target for this year and a longer-run path toward $40B annualized — coverage explicitly frames it as a direct competitive threat to Google and Meta's ad businesses, a fresh milestone-number escalation distinct from the "ads are rolling out in Europe" framing already used in two prior waves (2026-08-15 evening, 2026-08-24 evening). And today, September 1, is Tim Cook's last day as Apple CEO and John Ternus's first — ending Cook's 15-year run — with Apple's own coverage naming a rebuilt Siri (launching Sept 9, running on Google Gemini rather than Apple's own model) as Ternus's defining first test; a genuinely fresh (today), high-profile leadership-change story with a real company-vs-rival conflict hook, never used before on this account. Backup leans niche/quiet-changes: Cloudflare's new AI-crawler defaults take effect Sept 15 for every new or free-tier domain, blocking AI Training and Agent crawlers by default while leaving Search crawlers allowed — with the wrinkle that Googlebot and Bingbot count as "mixed-purpose" (they both index for search and feed AI training), so the training block silently takes them down too; kept as backup since both main slots already had strong, fresh, broad-audience stories, and this is more of a niche publisher/SEO-adjacent mechanic. Considered and rejected: OpenAI's Jalapeño chip beating Nvidia's Blackwell in benchmarks — already used as a backup post twice before (2026-08-26 evening, 2026-08-30 morning) with no fresh escalation since the last use; SpaceX's Sept 9 share-unlock (319M shares, free float rising from 4.9% to 17.7%) — same SpaceX-unlock story family already used as a main post four times this month (Aug 5, 6, 7, 27), risk of reader fatigue outweighs the fresh date; Anthropic's IPO risk-factor filing details (AI backlash named as a risk) — same underlying IPO-calendar story already used as this wave's immediate predecessor (2026-08-31 evening Post 2), no sufficiently new angle; OpenAI's Hugging Face incident technical report — same saturated story family used and rejected repeatedly in prior waves; AI-linked layoffs aggregate (170,000+ workers, 54% citing AI) — same overused aggregate-stat pattern rejected in essentially every prior wave; ChatGPT's new teen-focused chatbot — pure feature-launch recap, matches the account's dud pattern; OpenAI's Russia fake-think-tank disclosure follow-up — already used as a main post in the 2026-08-26 morning wave, no new escalation since.
+
+### Post 1 [score 8/10, pattern: money-broad + contrarian]
+Source: https://www.cnbc.com/2026/08/31/open-ai-chatgpt-ads-revenue.html (CNBC, 2026-08-31) + https://www.benzinga.com/markets/private-markets/26/08/61522189/openais-chatgpt-ads-hit-1-billion-in-annualized-revenue-in-just-200-days-now-sam-altman-is-taking-the-business-global (Benzinga, 2026-08-31)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_logo_2025_(wordmark).svg?width=1200
+OpenAI's ad business hit $1 billion a year — it's exactly 200 days old.
+
+→ ChatGPT ads live in 40+ countries, self-serve rolling out to India, Europe, MENA next
+→ Target: $2.5B this year, tracking toward $40B annualized down the line
+→ Analysts already calling it a direct threat to Google and Meta's ad revenue
+→ Every one of those ads runs on somebody's free account — maybe yours
+
+the AI built to replace the ad-supported internet just joined it.
+
+### Post 2 [score 7/10, pattern: big-tech-drama + contrarian] [X CTA]
+Source: https://9to5mac.com/2026/08/31/tim-cook-last-day-john-ternus-apple-ceo/ (9to5Mac, 2026-08-31) + https://finance.yahoo.com/technology/ai/articles/john-ternus-becomes-apple-ceo-111908957.html (Yahoo Finance, 2026-08-31)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Google_Gemini_logo_2025.svg?width=1200
+Tim Cook just handed Apple's keys to John Ternus. His first fix: an AI Apple couldn't build itself.
+
+→ Ternus is CEO today, ending Cook's 15-year run
+→ Siri's overhaul, Cook's biggest unfinished business, launches Sept 9
+→ It runs on Google Gemini, a rival's model, not Apple's own
+→ Ternus spent 25 years on Apple's hardware. Now he owns its software gap
+
+the world's most valuable company just admitted it couldn't build the thing it needed most.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: leak-quiet-change + contrarian, niche-dev, backup] [backup]
+Source: https://chudi.dev/blog/cloudflare-block-ai-crawlers-september-15 (2026-08) + https://hosting.com/blog/cloudflares-new-ai-crawler-defaults-and-what-they-mean-for-site-owners/ (2026-08)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Cloudflare_Logo.svg?width=1200
+Starting Sept 15, new websites on Cloudflare block AI by default — and take Google's own crawler down with them.
+
+→ New/free-tier domains default to blocking AI Training and Agent crawlers; Search stays allowed
+→ Googlebot counts as "mixed-purpose" — it indexes AND trains AI, so the block kills it too
+→ Existing sites keep old settings, only new ones inherit this
+→ Most owners never notice the setting exists to opt out of
+
+the default nobody clicks just decided who gets to read the internet.
+
+### Rejected candidates
+- OpenAI's Jalapeño chip beating Nvidia's Blackwell in benchmarks — already used as a backup post twice before (2026-08-26 evening, 2026-08-30 morning), no fresh escalation since
+- SpaceX's Sept 9 share-unlock (319M shares, free float 4.9% → 17.7%) — same SpaceX-unlock story family already used as a main post four times this month (Aug 5, 6, 7, 27)
+- Anthropic's IPO risk-factor filing (AI backlash named as a risk factor) — same underlying IPO-calendar story as this wave's immediate predecessor (2026-08-31 evening Post 2), no sufficiently new angle
+- OpenAI's Hugging Face incident technical report — same saturated story family used and rejected repeatedly in prior waves
+- AI-linked layoffs aggregate (170,000+ workers, 54% citing AI) — same overused aggregate-stat pattern rejected in essentially every prior wave
+- ChatGPT's new teen-focused chatbot — pure feature-launch recap, matches the account's dud pattern
+- OpenAI's Russia fake-think-tank disclosure follow-up — already used as a main post in the 2026-08-26 morning wave, no new escalation since
+
 ## Wave 2026-08-31 evening
 
 **Publish pipeline still broken — day 28:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` on `threads-publish.yml`): latest run #106 (2026-08-31 11:56:48 UTC) failed, same as every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-30 morning, under two days ago, and nothing has changed about the failure itself since then; continuing dashboard-only flagging per the established ~weekly cadence. Marked the two now-24h-old `2026-08-30 evening` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-31 morning` entries are still under 24h old and stay `queued`. Queue now has 110 entries, 4 sitting `queued` and unpublished (2 from 2026-08-31 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research; WebFetch was not attempted this run (prior waves consistently report `EGRESS_BLOCKED` on external domains including Wikimedia). Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:MediaTek logo.svg` confirmed to exist via search this run; `File:Nvidia_logo.svg`, `File:Anthropic_logo.svg`, `File:Cursor_logo.svg` reused from prior waves' confirmed titles), not live-fetch-verified — worth a spot-check before attaching. X CTA on Post 1 this wave, as flagged by the prior wave's own note — last one was 2026-08-30 evening Post 2, keeping the ~1-in-3 cadence. Today's freshest developments: Nvidia is investing $3.5 billion in MediaTek via convertible bonds (announced today, 2026-08-31), expanding a long-running partnership so MediaTek can plug into Nvidia's NVLink Fusion data-center ecosystem plus RTX/DGX Spark PC chips and Dimensity Auto platforms — and Nvidia's own stock dropped 5% the same day despite (or because of) the deal, a clean contrarian money-broad story with a same-day numeric hook. And Bloomberg reported today (2026-08-31) that Anthropic's IPO — targeting September or early October at a ~$965B private valuation, potentially as big as or bigger than SpaceX's record $86.2B debut — is crowding out the entire fall US listing calendar, with bankers citing a jammed September (Labor Day, a mid-month Fed meeting, the election) and pointing to the precedent of 14 companies that rushed IPOs ahead of SpaceX's own debut and posted a 9.5% average loss; distinct from the "$30T TAM pitch" angle already used in the 2026-08-30 morning wave, this piece is about market-calendar crowding and historical precedent, not valuation numbers, so it's used again with a genuinely new hook. Backup leans niche-dev/security: TheHackerNews (2026-08-27, still recirculating in today's roundups) reports Aurora ransomware operators used Cursor — the coding AI now owned by SpaceX, running Claude Sonnet — to plan and hand-run exploitation chains in Russian against 10+ targets hands-on (20+ organizations across 9 countries touched overall between April-July), deliberately excluding CIS-country targets, caught only because the operator's own staging server was left exposed; kept as backup since it's 4 days old (outside the strict 12h window) and the two main slots already had strong same-day broad-audience stories, but never used before and a strong insider-leak/security angle. Considered and rejected: the Aurora/Cursor story's own underlying incident could have been a main post but the freshness issue and wanting broad-audience-first main slots (per rubric) pushed it to backup instead; the DeepSeek V4-Pro 75% "permanent" price cut — that pricing move actually dates to May 2026, recirculating in "today" aggregators without a new trigger, stale; the Sonnet 5 price-hike cancellation (Anthropic made the $2/$10 intro rate permanent, cancelling the Sept 1 hike) — real and ironically timed the day before the would-be hike, but the announcement itself is from August 10, three weeks stale, and this exact "quietly more expensive ahead of the hike" story family was already used as a main post in an earlier wave; Oracle's next round of pre-September layoffs funded by AI capex debt — same story rejected as stale in at least 8 prior waves now, still no confirmed headcount for the new round, just the same "could reach double-digit percentages" framing; US strikes near the Strait of Hormuz driving a broad market/AI-stock selloff — real and today's biggest macro story, but it's a geopolitical/oil story with tech stocks only incidentally along for the ride, not really an AI-industry story and weak fit for this account's beat; PayPal's failed Advent/Stripe buyout (stock -12.7%) — fintech M&A drama with no AI angle at all, off-beat; AI-linked layoffs aggregate (209,000+ workers, 54% citing AI) — same overused aggregate-stat pattern rejected in essentially every prior wave; OpenAI's GPT-Live voice model and AWS adding MiniMax to Bedrock — pure feature-launch recaps, match the account's dud pattern; the OpenAI/Hugging Face METR-Redwood investigation commentary (Zvi Mowshowitz piece today) — same saturated story family used and rejected repeatedly in prior waves.
 
-### Post 1 [score 7/10, pattern: money-broad + contrarian] [X CTA]
+### Post 1 [score 7/10, pattern: money-broad + contrarian] [status: expired] [X CTA]
 Source: https://www.bloomberg.com/news/articles/2026-08-31/nvidia-to-invest-3-5-billion-in-chipmaker-mediatek (Bloomberg, 2026-08-31) + https://moneycheck.com/nvidia-nvda-stock-drops-5-following-3-5-billion-mediatek-investment/ (MoneyCheck, 2026-08-31)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/MediaTek_logo.svg?width=1200
 Nvidia just spent $3.5B tightening its grip on the AI chip ecosystem — and its own stock dropped 5% the same day.
@@ -19,7 +72,7 @@ writing checks to your own supply chain isn't confidence. it's insurance.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 2 [score 7/10, pattern: money-broad + big-tech-drama]
+### Post 2 [score 7/10, pattern: money-broad + big-tech-drama] [status: expired]
 Source: https://www.bloomberg.com/news/articles/2026-08-31/anthropic-s-mega-ipo-plan-looms-over-packed-us-listing-calendar (Bloomberg, 2026-08-31) + https://finance.yahoo.com/markets/stocks/articles/anthropic-mega-ipo-plan-looms-130231591.html (Yahoo Finance mirror, 2026-08-31)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Anthropic's IPO — as big as SpaceX's record $86B debut, maybe bigger — is about to swallow the entire fall listing calendar.
@@ -30,7 +83,7 @@ Anthropic's IPO — as big as SpaceX's record $86B debut, maybe bigger — is ab
 
 getting out before the biggest listing of the year isn't a strategy. it's a stampede.
 
-### Post 3 [score 8/10, pattern: leak-insider + big-tech-drama, backup] [backup]
+### Post 3 [score 8/10, pattern: leak-insider + big-tech-drama, backup] [backup] [status: expired]
 Source: https://thehackernews.com/2026/08/aurora-ransomware-operators-use-cursor.html (The Hacker News, 2026-08-27) + https://oodaloop.com/briefs/cyber/ransomware-operator-ran-cursor-agent-inside-ten-victim-networks/ (OODAloop, 2026-08-27)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Cursor_logo.svg?width=1200
 A ransomware crew hit 20+ companies across 9 countries — using Cursor, the coding AI SpaceX now owns, running Claude Sonnet underneath.
