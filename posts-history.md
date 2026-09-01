@@ -1,12 +1,62 @@
 # Posts History
 
+## Wave 2026-09-01 evening
+
+**Publish pipeline still broken — day 29:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): latest run #111 (2026-09-01 13:47:44 UTC) failed with the same error as every scheduled run since 2026-08-04. Also confirmed this run that the previous three waves' commits (2026-08-30 evening through 2026-09-01 morning) had been made locally but never actually pushed to `origin/master` — the session started on a detached HEAD four commits ahead of origin. Re-ran `git push origin HEAD:master`, which reported "Everything up-to-date" on a stale local remote-tracking ref; a fresh `git fetch` confirmed origin was in fact already at the same commit, so no data was lost and no rewrite was needed — false alarm, but worth noting in case a future run hits a genuinely unpushed state. Not re-escalating the token issue via push notification this run — last escalation was 2026-08-30 morning, two days ago, continuing dashboard-only flagging per the established ~weekly cadence (next due around 2026-09-06 if still unresolved). Marked the two now-24h `2026-08-31 evening` queue entries `skipped`; the two `2026-09-01 morning` entries are still under 24h old and stay `queued`. Queue now has 114 entries, 4 sitting `queued` and unpublished (2 from 2026-09-01 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; WebFetch confirmed `EGRESS_BLOCKED` again on commons.wikimedia.org this run (same recurring environment-level restriction). Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Intel_logo_(2020,_dark_blue).svg`, `File:Seal_of_the_United_States_Department_of_Defense.svg`, `File:Sony_Music_Publishing_logo.svg` all confirmed to exist via search this run; `File:Anthropic_logo.svg` reused from prior waves' confirmed title), not live-fetch-verified — worth a spot-check before attaching. No X CTA on either main post this wave — last one was 2026-09-01 morning Post 2, keeping the ~1-in-3 cadence (CTA, no, no, CTA, no[due here], no...); next CTA lands on the 2026-09-02 morning wave's Post 1. Today's freshest developments: rising bond yields (10-year Treasury hit its highest level since January 2025) triggered a second straight day of AI/tech-stock declines — Nasdaq -0.8%, S&P 500 -0.4%, with Sandisk, Micron and Intel each down more than 5% — a genuine broad-audience money story since these are index-fund/401k-held names and the trigger is pure rate-repricing, not an AI-specific event. And a fresh escalation on the Pentagon/Anthropic saga (used twice before as the Rita Lin "illegal and baseless" ruling itself, most recently 2026-08-29 morning): despite that ruling, the Pentagon is still on track to fully drop Claude by September 30, and this week launched GenAI.mil's expansion adding OpenAI's ChatGPT Mil and xAI's Grok for 3 million DoD personnel — with Anthropic conspicuously the one major lab left off the roster; distinct enough from the original ruling story (this is about defiance + exclusion, not the court decision) to count as the "major new development" the rejected-story rule requires. Backup: Sony Music Publishing and Warner Chappell sued Anthropic (and Dario Amodei personally) on Friday over alleged mass piracy of song lyrics to train Claude, seeking up to $150,000 per willfully-infringed work across "thousands upon thousands" of works; kept as backup since it's ~4 days old (outside the strict 12h window) and both main slots already had strong same-day stories, but it's a genuinely new story for this account with a real conflict + numbers hook. Considered and rejected: DeepSeek's ~$74B/500B-yuan funding round — same valuation figure as the already-`skipped`-for-staleness 2026-08-29 queue entry, no new number; DeepSeek-V4-Flash-Vision-Exp release — pure feature/product recap, matches the account's dud pattern; Trump's "let Data Reign" data-center-fight escalation — real but a political/rhetoric story with no clean numbers or company-conflict hook; EU designating ChatGPT a Very Large Online Search Engine under the DSA — real regulatory escalation (45M EU users) but reads as compliance-recap, weak hook for this audience; SpaceX's Sept 9 share-unlock — same story family used as a main post four times this month already, still resting per the prior wave's own note; AI-linked layoffs aggregate (170,000+ workers, 54% citing AI) — same overused aggregate-stat pattern rejected in essentially every prior wave.
+
+### Post 1 [score 7/10, pattern: money-broad]
+Source: https://finance.yahoo.com/markets/live/stock-market-today-tuesday-september-1-dow-sp-500-nasdaq-080617884.html (Yahoo Finance, 2026-09-01) + https://247wallst.com/investing/2026/09/01/semiconductor-stocks-slide-as-global-bond-selloff-lifts-yields-intel-drops-3-nvidia-and-amd-slip/ (24/7 Wall St, 2026-09-01)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Intel_logo_(2020,_dark_blue).svg?width=1200
+The 10-year Treasury yield just hit its highest level since January 2025 — and Wall Street's AI trade is the one bleeding for it.
+
+→ Nasdaq -0.8%, S&P 500 -0.4% Tuesday, second straight losing day
+→ Sandisk, Micron and Intel each fell more than 5%
+→ These are the exact stocks that carried this year's AI rally
+→ Nothing about AI changed today — only what the Fed might do next
+
+If you own an index fund or a 401k, you just paid the tax on a bond-market mood swing.
+
+### Post 2 [score 7/10, pattern: big-tech-drama + contrarian]
+Source: https://www.nbcnews.com/business/business-news/anthropic-pentagon-blacklist-claude-judge-rcna594825 (NBC News, 2026-08-28) + https://techcrunch.com/2026/08/31/the-pentagon-now-has-its-own-version-of-chatgpt-and-grok/ (TechCrunch, 2026-08-31)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Department_of_Defense.svg?width=1200
+A federal judge called the Pentagon's Anthropic ban "illegal and baseless." The Pentagon is doing it anyway.
+
+→ DoD still on track to fully drop Claude by September 30
+→ GenAI.mil, the Pentagon's AI portal for 3 million personnel, just added OpenAI's ChatGPT Mil and xAI's Grok
+→ Anthropic is the one name missing from that list
+→ Judge Rita Lin's own words: the ban was retaliation dressed as policy
+
+A judge can rule against you and still lose to a deadline.
+
+### Post 3 [score 6/10, pattern: big-tech-drama + numbers, backup] [backup]
+Source: https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/ (TechCrunch, 2026-08-29) + https://www.musicbusinessworldwide.com/now-sony-music-publishing-and-warner-chappell-sue-anthropic-in-multi-billion-dollar-lawsuit-one-of-the-largest-and-most-blatant-ongoing-thefts-of-intellectual-property-in-history/ (Music Business Worldwide, 2026-08-29)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Sony_Music_Publishing_logo.svg?width=1200
+Sony and Warner just accused Anthropic of pirating thousands of songs to train Claude — and they want up to $150,000 for every one.
+
+→ Sony Music Publishing and Warner Chappell filed suit in federal court Friday
+→ Dario Amodei named personally as a defendant
+→ Alleged targets include Marvin Gaye and Mariah Carey songs
+→ Statutory damages could run into the billions
+
+The company that lectures the industry on AI ethics is now defending a piracy case with a nine-figure price tag.
+
+### Rejected candidates
+- DeepSeek's ~$74B/500B-yuan funding round — same valuation figure as the already-skipped-for-staleness prior queue entry, no new number
+- DeepSeek-V4-Flash-Vision-Exp release — pure feature/product recap, matches the account's dud pattern
+- Trump's "let Data Reign" data-center-fight escalation — real but political/rhetoric, no clean numbers or company-conflict hook
+- EU designating ChatGPT a Very Large Online Search Engine under the DSA — real regulatory escalation but reads as compliance-recap
+- SpaceX's Sept 9 share-unlock — same story family already used as a main post four times this month
+- AI-linked layoffs aggregate (170,000+ workers, 54% citing AI) — same overused aggregate-stat pattern rejected in essentially every prior wave
+
 ## Wave 2026-09-01 morning
 
 **Publish pipeline still broken — day 29:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` + `get_job_logs` on `threads-publish.yml`): latest run #109 (2026-08-31 22:59:21 UTC) failed with the identical error (`Error: THREADS_ACCESS_TOKEN is not set`), same as every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-30 morning, two days ago, and nothing has changed about the failure itself since then; continuing dashboard-only flagging per the established ~weekly cadence (next due around 2026-09-06 if still unresolved). Marked the two now-24h+-old `2026-08-31 morning` queue entries `skipped` (never published, pipeline down the whole time); the two `2026-08-31 evening` entries are still under 24h old and stay `queued`. Queue now has 112 entries, 4 sitting `queued` and unpublished (2 from 2026-08-31 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research; WebFetch was not attempted this run (prior waves consistently report `EGRESS_BLOCKED` on external domains including Wikimedia) — media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI logo 2025 (wordmark).svg`, `File:Apple logo black.svg`, `File:Google Gemini logo 2025.svg` all confirmed to exist via search this run; `File:Cloudflare_Logo.svg` reused from a prior wave's confirmed title), not live-fetch-verified — worth a spot-check before attaching. No X CTA on Post 1 this wave; CTA lands on Post 2, keeping the ~1-in-3 cadence (last one was 2026-08-31 evening Post 1: ...CTA, no, no, CTA[due here]...). Today's freshest developments: OpenAI's ChatGPT ad business hit a $1 billion annualized revenue run rate after only 200 days of existence (reported 2026-08-31), with ads now live in 40+ countries, a $2.5B target for this year and a longer-run path toward $40B annualized — coverage explicitly frames it as a direct competitive threat to Google and Meta's ad businesses, a fresh milestone-number escalation distinct from the "ads are rolling out in Europe" framing already used in two prior waves (2026-08-15 evening, 2026-08-24 evening). And today, September 1, is Tim Cook's last day as Apple CEO and John Ternus's first — ending Cook's 15-year run — with Apple's own coverage naming a rebuilt Siri (launching Sept 9, running on Google Gemini rather than Apple's own model) as Ternus's defining first test; a genuinely fresh (today), high-profile leadership-change story with a real company-vs-rival conflict hook, never used before on this account. Backup leans niche/quiet-changes: Cloudflare's new AI-crawler defaults take effect Sept 15 for every new or free-tier domain, blocking AI Training and Agent crawlers by default while leaving Search crawlers allowed — with the wrinkle that Googlebot and Bingbot count as "mixed-purpose" (they both index for search and feed AI training), so the training block silently takes them down too; kept as backup since both main slots already had strong, fresh, broad-audience stories, and this is more of a niche publisher/SEO-adjacent mechanic. Considered and rejected: OpenAI's Jalapeño chip beating Nvidia's Blackwell in benchmarks — already used as a backup post twice before (2026-08-26 evening, 2026-08-30 morning) with no fresh escalation since the last use; SpaceX's Sept 9 share-unlock (319M shares, free float rising from 4.9% to 17.7%) — same SpaceX-unlock story family already used as a main post four times this month (Aug 5, 6, 7, 27), risk of reader fatigue outweighs the fresh date; Anthropic's IPO risk-factor filing details (AI backlash named as a risk) — same underlying IPO-calendar story already used as this wave's immediate predecessor (2026-08-31 evening Post 2), no sufficiently new angle; OpenAI's Hugging Face incident technical report — same saturated story family used and rejected repeatedly in prior waves; AI-linked layoffs aggregate (170,000+ workers, 54% citing AI) — same overused aggregate-stat pattern rejected in essentially every prior wave; ChatGPT's new teen-focused chatbot — pure feature-launch recap, matches the account's dud pattern; OpenAI's Russia fake-think-tank disclosure follow-up — already used as a main post in the 2026-08-26 morning wave, no new escalation since.
 
-### Post 1 [score 8/10, pattern: money-broad + contrarian]
+### Post 1 [score 8/10, pattern: money-broad + contrarian] [status: expired]
 Source: https://www.cnbc.com/2026/08/31/open-ai-chatgpt-ads-revenue.html (CNBC, 2026-08-31) + https://www.benzinga.com/markets/private-markets/26/08/61522189/openais-chatgpt-ads-hit-1-billion-in-annualized-revenue-in-just-200-days-now-sam-altman-is-taking-the-business-global (Benzinga, 2026-08-31)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_logo_2025_(wordmark).svg?width=1200
 OpenAI's ad business hit $1 billion a year — it's exactly 200 days old.
@@ -18,7 +68,7 @@ OpenAI's ad business hit $1 billion a year — it's exactly 200 days old.
 
 the AI built to replace the ad-supported internet just joined it.
 
-### Post 2 [score 7/10, pattern: big-tech-drama + contrarian] [X CTA]
+### Post 2 [score 7/10, pattern: big-tech-drama + contrarian] [status: expired] [X CTA]
 Source: https://9to5mac.com/2026/08/31/tim-cook-last-day-john-ternus-apple-ceo/ (9to5Mac, 2026-08-31) + https://finance.yahoo.com/technology/ai/articles/john-ternus-becomes-apple-ceo-111908957.html (Yahoo Finance, 2026-08-31)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Google_Gemini_logo_2025.svg?width=1200
 Tim Cook just handed Apple's keys to John Ternus. His first fix: an AI Apple couldn't build itself.
@@ -32,7 +82,7 @@ the world's most valuable company just admitted it couldn't build the thing it n
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 6/10, pattern: leak-quiet-change + contrarian, niche-dev, backup] [backup]
+### Post 3 [score 6/10, pattern: leak-quiet-change + contrarian, niche-dev, backup] [backup] [status: expired]
 Source: https://chudi.dev/blog/cloudflare-block-ai-crawlers-september-15 (2026-08) + https://hosting.com/blog/cloudflares-new-ai-crawler-defaults-and-what-they-mean-for-site-owners/ (2026-08)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Cloudflare_Logo.svg?width=1200
 Starting Sept 15, new websites on Cloudflare block AI by default — and take Google's own crawler down with them.

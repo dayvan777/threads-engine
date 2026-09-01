@@ -760,14 +760,14 @@
     "wave": "2026-08-31 evening",
     "text": "Nvidia just spent $3.5B tightening its grip on the AI chip ecosystem — and its own stock dropped 5% the same day.\n\n→ Buying convertible bonds in MediaTek, expanding a years-long partnership\n→ MediaTek plugs into Nvidia's data centers via NVLink Fusion\n→ Investors sold the stock like it was bad news, not good\n\nwriting checks to your own supply chain isn't confidence. it's insurance.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-08-31-evening-2",
     "wave": "2026-08-31 evening",
     "text": "Anthropic's IPO — as big as SpaceX's record $86B debut, maybe bigger — is about to swallow the entire fall listing calendar.\n\n→ Targeting September or early October, ~$965B private valuation talks underway\n→ Bankers warn of a jammed September: Labor Day, a Fed meeting, and the election all competing for attention\n→ Last time this happened, 14 companies rushed IPOs before SpaceX's debut — average loss: 9.5%\n\ngetting out before the biggest listing of the year isn't a strategy. it's a stampede.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-01-morning-1",
@@ -780,6 +780,20 @@
     "id": "2026-09-01-morning-2",
     "wave": "2026-09-01 morning",
     "text": "Tim Cook just handed Apple's keys to John Ternus. His first fix: an AI Apple couldn't build itself.\n\n→ Ternus is CEO today, ending Cook's 15-year run\n→ Siri's overhaul, Cook's biggest unfinished business, launches Sept 9\n→ It runs on Google Gemini, a rival's model, not Apple's own\n→ Ternus spent 25 years on Apple's hardware. Now he owns its software gap\n\nthe world's most valuable company just admitted it couldn't build the thing it needed most.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-01-evening-1",
+    "wave": "2026-09-01 evening",
+    "text": "The 10-year Treasury yield just hit its highest level since January 2025 — and Wall Street's AI trade is the one bleeding for it.\n\n→ Nasdaq -0.8%, S&P 500 -0.4% Tuesday, second straight losing day\n→ Sandisk, Micron and Intel each fell more than 5%\n→ These are the exact stocks that carried this year's AI rally\n→ Nothing about AI changed today — only what the Fed might do next\n\nIf you own an index fund or a 401k, you just paid the tax on a bond-market mood swing.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-01-evening-2",
+    "wave": "2026-09-01 evening",
+    "text": "A federal judge called the Pentagon's Anthropic ban \"illegal and baseless.\" The Pentagon is doing it anyway.\n\n→ DoD still on track to fully drop Claude by September 30\n→ GenAI.mil, the Pentagon's AI portal for 3 million personnel, just added OpenAI's ChatGPT Mil and xAI's Grok\n→ Anthropic is the one name missing from that list\n→ Judge Rita Lin's own words: the ban was retaliation dressed as policy\n\nA judge can rule against you and still lose to a deadline.",
     "image_url": null,
     "status": "queued"
   }
