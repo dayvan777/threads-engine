@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-translator"
+version = "0.1.0"
+description = "Layout-preserving PDF translator (default: German -> Ukrainian)"
+requires-python = ">=3.10"
+dependencies = [
+    "pymupdf>=1.24.0",
+    "deep-translator>=1.11.4",
+    "fonttools>=4.40.0",
+]
+
+[project.optional-dependencies]
+deepl = ["deepl>=1.16"]
+claude = ["anthropic>=1.0"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+pdf-translate = "pdf_translator.cli:main"
+
+[tool.setuptools]
+packages = ["pdf_translator"]

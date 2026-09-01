@@ -1,0 +1,11 @@
+# Core
+pymupdf>=1.24.0
+deep-translator>=1.11.4
+fonttools>=4.40.0        # lets PyMuPDF subset embedded fonts (smaller output)
+
+# Optional providers — install what you use:
+# pip install deepl       # --provider deepl (needs DEEPL_API_KEY)
+# pip install anthropic   # --provider claude (needs ANTHROPIC_API_KEY)
+
+# Development
+# pip install pytest
