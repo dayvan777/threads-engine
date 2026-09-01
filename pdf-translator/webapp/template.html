@@ -1,0 +1,866 @@
+<meta charset="utf-8">
+<title>Сторінка в сторінку</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+  :root {
+    --bg: #f6f4ef; --surface: #fffdf9; --ink: #262a31; --muted: #6d7480;
+    --line: #e3ded4; --accent: #2456a6; --accent-ink: #ffffff;
+    --accent-soft: #e8eef9; --gold: #b98a1a; --ok: #2e7d4f; --err: #b3402f;
+    --shadow: 0 1px 2px rgba(38, 42, 49, .05), 0 6px 24px rgba(38, 42, 49, .06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161b; --surface: #1d2026; --ink: #e9e7e1; --muted: #99a0ac;
+      --line: #2d313a; --accent: #7fa8e8; --accent-ink: #10131a;
+      --accent-soft: #253044; --gold: #d9ad45; --ok: #6fbf92; --err: #e08573;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 24px rgba(0, 0, 0, .35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161b; --surface: #1d2026; --ink: #e9e7e1; --muted: #99a0ac;
+    --line: #2d313a; --accent: #7fa8e8; --accent-ink: #10131a;
+    --accent-soft: #253044; --gold: #d9ad45; --ok: #6fbf92; --err: #e08573;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 24px rgba(0, 0, 0, .35);
+  }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    font-size: 15px; line-height: 1.55; margin: 0;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 40px 20px 64px; }
+  header { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 6px; }
+  h1 {
+    font-family: "IBM Plex Serif", Georgia, serif; font-weight: 700;
+    font-size: 30px; margin: 0; letter-spacing: -.01em; text-wrap: balance;
+  }
+  .pair {
+    font-variant-numeric: tabular-nums; color: var(--accent);
+    border: 1px solid var(--line); border-radius: 999px; padding: 2px 12px;
+    font-size: 13px; font-weight: 600; letter-spacing: .04em; background: var(--surface);
+  }
+  .lede { color: var(--muted); margin: 4px 0 28px; max-width: 62ch; }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 14px; box-shadow: var(--shadow);
+  }
+  #drop {
+    padding: 46px 28px; text-align: center; cursor: pointer;
+    border: 1.5px dashed var(--line); transition: border-color .15s, background .15s;
+    outline: none;
+  }
+  #drop:hover, #drop:focus-visible, #drop.over { border-color: var(--accent); background: var(--accent-soft); }
+  #drop .big { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+  #drop .hint { color: var(--muted); font-size: 13.5px; }
+  #file { display: none; }
+
+  .settings { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; margin: 18px 2px 0; font-size: 14px; }
+  .settings label { display: inline-flex; gap: 8px; align-items: center; color: var(--muted); }
+  select {
+    font: inherit; color: var(--ink); background: var(--surface);
+    border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px;
+  }
+  select:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  input[type="checkbox"] { accent-color: var(--accent); width: 16px; height: 16px; }
+
+  .banner { border-radius: 10px; padding: 10px 14px; font-size: 13.5px; margin: 18px 0 0; }
+  .banner.demo { background: var(--accent-soft); color: var(--ink); border: 1px solid var(--line); }
+  .banner.err { background: color-mix(in srgb, var(--err) 12%, var(--surface)); border: 1px solid var(--err); }
+  .banner.warn { background: color-mix(in srgb, var(--gold) 14%, var(--surface)); border: 1px solid var(--gold); }
+  [hidden] { display: none !important; }
+
+  #panel { margin-top: 22px; padding: 22px 24px; }
+  .filerow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+  .filerow .name { font-weight: 600; overflow-wrap: anywhere; }
+  .filerow .meta { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .steps { display: flex; flex-direction: column; gap: 7px; margin: 0; padding: 0; list-style: none; font-size: 14px; }
+  .steps li { display: flex; gap: 10px; align-items: baseline; color: var(--muted); }
+  .steps li .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--line); flex: none; transform: translateY(-1px); }
+  .steps li.active { color: var(--ink); }
+  .steps li.active .dot { background: var(--gold); }
+  .steps li.done { color: var(--ink); }
+  .steps li.done .dot { background: var(--ok); }
+  .bar { height: 6px; border-radius: 999px; background: var(--line); margin: 16px 0 4px; overflow: hidden; }
+  .bar i { display: block; height: 100%; width: 0%; background: linear-gradient(90deg, var(--gold), var(--accent)); transition: width .3s; }
+  .counts { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+
+  .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+  button {
+    font: inherit; font-weight: 600; border-radius: 10px; cursor: pointer;
+    padding: 10px 20px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+    transition: transform .06s, background .15s;
+  }
+  button:active { transform: translateY(1px); }
+  button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  button:disabled { opacity: .5; cursor: default; }
+
+  #summary { margin-top: 6px; font-size: 14px; color: var(--muted); }
+  #summary strong { color: var(--ok); }
+
+  #pages { margin-top: 28px; display: flex; flex-direction: column; gap: 26px; }
+  .pagepair h3 {
+    font-family: "IBM Plex Serif", Georgia, serif; font-size: 15px; font-weight: 600;
+    margin: 0 0 10px; color: var(--muted); letter-spacing: .03em;
+  }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 700px) { .duo { grid-template-columns: 1fr; } }
+  .shot { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; }
+  .shot .tag {
+    font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600;
+    padding: 6px 10px; color: var(--muted); background: var(--surface); border-bottom: 1px solid var(--line);
+  }
+  .shot canvas { display: block; width: 100%; height: auto; }
+  footer { margin-top: 44px; color: var(--muted); font-size: 13px; max-width: 68ch; }
+  footer p { margin: 6px 0; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Сторінка в сторінку</h1>
+    <span class="pair" id="pairTag">DE → UK</span>
+  </header>
+  <p class="lede">Переклад PDF-документів зі збереженням верстки: положення блоків, кеглі,
+  накреслення, кольори, таблиці та зображення лишаються на місці.</p>
+
+  <div id="drop" class="card" tabindex="0" role="button" aria-label="Обрати PDF-файл">
+    <div class="big">Перетягніть PDF сюди — або натисніть, щоб обрати</div>
+    <div class="hint">Документ розбирається у вашому браузері; на переклад надсилається лише текст.</div>
+    <input type="file" id="file" accept="application/pdf,.pdf">
+  </div>
+
+  <div class="settings">
+    <label>З мови
+      <select id="srcSel">
+        <option value="de" selected>німецька</option>
+        <option value="en">англійська</option>
+        <option value="pl">польська</option>
+        <option value="fr">французька</option>
+        <option value="cs">чеська</option>
+      </select>
+    </label>
+    <label>На мову
+      <select id="tgtSel">
+        <option value="uk" selected>українська</option>
+        <option value="de">німецька</option>
+        <option value="en">англійська</option>
+      </select>
+    </label>
+    <label><input type="checkbox" id="quickChk"> швидше (простіша модель)</label>
+  </div>
+
+  <div id="demoBanner" class="banner demo" hidden>
+    Демо-режим: сторінку відкрито поза claude.ai, тому замість справжнього перекладу —
+    транслітерація, щоб перевірити верстку.
+  </div>
+  <div id="warnBanner" class="banner warn" hidden></div>
+  <div id="errBanner" class="banner err" hidden></div>
+
+  <div id="panel" class="card" hidden>
+    <div class="filerow">
+      <span class="name" id="fname"></span>
+      <span class="meta" id="fmeta"></span>
+    </div>
+    <ul class="steps">
+      <li id="st1"><span class="dot"></span><span>Читаю документ</span></li>
+      <li id="st2"><span class="dot"></span><span>Перекладаю <span id="segCount"></span></span></li>
+      <li id="st3"><span class="dot"></span><span>Верстаю переклад</span></li>
+    </ul>
+    <div class="bar"><i id="barFill"></i></div>
+    <div class="counts" id="counts"></div>
+    <div class="actions">
+      <button class="primary" id="saveBtn" hidden>Зберегти PDF</button>
+      <button id="resumeBtn" hidden>Продовжити переклад</button>
+      <button id="againBtn" hidden>Перекласти інший файл</button>
+    </div>
+    <p id="summary" hidden></p>
+  </div>
+
+  <div id="pages"></div>
+
+  <footer>
+    <p>Файл не залишає браузер — назовні йде лише текст сегментів. Переклад виконує Claude
+    з вашого облікового запису; перший запуск попросить дозвіл.</p>
+    <p>Обмеження: скани без текстового шару не перекладаються (потрібен OCR); текст поверх
+    складних фонів закривається плашкою кольору тла; повернуті сторінки лишаються як є.
+    Для бездоганного результату є консольна версія — <code>pdf-translator</code> у репозиторії.</p>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@pdf-lib/fontkit@1.1.1/dist/fontkit.umd.min.js"></script>
+<script>
+"use strict";
+/* ============================== embedded fonts ========================== */
+/* Liberation family subset to Latin + Cyrillic (SIL OFL). */
+const FONT_B64 = {
+  "sans-r": "%%FONT_sans_r%%",
+  "sans-b": "%%FONT_sans_b%%",
+  "sans-i": "%%FONT_sans_i%%",
+  "sans-bi": "%%FONT_sans_bi%%",
+  "serif-r": "%%FONT_serif_r%%",
+  "serif-b": "%%FONT_serif_b%%",
+  "mono-r": "%%FONT_mono_r%%",
+};
+function b64bytes(b64) {
+  const bin = atob(b64), out = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out;
+}
+
+/* ============================== small utils ============================= */
+const $ = id => document.getElementById(id);
+const LETTER = /\p{L}/u;
+const RENDER_SCALE = 2.0;      // canvas used for color sampling + preview
+const PREVIEW_PAGES = 10;      // page pairs shown below
+const LANG_FROM = { de: "німецької", en: "англійської", pl: "польської", fr: "французької", cs: "чеської" };
+const LANG_TO = { uk: "українську", de: "німецьку", en: "англійську" };
+
+function gapThreshold(size) { return Math.max(6, 2.2 * size); }
+function sizesClose(a, b) { return Math.abs(a - b) <= Math.max(0.6, 0.12 * Math.max(a, b)); }
+function yOverlap(a, b) { return Math.min(a.y1, b.y1) - Math.max(a.y0, b.y0); }
+
+/* ============================== extraction ============================== */
+/* Fragment: one run of text on one baseline. Coordinates: PDF space, y-up. */
+function itemFragments(items, styles, fontNames) {
+  const rows = []; // {baseline, size, frags:[{x0,x1,top,bot,baseline,text,size,bold,italic,family,chars}]}
+  const frags = [];
+  for (const it of items) {
+    if (!it.str || !it.str.trim()) continue;
+    const t = it.transform;
+    const size = Math.hypot(t[2], t[3]) || Math.abs(t[3]) || 10;
+    // horizontal, unflipped text only
+    if (Math.abs(t[1]) > 0.05 * size || Math.abs(t[2]) > 0.05 * size || t[3] < 0) continue;
+    const st = styles[it.fontName] || {};
+    const ascent = st.ascent > 0 ? st.ascent : 0.85;
+    const descent = st.descent < 0 ? st.descent : -0.2;
+    const name = (fontNames[it.fontName] || "").toLowerCase();
+    const famGuess = st.fontFamily || "";
+    frags.push({
+      x0: t[4], x1: t[4] + (it.width || 0),
+      baseline: t[5], top: t[5] + ascent * size, bot: t[5] + descent * size,
+      text: it.str.replace(/\s+/g, " "),
+      size,
+      bold: /bold|black|heavy|semibold/.test(name),
+      italic: /italic|oblique/.test(name),
+      family: /mono|courier|consol/.test(name) || famGuess === "monospace" ? "mono"
+        : /times|serif|georgia|garamond|book|cambria|roman/.test(name) || famGuess === "serif" ? "serif" : "sans",
+    });
+  }
+  // bucket by baseline, then stitch neighbours / split at cell gaps
+  frags.sort((a, b) => b.baseline - a.baseline || a.x0 - b.x0);
+  const out = [];
+  for (const f of frags) {
+    let row = rows.find(r => Math.abs(r.baseline - f.baseline) <= 0.4 * Math.max(r.size, f.size));
+    if (!row) { row = { baseline: f.baseline, size: f.size, parts: [] }; rows.push(row); }
+    row.parts.push(f);
+  }
+  for (const row of rows) {
+    row.parts.sort((a, b) => a.x0 - b.x0);
+    let cur = null;
+    for (const p of row.parts) {
+      if (cur && p.x0 - cur.x1 <= gapThreshold(cur.size)) {
+        const gap = p.x0 - cur.x1;
+        const needSpace = gap > 0.14 * cur.size && !/\s$/.test(cur.text) && !/^\s/.test(p.text);
+        cur.text += (needSpace ? " " : "") + p.text;
+        cur.x1 = Math.max(cur.x1, p.x1);
+        cur.top = Math.max(cur.top, p.top); cur.bot = Math.min(cur.bot, p.bot);
+        cur.chars += p.text.trim().length;
+        if (p.text.trim().length > cur.mainChars) {
+          cur.mainChars = p.text.trim().length;
+          cur.size = p.size; cur.bold = p.bold; cur.italic = p.italic; cur.family = p.family;
+        }
+      } else {
+        cur = Object.assign({}, p, { chars: p.text.trim().length, mainChars: p.text.trim().length });
+        out.push(cur);
+      }
+    }
+  }
+  for (const f of out) f.text = f.text.replace(/\s+/g, " ").trim();
+  return out.filter(f => f.text);
+}
+
+function joinLines(lines) {
+  let text = "";
+  for (const ln of lines) {
+    if (!text) { text = ln.text; continue; }
+    if (text.endsWith("­")) text = text.slice(0, -1) + ln.text;
+    else if (text.endsWith("-") && /\p{Ll}/u.test(ln.text[0])) text = text.slice(0, -1) + ln.text;
+    else text += " " + ln.text;
+  }
+  return text;
+}
+
+function buildSegments(frags, pageW) {
+  // group fragments (reading order: top first) into paragraphs
+  frags.sort((a, b) => b.top - a.top || a.x0 - b.x0);
+  const paras = [];
+  for (const f of frags) {
+    let home = null;
+    for (const p of paras) {
+      const last = p.lines[p.lines.length - 1];
+      const size = Math.max(last.size, f.size);
+      const dy = last.baseline - f.baseline;
+      if (dy <= 0.5 * size || dy > 1.9 * size) continue;
+      if (!sizesClose(last.size, f.size) || last.bold !== f.bold) continue;
+      const ov = Math.min(p.x1, f.x1) - Math.max(p.x0, f.x0);
+      if (ov <= 0.3 * Math.min(p.x1 - p.x0, f.x1 - f.x0)) continue;
+      home = p; break;
+    }
+    if (home) {
+      home.lines.push(f);
+      home.x0 = Math.min(home.x0, f.x0); home.x1 = Math.max(home.x1, f.x1);
+    } else {
+      paras.push({ lines: [f], x0: f.x0, x1: f.x1 });
+    }
+  }
+  return paras.map(p => {
+    const rect = {
+      x0: Math.min(...p.lines.map(l => l.x0)), x1: Math.max(...p.lines.map(l => l.x1)),
+      y0: Math.min(...p.lines.map(l => l.bot)), y1: Math.max(...p.lines.map(l => l.top)),
+    };
+    // dominant style by character count
+    let main = p.lines[0];
+    for (const l of p.lines) if (l.chars > main.chars) main = l;
+    // line height from baseline deltas
+    let lh = 1.15;
+    if (p.lines.length > 1) {
+      const deltas = [];
+      for (let i = 1; i < p.lines.length; i++) deltas.push(p.lines[i - 1].baseline - p.lines[i].baseline);
+      const avg = deltas.reduce((a, b) => a + b, 0) / deltas.length;
+      lh = Math.max(1.0, Math.min(2.2, avg / main.size));
+    }
+    return {
+      rect, text: joinLines(p.lines), size: main.size, bold: main.bold, italic: main.italic,
+      family: main.family, lineHeight: lh, lines: p.lines.length,
+      align: guessAlign(p.lines, rect, pageW),
+      color: [0, 0, 0], bg: [255, 255, 255],
+      translatable: LETTER.test(joinLines(p.lines)),
+      translation: null, scale: 1,
+    };
+  }).filter(s => s.rect.x1 - s.rect.x0 > 2 && s.rect.y1 - s.rect.y0 > 2 && s.text);
+}
+
+function guessAlign(lines, rect, pageW) {
+  const size = lines[0].size, tol = Math.max(2, size * 0.6);
+  if (lines.length === 1) {
+    const center = (rect.x0 + rect.x1) / 2;
+    if (Math.abs(center - pageW / 2) <= Math.max(6, pageW * 0.02) && rect.x0 > pageW * 0.15) return "center";
+    if (pageW - rect.x1 < pageW * 0.12 && rect.x0 > pageW * 0.3) return "right";
+    return "left";
+  }
+  const lefts = lines.map(l => l.x0 - rect.x0), rights = lines.map(l => rect.x1 - l.x1);
+  const leftFlat = Math.max(...lefts) - Math.min(...lefts) <= tol;
+  const rightFlat = Math.max(...rights) - Math.min(...rights) <= tol;
+  if (leftFlat && rightFlat && lines.length >= 3) return "justify";
+  if (leftFlat) return "left";
+  if (rightFlat) return "right";
+  if (lines.every((l, i) => Math.abs(lefts[i] - rights[i]) <= tol * 1.5)) return "center";
+  return "left";
+}
+
+function detectRightColumns(segments) {
+  const singles = segments.filter(s => s.lines === 1).sort((a, b) => a.rect.x1 - b.rect.x1);
+  let group = [];
+  const flush = () => {
+    if (group.length >= 3) {
+      const xs = group.map(g => g.rect.x0);
+      const column = Math.max(...xs) < Math.min(...group.map(g => g.rect.x1)) - 2;
+      if (Math.max(...xs) - Math.min(...xs) > 3 && column)
+        for (const g of group) if (g.align === "left") g.align = "right";
+    }
+    group = [];
+  };
+  for (const s of singles) {
+    if (group.length && s.rect.x1 - group[group.length - 1].rect.x1 > 1.5) flush();
+    group.push(s);
+  }
+  flush();
+}
+
+function widenSingles(segments) {
+  if (!segments.length) return;
+  const cx0 = Math.min(...segments.map(s => s.rect.x0));
+  const cx1 = Math.max(...segments.map(s => s.rect.x1));
+  for (const seg of segments) {
+    seg.insertRect = Object.assign({}, seg.rect);
+    if (!seg.translatable || seg.lines > 1) continue;
+    const r = seg.rect;
+    const band = segments.filter(o => o !== seg && yOverlap(o.rect, r) > 0.3 * (r.y1 - r.y0)).map(o => o.rect);
+    const rightLim = Math.min(...band.filter(o => o.x0 >= r.x1 - 1).map(o => o.x0 - 2), Math.max(cx1, r.x1));
+    const leftLim = Math.max(...band.filter(o => o.x1 <= r.x0 + 1).map(o => o.x1 + 2), Math.min(cx0, r.x0));
+    if (seg.align === "right") seg.insertRect.x0 = Math.min(r.x0, leftLim);
+    else if (seg.align === "center") {
+      const room = Math.min(r.x0 - leftLim, rightLim - r.x1);
+      if (room > 0) { seg.insertRect.x0 -= room; seg.insertRect.x1 += room; }
+    } else seg.insertRect.x1 = Math.max(r.x1, rightLim);
+  }
+}
+
+/* ============================ color sampling ============================ */
+function samplePageColors(segments, canvas, viewport) {
+  const ctx = canvas.getContext("2d", { willReadFrequently: true });
+  const img = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const px = (x, y) => {
+    const i = (Math.min(canvas.height - 1, Math.max(0, y)) * canvas.width +
+               Math.min(canvas.width - 1, Math.max(0, x))) * 4;
+    return [img.data[i], img.data[i + 1], img.data[i + 2]];
+  };
+  const key = c => ((c[0] >> 4) << 8) | ((c[1] >> 4) << 4) | (c[2] >> 4);
+  const dist2 = (a, b) => (a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2 + (a[2] - b[2]) ** 2;
+  for (const seg of segments) {
+    const [ax, ay] = viewport.convertToViewportPoint(seg.rect.x0, seg.rect.y1);
+    const [bx, by] = viewport.convertToViewportPoint(seg.rect.x1, seg.rect.y0);
+    const x0 = Math.floor(Math.min(ax, bx)), x1 = Math.ceil(Math.max(ax, bx));
+    const y0 = Math.floor(Math.min(ay, by)), y1 = Math.ceil(Math.max(ay, by));
+    // background: the ring just outside the box
+    const counts = new Map(); let bestKey = null, bestN = 0, bestC = [255, 255, 255];
+    const ringStep = Math.max(1, Math.floor((x1 - x0) / 48));
+    for (let x = x0 - 3; x <= x1 + 3; x += ringStep)
+      for (const y of [y0 - 3, y0 - 2, y1 + 2, y1 + 3]) {
+        const c = px(x, y), k = key(c), n = (counts.get(k) || 0) + 1;
+        counts.set(k, n);
+        if (n > bestN) { bestN = n; bestKey = k; bestC = c; }
+      }
+    seg.bg = bestC;
+    // text color: interior pixels far from the background
+    const stepX = Math.max(1, Math.floor((x1 - x0) / 70));
+    const stepY = Math.max(1, Math.floor((y1 - y0) / 24));
+    const inks = []; let far = null, farD = 0;
+    for (let y = y0 + 1; y < y1; y += stepY)
+      for (let x = x0 + 1; x < x1; x += stepX) {
+        const c = px(x, y), d = dist2(c, bestC);
+        if (d > farD) { farD = d; far = c; }
+        if (d > 3600) inks.push(c);
+      }
+    if (inks.length) {
+      const mid = arr => { arr.sort((a, b) => a - b); return arr[Math.floor(arr.length / 2)]; };
+      seg.color = [mid(inks.map(c => c[0])), mid(inks.map(c => c[1])), mid(inks.map(c => c[2]))];
+    } else if (far && farD > 900) {
+      seg.color = far;
+    } else {
+      const lum = 0.2126 * bestC[0] + 0.7152 * bestC[1] + 0.0722 * bestC[2];
+      seg.color = lum > 128 ? [0, 0, 0] : [255, 255, 255];
+    }
+  }
+}
+
+/* ============================== translation ============================= */
+function splitLong(text, limit) {
+  if (text.length <= limit) return [text];
+  const parts = text.split(/(?<=[.!?;:])\s+/);
+  const chunks = []; let cur = "";
+  for (let part of parts) {
+    while (part.length > limit) {
+      let cut = part.lastIndexOf(" ", limit);
+      if (cut <= 0) cut = limit;
+      if (cur) { chunks.push(cur); cur = ""; }
+      chunks.push(part.slice(0, cut));
+      part = part.slice(cut).trimStart();
+    }
+    if (cur.length + part.length + 1 > limit && cur) { chunks.push(cur); cur = part; }
+    else cur = cur ? cur + " " + part : part;
+  }
+  if (cur) chunks.push(cur);
+  return chunks;
+}
+
+const MOCK_WORDS = {
+  mietvertrag: "договір оренди", wohnraum: "житло", vermieter: "орендодавець",
+  mieter: "орендар", seite: "сторінка", von: "з", und: "і", der: "цей", die: "ця",
+  das: "це", "für": "для", hinweis: "примітка", wichtig: "важливо", vertrag: "договір",
+};
+const MOCK_MAP = { a:"а",b:"б",c:"ц",d:"д",e:"е",f:"ф",g:"ґ",h:"г",i:"і",j:"й",k:"к",l:"л",
+  m:"м",n:"н",o:"о",p:"п",q:"к",r:"р",s:"с",t:"т",u:"у",v:"в",w:"в",x:"кс",y:"ї",z:"з",
+  "ä":"я","ö":"є","ü":"ю","ß":"сс" };
+function mockTranslate(text) {
+  return text.replace(/[^\W\d_]+/gu, w => {
+    const hit = MOCK_WORDS[w.toLowerCase()];
+    if (hit) return /^\p{Lu}/u.test(w) ? hit[0].toUpperCase() + hit.slice(1) : hit;
+    let out = "";
+    for (const ch of w) {
+      const lo = MOCK_MAP[ch.toLowerCase()];
+      out += lo == null ? ch : (ch === ch.toLowerCase() ? lo : lo[0].toUpperCase() + lo.slice(1));
+    }
+    return out;
+  });
+}
+
+function translatePrompt(src, tgt, block) {
+  return `Ти професійний перекладач документів. Переклади кожен сегмент з ${LANG_FROM[src] || src} на ${LANG_TO[tgt] || tgt} мову.
+Сегменти взято з PDF і їх буде зверстано назад на ті самі місця, тому:
+- перекладай кожен сегмент незалежно; не об'єднуй, не розбивай, не пропускай і не переставляй;
+- числа, дати, коди, адреси, e-mail і власні назви залишай як є (окрім транслітерації, якщо так прийнято);
+- зберігай регістр (ВЕЛИКІ ЛІТЕРИ лишаються великими) і стиль пунктуації;
+- обирай стислі формулювання, за довжиною близькі до оригіналу;
+- відповідай ЛИШЕ рядками виду <seg id="N">переклад</seg>, по одному на кожен вхідний сегмент, з тими самими id, без жодного іншого тексту.
+
+${block}`;
+}
+
+async function translateAll(texts, src, tgt, sampleFn, quick, onProgress) {
+  const map = new Map();
+  if (!sampleFn) {
+    for (const t of texts) { map.set(t, mockTranslate(t)); }
+    onProgress(texts.length, texts.length);
+    return map;
+  }
+  const pending = texts.filter(t => !map.has(t));
+  const batches = [];
+  let batch = [], chars = 0;
+  for (const t of pending) {
+    batch.push(t); chars += t.length;
+    if (batch.length >= 40 || chars >= 6000) { batches.push(batch); batch = []; chars = 0; }
+  }
+  if (batch.length) batches.push(batch);
+  let done = 0;
+  for (const b of batches) {
+    const items = [];
+    const origin = []; // items index -> {text, piece}
+    for (const t of b) {
+      const pieces = splitLong(t, 5500);
+      for (let i = 0; i < pieces.length; i++) origin.push({ text: t, part: i, total: pieces.length, piece: pieces[i] });
+    }
+    const block = origin.map((o, i) => `<seg id="${i}">${o.piece}</seg>`).join("\n");
+    const reply = await sampleWithBackoff(sampleFn, translatePrompt(src, tgt, block), quick);
+    const found = new Map();
+    for (const m of reply.matchAll(/<seg id="(\d+)">([\s\S]*?)<\/seg>/g)) found.set(+m[1], m[2].trim());
+    // retry stragglers one by one
+    for (let i = 0; i < origin.length; i++) {
+      if (!found.has(i)) {
+        const one = await sampleWithBackoff(sampleFn,
+          translatePrompt(src, tgt, `<seg id="${i}">${origin[i].piece}</seg>`), quick);
+        const m = one.match(/<seg id="\d+">([\s\S]*?)<\/seg>/);
+        found.set(i, m ? m[1].trim() : one.trim() || origin[i].piece);
+      }
+    }
+    const byText = new Map();
+    for (let i = 0; i < origin.length; i++) {
+      const o = origin[i];
+      if (!byText.has(o.text)) byText.set(o.text, []);
+      byText.get(o.text)[o.part] = found.get(i);
+    }
+    for (const [t, parts] of byText) map.set(t, parts.join(" "));
+    done += b.length;
+    onProgress(done, pending.length);
+  }
+  return map;
+}
+
+async function sampleWithBackoff(sampleFn, prompt, quick) {
+  const opts = { modelTier: quick ? "quick" : "default" };
+  try {
+    const { text } = await sampleFn(prompt, opts);
+    return text;
+  } catch (e) {
+    if (e && e.code === "rate_limited") {
+      await new Promise(r => setTimeout(r, 20000));
+      const { text } = await sampleFn(prompt, opts);
+      return text;
+    }
+    throw e;
+  }
+}
+
+/* ============================== rebuild ================================ */
+const ASCENT = { sans: 0.905, serif: 0.891, mono: 0.8 };
+function pickFace(seg) {
+  if (seg.family === "mono") return "mono-r";
+  if (seg.family === "serif") return seg.bold ? "serif-b" : "serif-r";
+  return seg.bold && seg.italic ? "sans-bi" : seg.bold ? "sans-b" : seg.italic ? "sans-i" : "sans-r";
+}
+
+function wrapWords(text, font, size, maxWidth) {
+  const words = text.split(/\s+/).filter(Boolean);
+  const lines = []; let cur = "";
+  for (const word of words) {
+    const cand = cur ? cur + " " + word : word;
+    if (!cur || font.widthOfTextAtSize(cand, size) <= maxWidth) cur = cand;
+    else { lines.push(cur); cur = word; }
+  }
+  if (cur) lines.push(cur);
+  return lines.length ? lines : [text];
+}
+
+function fitText(text, font, seg) {
+  const r = seg.insertRect;
+  const boxW = r.x1 - r.x0 + 1, boxH = r.y1 - r.y0 + 1.2;
+  let size = seg.size;
+  const minSize = Math.max(4, seg.size * 0.4);
+  for (;;) {
+    const lines = wrapWords(text, font, size, boxW);
+    const lh = seg.lineHeight * size;
+    const height = (lines.length - 1) * lh + size * 1.02;
+    const tooWide = lines.some(l => font.widthOfTextAtSize(l, size) > boxW + 0.6);
+    if ((height <= boxH + 0.7 && !tooWide) || size <= minSize) return { lines, size };
+    size *= 0.94;
+  }
+}
+
+async function rebuildPdf(bytes, pageSegs, fontsCache) {
+  const { PDFDocument, rgb } = PDFLib;
+  const doc = await PDFDocument.load(bytes, { ignoreEncryption: true, updateMetadata: false });
+  doc.registerFontkit(fontkit);
+  const embedded = {};
+  // fonts are pre-subset at build time; pdf-lib re-subsetting corrupts
+  // the OS/2 table, so embed the files as they are
+  const getFont = async face => embedded[face] ||
+    (embedded[face] = await doc.embedFont(fontsCache[face]));
+  const pages = doc.getPages();
+  let shrunk = 0, minScale = 1;
+  for (let i = 0; i < pages.length; i++) {
+    const segs = (pageSegs[i] || []).filter(s => s.translatable && s.translation);
+    if (!segs.length) continue;
+    const page = pages[i];
+    for (const seg of segs) {
+      const r = seg.rect;
+      // ascender/umlaut tops and descenders often poke past the metrics
+      // pdf.js reports, so the cover box gets size-relative padding
+      const padTop = 0.28 * seg.size, padBot = 0.18 * seg.size;
+      page.drawRectangle({
+        x: r.x0 - 1, y: r.y0 - padBot,
+        width: r.x1 - r.x0 + 2, height: r.y1 - r.y0 + padTop + padBot,
+        color: rgb(seg.bg[0] / 255, seg.bg[1] / 255, seg.bg[2] / 255),
+      });
+    }
+    for (const seg of segs) {
+      const font = await getFont(pickFace(seg));
+      const { lines, size } = fitText(seg.translation, font, seg);
+      const scale = size / seg.size;
+      if (scale < 0.9) { shrunk++; minScale = Math.min(minScale, scale); }
+      const r = seg.insertRect;
+      const asc = ASCENT[seg.family] || 0.9;
+      const lh = seg.lineHeight * size;
+      const color = rgb(seg.color[0] / 255, seg.color[1] / 255, seg.color[2] / 255);
+      let baseline = r.y1 - asc * size;
+      for (let k = 0; k < lines.length; k++) {
+        const lw = font.widthOfTextAtSize(lines[k], size);
+        let x = r.x0;
+        if (seg.align === "right") x = r.x1 - lw;
+        else if (seg.align === "center") x = (r.x0 + r.x1) / 2 - lw / 2;
+        page.drawText(lines[k], { x, y: baseline - k * lh, size, font, color });
+      }
+    }
+  }
+  const out = await doc.save();
+  return { bytes: out, shrunk, minScale };
+}
+
+/* ============================== app state =============================== */
+const state = {
+  file: null, origBytes: null, resultBytes: null,
+  pageSegs: [], previews: [], numPages: 0,
+  sample: null, downloads: null, capsReady: null,
+  running: false,
+};
+window.__getResult = () => state.resultBytes; // used by automated tests
+
+function setStep(n, status) {
+  const li = $("st" + n);
+  li.classList.remove("active", "done");
+  if (status) li.classList.add(status);
+}
+function setBar(f) { $("barFill").style.width = Math.round(f * 100) + "%"; }
+function showErr(msg) { const b = $("errBanner"); b.textContent = msg; b.hidden = !msg; }
+function showWarn(msg) { const b = $("warnBanner"); b.textContent = msg; b.hidden = !msg; }
+
+function errCopy(e) {
+  const code = e && e.code;
+  if (code === "not_granted") return "Ви не дозволили сторінці звертатися до Claude — без цього перекладати нічим. Оновіть сторінку, щоб дозволити знову.";
+  if (code === "rate_limited") return "Забагато запитів поспіль. Зачекайте хвилину й натисніть «Продовжити переклад».";
+  if (code === "prompt_too_large") return "Сегмент завеликий для одного запиту — повідомте про цей документ, це помилка сторінки.";
+  if (code === "cancelled") return "Переклад зупинено.";
+  return "Не вдалося отримати переклад (" + (code || (e && e.message) || "невідома помилка") + "). Спробуйте ще раз.";
+}
+
+async function initCaps() {
+  if (!(window.claude && window.claude.use)) return;
+  const [sample, downloads] = await Promise.all([
+    window.claude.use("sample").catch(() => null),
+    window.claude.use("downloads").catch(() => null),
+  ]);
+  state.sample = sample; state.downloads = downloads;
+}
+
+async function handleFile(file) {
+  if (state.running) return;
+  showErr(""); showWarn("");
+  if (!file || !/\.pdf$/i.test(file.name) && file.type !== "application/pdf") {
+    showErr("Це не PDF. Оберіть файл із розширенням .pdf."); return;
+  }
+  if (file.size > 40 * 1024 * 1024) { showErr("Файл завеликий (понад 40 МБ). Скористайтеся консольною версією."); return; }
+  state.running = true;
+  state.file = file; state.resultBytes = null;
+  $("pages").innerHTML = ""; $("summary").hidden = true;
+  $("saveBtn").hidden = true; $("againBtn").hidden = true; $("resumeBtn").hidden = true;
+  $("panel").hidden = false;
+  $("fname").textContent = file.name;
+  $("fmeta").textContent = (file.size / 1024 / 1024).toFixed(2) + " МБ";
+  setStep(1, "active"); setStep(2, ""); setStep(3, ""); setBar(0);
+  $("counts").textContent = ""; $("segCount").textContent = "";
+  try {
+    await runPipeline();
+  } catch (e) {
+    console.error(e);
+    showErr(errCopy(e));
+    if (e && e.code === "rate_limited") $("resumeBtn").hidden = false;
+    $("againBtn").hidden = false;
+  } finally {
+    state.running = false;
+  }
+}
+
+async function runPipeline() {
+  await state.capsReady;
+  $("demoBanner").hidden = !!state.sample;
+  const src = $("srcSel").value, tgt = $("tgtSel").value;
+  const quick = $("quickChk").checked;
+
+  // -- 1: read + extract ---------------------------------------------------
+  state.origBytes = new Uint8Array(await state.file.arrayBuffer());
+  const loading = pdfjsLib.getDocument({ data: state.origBytes.slice(), useSystemFonts: true });
+  const pdf = await loading.promise;
+  state.numPages = pdf.numPages;
+  state.pageSegs = []; state.previews = [];
+  let rotatedPages = 0, totalSegs = 0;
+  for (let p = 1; p <= pdf.numPages; p++) {
+    const page = await pdf.getPage(p);
+    if (page.rotate % 360 !== 0) { rotatedPages++; state.pageSegs.push([]); continue; }
+    const viewport = page.getViewport({ scale: RENDER_SCALE });
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.ceil(viewport.width); canvas.height = Math.ceil(viewport.height);
+    const ctx = canvas.getContext("2d", { willReadFrequently: true });
+    ctx.fillStyle = "#ffffff"; ctx.fillRect(0, 0, canvas.width, canvas.height);
+    await page.render({ canvasContext: ctx, viewport }).promise;
+    const tc = await page.getTextContent();
+    const fontNames = {};
+    for (const it of tc.items) {
+      if (it.fontName && !(it.fontName in fontNames)) {
+        try { fontNames[it.fontName] = (page.commonObjs.get(it.fontName) || {}).name || ""; }
+        catch (e) { fontNames[it.fontName] = ""; }
+      }
+    }
+    const frags = itemFragments(tc.items, tc.styles, fontNames);
+    const segs = buildSegments(frags, page.view[2] - page.view[0]);
+    detectRightColumns(segs);
+    widenSingles(segs);
+    samplePageColors(segs, canvas, viewport);
+    state.pageSegs.push(segs);
+    totalSegs += segs.filter(s => s.translatable).length;
+    if (p <= PREVIEW_PAGES) state.previews.push(canvas);
+    setBar(0.25 * (p / pdf.numPages));
+  }
+  setStep(1, "done");
+  if (rotatedPages) showWarn(`Повернутих сторінок: ${rotatedPages} — їх залишено без перекладу.`);
+  if (!totalSegs) {
+    if (state.numPages) showWarn("У документа немає текстового шару — схоже, це скан. Спершу потрібне розпізнавання (OCR), перекласти тут нічого.");
+    throw { code: "no_text", message: "no text layer" };
+  }
+
+  // -- 2: translate --------------------------------------------------------
+  const unique = [...new Set(state.pageSegs.flat().filter(s => s.translatable).map(s => s.text))];
+  $("segCount").textContent = `(сегментів: ${unique.length})`;
+  setStep(2, "active");
+  const t0 = performance.now();
+  const map = await translateAll(unique, src, tgt, state.sample, quick, (done, total) => {
+    setBar(0.25 + 0.6 * (done / total));
+    $("counts").textContent = `Перекладено ${done} з ${total} сегментів`;
+  });
+  for (const segs of state.pageSegs)
+    for (const seg of segs)
+      if (seg.translatable) seg.translation = map.get(seg.text) || seg.text;
+  setStep(2, "done");
+
+  // -- 3: rebuild ----------------------------------------------------------
+  setStep(3, "active"); setBar(0.9);
+  const fontsCache = {};
+  for (const k of Object.keys(FONT_B64)) fontsCache[k] = b64bytes(FONT_B64[k]);
+  const { bytes, shrunk, minScale } = await rebuildPdf(state.origBytes.slice(), state.pageSegs, fontsCache);
+  state.resultBytes = bytes;
+  setStep(3, "done"); setBar(1);
+  const secs = ((performance.now() - t0) / 1000).toFixed(0);
+  $("counts").textContent = "";
+  const sum = $("summary");
+  sum.innerHTML = `<strong>Готово.</strong> Сторінок: ${state.numPages}, сегментів перекладено: ${unique.length}, час: ${secs} с.` +
+    (shrunk ? ` Стиснено, щоб вмістити: ${shrunk} (мін. ${Math.round(minScale * 100)}%).` : "");
+  sum.hidden = false;
+  $("saveBtn").hidden = !state.downloads;
+  if (!state.downloads && state.sample)
+    showWarn("Збереження недоступне в цьому перегляді — але попередній перегляд нижче працює.");
+  $("againBtn").hidden = false;
+  await renderPreviews();
+}
+
+async function renderPreviews() {
+  const box = $("pages"); box.innerHTML = "";
+  const resDoc = await pdfjsLib.getDocument({ data: state.resultBytes.slice(), useSystemFonts: true }).promise;
+  const n = Math.min(state.previews.length, resDoc.numPages);
+  for (let p = 1; p <= n; p++) {
+    const page = await resDoc.getPage(p);
+    const viewport = page.getViewport({ scale: RENDER_SCALE });
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.ceil(viewport.width); canvas.height = Math.ceil(viewport.height);
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#ffffff"; ctx.fillRect(0, 0, canvas.width, canvas.height);
+    await page.render({ canvasContext: ctx, viewport }).promise;
+    const pair = document.createElement("div");
+    pair.className = "pagepair";
+    pair.innerHTML = `<h3>Сторінка ${p}</h3><div class="duo">
+      <div class="shot"><div class="tag">Оригінал</div></div>
+      <div class="shot"><div class="tag">Переклад</div></div></div>`;
+    pair.querySelectorAll(".shot")[0].appendChild(state.previews[p - 1]);
+    pair.querySelectorAll(".shot")[1].appendChild(canvas);
+    box.appendChild(pair);
+  }
+  if (state.numPages > n) {
+    const note = document.createElement("p");
+    note.style.color = "var(--muted)"; note.style.fontSize = "13px";
+    note.textContent = `Показано перші ${n} сторінок із ${state.numPages}; у збереженому файлі — всі.`;
+    box.appendChild(note);
+  }
+}
+
+/* ============================== wire up ================================ */
+function init() {
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  state.capsReady = initCaps().then(() => {
+    $("demoBanner").hidden = !!(window.claude && window.claude.use) && state.sample !== null;
+  });
+  // show the demo banner early only when there is no viewer bridge at all
+  if (!(window.claude && window.claude.use)) $("demoBanner").hidden = false;
+
+  const drop = $("drop"), fileInput = $("file");
+  drop.addEventListener("click", () => fileInput.click());
+  drop.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fileInput.click(); } });
+  fileInput.addEventListener("change", () => handleFile(fileInput.files[0]));
+  for (const ev of ["dragover", "dragenter"])
+    drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add("over"); });
+  for (const ev of ["dragleave", "drop"])
+    drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove("over"); });
+  drop.addEventListener("drop", e => handleFile(e.dataTransfer.files[0]));
+
+  const updatePair = () => $("pairTag").textContent =
+    $("srcSel").value.toUpperCase() + " → " + $("tgtSel").value.toUpperCase();
+  $("srcSel").addEventListener("change", updatePair);
+  $("tgtSel").addEventListener("change", updatePair);
+
+  $("saveBtn").addEventListener("click", async () => {
+    if (!state.resultBytes || !state.downloads) return;
+    const name = state.file.name.replace(/\.pdf$/i, "") + "." + $("tgtSel").value + ".pdf";
+    $("saveBtn").disabled = true;
+    try {
+      await state.downloads.save({ filename: name, data: state.resultBytes.slice() });
+    } catch (e) {
+      if (e && e.code !== "declined") showErr("Не вдалося зберегти: " + (e.code || e.message));
+    } finally {
+      $("saveBtn").disabled = false;
+    }
+  });
+  $("againBtn").addEventListener("click", () => { fileInput.value = ""; fileInput.click(); });
+  $("resumeBtn").addEventListener("click", () => { $("resumeBtn").hidden = true; showErr(""); handleFile(state.file); });
+}
+init();
+</script>
