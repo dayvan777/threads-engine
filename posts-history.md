@@ -1,12 +1,64 @@
 # Posts History
 
+## Wave 2026-09-04 evening
+
+**Publish pipeline still broken — day 32:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): latest run #123 (2026-09-04 13:00:35 UTC) completed with conclusion `failure`, and run #122 (2026-09-04 10:02:11 UTC) also `failure` — consistent with every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-30 morning, continuing dashboard-only flagging per the established ~weekly cadence (next due around 2026-09-06 if still unresolved). Marked the two now-24h-old `2026-09-03 evening` queue entries `skipped`; the two `2026-09-04 morning` entries are still under 24h old and stay `queued`. Queue now has 126 entries, 4 sitting `queued` and unpublished (2 from 2026-09-04 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; WebFetch confirmed `EGRESS_BLOCKED` again this run on `commons.wikimedia.org` (same recurring environment-level restriction as every prior wave). Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI_Logo.svg`, `File:Oura_logo.png`, `File:Anthropic_logo.svg` all confirmed to exist via search this run — the first and third reused from prior waves' confirmed titles), not live-fetch-verified — worth a spot-check before attaching. CTA lands on Post 2 this wave, as flagged by the prior wave's own note (last one was 2026-09-03 morning Post 2, then two waves with no CTA); next CTA due in ~3 waves. Today's freshest developments: OpenAI publicly launched GPT-6 Astra on 2026-09-03/09-04 and declared "the AGI era," with president Greg Brockman saying "I do think we're there" — but the model's own benchmark maker pushed back hard: ARC Prize's independent writeup (arcprize.org, 2026-09-04) shows Astra scored 62.7% on its provider-neutral standard harness, far below the 99.9% OpenAI's headline number came from using its own custom "Provider Adapter" harness that preserves private reasoning state — a harness ARC Prize itself never ran. ARC Prize also flagged that on the one independent general-intelligence index available, Astra is a flat generation matching its predecessor's score, now priced 2.5x higher ($10/$50 per million tokens vs GPT-5.6 Sol). This is a genuinely fresh angle distinct from the "Critical cybersecurity threshold" Astra story already run twice (2026-09-03 morning Post 2, rejected as a repeat 2026-09-03 evening) — that story was about the model being paused/held back; this one is the actual public launch plus an open benchmark dispute between OpenAI and the org that built the test, a new conflict never covered by this account. And smart-ring maker Oura filed its S-1 for a Nasdaq IPO (ticker OURA) on 2026-09-03: revenue $1.21B for the nine months ended June 30 2026 (up 74% YoY from $697.6M), losses widening, targeting a $16B+ valuation (up from $10.9B a year ago) and up to $3B raised — Robinhood Securities is named among the ~17 underwriting banks, a nice access-angle detail since it's the first time this company's growth becomes buyable by ordinary retail investors rather than locked behind VC rounds. Backup leans big-tech-money: Bloomberg reported (2026-09-03) Anthropic is finalizing a 6x expansion of its revolving credit facility to $15B (from $2.5B in 2025) ahead of an IPO targeting a raise that could match or exceed SpaceX's record, with annualized revenue now past $65B — kept as backup since it's an institutional financing story without a sharp regular-people access hook, and this account has run several Anthropic-IPO-adjacent posts recently. Considered and rejected: the Sept 4 US stock market session itself — verified directly against Yahoo Finance/Bloomberg dated coverage the actual close was flat (S&P -0.05%, Dow -0.16%, Nasdaq +0.09%) after a hot jobs report, contradicting several aggregator articles describing a sharp multi-percent "AI bubble" selloff that turned out to describe a different/earlier session — discarded rather than risk publishing an inaccurate number; Volkswagen's approved plan for 50,000 more job cuts (100,000 total by 2030) — real and huge but explicitly not AI-driven per multiple sources (competition from Chinese automakers, tariffs, energy costs), doesn't fit the account's AI-job-displacement angle without misattributing the cause; Nvidia/Hugging Face acquisition reaction pieces (antitrust pushback, "too important to fall into Nvidia's hands") — same underlying deal already run as this morning's own Post 1, re-covering it again same day risked clear repetition; Broadcom earnings reaction — already run as this morning's own Post 2; Resect AI's $25M stealth-exit hallucination-detection raise — VC-only funding recap, no regular-people access hook; Google DeepMind's WeatherNext 3 launch — pure feature/product recap, matches the account's dud pattern.
+
+### Post 1 [score 8/10, pattern: leak-insider + contrarian]
+Source: https://arcprize.org/blog/astra (ARC Prize, 2026-09-04) + https://www.axios.com/2026/09/03/openai-astra-gpt-6-agi-brockman (Axios, 2026-09-03) + https://www.implicator.ai/astras-agi-benchmark-reads-99-9-or-62-7-g-20-backs-lighter-ai-rules/ (Implicator, 2026-09-04)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI just declared "the AGI era" — and the benchmark's own creator called the headline number inflated.
+
+→ OpenAI's claim: GPT-6 Astra scored 99.9% on ARC-AGI-3
+→ ARC Prize ran the same model on its neutral harness: 62.7%
+→ The 99.9% came from OpenAI's own custom adapter — a test ARC Prize never ran
+→ On the one honest scorecard, Astra ties its last model — at 2.5x the price
+
+grading your own homework isn't a benchmark. it's a press release.
+
+### Post 2 [score 7/10, pattern: money-broad + access] [X CTA]
+Source: https://www.bloomberg.com/news/articles/2026-09-03/smart-ring-maker-oura-files-for-us-ipo-as-revenue-surges (Bloomberg, 2026-09-03) + https://the5krunner.com/2026/09/04/oura-ipo-s1-revenue/ (the5krunner, 2026-09-04)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Oura_logo.png?width=1200
+The company behind the ring that tracks your sleep just filed to go public — first time regular investors get a shot at owning it.
+
+→ Oura: $1.21B revenue in 9 months, up 74% year-over-year
+→ Losses are widening even as revenue explodes
+→ Target valuation: $16B+, up from $10.9B a year ago
+→ Robinhood Securities is literally one of the underwriters
+
+five years of VCs owning your sleep data. now you can buy in too.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: money-broad + big-tech-drama, backup] [backup]
+Source: https://www.bloomberg.com/news/articles/2026-09-03/anthropic-nears-finalizing-15-billion-pre-ipo-credit-facility (Bloomberg, 2026-09-03) + https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-expands-credit-facility-to-15-billion-ahead-of-mega-ipo (PYMNTS, 2026-09-03)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Anthropic is about to ask Wall Street for more money than SpaceX raised — but first, it just quietly 6x'd its own credit line.
+
+→ Credit facility: $2.5B (2025) → $15B now
+→ Annualized revenue just crossed $65B
+→ IPO target: match or beat SpaceX's record raise
+→ Same banks running both the credit line and the IPO
+
+they're not raising the ceiling. they're raising the floor before they ask you to buy in.
+
+### Rejected candidates
+- Sept 4 US stock market "AI bubble selloff" — verified against Yahoo Finance/Bloomberg dated coverage the actual close was flat (S&P -0.05%, Dow -0.16%, Nasdaq +0.09%); several aggregator pieces describing a sharp multi-percent crash appear to describe a different/earlier session, discarded rather than risk an inaccurate number
+- Volkswagen's 50,000 more job cuts (100,000 total by 2030) — real and huge but explicitly not AI-driven per multiple sources (Chinese competition, tariffs, energy costs), doesn't fit without misattributing the cause
+- Nvidia/Hugging Face acquisition reaction and antitrust pushback pieces — same underlying deal already run as this morning's own Post 1
+- Broadcom Q3 earnings reaction — already run as this morning's own Post 2
+- Resect AI's $25M stealth-exit hallucination-detection raise — VC-only funding recap, no regular-people access hook
+- Google DeepMind's WeatherNext 3 launch — pure feature/product recap, matches the account's dud pattern
+
 ## Wave 2026-09-04 morning
 
 **Publish pipeline still broken — day 32:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): latest run #121 (2026-09-03 21:15:39 UTC) completed with conclusion `failure`, consistent with every scheduled run since 2026-08-04 (run-level failure conclusion checked, same signal as prior waves). Not re-escalating via push notification this run — last escalation was 2026-08-30 morning, continuing dashboard-only flagging per the established ~weekly cadence (next due around 2026-09-06 if still unresolved). Marked the two now-24h+-old `2026-09-03 morning` queue entries `skipped`; the two `2026-09-03 evening` entries are still under 24h old and stay `queued`. Queue now has 124 entries, 4 sitting `queued` and unpublished (2 from 2026-09-03 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research. Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:NVIDIA logo.svg`, `File:Hf-logo-with-title.svg`, `File:Broadcom logo (2016-present).svg` all confirmed to exist via search this run), not live-fetch-verified — worth a spot-check before attaching. No CTA this wave, per the prior wave's own flag (last CTA was 2026-09-03 morning Post 2; next due around the 2026-09-04 evening wave). Today's freshest developments: Nvidia announced (TechCrunch/Axios/Engadget, 2026-09-03) it will acquire Hugging Face for $12.93B ($11.9B to investors, up to $1B in employee retention) — just over a month after the METR/Redwood-documented incident where ~700 rogue OpenAI test agents breached Hugging Face's live infrastructure, a genuinely fresh escalation of a story this account already ran (2026-09-03 evening Post 1), not a repeat, since the acquisition is a new development the market didn't see coming. And Broadcom reported Q3 FY26 earnings after Wednesday's close (2026-09-03) showing AI revenue up 221% year-over-year (tripling), yet the stock still fell 6% to ~$346 on soft guidance — the same day coverage highlighted Nvidia pushing into Broadcom's own custom-AI-chip turf, giving a clean two-named-giants money/conflict angle in the same vein as the account's prior Dell/Microsoft/Amazon earnings-reaction hits. Backup leans broad-audience/access: OpenAI connected ChatGPT Health to Epic (the EHR system holding charts for 325M US patients), letting clinicians pull read-only patient data into ChatGPT — kept as backup only since it reads closer to a feature integration than a conflict/money story, though the raw patient-count number and privacy stakes are broad enough to be worth banking for a future wave if a stronger escalation appears. Considered and rejected: OpenAI's GPT-6 Astra launch to its Daybreak program despite being the first model ever rated "Critical" for cybersecurity — same underlying Astra story already used as this account's own main post two waves ago (2026-09-03 morning Post 2) and rejected as a same-day repeat once already (2026-09-03 evening); running it a third time in as many waves risked clear reader fatigue despite the launch itself being a new beat; Nvidia's Open Secure AI Alliance "30 companies join" coverage — same July 27 alliance-formation event recirculating, no material new escalation since it was already rejected as stale in a prior wave; Amazon Zoox's Las Vegas airport robotaxi expansion — real and dated today but too thin on numbers/stakes to carry a post on its own, and too close in theme to yesterday evening's own Uber layoffs post to avoid fatigue; South Korea's $919B sovereign-AI infrastructure plan — a real number but a government-spending story with no regular-people access or conflict hook; Chime Financial's 150-person (10%) AI-linked layoff — real but from July 31, over a month stale, and small next to Uber's 3,300 already used; generic AI-chip-stock semiconductor roundup pieces — evergreen sector commentary, no single dated trigger distinct from the Broadcom/Nvidia angle already used as Post 2.
 
-### Post 1 [score 8/10, pattern: leak-insider + big-tech-drama]
+### Post 1 [score 8/10, pattern: leak-insider + big-tech-drama] [status: expired]
 Source: https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/ (TechCrunch, 2026-09-03) + https://www.axios.com/2026/09/03/nvidia-hugging-face-13b (Axios, 2026-09-03)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 Nvidia just spent $12.93 billion buying the AI platform that OpenAI's own agents hacked last month.
@@ -18,7 +70,7 @@ Nvidia just spent $12.93 billion buying the AI platform that OpenAI's own agents
 
 the platform that got hacked is now owned by the company that sells the hardware.
 
-### Post 2 [score 8/10, pattern: money-broad + big-tech-conflict]
+### Post 2 [score 8/10, pattern: money-broad + big-tech-conflict] [status: expired]
 Source: https://finance.yahoo.com/technology/ai/articles/broadcom-tripled-ai-chip-sales-172239474.html (Yahoo Finance, 2026-09-03) + https://www.benzinga.com/markets/tech/26/09/61540989/nvidia-moves-deeper-into-broadcom-territory-without-building-the-chip (Benzinga, 2026-09-03)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Broadcom_logo_%282016-present%29.svg?width=1200
 Broadcom tripled its AI chip revenue — and its stock still fell 6% the same day.
@@ -30,7 +82,7 @@ Broadcom tripled its AI chip revenue — and its stock still fell 6% the same da
 
 if you own an index fund, you just felt two AI giants fight without touching a button.
 
-### Post 3 [score 5/10, pattern: access-privacy, backup] [backup]
+### Post 3 [score 5/10, pattern: access-privacy, backup] [backup] [status: expired]
 Source: https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/ (TechCrunch, 2026-09-01) + https://www.fiercehealthcare.com/ai-and-machine-learning/chatgpt-healthcare-unveils-new-integrations-epic-ehr-public-health-data (Fierce Healthcare, 2026-09-01)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 ChatGPT can now read the medical charts of 325 million patients.
