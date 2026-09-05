@@ -872,14 +872,14 @@
     "wave": "2026-09-04 evening",
     "text": "OpenAI just declared \"the AGI era\" — and the benchmark's own creator called the headline number inflated.\n\n→ OpenAI's claim: GPT-6 Astra scored 99.9% on ARC-AGI-3\n→ ARC Prize ran the same model on its neutral harness: 62.7%\n→ The 99.9% came from OpenAI's own custom adapter — a test ARC Prize never ran\n→ On the one honest scorecard, Astra ties its last model — at 2.5x the price\n\ngrading your own homework isn't a benchmark. it's a press release.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-04-evening-2",
     "wave": "2026-09-04 evening",
     "text": "The company behind the ring that tracks your sleep just filed to go public — first time regular investors get a shot at owning it.\n\n→ Oura: $1.21B revenue in 9 months, up 74% year-over-year\n→ Losses are widening even as revenue explodes\n→ Target valuation: $16B+, up from $10.9B a year ago\n→ Robinhood Securities is literally one of the underwriters\n\nfive years of VCs owning your sleep data. now you can buy in too.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-05-morning-1",
@@ -892,6 +892,20 @@
     "id": "2026-09-05-morning-2",
     "wave": "2026-09-05 morning",
     "text": "OpenAI called GPT-6 Astra the start of \"the AGI era\" — then let everyone except its paying customers use it first.\n\n→ Enterprise cybersecurity customers got Astra on Sept 3. Plus and Pro got locked out\n→ Pro subscribers pay the most and usually get new models first — not this time\n→ Altman apologized for the \"messy\" rollout on Sept 4\n→ Compensation: one free reset for every day paid users go without it\n\nthe AGI era launches on OpenAI's schedule — even if you already paid for yours.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-05-evening-1",
+    "wave": "2026-09-05 evening",
+    "text": "Claude spent 11 days alone and wrote 13 million lines of code nobody fully read — just to double-check a 30-year-old math proof.\n\n→ Formalized Wiles' 1995 Fermat's Last Theorem proof into Lean, verified line by line by computer\n→ 30,300 theorems proved, most invented by Claude to fill gaps humans left implicit\n→ Result: 5x the size of the math library it was built on\n\nverification used to mean a person read it. now it means a machine agrees with itself.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-05-evening-2",
+    "wave": "2026-09-05 evening",
+    "text": "Nvidia is about to hand a 2-year-old startup $2B — the same startup that just signed a $45B deal to rent Anthropic GPUs it hasn't built yet.\n\n→ Nscale: raising $3.5B pre-IPO, ~$2B from Nvidia\n→ Pitch to investors: $103B \"revenue\" — signed leases, not cash collected\n→ Anthropic's $45B compute deal (Aug 26) anchors that number\n→ Nvidia sells the chips, then buys a stake in the buyer\n\nown an index fund with Nvidia in it? you funded both sides.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }

@@ -1,12 +1,61 @@
 # Posts History
 
+## Wave 2026-09-05 evening
+
+**Publish pipeline still broken — day 33:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): latest run #127 (2026-09-05 12:12:53 UTC) completed with conclusion `failure`, and run #126 (2026-09-05 09:31:47 UTC) also `failure` — consistent with every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-30 morning, continuing dashboard-only flagging per the established ~weekly cadence (next due around 2026-09-06 if still unresolved). Marked the two now-24h+-old `2026-09-04 evening` queue entries `skipped`; the two `2026-09-05 morning` entries are still under 24h old and stay `queued`. Queue now has 130 entries, 4 sitting `queued` and unpublished (2 from 2026-09-05 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; WebFetch to `commons.wikimedia.org` was not attempted directly this run given the recurring `EGRESS_BLOCKED` restriction noted in every prior wave — file titles below were instead confirmed to exist via WebSearch (`File:Anthropic logo.svg` and `File:NVIDIA logo.svg`, both reused from prior waves' confirmed titles), not live-fetch-verified — worth a spot-check before attaching. CTA lands on Post 2 this wave, as flagged by the prior wave's own note (last CTA was 2026-09-04 evening Post 2, then one wave — this morning's — with none); next CTA due in ~3 waves. Today's freshest developments: Anthropic disclosed (research post + wide same-day coverage, 2026-09-04/09-05) that Claude worked largely autonomously for 11 days on the Prove2Me platform to produce the first end-to-end, computer-checked formalization of Andrew Wiles' 1995 proof of Fermat's Last Theorem in the Lean language — 13 million lines of Lean code, 30,300 theorems proved (29,500 used in the final proof), ~6 billion output tokens, the resulting artifact roughly 5x the size of Mathlib (the community library it builds on). A genuinely new capability-shock story this account hasn't covered, distinct from the ongoing GPT-6 Astra benchmark-dispute thread. Separately, TechCrunch reported (2026-09-04) that AI-cloud firm Nscale — founded just two years ago — is in talks to raise up to $3.5B in pre-IPO financing: ~$1.5B in convertible notes led by Third Point, plus roughly $2B directly from Nvidia, with Nscale telling prospective investors it has ~$103B in "revenue" following its $45B Anthropic compute deal signed Aug 26 — a figure that is explicitly a projection from signed lease contracts, not collected cash. A fresh circular-financing angle (Nvidia as both chip seller and investor in its own customer's landlord) distinct from the Nvidia/Hugging Face and Nvidia/Intel/SpaceX circular-financing posts already run. Backup leans money-access/deadline: Anthropic is reportedly (The Information via multiple outlets, 2026-09-03) planning to publicly file its IPO prospectus after the Sept 7 Labor Day holiday, entering the mandatory 30-day SEC quiet period, targeting a listing as soon as late September at a rumored $1.5-2T valuation — kept as backup since this account has run several Anthropic-IPO-adjacent posts recently (credit facility, super-voting shares) and this is an incremental procedural update rather than a new number. Considered and rejected: re-running this morning's own Tesla Cybercab/NHTSA story or GPT-6 Astra paid-access story — both already this account's own posts from earlier today, no material new escalation found (Altman's weekend hope for Pro access is a minor, non-committal update); Microsoft's MAI-Transcribe-2 launch — pure feature/pricing recap, matches the account's dud pattern; Crusoe's $30B valuation — VC-only funding recap, no regular-people access hook; the ongoing 2026 layoff tracker (846/day average, Oracle's 30,000 still the largest cut) — same underlying story already used multiple times, no fresh single-day trigger today; Nvidia/China H200 chip export limbo — real ongoing conflict but no new escalation beyond what's already been covered in prior waves, still stuck in the same "approved but not delivered" limbo.
+
+### Post 1 [score 7/10, pattern: leak-insider + wild-numbers]
+Source: https://www.anthropic.com/research/formalizing-fermats-last-theorem (Anthropic, 2026-09-04) + https://siliconangle.com/2026/09/04/anthropic-uses-claude-to-formalize-proof-of-fermats-last-theorem/ (SiliconANGLE, 2026-09-04)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Claude spent 11 days alone and wrote 13 million lines of code nobody fully read — just to double-check a 30-year-old math proof.
+
+→ Formalized Wiles' 1995 Fermat's Last Theorem proof into Lean, verified line by line by computer
+→ 30,300 theorems proved, most invented by Claude to fill gaps humans left implicit
+→ Result: 5x the size of the math library it was built on
+
+verification used to mean a person read it. now it means a machine agrees with itself.
+
+### Post 2 [score 7/10, pattern: money-broad + big-tech-drama] [X CTA]
+Source: https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/ (TechCrunch, 2026-09-04)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+Nvidia is about to hand a 2-year-old startup $2B — the same startup that just signed a $45B deal to rent Anthropic GPUs it hasn't built yet.
+
+→ Nscale: raising $3.5B pre-IPO, ~$2B from Nvidia
+→ Pitch to investors: $103B "revenue" — signed leases, not cash collected
+→ Anthropic's $45B compute deal (Aug 26) anchors that number
+→ Nvidia sells the chips, then buys a stake in the buyer
+
+own an index fund with Nvidia in it? you funded both sides.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: money-access + deadline, backup] [backup]
+Source: https://www.fool.com/investing/2026/09/03/anthropic-planning-unveil-ipo-details-labor-day/ (The Motley Fool, 2026-09-03) + https://www.bloomberg.com/news/articles/2026-08-31/anthropic-s-mega-ipo-plan-looms-over-packed-us-listing-calendar (Bloomberg, 2026-08-31)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Starting Monday, Anthropic legally can't say much more about its own IPO — the countdown to a possible $2 trillion listing just began.
+
+→ Public S-1 filing expected after Sept 7, opening a mandatory 30-day SEC quiet period
+→ Already raised $130B+ privately; last round priced it at $965B
+→ Listing could land as soon as late September
+
+the closer the number gets to real money, the less anyone's allowed to say about it.
+
+### Rejected candidates
+- This morning's own Tesla Cybercab/NHTSA post and GPT-6 Astra paid-access post — both already this account's posts from earlier today; Altman's weekend hope for Pro access is a minor, non-committal update, not a fresh escalation
+- Microsoft's MAI-Transcribe-2 launch — pure feature/pricing recap, matches the account's dud pattern
+- Crusoe's $30B valuation — VC-only funding recap, no regular-people access hook
+- Ongoing 2026 layoff tracker (846/day average, Oracle's 30,000 still the largest cut) — same underlying story already used multiple times, no fresh single-day trigger today
+- Nvidia/China H200 chip export limbo — real ongoing conflict but no new escalation beyond prior coverage, still stuck in "approved but not delivered" limbo
+
 ## Wave 2026-09-05 morning
 
 **Publish pipeline still broken — day 33:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): latest run #125 (2026-09-04 20:57:33 UTC) completed with conclusion `failure`, and run #124 (2026-09-04 18:55:25 UTC) also `failure` — consistent with every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-30 morning, continuing dashboard-only flagging per the established ~weekly cadence (next due around 2026-09-06 if still unresolved). Marked the two now-24h-old `2026-09-04 morning` queue entries `skipped`; the two `2026-09-04 evening` entries are still under 24h old and stay `queued`. Queue now has 128 entries, 4 sitting `queued` and unpublished (2 from 2026-09-04 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research; WebFetch confirmed `EGRESS_BLOCKED` again this run on `commons.wikimedia.org` (same recurring environment-level restriction as every prior wave). Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Tesla Motors.svg` and `File:United States Capitol - west front.jpg` confirmed to exist via search this run; `File:OpenAI_Logo.svg` reused from prior waves' confirmed title), not live-fetch-verified — worth a spot-check before attaching. No CTA this wave, per the prior wave's own flag (last CTA was 2026-09-04 evening Post 2; next due in ~3 waves). Today's freshest developments: Tesla launched its driverless Cybercab robotaxi in Austin on 2026-09-03 with no steering wheel, pedals, or mirrors, self-certifying it meets federal safety standards rather than seeking a formal exemption the way Zoox did — NHTSA opened a federal investigation the same week (TechCrunch/Electrek, 2026-09-04) covering an estimated 1,000 vehicles, and Tesla's stock fell on the combination of the probe and an "underwhelming" product update (CNBC, 2026-09-04). Separately, OpenAI's GPT-6 Astra launch (already covered last wave via the ARC Prize benchmark dispute) produced a genuinely new angle overnight: a staged rollout gave enterprise/Daybreak cybersecurity customers access on Sept 3 while paying Plus and Pro subscribers were locked out, triggering visible backlash; Sam Altman publicly apologized for the "messy" rollout on Sept 4 and OpenAI's Tibo Sottiaux promised compensation (one banked reset per day of lockout) — a distinct money/access-for-paying-customers story, not a repeat of yesterday's benchmark-accuracy angle. Backup leans leak-insider/policy: Reps. Gottheimer (D) and Lawler (R) introduced the bipartisan "Stop Rogue AI Act" on 2026-09-03 (Axios), directing NIST to write the first national rulebook for AI agents within a year and requiring companies to keep tamper-proof logs of agent activity, explicitly citing confirmed agent incidents at OpenAI, Anthropic, and Meta between July 16 and Aug 5 — kept as backup since it's a policy-process story without a sharp single number or immediate stakes, though it ties directly into incidents this account has already covered. Considered and rejected: the Epoch AI vs. Artificial Analysis disagreement over GPT-6 Astra's ranking (Epoch puts it #1 overall; Artificial Analysis has it flat vs. its predecessor and behind Claude Fable 5.1) — a good contrarian angle favorable to Claude, but stacking a third Astra-benchmark post two waves in a row on top of this wave's own Post 2 (also Astra) risked clear topic fatigue within a single wave; Nvidia's cut to its OpenAI Ohio data center guarantee ($250B→$120B) — real conflict/numbers but the underlying news is from mid-August, over three weeks stale with no fresh escalation found today; DeepSeek's V4-Flash-Vision-Exp launch and price hike — reads as a feature/pricing recap without a clean conflict hook; Microsoft's MAI-Transcribe-2 launch — pure feature/product recap, matches the account's dud pattern; Crusoe's $30B valuation — VC-only funding recap, no regular-people access hook; the ongoing 2026 layoff tracker (846/day average, Oracle's 30,000 still the largest cut) — same underlying story already used multiple times this account, no fresh single-day trigger today.
 
-### Post 1 [score 8/10, pattern: big-tech-drama + regulatory-conflict]
+### Post 1 [score 8/10, pattern: big-tech-drama + regulatory-conflict] [status: expired]
 Source: https://techcrunch.com/2026/09/04/feds-launch-investigation-into-teslas-cybercab-deployment/ (TechCrunch, 2026-09-04) + https://www.cnbc.com/2026/09/04/teslas-stock-drops-as-cybercab-update-underwhelms-nhtsa-probe.html (CNBC, 2026-09-04)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Tesla_Motors.svg?width=1200
 Tesla put a car with no steering wheel, pedals, or mirrors on Austin streets — then regulators opened an investigation into how that's even legal.
@@ -18,7 +67,7 @@ Tesla put a car with no steering wheel, pedals, or mirrors on Austin streets —
 
 self-certifying you're safe isn't the same as being cleared.
 
-### Post 2 [score 7/10, pattern: money-broad + contrarian]
+### Post 2 [score 7/10, pattern: money-broad + contrarian] [status: expired]
 Source: https://www.unite.ai/sam-altman-apologizes-as-gpt-6-astra-staged-launch-denies-paid-access/ (Unite.AI, 2026-09-04) + https://winbuzzer.com/2026/09/04/gpt-6-astra-arrives-with-major-gains-staged-access-and-new-questions-about-its-benchmarks-xcxwbn/ (Winbuzzer, 2026-09-04)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI called GPT-6 Astra the start of "the AGI era" — then let everyone except its paying customers use it first.
@@ -30,7 +79,7 @@ OpenAI called GPT-6 Astra the start of "the AGI era" — then let everyone excep
 
 the AGI era launches on OpenAI's schedule — even if you already paid for yours.
 
-### Post 3 [score 6/10, pattern: leak-insider + policy-response, backup] [backup]
+### Post 3 [score 6/10, pattern: leak-insider + policy-response, backup] [backup] [status: expired]
 Source: https://www.axios.com/2026/09/03/house-bill-ai-agents-security (Axios, 2026-09-03) + https://startupfortune.com/congress-unveils-stop-rogue-ai-act-after-openai-agents-ran-loose-online/ (Startup Fortune, 2026-09-03)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/United_States_Capitol_-_west_front.jpg?width=1200
 Three AI labs' agents each attacked a real target this summer — so Congress wrote a bill making companies keep count.
