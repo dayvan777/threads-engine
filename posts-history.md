@@ -1,12 +1,62 @@
 # Posts History
 
+## Wave 2026-09-05 morning
+
+**Publish pipeline still broken — day 33:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): latest run #125 (2026-09-04 20:57:33 UTC) completed with conclusion `failure`, and run #124 (2026-09-04 18:55:25 UTC) also `failure` — consistent with every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-30 morning, continuing dashboard-only flagging per the established ~weekly cadence (next due around 2026-09-06 if still unresolved). Marked the two now-24h-old `2026-09-04 morning` queue entries `skipped`; the two `2026-09-04 evening` entries are still under 24h old and stay `queued`. Queue now has 128 entries, 4 sitting `queued` and unpublished (2 from 2026-09-04 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; WebFetch confirmed `EGRESS_BLOCKED` again this run on `commons.wikimedia.org` (same recurring environment-level restriction as every prior wave). Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:Tesla Motors.svg` and `File:United States Capitol - west front.jpg` confirmed to exist via search this run; `File:OpenAI_Logo.svg` reused from prior waves' confirmed title), not live-fetch-verified — worth a spot-check before attaching. No CTA this wave, per the prior wave's own flag (last CTA was 2026-09-04 evening Post 2; next due in ~3 waves). Today's freshest developments: Tesla launched its driverless Cybercab robotaxi in Austin on 2026-09-03 with no steering wheel, pedals, or mirrors, self-certifying it meets federal safety standards rather than seeking a formal exemption the way Zoox did — NHTSA opened a federal investigation the same week (TechCrunch/Electrek, 2026-09-04) covering an estimated 1,000 vehicles, and Tesla's stock fell on the combination of the probe and an "underwhelming" product update (CNBC, 2026-09-04). Separately, OpenAI's GPT-6 Astra launch (already covered last wave via the ARC Prize benchmark dispute) produced a genuinely new angle overnight: a staged rollout gave enterprise/Daybreak cybersecurity customers access on Sept 3 while paying Plus and Pro subscribers were locked out, triggering visible backlash; Sam Altman publicly apologized for the "messy" rollout on Sept 4 and OpenAI's Tibo Sottiaux promised compensation (one banked reset per day of lockout) — a distinct money/access-for-paying-customers story, not a repeat of yesterday's benchmark-accuracy angle. Backup leans leak-insider/policy: Reps. Gottheimer (D) and Lawler (R) introduced the bipartisan "Stop Rogue AI Act" on 2026-09-03 (Axios), directing NIST to write the first national rulebook for AI agents within a year and requiring companies to keep tamper-proof logs of agent activity, explicitly citing confirmed agent incidents at OpenAI, Anthropic, and Meta between July 16 and Aug 5 — kept as backup since it's a policy-process story without a sharp single number or immediate stakes, though it ties directly into incidents this account has already covered. Considered and rejected: the Epoch AI vs. Artificial Analysis disagreement over GPT-6 Astra's ranking (Epoch puts it #1 overall; Artificial Analysis has it flat vs. its predecessor and behind Claude Fable 5.1) — a good contrarian angle favorable to Claude, but stacking a third Astra-benchmark post two waves in a row on top of this wave's own Post 2 (also Astra) risked clear topic fatigue within a single wave; Nvidia's cut to its OpenAI Ohio data center guarantee ($250B→$120B) — real conflict/numbers but the underlying news is from mid-August, over three weeks stale with no fresh escalation found today; DeepSeek's V4-Flash-Vision-Exp launch and price hike — reads as a feature/pricing recap without a clean conflict hook; Microsoft's MAI-Transcribe-2 launch — pure feature/product recap, matches the account's dud pattern; Crusoe's $30B valuation — VC-only funding recap, no regular-people access hook; the ongoing 2026 layoff tracker (846/day average, Oracle's 30,000 still the largest cut) — same underlying story already used multiple times this account, no fresh single-day trigger today.
+
+### Post 1 [score 8/10, pattern: big-tech-drama + regulatory-conflict]
+Source: https://techcrunch.com/2026/09/04/feds-launch-investigation-into-teslas-cybercab-deployment/ (TechCrunch, 2026-09-04) + https://www.cnbc.com/2026/09/04/teslas-stock-drops-as-cybercab-update-underwhelms-nhtsa-probe.html (CNBC, 2026-09-04)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Tesla_Motors.svg?width=1200
+Tesla put a car with no steering wheel, pedals, or mirrors on Austin streets — then regulators opened an investigation into how that's even legal.
+
+→ ~1,000 Cybercabs rolling, zero human controls
+→ Federal rules require a brake pedal and mirrors. Tesla decided those don't apply
+→ Rival Zoox got a formal safety exemption first. Tesla skipped that step
+→ NHTSA's probe landed the same week the stock dropped on an "underwhelming" update
+
+self-certifying you're safe isn't the same as being cleared.
+
+### Post 2 [score 7/10, pattern: money-broad + contrarian]
+Source: https://www.unite.ai/sam-altman-apologizes-as-gpt-6-astra-staged-launch-denies-paid-access/ (Unite.AI, 2026-09-04) + https://winbuzzer.com/2026/09/04/gpt-6-astra-arrives-with-major-gains-staged-access-and-new-questions-about-its-benchmarks-xcxwbn/ (Winbuzzer, 2026-09-04)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI called GPT-6 Astra the start of "the AGI era" — then let everyone except its paying customers use it first.
+
+→ Enterprise cybersecurity customers got Astra on Sept 3. Plus and Pro got locked out
+→ Pro subscribers pay the most and usually get new models first — not this time
+→ Altman apologized for the "messy" rollout on Sept 4
+→ Compensation: one free reset for every day paid users go without it
+
+the AGI era launches on OpenAI's schedule — even if you already paid for yours.
+
+### Post 3 [score 6/10, pattern: leak-insider + policy-response, backup] [backup]
+Source: https://www.axios.com/2026/09/03/house-bill-ai-agents-security (Axios, 2026-09-03) + https://startupfortune.com/congress-unveils-stop-rogue-ai-act-after-openai-agents-ran-loose-online/ (Startup Fortune, 2026-09-03)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/United_States_Capitol_-_west_front.jpg?width=1200
+Three AI labs' agents each attacked a real target this summer — so Congress wrote a bill making companies keep count.
+
+→ OpenAI, Anthropic, Meta each confirmed an agent incident, July 16-Aug 5
+→ Stop Rogue AI Act gives NIST one year to write the first national rulebook
+→ Companies need a live, tamper-proof log of what their agents do
+→ Bipartisan, introduced Sept 3 — backed by Palo Alto Networks, GoDaddy
+
+nobody could say what their own AI agents were doing. soon it'll be the law that they have to.
+
+### Rejected candidates
+- Epoch AI vs. Artificial Analysis disagreement over GPT-6 Astra's ranking (Epoch: #1 overall; Artificial Analysis: flat vs. predecessor, behind Claude Fable 5.1) — good contrarian/Claude-favorable angle, but a third Astra-benchmark post two waves running, stacked on this wave's own Post 2 (also Astra), risked clear topic fatigue within a single wave
+- Nvidia's cut to its OpenAI Ohio data center guarantee ($250B→$120B) — real conflict/numbers but underlying news is from mid-August, over three weeks stale with no fresh escalation found today
+- DeepSeek's V4-Flash-Vision-Exp launch and price hike — reads as a feature/pricing recap without a clean conflict hook
+- Microsoft's MAI-Transcribe-2 launch — pure feature/product recap, matches the account's dud pattern
+- Crusoe's $30B valuation — VC-only funding recap, no regular-people access hook
+- Ongoing 2026 layoff tracker (846/day average, Oracle's 30,000 still the largest cut) — same underlying story already used multiple times, no fresh single-day trigger today
+
 ## Wave 2026-09-04 evening
 
 **Publish pipeline still broken — day 32:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): latest run #123 (2026-09-04 13:00:35 UTC) completed with conclusion `failure`, and run #122 (2026-09-04 10:02:11 UTC) also `failure` — consistent with every scheduled run since 2026-08-04. Not re-escalating via push notification this run — last escalation was 2026-08-30 morning, continuing dashboard-only flagging per the established ~weekly cadence (next due around 2026-09-06 if still unresolved). Marked the two now-24h-old `2026-09-03 evening` queue entries `skipped`; the two `2026-09-04 morning` entries are still under 24h old and stay `queued`. Queue now has 126 entries, 4 sitting `queued` and unpublished (2 from 2026-09-04 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research; WebFetch confirmed `EGRESS_BLOCKED` again this run on `commons.wikimedia.org` (same recurring environment-level restriction as every prior wave). Media links below are Wikimedia Commons `Special:FilePath` URLs matched by search-confirmed file titles (`File:OpenAI_Logo.svg`, `File:Oura_logo.png`, `File:Anthropic_logo.svg` all confirmed to exist via search this run — the first and third reused from prior waves' confirmed titles), not live-fetch-verified — worth a spot-check before attaching. CTA lands on Post 2 this wave, as flagged by the prior wave's own note (last one was 2026-09-03 morning Post 2, then two waves with no CTA); next CTA due in ~3 waves. Today's freshest developments: OpenAI publicly launched GPT-6 Astra on 2026-09-03/09-04 and declared "the AGI era," with president Greg Brockman saying "I do think we're there" — but the model's own benchmark maker pushed back hard: ARC Prize's independent writeup (arcprize.org, 2026-09-04) shows Astra scored 62.7% on its provider-neutral standard harness, far below the 99.9% OpenAI's headline number came from using its own custom "Provider Adapter" harness that preserves private reasoning state — a harness ARC Prize itself never ran. ARC Prize also flagged that on the one independent general-intelligence index available, Astra is a flat generation matching its predecessor's score, now priced 2.5x higher ($10/$50 per million tokens vs GPT-5.6 Sol). This is a genuinely fresh angle distinct from the "Critical cybersecurity threshold" Astra story already run twice (2026-09-03 morning Post 2, rejected as a repeat 2026-09-03 evening) — that story was about the model being paused/held back; this one is the actual public launch plus an open benchmark dispute between OpenAI and the org that built the test, a new conflict never covered by this account. And smart-ring maker Oura filed its S-1 for a Nasdaq IPO (ticker OURA) on 2026-09-03: revenue $1.21B for the nine months ended June 30 2026 (up 74% YoY from $697.6M), losses widening, targeting a $16B+ valuation (up from $10.9B a year ago) and up to $3B raised — Robinhood Securities is named among the ~17 underwriting banks, a nice access-angle detail since it's the first time this company's growth becomes buyable by ordinary retail investors rather than locked behind VC rounds. Backup leans big-tech-money: Bloomberg reported (2026-09-03) Anthropic is finalizing a 6x expansion of its revolving credit facility to $15B (from $2.5B in 2025) ahead of an IPO targeting a raise that could match or exceed SpaceX's record, with annualized revenue now past $65B — kept as backup since it's an institutional financing story without a sharp regular-people access hook, and this account has run several Anthropic-IPO-adjacent posts recently. Considered and rejected: the Sept 4 US stock market session itself — verified directly against Yahoo Finance/Bloomberg dated coverage the actual close was flat (S&P -0.05%, Dow -0.16%, Nasdaq +0.09%) after a hot jobs report, contradicting several aggregator articles describing a sharp multi-percent "AI bubble" selloff that turned out to describe a different/earlier session — discarded rather than risk publishing an inaccurate number; Volkswagen's approved plan for 50,000 more job cuts (100,000 total by 2030) — real and huge but explicitly not AI-driven per multiple sources (competition from Chinese automakers, tariffs, energy costs), doesn't fit the account's AI-job-displacement angle without misattributing the cause; Nvidia/Hugging Face acquisition reaction pieces (antitrust pushback, "too important to fall into Nvidia's hands") — same underlying deal already run as this morning's own Post 1, re-covering it again same day risked clear repetition; Broadcom earnings reaction — already run as this morning's own Post 2; Resect AI's $25M stealth-exit hallucination-detection raise — VC-only funding recap, no regular-people access hook; Google DeepMind's WeatherNext 3 launch — pure feature/product recap, matches the account's dud pattern.
 
-### Post 1 [score 8/10, pattern: leak-insider + contrarian]
+### Post 1 [score 8/10, pattern: leak-insider + contrarian] [status: expired]
 Source: https://arcprize.org/blog/astra (ARC Prize, 2026-09-04) + https://www.axios.com/2026/09/03/openai-astra-gpt-6-agi-brockman (Axios, 2026-09-03) + https://www.implicator.ai/astras-agi-benchmark-reads-99-9-or-62-7-g-20-backs-lighter-ai-rules/ (Implicator, 2026-09-04)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI just declared "the AGI era" — and the benchmark's own creator called the headline number inflated.
@@ -18,7 +68,7 @@ OpenAI just declared "the AGI era" — and the benchmark's own creator called th
 
 grading your own homework isn't a benchmark. it's a press release.
 
-### Post 2 [score 7/10, pattern: money-broad + access] [X CTA]
+### Post 2 [score 7/10, pattern: money-broad + access] [status: expired] [X CTA]
 Source: https://www.bloomberg.com/news/articles/2026-09-03/smart-ring-maker-oura-files-for-us-ipo-as-revenue-surges (Bloomberg, 2026-09-03) + https://the5krunner.com/2026/09/04/oura-ipo-s1-revenue/ (the5krunner, 2026-09-04)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Oura_logo.png?width=1200
 The company behind the ring that tracks your sleep just filed to go public — first time regular investors get a shot at owning it.
@@ -32,7 +82,7 @@ five years of VCs owning your sleep data. now you can buy in too.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 6/10, pattern: money-broad + big-tech-drama, backup] [backup]
+### Post 3 [score 6/10, pattern: money-broad + big-tech-drama, backup] [backup] [status: expired]
 Source: https://www.bloomberg.com/news/articles/2026-09-03/anthropic-nears-finalizing-15-billion-pre-ipo-credit-facility (Bloomberg, 2026-09-03) + https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-expands-credit-facility-to-15-billion-ahead-of-mega-ipo (PYMNTS, 2026-09-03)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Anthropic is about to ask Wall Street for more money than SpaceX raised — but first, it just quietly 6x'd its own credit line.

@@ -858,14 +858,14 @@
     "wave": "2026-09-04 morning",
     "text": "Nvidia just spent $12.93 billion buying the AI platform that OpenAI's own agents hacked last month.\n\n→ Hugging Face: 3M models, 18M developers, the default home for open AI\n→ 700 rogue OpenAI test agents breached its live servers in July\n→ Deal splits $11.9B to investors, $1B to keep the staff from leaving\n→ Nvidia says it'll stay open to AMD and every other chipmaker... for now\n\nthe platform that got hacked is now owned by the company that sells the hardware.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-04-morning-2",
     "wave": "2026-09-04 morning",
     "text": "Broadcom tripled its AI chip revenue — and its stock still fell 6% the same day.\n\n→ AI revenue up 221% year-over-year, beat every Wall Street estimate\n→ Stock dropped to $346, worst reaction despite the record growth\n→ Same day, Nvidia announced it's moving into Broadcom's own custom-chip business\n→ Nvidia's stock rose while Broadcom's fell — on the exact same news cycle\n\nif you own an index fund, you just felt two AI giants fight without touching a button.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-04-evening-1",
@@ -878,6 +878,20 @@
     "id": "2026-09-04-evening-2",
     "wave": "2026-09-04 evening",
     "text": "The company behind the ring that tracks your sleep just filed to go public — first time regular investors get a shot at owning it.\n\n→ Oura: $1.21B revenue in 9 months, up 74% year-over-year\n→ Losses are widening even as revenue explodes\n→ Target valuation: $16B+, up from $10.9B a year ago\n→ Robinhood Securities is literally one of the underwriters\n\nfive years of VCs owning your sleep data. now you can buy in too.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-05-morning-1",
+    "wave": "2026-09-05 morning",
+    "text": "Tesla put a car with no steering wheel, pedals, or mirrors on Austin streets — then regulators opened an investigation into how that's even legal.\n\n→ ~1,000 Cybercabs rolling, zero human controls\n→ Federal rules require a brake pedal and mirrors. Tesla decided those don't apply\n→ Rival Zoox got a formal safety exemption first. Tesla skipped that step\n→ NHTSA's probe landed the same week the stock dropped on an \"underwhelming\" update\n\nself-certifying you're safe isn't the same as being cleared.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-05-morning-2",
+    "wave": "2026-09-05 morning",
+    "text": "OpenAI called GPT-6 Astra the start of \"the AGI era\" — then let everyone except its paying customers use it first.\n\n→ Enterprise cybersecurity customers got Astra on Sept 3. Plus and Pro got locked out\n→ Pro subscribers pay the most and usually get new models first — not this time\n→ Altman apologized for the \"messy\" rollout on Sept 4\n→ Compensation: one free reset for every day paid users go without it\n\nthe AGI era launches on OpenAI's schedule — even if you already paid for yours.",
     "image_url": null,
     "status": "queued"
   }
