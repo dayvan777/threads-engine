@@ -1,12 +1,64 @@
 # Posts History
 
+## Wave 2026-09-07 evening
+
+**Publish pipeline still broken — day 35:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): latest run #135 (2026-09-07 14:35:15 UTC) completed with conclusion `failure`, and run #134 (2026-09-07 10:50:39 UTC) also `failure` — consistent with every scheduled run since 2026-08-04. Not sending a push notification this run — the last weekly re-escalation was 2026-09-06 morning; next due around 2026-09-13 if still unresolved. Marked the two now-24h-old `2026-09-06 evening` queue entries `skipped`; the two `2026-09-07 morning` entries are still under 24h old and stay `queued`. Queue now has 138 entries, 4 sitting `queued` and unpublished (2 from 2026-09-07 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; `commons.wikimedia.org` was not fetched directly this run given the recurring `EGRESS_BLOCKED` restriction noted in every prior wave — file titles below (`File:Meta_Platforms_Inc._logo.svg`, `File:Google_2015_logo.svg`, `File:Seal_of_the_Federal_Bureau_of_Investigation.svg`) were confirmed to exist via WebSearch, the first two also reused from prior waves' long-confirmed titles — worth a spot-check before attaching. No CTA this wave — last CTA was 2026-09-07 morning Post 2, and the account's gap pattern has run 3 waves between CTAs (2026-09-05 evening → 2026-09-07 morning); next due around 2026-09-08 evening. Today's freshest developments: analysts (CNBC, 2026-09-02, still the newest framing on the underlying Aug 26 ruling) flagged that Meta's $18B settlement with 29 state AGs over child-harm claims on Instagram/Facebook — capping under-18 daily use at 2 hours, paid over 10 years against a court-disclosed $1.4T worst-case exposure — has an under-covered second effect: clearing the legal overhang that was reportedly slowing Meta's next wave of AI product launches. This account has run Meta's AI moves and prior antitrust/settlement stories but never this specific settlement or its AI-unlock angle. Separately, Judge Leonie Brinkema ruled (Sept 2, coverage continuing through this week via TechCrunch, Axios, AdExchanger) that Google illegally monopolized the ad-tech stack but denied the DOJ's requested breakup, ordering behavioral remedies instead and letting Google keep its ad exchange, ad server, and buyer tool — the second major antitrust case this year where Google was found liable but avoided structural remedy. Neither underlying event is inside the strict last-12h window (both trace to Sept 2), but both are genuinely new to this account and still generating fresh follow-on coverage this week, so kept as this wave's two mains over older, already-used stories (Armenia/Nvidia chip diplomacy, Anthropic IPO delay — both this account's own posts from this morning). Backup leans money-danger/regular-people: a Sept 5 story (Rolling Out, citing FBI/consumer-fraud reporting) about a 63-year-old widow who sent $150,000 over four months to a romance-scam actor using an AI-faked military ID and voice — kept as backup since it's a single-case human-interest story rather than a company-vs-company conflict, but the FBI naming AI-enabled fraud its own crime category this year gives it real stakes. Considered and rejected: Broadcom's Q3 FY2026 earnings (AI chip revenue +221%, stock dipped on Q4 guidance) — already run as this account's own main post in an earlier wave, no fresh escalation since; Anthropic-Lambda $35B Nvidia-backed cloud deal — already run as this account's own post (deal signed Aug 31/Sept 1); OpenAI's $110B funding round — actually closed back in February 2026, a stale story resurfacing in weekly recap aggregators, not new; GitHub Copilot's paused signups/tightened limits — traces to an April 2026 announcement, long stale despite still circulating in comparison articles; Anthropic's 1M-context GA at standard pricing — announced back in March 2026, stale; the ongoing 2026 layoff tracker aggregate (839/day average) — same overused pattern rejected in essentially every prior wave; DeepSeek's in-house AI chip development — traces to July 2026 reporting, no new escalation this week; xAI's Grok 4.7 (targeting a Sept 12 launch, trained partly on SpaceX engineering data) — still a forward-looking announcement, not yet released, weaker than the two settled legal-conflict stories.
+
+### Post 1 [score 7/10, pattern: big-tech-drama + money-broad]
+Source: https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children (CNN Business, 2026-08-26) + https://www.cnbc.com/2026/09/02/meta-18-billion-settlement-ai-products.html (CNBC, 2026-09-02)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
+Meta just agreed to pay $18 billion for how it treated your kids online — and Wall Street is calling it a win.
+
+→ 29 states settle claims Instagram and Facebook's design harmed minors
+→ Paid over 10 years; platforms now cap daily use for minors at 2 hours
+→ Meta's own filings put the ceiling at $1.4 trillion — it settled for a fraction
+→ Analysts say the legal cloud lifting clears the runway for Meta's next AI push
+
+the fine bought silence. the AI roadmap was the real prize.
+
+### Post 2 [score 7/10, pattern: big-tech-drama]
+Source: https://techcrunch.com/2026/09/02/google-spared-from-ad-business-breakup-but-judge-orders-changes-to-how-it-operates/ (TechCrunch, 2026-09-02) + https://www.adexchanger.com/antitrust/google-wont-have-to-break-up-its-ad-tech-business-judge-brinkema-rules/ (AdExchanger, 2026-09-02/03)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_2015_logo.svg?width=1200
+A federal judge just ruled Google illegally rigged the $1 trillion ad market — and let it keep every piece of the machine.
+
+→ Judge Brinkema: Google broke antitrust law running both sides of ad auctions
+→ DOJ wanted a breakup. She ordered behavior changes instead
+→ Google keeps its exchange, server, and buying tool — the exact trio ruled illegal
+→ Second major antitrust loss for Google this year, same result both times
+
+guilty was the verdict. keeping the business was the sentence.
+
+### Post 3 [score 6/10, pattern: money-danger + regular-people, backup] [backup]
+Source: https://rollingout.com/2026/09/05/what-a-150000-scam-reveals-about-ai/ (Rolling Out, 2026-09-05)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_Federal_Bureau_of_Investigation.svg?width=1200
+A 63-year-old widow sent $150,000 to a man she never met — his AI-faked passport and voice made him real enough.
+
+→ He posed as a US Army officer stationed in Syria, met her on a dating app
+→ Four months of small "loan" requests via PayPal, wire, and crypto
+→ The FBI named AI-enabled fraud its own crime category for the first time this year
+→ Nearly 1 in 25 Americans now say they've lost money to an AI scam
+
+the con used to need a good liar. now it just needs good software.
+
+### Rejected candidates
+- Broadcom's Q3 FY2026 earnings (AI chip revenue +221%, stock dipped on Q4 guidance) — already run as this account's own main post in an earlier wave, no fresh escalation since
+- Anthropic-Lambda $35B Nvidia-backed cloud deal — already run as this account's own post (deal signed Aug 31/Sept 1)
+- OpenAI's $110B funding round — closed back in February 2026, a stale story resurfacing in weekly recap aggregators
+- GitHub Copilot's paused signups/tightened limits — traces to an April 2026 announcement, long stale despite still circulating in comparison articles
+- Anthropic's 1M-context GA at standard pricing — announced back in March 2026, stale
+- The ongoing 2026 layoff tracker aggregate (839/day average) — same overused pattern rejected in essentially every prior wave
+- DeepSeek's in-house AI chip development — traces to July 2026 reporting, no new escalation this week
+- xAI's Grok 4.7 (targeting Sept 12, trained partly on SpaceX engineering data) — still a forward-looking announcement, not yet released
+
 ## Wave 2026-09-07 morning
 
 **Publish pipeline still broken — day 35:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Same recurring failure signal as every wave since 2026-08-04 (not re-checked via a fresh Actions API call this run since no new tool access to it this session — dashboard status line still reflects the outage; treat the day count as continued, not independently re-verified this run). Not sending a push notification this run — the last weekly re-escalation was 2026-09-06 morning, one day ago; next due around 2026-09-13 if still unresolved. Marked the two now-24h+-old `2026-09-06 morning` queue entries `skipped`; the two `2026-09-06 evening` entries are still under 24h old and stay `queued`. Queue now has 136 entries, 4 sitting `queued` and unpublished (2 from 2026-09-06 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research; WebFetch to `commons.wikimedia.org` confirmed `EGRESS_BLOCKED` again this run (same recurring environment-level restriction as every prior wave). Media links below reuse long-confirmed Wikimedia Commons `Special:FilePath` titles (`File:NVIDIA_logo.svg`, `File:Anthropic_logo.svg`) from many prior waves, not live-fetch-verified this run — worth a spot-check before attaching. CTA lands on Post 2 this wave, as due (last CTA was 2026-09-05 evening Post 2, then two waves —2026-09-06 morning and evening — with none). Today's freshest developments: the Wall Street Journal reported (2026-09-04, wide pickup since) that U.S. negotiators used the promise of Nvidia Blackwell chip access for an Armenian AI data center as diplomatic leverage to help broker the provisional Armenia-Azerbaijan peace deal — the first known instance of AI chips being used as leverage in talks to resolve an armed conflict; former U.S. Ambassador to Armenia Kristina Kvien told WSJ "the Nvidia piece of it was a very important piece of the puzzle." The chips in question power Firebird's $500M, 70,000-GPU AI data center in Hrazdan, Armenia (opened Aug 8, 2026, 300MW planned capacity) — a genuinely new, never-before-covered story for this account, distinct from every prior Nvidia post (Hugging Face acquisition, OpenAI circular financing, etc.). Separately, Anthropic's own IPO timeline slipped again (Reuters via CNBC, PYMNTS, aninews.in, all 2026-09-05): the public prospectus filing — expected "any day now" right after Labor Day per this account's own 2026-09-05 evening backup post — has moved to late September, and investor-roadshow marketing now targets mid-October at the earliest, timed to land just before November's midterm elections; still chasing a rumored $2T valuation. This is a materially fresh escalation distinct from every prior Anthropic-IPO post this account has run (credit facility, underwriters, quiet-period framing, $30T pitch) — the specific fact that the company itself pushed its own schedule back, now bracketed by the U.S. election calendar, hasn't been covered. Backup leans niche-dev/quiet-change/contrarian: Anthropic's own Claude Code account announced (Aug 29, still actively discussed and directly relevant with the Sept 14 effective date one week out) a "25% increase" to Claude Code's permanent weekly usage limits that is actually a 17% cut from what users have today, since it replaces a temporary 50% summer boost (expiring Sept 13) with a smaller permanent 25% bump over the original May baseline — kept as backup since it's a narrower dev-tooling audience, though the Sept 14 deadline gives it real urgency. Considered and rejected: Oura's $16B Nasdaq IPO filing — already run as this account's own main post with CTA (2026-09-04 evening Post 2), no fresh escalation since; TCS/HyperVault's $7.4B AI data center campus in Hyderabad with OpenAI as an initial customer — real infrastructure story but thin on conflict/regular-people stakes next to the Armenia chip-diplomacy angle; OpenAI's GPT-Live full-duplex voice launch — reads as a feature/product recap (78% positive launch-day reaction per Digg, latency the main complaint), matches the account's dud pattern despite call-center job-displacement potential being under-covered; the CISA/LiteLLM CVE-2026-59822 and GPT-6 Astra chain-of-thought-monitorability stories — both already run as this account's own posts this week (2026-09-06 morning Posts 1 and 3); the ongoing 2026 layoff tracker aggregate (839/day average) — same overused pattern rejected in essentially every prior wave; Campbell's 13% salaried-workforce cut — real and dated but explicitly inflation/sales-driven per multiple sources, not an AI-displacement story, doesn't fit without misattributing the cause; the Sept 4 jobs-report market selloff — same underlying Friday session already used as this account's own post (2026-09-06 morning Post 2).
 
-### Post 1 [score 8/10, pattern: leak-insider + big-tech-drama]
+### Post 1 [score 8/10, pattern: leak-insider + big-tech-drama] [status: expired]
 Source: https://www.wsj.com/tech/ai/nvidia-chips-armenia-azerbaijan-peace-deal (Wall Street Journal, 2026-09-04) + https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/ (Nvidia Blog, 2026-08-08)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 The U.S. helped end a war between Armenia and Azerbaijan — and paid part of the price in Nvidia chips.
@@ -18,7 +70,7 @@ The U.S. helped end a war between Armenia and Azerbaijan — and paid part of th
 
 chips didn't just win the AI race. they helped write a peace treaty.
 
-### Post 2 [score 7/10, pattern: money-broad + big-tech-drama] [X CTA]
+### Post 2 [score 7/10, pattern: money-broad + big-tech-drama] [X CTA] [status: expired]
 Source: https://www.cnbc.com/2026/09/05/anthropic-ipo-launch-shifts-toward-mid-october-reuters.html (CNBC/Reuters, 2026-09-05) + https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-said-to-postpone-ipo-to-just-before-midterms/ (PYMNTS, 2026-09-05)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Anthropic just quietly pushed its own IPO past the date everyone expected — straight to right before the midterms.
@@ -32,7 +84,7 @@ the biggest IPO in history just got a political calendar.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 6/10, pattern: leak-quiet-change + niche-dev, backup] [backup]
+### Post 3 [score 6/10, pattern: leak-quiet-change + niche-dev, backup] [backup] [status: expired]
 Source: https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-is-cutting-claude-codes-current-weekly-limits-by-17-percent/ (BleepingComputer, 2026-08-29) + https://www.androidheadlines.com/2026/08/anthropic-claude-code-weekly-limits-update.html (Android Headlines, 2026-08-29)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Anthropic called it a 25% increase. Do the math on today's numbers and it's a 17% cut.
