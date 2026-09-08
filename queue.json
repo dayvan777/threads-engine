@@ -964,5 +964,19 @@
     "text": "A federal judge just ruled Google illegally rigged the $1 trillion ad market — and let it keep every piece of the machine.\n\n→ Judge Brinkema: Google broke antitrust law running both sides of ad auctions\n→ DOJ wanted a breakup. She ordered behavior changes instead\n→ Google keeps its exchange, server, and buying tool — the exact trio ruled illegal\n→ Second major antitrust loss for Google this year, same result both times\n\nguilty was the verdict. keeping the business was the sentence.",
     "image_url": null,
     "status": "queued"
+  },
+  {
+    "id": "2026-09-08-morning-1",
+    "wave": "2026-09-08 morning",
+    "text": "2 in 5 Americans have already run into an AI scam — and 84% of them changed how they bank because of it.\n\n→ 7% actually lost money to an AI-faked call, text, or voice clone\n→ Cloned bank-voice calls are the #1 fear — named by nearly 1 in 4 people\n→ Over half now let unknown numbers go straight to voicemail\n\nthe AI didn't just get better at scamming you. it got good enough that you stopped answering your own phone.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-08-morning-2",
+    "wave": "2026-09-08 morning",
+    "text": "DeepSeek just ordered 160,000 Chinese AI chips — and every query you send it now answers to Beijing first.\n\n→ 1-gigawatt data center rising in Inner Mongolia, all Huawei chips, zero Nvidia\n→ The US chip ban was built to slow this down — DeepSeek built around it instead\n→ Chinese national security law now governs data on those servers, prompts included\n→ First frontier-class model running entirely on domestic Chinese silicon\n\ncheapest AI on earth. most expensive terms of service you never read.",
+    "image_url": null,
+    "status": "queued"
   }
 ]

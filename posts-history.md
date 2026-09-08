@@ -1,12 +1,62 @@
 # Posts History
 
+## Wave 2026-09-08 morning
+
+**Publish pipeline still broken — day 36:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): latest run #137 (2026-09-07 21:44:00 UTC) completed with conclusion `failure`, and run #136 (2026-09-07 19:46:44 UTC) also `failure` — consistent with every scheduled run since 2026-08-04. Not sending a push notification this run — the last weekly re-escalation was 2026-09-06 morning; next due around 2026-09-13 if still unresolved. The two `2026-09-07 morning` queue entries and two `2026-09-07 evening` entries are all still under 24h old and stay `queued`; nothing to mark `skipped` this run. Queue now has 140 entries, 6 sitting `queued` and unpublished (2 from 2026-09-07 morning, 2 from 2026-09-07 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; `commons.wikimedia.org` was not fetched directly this run given the recurring `EGRESS_BLOCKED` restriction noted in every prior wave — file titles below (`File:Seal of the United States Federal Trade Commission.svg`, `File:DeepSeek logo.svg`, `File:Huawei Standard logo.svg`, `File:Seal of Massachusetts.svg`) were confirmed to exist via WebSearch; the DeepSeek title is reused from many prior waves' long-confirmed usage — worth a spot-check before attaching. No CTA this wave — last one was 2026-09-07 morning Post 2, and the account's gap pattern has run 2-3 waves between CTAs recently; next due around 2026-09-08 evening, as flagged by the immediately preceding wave's own note. Today's freshest developments: a Credit One Bank consumer survey (published 2026-09-02, wide pickup via ABA Banking Journal and the Stacker/AP wire through 2026-09-03) found 2 in 5 US consumers have now personally encountered or been close to an AI-powered scam, 7% actually lost money to one, and 84% have changed a financial behavior because of it (over half now let unknown numbers go to voicemail) — a genuinely new data point distinct from the individual-victim story already run as backup last wave (2026-09-07 evening Post 3), since this is an aggregate consumer-behavior survey rather than a single case. Separately, Bloomberg and multiple outlets reported (2026-09-04, still generating follow-on coverage through 2026-09-07 via TechNode and others) that DeepSeek plans to deploy at least 160,000 Huawei Ascend 950DT chips at a new 1-gigawatt data center in Ulanqab, Inner Mongolia — the first frontier-class model built entirely on domestic Chinese silicon, sidestepping the US Nvidia export ban rather than being slowed by it; a TechTimes analysis (2026-09-05) adds the angle that any data stored on those servers, including API prompts, falls under China's National Security Law and National Intelligence Law — a genuinely new story for this account, distinct from a previously-rejected Huawei chip-revenue-forecast story that lacked any conflict or numbers hook. Backup leans big-tech-drama/regulatory, niche audience: PYMNTS and Benzinga reported this week (2026-09-04/06) that Anthropic has broken publicly with OpenAI and Google over Massachusetts' AI safety bill — the toughest state-level AI safety rules proposed in the country — with Anthropic backing independent risk audits every 4-6 months while OpenAI and Google push for a lighter, once-a-year audit closer to Illinois' model; kept as backup since it's more of a policy/regulatory story than a broad money or job-fear hook, though the named three-way conflict is a fresh angle never used before on this account. Considered and rejected: the Pentagon/Anthropic Rita Lin ruling and GenAI.mil defiance story family — already used as a main post three times (2026-08-29 morning ×2, 2026-08-31 evening/09-01), no new escalation since the "purge by end of September" target that was already covered; Google's May 2026 AI Ultra pricing overhaul ($250→$200, new $99.99 tier) — genuinely stale, traces to I/O 2026 in May, resurfacing in comparison-shopping aggregators with no new trigger; Citigroup's ~1,000-job restructuring tranche — part of a multi-year, already-announced 20,000-role reduction plan unveiled two years ago, not a fresh escalation despite this week's headline; Microsoft's 4,800-job Xbox-focused layoffs — announced back in early July 2026, stale despite recirculating; NYT vs. Perplexity copyright lawsuit — filed December 2025, stale, resurfacing in recap coverage; today's modest S&P 500 dip (Apple, Alphabet, Microsoft all down ~2%) — no clean single AI-specific trigger identified, reads as routine rate/oil-driven drift already used in this pattern multiple times; Anthropic IPO investors pressing for revenue-per-token/per-gigawatt disclosure — real but a finance-mechanics story with no clean conflict or regular-people hook; the ongoing 2026 layoff tracker aggregate (839/day) — same overused pattern rejected in essentially every prior wave.
+
+### Post 1 [score 6/10, pattern: money-danger + regular-people]
+Source: https://bankingjournal.aba.com/2026/09/consumers-share-experiences-with-ai-enabled-scams/ (ABA Banking Journal, 2026-09-02/03, citing Credit One Bank survey)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Federal_Trade_Commission.svg?width=1200
+2 in 5 Americans have already run into an AI scam — and 84% of them changed how they bank because of it.
+
+→ 7% actually lost money to an AI-faked call, text, or voice clone
+→ Cloned bank-voice calls are the #1 fear — named by nearly 1 in 4 people
+→ Over half now let unknown numbers go straight to voicemail
+
+the AI didn't just get better at scamming you. it got good enough that you stopped answering your own phone.
+
+### Post 2 [score 7/10, pattern: leak-insider + big-tech-drama]
+Source: https://www.bloomberg.com/news/articles/2026-09-04/deepseek-plans-big-huawei-ai-chip-order-to-power-new-data-center (Bloomberg, 2026-09-04) + https://www.techtimes.com/articles/326755/20260905/deepseeks-160000-chip-huawei-order-puts-prc-law-over-every-api-query.htm (Tech Times, 2026-09-05)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Huawei_Standard_logo.svg?width=1200
+DeepSeek just ordered 160,000 Chinese AI chips — and every query you send it now answers to Beijing first.
+
+→ 1-gigawatt data center rising in Inner Mongolia, all Huawei chips, zero Nvidia
+→ The US chip ban was built to slow this down — DeepSeek built around it instead
+→ Chinese national security law now governs data on those servers, prompts included
+→ First frontier-class model running entirely on domestic Chinese silicon
+
+cheapest AI on earth. most expensive terms of service you never read.
+
+### Post 3 [score 6/10, pattern: big-tech-drama + contrarian, backup] [backup]
+Source: https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-breaks-with-peers-on-massachusetts-ai-safety-bill/ (PYMNTS, 2026-09-04) + https://www.benzinga.com/markets/private-markets/26/08/61346746/openai-and-anthropic-clash-over-massachusetts-ai-safety-push (Benzinga, 2026-08-28/2026-09-06)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_Massachusetts.svg?width=1200
+The company that keeps warning you about AI risk just picked a fight with the companies that don't.
+
+→ Anthropic is publicly backing Massachusetts' toughest AI safety bill in the country — outside audits every 4-6 months
+→ OpenAI and Google are fighting it, pushing for a lighter once-a-year version instead
+→ Anthropic's own line: "we don't think the industry should grade its own homework"
+
+everyone agrees AI needs guardrails. nobody agrees whose car has to slow down.
+
+### Rejected candidates
+- Pentagon/Anthropic Rita Lin ruling + GenAI.mil defiance story family — already used as a main post three times (2026-08-29 morning ×2, 2026-08-31 evening/09-01), no new escalation since
+- Google's May 2026 AI Ultra pricing overhaul ($250→$200, new $99.99 tier) — traces to I/O 2026 in May, resurfacing in comparison-shopping aggregators with no new trigger
+- Citigroup's ~1,000-job restructuring tranche — part of a multi-year, already-announced 20,000-role reduction plan unveiled two years ago, not a fresh escalation
+- Microsoft's 4,800-job Xbox-focused layoffs — announced back in early July 2026, stale despite recirculating
+- NYT vs. Perplexity copyright lawsuit — filed December 2025, stale, resurfacing in recap coverage
+- Today's modest S&P 500 dip (Apple, Alphabet, Microsoft all down ~2%) — no clean single AI-specific trigger identified, same rate/oil-driven drift pattern used before
+- Anthropic IPO investors pressing for revenue-per-token/per-gigawatt disclosure — finance-mechanics story with no clean conflict or regular-people hook
+- The ongoing 2026 layoff tracker aggregate (839/day) — same overused pattern rejected in essentially every prior wave
+
 ## Wave 2026-09-07 evening
 
 **Publish pipeline still broken — day 35:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): latest run #135 (2026-09-07 14:35:15 UTC) completed with conclusion `failure`, and run #134 (2026-09-07 10:50:39 UTC) also `failure` — consistent with every scheduled run since 2026-08-04. Not sending a push notification this run — the last weekly re-escalation was 2026-09-06 morning; next due around 2026-09-13 if still unresolved. Marked the two now-24h-old `2026-09-06 evening` queue entries `skipped`; the two `2026-09-07 morning` entries are still under 24h old and stay `queued`. Queue now has 138 entries, 4 sitting `queued` and unpublished (2 from 2026-09-07 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research; `commons.wikimedia.org` was not fetched directly this run given the recurring `EGRESS_BLOCKED` restriction noted in every prior wave — file titles below (`File:Meta_Platforms_Inc._logo.svg`, `File:Google_2015_logo.svg`, `File:Seal_of_the_Federal_Bureau_of_Investigation.svg`) were confirmed to exist via WebSearch, the first two also reused from prior waves' long-confirmed titles — worth a spot-check before attaching. No CTA this wave — last CTA was 2026-09-07 morning Post 2, and the account's gap pattern has run 3 waves between CTAs (2026-09-05 evening → 2026-09-07 morning); next due around 2026-09-08 evening. Today's freshest developments: analysts (CNBC, 2026-09-02, still the newest framing on the underlying Aug 26 ruling) flagged that Meta's $18B settlement with 29 state AGs over child-harm claims on Instagram/Facebook — capping under-18 daily use at 2 hours, paid over 10 years against a court-disclosed $1.4T worst-case exposure — has an under-covered second effect: clearing the legal overhang that was reportedly slowing Meta's next wave of AI product launches. This account has run Meta's AI moves and prior antitrust/settlement stories but never this specific settlement or its AI-unlock angle. Separately, Judge Leonie Brinkema ruled (Sept 2, coverage continuing through this week via TechCrunch, Axios, AdExchanger) that Google illegally monopolized the ad-tech stack but denied the DOJ's requested breakup, ordering behavioral remedies instead and letting Google keep its ad exchange, ad server, and buyer tool — the second major antitrust case this year where Google was found liable but avoided structural remedy. Neither underlying event is inside the strict last-12h window (both trace to Sept 2), but both are genuinely new to this account and still generating fresh follow-on coverage this week, so kept as this wave's two mains over older, already-used stories (Armenia/Nvidia chip diplomacy, Anthropic IPO delay — both this account's own posts from this morning). Backup leans money-danger/regular-people: a Sept 5 story (Rolling Out, citing FBI/consumer-fraud reporting) about a 63-year-old widow who sent $150,000 over four months to a romance-scam actor using an AI-faked military ID and voice — kept as backup since it's a single-case human-interest story rather than a company-vs-company conflict, but the FBI naming AI-enabled fraud its own crime category this year gives it real stakes. Considered and rejected: Broadcom's Q3 FY2026 earnings (AI chip revenue +221%, stock dipped on Q4 guidance) — already run as this account's own main post in an earlier wave, no fresh escalation since; Anthropic-Lambda $35B Nvidia-backed cloud deal — already run as this account's own post (deal signed Aug 31/Sept 1); OpenAI's $110B funding round — actually closed back in February 2026, a stale story resurfacing in weekly recap aggregators, not new; GitHub Copilot's paused signups/tightened limits — traces to an April 2026 announcement, long stale despite still circulating in comparison articles; Anthropic's 1M-context GA at standard pricing — announced back in March 2026, stale; the ongoing 2026 layoff tracker aggregate (839/day average) — same overused pattern rejected in essentially every prior wave; DeepSeek's in-house AI chip development — traces to July 2026 reporting, no new escalation this week; xAI's Grok 4.7 (targeting a Sept 12 launch, trained partly on SpaceX engineering data) — still a forward-looking announcement, not yet released, weaker than the two settled legal-conflict stories.
 
-### Post 1 [score 7/10, pattern: big-tech-drama + money-broad]
+### Post 1 [score 7/10, pattern: big-tech-drama + money-broad] [status: expired]
 Source: https://www.cnn.com/2026/08/26/tech/meta-states-settle-trial-children (CNN Business, 2026-08-26) + https://www.cnbc.com/2026/09/02/meta-18-billion-settlement-ai-products.html (CNBC, 2026-09-02)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg?width=1200
 Meta just agreed to pay $18 billion for how it treated your kids online — and Wall Street is calling it a win.
@@ -18,7 +68,7 @@ Meta just agreed to pay $18 billion for how it treated your kids online — and 
 
 the fine bought silence. the AI roadmap was the real prize.
 
-### Post 2 [score 7/10, pattern: big-tech-drama]
+### Post 2 [score 7/10, pattern: big-tech-drama] [status: expired]
 Source: https://techcrunch.com/2026/09/02/google-spared-from-ad-business-breakup-but-judge-orders-changes-to-how-it-operates/ (TechCrunch, 2026-09-02) + https://www.adexchanger.com/antitrust/google-wont-have-to-break-up-its-ad-tech-business-judge-brinkema-rules/ (AdExchanger, 2026-09-02/03)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_2015_logo.svg?width=1200
 A federal judge just ruled Google illegally rigged the $1 trillion ad market — and let it keep every piece of the machine.
@@ -30,7 +80,7 @@ A federal judge just ruled Google illegally rigged the $1 trillion ad market —
 
 guilty was the verdict. keeping the business was the sentence.
 
-### Post 3 [score 6/10, pattern: money-danger + regular-people, backup] [backup]
+### Post 3 [score 6/10, pattern: money-danger + regular-people, backup] [backup] [status: expired]
 Source: https://rollingout.com/2026/09/05/what-a-150000-scam-reveals-about-ai/ (Rolling Out, 2026-09-05)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_Federal_Bureau_of_Investigation.svg?width=1200
 A 63-year-old widow sent $150,000 to a man she never met — his AI-faked passport and voice made him real enough.
