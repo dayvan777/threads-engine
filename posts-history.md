@@ -1,12 +1,63 @@
 # Posts History
 
+## Wave 2026-09-08 evening
+
+**Publish pipeline still broken — day 36:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` + `get_job_logs`): latest run #139 (2026-09-08 13:09:54 UTC) completed with conclusion `failure`, job log shows the same `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`, and run #138 (2026-09-08 10:10:05 UTC) also `failure` — consistent with every scheduled run since 2026-08-04. Not sending a push notification this run — the last weekly re-escalation was 2026-09-06 morning; next due around 2026-09-13 if still unresolved. Marked the two now-24h+-old `2026-09-07 morning` queue entries `skipped`; the two `2026-09-07 evening` entries are only ~23h54m old (committed 2026-09-07T15:19:23Z) and stay `queued` this run. Queue now has 142 entries, 6 sitting `queued` and unpublished (2 from 2026-09-07 evening, 2 from 2026-09-08 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; `commons.wikimedia.org` was not fetched directly this run given the recurring `EGRESS_BLOCKED` restriction noted in every prior wave — file titles below (`File:OpenAI Logo.svg`, `File:Anthropic logo.svg`, `File:Mistral-logo.png`, `File:Seal of the United States Federal Energy Regulatory Commission.svg`) were confirmed to exist via WebSearch; the OpenAI/Anthropic titles are reused from many prior waves' long-confirmed usage — worth a spot-check before attaching. CTA lands on Post 2 this wave, as due (last CTA was 2026-09-07 morning Post 2, then two waves — 2026-09-07 evening and 2026-09-08 morning — with none, as flagged by the immediately preceding wave's own note). Today's freshest developments: NYU mathematician Tristan Buckmaster published (2026-09-08) three new AI-assisted, Lean-verified fluid-dynamics proofs co-authored with Anthropic's Levent Alpöge, alongside a statement alleging that OpenAI's Sébastien Bubeck — after learning of their work on Sept 3 — pushed twice over two Sept 6 calls to drop Alpöge from authorship on a related OpenAI-claimed Navier-Stokes result (citing his Anthropic employment as "annoying"), proposed a deal trading silence for a joint-announcement sequence, and allegedly asked "why would you ruin your career?" when Buckmaster threatened to go public; Bubeck has called the allegations "false and inflammatory" but has not yet rebutted the specific claims — a genuinely new, fast-escalating story never covered by this account, distinct from every prior Anthropic/OpenAI story. Separately, Mistral announced (2026-09-08) a €3B Series D at a €21B+ post-money valuation — the largest equity round ever completed by a European tech company — led by Samsung Electronics with BlackRock and the Luxembourg government joining as new backers; multiple outlets (TechCrunch, Forkast) flagged the built-in paradox that Europe's self-styled "sovereign AI" champion is bankrolled by non-EU money and still runs entirely on Nvidia silicon — a fresh angle never used on this account (prior Mistral coverage was a rejected product-recap). Backup leans money-danger/regular-people, more of an ongoing-trend story than a single trigger: FERC Chair Laura Swett has given PJM Interconnection, the largest US grid operator, until end of September to agree to governance reforms or have them imposed, calling PJM's situation a "grave legitimacy crisis"; data centers already drove $6.3B (nearly half) of the costs in PJM's last capacity auction, and residents could absorb up to $700B of the industry's $1.4T buildout through rate hikes — kept as backup since the underlying electricity-cost story was run once before (2026-07 wave, protest-numbers angle) and the FERC deadline, while a real fresh escalation, is more regulatory-process than a single sharp event. Considered and rejected: Mistral's own Shieldstral-adjacent product news and the CrusoeAI/FluidStack $3B+$1.5B cloud raises tied to Anthropic's Google TPU deal — real but VC/infrastructure-only stories with no conflict or regular-people hook, weaker than the two selected; GPT-6 Astra's Sept 3 rollout — pure feature launch, matches this account's dud pattern; the Sept 3 multi-provider ChatGPT/Claude/Grok outage — already stale and no lasting stakes; today's modest S&P dip (Apple −2.5%, Alphabet −2.1%, Microsoft −2.1%) — same routine rate/oil-driven drift already rejected in this pattern multiple times; the ongoing 2026 layoff tracker aggregate (839/day) — same overused pattern rejected in essentially every prior wave; generic AI-job-displacement stat roundups (Goldman 25M jobs, Resume.org survey) — aggregated reports with no fresh dated trigger, not distinct from previously-used job-fear posts.
+
+### Post 1 [score 8/10, pattern: leak-insider + big-tech-drama]
+Source: https://officechai.com/ai/anthropic-openai-researchers-spar-over-what-appears-to-be-credit-for-progress-towards-solving-navier-stokes-equation/ (OfficeChai, 2026-09-08) + https://officechai.com/ai/openais-sebastien-bubeck-calls-tristan-buckmasters-claims-of-trying-to-take-credit-for-fluid-dynamics-proofs-false-and-inflammatory/ (OfficeChai, 2026-09-08)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+OpenAI tried to erase an Anthropic researcher's name from a math breakthrough — then asked him "why would you ruin your career?"
+
+→ NYU's Buckmaster: OpenAI's Bubeck pushed twice to drop co-author Levent Alpöge — an Anthropic employee, called "annoying"
+→ The offer: stay quiet, let OpenAI announce the Navier-Stokes result its AI produced
+→ Buckmaster refused, went public. Bubeck calls it "false and inflammatory"
+
+the AI cracked a $1M math problem. the humans fought over whose name goes on it.
+
+### Post 2 [score 6/10, pattern: money-broad + contrarian] [X CTA]
+Source: https://finance.yahoo.com/technology/ai/articles/mistral-ai-3b-series-d-081511629.html (Yahoo Finance/TechCrunch syndication, 2026-09-08) + https://forkast.news/mistral-ais-e3b-series-d-makes-it-europes-sovereign-ai-champion-with-a-paradox-built-into-its-foundation/ (Forkast, 2026-09-08)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Mistral-logo.png?width=1200
+Samsung funded Europe's "independence" from Silicon Valley — with money from Korea and the US, running on Nvidia chips.
+
+→ Mistral raises €3B at €21B — the biggest tech funding round in European history
+→ Samsung leads; BlackRock and Luxembourg's government join in
+→ The pitch: sovereign AI, free of US tech dependence
+→ Its data centers run entirely on Nvidia chips
+
+Europe's "sovereign" AI champion is funded and powered by everyone but Europe.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: money-danger + regular-people, backup] [backup]
+Source: https://www.utilitydive.com/news/ferc-pjm-governance-reforms-data-centers-capacity-market/826140/ (Utility Dive, 2026-09) + https://www.utilitydive.com/news/pjm-data-centers-capacity-auction-imm-bowring/825626/ (Utility Dive, market monitor data)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Federal_Energy_Regulatory_Commission.svg?width=1200
+A federal regulator just gave America's biggest power grid a deadline: fix data-center favoritism by month's end, or she'll do it for you.
+
+→ FERC chair: PJM is facing a "grave legitimacy crisis"
+→ Data centers drove $6.3B of one auction alone — nearly half of PJM's last four
+→ Residents could eat up to $700B of the buildout through rate hikes
+→ Deadline: end of September, or FERC imposes its own rules
+
+somebody has to pay for the AI boom's power bill. right now, it's whoever's on the grid.
+
+### Rejected candidates
+- CrusoeAI $3B raise at $30B valuation / FluidStack $1.5B raise tied to Anthropic's 1M Google TPU deal — VC/infrastructure-only stories, no conflict or regular-people hook
+- GPT-6 Astra Sept 3 rollout — pure feature/product launch, matches this account's dud pattern
+- Sept 3 multi-provider ChatGPT/Claude/Grok outage — already stale by this wave, no lasting stakes
+- Today's modest S&P 500 dip (Apple, Alphabet, Microsoft all down ~2%) — same routine rate/oil-driven drift rejected in this pattern multiple times before
+- The ongoing 2026 layoff tracker aggregate (839/day) — same overused pattern rejected in essentially every prior wave
+- Generic AI-job-displacement stat roundups (Goldman 25M jobs estimate, Resume.org survey) — aggregated reports, no fresh dated trigger
+
 ## Wave 2026-09-08 morning
 
 **Publish pipeline still broken — day 36:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): latest run #137 (2026-09-07 21:44:00 UTC) completed with conclusion `failure`, and run #136 (2026-09-07 19:46:44 UTC) also `failure` — consistent with every scheduled run since 2026-08-04. Not sending a push notification this run — the last weekly re-escalation was 2026-09-06 morning; next due around 2026-09-13 if still unresolved. The two `2026-09-07 morning` queue entries and two `2026-09-07 evening` entries are all still under 24h old and stay `queued`; nothing to mark `skipped` this run. Queue now has 140 entries, 6 sitting `queued` and unpublished (2 from 2026-09-07 morning, 2 from 2026-09-07 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research; `commons.wikimedia.org` was not fetched directly this run given the recurring `EGRESS_BLOCKED` restriction noted in every prior wave — file titles below (`File:Seal of the United States Federal Trade Commission.svg`, `File:DeepSeek logo.svg`, `File:Huawei Standard logo.svg`, `File:Seal of Massachusetts.svg`) were confirmed to exist via WebSearch; the DeepSeek title is reused from many prior waves' long-confirmed usage — worth a spot-check before attaching. No CTA this wave — last one was 2026-09-07 morning Post 2, and the account's gap pattern has run 2-3 waves between CTAs recently; next due around 2026-09-08 evening, as flagged by the immediately preceding wave's own note. Today's freshest developments: a Credit One Bank consumer survey (published 2026-09-02, wide pickup via ABA Banking Journal and the Stacker/AP wire through 2026-09-03) found 2 in 5 US consumers have now personally encountered or been close to an AI-powered scam, 7% actually lost money to one, and 84% have changed a financial behavior because of it (over half now let unknown numbers go to voicemail) — a genuinely new data point distinct from the individual-victim story already run as backup last wave (2026-09-07 evening Post 3), since this is an aggregate consumer-behavior survey rather than a single case. Separately, Bloomberg and multiple outlets reported (2026-09-04, still generating follow-on coverage through 2026-09-07 via TechNode and others) that DeepSeek plans to deploy at least 160,000 Huawei Ascend 950DT chips at a new 1-gigawatt data center in Ulanqab, Inner Mongolia — the first frontier-class model built entirely on domestic Chinese silicon, sidestepping the US Nvidia export ban rather than being slowed by it; a TechTimes analysis (2026-09-05) adds the angle that any data stored on those servers, including API prompts, falls under China's National Security Law and National Intelligence Law — a genuinely new story for this account, distinct from a previously-rejected Huawei chip-revenue-forecast story that lacked any conflict or numbers hook. Backup leans big-tech-drama/regulatory, niche audience: PYMNTS and Benzinga reported this week (2026-09-04/06) that Anthropic has broken publicly with OpenAI and Google over Massachusetts' AI safety bill — the toughest state-level AI safety rules proposed in the country — with Anthropic backing independent risk audits every 4-6 months while OpenAI and Google push for a lighter, once-a-year audit closer to Illinois' model; kept as backup since it's more of a policy/regulatory story than a broad money or job-fear hook, though the named three-way conflict is a fresh angle never used before on this account. Considered and rejected: the Pentagon/Anthropic Rita Lin ruling and GenAI.mil defiance story family — already used as a main post three times (2026-08-29 morning ×2, 2026-08-31 evening/09-01), no new escalation since the "purge by end of September" target that was already covered; Google's May 2026 AI Ultra pricing overhaul ($250→$200, new $99.99 tier) — genuinely stale, traces to I/O 2026 in May, resurfacing in comparison-shopping aggregators with no new trigger; Citigroup's ~1,000-job restructuring tranche — part of a multi-year, already-announced 20,000-role reduction plan unveiled two years ago, not a fresh escalation despite this week's headline; Microsoft's 4,800-job Xbox-focused layoffs — announced back in early July 2026, stale despite recirculating; NYT vs. Perplexity copyright lawsuit — filed December 2025, stale, resurfacing in recap coverage; today's modest S&P 500 dip (Apple, Alphabet, Microsoft all down ~2%) — no clean single AI-specific trigger identified, reads as routine rate/oil-driven drift already used in this pattern multiple times; Anthropic IPO investors pressing for revenue-per-token/per-gigawatt disclosure — real but a finance-mechanics story with no clean conflict or regular-people hook; the ongoing 2026 layoff tracker aggregate (839/day) — same overused pattern rejected in essentially every prior wave.
 
-### Post 1 [score 6/10, pattern: money-danger + regular-people]
+### Post 1 [score 6/10, pattern: money-danger + regular-people] [status: expired]
 Source: https://bankingjournal.aba.com/2026/09/consumers-share-experiences-with-ai-enabled-scams/ (ABA Banking Journal, 2026-09-02/03, citing Credit One Bank survey)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Federal_Trade_Commission.svg?width=1200
 2 in 5 Americans have already run into an AI scam — and 84% of them changed how they bank because of it.
@@ -17,7 +68,7 @@ Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_St
 
 the AI didn't just get better at scamming you. it got good enough that you stopped answering your own phone.
 
-### Post 2 [score 7/10, pattern: leak-insider + big-tech-drama]
+### Post 2 [score 7/10, pattern: leak-insider + big-tech-drama] [status: expired]
 Source: https://www.bloomberg.com/news/articles/2026-09-04/deepseek-plans-big-huawei-ai-chip-order-to-power-new-data-center (Bloomberg, 2026-09-04) + https://www.techtimes.com/articles/326755/20260905/deepseeks-160000-chip-huawei-order-puts-prc-law-over-every-api-query.htm (Tech Times, 2026-09-05)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Huawei_Standard_logo.svg?width=1200
 DeepSeek just ordered 160,000 Chinese AI chips — and every query you send it now answers to Beijing first.
@@ -29,7 +80,7 @@ DeepSeek just ordered 160,000 Chinese AI chips — and every query you send it n
 
 cheapest AI on earth. most expensive terms of service you never read.
 
-### Post 3 [score 6/10, pattern: big-tech-drama + contrarian, backup] [backup]
+### Post 3 [score 6/10, pattern: big-tech-drama + contrarian, backup] [backup] [status: expired]
 Source: https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-breaks-with-peers-on-massachusetts-ai-safety-bill/ (PYMNTS, 2026-09-04) + https://www.benzinga.com/markets/private-markets/26/08/61346746/openai-and-anthropic-clash-over-massachusetts-ai-safety-push (Benzinga, 2026-08-28/2026-09-06)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_Massachusetts.svg?width=1200
 The company that keeps warning you about AI risk just picked a fight with the companies that don't.

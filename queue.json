@@ -942,14 +942,14 @@
     "wave": "2026-09-07 morning",
     "text": "The U.S. helped end a war between Armenia and Azerbaijan — and paid part of the price in Nvidia chips.\n\n→ WSJ: negotiators dangled Nvidia Blackwell access as leverage in the peace talks\n→ The prize: a $500M, 70,000-GPU AI data center now live in Hrazdan\n→ Ex-US Ambassador: \"the Nvidia piece was a very important piece of the puzzle\"\n→ First known case of AI chips used as leverage to end an armed conflict\n\nchips didn't just win the AI race. they helped write a peace treaty.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-07-morning-2",
     "wave": "2026-09-07 morning",
     "text": "Anthropic just quietly pushed its own IPO past the date everyone expected — straight to right before the midterms.\n\n→ Public prospectus filing slips from \"any day now\" to late September\n→ Investor roadshow now targets mid-October, not this month\n→ Listing timed to land days before November's elections\n→ Still chasing a $2 trillion valuation — bigger than SpaceX's record debut\n\nthe biggest IPO in history just got a political calendar.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-07-evening-1",
@@ -976,6 +976,20 @@
     "id": "2026-09-08-morning-2",
     "wave": "2026-09-08 morning",
     "text": "DeepSeek just ordered 160,000 Chinese AI chips — and every query you send it now answers to Beijing first.\n\n→ 1-gigawatt data center rising in Inner Mongolia, all Huawei chips, zero Nvidia\n→ The US chip ban was built to slow this down — DeepSeek built around it instead\n→ Chinese national security law now governs data on those servers, prompts included\n→ First frontier-class model running entirely on domestic Chinese silicon\n\ncheapest AI on earth. most expensive terms of service you never read.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-08-evening-1",
+    "wave": "2026-09-08 evening",
+    "text": "OpenAI tried to erase an Anthropic researcher's name from a math breakthrough — then asked him \"why would you ruin your career?\"\n\n→ NYU's Buckmaster: OpenAI's Bubeck pushed twice to drop co-author Levent Alpöge — an Anthropic employee, called \"annoying\"\n→ The offer: stay quiet, let OpenAI announce the Navier-Stokes result its AI produced\n→ Buckmaster refused, went public. Bubeck calls it \"false and inflammatory\"\n\nthe AI cracked a $1M math problem. the humans fought over whose name goes on it.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-08-evening-2",
+    "wave": "2026-09-08 evening",
+    "text": "Samsung funded Europe's \"independence\" from Silicon Valley — with money from Korea and the US, running on Nvidia chips.\n\n→ Mistral raises €3B at €21B — the biggest tech funding round in European history\n→ Samsung leads; BlackRock and Luxembourg's government join in\n→ The pitch: sovereign AI, free of US tech dependence\n→ Its data centers run entirely on Nvidia chips\n\nEurope's \"sovereign\" AI champion is funded and powered by everyone but Europe.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
