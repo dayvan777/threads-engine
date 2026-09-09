@@ -970,14 +970,14 @@
     "wave": "2026-09-08 morning",
     "text": "2 in 5 Americans have already run into an AI scam \u2014 and 84% of them changed how they bank because of it.\n\n\u2192 7% actually lost money to an AI-faked call, text, or voice clone\n\u2192 Cloned bank-voice calls are the #1 fear \u2014 named by nearly 1 in 4 people\n\u2192 Over half now let unknown numbers go straight to voicemail\n\nthe AI didn't just get better at scamming you. it got good enough that you stopped answering your own phone.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-08-morning-2",
     "wave": "2026-09-08 morning",
     "text": "DeepSeek just ordered 160,000 Chinese AI chips \u2014 and every query you send it now answers to Beijing first.\n\n\u2192 1-gigawatt data center rising in Inner Mongolia, all Huawei chips, zero Nvidia\n\u2192 The US chip ban was built to slow this down \u2014 DeepSeek built around it instead\n\u2192 Chinese national security law now governs data on those servers, prompts included\n\u2192 First frontier-class model running entirely on domestic Chinese silicon\n\ncheapest AI on earth. most expensive terms of service you never read.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-08-evening-1",
@@ -1004,6 +1004,20 @@
     "id": "2026-09-09-morning-2",
     "wave": "2026-09-09 morning",
     "text": "The US government just told a judge OpenAI training on the New York Times isn't theft \u2014 it's national security.\n\n\u2192 DOJ's first-ever statement of interest in an AI copyright case, backing OpenAI\n\u2192 Argues copyrighted training data is \"transformative\" fair use \u2014 blocking it would hurt small newsrooms too\n\u2192 NYT's reply: the administration is \"siding with trillion-dollar AI companies\" over the creators \"whose work they stole\"\n\nthe government picked a side. it wasn't the one holding the copyright.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-09-evening-1",
+    "wave": "2026-09-09 evening",
+    "text": "Amazon just got the right to buy $4B of Qualcomm stock \u2014 for agreeing to spend up to $60B on its chips.\n\n\u2192 Warrant: 25M shares at $161.26, vesting on chip-order milestones through 2036\n\u2192 Deal covers custom AI chips plus optical networking for AWS data centers\n\u2192 Qualcomm jumped ~9% same day \u2014 its exit ramp off a dying Apple modem business\n\u2192 Own an S&P 500 fund? You own both sides of this deal already\n\nthe buyer just became a shareholder in the seller. not a supply deal \u2014 a marriage.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-09-evening-2",
+    "wave": "2026-09-09 evening",
+    "text": "OpenAI's AI cracked a 165-year-old $1M math problem. Days later, OpenAI's fighting an Anthropic researcher over the credit.\n\n\u2192 10,000 AI agents, 88 hours straight, one 165-page Navier-Stokes proof\n\u2192 NYU's Buckmaster: Bubeck pushed to drop his co-author for working at Anthropic, called him \"annoying\"\n\u2192 Both sides deny it, both went public this week\n\nthe machine solved 165 years of math in 88 hours. the humans still fought over the byline.\n\nI track this stuff daily on my X \u2192 x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
