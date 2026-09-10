@@ -998,14 +998,14 @@
     "wave": "2026-09-09 morning",
     "text": "Google just told 450 million Europeans their search is about to get worse \u2014 on purpose.\n\n\u2192 July's \u20ac890M EU fine (self-preferencing + Play Store steering) forced the rewrite\n\u2192 Google calls it \"the biggest quality cut\" in Search's 29-year history\n\u2192 Rivals like Booking.com and Expedia now rank above Google's own listings\n\u2192 Compliance deadline: Sept 21, or daily fines up to 5% of global revenue kick in\n\nregulators wanted competition. Google decided broken search was cheaper than losing control.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-09-morning-2",
     "wave": "2026-09-09 morning",
     "text": "The US government just told a judge OpenAI training on the New York Times isn't theft \u2014 it's national security.\n\n\u2192 DOJ's first-ever statement of interest in an AI copyright case, backing OpenAI\n\u2192 Argues copyrighted training data is \"transformative\" fair use \u2014 blocking it would hurt small newsrooms too\n\u2192 NYT's reply: the administration is \"siding with trillion-dollar AI companies\" over the creators \"whose work they stole\"\n\nthe government picked a side. it wasn't the one holding the copyright.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-09-evening-1",
@@ -1032,6 +1032,20 @@
     "id": "2026-09-10-morning-2",
     "wave": "2026-09-10 morning",
     "text": "Google just kept a nuclear plant alive for 25 extra years \u2014 so its AI has somewhere to plug in.\n\n\u2192 \u20ac13B ($15.1B) committed to Finnish AI data centers through 2028\n\u2192 New 22-year deal buys up to 50% of the Loviisa nuclear plant's output\n\u2192 Keeps the reactor running through 2050 instead of retiring on schedule\n\u2192 Google's first nuclear power deal anywhere outside the US\n\nown an index fund? you're now a part-owner of a Finnish nuclear plant, whether you noticed or not.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-10-evening-1",
+    "wave": "2026-09-10 evening",
+    "text": "Anthropic just published its own model of how AI could wreck the job market \u2014 while making the economy 32% richer.\n\n\u2192 Extreme scenario: $44.4 trillion GDP by 2030, up 32.4% from a no-AI baseline\n\u2192 Substantial scenario: still +8.3%, $36.3 trillion\n\u2192 Same report: real wage pressure and job losses hit knowledge workers, not warehouse workers\n\u2192 Built from a survey of 10,980 Americans \u2014 not a hype deck\n\nthe company selling you the product just told you what it costs.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-10-evening-2",
+    "wave": "2026-09-10 evening",
+    "text": "DeepSeek dropped a new model this morning \u2014 by lunch, two rivals had lost 8%+ of their market value.\n\n\u2192 V4.1 Flash: a fraction of a cent per million tokens, claims it beats Moonshot's Kimi K3\n\u2192 MiniMax and Z.ai shares plunged 8%+ in Hong Kong same day\n\u2192 Alibaba slid 2%+ just for sharing the market\n\u2192 Comes as DeepSeek preps its own IPO on Shanghai's STAR exchange\n\nthe cheapest model on earth just became the most expensive thing to compete with.\n\nI track this stuff daily on my X \u2192 x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
