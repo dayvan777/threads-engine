@@ -1,12 +1,62 @@
 # Posts History
 
+## Wave 2026-09-11 evening
+
+**Publish pipeline still broken — day 41:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): workflow `threads-publish.yml` has 151 total runs, all completed with conclusion `failure` — latest run #151 (2026-09-11T13:06:29Z) — consistent with every scheduled run since 2026-08-04. Not sending a push notification this run — the last weekly re-escalation was 2026-09-06 morning; next due around 2026-09-13 if still unresolved. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-11T15:09:59Z): the two `2026-09-10 evening` entries (committed 2026-09-10T15:14:06Z) are ~23h56m old, just under the 24h cutoff, stay `queued`; the two `2026-09-11 morning` entries (committed 2026-09-11T05:15:18Z, ~9h55m old) also stay `queued`. Queue now has 154 entries, 6 sitting `queued` and unpublished (2 from 2026-09-10 evening, 2 from 2026-09-11 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; WebFetch confirmed `EGRESS_BLOCKED` again this run on `commons.wikimedia.org`, same recurring environment-level restriction as every prior wave — file titles below (`File:Visa_Logo.png`, `File:Mastercard-logo.svg`, `File:Nvidia_logo.svg`) freshly confirmed to exist via WebSearch this run; `File:OpenAI_Logo.svg` reused from prior waves' long-confirmed usage. CTA lands on Post 2 this wave, as due (last CTA was 2026-09-10 evening Post 2; this morning's wave ran two posts with none, as flagged by that wave's own note). Today's freshest developments: Visa, Mastercard, and Ant International announced (2026-09-09/10, via PYMNTS, Businesswire, Forkast) a joint "Know-Your-Agent" (KYA) interoperability framework — merging Visa's Trusted Agent Protocol, Mastercard's Verifiable Intent, and Ant's Agentic Mobile Protocol into one standard so AI shopping agents can be verified across card networks and wallets. The trigger: AI agents are projected to orchestrate $3-5 trillion of global consumer commerce by 2030. Genuinely fresh, never covered by this account, broad-audience money angle, and a notable "arch-rivals team up" framing since Visa and Mastercard almost never collaborate on anything. Separately, chip startup Positron AI closed an $875M Series C (announced 2026-09-10, SiliconANGLE/PRNewswire) at a $5B valuation — 5x its $230M Series B valuation from February — claiming its unreleased Asimov chip (not yet taped out, TSMC 3nm end of 2026, mass production H2 2027) will hit 26x the tokens-per-dollar of Nvidia's Blackwell GB300 in simulation. Backed by Netscape/SGI co-founder Jim Clark; fresh, hard numbers, direct named conflict with Nvidia, though skews toward the account's dev/infra audience rather than regular people — kept as the wave's one niche-dev slot per the rubric's "at most one niche topic" guidance. Backup leans contrarian/policy-conflict: OpenAI is now publicly pushing Congress for mandatory national AI safety rules (testing standards, independent audits, incident reporting) before the current session adjourns, and backed California's SB 813 and AB 1405 — bills it previously resisted — calling the approach "reverse federalism" (Reuters wire pickups, Euronews, 2026-09-09/11); kept as backup since it's a policy/regulatory story with no hard numeric hook, weaker on the rubric than the two main picks, though the "company that fought regulation now begging for it" reversal is a genuine contrarian angle. Considered and rejected: Anthropic pretraining researcher Jacob Coxon's resignation and the "10%+ chance AI kills everyone" quote (Evan Hubinger, publicly on X 2026-09-09) — this exact story (Coxon quitting + an Anthropic researcher's >10% x-risk estimate) was already drafted as this account's own backup post on 2026-09-10 morning; no major new development since, so skipped per the reuse rule rather than treated as fresh; DOJ/Nvidia/Groq antitrust probe and the Pentagon/Fluidstack $5B loan talks — both already used as this account's own main posts this morning (2026-09-11 morning Posts 1 and 2), can't reuse same day; Mistral's €3B/€21B valuation Series D — same story family already used as a main post on 2026-09-08 evening, still resting; Amazon's 121 Washington-state layoffs — filed with the state on 2026-08-31, over a week stale, no new escalation; Google AI Ultra/Plus price cuts ($250→$200, $7.99→$4.99) — both traced back to May/June 2026 announcements recirculating in roundup articles, not fresh; Evan Hubinger's Anthropic alignment-lead role and Jacob Coxon's OpenAI/Anthropic pretraining background — same rejected story above; the ongoing 2026 layoff tracker aggregate (~826/day, 209,032+ workers) — same overused pattern rejected in essentially every prior wave; Thursday's broad market selloff (Dow/Nasdaq/S&P down on oil prices and inflation data ahead of the Fed) — macro-driven, no clean AI-specific trigger.
+
+### Post 1 [score 7/10, pattern: money-broad + big-tech-collab]
+Source: https://www.pymnts.com/cybersecurity/2026/visa-mastercard-team-with-ant-know-your-agent-framework (PYMNTS, 2026-09-10) + https://www.businesswire.com/news/home/20260909003891/en/ (Businesswire, 2026-09-09)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Visa_Logo.png?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Mastercard-logo.svg?width=1200
+Visa and Mastercard just did something they never do: team up.
+
+→ With Ant International, they're merging 3 rival AI-agent verification systems into one
+→ Why: AI agents are projected to handle $3-5 trillion of consumer spending by 2030
+→ Goal: your AI agent can prove it's really shopping for you, on any card network
+→ No pilot, no timeline yet — just rivals agreeing the threat is bigger than each other
+
+your card company already assumes your next purchase won't be made by you.
+
+### Post 2 [score 5/10, pattern: niche-dev + big-tech-conflict] [X CTA]
+Source: https://siliconangle.com/2026/09/10/chipmaker-positron-nabs-875m-to-speed-up-inference-with-consumer-grade-memory/ (SiliconANGLE, 2026-09-10) + https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html (PRNewswire, 2026-09-10)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200
+A chip startup just told Nvidia to watch its back — with numbers attached.
+
+→ Positron raised $875M at a $5B valuation — 5x what it was worth 7 months ago
+→ Claim: its unreleased chip beats Nvidia's Blackwell 26x on tokens per dollar
+→ Backed by Netscape co-founder Jim Clark; the chip hasn't even taped out yet
+→ Real silicon ships late 2027 — a bet on a claim, not a shipped product
+
+in the AI chip race, you can raise a fortune before you've built a thing.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 4/10, pattern: contrarian + policy-conflict, backup] [backup]
+Source: https://www.euronews.com/next/2026/09/11/openai-makes-u-turn-and-calls-for-binding-national-ai-safety-rules (Euronews, 2026-09-11) + https://thenextweb.com/news/openai-mandatory-national-ai-safety-requirements-congress (TheNextWeb, 2026-09-09)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI spent years fighting AI regulation. This week it begged Congress for some.
+
+OpenAI is now pushing for mandatory national AI safety rules — testing standards, audits, incident reporting — before Congress adjourns. It even backed the California bills it used to resist, calling it "reverse federalism": let states set the rules first, hand Washington something to copy.
+
+the company that shipped ChatGPT before anyone could regulate it now wants the rules written before its rivals catch up.
+
+### Rejected candidates
+- Jacob Coxon's Anthropic resignation + Evan Hubinger's ">10% chance AI kills everyone" quote (2026-09-09) — same exact story already drafted as this account's own backup post on 2026-09-10 morning, no major new development since
+- DOJ/Nvidia/Groq antitrust probe and Pentagon/Fluidstack $5B loan talks — both already used as this account's own main posts this morning (2026-09-11 morning Posts 1-2), can't reuse same day
+- Mistral's €3B/€21B valuation Series D — same story family already used as a main post on 2026-09-08 evening
+- Amazon's 121 Washington-state layoffs — filed 2026-08-31, over a week stale, no new escalation
+- Google AI Ultra/Plus price cuts ($250→$200, $7.99→$4.99) — both trace back to May/June 2026 announcements, not fresh
+- The ongoing 2026 layoff tracker aggregate (~826/day, 209,032+ workers) — same overused pattern rejected in essentially every prior wave
+- Thursday's broad market selloff (Dow/Nasdaq/S&P down on oil and inflation data) — macro-driven, no clean AI-specific trigger
+
 ## Wave 2026-09-11 morning
 
 **Publish pipeline still broken — day 40:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` + `get_job_logs`): the 10 most recent scheduled runs (back through 2026-09-08 evening) all completed with conclusion `failure` at the "Publish next queued post" step with the exact error `Error: THREADS_ACCESS_TOKEN is not set` — consistent with every scheduled run since 2026-08-04. Not sending a push notification this run — the last weekly re-escalation was 2026-09-06 morning; next due around 2026-09-13 if still unresolved. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-11T05:12:45Z): the two `2026-09-09 evening` entries (committed 2026-09-09T15:18:31Z) are now ~37h54m old, marked `skipped`; the two `2026-09-10 morning` entries (committed 2026-09-10T05:12:22Z, ~24h00m old — just crossed the cutoff) also marked `skipped`; the two `2026-09-10 evening` entries (committed 2026-09-10T15:14:06Z, ~13h58m old) stay `queued`. Queue now has 152 entries, 4 sitting `queued` and unpublished (2 from 2026-09-10 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research; WebFetch confirmed `EGRESS_BLOCKED` again this run on `finance.yahoo.com` and `commons.wikimedia.org` (same recurring environment-level restriction as every prior wave) — file titles below (`File:Nvidia_logo.svg`, `File:Seal_of_the_United_States_Department_of_Justice.svg`) freshly confirmed to exist via WebSearch this run; `File:Seal_of_the_United_States_Department_of_Defense.svg` and `File:Anthropic_logo.svg` reused from prior waves' confirmed titles. No CTA this wave — last one was 2026-09-10 evening Post 2; next due around 2026-09-11 evening or 2026-09-12 morning to keep the ~1-in-4 observed cadence. Today's freshest developments: Bloomberg reported (2026-09-10) that the DOJ is investigating whether Nvidia structured its $20B non-exclusive licensing deal with AI chip startup Groq — announced December 2025 — to dodge antitrust premerger review: Nvidia took the tech license and hired away Groq's founder Jonathan Ross plus most of its senior team, without buying the company outright, letting Groq keep operating "independently" under a new CEO; Senators Warren and Blumenthal are now also publicly questioning the structure. Separately, WSJ reported (2026-09-10/11, via Reuters pickup) the Pentagon is in talks to lend roughly $5B — the largest loan ever from its Office of Strategic Capital — to AI cloud startup Fluidstack, aimed at building US manufacturing capacity for data-center power and cooling components rather than funding a facility directly; the deal is being advised by the bank founded by Palmer Luckey, an early Trump backer. Both are genuinely fresh (dated today/yesterday), never covered by this account, and distinct from the already-exhausted Anthropic-$2T-IPO story family (rejected below as overused). Backup leans leak-insider/conflict: Anthropic's September threat-intelligence report (published 2026-09-10, covering Dec 2025–Aug 2026) disclosed disrupting a Russia-linked espionage campaign (tradecraft matching Midnight Blizzard) using Claude for phishing, hotel-wifi hijacking, and WhatsApp-takeover operations against Ukrainian government, military, and diplomatic targets, alongside separately disrupted bioweapon-research and "kamikaze drone" swarm-development attempts — kept as backup since it's a self-published disclosure rather than a live external incident, and both main slots already had strong named-company-conflict stories. Considered and rejected: Anthropic's $2 trillion IPO valuation target (October 2026 listing) — the exact same story family used repeatedly across at least 10 prior waves (2026-08-16 through 2026-09-05) with no materially new trigger today beyond continued recirculation of the same "$2T target" reporting, now clearly overused past the point of a "major new development"; DeepSeek V4.1 Flash market-crash reaction — already used as this account's own main post yesterday (2026-09-10 evening Post 2), too repetitive to reuse; Oracle Q1 FY2027 earnings ($19.3B revenue, +30% YoY, 300K GPUs delivered) — strong numbers but reads as a routine earnings-beat recap with no conflict or access hook; OpenAI's GPT-6 Astra release (Sept 3) and Agents API public beta (Sept 10) — both pure feature/product launches, match the account's dud pattern; Harvey (legal AI) $550M raise at $15.5B valuation — VC-only funding recap, no regular-people hook; California's new AI-auditor registry — real regulatory story but a compliance/registration mechanic with no numbers-driven conflict; the ongoing 2026 layoff tracker aggregate — same overused pattern rejected in essentially every prior wave.
 
-### Post 1 [score 7/10, pattern: big-tech-drama + regulatory-conflict]
+### Post 1 [score 7/10, pattern: big-tech-drama + regulatory-conflict] [status: expired]
 Source: https://www.bloomberg.com/news/articles/2026-09-10/doj-probes-nvidia-s-license-deal-with-groq-on-antitrust-concerns (Bloomberg, 2026-09-10) + https://www.axios.com/2026/09/10/doj-nvidia-groq-antitrust (Axios, 2026-09-10)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Department_of_Justice.svg?width=1200
 Nvidia just paid $20 billion to not buy a company.
@@ -18,7 +68,7 @@ Nvidia just paid $20 billion to not buy a company.
 
 pay $20B, take the founder and his team, never file for merger review — that's not a license, that's a loophole.
 
-### Post 2 [score 7/10, pattern: money-broad + government-conflict]
+### Post 2 [score 7/10, pattern: money-broad + government-conflict] [status: expired]
 Source: https://www.digitimes.com/news/a20260911VL205/infrastructure-loan-financing-startup-google.html (Digitimes, 2026-09-11) + https://ca.finance.yahoo.com/news/pentagon-talks-lend-5-billion-215353279.html (Reuters via Yahoo, 2026-09-10)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Department_of_Defense.svg?width=1200
 The Pentagon wants to lend $5 billion to an AI startup most people have never heard of.
@@ -30,7 +80,7 @@ The Pentagon wants to lend $5 billion to an AI startup most people have never he
 
 your tax dollars just became venture capital for the AI boom.
 
-### Post 3 [score 6/10, pattern: leak-insider + conflict, backup] [backup]
+### Post 3 [score 6/10, pattern: leak-insider + conflict, backup] [backup] [status: expired]
 Source: https://www.anthropic.com/threat-intelligence-report-september-2026 (Anthropic, 2026-09-10) + https://www.rappler.com/technology/anthropic-threat-intelligence-report-september-2026/ (Rappler, 2026-09-10)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Anthropic just revealed a Russian-linked hacking group used Claude to spy on Ukraine.
