@@ -1,12 +1,63 @@
 # Posts History
 
+## Wave 2026-09-11 morning
+
+**Publish pipeline still broken — day 40:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` + `get_job_logs`): the 10 most recent scheduled runs (back through 2026-09-08 evening) all completed with conclusion `failure` at the "Publish next queued post" step with the exact error `Error: THREADS_ACCESS_TOKEN is not set` — consistent with every scheduled run since 2026-08-04. Not sending a push notification this run — the last weekly re-escalation was 2026-09-06 morning; next due around 2026-09-13 if still unresolved. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-11T05:12:45Z): the two `2026-09-09 evening` entries (committed 2026-09-09T15:18:31Z) are now ~37h54m old, marked `skipped`; the two `2026-09-10 morning` entries (committed 2026-09-10T05:12:22Z, ~24h00m old — just crossed the cutoff) also marked `skipped`; the two `2026-09-10 evening` entries (committed 2026-09-10T15:14:06Z, ~13h58m old) stay `queued`. Queue now has 152 entries, 4 sitting `queued` and unpublished (2 from 2026-09-10 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; WebFetch confirmed `EGRESS_BLOCKED` again this run on `finance.yahoo.com` and `commons.wikimedia.org` (same recurring environment-level restriction as every prior wave) — file titles below (`File:Nvidia_logo.svg`, `File:Seal_of_the_United_States_Department_of_Justice.svg`) freshly confirmed to exist via WebSearch this run; `File:Seal_of_the_United_States_Department_of_Defense.svg` and `File:Anthropic_logo.svg` reused from prior waves' confirmed titles. No CTA this wave — last one was 2026-09-10 evening Post 2; next due around 2026-09-11 evening or 2026-09-12 morning to keep the ~1-in-4 observed cadence. Today's freshest developments: Bloomberg reported (2026-09-10) that the DOJ is investigating whether Nvidia structured its $20B non-exclusive licensing deal with AI chip startup Groq — announced December 2025 — to dodge antitrust premerger review: Nvidia took the tech license and hired away Groq's founder Jonathan Ross plus most of its senior team, without buying the company outright, letting Groq keep operating "independently" under a new CEO; Senators Warren and Blumenthal are now also publicly questioning the structure. Separately, WSJ reported (2026-09-10/11, via Reuters pickup) the Pentagon is in talks to lend roughly $5B — the largest loan ever from its Office of Strategic Capital — to AI cloud startup Fluidstack, aimed at building US manufacturing capacity for data-center power and cooling components rather than funding a facility directly; the deal is being advised by the bank founded by Palmer Luckey, an early Trump backer. Both are genuinely fresh (dated today/yesterday), never covered by this account, and distinct from the already-exhausted Anthropic-$2T-IPO story family (rejected below as overused). Backup leans leak-insider/conflict: Anthropic's September threat-intelligence report (published 2026-09-10, covering Dec 2025–Aug 2026) disclosed disrupting a Russia-linked espionage campaign (tradecraft matching Midnight Blizzard) using Claude for phishing, hotel-wifi hijacking, and WhatsApp-takeover operations against Ukrainian government, military, and diplomatic targets, alongside separately disrupted bioweapon-research and "kamikaze drone" swarm-development attempts — kept as backup since it's a self-published disclosure rather than a live external incident, and both main slots already had strong named-company-conflict stories. Considered and rejected: Anthropic's $2 trillion IPO valuation target (October 2026 listing) — the exact same story family used repeatedly across at least 10 prior waves (2026-08-16 through 2026-09-05) with no materially new trigger today beyond continued recirculation of the same "$2T target" reporting, now clearly overused past the point of a "major new development"; DeepSeek V4.1 Flash market-crash reaction — already used as this account's own main post yesterday (2026-09-10 evening Post 2), too repetitive to reuse; Oracle Q1 FY2027 earnings ($19.3B revenue, +30% YoY, 300K GPUs delivered) — strong numbers but reads as a routine earnings-beat recap with no conflict or access hook; OpenAI's GPT-6 Astra release (Sept 3) and Agents API public beta (Sept 10) — both pure feature/product launches, match the account's dud pattern; Harvey (legal AI) $550M raise at $15.5B valuation — VC-only funding recap, no regular-people hook; California's new AI-auditor registry — real regulatory story but a compliance/registration mechanic with no numbers-driven conflict; the ongoing 2026 layoff tracker aggregate — same overused pattern rejected in essentially every prior wave.
+
+### Post 1 [score 7/10, pattern: big-tech-drama + regulatory-conflict]
+Source: https://www.bloomberg.com/news/articles/2026-09-10/doj-probes-nvidia-s-license-deal-with-groq-on-antitrust-concerns (Bloomberg, 2026-09-10) + https://www.axios.com/2026/09/10/doj-nvidia-groq-antitrust (Axios, 2026-09-10)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Nvidia_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Department_of_Justice.svg?width=1200
+Nvidia just paid $20 billion to not buy a company.
+
+→ Dec 2025: Nvidia licenses Groq's chip tech for $20B — non-exclusive, no acquisition
+→ Also hires away Groq's founder, president, and most of the senior team
+→ Groq stays "independent" on paper, still operating under a new CEO
+→ DOJ is now investigating if the whole structure dodges antitrust review
+
+pay $20B, take the founder and his team, never file for merger review — that's not a license, that's a loophole.
+
+### Post 2 [score 7/10, pattern: money-broad + government-conflict]
+Source: https://www.digitimes.com/news/a20260911VL205/infrastructure-loan-financing-startup-google.html (Digitimes, 2026-09-11) + https://ca.finance.yahoo.com/news/pentagon-talks-lend-5-billion-215353279.html (Reuters via Yahoo, 2026-09-10)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Department_of_Defense.svg?width=1200
+The Pentagon wants to lend $5 billion to an AI startup most people have never heard of.
+
+→ Fluidstack: AI cloud company, money earmarked for US chip and cooling-gear supply chains
+→ From the Pentagon's Office of Strategic Capital — its biggest loan ever, if it closes
+→ Advising the deal: the bank founded by Palmer Luckey, an early Trump backer
+→ Funds the parts that decide how fast a data center gets built, not the center itself
+
+your tax dollars just became venture capital for the AI boom.
+
+### Post 3 [score 6/10, pattern: leak-insider + conflict, backup] [backup]
+Source: https://www.anthropic.com/threat-intelligence-report-september-2026 (Anthropic, 2026-09-10) + https://www.rappler.com/technology/anthropic-threat-intelligence-report-september-2026/ (Rappler, 2026-09-10)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Anthropic just revealed a Russian-linked hacking group used Claude to spy on Ukraine.
+
+→ Tradecraft matched Russia's Midnight Blizzard — phishing, hotel wifi hijacks, WhatsApp takeovers
+→ Targets: Ukrainian government, military, and diplomatic staff
+→ Same report: disrupted bioweapon-research attempts and a "kamikaze drone" swarm plot
+→ Anthropic caught it, cut it off, and published the findings itself
+
+the company selling you a chatbot just showed you what a war looks like with one.
+
+### Rejected candidates
+- Anthropic's $2 trillion IPO valuation target (October 2026 listing) — same story family used repeatedly across at least 10 prior waves (2026-08-16 through 2026-09-05), no materially new trigger today, clearly overused
+- DeepSeek V4.1 Flash market-crash reaction — already used as this account's own main post yesterday (2026-09-10 evening Post 2)
+- Oracle Q1 FY2027 earnings ($19.3B revenue, +30% YoY, 300K GPUs delivered) — routine earnings-beat recap, no conflict or access hook
+- OpenAI's GPT-6 Astra release and Agents API public beta — pure feature/product launches, match the account's dud pattern
+- Harvey (legal AI) $550M raise at $15.5B valuation — VC-only funding recap, no regular-people hook
+- California's new AI-auditor registry — compliance/registration mechanic, no numbers-driven conflict
+- The ongoing 2026 layoff tracker aggregate — same overused pattern rejected in essentially every prior wave
+
 ## Wave 2026-09-10 evening
 
 **Publish pipeline still broken — day 39:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list` + `list_workflow_jobs`): latest run #147 (2026-09-10T13:12:31Z) completed with conclusion `failure` at the "Publish next queued post" step, and run #146 (2026-09-10T10:07:32Z) also `failure` — consistent with every scheduled run since 2026-08-04. Not sending a push notification this run — the last weekly re-escalation was 2026-09-06 morning; next due around 2026-09-13 if still unresolved. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-10T15:09:16Z): the two `2026-09-09 morning` entries (committed 2026-09-09T05:16:44Z) are now ~34h old, marked `skipped`; the two `2026-09-09 evening` entries (committed 2026-09-09T15:18:31Z, ~23h51m old) stay `queued`, just under the 24h cutoff; the two `2026-09-10 morning` entries (committed 2026-09-10T05:12:22Z, ~10h old) also stay `queued`. Queue now has 150 entries, 6 sitting `queued` and unpublished (2 from 2026-09-09 evening, 2 from 2026-09-10 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research; `commons.wikimedia.org` was not fetchable directly this run (confirmed via WebFetch: `EGRESS_BLOCKED`), same recurring restriction noted in every prior wave — file titles below (`File:Anthropic_logo.svg`, `File:DeepSeek_logo.svg`, `File:Alibaba_en_logo.svg`, `File:Moore_Threads_logo.png`) were confirmed to exist via WebSearch; the Anthropic and DeepSeek titles are reused from many prior waves' long-confirmed usage, the Alibaba and Moore Threads titles freshly confirmed this run — worth a spot-check before attaching. CTA lands on Post 2 this wave, as due (last CTA was 2026-09-09 evening Post 2; this morning's wave ran two posts with none, as flagged by that wave's own note). Today's freshest developments: DeepSeek released V4.1 Flash (2026-09-10), an ultra-cheap model (a fraction of a cent per million tokens) claiming to beat Moonshot's Kimi K3 — the release triggered an immediate market reaction: shares in rivals MiniMax and Z.ai plunged more than 8% in Hong Kong same-day, Alibaba slid over 2%, all reported by Bloomberg as DeepSeek itself prepares an IPO on Shanghai's STAR Market; this is a genuinely fresh escalation beyond the plain "new model launch" (which alone would be a dud-pattern feature recap, as correctly rejected in the 2026-09-09 wave note) — the story here is the market-crash reaction, not the model. Separately, Anthropic published (2026-09-09/10) its "Econ Scenario Explorer" — an interactive model plus working paper and a 10,980-person US survey — projecting three 2030 GDP scenarios: modest (+1.6%), substantial ($36.3T, +8.3%), and extreme ($44.4T, +32.4%), while the same report explicitly warns of wage pressure and job losses concentrated among knowledge workers; a genuinely fresh, broad-audience money/jobs story never used on this account before, and the self-undercutting angle (the company selling the product modeling its own downside) is a new contrarian framing. Backup leans niche/dev-adjacent, insider-skepticism: JD Cloud committed (reported 2026-09-09) to a 100,000-GPU cluster running entirely on domestic Moore Threads silicon (founded by Nvidia's former China VP), with Moore Threads claiming 95% scaling efficiency at that scale — but Tech Times reported (2026-09-10) no independent auditor has verified the number; kept as backup since it's more a benchmark-skepticism story than a sharp numbers-driven conflict between named companies, though it's fresh and distinct from the already-used DeepSeek/Huawei China-chip story family. Considered and rejected: Mistral's €3B Samsung-led round and the OpenAI/Anthropic Navier-Stokes credit dispute — both already used as this account's own main posts in the last two waves (2026-09-08 evening, 2026-09-09 evening), resting per prior notes' own fatigue warnings; Meta's Muse 24/7 personal AI agent launch — pure product/feature launch, matches the account's dud pattern; ChatGPT Voice Mode's GPT-6 Astra rollout — same dud pattern; the ongoing 2026 layoff tracker aggregate (~833/day, 209,032 workers) — same overused pattern rejected in essentially every prior wave; Germany's proposed 25% Bitcoin tax and MetaMask/Consensys restructuring — crypto/fintech, not AI, off-topic for this account; Adobe's Q3 earnings preview — routine earnings-calendar item, no conflict hook; "nearly half of Irish workers considering new careers over AI" — real job-fear angle but thin single-country survey with no hard headline number, weaker than the Anthropic econ report's harder numbers on the same theme.
 
-### Post 1 [score 7/10, pattern: money-broad + job-fear-numbers]
+### Post 1 [score 7/10, pattern: money-broad + job-fear-numbers] [status: expired]
 Source: https://www.anthropic.com/institute/econ-scenarios (Anthropic, 2026-09) + https://aninews.in/news/business/anthropic-sees-ai-driving-gdp-growth-but-warns-of-job-losses-wage-pressure-for-knowledge-workers20260910092439/ (ANI News, 2026-09-10)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Anthropic just published its own model of how AI could wreck the job market — while making the economy 32% richer.
@@ -18,7 +69,7 @@ Anthropic just published its own model of how AI could wreck the job market — 
 
 the company selling you the product just told you what it costs.
 
-### Post 2 [score 8/10, pattern: money-broad + big-tech-drama] [X CTA]
+### Post 2 [score 8/10, pattern: money-broad + big-tech-drama] [X CTA] [status: expired]
 Source: https://www.bloomberg.com/news/articles/2026-09-10/deepseek-s-new-low-cost-model-deals-a-fresh-blow-to-openai-z-ai (Bloomberg, 2026-09-10)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Alibaba_en_logo.svg?width=1200
 DeepSeek dropped a new model this morning — by lunch, two rivals had lost 8%+ of their market value.
@@ -32,7 +83,7 @@ the cheapest model on earth just became the most expensive thing to compete with
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 6/10, pattern: leak-quiet-change + contrarian, backup] [backup]
+### Post 3 [score 6/10, pattern: leak-quiet-change + contrarian, backup] [backup] [status: expired]
 Source: https://technode.com/2026/09/09/jd-cloud-moore-threads-100000-gpu-computing-cluster/ (TechNode, 2026-09-09) + https://www.techtimes.com/articles/327151/20260910/moore-threads-claims-95-scaling-100000-gpus-no-independent-auditor-has-verified-it.htm (Tech Times, 2026-09-10)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Moore_Threads_logo.png?width=1200
 A Chinese chipmaker just claimed it can run 100,000 GPUs at 95% scaling efficiency — with zero outside verification.
