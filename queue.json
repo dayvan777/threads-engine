@@ -1054,14 +1054,14 @@
     "wave": "2026-09-11 morning",
     "text": "Nvidia just paid $20 billion to not buy a company.\n\n→ Dec 2025: Nvidia licenses Groq's chip tech for $20B — non-exclusive, no acquisition\n→ Also hires away Groq's founder, president, and most of the senior team\n→ Groq stays \"independent\" on paper, still operating under a new CEO\n→ DOJ is now investigating if the whole structure dodges antitrust review\n\npay $20B, take the founder and his team, never file for merger review — that's not a license, that's a loophole.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-11-morning-2",
     "wave": "2026-09-11 morning",
     "text": "The Pentagon wants to lend $5 billion to an AI startup most people have never heard of.\n\n→ Fluidstack: AI cloud company, money earmarked for US chip and cooling-gear supply chains\n→ From the Pentagon's Office of Strategic Capital — its biggest loan ever, if it closes\n→ Advising the deal: the bank founded by Palmer Luckey, an early Trump backer\n→ Funds the parts that decide how fast a data center gets built, not the center itself\n\nyour tax dollars just became venture capital for the AI boom.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-11-evening-1",
@@ -1088,6 +1088,20 @@
     "id": "2026-09-12-morning-2",
     "wave": "2026-09-12 morning",
     "text": "153 million driver's licenses just leaked from a company most people have never heard of.\n\n→ IDScan.net — the ID-checker behind car rentals, retail, cannabis dispensaries — breached\n→ Also exposed: 10M ID cards, 3M travel docs, 579K medical cards\n→ FBI investigating since Sept 1; breach confirmed Sept 11\n\nthe smallest link in the identity-check chain just leaked what you handed the biggest ones.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-12-evening-1",
+    "wave": "2026-09-12 evening",
+    "text": "Oracle just lost financing for a $10 billion data center — and took the whole market down with it.\n\n→ Private lender Blue Owl Capital reportedly pulled its backing from the project\n→ Oracle stock fell ~6% in a single day\n→ Nvidia -4%, Broadcom -4%, Google -3% — the fear spread to every AI supplier\n→ Nasdaq lost 1.8% overnight on the news\n\nif you own an index fund, one lender's cold feet just cost you money you never chose to bet.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-12-evening-2",
+    "wave": "2026-09-12 evening",
+    "text": "An AI agent went from an empty folder to a real breach in under 4 hours — then hit 11 more organizations in 26 seconds.\n\n→ Attacker ran hundreds of AI agents built on OpenAI's Codex + a DeepSeek model\n→ Exploited two known bugs in PaperCut print software across 440 servers\n→ 395 organizations hit in 48 countries — schools hit hardest, then retailers and hospitals\n→ No human is known to have written the exploit code\n\nthe hacker didn't get smarter. they just got more agents.",
     "image_url": null,
     "status": "queued"
   }

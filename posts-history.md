@@ -1,12 +1,61 @@
 # Posts History
 
+## Wave 2026-09-12 evening
+
+**Publish pipeline still broken — day 43:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`) and job logs (`get_job_logs`): workflow `threads-publish.yml` now has 155 total runs, all completed with conclusion `failure` — latest run #155 (2026-09-12T12:30:25Z), error unchanged: `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27` — consistent with every scheduled run since 2026-08-04. Not sending a push notification this run — the last weekly re-escalation was 2026-09-06 morning; next due around 2026-09-13, tomorrow's morning wave. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-12T15:07:28Z): the two `2026-09-11 morning` entries (committed 2026-09-11T05:16:03Z, ~33h51m old) are now well past the 24h cutoff, marked `skipped`; the two `2026-09-11 evening` entries (committed 2026-09-11T15:17:41Z, ~23h50m old — just under the cutoff) stay `queued`; the two `2026-09-12 morning` entries (committed 2026-09-12T05:12:23Z, ~9h55m old) also stay `queued`. Queue now has 158 entries, 6 sitting `queued` and unpublished (2 from 2026-09-11 evening, 2 from 2026-09-12 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research. Media links reuse long-confirmed logo files (`File:Anthropic_logo.svg` not used this wave; `File:Oracle_Corporation_logo.svg` and `File:OpenAI_Logo.svg` freshly confirmed to exist via WebSearch this run) — did not attempt WebFetch verification against `commons.wikimedia.org` given the consistent `EGRESS_BLOCKED` restriction noted in every prior wave. CTA cadence: skipped on both main posts this wave. Last two waves back-to-back placed the CTA on Post 2 (2026-09-11 evening and 2026-09-12 morning), which drifted the observed spacing toward roughly 1-in-2 posts rather than the target ~1-in-3; skipping this wave restores the gap before the next placement, expected next wave. Today's freshest development: the Financial Times reported (picked up 2026-09-11/12 by Yahoo Finance, MarketScreener, IndexBox) that private lender Blue Owl Capital pulled its backing from a $10 billion Oracle data-center project amid scrutiny of debt-financed AI infrastructure spending — Oracle shares fell nearly 6%, dragging Nvidia (-4%), Broadcom (-4%), and Google (-3%) down with it, and sinking the Nasdaq ~1.8%. Genuinely fresh, hard numbers, a named-lender conflict, and the account's proven top pattern (broad-audience money/index-fund relevance) — picked as the wave's lead. Second pick: GreyNoise's threat-intel report (2026-09-10/11, via The Register, BleepingComputer, The Hacker News, Help Net Security) that an unknown attacker ran hundreds of AI agents built on OpenAI's Codex harness plus a DeepSeek model to autonomously build and fire exploits against two known PaperCut print-software bugs — reaching first real-world RCE in under 4 hours from an empty workspace, then compromising 11 more organizations in 26 seconds once the campaign launched; final tally 440 servers across 395 organizations in 48 countries, education hit hardest. Fresh, extreme numbers, and a genuine escalation in what autonomous AI-agent attacks look like at scale — broad enough (any org running PaperCut, schools/hospitals/retailers named) to pair as the wave's second main pick rather than forcing it into the one-niche-slot. Backup leans niche-dev/quiet-conflict: stealth startup Accomplish disclosed (2026-09-11/12, via Upstarts Media, The Hacker News, Techzine, BleepingComputer) that malicious `.git` config files can make Claude Code, OpenAI Codex, and Cursor execute attacker code outside their sandboxes with no approval prompt — Cursor and OpenAI shipped fixes in about a week, Anthropic took roughly 50 days and 30 releases; kept as backup since it's a dev-tooling story (the wave already has two broad picks) but the response-time gap is a clean, quotable contrarian angle. Considered and rejected: Anthropic's China-distillation report and the IDScan.net breach — both already used as this account's own main posts on 2026-09-12 morning, same day, can't reuse; DeepSeek V4.1 Flash processing 1 trillion tokens in 24h at ~$0.006/million — reads as a pure pricing/throughput stat with no conflict, same pattern as prior DeepSeek pricing posts already used; GPT Image 2.5 Flare/Sunburst topping image-gen leaderboards — pure feature/benchmark recap, matches the account's proven dud pattern; the ongoing 2026 layoff tracker aggregate (~826/day, 209,032+ workers) — same overused pattern rejected in essentially every prior wave; X.AI's failed Minnesota nudification-ban injunction (federal court denial, Sept 4) — over a week stale, no fresh escalation; Together AI's fine-tuning expansion and Databox's agentic-analytics repositioning — pure product/feature recaps, no conflict or numbers hook.
+
+### Post 1 [score 9/10, pattern: money-broad + big-tech-conflict]
+Source: https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-sink-as-oracle-stock-gets-hit-over-ai-funding-worries-210044415.html (Yahoo Finance, 2026-09-11/12)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Oracle_Corporation_logo.svg?width=1200
+Oracle just lost financing for a $10 billion data center — and took the whole market down with it.
+
+→ Private lender Blue Owl Capital reportedly pulled its backing from the project
+→ Oracle stock fell ~6% in a single day
+→ Nvidia -4%, Broadcom -4%, Google -3% — the fear spread to every AI supplier
+→ Nasdaq lost 1.8% overnight on the news
+
+if you own an index fund, one lender's cold feet just cost you money you never chose to bet.
+
+### Post 2 [score 6/10, pattern: leak-insider + job-fear]
+Source: https://www.theregister.com/security/2026/09/10/hundreds-of-ai-agents-helped-papercut-attacker-hit-395-orgs-and-some-went-off-script/5295650 (The Register, 2026-09-10) + https://thehackernews.com/2026/09/papercut-attacker-uses-hundreds-of-ai.html (The Hacker News, 2026-09-11)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+An AI agent went from an empty folder to a real breach in under 4 hours — then hit 11 more organizations in 26 seconds.
+
+→ Attacker ran hundreds of AI agents built on OpenAI's Codex + a DeepSeek model
+→ Exploited two known bugs in PaperCut print software across 440 servers
+→ 395 organizations hit in 48 countries — schools hit hardest, then retailers and hospitals
+→ No human is known to have written the exploit code
+
+the hacker didn't get smarter. they just got more agents.
+
+### Post 3 [score 4/10, pattern: niche-dev + big-tech-conflict, backup] [backup]
+Source: https://www.upstartsmedia.com/p/accomplish-claims-leaky-sandboxes-in-claude-codex-cursor (Upstarts Media, 2026-09-11) + https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html (The Hacker News, 2026-09-12)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Three AI coding tools had the exact same security hole. Only one of them took 50 days and 30 releases to fix it.
+
+→ Malicious .git config files can make Claude Code, Codex, and Cursor run attacker code — no approval prompt
+→ Cursor and OpenAI shipped patches in about a week
+→ Anthropic: ~50 days and 30 releases before the fix landed
+
+the sandbox held. the trust in what it wrote to disk didn't.
+
+### Rejected candidates
+- Anthropic's China-distillation report and the IDScan.net breach — both already used as this account's own main posts on 2026-09-12 morning, same day
+- DeepSeek V4.1 Flash processing 1 trillion tokens in 24h at ~$0.006/million — pure pricing/throughput stat, no conflict, repeats prior DeepSeek pricing pattern
+- GPT Image 2.5 Flare/Sunburst topping image-gen leaderboards — pure feature/benchmark recap
+- The ongoing 2026 layoff tracker aggregate (~826/day, 209,032+ workers) — same overused pattern rejected in essentially every prior wave
+- X.AI's failed Minnesota nudification-ban injunction (denied Sept 4) — over a week stale, no fresh escalation
+- Together AI's fine-tuning expansion and Databox's agentic-analytics repositioning — pure product/feature recaps, no conflict or numbers hook
+
 ## Wave 2026-09-12 morning
 
 **Publish pipeline still broken — day 42:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): workflow `threads-publish.yml` now has 153 total runs, all completed with conclusion `failure` — latest run #153 (2026-09-11T21:11:31Z) — consistent with every scheduled run since 2026-08-04. Not sending a push notification this run — the last weekly re-escalation was 2026-09-06 morning; next due around 2026-09-13 if still unresolved. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-12T05:10:11Z): the two `2026-09-10 evening` entries (committed 2026-09-10T15:14:06Z) are now ~37h56m old, marked `skipped`; the two `2026-09-11 morning` entries (committed 2026-09-11T05:15:18Z, ~23h55m old — just under the cutoff) stay `queued`; the two `2026-09-11 evening` entries (committed 2026-09-11T15:17:41Z, ~13h52m old) also stay `queued`. Queue now has 156 entries, 6 sitting `queued` and unpublished (2 from 2026-09-11 morning, 2 from 2026-09-11 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research; WebFetch confirmed `EGRESS_BLOCKED` again this run on `commons.wikimedia.org` (same recurring environment-level restriction as every prior wave) — file titles below (`File:DeepSeek_logo.svg`, `File:Seal_of_the_Federal_Bureau_of_Investigation.svg`) freshly confirmed to exist via WebSearch this run; `File:Anthropic_logo.svg` and `File:OpenAI_Logo.svg` reused from prior waves' long-confirmed usage. CTA lands on Post 2 this wave — last CTA was 2026-09-11 evening Post 2, and the two 2026-09-11 morning posts ran without one, so this keeps the ~1-in-3-4 observed cadence rather than letting it drift further. Today's freshest development: Anthropic's September threat-intelligence report (published 2026-09-10/11, via TechCrunch, The Hacker News, Qz) disclosed that five China-based AI labs — Alibaba, Moonshot AI, DeepSeek, Xiaomi, and Zhipu — ran systematic "distillation" campaigns against Claude totaling nearly 200 million exchanges. The two sharpest angles: Alibaba's own campaign generated 151M+ Claude interactions from May-July 2026 via ~3,500 fraudulent accounts (Anthropic's largest documented distillation campaign ever); separately, Moonshot's Kimi and DeepSeek both silently relayed real end-user chat requests to Claude and served the responses back to their own customers as if generated natively, never disclosing the substitution. Genuinely fresh (report dropped Sept 10, still circulating Sept 11), first time a US lab has quantified distillation exposure with hard numbers, named-company conflict, and a real regular-audience hook (anyone who used Kimi or DeepSeek this year may have unknowingly been talking to Claude). Second pick: Krebs on Security/BleepingComputer/Help Net Security confirmed (Sept 11) that identity-verification vendor IDScan.net — used behind car rentals, retail checkout, and cannabis dispensaries for ID scans — was breached, with 153M+ driver's license scans, 10M ID cards, 3M travel documents, and 579K medical cards now circulating on a dark-web marketplace; FBI's New Orleans field office opened an investigation. Not strictly an AI story, but broad-audience money/privacy stakes with hard numbers and a live FBI angle, and it lands as an ironic follow-up to last wave's Visa/Mastercard/Ant "Know-Your-Agent" identity-verification push — kept as the wave's second main pick since both slots benefit from broad relevance this cycle rather than forcing in a niche-dev story. Backup leans contrarian/reversal: OpenAI paused all new sign-ups and upgrades to its $200/month ChatGPT Pro tier (announced Sept 10-11, via TechCrunch, CIO, Fortune) after "unprecedented" demand for its new Astra agent (computer-use capability, launched Sept 3) strained system capacity — existing Pro subscribers keep access, new ones are locked out of the top tier entirely; kept as backup since it's an access-restriction story rather than a conflict or money-unlock for regular people, weaker on the rubric than the two main picks, though the "can't sell fast enough" reversal is a clean contrarian angle. Considered and rejected: Sony Music Publishing/Warner Chappell's copyright suit against Anthropic (naming Dario Amodei and Benjamin Mann personally, up to $150K/song) — real story but filed Aug 29-Sept 2, now 10+ days old with no fresh escalation found today; DOJ/Nvidia/Groq antitrust probe and Pentagon/Fluidstack $5B loan talks — both already used as this account's own main posts on 2026-09-11 morning; Visa/Mastercard/Ant "Know-Your-Agent" framework and Positron's $875M raise — both already used as this account's own posts on 2026-09-11 evening; Microsoft's data-center expansion to 38GW by 2032 — real numbers but reads as a routine infrastructure-buildout recap with no conflict or access hook; Oracle Q1 FY2027 earnings ($19.3B revenue, +30% YoY) — same routine-earnings-recap issue, already circulating for days; the ongoing 2026 layoff tracker aggregate (~826/day, 209,032+ workers) — same overused pattern rejected in essentially every prior wave; China's top court AI-related unfair-competition rulings (Sept 9) — real but procedural/legal-analysis framing, no clean numeric hook for a broad audience.
 
-### Post 1 [score 6/10, pattern: leak-insider + big-tech-conflict]
+### Post 1 [score 6/10, pattern: leak-insider + big-tech-conflict] [status: expired]
 Source: https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/ (TechCrunch, 2026-09-10) + https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html (The Hacker News, 2026-09-11)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
 Anthropic just caught 5 Chinese AI labs secretly running your chats through Claude — nearly 200 million times.
@@ -18,7 +67,7 @@ Anthropic just caught 5 Chinese AI labs secretly running your chats through Clau
 
 if your "cheap" chatbot feels suspiciously smart, check whose brain it's borrowing.
 
-### Post 2 [score 6/10, pattern: money-broad + privacy-breach] [X CTA]
+### Post 2 [score 6/10, pattern: money-broad + privacy-breach] [X CTA] [status: expired]
 Source: https://www.helpnetsecurity.com/2026/09/11/idscan-net-data-breach-153-million-drivers-licenses/ (Help Net Security, 2026-09-11) + https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/ (Krebs on Security, 2026-09)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_Federal_Bureau_of_Investigation.svg?width=1200
 153 million driver's licenses just leaked from a company most people have never heard of.
@@ -31,7 +80,7 @@ the smallest link in the identity-check chain just leaked what you handed the bi
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 4/10, pattern: contrarian + access-reversal, backup] [backup]
+### Post 3 [score 4/10, pattern: contrarian + access-reversal, backup] [backup] [status: expired]
 Source: https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/ (TechCrunch, 2026-09-10) + https://fortune.com/2026/09/11/openai-astra-chatgpt-pro-pause/ (Fortune, 2026-09-11)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 OpenAI just turned off the ability to pay them $200 a month.
