@@ -1068,14 +1068,14 @@
     "wave": "2026-09-11 evening",
     "text": "Visa and Mastercard just did something they never do: team up.\n\n→ With Ant International, they're merging 3 rival AI-agent verification systems into one\n→ Why: AI agents are projected to handle $3-5 trillion of consumer spending by 2030\n→ Goal: your AI agent can prove it's really shopping for you, on any card network\n→ No pilot, no timeline yet — just rivals agreeing the threat is bigger than each other\n\nyour card company already assumes your next purchase won't be made by you.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-11-evening-2",
     "wave": "2026-09-11 evening",
     "text": "A chip startup just told Nvidia to watch its back — with numbers attached.\n\n→ Positron raised $875M at a $5B valuation — 5x what it was worth 7 months ago\n→ Claim: its unreleased chip beats Nvidia's Blackwell 26x on tokens per dollar\n→ Backed by Netscape co-founder Jim Clark; the chip hasn't even taped out yet\n→ Real silicon ships late 2027 — a bet on a claim, not a shipped product\n\nin the AI chip race, you can raise a fortune before you've built a thing.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-12-morning-1",
@@ -1102,6 +1102,20 @@
     "id": "2026-09-12-evening-2",
     "wave": "2026-09-12 evening",
     "text": "An AI agent went from an empty folder to a real breach in under 4 hours — then hit 11 more organizations in 26 seconds.\n\n→ Attacker ran hundreds of AI agents built on OpenAI's Codex + a DeepSeek model\n→ Exploited two known bugs in PaperCut print software across 440 servers\n→ 395 organizations hit in 48 countries — schools hit hardest, then retailers and hospitals\n→ No human is known to have written the exploit code\n\nthe hacker didn't get smarter. they just got more agents.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-13-morning-1",
+    "wave": "2026-09-13 morning",
+    "text": "Anthropic's CEO just told the entire AI industry to slow down — days after two of his own safety researchers quit.\n\n→ Dario Amodei's essay: \"we must slow the pace at which we improve AI models\"\n→ Days before: safety researcher Jacob Coxon resigned, warning AI \"could kill us all by the end of the decade\"\n→ AI safety lead Mrinank Sharma resigned the same week\n→ OpenAI's Altman agreed publicly within hours\n\nwhen the people who built it are running for the exit, that's not a PR stunt.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-13-morning-2",
+    "wave": "2026-09-13 morning",
+    "text": "OpenAI just canceled what would've been the biggest IPO in history — on purpose.\n\n→ Altman: an IPO now would be \"ill-advised\" — \"not 2026\"\n→ Pushes a rumored $1 trillion+ debut to 2027 at the earliest\n→ Reason given: AI safety pacing, not the market\n→ Hours after Anthropic's CEO published his own \"slow down\" essay — Altman agreed publicly\n\nwhen a company turns down free money because its own product scares it, believe it.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }

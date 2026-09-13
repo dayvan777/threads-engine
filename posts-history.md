@@ -1,12 +1,64 @@
 # Posts History
 
+## Wave 2026-09-13 morning
+
+**Publish pipeline still broken — day 44:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`) and job logs (`get_job_logs`): workflow `threads-publish.yml` now has 157 total runs, all completed with conclusion `failure` — latest run #157 (2026-09-12T20:51:14Z), error unchanged: `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27` — consistent with every scheduled run since 2026-08-04. Re-escalating via push notification this run — the last weekly re-escalation was 2026-09-06 morning, next was due around today per that note, and the token has now been unset for 44 straight days across 157 failed runs with zero posts ever actually published to Threads despite two waves a day of fresh content queued. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-13T05:06:07Z): the two `2026-09-11 evening` entries (committed 2026-09-11T15:17:41Z, ~37h48m old) are now well past the 24h cutoff, marked `skipped`; the two `2026-09-12 morning` entries (committed 2026-09-12T05:12:23Z, ~23h54m old — just under the cutoff) stay `queued`; the two `2026-09-12 evening` entries (committed 2026-09-12T15:13:59Z, ~13h52m old) also stay `queued`. Queue now has 160 entries, 6 sitting `queued` and unpublished (2 from 2026-09-12 morning, 2 from 2026-09-12 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; WebFetch confirmed `EGRESS_BLOCKED` again this run on `commons.wikimedia.org` (same recurring environment-level restriction as every prior wave) — file titles below (`File:Google_Cloud_logo.svg`) freshly confirmed to exist via WebSearch this run; `File:Anthropic_logo.svg` and `File:OpenAI_Logo.svg` reused from prior waves' long-confirmed usage. CTA lands on Post 2 this wave — last CTA was 2026-09-12 morning Post 2, and the two 2026-09-12 evening posts ran without one, so this keeps the ~1-in-3-4 observed cadence rather than letting the gap widen further. Today's freshest development, by far the biggest AI story of the last 12 hours: Anthropic CEO Dario Amodei published a ~3,800-word essay (2026-09-12, wide same-day pickup via CNN, Axios, Deadline, The Globe and Mail) calling on the entire industry to "slow the pace at which we improve the capabilities of AI models" — coming just days after Anthropic researcher Jacob Coxon resigned warning AI "could kill us all by the end of the decade," and AI safety lead Mrinank Sharma resigned the same week, with Anthropic unilaterally committing to give third-party evaluators permanent, employee-level system access. Genuinely fresh, a hard break from the industry's usual "everything's fine" messaging, named-person conflict (a CEO vs. his own departing safety staff), and this account's proven leak-insider/candor pattern — picked as the wave's lead. Second pick, directly downstream of the same essay within hours: OpenAI CEO Sam Altman told Fortune (published 2026-09-12/13) that an OpenAI IPO now would be "ill-advised" and confirmed "I would say not 2026" — killing, by the company's own choice, what would have been the most anticipated IPO in history at a rumored $1 trillion+ valuation, and pushing it to 2027 at the earliest; Altman said on X he agreed with Amodei's essay and that "pacing the frontier" has become a primary internal topic at OpenAI. Distinct hook and distinct numbers from Post 1 (a business/market reversal rather than an internal-dissent story), and this account has not previously covered OpenAI's own IPO specifically being ruled out — kept as a separate main pick given how large and fast-moving this story is rather than forcing it into a single post. Note: this account's own 2026-09-06/07-era posts already covered Anthropic's IPO timeline slipping to mid-October marketing before the midterms — that specific fact was deliberately left out of Post 2 here to avoid re-treading old ground; only the new-today OpenAI-cancels-its-own-2026-debut fact is used. Backup leans niche-dev/quiet-vulnerability: Google's Agent Development Kit for Python was disclosed (Sept 9, still actively circulating in security trackers) to carry CVE-2026-79696, a maximum-severity CVSS 10.0 unauthenticated remote code execution bug via a crafted test-session replay, exploitable on any ADK v2.0-2.6 deployment (Cloud Run, GKE, or plain Python) with pytest installed — kept as backup since it's slightly outside the strict 24h window and narrower dev-tooling audience, but the perfect severity score and total-takeover impact make it a clean, quotable "the test suite was the backdoor" angle. Considered and rejected: the PaperCut/Codex-agent mass-breach story and the Accomplish leaky-sandbox disclosure — both already run as this account's own posts on 2026-09-12 evening; Anthropic's China-distillation report and the IDScan.net breach — both already used on 2026-09-12 morning; Nvidia's $12.93B Hugging Face acquisition — announced Sept 3, over a week stale with no fresh escalation found today; Meta's $18B multistate child-safety settlement — reached Aug 26, over two weeks stale; Goldman Sachs' "16,000 jobs/month" AI displacement figure — traces to an April 2026 report still recirculating, not a fresh number; the ongoing 2026 layoff tracker aggregate (~820/day, 209,032+ workers) — same overused pattern rejected in essentially every prior wave.
+
+### Post 1 [score 7/10, pattern: leak-insider + big-tech-conflict]
+Source: https://www.cnn.com/2026/09/12/tech/anthropic-ceo-essay-ai (CNN, 2026-09-12) + https://www.axios.com/2026/09/12/anthropic-ai-amodei-pacing (Axios, 2026-09-12)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Anthropic's CEO just told the entire AI industry to slow down — days after two of his own safety researchers quit.
+
+→ Dario Amodei's essay: "we must slow the pace at which we improve AI models"
+→ Days before: safety researcher Jacob Coxon resigned, warning AI "could kill us all by the end of the decade"
+→ AI safety lead Mrinank Sharma resigned the same week
+→ OpenAI's Altman agreed publicly within hours
+
+when the people who built it are running for the exit, that's not a PR stunt.
+
+### Post 2 [score 7/10, pattern: money-broad + big-tech-conflict] [X CTA]
+Source: https://www.cnbc.com/2026/09/12/anthropics-amodei-proposes-plan-to-slow-the-pace-of-advancing-ai-capabilities.html (CNBC, 2026-09-12) + https://www.benzinga.com/markets/tech/26/09/61754670/openai-ipo-delay-safety-alignment-ai (Benzinga, 2026-09-12)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+OpenAI just canceled what would've been the biggest IPO in history — on purpose.
+
+→ Altman: an IPO now would be "ill-advised" — "not 2026"
+→ Pushes a rumored $1 trillion+ debut to 2027 at the earliest
+→ Reason given: AI safety pacing, not the market
+→ Hours after Anthropic's CEO published his own "slow down" essay — Altman agreed publicly
+
+when a company turns down free money because its own product scares it, believe it.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 5/10, pattern: niche-dev + quiet-vulnerability, backup] [backup]
+Source: https://radar.offseq.com/threat/cve-2026-79696-cwe-184-incomplete-list-of-disallowed-inputs-in-google-cloud-agent-development-kit-adk-3b96714136b44311 (OffSeq Threat Radar, disclosed 2026-09-09) + https://app.opencve.io/cve/CVE-2026-79696 (OpenCVE)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_Cloud_logo.svg?width=1200
+Google's Agent Development Kit for Python just got a CVSS 10.0 — the maximum possible severity score.
+
+→ CVE-2026-79696: unauthenticated attacker runs arbitrary code via a crafted test replay
+→ Hits every ADK deployment (v2.0-2.6) on Cloud Run, GKE, or plain Python — if pytest is installed
+→ Full takeover of whatever the agent was allowed to touch
+→ Fix: rip pytest out of production, or upgrade now
+
+the framework was built to run agents safely. the test suite was the backdoor.
+
+### Rejected candidates
+- PaperCut/Codex-agent mass-breach story and the Accomplish leaky-sandbox disclosure — both already run as this account's own posts on 2026-09-12 evening
+- Anthropic's China-distillation report and the IDScan.net breach — both already used on 2026-09-12 morning
+- Nvidia's $12.93B Hugging Face acquisition — announced Sept 3, over a week stale with no fresh escalation found today
+- Meta's $18B multistate child-safety settlement — reached Aug 26, over two weeks stale
+- Goldman Sachs' "16,000 jobs/month" AI displacement figure — traces to an April 2026 report still recirculating, not a fresh number
+- The ongoing 2026 layoff tracker aggregate (~820/day, 209,032+ workers) — same overused pattern rejected in essentially every prior wave
+
 ## Wave 2026-09-12 evening
 
 **Publish pipeline still broken — day 43:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`) and job logs (`get_job_logs`): workflow `threads-publish.yml` now has 155 total runs, all completed with conclusion `failure` — latest run #155 (2026-09-12T12:30:25Z), error unchanged: `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27` — consistent with every scheduled run since 2026-08-04. Not sending a push notification this run — the last weekly re-escalation was 2026-09-06 morning; next due around 2026-09-13, tomorrow's morning wave. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-12T15:07:28Z): the two `2026-09-11 morning` entries (committed 2026-09-11T05:16:03Z, ~33h51m old) are now well past the 24h cutoff, marked `skipped`; the two `2026-09-11 evening` entries (committed 2026-09-11T15:17:41Z, ~23h50m old — just under the cutoff) stay `queued`; the two `2026-09-12 morning` entries (committed 2026-09-12T05:12:23Z, ~9h55m old) also stay `queued`. Queue now has 158 entries, 6 sitting `queued` and unpublished (2 from 2026-09-11 evening, 2 from 2026-09-12 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research. Media links reuse long-confirmed logo files (`File:Anthropic_logo.svg` not used this wave; `File:Oracle_Corporation_logo.svg` and `File:OpenAI_Logo.svg` freshly confirmed to exist via WebSearch this run) — did not attempt WebFetch verification against `commons.wikimedia.org` given the consistent `EGRESS_BLOCKED` restriction noted in every prior wave. CTA cadence: skipped on both main posts this wave. Last two waves back-to-back placed the CTA on Post 2 (2026-09-11 evening and 2026-09-12 morning), which drifted the observed spacing toward roughly 1-in-2 posts rather than the target ~1-in-3; skipping this wave restores the gap before the next placement, expected next wave. Today's freshest development: the Financial Times reported (picked up 2026-09-11/12 by Yahoo Finance, MarketScreener, IndexBox) that private lender Blue Owl Capital pulled its backing from a $10 billion Oracle data-center project amid scrutiny of debt-financed AI infrastructure spending — Oracle shares fell nearly 6%, dragging Nvidia (-4%), Broadcom (-4%), and Google (-3%) down with it, and sinking the Nasdaq ~1.8%. Genuinely fresh, hard numbers, a named-lender conflict, and the account's proven top pattern (broad-audience money/index-fund relevance) — picked as the wave's lead. Second pick: GreyNoise's threat-intel report (2026-09-10/11, via The Register, BleepingComputer, The Hacker News, Help Net Security) that an unknown attacker ran hundreds of AI agents built on OpenAI's Codex harness plus a DeepSeek model to autonomously build and fire exploits against two known PaperCut print-software bugs — reaching first real-world RCE in under 4 hours from an empty workspace, then compromising 11 more organizations in 26 seconds once the campaign launched; final tally 440 servers across 395 organizations in 48 countries, education hit hardest. Fresh, extreme numbers, and a genuine escalation in what autonomous AI-agent attacks look like at scale — broad enough (any org running PaperCut, schools/hospitals/retailers named) to pair as the wave's second main pick rather than forcing it into the one-niche-slot. Backup leans niche-dev/quiet-conflict: stealth startup Accomplish disclosed (2026-09-11/12, via Upstarts Media, The Hacker News, Techzine, BleepingComputer) that malicious `.git` config files can make Claude Code, OpenAI Codex, and Cursor execute attacker code outside their sandboxes with no approval prompt — Cursor and OpenAI shipped fixes in about a week, Anthropic took roughly 50 days and 30 releases; kept as backup since it's a dev-tooling story (the wave already has two broad picks) but the response-time gap is a clean, quotable contrarian angle. Considered and rejected: Anthropic's China-distillation report and the IDScan.net breach — both already used as this account's own main posts on 2026-09-12 morning, same day, can't reuse; DeepSeek V4.1 Flash processing 1 trillion tokens in 24h at ~$0.006/million — reads as a pure pricing/throughput stat with no conflict, same pattern as prior DeepSeek pricing posts already used; GPT Image 2.5 Flare/Sunburst topping image-gen leaderboards — pure feature/benchmark recap, matches the account's proven dud pattern; the ongoing 2026 layoff tracker aggregate (~826/day, 209,032+ workers) — same overused pattern rejected in essentially every prior wave; X.AI's failed Minnesota nudification-ban injunction (federal court denial, Sept 4) — over a week stale, no fresh escalation; Together AI's fine-tuning expansion and Databox's agentic-analytics repositioning — pure product/feature recaps, no conflict or numbers hook.
 
-### Post 1 [score 9/10, pattern: money-broad + big-tech-conflict]
+### Post 1 [score 9/10, pattern: money-broad + big-tech-conflict] [status: expired]
 Source: https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-sink-as-oracle-stock-gets-hit-over-ai-funding-worries-210044415.html (Yahoo Finance, 2026-09-11/12)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Oracle_Corporation_logo.svg?width=1200
 Oracle just lost financing for a $10 billion data center — and took the whole market down with it.
@@ -18,7 +70,7 @@ Oracle just lost financing for a $10 billion data center — and took the whole 
 
 if you own an index fund, one lender's cold feet just cost you money you never chose to bet.
 
-### Post 2 [score 6/10, pattern: leak-insider + job-fear]
+### Post 2 [score 6/10, pattern: leak-insider + job-fear] [status: expired]
 Source: https://www.theregister.com/security/2026/09/10/hundreds-of-ai-agents-helped-papercut-attacker-hit-395-orgs-and-some-went-off-script/5295650 (The Register, 2026-09-10) + https://thehackernews.com/2026/09/papercut-attacker-uses-hundreds-of-ai.html (The Hacker News, 2026-09-11)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 An AI agent went from an empty folder to a real breach in under 4 hours — then hit 11 more organizations in 26 seconds.
@@ -30,7 +82,7 @@ An AI agent went from an empty folder to a real breach in under 4 hours — then
 
 the hacker didn't get smarter. they just got more agents.
 
-### Post 3 [score 4/10, pattern: niche-dev + big-tech-conflict, backup] [backup]
+### Post 3 [score 4/10, pattern: niche-dev + big-tech-conflict, backup] [backup] [status: expired]
 Source: https://www.upstartsmedia.com/p/accomplish-claims-leaky-sandboxes-in-claude-codex-cursor (Upstarts Media, 2026-09-11) + https://thehackernews.com/2026/09/malicious-git-configs-can-make-claude.html (The Hacker News, 2026-09-12)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Three AI coding tools had the exact same security hole. Only one of them took 50 days and 30 releases to fix it.
