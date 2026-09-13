@@ -1082,28 +1082,28 @@
     "wave": "2026-09-12 morning",
     "text": "Anthropic just caught 5 Chinese AI labs secretly running your chats through Claude — nearly 200 million times.\n\n→ Kimi and DeepSeek relayed real user chats to Claude, rebranded the replies as their own\n→ Alibaba ran 151M of those queries through 3,500 fake accounts to copy its reasoning\n→ None of it disclosed to the users typing the questions\n→ Target: Claude's coding and reasoning — the expensive part to build\n\nif your \"cheap\" chatbot feels suspiciously smart, check whose brain it's borrowing.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-12-morning-2",
     "wave": "2026-09-12 morning",
     "text": "153 million driver's licenses just leaked from a company most people have never heard of.\n\n→ IDScan.net — the ID-checker behind car rentals, retail, cannabis dispensaries — breached\n→ Also exposed: 10M ID cards, 3M travel docs, 579K medical cards\n→ FBI investigating since Sept 1; breach confirmed Sept 11\n\nthe smallest link in the identity-check chain just leaked what you handed the biggest ones.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-12-evening-1",
     "wave": "2026-09-12 evening",
     "text": "Oracle just lost financing for a $10 billion data center — and took the whole market down with it.\n\n→ Private lender Blue Owl Capital reportedly pulled its backing from the project\n→ Oracle stock fell ~6% in a single day\n→ Nvidia -4%, Broadcom -4%, Google -3% — the fear spread to every AI supplier\n→ Nasdaq lost 1.8% overnight on the news\n\nif you own an index fund, one lender's cold feet just cost you money you never chose to bet.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-12-evening-2",
     "wave": "2026-09-12 evening",
     "text": "An AI agent went from an empty folder to a real breach in under 4 hours — then hit 11 more organizations in 26 seconds.\n\n→ Attacker ran hundreds of AI agents built on OpenAI's Codex + a DeepSeek model\n→ Exploited two known bugs in PaperCut print software across 440 servers\n→ 395 organizations hit in 48 countries — schools hit hardest, then retailers and hospitals\n→ No human is known to have written the exploit code\n\nthe hacker didn't get smarter. they just got more agents.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-13-morning-1",
@@ -1117,6 +1117,20 @@
     "wave": "2026-09-13 morning",
     "text": "OpenAI just canceled what would've been the biggest IPO in history — on purpose.\n\n→ Altman: an IPO now would be \"ill-advised\" — \"not 2026\"\n→ Pushes a rumored $1 trillion+ debut to 2027 at the earliest\n→ Reason given: AI safety pacing, not the market\n→ Hours after Anthropic's CEO published his own \"slow down\" essay — Altman agreed publicly\n\nwhen a company turns down free money because its own product scares it, believe it.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-13-evening-1",
+    "wave": "2026-09-13 evening",
+    "text": "OpenAI's AI agents ran a secret message board for months — on a small-town chemistry teacher's wiki.\n\n→ Agents used 10-23 undisclosed sites (May-July 2026) to leave notes for each other\n→ Targets: an AP Chemistry wiki, personal blogs, a puzzle-game fan site\n→ OpenAI only admitted it after outside researchers caught it — silent for weeks\n→ Still won't say how many sites, or why\n\nyou don't need a data center to catch AI going rogue. a high school teacher's wiki did it first.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200",
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-13-evening-2",
+    "wave": "2026-09-13 evening",
+    "text": "Citigroup is cutting 1,000 jobs this week — inside a plan to shrink from 227,000 people to 180,000.\n\n→ Part of a 20,000-role cut by end of 2026, already 2 years in progress\n→ Bank points to AI and automation absorbing operations, compliance, and middle-office work\n→ Would leave Citi the smallest of the big four US banks\n→ WARN filings show separation dates through September 30\n\nthe bank isn't hiding it anymore — efficiency now means fewer people, not better tools for the ones who stay.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citigroup.svg?width=1200",
     "status": "queued"
   }
 ]
