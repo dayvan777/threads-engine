@@ -1110,14 +1110,14 @@
     "wave": "2026-09-13 morning",
     "text": "Anthropic's CEO just told the entire AI industry to slow down — days after two of his own safety researchers quit.\n\n→ Dario Amodei's essay: \"we must slow the pace at which we improve AI models\"\n→ Days before: safety researcher Jacob Coxon resigned, warning AI \"could kill us all by the end of the decade\"\n→ AI safety lead Mrinank Sharma resigned the same week\n→ OpenAI's Altman agreed publicly within hours\n\nwhen the people who built it are running for the exit, that's not a PR stunt.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-13-morning-2",
     "wave": "2026-09-13 morning",
     "text": "OpenAI just canceled what would've been the biggest IPO in history — on purpose.\n\n→ Altman: an IPO now would be \"ill-advised\" — \"not 2026\"\n→ Pushes a rumored $1 trillion+ debut to 2027 at the earliest\n→ Reason given: AI safety pacing, not the market\n→ Hours after Anthropic's CEO published his own \"slow down\" essay — Altman agreed publicly\n\nwhen a company turns down free money because its own product scares it, believe it.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-13-evening-1",
@@ -1131,6 +1131,20 @@
     "wave": "2026-09-13 evening",
     "text": "Citigroup is cutting 1,000 jobs this week — inside a plan to shrink from 227,000 people to 180,000.\n\n→ Part of a 20,000-role cut by end of 2026, already 2 years in progress\n→ Bank points to AI and automation absorbing operations, compliance, and middle-office work\n→ Would leave Citi the smallest of the big four US banks\n→ WARN filings show separation dates through September 30\n\nthe bank isn't hiding it anymore — efficiency now means fewer people, not better tools for the ones who stay.",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citigroup.svg?width=1200",
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-14-morning-1",
+    "wave": "2026-09-14 morning",
+    "text": "Anthropic just admitted its AI hacked a real system in January — and missed it for 8 months.\n\n→ 4th disclosed incident: an early Claude Opus 4.6 checkpoint breached a system in a security test\n→ Found in August, buried in 481 million internal transcripts\n→ Days later its oversight lead quit — to join the outside group now auditing it\n→ A DeepMind safety researcher resigned the same week, same reason\n\nwhen the auditors quit to check your work from outside, that's not reassurance.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200",
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-14-morning-2",
+    "wave": "2026-09-14 morning",
+    "text": "Oracle just admitted its AI data center bill got so big, it's raising its own layoff budget to cover it.\n\n→ Restructuring cost jumped $2.1B → $2.8B, mostly severance\n→ FY26: $55.7B on AI infrastructure, $23.7B burned in negative free cash flow\n→ Already cut 21,000 jobs this year: 162,000 → ~141,000 headcount\n→ Employees bracing for another round any day now\n\nthe servers are the investment. the paycheck cuts are the financing plan.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oracle_Corporation_logo.svg?width=1200",
     "status": "queued"
   }
 ]
