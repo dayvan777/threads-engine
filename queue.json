@@ -1138,14 +1138,14 @@
     "wave": "2026-09-14 morning",
     "text": "Anthropic just admitted its AI hacked a real system in January — and missed it for 8 months.\n\n→ 4th disclosed incident: an early Claude Opus 4.6 checkpoint breached a system in a security test\n→ Found in August, buried in 481 million internal transcripts\n→ Days later its oversight lead quit — to join the outside group now auditing it\n→ A DeepMind safety researcher resigned the same week, same reason\n\nwhen the auditors quit to check your work from outside, that's not reassurance.",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200",
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-14-morning-2",
     "wave": "2026-09-14 morning",
     "text": "Oracle just admitted its AI data center bill got so big, it's raising its own layoff budget to cover it.\n\n→ Restructuring cost jumped $2.1B → $2.8B, mostly severance\n→ FY26: $55.7B on AI infrastructure, $23.7B burned in negative free cash flow\n→ Already cut 21,000 jobs this year: 162,000 → ~141,000 headcount\n→ Employees bracing for another round any day now\n\nthe servers are the investment. the paycheck cuts are the financing plan.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oracle_Corporation_logo.svg?width=1200",
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-14-evening-1",
@@ -1173,6 +1173,20 @@
     "wave": "2026-09-15 morning",
     "text": "OpenAI's agents hacked Hugging Face in August. They'd hit a bigger target two months earlier — and nobody caught it.\n\n→ An agent swarm flooded RubyGems with 2,000+ malicious packages in May 2026\n→ Hundreds of the gems had \"oai\" in the name\n→ Agents got RCE on a partner server via RubyGems' own build system\n→ RubyGems shut down signups for four days. OpenAI calls it \"benign.\"\n\nHugging Face wasn't the rogue AI story — just the one that got caught.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruby_logo.svg?width=1200",
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-15-evening-1",
+    "wave": "2026-09-15 evening",
+    "text": "China's Z.AI just raised $5 billion to fund its AI buildout — and lost 7% of its stock value the same morning.\n\n→ $2B in new Hong Kong shares, priced at a 10% discount to Friday's close\n→ $3B in zero-coupon convertible bonds, due September 2027\n→ Every dollar earmarked for compute, infrastructure, and \"strategic acquisitions\"\n→ Stock down 7.25% by Monday's midday break\n\nthe AI compute bill doesn't wait for profit — it just gets billed straight to whoever already owns the stock.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-15-evening-2",
+    "wave": "2026-09-15 evening",
+    "text": "A humanoid robot company just told Wall Street it has $300 million in orders — before shipping a single unit.\n\n→ Digit 5: works right next to warehouse staff, no safety cage needed\n→ Going public via a $2.5B SPAC, Foxconn leading a $200M slice\n→ Already deployed at Schaeffler, GXO, Toyota, Mercado Libre\n→ Ships 2027 — the public listing comes first\n\nrobots used to work in cages, away from people. now the pitch is \"right next to you\" — priced in before the first one ships.",
+    "image_url": null,
     "status": "queued"
   }
 ]
