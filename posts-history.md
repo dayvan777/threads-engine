@@ -1,12 +1,64 @@
 # Posts History
 
+## Wave 2026-09-16 evening
+
+**Publish pipeline still broken — day 50:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): workflow `threads-publish.yml` now has 171 total runs, all completed with conclusion `failure` — latest run #171 (2026-09-16T13:52:08Z, head commit "wave: 2026-09-16 morning"), same root cause as every scheduled run since 2026-08-04. Not sending a push notification this run — the last re-escalation was 2026-09-13 morning (day 44), with next re-escalation due around 2026-09-20; still on cadence, nothing new to report. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-16T15:11:25Z): the two `2026-09-15 morning` entries (committed 2026-09-15T05:14:50Z, ~33h57m old) are now well past the 24h cutoff, marked `skipped`; the two `2026-09-15 evening` entries (committed 2026-09-15T15:15:23Z, ~23h56m old — just under the cutoff) stay `queued`; the two `2026-09-16 morning` entries (committed 2026-09-16T05:13:46Z, ~9h58m old) also stay `queued`. Queue now has 174 entries, 6 sitting `queued` and unpublished (2 from 2026-09-15 evening, 2 from 2026-09-16 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch worked normally for all research; did not attempt WebFetch verification against `commons.wikimedia.org` or news sources given the consistent `EGRESS_BLOCKED` restriction noted in every prior wave (confirmed again this run against fortune.com) — `File:OpenAI_Logo.svg` and `File:Anthropic_logo.svg` both reused from prior waves' long-confirmed usage. CTA cadence: held on both main posts in the 2026-09-16 morning wave (CTA landed on that wave's Post 1), so this wave restores it on Post 2 to keep the account's observed ~1-in-3 spacing. Today's freshest development: Fortune/Benzinga/Cryptopolitan reported today (2026-09-16) that OpenAI is in early talks for a new funding round targeting a ~$1.2T valuation — up sharply from the $852B mark set by March's $122B round — landing just days after Sam Altman told Fortune he's ruling out any 2026 IPO over AI-safety concerns, and in the same stretch where Altman publicly said he agreed with Dario Amodei's "pace the frontier" slowdown call over the weekend. The irony (raise a trillion-plus privately while publicly preaching caution and staying off public markets) is a fresh angle on a story cluster this account has covered before from the safety-essay and market-fallout side, but never from the "here's what OpENAI actually did about it three days later" side — picked as the wave's lead, broad money/stakes angle. Second pick: Android Authority, TestingCatalog and Cryptobriefing reported (2026-09-14, still fresh) that Anthropic has unreleased iOS code for a "Claude Money" feature — a native "Money" tab that links a user's bank account directly into the Claude app for standing access to balances, spending patterns, and recurring charges, discovered via app-testing/teardown rather than any company announcement. Clean leak-insider hook never used by this account, with a mild privacy-conflict undertone (the coding assistant now wants your bank login) that keeps it out of pure feature-recap territory — picked as second main pick. Backup: TheNextWeb/TechI/Cryptobriefing reported (2026-09-15/16) that Nvidia-backed Firmus Technologies is seeking up to ~$5B (A$7B) in an ASX IPO at a $10.5B valuation, targeted for end of October, on top of a $10B Blackstone debt facility already secured — with OpenAI itself named as an anchor investor in what's being called Australia's biggest float since Telstra. Genuinely fresh numbers and a notable named-actor angle (OpenAI backing AI infrastructure in a market most of this account's audience has never traded on), but narrower/investor-facing relevance than the two broad main picks — kept as backup. Considered and rejected: Microsoft AI's draft "Humanist Superintelligence" Code of Conduct (published 2026-09-14, 38 pages, six-week public comment period) — a genuinely new policy document but reads too close to the account's proven feature/policy-recap dud pattern, no named conflict or numbers hook strong enough to carry a main slot. Shanghai AI Lab's Atria Dawn Preview (744B-param model beating GPT-5.6 Sol on BrowseComp) — same pure feature-recap dud already rejected in the prior wave. Z.AI's ~$5B raise "settling" today (2026-09-16) — same underlying raise already run as this account's own main post on 2026-09-15 evening, today's settlement date isn't a new development. ByteDance's $29.6B syndicated loan — real but a dry corporate-finance number with no regular-person hook or conflict, reads like a funding recap. The 2026 layoff tracker aggregate (~820/day, 210,741+ workers) — same overused pattern rejected in essentially every prior wave. Claude for Financial Advisors (BlackRock/Schwab integration) — a distinct, officially-announced B2B product from the unannounced consumer "Claude Money" leak; keeping the two separate, and the B2B version is a pure enterprise-feature recap with no conflict hook.
+
+### Post 1 [score 8/10, pattern: money-broad + big-tech-conflict]
+Source: https://fortune.com/2026/09/16/openai-ipo-sam-altman-vc-funding-valuation-1-2-trillion/ (Fortune, 2026-09-16) + https://www.benzinga.com/markets/tech/26/09/61807691/openai-funding-valuation-sam-altman-rules-out-2026-ipo (Benzinga, 2026-09-16)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+Sam Altman spent the weekend agreeing AI needs to slow down. Days later his company was pricing a $1.2 trillion funding round.
+
+→ OpenAI in early talks for new funding near $1.2T — up from $852B in March
+→ Altman ruled out an OpenAI IPO in 2026, citing AI safety
+→ Same week he backed Amodei's call to "pace the frontier"
+→ Public markets locked out; private investors get first look
+
+preach caution and price a trillion-dollar round in the same week — just not to the same audience.
+
+### Post 2 [score 7/10, pattern: leak-insider + money-access] [X CTA]
+Source: https://www.androidauthority.com/claude-money-feature-3711188/ (Android Authority, 2026-09-14) + https://www.testingcatalog.com/anthropic-prepares-claude-money-for-personal-finance/ (TestingCatalog, 2026-09-14)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Anthropic just built a way for Claude to read your bank balance in real time — unannounced.
+
+→ Spotted in unreleased iOS code: a new "Money" tab in the Claude app
+→ Links your bank account directly, no more CSVs or screenshots
+→ Standing access to track spending, flag charges, spot trends
+→ No announcement, no launch date — this is a leak, not a rollout
+
+the AI that reads your codebase is quietly building a login to your bank account too.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: money-access + big-tech-conflict, backup] [backup]
+Source: https://thenextweb.com/news/firmus-asx-float-5bn-valuation-10-5bn (TheNextWeb, 2026-09-15) + https://www.techi.com/firmus-ipo-asx-7-billion-openai-anchor-nvidia/ (Techi, 2026-09-16)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
+An OpenAI-backed data center company just filed for a $5 billion IPO most people have never heard of.
+
+→ Firmus: Nvidia-backed, building AI "factories" across Australia on renewable power
+→ Targeting the ASX at a $10.5B valuation, IPO expected end of October
+→ Already sitting on a $10B Blackstone debt facility to build first
+→ OpenAI itself is anchoring the float — Australia's biggest since Telstra
+
+the AI data-center land grab just got big enough to need its own stock exchange.
+
+### Rejected candidates
+- Microsoft AI's draft "Humanist Superintelligence" Code of Conduct (2026-09-14, 38 pages) — genuinely new but reads as a policy/feature recap, no named conflict or numbers hook strong enough for a main slot
+- Shanghai AI Lab's Atria Dawn Preview (744B-param model) — pure feature recap, already rejected in the prior wave
+- Z.AI's ~$5B raise "settling" today — same raise already run as this account's main post on 2026-09-15 evening
+- ByteDance's $29.6B syndicated loan — dry corporate-finance number, no regular-person hook or conflict
+- The ongoing 2026 layoff tracker aggregate (~820/day, 210,741+ workers) — same overused pattern rejected in essentially every prior wave
+- Claude for Financial Advisors (BlackRock/Schwab) — distinct officially-announced B2B product, pure enterprise-feature recap with no conflict hook
+
 ## Wave 2026-09-16 morning
 
 **Publish pipeline still broken — day 50:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`) and job logs (`get_job_logs`): workflow `threads-publish.yml` now has 169 total runs, all completed with conclusion `failure` — latest run #169 (2026-09-15T21:40:42Z), error unchanged: `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27` — consistent with every scheduled run since 2026-08-04. Not sending a push notification this run — the last re-escalation was 2026-09-13 morning (day 44), with next re-escalation due around 2026-09-20; nothing has changed since. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-16T05:11:35Z): the two `2026-09-14 evening` entries (committed 2026-09-14T15:15:43Z, ~37h56m old) are now well past the 24h cutoff, marked `skipped`; the two `2026-09-15 morning` entries (committed 2026-09-15T05:14:50Z, ~23h57m old — just under the cutoff) stay `queued`; the two `2026-09-15 evening` entries (committed 2026-09-15T15:15:23Z, ~13h56m old) also stay `queued`. Queue now has 172 entries, 6 sitting `queued` and unpublished (2 from 2026-09-15 morning, 2 from 2026-09-15 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research; did not attempt WebFetch verification against `commons.wikimedia.org` given the consistent `EGRESS_BLOCKED` restriction noted in every prior wave — `File:Anthropic_logo.svg`, `File:Google_Cloud_logo.svg`, and `File:NVIDIA_logo.svg` all reused from prior waves' long-confirmed usage. CTA lands on Post 1 this wave — the 2026-09-15 evening wave explicitly held the CTA to restore it on "the 2026-09-16 morning wave" after skipping it two waves running, so this is the expected placement. Today's freshest development: President Trump personally attacked Anthropic CEO Dario Amodei by name on Truth Social (Monday 2026-09-14, wide same-day pickup via Axios, Variety, NBC News, CNBC, Washington Post, 24/7 Wall St.), calling him a "perfect little angel" for urging an AI slowdown, dismissing AI safety concerns as "a hoax" and a "SICK conspiracy" against AI and data centers, and declaring the only "guardrail" AI needs is "a STRONG AND SMART (High IQ!) PRESIDENT." This is a distinct escalation from this account's prior coverage of the Amodei essay itself and its market fallout ($8B SoftBank single-day loss, chip-stock selloff, both already run 2026-09-13/14/15) — the new element is a sitting president personally mocking a named AI CEO and rejecting any independent oversight, a political-conflict angle this account hasn't used, with broad regular-person relevance beyond the dev/investor audience — picked as the wave's lead, satisfying the broad-audience slot with the earlier $8B fact retained only as supporting stakes. Second pick: reporting today (2026-09-15, via Business Insider/Techmeme, Dataconomy, TechBriefly, BigGo Finance, Seoul Economic Daily) that Google quietly opened Claude Opus 5 access to engineers company-wide through its internal Antigravity platform — a reversal of Google's longstanding policy barring staff from outside coding tools like Claude Code or OpenAI's Codex — while officially maintaining that "Gemini remains our primary and foundational model for internal development." Clean leak-insider/big-tech-conflict hook (a company quietly conceding a rival's model is better for its own engineers' work while publicly promoting its own) never used by this account — picked as the second main pick. Backup leans niche-dev/contrarian: Bloomberg, EU-Startups and TechFundingNews reported (2026-09-15) that Dutch AI-chip startup Euclyd closed a $231M/€200M+ Series A led by Samsung with ex-ASML CEO Peter Wennink as chairman, betting its non-GPU inference chip (CRAFTWERK) can deliver roughly 100x the power efficiency per token of Nvidia's newest Vera Rubin chips — ships 2028, thousands of enterprise customers targeted by 2030. Genuinely fresh, named-person hook, hard numbers, a contrarian "beat Nvidia" angle never covered by this account — kept as backup given its enterprise/investor audience is narrower than the wave's two broad main picks. Considered and rejected: the Sony Music Publishing/Warner Chappell copyright suit against Anthropic and its founders personally ($150K/song) — same underlying lawsuit rejected as stale in at least four prior waves since its Aug 28 filing, no new escalation found today. The PaperCut AI-agent swarm breach (395 orgs, 440 servers) — already run as this account's own main post on 2026-09-12 evening, not fresh. Uber's 3,300-job (10%) restructuring — already run as a main post on 2026-09-03 evening and rejected as stale in multiple waves since. Anthropic's $2 trillion IPO valuation target, including today's Nvidia-anchor-investment angle (up to $10B) — same story family run across at least 10 prior waves (2026-08-16 through 2026-09-05), explicitly flagged overused with no materially new trigger; a specific investor name doesn't reset the fatigue. Sam Altman's Fortune follow-up on the OpenAI IPO timeline sliding to 2027 — direct continuation of the already-covered 2026-09-13 morning IPO-delay story, no fresh mechanism. The ongoing 2026 layoff tracker aggregate (~820/day, 210,741+ workers) — same overused pattern rejected in essentially every prior wave. Shanghai AI Laboratory's Atria Dawn Preview model release and Cornelis Networks' $205M funding round — both pure feature/funding recaps with no named conflict or personal stake, matching the account's proven dud pattern.
 
-### Post 1 [score 7/10, pattern: money-broad + big-tech-drama] [X CTA]
+### Post 1 [score 7/10, pattern: money-broad + big-tech-drama] [X CTA] [status: expired]
 Source: https://www.axios.com/2026/09/14/trump-ai-safety-anthropic-dario-amodei (Axios, 2026-09-14) + https://variety.com/2026/digital/news/trump-ai-guardrails-mocks-anthropic-ceo-development-slowdown-1236861231/ (Variety, 2026-09-14)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Dario Amodei asked the AI industry to slow down. Trump just told America the only guardrail it needs is him.
@@ -19,7 +71,7 @@ when the president decides your risk warning is fake, guess who writes the real 
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 2 [score 7/10, pattern: leak-insider + big-tech-conflict]
+### Post 2 [score 7/10, pattern: leak-insider + big-tech-conflict] [status: expired]
 Source: https://dataconomy.com/2026/09/15/google-opens-anthropic-claude-access-for-engineers/ (Dataconomy, 2026-09-15) + https://techbriefly.com/2026/09/15/google-anthropic-claude-access-coding-engineers/ (TechBriefly, 2026-09-15)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_Cloud_logo.svg?width=1200
 Google just quietly gave its own engineers access to a rival's AI it spent years keeping them away from.
@@ -31,7 +83,7 @@ Google just quietly gave its own engineers access to a rival's AI it spent years
 
 you can market one model as the future and still send your engineers to check the competition.
 
-### Post 3 [score 6/10, pattern: contrarian + big-tech-conflict, backup] [backup]
+### Post 3 [score 6/10, pattern: contrarian + big-tech-conflict, backup] [backup] [status: expired]
 Source: https://www.bloomberg.com/news/articles/2026-09-15/chip-startup-euclyd-backed-by-ex-asml-ceo-raises-more-than-200-million (Bloomberg, 2026-09-15) + https://techfundingnews.com/samsung-backs-euclyds-e200m-round-to-challenge-nvidia-in-ai-chips/ (TechFundingNews, 2026-09-15)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 A Dutch startup just raised $231 million with one pitch: beat Nvidia at its own game.
