@@ -7,5 +7,8 @@ data/*.db
 data/*.db-*
 data/artifacts/
 data/documents/
+# personal data lives only locally — never in the (public) repo
+data/*.seed.json
+data/out/
 *.log
 .DS_Store

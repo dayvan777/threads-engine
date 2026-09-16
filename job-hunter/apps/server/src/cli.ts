@@ -1,7 +1,13 @@
 /**
  * CLI for running agent steps manually:
- *   npm run agent -- cycle | scan | analyze | decide | prepare | apply | status
+ *   npm run agent -- cycle | scan | analyze | decide | prepare | apply | status | seed [dir]
+ *
+ * `seed` loads data/profile.seed.json and data/settings.seed.json (or the same
+ * files from [dir]) into the database — useful for restoring a profile without
+ * ever committing personal data to the repository.
  */
+import fs from 'node:fs';
+import path from 'node:path';
 import { analyzeStep } from './agent/analyze';
 import { applyStep } from './agent/apply/index';
 import { closeApplyBrowser } from './agent/apply/browser';
@@ -41,6 +47,29 @@ async function main(): Promise<void> {
       out('decide', decideStep(ctx));
       out('prepare', await prepareStep(ctx));
       out('apply', await applyStep(ctx));
+      break;
+    }
+    case 'seed': {
+      const dir = process.argv[3] ? path.resolve(process.argv[3]) : ctx.config.dataDir;
+      const loaded: string[] = [];
+      const profilePath = path.join(dir, 'profile.seed.json');
+      if (fs.existsSync(profilePath)) {
+        ctx.store.saveProfile(JSON.parse(fs.readFileSync(profilePath, 'utf8')));
+        loaded.push('profile');
+      }
+      const settingsPath = path.join(dir, 'settings.seed.json');
+      if (fs.existsSync(settingsPath)) {
+        ctx.store.saveSettings(JSON.parse(fs.readFileSync(settingsPath, 'utf8')));
+        loaded.push('settings');
+      }
+      if (loaded.length === 0) {
+        // eslint-disable-next-line no-console
+        console.error(`no profile.seed.json / settings.seed.json found in ${dir}`);
+        process.exitCode = 1;
+      } else {
+        ctx.activity({ actor: 'system', type: 'seed', message: `seeded ${loaded.join(' + ')} from ${dir}` });
+        out('seed', { dir, loaded });
+      }
       break;
     }
     case 'status': {
