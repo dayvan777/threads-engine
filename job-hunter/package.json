@@ -1,0 +1,29 @@
+{
+  "name": "jobhunter",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "AI Job Hunter — autonomous job-search agent with a control dashboard",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "db:migrate": "npm run migrate -w @jobhunter/db",
+    "dev": "concurrently -n server,web -c blue,magenta \"npm run dev -w @jobhunter/server\" \"npm run dev -w @jobhunter/web\"",
+    "dev:server": "npm run dev -w @jobhunter/server",
+    "dev:web": "npm run dev -w @jobhunter/web",
+    "build": "npm run typecheck && npm run build -w @jobhunter/web",
+    "typecheck": "tsc -p packages/db && tsc -p packages/core && tsc -p apps/server && tsc -p apps/web",
+    "test": "npm run test -w @jobhunter/core",
+    "start": "npm run start -w @jobhunter/server",
+    "agent": "npm run cli -w @jobhunter/server --"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

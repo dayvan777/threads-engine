@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+data/*.db
+data/*.db-*
+data/artifacts/
+data/documents/
+*.log
+.DS_Store
