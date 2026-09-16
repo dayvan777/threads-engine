@@ -1152,14 +1152,14 @@
     "wave": "2026-09-14 evening",
     "text": "Anthropic's CEO said \"slow down\" Saturday. By Monday, $8 billion had vanished from one AI investor's fortune before lunch.\n\n→ Nvidia, AMD, Intel, Qualcomm all down 2-5% premarket\n→ SoftBank -11% in Tokyo, ASML -6% in Europe, SK Hynix -6.4% in Seoul\n→ SoftBank's Masayoshi Son: -$8B in a day, dropped from 27th to 29th richest person alive\n→ Trigger: Amodei's essay urging a slowdown — Altman and Musk both backed it\n\nif you own an index fund, you just paid for three CEOs' guilty conscience.",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200",
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-14-evening-2",
     "wave": "2026-09-14 evening",
     "text": "OpenAI, Anthropic and Google have quietly met since July to write AI's own rulebook — Zuckerberg tried to kill it.\n\n→ Working groups below CEO level, meeting monthly, first reported this week\n→ Rival blueprints: Hassabis wants a \"FINRA for AI,\" Altman wants an \"IAEA for AI\"\n→ A White House executive order for the same idea stalled internally\n→ Zuckerberg personally lobbied Trump against it this summer\n\nwhen rivals start drafting their own rulebook, it's not because they trust you to write one.",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Google_DeepMind_logo.svg?width=1200",
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-15-morning-1",
@@ -1186,6 +1186,20 @@
     "id": "2026-09-15-evening-2",
     "wave": "2026-09-15 evening",
     "text": "A humanoid robot company just told Wall Street it has $300 million in orders — before shipping a single unit.\n\n→ Digit 5: works right next to warehouse staff, no safety cage needed\n→ Going public via a $2.5B SPAC, Foxconn leading a $200M slice\n→ Already deployed at Schaeffler, GXO, Toyota, Mercado Libre\n→ Ships 2027 — the public listing comes first\n\nrobots used to work in cages, away from people. now the pitch is \"right next to you\" — priced in before the first one ships.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-16-morning-1",
+    "wave": "2026-09-16 morning",
+    "text": "Dario Amodei asked the AI industry to slow down. Trump just told America the only guardrail it needs is him.\n\n→ Truth Social: Amodei is \"pretending to be a perfect little angel\"\n→ Same week, $8B vanished from one investor's fortune over the risk Trump just called \"a hoax\"\n→ His actual fix: no regulation, just \"a STRONG AND SMART President\"\n\nwhen the president decides your risk warning is fake, guess who writes the real rules.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-16-morning-2",
+    "wave": "2026-09-16 morning",
+    "text": "Google just quietly gave its own engineers access to a rival's AI it spent years keeping them away from.\n\n→ Every Google engineer now gets Claude Opus 5 access via internal tool Antigravity\n→ Staff were barred before from outside tools like Claude Code or Codex\n→ Official line: \"Gemini remains our primary and foundational model\"\n→ Unspoken part: for some coding tasks, Claude just wins\n\nyou can market one model as the future and still send your engineers to check the competition.",
     "image_url": null,
     "status": "queued"
   }
