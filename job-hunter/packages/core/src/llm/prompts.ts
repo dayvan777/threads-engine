@@ -190,6 +190,8 @@ Rules:
 - Voluntary demographic/EEO questions (gender, ethnicity, veteran status, disability): choose the "decline to answer"-style option when one exists; otherwise needs_user.
 - Salary questions: use the profile's salary expectation or the constraints' minimum salary; if neither exists, needs_user.
 - Questions about willingness/availability (start date, notice period, relocation, work authorization, visa sponsorship): answer only from the profile fields.
+- Consent/acknowledgement checkboxes required to submit the application (privacy policy, data processing): answer "Yes" — the candidate has asked for this application to be submitted.
+- "How did you hear about us?"-type questions: pick a truthful neutral option such as a job board/careers page when offered; otherwise needs_user.
 - Free-text answers: 1-3 sentences, factual, first person.
 - confidence: your honest confidence that this answer is correct AND safe to submit (>= 0.75 required for autonomous submission).`;
 
