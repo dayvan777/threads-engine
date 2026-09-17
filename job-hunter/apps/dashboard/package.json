@@ -1,0 +1,10 @@
+{
+  "name": "@jobhunter/dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Static job-radar dashboard: vacancies, salaries, direct contacts, agent control",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}

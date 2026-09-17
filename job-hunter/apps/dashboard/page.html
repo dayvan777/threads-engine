@@ -1,0 +1,569 @@
+<title>Маршрут до оффера</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#f2f1ec; --surface:#ffffff; --ink:#15161a; --muted:#6a6a63; --faint:#96968d;
+  --hair:#dcdad2; --hair-2:#c6c3b8;
+  --l1:#c0102b; --l2:#00549f; --l3:#1a7238;
+  --good:#1a7a46; --warn:#8a5a00;
+  --btn:#15161a; --btn-ink:#f4f3ef; --focus:#00549f;
+  --lc:var(--ink);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121316; --surface:#191b1f; --ink:#e9e8e3; --muted:#9d9d94; --faint:#74746c;
+    --hair:#292b30; --hair-2:#3a3d43;
+    --l1:#ef5f72; --l2:#5da3ea; --l3:#45b177;
+    --good:#57bf86; --warn:#d7a44e;
+    --btn:#e9e8e3; --btn-ink:#121316; --focus:#5da3ea;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121316; --surface:#191b1f; --ink:#e9e8e3; --muted:#9d9d94; --faint:#74746c;
+  --hair:#292b30; --hair-2:#3a3d43;
+  --l1:#ef5f72; --l2:#5da3ea; --l3:#45b177;
+  --good:#57bf86; --warn:#d7a44e;
+  --btn:#e9e8e3; --btn-ink:#121316; --focus:#5da3ea;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:'Archivo',system-ui,-apple-system,Arial,sans-serif;font-size:15px;line-height:1.5;
+  padding-inline:16px;padding-block:0 56px;-webkit-font-smoothing:antialiased}
+.page{max-width:960px;margin:0 auto}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.num{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;font-variant-numeric:tabular-nums}
+
+/* ---------- header ---------- */
+header.top{padding-block:40px 0}
+.title{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+h1{margin:0;font-size:clamp(28px,5.4vw,40px);font-weight:700;letter-spacing:-.025em;line-height:1.05}
+.asof{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--faint);letter-spacing:.02em}
+p.lead{margin:12px 0 0;color:var(--muted);max-width:60ch;font-size:15px}
+
+.summary{display:flex;flex-wrap:wrap;gap:0;margin:26px 0 0;padding:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair)}
+.summary div{padding:12px 22px 11px 0;margin-right:22px;border-right:1px solid var(--hair);flex:0 0 auto}
+.summary div:last-child{border-right:0;margin-right:0}
+.summary dt{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.summary dd{margin:1px 0 0;font-family:'JetBrains Mono',monospace;font-size:23px;font-weight:500;line-height:1.1;font-variant-numeric:tabular-nums}
+
+/* ---------- agent ---------- */
+.agent{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  margin-top:0;padding:13px 0;border-bottom:1px solid var(--hair)}
+.agent .lbl{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.agent .dot{width:8px;height:8px;border-radius:50%;background:var(--faint);flex:0 0 auto}
+.agent.on .dot{background:var(--good);box-shadow:0 0 0 3px color-mix(in srgb,var(--good) 22%,transparent)}
+.agent.busy .dot{background:var(--warn);animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.agent.busy .dot{animation:none}}
+.agent .state{font-size:14px;color:var(--muted);min-width:0;flex:1 1 220px}
+.agent .state b{color:var(--ink);font-weight:600}
+.agent .acts{display:flex;gap:7px;flex-wrap:wrap;margin-left:auto}
+
+.btn{background:var(--btn);color:var(--btn-ink);border:1px solid var(--btn);border-radius:3px;
+  padding:7px 14px;font-size:13.5px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;white-space:nowrap}
+.btn:hover{opacity:.86}
+.btn[disabled]{opacity:.4;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--hair-2)}
+.btn.ghost:hover{border-color:var(--ink);opacity:1}
+.btn.mini{padding:5px 11px;font-size:12.5px}
+.apiform{display:flex;gap:7px;width:100%;flex-wrap:wrap}
+.apiform input{flex:1 1 200px;min-width:0;background:var(--surface);border:1px solid var(--hair-2);border-radius:3px;padding:7px 10px;font-size:13.5px;font-family:'JetBrains Mono',monospace}
+.hint{font-size:12.5px;color:var(--faint);width:100%;margin:0}
+.hint code{font-family:'JetBrains Mono',monospace;background:var(--surface);border:1px solid var(--hair);border-radius:3px;padding:1px 5px;font-size:12px}
+
+/* ---------- filter bar ---------- */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--paper);
+  padding-block:11px 9px;border-bottom:1px solid var(--ink)}
+.bar .line1{display:flex;gap:9px;align-items:center}
+.bar input[type=search]{flex:1;min-width:0;background:var(--surface);border:1px solid var(--hair-2);
+  border-radius:3px;padding:8px 12px;font-size:14px}
+.bar select{background:var(--surface);border:1px solid var(--hair-2);border-radius:3px;padding:8px 6px;font-size:13px}
+.toggles{display:flex;flex-wrap:wrap;gap:3px;margin-top:8px}
+.tg{background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);
+  padding:3px 8px;font-size:13px;font-weight:500;cursor:pointer;border-radius:0}
+.tg:hover{color:var(--ink)}
+.tg[aria-pressed="true"]{color:var(--ink);font-weight:700;border-bottom-color:var(--tgc,var(--ink))}
+.sep{width:1px;background:var(--hair);margin:4px 7px;align-self:stretch}
+.shown{margin-left:auto;align-self:center;font-size:12px;color:var(--faint);font-family:'JetBrains Mono',monospace}
+
+/* ---------- groups & rows ---------- */
+.group{margin-top:30px}
+.group.l1{--lc:var(--l1)} .group.l2{--lc:var(--l2)} .group.l3{--lc:var(--l3)}
+.ghead{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-bottom:4px}
+.gnum{width:25px;height:25px;border-radius:50%;background:var(--lc);color:#fff;
+  display:flex;align-items:center;justify-content:center;flex:0 0 auto;
+  font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500}
+.ghead h2{margin:0;font-size:17px;font-weight:700;letter-spacing:-.01em}
+.ghead .gnote{font-size:13px;color:var(--faint)}
+
+.rows{border-top:1px solid var(--hair)}
+.row{position:relative;padding:15px 0 14px 32px;border-bottom:1px solid var(--hair);display:flex;gap:16px;align-items:flex-start}
+.row::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--lc);opacity:.4}
+.row:first-child::before{top:21px}
+.row:last-child::before{bottom:auto;height:21px}
+.row::after{content:"";position:absolute;left:3px;top:16px;width:12px;height:12px;border-radius:50%;
+  background:var(--paper);border:2.5px solid var(--lc)}
+.row.done::after{background:var(--lc)}
+.row.muted{opacity:.45}
+.rmain{min-width:0;flex:1}
+.rtitle{margin:0;font-size:16px;font-weight:600;line-height:1.35;letter-spacing:-.005em;overflow-wrap:anywhere}
+.rtitle a{text-decoration:none}
+.rtitle a:hover{text-decoration:underline;text-underline-offset:2px}
+.rtitle .co{color:var(--muted);font-weight:500}
+.rmeta{margin:5px 0 0;font-size:12.5px;color:var(--faint);overflow-wrap:anywhere}
+.rmeta i{font-style:normal}
+.rmeta .sp{padding:0 5px;opacity:.5}
+.rmeta .new{color:var(--good);font-weight:700}
+.rfit{margin:7px 0 0;font-size:13.5px;color:var(--muted);overflow-wrap:anywhere}
+.rfit .ok{color:var(--good);font-weight:700}
+.rfit .wn{color:var(--warn);font-weight:700}
+.rside{flex:0 0 auto;width:136px;text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.sc{font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
+.money{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--ink);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.money.est{color:var(--warn)}
+.nomoney{font-size:12px;color:var(--faint)}
+.tags{display:flex;gap:5px;justify-content:flex-end;flex-wrap:wrap;margin-top:2px}
+.tag{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);
+  border:1px solid var(--hair-2);border-radius:2px;padding:1px 5px;white-space:nowrap}
+.tag.call{color:var(--good);border-color:var(--good)}
+.tag.st{color:var(--lc);border-color:var(--lc)}
+.expand{background:none;border:0;padding:4px 0 0;color:var(--faint);font-size:12.5px;font-weight:600;cursor:pointer}
+.expand:hover{color:var(--ink)}
+
+.detail{padding:0 0 18px 32px;border-bottom:1px solid var(--hair);position:relative}
+.detail::before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--lc);opacity:.4}
+.detail p{margin:0 0 9px;font-size:13.5px;color:var(--muted);max-width:74ch}
+.detail p.note{color:var(--faint);font-size:13px}
+.detail .dlbl{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);font-weight:700;margin:14px 0 5px}
+.cts{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.ct{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-size:13.5px;font-weight:600;
+  border:1px solid var(--hair-2);border-radius:3px;padding:6px 11px;max-width:100%;overflow-wrap:anywhere}
+.ct:hover{border-color:var(--ink)}
+.ct.tel{border-color:var(--good);color:var(--good)}
+.ct em{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:13px}
+.ctnone{font-size:13px;color:var(--faint)}
+.acts2{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px}
+.acts2 select{background:var(--surface);border:1px solid var(--hair-2);border-radius:3px;padding:6px 6px;font-size:13px}
+.linkbtn{background:none;border:0;color:var(--faint);font-size:13px;cursor:pointer;padding:6px 2px}
+.linkbtn:hover{color:var(--warn)}
+
+/* ---------- channels & footer ---------- */
+.chsec{margin-top:44px;border-top:1px solid var(--ink);padding-top:16px}
+.chsec h2{margin:0 0 3px;font-size:17px;font-weight:700}
+.chsec p.sub{margin:0 0 16px;color:var(--faint);font-size:13.5px}
+.chgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0}
+.ch{padding:13px 18px 14px 0;border-top:1px solid var(--hair);font-size:13px;color:var(--muted)}
+.ch b{display:block;color:var(--ink);font-size:14px;font-weight:600;margin-bottom:3px}
+.ch a{text-decoration:none;border-bottom:1px solid var(--hair-2)}
+footer{margin-top:40px;border-top:1px solid var(--hair);padding-top:16px;color:var(--faint);font-size:12.5px}
+footer p{margin:0 0 8px;max-width:78ch}
+footer b{color:var(--muted)}
+
+@media(max-width:640px){
+  .row{gap:6px;padding-left:28px;flex-wrap:wrap}
+  .rmain{flex:1 1 100%}
+  .rside{order:-1;width:100%;flex-direction:row;align-items:baseline;justify-content:flex-start;
+    gap:10px;text-align:left}
+  .sc{font-size:17px}
+  .tags{justify-content:flex-start;margin-top:0}
+  .detail{padding-left:28px}
+  .summary div{padding-right:16px;margin-right:16px}
+  .summary dd{font-size:20px}
+}
+
+#toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,16px);
+  background:var(--ink);color:var(--paper);border-radius:3px;padding:10px 18px;font-size:13.5px;font-weight:600;
+  opacity:0;pointer-events:none;transition:.22s;z-index:60;max-width:92vw;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){#toast{transition:none}}
+.modal{position:fixed;inset:0;background:rgba(10,12,14,.55);z-index:70;display:flex;align-items:center;justify-content:center;padding:16px}
+.modal .box{background:var(--surface);border-radius:4px;padding:16px;max-width:560px;width:100%}
+.modal textarea{width:100%;height:110px;background:var(--paper);color:var(--ink);border:1px solid var(--hair-2);
+  border-radius:3px;padding:10px;font-size:13px;font-family:'JetBrains Mono',monospace;resize:vertical}
+.modal .mbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px}
+.modal .mbar span{color:var(--muted);font-size:12.5px}
+</style>
+
+<div class="page">
+<header class="top">
+  <div class="title"><h1>Маршрут до оффера</h1><span class="asof">обновлено {{ASOF}}</span></div>
+  <p class="lead">Вакансии под профиль AI Automation Engineer — с зарплатой, прямыми контактами и статусом отклика. Три линии = три приоритета: чем ниже линия, тем больше оговорок.</p>
+  <dl class="summary" id="summary"></dl>
+</header>
+
+<section class="agent" id="agent" aria-live="polite">
+  <span class="dot"></span>
+  <span class="lbl">Агент</span>
+  <span class="state" id="agentState">проверяю подключение…</span>
+  <span class="acts" id="agentActs"></span>
+</section>
+
+<div class="bar">
+  <div class="line1">
+    <input type="search" id="q" placeholder="Поиск: компания, стек, город…" aria-label="Поиск по вакансиям">
+    <select id="sort" aria-label="Сортировка">
+      <option value="score">по оценке</option>
+      <option value="pay">по зарплате</option>
+      <option value="fresh">сначала новые</option>
+    </select>
+  </div>
+  <div class="toggles" id="tgLine"></div>
+  <div class="toggles" id="tgGeo"></div>
+</div>
+
+<div id="list"></div>
+
+<section class="chsec">
+  <h2>Постоянные каналы</h2>
+  <p class="sub">Не разовые вакансии, а места, куда смотреть каждую неделю.</p>
+  <div class="chgrid">
+    <div class="ch"><b><a href="https://community.n8n.io/c/jobs/13" target="_blank" rel="noopener">n8n Community — Jobs</a></b>Поток [HIRING]-тредов; портфолио решает больше диплома. Отвечать быстро и коротко, со ссылками на оба проекта.</div>
+    <div class="ch"><b><a href="https://agentic-engineering-jobs.com/jobs/n8n" target="_blank" rel="noopener">agentic-engineering-jobs.com</a></b>Борд с фильтрами junior / EU / Germany — 61+ n8n-вакансий.</div>
+    <div class="ch"><b><a href="https://www.upwork.com/freelance-jobs/n8n/" target="_blank" rel="noopener">Upwork — n8n / AI automation</a></b>Вход $25–40/час, средняя ~$39/час. Два выпущенных продукта — тот самый proof of shipping.</div>
+    <div class="ch"><b><a href="https://t.me/s/nocode_jobs" target="_blank" rel="noopener">Telegram: @nocode_jobs</a></b>No-code/low-code вакансии в UA/RU-сегменте, смотреть посты с тегом #hh. Смежный: @zerocode_jobs.</div>
+    <div class="ch"><b>Еженедельная ротация</b>Djinni и DOU (свежая волна), Arbeitnow и join.com по Германии, Berlin Startup Jobs, Remotive, We Work Remotely, Indeed DE.</div>
+    <div class="ch"><b>Ещё в поле зрения</b>Beetroot — Junior AI Agent Developer с менторством · DestiLabs — n8n Developer · Silpo — n8n Automation Engineer (офис Киев, только если появится remote).</div>
+  </div>
+</section>
+
+<footer>
+  <p><b>Откуда данные.</b> Зарплаты и контакты взяты только из открытых источников — текста объявления, карьерной страницы, Impressum компании. Где цифра пришла из автооценки борда, стоит пометка «оценка». Где контактов нет — их нет: ничего не додумано и не сконструировано.</p>
+  <p><b>Оценка 0–100</b> — прикидка соответствия профилю (n8n · TypeScript/Python · Anthropic API · MCP · два выпущенных продукта; EN B2, DE B1+, без степени, право работы в Германии). Перед подачей открой объявление: детали могли измениться, часть позиций могла закрыться.</p>
+  <p><b>Статусы откликов</b> хранятся в этом браузере и никуда не отправляются.</p>
+</footer>
+</div>
+
+<div id="toast" role="status"></div>
+
+<script>
+const ASOF = "{{ASOF}}";
+const JOBS = {{DATA}};
+
+/* ============ state ============ */
+const LS = "jobradar-v3", LS_API = "jobradar-api";
+let store = {};
+try { store = JSON.parse(localStorage.getItem(LS) || "{}"); } catch (e) { store = {}; }
+const st = id => store[id] || {};
+function setSt(id, patch){ store[id] = Object.assign({}, store[id], patch);
+  try { localStorage.setItem(LS, JSON.stringify(store)); } catch (e) {} }
+
+const GROUPS = { 1:["Подавать сразу","оценка 85+ · прямое совпадение стека, барьеров нет"],
+                 2:["Вторая волна","70–84 · хороший матч с одним «но»"],
+                 3:["С оговорками","реальный барьер: язык, ставка, формат или возраст объявления"] };
+const FX = { "€":1, "$":0.93, "₴":0.022 };
+const state = { q:"", line:"all", geo:"all", pay:false, call:false, hidden:false, sort:"score" };
+
+const esc = s => String(s ?? "").replace(/[&<>"]/g, m => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[m]));
+const hasContact = j => { const c = j.c || {}; return !!(c.email || c.phone || c.tg || c.li); };
+const canCall = j => !!(j.c && j.c.phone);
+const payTop = j => j.pay && (j.pay.max || j.pay.min) ? (j.pay.max || j.pay.min) * (FX[j.pay.cur] || 1) : 0;
+const isNew = j => j.fresh.startsWith("новая");
+const freshRank = j => isNew(j) ? 2 : (j.fresh.startsWith("проверено") ? 1 : 0);
+
+/* ============ render ============ */
+function renderSummary(){
+  const applied = JOBS.filter(j => ["applied","answered","call"].includes(st(j.id).status)).length;
+  const rows = [["вакансий", JOBS.length], ["с зарплатой", JOBS.filter(j => j.pay).length],
+                ["можно позвонить", JOBS.filter(canCall).length], ["моих откликов", applied]];
+  document.getElementById("summary").innerHTML =
+    rows.map(r => `<div><dt>${r[0]}</dt><dd>${r[1]}</dd></div>`).join("");
+}
+
+function toggles(el, defs, key, colorVar){
+  el.innerHTML = defs.map(d =>
+    `<button class="tg" data-v="${d[0]}" aria-pressed="${state[key] === d[0]}"${colorVar ? ` style="--tgc:${d[2] || "var(--ink)"}"` : ""}>${d[1]}</button>`).join("");
+  el.querySelectorAll(".tg").forEach(b => b.onclick = () => { state[key] = b.dataset.v; renderAll(); });
+}
+
+function renderToggles(){
+  toggles(document.getElementById("tgLine"), [
+    ["all","Все"], ["1","Линия 1","var(--l1)"], ["2","Линия 2","var(--l2)"],
+    ["3","Линия 3","var(--l3)"], ["new","Новые"]], "line", true);
+  const g = document.getElementById("tgGeo");
+  g.innerHTML = [["all","Любая гео"],["UA","Украина"],["DE","Германия"],["INT","Интернешнл"]]
+      .map(d => `<button class="tg" data-v="${d[0]}" aria-pressed="${state.geo === d[0]}">${d[1]}</button>`).join("")
+    + `<span class="sep"></span>`
+    + `<button class="tg" id="fPay" aria-pressed="${state.pay}">с зарплатой</button>`
+    + `<button class="tg" id="fCall" aria-pressed="${state.call}">можно позвонить</button>`
+    + `<button class="tg" id="fHid" aria-pressed="${state.hidden}">скрытые</button>`
+    + `<span class="shown" id="shown"></span>`;
+  g.querySelectorAll(".tg[data-v]").forEach(b => b.onclick = () => { state.geo = b.dataset.v; renderAll(); });
+  g.querySelector("#fPay").onclick  = () => { state.pay = !state.pay; renderAll(); };
+  g.querySelector("#fCall").onclick = () => { state.call = !state.call; renderAll(); };
+  g.querySelector("#fHid").onclick  = () => { state.hidden = !state.hidden; renderAll(); };
+}
+
+/* The row shows a compact figure; anything wordy (“competitive, по опыту…”) stays
+   in the detail panel so it cannot stretch the row's right column. */
+function moneyCell(j){
+  if (!j.pay) return `<span class="nomoney">зарплата не указана</span>`;
+  if (!j.pay.min && !j.pay.max) return `<span class="nomoney">по договорённости</span>`;
+  return `<span class="money${j.pay.est ? " est" : ""}">${esc(j.pay.raw)}</span>`;
+}
+function moneyFull(j){
+  if (!j.pay) return "В объявлении зарплата не указана.";
+  const extra = [j.pay.note, j.pay.est ? "автооценка борда, а не оффер — перепроверить" : ""].filter(Boolean);
+  return j.pay.raw + (extra.length ? " — " + extra.join("; ") : "");
+}
+
+const STATUS_LABEL = { applied:"отклик отправлен", answered:"ответили", call:"созвон", rejected:"отказ" };
+
+function row(j){
+  const s = st(j.id), status = s.status || "";
+  const tags = [];
+  if (canCall(j)) tags.push(`<span class="tag call">звонок</span>`);
+  if (status && STATUS_LABEL[status]) tags.push(`<span class="tag st">${STATUS_LABEL[status]}</span>`);
+  const meta = [
+    isNew(j) ? `<i class="new">новая</i>` : esc(j.fresh),
+    esc(j.src), j.mode && j.mode !== "?" ? (j.mode === "remote" ? "remote" : j.mode === "hybrid" ? "гибрид" : "офис") : "",
+    esc(j.loc), esc(j.lang), esc(j.posted)
+  ].filter(Boolean).join(`<span class="sp">·</span>`);
+  return `<article class="row${status === "rejected" ? " muted" : ""}${["applied","answered","call"].includes(status) ? " done" : ""}" data-id="${j.id}">
+    <div class="rmain">
+      <h3 class="rtitle"><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.ti)}</a> <span class="co">${esc(j.co)}</span></h3>
+      <p class="rmeta">${meta}</p>
+      <p class="rfit">${j.fit.map(f => `<span class="${f[0] === "ok" ? "ok" : "wn"}">${f[0] === "ok" ? "+" : "!"}</span> ${esc(f[1])}`).join(" · ")}</p>
+      <button class="expand" data-act="toggle">${open.has(j.id) ? "Свернуть" : "Подробно, контакты, отклик"}</button>
+    </div>
+    <div class="rside">
+      <span class="sc">${j.s}</span>
+      <span class="scbar"><i style="width:${j.s}%"></i></span>
+      ${moneyCell(j)}
+      ${tags.length ? `<span class="tags">${tags.join("")}</span>` : ""}
+    </div>
+  </article>`;
+}
+
+function contacts(j){
+  const c = j.c || {}, out = [];
+  if (c.phone) out.push(`<a class="ct tel" href="tel:${esc(c.phone.replace(/[^+\d]/g, ""))}">Позвонить <em>${esc(c.phone)}</em></a>`);
+  if (c.email) out.push(`<a class="ct" href="mailto:${esc(c.email)}?subject=${encodeURIComponent((j.geo === "DE" ? "Bewerbung: " : "Application: ") + j.ti + " — Vladyslav Domotskyi")}">Написать <em>${esc(c.email)}</em></a>`);
+  if (c.tg) out.push(`<a class="ct" href="https://t.me/${esc(c.tg.replace(/^@/, ""))}" target="_blank" rel="noopener">Telegram <em>${esc(c.tg)}</em></a>`);
+  if (c.li) out.push(`<a class="ct" href="${esc(c.li)}" target="_blank" rel="noopener">LinkedIn${c.name ? " — " + esc(c.name) : ""}</a>`);
+  if (!out.length) return `<span class="ctnone">Прямых контактов в открытых источниках нет — ${esc(c.how || "отклик через форму на сайте")}</span>`;
+  if (c.name && !c.li) out.push(`<span class="ctnone">контакт: ${esc(c.name)}</span>`);
+  if (c.how) out.push(`<span class="ctnone">${esc(c.how)}</span>`);
+  return out.join("");
+}
+
+function detail(j){
+  const s = st(j.id), status = s.status || "new";
+  const opts = [["new","— статус —"],["applied","Отклик отправлен"],["answered","Ответили"],["call","Созвон"],["rejected","Отказ"]];
+  return `<div class="detail" data-id="${j.id}">
+    <div class="dlbl">Что требуют</div>
+    <p>${esc(j.req)}</p>
+    <div class="dlbl">Деньги</div>
+    <p>${esc(moneyFull(j))}</p>
+    ${j.notes ? `<p class="note">${esc(j.notes)}</p>` : ""}
+    <div class="dlbl">Связаться</div>
+    <div class="cts">${contacts(j)}</div>
+    <div class="acts2">
+      <a class="btn" href="${esc(j.url)}" target="_blank" rel="noopener">Откликнуться</a>
+      <button class="btn ghost" data-act="tailor">Резюме под вакансию</button>
+      <select data-act="status" aria-label="Статус отклика">${opts.map(o => `<option value="${o[0]}"${status === o[0] ? " selected" : ""}>${o[1]}</option>`).join("")}</select>
+      <button class="linkbtn" data-act="hide">${s.hidden ? "вернуть в список" : "скрыть"}</button>
+    </div>
+  </div>`;
+}
+
+function filtered(){
+  const q = state.q.trim().toLowerCase();
+  let arr = JOBS.filter(j => {
+    const s = st(j.id);
+    if (!!s.hidden !== state.hidden) return false;
+    if (state.line !== "all" && state.line !== "new" && String(j.t) !== state.line) return false;
+    if (state.line === "new" && !isNew(j)) return false;
+    if (state.geo !== "all" && j.geo !== state.geo) return false;
+    if (state.pay && !j.pay) return false;
+    if (state.call && !canCall(j)) return false;
+    if (q && !(j.ti + " " + j.co + " " + j.req + " " + (j.loc || "") + " " + (j.src || "")).toLowerCase().includes(q)) return false;
+    return true;
+  });
+  const by = { score:(a,b) => b.s - a.s, pay:(a,b) => payTop(b) - payTop(a) || b.s - a.s,
+               fresh:(a,b) => freshRank(b) - freshRank(a) || b.s - a.s };
+  return arr.sort(by[state.sort]);
+}
+
+let open = new Set();
+function renderList(){
+  const arr = filtered();
+  const shown = document.getElementById("shown");
+  if (shown) shown.textContent = arr.length + " / " + JOBS.length;
+  if (!arr.length){
+    document.getElementById("list").innerHTML =
+      `<p style="color:var(--faint);padding:40px 0;text-align:center">Ничего не нашлось — сними фильтры или поменяй запрос.</p>`;
+    return;
+  }
+  let html = "";
+  for (const t of [1,2,3]){
+    const grp = arr.filter(j => j.t === t);
+    if (!grp.length) continue;
+    html += `<section class="group l${t}">
+      <div class="ghead"><span class="gnum">${t}</span><h2>${GROUPS[t][0]}</h2><span class="gnote">${GROUPS[t][1]}</span></div>
+      <div class="rows">${grp.map(j => row(j) + (open.has(j.id) ? detail(j) : "")).join("")}</div>
+    </section>`;
+  }
+  document.getElementById("list").innerHTML = html;
+}
+function renderAll(){ renderToggles(); renderSummary(); renderList(); }
+
+/* ============ interactions ============ */
+let toastT;
+function toast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("show"), 2800);
+}
+const tailorPrompt = j =>
+  `Переделай резюме под вакансию: «${j.ti}» — ${j.co}. Ссылка: ${j.url}. Собери PDF с фото и сопроводительное письмо под неё (факты — только из моего профиля).`;
+
+function copyText(txt){
+  if (navigator.clipboard && navigator.clipboard.writeText)
+    navigator.clipboard.writeText(txt).then(() => toast("Скопировано — вставь в чат с Claude"), () => manualCopy(txt));
+  else manualCopy(txt);
+}
+function manualCopy(txt){
+  const w = document.createElement("div");
+  w.className = "modal";
+  w.innerHTML = `<div class="box"><textarea readonly></textarea><div class="mbar"><span>Автокопирование недоступно — выдели текст и скопируй вручную</span><button class="btn ghost">Закрыть</button></div></div>`;
+  w.querySelector("textarea").value = txt;
+  document.body.appendChild(w);
+  const ta = w.querySelector("textarea"); ta.focus(); ta.select();
+  w.querySelector("button").onclick = () => w.remove();
+  w.onclick = e => { if (e.target === w) w.remove(); };
+}
+
+document.getElementById("list").addEventListener("click", e => {
+  const btn = e.target.closest("[data-act]");
+  if (!btn) return;
+  const host = e.target.closest("[data-id]");
+  const id = host && host.dataset.id;
+  const j = JOBS.find(x => x.id === id);
+  if (!j) return;
+  const act = btn.dataset.act;
+  if (act === "toggle"){ open.has(id) ? open.delete(id) : open.add(id); renderList(); }
+  if (act === "tailor") copyText(tailorPrompt(j));
+  if (act === "hide"){ setSt(id, { hidden: !st(id).hidden }); open.delete(id); renderAll(); }
+});
+document.getElementById("list").addEventListener("change", e => {
+  const sel = e.target.closest("[data-act=status]");
+  if (!sel) return;
+  const id = e.target.closest("[data-id]").dataset.id;
+  setSt(id, { status: sel.value === "new" ? "" : sel.value });
+  renderAll();
+  if (sel.value === "applied") toast("Отмечено: отклик отправлен");
+});
+document.getElementById("q").addEventListener("input", e => { state.q = e.target.value; renderList(); });
+document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; renderList(); });
+
+/* ============ agent link ============ */
+const agentEl = document.getElementById("agent");
+const stateEl = document.getElementById("agentState");
+const actsEl = document.getElementById("agentActs");
+let apiBase = "";
+try { apiBase = localStorage.getItem(LS_API) || ""; } catch (e) {}
+const qp = new URLSearchParams(location.search).get("api");
+if (qp) { apiBase = qp; try { localStorage.setItem(LS_API, qp); } catch (e) {} }
+let agentBusy = false;
+
+const normalize = u => { u = String(u || "").trim().replace(/\/+$/, ""); return /^https?:\/\//.test(u) ? u : (u ? "http://" + u : ""); };
+const ago = iso => {
+  if (!iso) return null;
+  const m = Math.round((Date.now() - new Date(iso).getTime()) / 60000);
+  if (!isFinite(m)) return null;
+  if (m < 1) return "только что";
+  if (m < 60) return m + " мин назад";
+  const h = Math.round(m / 60);
+  return h < 24 ? h + " ч назад" : Math.round(h / 24) + " дн назад";
+};
+
+async function call(path, opts){
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 6000);
+  try {
+    const r = await fetch(apiBase + path, Object.assign({ signal: ctrl.signal }, opts));
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    return await r.json();
+  } finally { clearTimeout(timer); }
+}
+
+function offline(msg){
+  agentEl.className = "agent";
+  stateEl.innerHTML = msg;
+  actsEl.innerHTML = `<button class="btn ghost mini" id="setApi">Подключить агента</button>`;
+  document.getElementById("setApi").onclick = showApiForm;
+}
+function showApiForm(){
+  stateEl.innerHTML = `<span style="color:var(--muted)">Адрес запущенного агента:</span>`;
+  actsEl.innerHTML = `<span class="apiform">
+      <input id="apiIn" value="${esc(apiBase || "http://localhost:8787")}" placeholder="http://localhost:8787" aria-label="Адрес агента">
+      <button class="btn mini" id="apiSave">Сохранить</button>
+      <button class="btn ghost mini" id="apiCancel">Отмена</button>
+      <p class="hint">Локально агент поднимается командой <code>npm run dev</code> в папке <code>job-hunter</code>. Если он на сервере — укажи его адрес, он должен быть по https.</p>
+    </span>`;
+  document.getElementById("apiSave").onclick = () => {
+    apiBase = normalize(document.getElementById("apiIn").value);
+    try { localStorage.setItem(LS_API, apiBase); } catch (e) {}
+    poll();
+  };
+  document.getElementById("apiCancel").onclick = poll;
+  document.getElementById("apiIn").focus();
+}
+
+async function poll(){
+  if (agentBusy) return;
+  if (!apiBase){ offline(`<b>не подключён</b> — вакансии ниже собраны вручную. Подключи агента, чтобы запускать сканы отсюда.`); return; }
+  try {
+    const d = await call("/api/overview");
+    const a = d.agent || {};
+    const last = ago(a.lastCycleAt);
+    const parts = [];
+    parts.push(a.paused ? `<b>на паузе</b>` : (a.running ? `<b>работает</b>` : `<b>подключён, цикл остановлен</b>`));
+    if (last) parts.push("последний скан " + last);
+    if (d.today) parts.push(`сегодня: найдено ${d.today.found}, откликов ${d.today.applied}`);
+    if (d.today && d.today.needsAttention) parts.push(`<b style="color:var(--warn)">${d.today.needsAttention} ждут решения</b>`);
+    if (!a.llmConfigured) parts.push(`<b style="color:var(--warn)">ключ LLM не задан</b>`);
+    agentEl.className = "agent on";
+    stateEl.innerHTML = parts.join(" · ");
+    actsEl.innerHTML =
+      `<button class="btn mini" id="runBtn">Запустить скан</button>` +
+      `<button class="btn ghost mini" id="pauseBtn">${a.paused ? "Продолжить" : "Пауза"}</button>` +
+      `<button class="btn ghost mini" id="setApi">⚙</button>`;
+    document.getElementById("runBtn").onclick = runScan;
+    document.getElementById("pauseBtn").onclick = () => togglePause(!!a.paused);
+    document.getElementById("setApi").onclick = showApiForm;
+  } catch (e) {
+    offline(`<b>офлайн</b> — не отвечает <span class="num" style="font-size:13px">${esc(apiBase)}</span>. Запусти агента или поменяй адрес.`);
+  }
+}
+
+async function runScan(){
+  agentBusy = true;
+  agentEl.className = "agent busy";
+  stateEl.innerHTML = `<b>идёт цикл</b> — поиск, анализ и подготовка откликов…`;
+  actsEl.innerHTML = "";
+  try {
+    const r = await call("/api/agent/run", { method: "POST" });
+    const s = r.stats || r || {};
+    const bits = ["found","analyzed","decided","prepared","submitted"]
+      .filter(k => typeof s[k] === "number").map(k => `${k}: ${s[k]}`);
+    toast(bits.length ? "Цикл завершён — " + bits.join(", ") : "Цикл завершён");
+  } catch (e) {
+    toast("Не удалось запустить цикл: " + e.message);
+  } finally { agentBusy = false; poll(); }
+}
+async function togglePause(paused){
+  agentBusy = true;
+  try { await call(paused ? "/api/agent/resume" : "/api/agent/pause", { method: "POST" });
+        toast(paused ? "Агент продолжает работу" : "Агент на паузе"); }
+  catch (e) { toast("Не удалось: " + e.message); }
+  finally { agentBusy = false; poll(); }
+}
+
+renderAll();
+poll();
+setInterval(poll, 30000);
+</script>

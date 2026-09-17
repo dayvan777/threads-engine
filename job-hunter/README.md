@@ -128,6 +128,20 @@ packages/db      SQLite schema (Drizzle) + migrations
 packages/core    pure domain logic: connectors, dedupe, prefilter, scoring,
                  decision engine, documents, fact-guard, Q&A  (+ tests)
 apps/server      Fastify API + agent orchestrator + Playwright appliers
-apps/web         React dashboard (Vite + Tailwind)
+apps/web         React dashboard (Vite + Tailwind), served by apps/server
+apps/dashboard   static job radar deployed to Vercel; connects to a running
+                 agent over HTTP to show its state and trigger scans
 data/            SQLite DB, generated documents, submission artifacts (gitignored)
 ```
+
+## The two dashboards
+
+`apps/web` is the full control panel and needs the agent process next to it — it
+is what `apps/server` serves on `localhost:8787`.
+
+`apps/dashboard` is a static page that stays online without any backend: the
+shortlisted vacancies with salaries, direct contacts, apply links and per-vacancy
+CV-tailoring prompts. It optionally points at a running agent to show its state
+and start a scan. See `apps/dashboard/README.md` for deployment — the agent
+itself cannot run on serverless hosting (SQLite, Playwright, a long-running loop)
+and needs a real process.

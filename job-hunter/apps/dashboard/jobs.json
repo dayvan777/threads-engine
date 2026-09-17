@@ -1,0 +1,1969 @@
+[
+ {
+  "id": "powerprozesse",
+  "t": 1,
+  "s": 92,
+  "ti": "Make.com / n8n Automation-Entwickler, 100% Remote",
+  "co": "Powerprozesse GmbH",
+  "url": "https://www.arbeitnow.com/jobs/companies/powerprozesse/makecom-n8n-automation-entwickler-100-remote-worms-47538",
+  "src": "Arbeitnow",
+  "mode": "remote",
+  "geo": "DE",
+  "loc": "Worms (~50 км от Landau), 100% remote по Германии",
+  "lang": "DE-объявление, клиенты немецкие — B1+ вероятно ок",
+  "posted": "в актуальной выдаче, сент 2026",
+  "pay": {
+   "raw": "€3 000–6 000/мес",
+   "min": 3000,
+   "max": 6000,
+   "cur": "€",
+   "est": false,
+   "note": "брутто, из объявления"
+  },
+  "fit": [
+   [
+    "ok",
+    "явно берут «IT-грамотных без классического стажа» — твой случай дословно"
+   ],
+   [
+    "ok",
+    "прямой телефон и почта директора — можно просто позвонить"
+   ]
+  ],
+  "req": "Опыт с n8n/Make ИЛИ готовность выучить; анализ бизнес-процессов клиентов, low-code автоматизации, интеграция LLM (OpenAI).",
+  "notes": "Контакты из Impressum powerprozesse.de; директор — Jonathan Tausendfreund.",
+  "c": {
+   "name": "Jonathan Tausendfreund (директор)",
+   "email": "kontakt@powerprozesse.de",
+   "phone": "+49 6241 9705126",
+   "how": "позвонить/написать напрямую или отклик через arbeitnow"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "shx",
+  "t": 2,
+  "s": 80,
+  "ti": "AI Automation Specialist",
+  "co": "SHX Solutions GmbH",
+  "url": "https://join.com/companies/highlander/16405397-ai-automation-specialist",
+  "src": "join.com",
+  "mode": "?",
+  "geo": "DE",
+  "loc": "Гамбург (Neumühlen 19)",
+  "lang": "EN-объявление",
+  "posted": "перевыкладывают с дек 2025 — активный найм",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "почти зеркало твоего опыта из Ufer: n8n (основной фокус) + CRM-автоматизации"
+   ],
+   [
+    "warn",
+    "формат работы не указан — уточнить"
+   ]
+  ],
+  "req": "Автоматизации в n8n (основной фокус) и Make.com; оптимизация CRM-процессов (Close, HubSpot, ClickUp, Airtable), скрейпинг и обогащение данных.",
+  "c": {
+   "name": "David Ayrian / Tareq Jomaa (директора)",
+   "email": "info@shx-solutions.com",
+   "li": "https://www.linkedin.com/company/shx-solutions-gmbh",
+   "how": "отклик через join.com; email из открытых данных компании"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "getolo",
+  "t": 2,
+  "s": 80,
+  "ti": "Automation Engineer (all genders)",
+  "co": "getolo (dentolo/petolo/vitolo)",
+  "url": "https://join.com/companies/dentolo/16352487-automation-engineer-all-genders",
+  "src": "join.com",
+  "mode": "hybrid",
+  "geo": "DE",
+  "loc": "Берлин-Митте, гибрид (офис или home office)",
+  "lang": "EN — B2 хватит",
+  "posted": "09.06.2026",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "прямо пишут «не нужно быть AI-экспертом сегодня» — дадут вырасти; EN-среда"
+   ],
+   [
+    "warn",
+    "InsurTech-домен, Zendesk придётся освоить"
+   ]
+  ],
+  "req": "Hands-on автоматизация Operations: Zendesk, n8n, self-hosted и облачные AI-модели; 200k+ клиентов.",
+  "c": {
+   "how": "отклик через join.com или Workable (apply.workable.com/getolo)"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "visualventures",
+  "t": 2,
+  "s": 76,
+  "ti": "No-Code Automation Specialist (Make, n8n, Airtable), 100% remote",
+  "co": "Visual Ventures",
+  "url": "https://join.com/companies/visualpioneersde/14713989-no-code-automation-specialist-mit-make-n8n-airtable-etc-oder-100-remote-m-w-d",
+  "src": "join.com",
+  "mode": "remote",
+  "geo": "DE",
+  "loc": "Кёльн, 100% remote (DACH)",
+  "lang": "DE-объявление",
+  "posted": "июль 2025 — живость проверить",
+  "pay": {
+   "raw": "€36–60k/год ≈ €3 000–5 000/мес",
+   "min": 3000,
+   "max": 5000,
+   "cur": "€",
+   "est": true
+  },
+  "fit": [
+   [
+    "ok",
+    "«первый опыт» = junior ок; стек 1-в-1; AI-агенты для e-commerce клиентов"
+   ],
+   [
+    "warn",
+    "постингу больше года"
+   ]
+  ],
+  "req": "Первый опыт low-code/no-code (Make, n8n, Airtable, Supabase), в идеале базовый Python/JS.",
+  "c": {
+   "how": "отклик через join.com"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "lvit",
+  "t": 2,
+  "s": 74,
+  "ti": "n8n KI Low-Code Entwickler (m/w/d)",
+  "co": "LVIT GmbH",
+  "url": "https://www.stepstone.de/stellenangebote--N8n-KI-Low-Code-Entwickler-m-w-d-Munich-LVIT-GmbH--12328697-inline.html",
+  "src": "StepStone",
+  "mode": "?",
+  "geo": "DE",
+  "loc": "Мюнхен / Grünwald",
+  "lang": "DE-объявление",
+  "posted": "в актуальной выдаче 2026",
+  "pay": {
+   "raw": "€36–60k/год ≈ €3 000–5 000/мес",
+   "min": 3000,
+   "max": 5000,
+   "cur": "€",
+   "est": true
+  },
+  "fit": [
+   [
+    "ok",
+    "чистая n8n + AI-агенты роль (Swarm-AI платформа); «без сложного процесса — короткий разговор»"
+   ],
+   [
+    "warn",
+    "формат и язык уточнить по телефону"
+   ]
+  ],
+  "req": "Разработка и оптимизация workflow и бэкендов на n8n; поддержка автоматизаций и интеграция AI-агентов.",
+  "c": {
+   "name": "Leonard Verweyen (директор)",
+   "email": "info@lvit.de",
+   "phone": "+49 89 588088430",
+   "li": "https://de.linkedin.com/company/lvit-gmbh",
+   "how": "сами предлагают «короткий разговор» вместо формальностей"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "roger",
+  "t": 2,
+  "s": 72,
+  "ti": "AI Operations & Workflow Specialist (m/w/d)",
+  "co": "Roger",
+  "url": "https://join.com/companies/roger/16293723-ai-operations-and-workflow-specialist-m-w-d",
+  "src": "join.com",
+  "mode": "?",
+  "geo": "DE",
+  "loc": "Берлин",
+  "lang": "DE-объявление",
+  "posted": "перевыкладывают — активный найм",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "n8n + Zapier + webhooks/API + промпты — точно твои требования"
+   ],
+   [
+    "warn",
+    "по сниппетам возможен freelance-формат — уточнять"
+   ]
+  ],
+  "req": "Поиск узких мест в sales/marketing/ops и автоматизация через n8n/Make/Zapier; уверенные webhooks/API, prompt engineering.",
+  "c": {
+   "how": "отклик через join.com; дубль на techinberlin.com"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "n8ngmbh",
+  "t": 3,
+  "s": 64,
+  "ti": "IT Systems & Automation Engineer",
+  "co": "n8n GmbH (сам вендор)",
+  "url": "https://www.arbeitnow.com/jobs/companies/n8n/it-systems-automation-engineer-berlin-133428",
+  "src": "Arbeitnow",
+  "mode": "hybrid",
+  "geo": "DE",
+  "loc": "Берлин (HQ)",
+  "lang": "EN-only workplace — B2 хватит",
+  "posted": "активна на Ashby и n8n.io/careers",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "работа в самой n8n — сильный магнит для резюме"
+   ],
+   [
+    "warn",
+    "жёсткое «2–4 года IT-operations» — подача только «на вырост»"
+   ]
+  ],
+  "req": "IT-операции в SaaS: автоматизации на n8n, API, скрипты, AI-tooling; L1/L2 поддержка, SOC 2/ISO 27001.",
+  "c": {
+   "how": "отклик через Ashby: jobs.ashbyhq.com/n8n"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "makeauto",
+  "t": 3,
+  "s": 64,
+  "ti": "AI & Automatisierungs-Experte — Immobilien (n8n, Make), 25h/Vollzeit",
+  "co": "makeautomation GmbH",
+  "url": "https://join.com/companies/makeautomation/15133942-ai-und-automatisierungs-experte-revolutioniere-die-immobilienbranche-n8n-make-25h-vollzeit-moeglich",
+  "src": "join.com",
+  "mode": "remote",
+  "geo": "DE",
+  "loc": "remote (Германия), клиенты — маклерские бюро",
+  "lang": "DE — клиентская работа, B1+ рискованно",
+  "posted": "июль 2025, перевыложена",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "25 ч/нед возможно — совместимо с текущей работой как первый коммерческий контракт"
+   ],
+   [
+    "warn",
+    "хотят «erfahren» + консультирование немецких клиентов"
+   ]
+  ],
+  "req": "Make.com, n8n, Airtable, ChatGPT; перевод бизнес-целей клиентов в работающие автоматизации.",
+  "c": {
+   "how": "отклик через join.com"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "alphapet",
+  "t": 3,
+  "s": 62,
+  "ti": "ERP Automation & AI Engineer (m/w/d)",
+  "co": "AlphaPet Ventures",
+  "url": "https://remotive.com/remote/jobs/software-development/erp-automation-ai-engineer-4105504",
+  "src": "Remotive",
+  "mode": "remote",
+  "geo": "DE",
+  "loc": "полный remote, но только резиденты Германии или UK",
+  "lang": "EN-объявление",
+  "posted": "в актуальной выдаче",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "full-remote из Германии + твои Python/SQL/n8n/LLM"
+   ],
+   [
+    "warn",
+    "«solid experience» и ERP/Odoo — натяжка для джуниора"
+   ]
+  ],
+  "req": "Python, SQL, опыт с ERP (Odoo), workflow-инструменты (n8n), в идеале первый опыт LLM-API.",
+  "c": {
+   "how": "отклик через Personio: alphapet-ventures.jobs.personio.de"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "todor3d",
+  "t": 1,
+  "s": 95,
+  "ti": "AI Automation Developer (Junior+)",
+  "co": "Todor3D",
+  "url": "https://djinni.co/jobs/848345-ai-automation-developer-junior/",
+  "src": "Djinni",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "remote (UA)",
+  "lang": "UA/EN",
+  "posted": "сент 2026",
+  "pay": {
+   "raw": "competitive, по опыту — цифр не публикуют",
+   "min": null,
+   "max": null,
+   "cur": null,
+   "est": false
+  },
+  "fit": [
+   [
+    "ok",
+    "дословно твой профиль — Claude Code + n8n на Junior+ уровне, без требования диплома"
+   ],
+   [
+    "ok",
+    "вакансия подтверждена в списке открытых у компании"
+   ]
+  ],
+  "req": "Требуют: Claude Code / Codex / Gemini CLI как основной инструмент, n8n / Make, умение ставить задачи AI, проверять результат и доводить автоматизации до бизнеса.",
+  "notes": "CEO — Maxim Todorov, COO — Igor Bilienko. Агрегатор RocketReach показывает личный gmail и телефон CEO, но надёжность средняя — писать лучше через LinkedIn или Djinni.",
+  "c": {
+   "name": "Maxim Todorov (CEO)",
+   "li": "https://www.linkedin.com/in/maxim-todorov/",
+   "how": "отклик на Djinni или напрямую CEO в LinkedIn"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "convact",
+  "t": 1,
+  "s": 90,
+  "ti": "AI Automation Engineer (m/w/d), Remote",
+  "co": "Convact",
+  "url": "https://join.com/companies/convact/15946603-ai-automation-engineer-m-w-d-vollzeit-remote",
+  "src": "join.com",
+  "mode": "remote",
+  "geo": "DE",
+  "loc": "Sinsheim (~40 мин от Landau) / полный remote",
+  "lang": "DE (B1+ вероятно ок)",
+  "posted": "опубл. 02.04.2026, висит на join + Remotive + Arbeitnow",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "remote + рядом с домом + точный стек; есть прямой телефон — можно позвонить"
+   ],
+   [
+    "warn",
+    "немецкоязычная команда — проверить на интервью"
+   ]
+  ],
+  "req": "n8n / Make / Zapier, связка инструментов через API/вебхуки/БД, интеграция ChatGPT и Claude в процессы продаж/PM/отчётности; умение кодить — плюс.",
+  "notes": "SEO-агентство, Steinsfurter Str. 1, 74889 Sinsheim. Телефон и email — из открытых каталогов компании.",
+  "c": {
+   "name": "Bastian Diers (директор)",
+   "email": "info@convact.com",
+   "phone": "+49 7261 9758238",
+   "li": "https://www.linkedin.com/in/bastian-diers/",
+   "how": "форма на join.com или звонок напрямую"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "tapok",
+  "t": 1,
+  "s": 90,
+  "ti": "n8n Automation Engineer",
+  "co": "TapOk",
+  "url": "https://djinni.co/jobs/756682-n8n-automation-engineer/",
+  "src": "Djinni",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "remote (UA)",
+  "lang": "UA/EN",
+  "posted": "старше — проверить",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "лучшее текстовое совпадение требований со всего рынка"
+   ],
+   [
+    "warn",
+    "объявление не из свежей волны — если закрыто, написать напрямую"
+   ]
+  ],
+  "req": "6+ мес n8n (включая кастомные ноды), 2+ года Python/JS, MySQL/PostgreSQL, REST/GraphQL/webhooks, Docker, Redis, OpenAI + Claude API, RAG.",
+  "notes": "Офис: Винница, Пирогова 71-а. Рекрутеры — Natalia Abashkina (Head of Recruitment), Dariia Dobriak. Прямой почты в открытом виде нет.",
+  "c": {
+   "name": "Natalia Abashkina (Head of Recruitment)",
+   "li": "https://www.linkedin.com/company/tap-ok",
+   "how": "отклик на Djinni или через LinkedIn компании"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "labeless",
+  "t": 1,
+  "s": 88,
+  "ti": "Junior Software Engineer (AI-Native)",
+  "co": "Labeless / Bytes & Pixels",
+  "url": "https://join.com/companies/bytes-and-pixels/16583252-junior-software-engineer-ai-native-m-f-d",
+  "src": "join.com",
+  "mode": "onsite",
+  "geo": "DE",
+  "loc": "Мюнхен",
+  "lang": "EN",
+  "posted": "05.06.2026",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "создано под тебя: Claude Code как основной инструмент + два выпущенных продукта — ровно их формат заявки"
+   ]
+  ],
+  "req": "Ищут человека, который руководит AI-агентами в разработке и отвечает за результат; вместо диплома — «покажите, что вы выпустили с AI-инструментами: репо, живой проект».",
+  "notes": "Riesstraße 16, 80992 München. Телефон и email — из Impressum bytes-and-pixels.de.",
+  "c": {
+   "name": "Benjamin Bachhuber (основатель)",
+   "email": "kontakt@bytes-and-pixels.de",
+   "phone": "+49 89 15002979",
+   "li": "https://de.linkedin.com/in/bachhuber",
+   "how": "форма на join.com или письмо основателю"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "n8ndevs",
+  "t": 3,
+  "s": 55,
+  "ti": "AI Automation Engineer — n8n + AI Agents + LLM",
+  "co": "n8n Devs (каталог, не работодатель)",
+  "url": "https://uk.linkedin.com/jobs/view/ai-automation-engineer-n8n-+-ai-agents-+-llm-integration-remote-at-n8n-devs-4449438462",
+  "src": "LinkedIn",
+  "mode": "remote",
+  "geo": "INT",
+  "loc": "каталог n8ndevs.com (Blandford Forum, UK)",
+  "lang": "EN",
+  "posted": "04.08.2026, свежесть не подтверждена",
+  "pay": null,
+  "fit": [
+   [
+    "warn",
+    "проверка понизила приоритет: «n8n Devs» — не работодатель, а каталог/маркетплейс; те же тексты идут на форуме n8n как [FOR HIRE] — самореклама исполнителей"
+   ]
+  ],
+  "req": "Формально — n8n + AI-агенты + LLM-интеграции, но конечный работодатель не назван.",
+  "notes": "Вчера стояло 88 баллов как Линия 1 — сегодняшняя проверка показала, что за объявлением нет прямого нанимателя. Оставил в списке только как канал, не как вакансию.",
+  "c": {
+   "how": "LinkedIn или каталог n8ndevs.com"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "elevenlabs",
+  "t": 1,
+  "s": 87,
+  "ti": "Automation Engineer (Influencers)",
+  "co": "ElevenLabs",
+  "url": "https://elevenlabs.io/careers/5bcd3475-8e38-42f1-897a-fa010ee6f9bd/automation-engineer-influencers",
+  "src": "careers",
+  "mode": "remote",
+  "geo": "INT",
+  "loc": "remote-first компания",
+  "lang": "EN",
+  "posted": "активна на Ashby и в LinkedIn",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "ровно твоя связка «n8n + свой код»; топ-бренд AI-рынка; локации включают Германию"
+   ],
+   [
+    "warn",
+    "конкуренция высокая — подаваться с обоими проектами"
+   ]
+  ],
+  "req": "No-code (Zapier/Make/n8n) и кастомный код (Python/JS) поверх API, вебхук-процессы, SQL, культура надёжности и чистых данных.",
+  "notes": "Локации: Германия, Ирландия, Лондон, Польша, Испания, США — remote. Зарплату и рекрутёра не публикуют.",
+  "c": {
+   "how": "форма Ashby: jobs.ashbyhq.com/elevenlabs"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "frozeneon",
+  "t": 1,
+  "s": 87,
+  "ti": "AI Automation Engineer (n8n / AI Video Pipeline)",
+  "co": "Frozeneon",
+  "url": "https://djinni.co/jobs/846085-ai-automation-engineer-n8n-ai-video-pipeline-/",
+  "src": "Djinni",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "полный remote, worldwide",
+  "lang": "EN — «достаточно для чтения доков»",
+  "posted": "01.09.2026",
+  "pay": {
+   "raw": "$2 000–3 000/мес",
+   "min": 2000,
+   "max": 3000,
+   "cur": "$",
+   "est": false,
+   "note": "из объявления"
+  },
+  "fit": [
+   [
+    "ok",
+    "n8n + Anthropic + твой опыт видеомонтажа и генеративных моделей — редкое двойное совпадение"
+   ],
+   [
+    "ok",
+    "вилка подтверждена, языковой барьер минимальный"
+   ]
+  ],
+  "req": "Конвейер AI-видео для CS2-контента: сложные n8n-workflow с очередями, ретраями и error handling, OpenAI и Anthropic API, видеогенерация/липсинк по API, YouTube Data/Instagram Graph API, OAuth.",
+  "notes": "GameDev/iGaming-холдинг, карьерная страница frozeneon.com/eng/career. HR отвечает за 2–3 дня. Контакты — Philip Dobshynskyi (Lead HR BP), Vlada Volko.",
+  "c": {
+   "name": "HR-команда Frozeneon",
+   "email": "hr@frozeneon.com",
+   "tg": "@frozeneon_hr",
+   "li": "https://www.linkedin.com/company/frozeneon",
+   "how": "почта или Telegram напрямую — отвечают за 2–3 дня"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "vetaion",
+  "t": 1,
+  "s": 85,
+  "ti": "AI Automation Engineer (Junior / Entry Level)",
+  "co": "Vetaion",
+  "url": "https://join.com/companies/vetaioncom/16351714-ai-automation-engineer-junior-entry-level",
+  "src": "join.com",
+  "mode": "?",
+  "geo": "DE",
+  "loc": "Garching (Мюнхен)",
+  "lang": "DE/EN",
+  "posted": "07.04.2026, листинг подтверждён",
+  "pay": {
+   "raw": "€50–70k/год ≈ €4 200–5 800/мес",
+   "min": 4167,
+   "max": 5833,
+   "cur": "€",
+   "est": false,
+   "note": "брутто, из объявления"
+  },
+  "fit": [
+   [
+    "ok",
+    "честный entry-уровень с реальной вилкой — лучшая подтверждённая зарплата в списке"
+   ],
+   [
+    "warn",
+    "формат работы уточнить; ты готов к переезду"
+   ]
+  ],
+  "req": "Entry-level AI-автоматизация, для выпускников или 1–2 лет опыта.",
+  "notes": "Engelbertstraße 6, München (HRB 301256). Публичной почты и телефона нет — только форма.",
+  "c": {
+   "name": "Nikolaus J. von Bary (директор)",
+   "li": "https://www.linkedin.com/company/vetaion/",
+   "how": "форма на join.com"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "immigrant",
+  "t": 1,
+  "s": 85,
+  "ti": "AI Automation Engineer",
+  "co": "Immigrant Invest",
+  "url": "https://jobs.dou.ua/companies/immigrant-invest/vacancies/368813/",
+  "src": "DOU",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "полный remote, гибкий график",
+  "lang": "UA/EN",
+  "posted": "06.08.2026, активна и в Deel ATS",
+  "pay": {
+   "raw": "competitive, обсуждается индивидуально",
+   "min": null,
+   "max": null,
+   "cur": null,
+   "est": false
+  },
+  "fit": [
+   [
+    "ok",
+    "n8n + CRM-интеграции = ровно твой опыт из Ufer; полностью удалённо, трек роста до Lead Automation Engineer"
+   ]
+  ],
+  "req": "Интеграции на n8n между Salesforce CRM, Google Workspace, Slack, WhatsApp; AI-решения (OpenAI) для генерации документов, обработки текста и мультиязычного анализа.",
+  "notes": "Подавать можно двумя каналами: форма DOU и напрямую в Deel ATS (jobs.deel.com/ImmigrantInvest). На LinkedIn у компании 16 открытых вакансий.",
+  "c": {
+   "li": "https://www.linkedin.com/company/immigrantinvest",
+   "how": "форма на DOU или напрямую через Deel ATS"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "doit",
+  "t": 1,
+  "s": 85,
+  "ti": "Make / n8n Automation Specialist",
+  "co": "DOIT Software",
+  "url": "https://jobs.dou.ua/companies/doit-software/vacancies/344288/",
+  "src": "DOU",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "за кордоном, віддалено — Германия подходит",
+  "lang": "EN",
+  "posted": "дата не раскрыта",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "полный матч по стеку + формат «full-time или проектно» — можно начать, не уходя с текущей работы"
+   ],
+   [
+    "ok",
+    "локация «за кордоном» прямо разрешает работу из Германии"
+   ]
+  ],
+  "req": "Проектирование многошаговых автоматизаций на Make.com/n8n; интеграция API, webhooks, чат-ботов, LLM и сторонних сервисов в end-to-end системы; JS/Python для кастомной логики.",
+  "notes": "Компания отдельно набирает n8n-разработчиков через doit.software/hire-n8n-developer — второй канал захода.",
+  "c": {
+   "how": "форма отклика на DOU"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "gismart",
+  "t": 1,
+  "s": 84,
+  "ti": "AI Automation Engineer (FitMe)",
+  "co": "Gismart",
+  "url": "https://jobs.ashbyhq.com/gismart/324aaf7b-554b-40a4-aee7-b02719751531",
+  "src": "DOU + Ashby",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "Киев / Варшава / полностью удалённо",
+  "lang": "EN",
+  "posted": "31.08.2026",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "LLM + low-code + API — твой стек; свежая вакансия, подача напрямую в ATS без посредников"
+   ],
+   [
+    "warn",
+    "маркетинговый контекст (генерация креативов), уровень не указан"
+   ]
+  ],
+  "req": "Построение workflow генерации креативов и маркетинговых кампаний для фитнес-приложения FitMe: интеграция API, LLM и low-code инструментов.",
+  "c": {
+   "how": "прямая подача через Ashby"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "kissmyapps",
+  "t": 2,
+  "s": 80,
+  "ti": "AI Automation Specialist / Martech Engineer",
+  "co": "Kiss My Apps",
+  "url": "https://jobs.dou.ua/companies/kiss-my-apps/vacancies/347162/",
+  "src": "DOU",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "віддалено (офисы Киев/Варшава опционально)",
+  "lang": "не указан",
+  "posted": "дата не раскрыта",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "прямое совпадение по инструментам без senior-требований; продуктовая компания со 100M+ пользователей"
+   ],
+   [
+    "warn",
+    "даты публикации нет — проверить актуальность"
+   ]
+  ],
+  "req": "Практика с n8n, Make, Zapier; логика сценариев (триггеры, условия, циклы, задержки, обработка ошибок), связка маркетинговых и операционных инструментов через AI/low-code.",
+  "c": {
+   "how": "форма на DOU; карьерная страница kissmyapps.com/career"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "crmoz",
+  "t": 2,
+  "s": 79,
+  "ti": "AI Automation Specialist / AI Integrator",
+  "co": "CRMOZ",
+  "url": "https://jobs.dou.ua/companies/crmoz/vacancies/336905/",
+  "src": "DOU",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "віддалено",
+  "lang": "EN",
+  "posted": "дата не раскрыта, профиль компании активен",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "агентство CRM-автоматизаций — прямое применение твоего опыта с CRM в n8n; уровень не senior"
+   ]
+  ],
+  "req": "Автоматизации на Make.com, n8n, Zapier, Zoho Flow; интеграция AI-моделей в workflow; проектная работа в экосистеме Zoho (официальный партнёр Zoho Corp).",
+  "c": {
+   "how": "форма отклика на DOU"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "avirise",
+  "t": 2,
+  "s": 78,
+  "ti": "AI-First Developer (Agentic Coding Engineer)",
+  "co": "Avirise",
+  "url": "https://jobs.dou.ua/companies/avirise/vacancies/368609/",
+  "src": "DOU",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "віддалено",
+  "lang": "не указан",
+  "posted": "свежая когорта (~август 2026)",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "редкий формат «AI-first»: Claude Code как рабочий инструмент — прямо в точку"
+   ],
+   [
+    "warn",
+    "ждут «сильную классическую базу» — то есть коммерческий опыт разработки"
+   ]
+  ],
+  "req": "База классической разработки + практика с агентными AI-инструментами (Claude Code и аналоги); создание фич end-to-end, выстраивание процессов работы с AI-агентами в команде мобильных приложений.",
+  "c": {
+   "how": "форма отклика на DOU"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "codebridge",
+  "t": 2,
+  "s": 77,
+  "ti": "AI-First Developer",
+  "co": "Codebridge Technology",
+  "url": "https://jobs.dou.ua/companies/codebridge-technology/vacancies/348293/",
+  "src": "DOU",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "віддалено",
+  "lang": "EN",
+  "posted": "дата не раскрыта",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "«оркестрировать AI-агентов и ревьюить их вывод» — это буквально описание твоего рабочего дня"
+   ]
+  ],
+  "req": "Разработка преимущественно через AI-ассистентов (Claude Code): высокая скорость доставки фич, оркестрация AI-агентов и ревью их вывода.",
+  "c": {
+   "how": "форма отклика на DOU"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "skelar",
+  "t": 2,
+  "s": 74,
+  "ti": "Automation AI Engineer — Leaply",
+  "co": "SKELAR",
+  "url": "https://jobs.dou.ua/companies/skelar/vacancies/346940/",
+  "src": "DOU",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "віддалено (Украина)",
+  "lang": "EN",
+  "posted": "дата не раскрыта",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "стек совпадает: Make/Zapier/n8n + AI-контент"
+   ],
+   [
+    "warn",
+    "желателен опыт B2C-подписочных продуктов и перф-маркетинга"
+   ]
+  ],
+  "req": "Автоматизация маркетинга и контента для habit-приложения Leaply: Airtable automations, Make/Zapier или кастомные решения, n8n в стеке.",
+  "c": {
+   "how": "форма на DOU; вакансии SKELAR также через Ashby"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "devart",
+  "t": 3,
+  "s": 68,
+  "ti": "AI Engineer",
+  "co": "Devart",
+  "url": "https://jobs.dou.ua/companies/devart/vacancies/368873/",
+  "src": "DOU",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "за кордоном, віддалено",
+  "lang": "EN",
+  "posted": "07.08.2026",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "явно допускают кандидатов за границей; продуктовая компания с 25-летней историей"
+   ],
+   [
+    "warn",
+    "роль ближе к ML/AI-инженерии (Python, LangGraph), чем к автоматизациям"
+   ]
+  ],
+  "req": "Построение AI-систем на Python + LLM, фреймворки типа LangGraph, агентные workflow; инструменты для БД, клиенты из Fortune-100.",
+  "c": {
+   "how": "форма отклика на DOU"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "iplaytech",
+  "t": 1,
+  "s": 86,
+  "ti": "Junior AI Automation Specialist",
+  "co": "iPlayTech",
+  "url": "https://djinni.co/jobs/841164-junior-ai-automation-specialist/",
+  "src": "Djinni",
+  "mode": "?",
+  "geo": "UA",
+  "loc": "iGaming-компания, 1000+ сотрудников",
+  "lang": "EN",
+  "posted": "~август 2026",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "коммерческий опыт НЕ требуется — просят ровно pet-проекты и интерес к AI: твой случай дословно"
+   ],
+   [
+    "warn",
+    "iGaming-домен; формат работы уточнить"
+   ]
+  ],
+  "req": "Интерес к AI-инструментам, личные проекты/автоматизации, опыт с AI-агентами или no-code/low-code. Работа: LLM, AI-агенты, API, внутренняя AI-платформа, менторы.",
+  "c": {
+   "how": "отклик через Djinni; у компании 9 открытых ролей на freehire.me"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "glorium",
+  "t": 2,
+  "s": 74,
+  "ti": "Automation Specialist",
+  "co": "Glorium Technologies",
+  "url": "https://djinni.co/jobs/834739-automation-specialist/",
+  "src": "Djinni",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "remote",
+  "lang": "EN",
+  "posted": "01.07.2026",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "полное совпадение по инструментам: n8n + Zapier + Python + SQL; уровень не задран"
+   ],
+   [
+    "warn",
+    "июльская дата — проверить актуальность"
+   ]
+  ],
+  "req": "Workflow-автоматизации на Make/n8n/Zapier для коммерческих проектов: API/webhook-интеграции CRM/ERP/маркетинга, Python-скрипты, PostgreSQL/MySQL.",
+  "c": {
+   "how": "отклик через Djinni"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "hiringband",
+  "t": 2,
+  "s": 73,
+  "ti": "Junior AI Engineer / AI Automation Specialist",
+  "co": "HiringBand",
+  "url": "https://djinni.co/jobs/822963-junior-ai-engineer-ai-automation-specialist/",
+  "src": "Djinni",
+  "mode": "?",
+  "geo": "UA",
+  "loc": "SEO-команда",
+  "lang": "EN",
+  "posted": "~май 2026",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "джуниорская планка, «n8n/Make/Zapier — плюс» — перекрываешь с запасом"
+   ],
+   [
+    "warn",
+    "вакансия не самая свежая"
+   ]
+  ],
+  "req": "Работа с LLM (промпты, тестирование, улучшение результатов), внутренние тулзы для команды; главное — быстрое обучение.",
+  "c": {
+   "how": "отклик через Djinni"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "betterme",
+  "t": 2,
+  "s": 72,
+  "ti": "AI Integration Engineer",
+  "co": "BetterMe",
+  "url": "https://betterme.breezy.hr/p/3ab266c51ff4-ai-integration-engineer",
+  "src": "Djinni + careers",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "офис/remote/hybrid на выбор",
+  "lang": "EN",
+  "posted": "~июнь 2026",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "редкий случай: Claude Code и n8n названы прямо в требованиях — твой главный инструмент"
+   ],
+   [
+    "warn",
+    "«strong background» и 1+ год коммерческого опыта — подача через проекты"
+   ]
+  ],
+  "req": "1+ год интеграции AI/LLM, мультиагентные системы (n8n, Claude Code, Agents SDK), коудинг-агенты (Cursor, Claude Code, Codex), Context Engineering и RAG.",
+  "c": {
+   "how": "прямой отклик на breezy.hr — без логина Djinni"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "bigd",
+  "t": 2,
+  "s": 70,
+  "ti": "AI Multi-Agent Engineer (n8n)",
+  "co": "Bigd (iGaming, LATAM)",
+  "url": "https://djinni.co/jobs/831212-ai-multi-agent-engineer-n8n/",
+  "src": "Djinni",
+  "mode": "?",
+  "geo": "UA",
+  "loc": "оператор iGaming, рынок LATAM, 500+ сотрудников",
+  "lang": "EN",
+  "posted": "~июнь 2026",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "кастомные n8n-ноды на TypeScript и Anthropic API — твои сильные стороны"
+   ],
+   [
+    "warn",
+    "LLMOps/advanced RAG тянут на уверенного мида — подавать как growth-позицию"
+   ]
+  ],
+  "req": "Self-hosted n8n (Docker, PostgreSQL, Redis queue mode), кастомные ноды на TypeScript, LLM API (OpenAI, Anthropic, Gemini), Langfuse/LangSmith, advanced RAG, human-in-the-loop.",
+  "c": {
+   "how": "отклик через Djinni; зеркало на Tezos Job Board"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "mayab",
+  "t": 3,
+  "s": 58,
+  "ti": "Listings Automation Lead (e-commerce, n8n, Python)",
+  "co": "Maya B, LLC",
+  "url": "https://djinni.co/jobs/846194-listings-automation-lead-e-commerce-amazon-me/",
+  "src": "Djinni + DOU",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "США (Флорида), команда в Украине; remote из-за рубежа ок",
+  "lang": "UA/EN",
+  "posted": "~03.09.2026",
+  "pay": {
+   "raw": "$1 500–2 000/мес",
+   "min": 1500,
+   "max": 2000,
+   "cur": "$",
+   "est": false
+  },
+  "fit": [
+   [
+    "warn",
+    "это лид: управление командой из 3 специалистов — подавать только при готовности к менеджменту"
+   ]
+  ],
+  "req": "Лид направления листингов на маркетплейсах (Amazon, Walmart, Mercado Libre): ревью кода/n8n-процессов/SQL, архитектура, BigQuery.",
+  "c": {
+   "how": "отклик через Djinni или DOU (vacancies/371780)"
+  },
+  "fresh": "новая 17.09"
+ },
+ {
+  "id": "comakers",
+  "t": 2,
+  "s": 84,
+  "ti": "Middle AI Engineer (AI Automation)",
+  "co": "COMAKERS",
+  "url": "https://jobs.dou.ua/companies/comakers/vacancies/366546/",
+  "src": "DOU",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "remote, можно из-за границы (EU TZ)",
+  "lang": "UA/EN",
+  "posted": "",
+  "pay": {
+   "raw": "$2 000–4 000/мес",
+   "min": 2000,
+   "max": 4000,
+   "cur": "$",
+   "est": false
+  },
+  "fit": [
+   [
+    "ok",
+    "стек точный, из Германии брать готовы, вилка подтверждена в заголовке DOU"
+   ],
+   [
+    "warn",
+    "заявлен Middle — закрывать планку проектами"
+   ]
+  ],
+  "req": "LLM API (OpenAI, Anthropic), агенты, tool-use, RAG; LangGraph / Pydantic AI.",
+  "notes": "Компания из Праги (comakers.cz). Есть зеркало на Work.ua (70–130 тыс. грн). Основатель сам AI Automation Specialist — можно писать напрямую в LinkedIn.",
+  "c": {
+   "name": "Artem Sotsenko (основатель)",
+   "li": "https://www.linkedin.com/in/artem-sotsenko/",
+   "how": "форма на DOU или напрямую основателю"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "betfamily",
+  "t": 2,
+  "s": 82,
+  "ti": "AI Multi-Agent Engineer (n8n)",
+  "co": "Bet Family",
+  "url": "https://djinni.co/jobs/848375-ai-multi-agent-engineer-n8n/",
+  "src": "Djinni",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "remote",
+  "lang": "EN",
+  "posted": "15.09.2026 — совсем свежая",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "опытная планка ровно твоя (1–3 года no-code/low-code)"
+   ],
+   [
+    "warn",
+    "iGaming/беттинг — реши, ок ли домен"
+   ]
+  ],
+  "req": "n8n как основной инструмент (Zapier/Make — плюс), минимум один агентный (не линейный) workflow, REST/OAuth2/webhooks; мульти-агентные системы, RAG, Salesforce/Sheets/Slack/TG.",
+  "c": {
+   "how": "отклик через Djinni; зеркало на freehire.me"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "vidalytics",
+  "t": 2,
+  "s": 82,
+  "ti": "AI Automation Engineer (In-House, MarTech SaaS)",
+  "co": "Vidalytics",
+  "url": "https://weworkremotely.com/remote-jobs/vidalytics-ai-automation-engineer-in-house-martech-video-saas",
+  "src": "WWR",
+  "mode": "remote",
+  "geo": "INT",
+  "loc": "remote",
+  "lang": "EN",
+  "posted": "июль 2026 — может закрываться",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "формулировка — зеркально твой профиль (n8n + свой TypeScript)"
+   ],
+   [
+    "warn",
+    "объявлению ~2 месяца"
+   ]
+  ],
+  "req": "«Руки в n8n и Zapier — и понимание, когда их бросить и написать кастомную оркестрацию».",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "brandback",
+  "t": 2,
+  "s": 82,
+  "ti": "Junior Software Engineer — Applied AI",
+  "co": "Brandback",
+  "url": "https://join.com/companies/brandbackde/14752435-junior-software-engineer-applied-ai",
+  "src": "join.com",
+  "mode": "onsite",
+  "geo": "DE",
+  "loc": "Берлин, офис 4 дня/нед",
+  "lang": "EN",
+  "posted": "команда <15 чел, опционы",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "агентный профиль + менторство"
+   ],
+   [
+    "warn",
+    "офис-first — переезд в Берлин (ты готов)"
+   ]
+  ],
+  "req": "AI-агенты и агентные workflow (поиск/оценка/покупка на площадках), LLM-фичи, продакшн end-to-end, менторство сеньоров.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "softcery",
+  "t": 2,
+  "s": 81,
+  "ti": "Strong Junior/Middle AI Engineer",
+  "co": "Softcery",
+  "url": "https://careers.softcery.com/strong-junior-middle-ai-engineer",
+  "src": "careers",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "remote, гибкий график",
+  "lang": "EN B2+",
+  "posted": "оплачивают обучение",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "Anthropic API и B2 — прямо в требованиях"
+   ],
+   [
+    "warn",
+    "Python-центрично (твой Python — второй язык после TS)"
+   ]
+  ],
+  "req": "1–3 года AI-инжиниринга; LLM API (OpenAI, Anthropic, Gemini), LangGraph/LangChain, RAG, embeddings, vector DB, сильный Python.",
+  "notes": "Компания из Таллина. Агрегатор показывает оценку $97–174k/год — это автоматическая прикидка платформы, в самом объявлении зарплаты нет, не опирайся на неё.",
+  "c": {
+   "name": "Elijah Atamas (CEO)",
+   "li": "https://www.linkedin.com/in/elijah-atamas/",
+   "how": "форма на careers.softcery.com или напрямую CEO"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "axe",
+  "t": 2,
+  "s": 80,
+  "ti": "AI Automation Developer",
+  "co": "Axe Automation (агентство)",
+  "url": "https://weworkremotely.com/remote-jobs/axe-automation-ai-automation-developer",
+  "src": "WWR",
+  "mode": "remote",
+  "geo": "INT",
+  "loc": "remote, «anywhere in the world»",
+  "lang": "EN",
+  "posted": "набирают постоянно",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "классическая точка входа в automation-агентство"
+   ],
+   [
+    "warn",
+    "клиентский темп; нужно записать видео-интро 1–2 мин"
+   ]
+  ],
+  "req": "Make/n8n/Zapier + AI-агенты + кастомные API-вызовы и JS/Python-скрипты для клиентов; заявка — письмом с видео-интро.",
+  "notes": "Агентство в фазе быстрого роста, сайт axeautomation.co. Основатель активен в LinkedIn и X (@itsedaxe) — видео-интро можно продублировать ему.",
+  "c": {
+   "name": "Ed Axe (основатель)",
+   "li": "https://www.linkedin.com/in/ed-axe/",
+   "how": "отклик через WeWorkRemotely + видео-интро"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "adkoch",
+  "t": 2,
+  "s": 79,
+  "ti": "Junior Automation / No-Code Spezialist",
+  "co": "AdKochMarketing",
+  "url": "https://www.arbeitnow.com/jobs/companies/adkochmarketing-gmbh/junior-automation-no-code-spezialist-vollzeit-oder-teilzeit-hamburg-482250",
+  "src": "Arbeitnow",
+  "mode": "onsite",
+  "geo": "DE",
+  "loc": "Гамбург, full/part-time",
+  "lang": "DE (healthcare-контент — B1+ впритык)",
+  "posted": "",
+  "pay": {
+   "raw": "€3 500–4 500/мес",
+   "min": 3500,
+   "max": 4500,
+   "cur": "€",
+   "est": false,
+   "note": "брутто, из объявления"
+  },
+  "fit": [
+   [
+    "ok",
+    "честный джуниор с зарплатой прямо в объявлении"
+   ],
+   [
+    "warn",
+    "немецкий контент для healthcare-клиентов"
+   ]
+  ],
+  "req": "Первый опыт n8n/Make/Zapier, Airtable, API-интеграции (CRM), явно хотят опыт OpenAI/Claude.",
+  "notes": "Spaldingstraße 218, Hamburg. Компанию ведут братья Leon и René Koch. Телефона и почты в открытом доступе нет — только контакт-форма adkochmarketing.de/kontakt.",
+  "c": {
+   "name": "René Koch (директор)",
+   "li": "https://de.linkedin.com/company/adkochmarketing",
+   "how": "форма на arbeitnow или контакт-форма сайта"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "longship",
+  "t": 2,
+  "s": 78,
+  "ti": "n8n Automation Specialist",
+  "co": "Longship Marketing",
+  "url": "https://remotive.com/remote/jobs/all-others/n8n-automation-specialist-3865794",
+  "src": "Remotive",
+  "mode": "remote",
+  "geo": "INT",
+  "loc": "remote, тег Poland/EU",
+  "lang": "EN",
+  "posted": "очень свежая",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "свежайшая, EU-таймзона"
+   ],
+   [
+    "warn",
+    "маленькое агентство, объём/стабильность неизвестны"
+   ]
+  ],
+  "req": "Фокус на n8n; деталей в сниппетах нет — открыть объявление.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "fractal",
+  "t": 2,
+  "s": 78,
+  "ti": "Strong Junior AI Automation Developer (Python)",
+  "co": "FRACTAL / Netpeak Group",
+  "url": "https://djinni.co/jobs/830901-strong-junior-ai-automation-developer-python/",
+  "src": "Djinni",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "remote (укр. группа компаний)",
+  "lang": "UA/EN",
+  "posted": "10.06.2026",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "таргетированно джуниорская"
+   ],
+   [
+    "warn",
+    "Python-first"
+   ]
+  ],
+  "req": "Python × LLM × автоматизация: RAG-системы, боты, AI-агенты (направление AI Solutions).",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "koelner",
+  "t": 2,
+  "s": 78,
+  "ti": "AI Automation Engineer (m/w/x)",
+  "co": "Kölner Stadt-Anzeiger Medien",
+  "url": "https://de.indeed.com/viewjob?jk=f3e5f07c15d0cbb0",
+  "src": "Indeed DE",
+  "mode": "hybrid",
+  "geo": "DE",
+  "loc": "Кёльн и remote",
+  "lang": "DE в работе",
+  "posted": "09.02.2026, ещё в индексе",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "стек совпадает почти построчно"
+   ],
+   [
+    "warn",
+    "«глубокий n8n» тянет на мида; медиахаус — немецкий в работе"
+   ]
+  ],
+  "req": "Глубокий n8n + low-code, prompt engineering, OpenAI/Google/Anthropic API, LangChain/CrewAI, RAG, REST/SOAP, OAuth2/JWT/webhooks, Docker/GitHub Actions/GCP.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "amsai",
+  "t": 2,
+  "s": 77,
+  "ti": "AI Automation Engineer N8N (FT/PT)",
+  "co": "AMS AI / Galactica Labs",
+  "url": "https://jobs.dou.ua/companies/ams-ai/vacancies/303824/",
+  "src": "DOU",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "remote, можно part-time",
+  "lang": "UA/EN",
+  "posted": "",
+  "pay": {
+   "raw": "$1 200–3 500/мес",
+   "min": 1200,
+   "max": 3500,
+   "cur": "$",
+   "est": false
+  },
+  "fit": [
+   [
+    "ok",
+    "прозрачная вилка, есть part-time — можно совмещать с текущей работой"
+   ],
+   [
+    "warn",
+    "ID вакансии заметно старее свежей волны — риск неактуальности; и просят «2+ года»"
+   ]
+  ],
+  "req": "2+ года сложных автоматизаций на n8n/Zapier/Make; операционализация AI-агентов и LLM в real-time пайплайны для healthcare-supply-chain платформы.",
+  "c": {
+   "how": "форма отклика на DOU"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "ten8",
+  "t": 2,
+  "s": 76,
+  "ti": "n8n Automation Engineer (AI and Integrations)",
+  "co": "Ten8.ai",
+  "url": "https://djinni.co/jobs/795385-n8n-automation-engineer-ai-and-integrations/",
+  "src": "Djinni",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "продуктовый стартап",
+  "lang": "UA/EN",
+  "posted": "",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "ровно твой опыт из Ufer в продуктовом масштабе"
+   ]
+  ],
+  "req": "Чинить и улучшать существующие workflow, строить новые; интеграции CRM/API/AI-сервисов в стабильные продакшн-потоки.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "cybercraft",
+  "t": 2,
+  "s": 76,
+  "ti": "n8n Automation Engineer",
+  "co": "CyberCraft",
+  "url": "https://jobs.dou.ua/companies/cybercraft/vacancies/340772/",
+  "src": "DOU",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "Львов + remote",
+  "lang": "UA/EN",
+  "posted": "",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "прямой n8n-матч"
+   ],
+   [
+    "warn",
+    "аутсорс — клиентские проекты"
+   ]
+  ],
+  "req": "Интеграция AI-платформ (OpenAI, Anthropic, Azure AI) в n8n-workflow; API/webhooks, синхронизация CRM и support-инструментов; SQL, error-handling, версионирование, деплой n8n-окружений.",
+  "notes": "Рекрутер — Nazar Lytvyn (профиль на Djinni). Общие контакты: cybercraftinc.com/contact-us, портал SmartRecruiters.",
+  "c": {
+   "name": "Nazar Lytvyn (IT-рекрутер)",
+   "how": "форма DOU или через профиль рекрутера на Djinni"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "devix",
+  "t": 2,
+  "s": 76,
+  "ti": "AI Automation Engineer (AI Agents / Integrations)",
+  "co": "Devix",
+  "url": "https://djinni.co/jobs/843397-ai-automation-engineer-ai-agents-integrations/",
+  "src": "Djinni",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "remote",
+  "lang": "EN",
+  "posted": "~2-я половина августа",
+  "pay": {
+   "raw": "FIX + KPI от $2 500/мес (зависит от опыта)",
+   "min": 2500,
+   "max": null,
+   "cur": "$",
+   "est": false
+  },
+  "fit": [
+   [
+    "ok",
+    "твои продакшн-проекты закрывают суть; вилка от $2 500"
+   ],
+   [
+    "warn",
+    "формальная планка «коммерческий опыт в проде»"
+   ]
+  ],
+  "req": "Продакшн-агенты, RAG, встраивание во внутренние системы с контролем доступа и логированием; open-source тулзы.",
+  "c": {
+   "how": "отклик через Djinni"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "dcf",
+  "t": 2,
+  "s": 76,
+  "ti": "AI Automation Engineer (Junior)",
+  "co": "DCF Verlag",
+  "url": "https://www.arbeitnow.com/jobs/companies/dcf-verlag-gmbh/ai-automation-engineer-junior-koblenz-331950",
+  "src": "Arbeitnow",
+  "mode": "onsite",
+  "geo": "DE",
+  "loc": "Кобленц (твоя земля, Rheinland-Pfalz)",
+  "lang": "DE",
+  "posted": "",
+  "pay": {
+   "raw": "€36–40k/год ≈ €3 000–3 300/мес",
+   "min": 3000,
+   "max": 3333,
+   "cur": "€",
+   "est": false,
+   "note": "брутто"
+  },
+  "fit": [
+   [
+    "ok",
+    "самый низкий входной барьер в Германии: образование и опыт не требуются — обучают"
+   ],
+   [
+    "warn",
+    "скромная вилка; вероятно онсайт"
+   ]
+  ],
+  "req": "AI-агенты и автоматизации: n8n, Zapier, Make, OpenAI, Anthropic; PR/коммуникационные workflow.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "caya",
+  "t": 2,
+  "s": 75,
+  "ti": "(Junior) Business Automation & AI Engineer",
+  "co": "Caya",
+  "url": "https://join.com/companies/caya/16001365-junior-business-automation-und-ai-engineer-m-w-d",
+  "src": "join.com",
+  "mode": "hybrid",
+  "geo": "DE",
+  "loc": "Берлин, гибко",
+  "lang": "DE/EN",
+  "posted": "объявление старое — команда нанимает волнами",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "та самая целевая роль; «подавайтесь, даже если не всё закрываете»"
+   ],
+   [
+    "warn",
+    "возраст объявления — проверить при подаче"
+   ]
+  ],
+  "req": "Анализ процессов по отделам и построение автоматизаций + AI внутри компании.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "allai",
+  "t": 2,
+  "s": 75,
+  "ti": "Automation Specialist (LLMs / n8n / Make)",
+  "co": "All AI Events",
+  "url": "https://djinni.co/jobs/848199-automation-specialist-llms-n8n-make/",
+  "src": "Djinni",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "remote",
+  "lang": "EN",
+  "posted": "середина сентября",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "стек совпадает полностью: n8n/Make + TS/Python + API"
+   ],
+   [
+    "warn",
+    "заявлен «expert-level» в автоматизациях — закрывать проектами"
+   ]
+  ],
+  "req": "Перевод ручных процессов в AI+automation workflows: n8n/Make, REST/webhooks/OAuth2, Airtable, lemlist, Gmail, рекламные API, JS/TS или Python.",
+  "c": {
+   "how": "отклик через Djinni"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "flowmetrica",
+  "t": 2,
+  "s": 74,
+  "ti": "AI Automation Engineer",
+  "co": "Flowmetrica",
+  "url": "https://djinni.co/jobs/824552-ai-automation-engineer/",
+  "src": "Djinni",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "remote",
+  "lang": "UA/EN",
+  "posted": "",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "стек твой"
+   ],
+   [
+    "warn",
+    "клиентская работа, деталей мало"
+   ]
+  ],
+  "req": "n8n/Make/Zapier + OpenAI, клиентские проекты.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "bix",
+  "t": 2,
+  "s": 74,
+  "ti": "AI Engineer focusing on n8n",
+  "co": "BIX Tecnologia",
+  "url": "https://remotive.com/remote/jobs/artificial-intelligence/ai-engineer-focusing-on-n8n-5483839",
+  "src": "Remotive",
+  "mode": "remote",
+  "geo": "INT",
+  "loc": "remote worldwide",
+  "lang": "EN",
+  "posted": "~конец авг 2026",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "worldwide remote"
+   ],
+   [
+    "warn",
+    "бразильская таймзона — проверить требуемое пересечение"
+   ]
+  ],
+  "req": "Переводить ручные процессы в n8n-workflow вместе с маркетингом/продажами; плюсом — LGPD.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "anakin",
+  "t": 2,
+  "s": 74,
+  "ti": "GTM Automation Engineer",
+  "co": "Anakin (YC)",
+  "url": "https://www.workatastartup.com/jobs/90433",
+  "src": "Y Combinator",
+  "mode": "remote",
+  "geo": "INT",
+  "loc": "remote",
+  "lang": "EN",
+  "posted": "",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "YC-стартап на твоём стеке"
+   ],
+   [
+    "warn",
+    "роль ближе к ops, чем к инженерии"
+   ]
+  ],
+  "req": "Сильный опыт n8n / Make / Zapier или аналогов; GTM/операционный уклон.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "tracks",
+  "t": 2,
+  "s": 72,
+  "ti": "AI & Automation Engineer (m/f/x)",
+  "co": "Tracks & Fields",
+  "url": "https://www.datacareer.de/job/16587/ai-automation-engineer-m-f-x/",
+  "src": "Berlin Startup Jobs",
+  "mode": "hybrid",
+  "geo": "DE",
+  "loc": "Берлин / гибрид / remote",
+  "lang": "EN",
+  "posted": "",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "агентная архитектура; право работы в Германии у тебя есть"
+   ],
+   [
+    "warn",
+    "«highly skilled» — подаваться как stretch"
+   ]
+  ],
+  "req": "On-premise AI-инфраструктура, тесты передовых моделей, агентный фреймворк для музыкальной индустрии.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "jobgether",
+  "t": 2,
+  "s": 72,
+  "ti": "Automation Specialist (n8n Expert)",
+  "co": "Jobgether",
+  "url": "https://www.linkedin.com/jobs/view/automation-specialist-n8n-expert-at-jobgether-4452399272",
+  "src": "LinkedIn",
+  "mode": "remote",
+  "geo": "INT",
+  "loc": "remote",
+  "lang": "EN",
+  "posted": "11.08.2026",
+  "pay": null,
+  "fit": [
+   [
+    "warn",
+    "платформа-посредник, конечный работодатель не назван"
+   ]
+  ],
+  "req": "Детали в сниппетах не видны.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "tokensaver",
+  "t": 2,
+  "s": 72,
+  "ti": "AI Automation Engineer (n8n, AI agents)",
+  "co": "Tokensaver",
+  "url": "https://djinni.co/jobs/752382-ai-automation-engineer-n8n-ai-agents-workflow/",
+  "src": "Djinni",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "remote",
+  "lang": "UA/EN",
+  "posted": "",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "автономность — твой конёк"
+   ],
+   [
+    "warn",
+    "соло-роль без инженерной команды рядом"
+   ]
+  ],
+  "req": "Единственный разработчик в паре с CMO — AI-автоматизация маркетинга.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "fondsfinanz",
+  "t": 3,
+  "s": 70,
+  "ti": "Automation Expert für N8N und Make.com",
+  "co": "Fonds Finanz",
+  "url": "https://www.fondsfinanz.de/karriere/jobs/stellenangebote/automation-expert-m-w-d-fuer-n8n-und-make-com-1676",
+  "src": "StepStone + сайт",
+  "mode": "hybrid",
+  "geo": "DE",
+  "loc": "Мюнхен, до 2 дней remote",
+  "lang": "DE (корпоративный — главный риск)",
+  "posted": "30 дней отпуска, бюджет на обучение",
+  "pay": null,
+  "fit": [
+   [
+    "warn",
+    "страховой брокер = корпоративный немецкий; B1+ — главный риск, но требования мягкие"
+   ]
+  ],
+  "req": "«Идеально — опыт make.com, n8n и LLM»; ценят желание учиться — джуниору доступно, несмотря на «Expert» в названии. Зарплату платформы оценивают в €36–60k/год.",
+  "c": {
+   "name": "Natascha Distler (рекрутер)",
+   "email": "n.distler@fondsfinanz.de",
+   "how": "написать рекрутеру напрямую или через fondsfinanz.de/karriere"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "ask24",
+  "t": 3,
+  "s": 70,
+  "ti": "Software Developer (AI and Web Tools)",
+  "co": "Ask24 AI",
+  "url": "https://jobs.dev.ua/jobs/49855666",
+  "src": "dev.ua",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "полный remote (Украина)",
+  "lang": "UA",
+  "posted": "",
+  "pay": {
+   "raw": "40 000–90 000 ₴/мес (по опыту)",
+   "min": 40000,
+   "max": 90000,
+   "cur": "₴",
+   "est": false
+  },
+  "fit": [
+   [
+    "ok",
+    "стек лёгкий для тебя; вилка покрывает junior-middle"
+   ],
+   [
+    "warn",
+    "просят бакалавра/студента IT «или релевантный опыт»; часть зеркал — как intern"
+   ]
+  ],
+  "req": "Участие в создании AI-агентов (ChatGPT, Qwen), Python-скрипты для интеграций и обработки данных, RAG-пайплайны, автоматизации на n8n, базовые веб-технологии и REST API.",
+  "notes": "Та же вакансия продублирована на Work.ua. На Management.com.ua висит как «Software Developer Intern» — уточнить уровень при отклике.",
+  "c": {
+   "how": "отклик на jobs.dev.ua или Work.ua"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "synergy",
+  "t": 3,
+  "s": 68,
+  "ti": "AI Automation Engineer / n8n & AI Agent Developer",
+  "co": "Synergy Effect",
+  "url": "https://community.n8n.io/t/hiring-ai-automation-engineer-n8n-ai-agent-developer/294904",
+  "src": "n8n Community",
+  "mode": "remote",
+  "geo": "INT",
+  "loc": "remote, проектная работа",
+  "lang": "EN",
+  "posted": "тред от 07.05.2026, живой",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "гибкий формат — можно совмещать"
+   ],
+   [
+    "warn",
+    "медленная воронка, треду 4 месяца"
+   ]
+  ],
+  "req": "n8n + AI-агенты для IT-компании с 20-летней историей; фриланс/контракт/долгосрочное партнёрство.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "cordes",
+  "t": 3,
+  "s": 68,
+  "ti": "Junior No-/Low-Code Automatisierungsexperte",
+  "co": "Cordes Consulting",
+  "url": "https://karriere.cordes-consulting.de/o/junior-it-systemintegrator-no-code-low-code-mwd-zapier-makecom-n8n-airtable-etc",
+  "src": "сайт компании",
+  "mode": "onsite",
+  "geo": "DE",
+  "loc": "Гамбург, центр — без home office",
+  "lang": "DE",
+  "posted": "",
+  "pay": {
+   "raw": "€6 000/мес",
+   "min": 6000,
+   "max": 6000,
+   "cur": "€",
+   "est": true
+  },
+  "fit": [
+   [
+    "ok",
+    "инструменты — один в один"
+   ],
+   [
+    "warn",
+    "строго офис в Гамбурге + немецкое агентство; вилку перепроверить"
+   ]
+  ],
+  "req": "Zapier, Make, n8n, Airtable; проектирование и автоматизация процессов, внутренняя система обучения. Формально просят диплом (Wirtschaftsinformatik/BWL/IT) — закрывать проектами.",
+  "c": {
+   "name": "David Cordes",
+   "email": "karriere@cordes-consulting.de",
+   "phone": "+49 40 239685190",
+   "how": "email/телефон напрямую из карьерных листингов"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "jobhunt",
+  "t": 3,
+  "s": 66,
+  "ti": "AI Engineer / AI Automation Specialist",
+  "co": "Job Hunt (MilTech)",
+  "url": "https://djinni.co/jobs/805819-ai-engineer-ai-automation-specialist-llm-pyth/",
+  "src": "Djinni",
+  "mode": "remote",
+  "geo": "UA",
+  "loc": "вероятно, работа из Украины",
+  "lang": "UA",
+  "posted": "",
+  "pay": null,
+  "fit": [
+   [
+    "warn",
+    "география под вопросом для кандидата в Германии — уточнять до подачи"
+   ]
+  ],
+  "req": "AI-автоматизации и агентные решения: от требований до прототипа; оборонный сектор.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "n8nprivate",
+  "t": 3,
+  "s": 65,
+  "ti": "[HIRING] N8N AI Automation Developer",
+  "co": "частный клиент (n8n forum)",
+  "url": "https://community.n8n.io/t/hiring-n8n-ai-automation-developer-remote/298577",
+  "src": "n8n Community",
+  "mode": "remote",
+  "geo": "INT",
+  "loc": "remote, оплата через Wise",
+  "lang": "EN",
+  "posted": "июнь 2026, 28+ откликов",
+  "pay": {
+   "raw": "$1 500/мес",
+   "min": 1500,
+   "max": 1500,
+   "cur": "$",
+   "est": false
+  },
+  "fit": [
+   [
+    "warn",
+    "ставка ниже немецкого рынка — годится только как подработка; высокая конкуренция"
+   ]
+  ],
+  "req": "Опытный n8n-разработчик: строить и поддерживать AI-workflow; оплата через Wise.",
+  "c": {
+   "how": "ответить в тред форума"
+  },
+  "fresh": "проверено 17.09"
+ },
+ {
+  "id": "workspacer",
+  "t": 3,
+  "s": 62,
+  "ti": "Junior AI Automation Developer (m/w/d)",
+  "co": "Workspacer",
+  "url": "https://www.stepstone.de/stellenangebote--Junior-AI-Automation-Developer-m-w-d-Muenchen-Workspacer--14392577-inline.html",
+  "src": "StepStone",
+  "mode": "hybrid",
+  "geo": "DE",
+  "loc": "Мюнхен + home office",
+  "lang": "DE — требуют свободный",
+  "posted": "",
+  "pay": null,
+  "fit": [
+   [
+    "ok",
+    "по навыкам — 90 баллов"
+   ],
+   [
+    "warn",
+    "требуют свободный немецкий — подать можно, честно указав B1+ и портфолио"
+   ]
+  ],
+  "req": "n8n (от простых до многошаговых), JS/TS-основы, SQL/Postgres/Airtable, LLM/агенты (промпты, tool-use). Диплом ИЛИ обучение — стены нет.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ },
+ {
+  "id": "n8nfreelance",
+  "t": 3,
+  "s": 60,
+  "ti": "Freelance/Agency AI Automation Engineer",
+  "co": "n8n Community (агентства)",
+  "url": "https://community.n8n.io/t/hiring-freelance-agency-ai-automation-engineer-n8n-make-apis-remote/275368",
+  "src": "n8n Community",
+  "mode": "remote",
+  "geo": "INT",
+  "loc": "remote, фриланс",
+  "lang": "EN",
+  "posted": "старый тред, 12+ откликов",
+  "pay": null,
+  "fit": [
+   [
+    "warn",
+    "вероятность низкая — один короткий питч, не больше"
+   ]
+  ],
+  "req": "n8n / Make / API-интеграции на подряд.",
+  "c": {},
+  "fresh": "обзор 16.09"
+ }
+]
