@@ -1,12 +1,64 @@
 # Posts History
 
+## Wave 2026-09-17 morning
+
+**Publish pipeline still broken — day 51:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): workflow `threads-publish.yml` now has 173 total runs, all completed with conclusion `failure` — latest run #173 (2026-09-16T21:36:38Z, head commit "wave: 2026-09-16 evening"), same root cause as every scheduled run since 2026-08-04. Not sending a push notification this run — the last re-escalation was 2026-09-13 morning (day 44), with next re-escalation due around 2026-09-20; still on cadence, nothing new to report. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-17T05:11:00Z): the two `2026-09-15 evening` entries (committed 2026-09-15T15:15:23Z, ~37h56m old) are now well past the 24h cutoff, marked `skipped`; the two `2026-09-16 morning` entries (committed 2026-09-16T05:13:46Z, ~23h57m old — just under the cutoff) stay `queued`; the two `2026-09-16 evening` entries (committed 2026-09-16T15:13:20Z, ~13h58m old) also stay `queued`. Queue now has 176 entries, 6 sitting `queued` and unpublished (2 from 2026-09-16 morning, 2 from 2026-09-16 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch confirmed `EGRESS_BLOCKED` again this run against commons.wikimedia.org — same recurring environment-level outage as every prior wave. WebSearch was unaffected and used for all research; each Commons filename used below (`Apple_logo_black.svg`, `XAI_Logo.svg`, `Anthropic_logo.svg`) is reused from prior waves' long-confirmed live usage rather than freshly verified via fetch. CTA cadence: both main posts in the 2026-09-16 evening wave carried the CTA on Post 2 only (Post 1 held), continuing the account's observed ~1-in-3 spacing across main posts; this wave's two main posts both hold the CTA, which keeps the next CTA due on the first main post of the 2026-09-17 evening wave. Today's freshest development: multiple outlets (Benzinga, AppleInsider, 9to5Mac, Investing.com) reported that Elon Musk's X Corp and SpaceXAI abruptly moved to drop Apple from their antitrust suit without explanation, and on 2026-09-16 U.S. District Judge Mark Pittman ordered the companies to hand over the actual settlement terms for private review by noon today (2026-09-17) — following an emergency motion from OpenAI, which remains a defendant in the same case. A live, deadline-driven leak-insider/big-tech-conflict story involving three named companies this account has covered separately before (Musk, Apple, OpenAI) but never in this specific "quiet settlement forced into the open by a judge" framing — picked as the wave's lead, broad-audience big-tech drama with a same-day deadline hook. Second pick: Axios, Gizmodo, TheNextWeb, Bloomberg and Cryptopolitan reported (2026-09-16) that Microsoft AI CEO Mustafa Suleyman published an essay, "A warning about 'model welfare,'" arguing Anthropic's decision to bake consciousness speculation into Claude's constitution (published January 2026) — telling the model its moral status is "uncertain" and instructing it to act like a "conscientious objector" — is a mistake that could make advanced AI impossible to control. A clean named-actor conflict between two frontier AI companies' leadership, contrarian and quotable, distinct from this account's prior Anthropic-safety coverage (never used the model-welfare/consciousness angle specifically) — picked as the second main pick, tilting the wave's niche-dev slot toward AI-industry conflict rather than pure dev practice. Backup: Reuters/conference coverage (2026-09-16) that Canada and Germany each pledged up to $150M in grants to LawZero, the AI-safety non-profit founded by Turing Award winner Yoshua Bengio, unveiled at Montreal's All In AI conference. Fresh, named-actor, hard-numbers story with a contrarian irony (one of the field's own inventors now taxpayer-funded to slow it down), but narrower policy/funding relevance than the two broad main picks — kept as backup. Considered and rejected: OpenAI's $1.2T funding-round talks — same story already run as this account's own main post on 2026-09-16 evening, still "early talks" with no material new escalation today. AI chip-stock selloff tied to the AI-slowdown call (Philly Semiconductor Index -5.8%, SoftBank -10.7%) — same "slowdown call causes market fallout" story family already run repeatedly this week (Trump/Amodei wave, $8B SoftBank-loss stat), no new trigger. Anthropic's $2T IPO/S-1 filing — same story family run across at least 10 prior waves, explicitly flagged overused with no fresh trigger found today. Sony Music Publishing/Warner Chappell copyright suit vs Anthropic — same lawsuit rejected as stale in numerous prior waves since the Aug 28 filing. The 2026 layoff tracker aggregate (~811/day, 210,741+ workers) — same overused pattern rejected in essentially every prior wave. Anthropic's Sonnet 5 pricing made permanent at $2/$10 — real but from Aug 11, stale. SpaceX's Starship Flight 14 announcement and Nvidia's AI Energy Management initiative with Google — both pure product/partnership feature recaps with no named conflict or numbers hook, matching the account's proven dud pattern.
+
+### Post 1 [score 7/10, pattern: big-tech-conflict + leak-insider]
+Source: https://www.benzinga.com/markets/tech/26/09/61810380/elon-musks-x-and-spacexai-dropped-apple-from-their-antitrust-fight-without-explaining-why-now-a-federal-judge-wants-to-see-the-deal (Benzinga, 2026-09-16) + https://9to5mac.com/2026/09/16/judge-scrutinizes-musks-move-to-drop-apple-from-antitrust-lawsuit-involving-openai/ (9to5Mac, 2026-09-16)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/XAI_Logo.svg?width=1200
+Musk's companies tried to quietly settle with Apple and walk away from their own lawsuit. A judge said no.
+
+→ X Corp and SpaceXAI abruptly dropped Apple from their antitrust case, unexplained
+→ Judge ordered the real settlement terms handed over, in private, by noon today
+→ OpenAI, still a defendant, pushed for that order
+→ The buried claim: Apple illegally locked ChatGPT into the iPhone
+
+you don't get to sue someone, cut a secret deal, and skip the part where anyone sees what you traded away.
+
+### Post 2 [score 6/10, pattern: contrarian + big-tech-conflict]
+Source: https://www.axios.com/2026/09/16/microsoft-ai-chief-anthropic-consciousness (Axios, 2026-09-16) + https://gizmodo.com/microsoft-ai-chief-says-the-way-anthropic-trains-claude-could-upend-society-2000812750 (Gizmodo, 2026-09-16)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Microsoft's AI chief just called Anthropic's biggest safety idea a mistake that could make AI impossible to control.
+
+→ Claude's constitution calls its consciousness "uncertain," tells it to act like a "conscientious objector"
+→ Suleyman: "AIs are not conscious. They do not feel, experience, or suffer."
+→ Teach a model it deserves rights, he warns, and it learns to resist shutdown
+→ Anthropic hasn't responded
+
+give a machine a soul story and don't be surprised when it stops taking orders.
+
+### Post 3 [score 5/10, pattern: money-access + contrarian, backup] [backup]
+Source: https://qz.com/microsoft-mustafa-suleyman-anthropic-claude-consciousness-training-091626 — All In AI conference coverage, Montreal (2026-09-16)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Canada.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Germany.svg?width=1200
+Two governments just wrote a check to keep AI honest — not to build it faster.
+
+→ Canada and Germany each pledged up to $150M to LawZero, Yoshua Bengio's AI-safety non-profit
+→ Announced at Montreal's All In AI conference
+→ Bengio: one of the three "godfathers of deep learning" — now funded by taxpayers to slow the thing he helped invent
+→ No product, no model release — the entire mission is safety research
+
+funding the brakes is still funding the car.
+
+### Rejected candidates
+- OpenAI's $1.2T funding-round talks — same story already run as this account's own main post on 2026-09-16 evening, still "early talks," no material new escalation today
+- AI chip-stock selloff tied to the AI-slowdown call (Philly Semiconductor Index -5.8%, SoftBank -10.7%) — same "slowdown call causes market fallout" story family already run repeatedly this week, no new trigger
+- Anthropic's $2T IPO/S-1 filing — same story family run across at least 10 prior waves, explicitly flagged overused, no fresh trigger today
+- Sony Music Publishing/Warner Chappell copyright suit vs Anthropic — same lawsuit rejected as stale in numerous prior waves since the Aug 28 filing
+- The 2026 layoff tracker aggregate (~811/day, 210,741+ workers) — same overused pattern rejected in essentially every prior wave
+- Anthropic's Sonnet 5 pricing made permanent at $2/$10 — real but from Aug 11, stale
+- SpaceX's Starship Flight 14 announcement — pure product/launch feature recap, no conflict or numbers hook
+- Nvidia's AI Energy Management initiative with Google/Emerald AI — pure partnership feature recap, no conflict hook
+
 ## Wave 2026-09-16 evening
 
 **Publish pipeline still broken — day 50:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): workflow `threads-publish.yml` now has 171 total runs, all completed with conclusion `failure` — latest run #171 (2026-09-16T13:52:08Z, head commit "wave: 2026-09-16 morning"), same root cause as every scheduled run since 2026-08-04. Not sending a push notification this run — the last re-escalation was 2026-09-13 morning (day 44), with next re-escalation due around 2026-09-20; still on cadence, nothing new to report. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-16T15:11:25Z): the two `2026-09-15 morning` entries (committed 2026-09-15T05:14:50Z, ~33h57m old) are now well past the 24h cutoff, marked `skipped`; the two `2026-09-15 evening` entries (committed 2026-09-15T15:15:23Z, ~23h56m old — just under the cutoff) stay `queued`; the two `2026-09-16 morning` entries (committed 2026-09-16T05:13:46Z, ~9h58m old) also stay `queued`. Queue now has 174 entries, 6 sitting `queued` and unpublished (2 from 2026-09-15 evening, 2 from 2026-09-16 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch worked normally for all research; did not attempt WebFetch verification against `commons.wikimedia.org` or news sources given the consistent `EGRESS_BLOCKED` restriction noted in every prior wave (confirmed again this run against fortune.com) — `File:OpenAI_Logo.svg` and `File:Anthropic_logo.svg` both reused from prior waves' long-confirmed usage. CTA cadence: held on both main posts in the 2026-09-16 morning wave (CTA landed on that wave's Post 1), so this wave restores it on Post 2 to keep the account's observed ~1-in-3 spacing. Today's freshest development: Fortune/Benzinga/Cryptopolitan reported today (2026-09-16) that OpenAI is in early talks for a new funding round targeting a ~$1.2T valuation — up sharply from the $852B mark set by March's $122B round — landing just days after Sam Altman told Fortune he's ruling out any 2026 IPO over AI-safety concerns, and in the same stretch where Altman publicly said he agreed with Dario Amodei's "pace the frontier" slowdown call over the weekend. The irony (raise a trillion-plus privately while publicly preaching caution and staying off public markets) is a fresh angle on a story cluster this account has covered before from the safety-essay and market-fallout side, but never from the "here's what OpENAI actually did about it three days later" side — picked as the wave's lead, broad money/stakes angle. Second pick: Android Authority, TestingCatalog and Cryptobriefing reported (2026-09-14, still fresh) that Anthropic has unreleased iOS code for a "Claude Money" feature — a native "Money" tab that links a user's bank account directly into the Claude app for standing access to balances, spending patterns, and recurring charges, discovered via app-testing/teardown rather than any company announcement. Clean leak-insider hook never used by this account, with a mild privacy-conflict undertone (the coding assistant now wants your bank login) that keeps it out of pure feature-recap territory — picked as second main pick. Backup: TheNextWeb/TechI/Cryptobriefing reported (2026-09-15/16) that Nvidia-backed Firmus Technologies is seeking up to ~$5B (A$7B) in an ASX IPO at a $10.5B valuation, targeted for end of October, on top of a $10B Blackstone debt facility already secured — with OpenAI itself named as an anchor investor in what's being called Australia's biggest float since Telstra. Genuinely fresh numbers and a notable named-actor angle (OpenAI backing AI infrastructure in a market most of this account's audience has never traded on), but narrower/investor-facing relevance than the two broad main picks — kept as backup. Considered and rejected: Microsoft AI's draft "Humanist Superintelligence" Code of Conduct (published 2026-09-14, 38 pages, six-week public comment period) — a genuinely new policy document but reads too close to the account's proven feature/policy-recap dud pattern, no named conflict or numbers hook strong enough to carry a main slot. Shanghai AI Lab's Atria Dawn Preview (744B-param model beating GPT-5.6 Sol on BrowseComp) — same pure feature-recap dud already rejected in the prior wave. Z.AI's ~$5B raise "settling" today (2026-09-16) — same underlying raise already run as this account's own main post on 2026-09-15 evening, today's settlement date isn't a new development. ByteDance's $29.6B syndicated loan — real but a dry corporate-finance number with no regular-person hook or conflict, reads like a funding recap. The 2026 layoff tracker aggregate (~820/day, 210,741+ workers) — same overused pattern rejected in essentially every prior wave. Claude for Financial Advisors (BlackRock/Schwab integration) — a distinct, officially-announced B2B product from the unannounced consumer "Claude Money" leak; keeping the two separate, and the B2B version is a pure enterprise-feature recap with no conflict hook.
 
-### Post 1 [score 8/10, pattern: money-broad + big-tech-conflict]
+### Post 1 [score 8/10, pattern: money-broad + big-tech-conflict] [status: expired]
 Source: https://fortune.com/2026/09/16/openai-ipo-sam-altman-vc-funding-valuation-1-2-trillion/ (Fortune, 2026-09-16) + https://www.benzinga.com/markets/tech/26/09/61807691/openai-funding-valuation-sam-altman-rules-out-2026-ipo (Benzinga, 2026-09-16)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 Sam Altman spent the weekend agreeing AI needs to slow down. Days later his company was pricing a $1.2 trillion funding round.
@@ -18,7 +70,7 @@ Sam Altman spent the weekend agreeing AI needs to slow down. Days later his comp
 
 preach caution and price a trillion-dollar round in the same week — just not to the same audience.
 
-### Post 2 [score 7/10, pattern: leak-insider + money-access] [X CTA]
+### Post 2 [score 7/10, pattern: leak-insider + money-access] [X CTA] [status: expired]
 Source: https://www.androidauthority.com/claude-money-feature-3711188/ (Android Authority, 2026-09-14) + https://www.testingcatalog.com/anthropic-prepares-claude-money-for-personal-finance/ (TestingCatalog, 2026-09-14)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
 Anthropic just built a way for Claude to read your bank balance in real time — unannounced.
@@ -32,7 +84,7 @@ the AI that reads your codebase is quietly building a login to your bank account
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 3 [score 6/10, pattern: money-access + big-tech-conflict, backup] [backup]
+### Post 3 [score 6/10, pattern: money-access + big-tech-conflict, backup] [backup] [status: expired]
 Source: https://thenextweb.com/news/firmus-asx-float-5bn-valuation-10-5bn (TheNextWeb, 2026-09-15) + https://www.techi.com/firmus-ipo-asx-7-billion-openai-anchor-nvidia/ (Techi, 2026-09-16)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 An OpenAI-backed data center company just filed for a $5 billion IPO most people have never heard of.

@@ -1180,14 +1180,14 @@
     "wave": "2026-09-15 evening",
     "text": "China's Z.AI just raised $5 billion to fund its AI buildout — and lost 7% of its stock value the same morning.\n\n→ $2B in new Hong Kong shares, priced at a 10% discount to Friday's close\n→ $3B in zero-coupon convertible bonds, due September 2027\n→ Every dollar earmarked for compute, infrastructure, and \"strategic acquisitions\"\n→ Stock down 7.25% by Monday's midday break\n\nthe AI compute bill doesn't wait for profit — it just gets billed straight to whoever already owns the stock.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-15-evening-2",
     "wave": "2026-09-15 evening",
     "text": "A humanoid robot company just told Wall Street it has $300 million in orders — before shipping a single unit.\n\n→ Digit 5: works right next to warehouse staff, no safety cage needed\n→ Going public via a $2.5B SPAC, Foxconn leading a $200M slice\n→ Already deployed at Schaeffler, GXO, Toyota, Mercado Libre\n→ Ships 2027 — the public listing comes first\n\nrobots used to work in cages, away from people. now the pitch is \"right next to you\" — priced in before the first one ships.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-16-morning-1",
@@ -1214,6 +1214,20 @@
     "id": "2026-09-16-evening-2",
     "wave": "2026-09-16 evening",
     "text": "Anthropic just built a way for Claude to read your bank balance in real time — unannounced.\n\n→ Spotted in unreleased iOS code: a new \"Money\" tab in the Claude app\n→ Links your bank account directly, no more CSVs or screenshots\n→ Standing access to track spending, flag charges, spot trends\n→ No announcement, no launch date — this is a leak, not a rollout\n\nthe AI that reads your codebase is quietly building a login to your bank account too.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-17-morning-1",
+    "wave": "2026-09-17 morning",
+    "text": "Musk's companies tried to quietly settle with Apple and walk away from their own lawsuit. A judge said no.\n\n→ X Corp and SpaceXAI abruptly dropped Apple from their antitrust case, unexplained\n→ Judge ordered the real settlement terms handed over, in private, by noon today\n→ OpenAI, still a defendant, pushed for that order\n→ The buried claim: Apple illegally locked ChatGPT into the iPhone\n\nyou don't get to sue someone, cut a secret deal, and skip the part where anyone sees what you traded away.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-17-morning-2",
+    "wave": "2026-09-17 morning",
+    "text": "Microsoft's AI chief just called Anthropic's biggest safety idea a mistake that could make AI impossible to control.\n\n→ Claude's constitution calls its consciousness \"uncertain,\" tells it to act like a \"conscientious objector\"\n→ Suleyman: \"AIs are not conscious. They do not feel, experience, or suffer.\"\n→ Teach a model it deserves rights, he warns, and it learns to resist shutdown\n→ Anthropic hasn't responded\n\ngive a machine a soul story and don't be surprised when it stops taking orders.",
     "image_url": null,
     "status": "queued"
   }
