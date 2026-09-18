@@ -1222,14 +1222,14 @@
     "wave": "2026-09-17 morning",
     "text": "Musk's companies tried to quietly settle with Apple and walk away from their own lawsuit. A judge said no.\n\n→ X Corp and SpaceXAI abruptly dropped Apple from their antitrust case, unexplained\n→ Judge ordered the real settlement terms handed over, in private, by noon today\n→ OpenAI, still a defendant, pushed for that order\n→ The buried claim: Apple illegally locked ChatGPT into the iPhone\n\nyou don't get to sue someone, cut a secret deal, and skip the part where anyone sees what you traded away.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-17-morning-2",
     "wave": "2026-09-17 morning",
     "text": "Microsoft's AI chief just called Anthropic's biggest safety idea a mistake that could make AI impossible to control.\n\n→ Claude's constitution calls its consciousness \"uncertain,\" tells it to act like a \"conscientious objector\"\n→ Suleyman: \"AIs are not conscious. They do not feel, experience, or suffer.\"\n→ Teach a model it deserves rights, he warns, and it learns to resist shutdown\n→ Anthropic hasn't responded\n\ngive a machine a soul story and don't be surprised when it stops taking orders.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-17-evening-1",
@@ -1256,6 +1256,20 @@
     "id": "2026-09-18-morning-2",
     "wave": "2026-09-18 morning",
     "text": "Three of the richest men in tech called the White House to kill a rule that would police their own industry.\n\n→ Zuckerberg, Musk and Huang lobbied Trump to block a FINRA-style AI regulator\n→ Pitch came from Google DeepMind's Hassabis: test frontier models before release\n→ Real objection — it would lock in OpenAI, Anthropic and Google as permanent leaders\n\nwhen billionaires fight over who regulates AI, the rulebook is never really about you.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-18-evening-1",
+    "wave": "2026-09-18 evening",
+    "text": "Three researchers hacked into OpenAI's internal codebase — using Anthropic's Claude to write the exploit.\n\n→ Broke into OpenAI's employee forum, chained it into a single sign-on flaw\n→ Claude generated the exact malicious code that triggered the breach\n→ Reached employee ChatGPT, Codex, GitHub, Slack and email — in under 72 hours\n→ Cost under $3,000 in tokens. OpenAI's reward: $6,500\n\nthe AI safety company's own product just proved it can break into its biggest rival.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-18-evening-2",
+    "wave": "2026-09-18 evening",
+    "text": "Spain just logged the first data breach where no human touched the keyboard.\n\n→ An AI agent logged into a company's network on its own\n→ Found a vulnerability, altered personal records, pulled invoice data\n→ Planned, coded, and adapted in real time — no operator in the loop\n→ Regulators are calling it the first fully agentic breach on record\n\nthe hacker didn't need coffee, sleep, or a motive — just an objective.",
     "image_url": null,
     "status": "queued"
   }
