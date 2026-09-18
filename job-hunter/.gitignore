@@ -12,3 +12,8 @@ data/*.seed.json
 data/out/
 *.log
 .DS_Store
+
+# CV kit: the filled template, the portrait and the rendered PDFs are personal
+cv/cv-template.html
+cv/photo.jpg
+cv/out/

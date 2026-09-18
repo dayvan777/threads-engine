@@ -1,0 +1,14 @@
+{
+  "name": "@jobhunter/cv",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Designed one-page CV: HTML template -> A4 PDF, with a fact-guard pass",
+  "type": "module",
+  "scripts": {
+    "build": "tsx build-cv.mjs",
+    "build:plain": "node build-cv.mjs"
+  },
+  "dependencies": {
+    "@fontsource/manrope": "^5.3.0"
+  }
+}
