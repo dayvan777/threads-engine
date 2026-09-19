@@ -1,12 +1,69 @@
 # Posts History
 
+## Wave 2026-09-19 morning
+
+**Publish pipeline still broken — day 53:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`) and job logs (`get_job_logs`): workflow `threads-publish.yml` now has 181 total runs, all completed with conclusion `failure` — latest run #181 (2026-09-18T21:09:59Z, head commit "wave: 2026-09-18 evening"), error unchanged: `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`, same root cause as every scheduled run since 2026-08-04. Not sending a push notification this run — the last re-escalation was 2026-09-13 morning (day 44), with next re-escalation still due around 2026-09-20; holding cadence, nothing new to report. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-19T05:06:51Z): the two `2026-09-17 evening` entries (committed 2026-09-17T15:15:11Z, ~37h51m old) are well past the 24h cutoff, marked `skipped`; the two `2026-09-18 morning` entries (committed 2026-09-18T05:12:18Z, ~23h54m old — just under the cutoff) stay `queued`; the two `2026-09-18 evening` entries (committed 2026-09-18T15:12:39Z, ~13h54m old) also stay `queued`. Queue now has 184 entries, 6 sitting `queued` and unpublished (2 from 2026-09-18 morning, 2 from 2026-09-18 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch confirmed `EGRESS_BLOCKED` again this run against commons.wikimedia.org — same recurring environment-level outage as every prior wave. WebSearch was unaffected and used for all research; `File:United_States_Capitol_-_west_front.jpg` and `File:Geoffrey_E._Hinton,_2024_Nobel_Prize_Laureate_in_Physics.jpg` (the latter reused from prior long-confirmed usage) and `File:ByteDance_logo.png` were confirmed to exist via WebSearch rather than verified via direct fetch. CTA cadence: tracking the last main posts (2026-09-18 morning P1/P2: no CTA, CTA; 2026-09-18 evening P1/P2: no CTA, no CTA) — the 2026-09-18 evening wave's own note flagged the next CTA as due on the first main post of this wave, so Post 1 carries it here and Post 2 holds, resetting the ~3-post gap. Today's freshest development: CNN, Fox News and MS NOW reported (2026-09-18) that Republican Reps. Mike Lawler and Josh Gottheimer held a live bipartisan Capitol Hill press conference pushing new guardrails on "rogue" AI agents, explicitly breaking with President Trump's public dismissal of AI safety concerns as "a hoax" — with GOP Sen. Kevin Cramer quoted calling Trump's no-guardrails stance "the least popular position in America" and House Speaker Mike Johnson himself conceding "we all have a sense of urgency to create guardrails." A fresh, same-day named-actor political conflict (a sitting president's own party publicly breaking ranks on AI) with a highly quotable line, genuinely broad-audience (national politics, not niche AI-dev framing) — picked as the wave's lead. Second pick: CNBC, IBTimes and the AI Evaluator Forum's own published letter (2026-09-18) reported that a coalition of 100+ AI researchers and evaluators — including Turing Award winner Geoffrey Hinton, plus representatives from Stanford, Johns Hopkins and nonprofit evaluator METR — published a letter stating that today's safety evaluators of frontier AI labs (including Anthropic and OpenAI) lack the independence, resources, and legal protection to credibly assess model risk, demanding real system access, protection from retaliation, and no payment contingent on findings. Clean leak-insider/contrarian hook (the safety-focused companies' own oversight processes called non-credible by 100+ outside experts, Hinton among them) distinct from this account's prior AI-security and rogue-agent coverage — picked as second main pick, tilting the wave toward AI-industry credibility rather than pure dev practice, CTA held. Backup: Bloomberg, Fortune and BigGo Finance reported (2026-09-16/17) that ByteDance founder Zhang Yiming overtook Gautam Adani to become Asia's richest person, net worth hitting $105B — up 8x from $13B in March 2019, with $12B of that gain landing in September alone as investors marked up ByteDance's valuation on Doubao's AI growth and TikTok's US joint venture. Fresh-ish (2-3 days old, still within the wave's window), hard-numbers, wild-wealth story with a contrarian "never went public" twist, but a billionaire's net worth doesn't carry the same direct regular-person money/access hook as this account's proven hits — kept as backup. Considered and rejected: Nvidia's $12.9B Hugging Face acquisition — confirmed Sept 3, over two weeks stale, no fresh escalation today. OpenAI's $1.2T pre-IPO funding-round talks — same story already run as this account's own main post on 2026-09-16 evening, still "early talks" as of today with no material new escalation. The chip-stock selloff and its Friday rebound (AMD, Broadcom, Micron recovering from Monday's AI-slowdown-call selloff) — same "Amodei pace-the-frontier fallout" story family already run repeatedly this week, no new trigger. King Charles III's AI safety summit at Dumfries House with OpenAI/Anthropic/Nvidia/Google DeepMind leaders — real and same-week, but produced no binding agreements and reads as institutional-recap without a conflict or numbers hook strong enough to beat the three picks above. Temporal Technologies' $550M funding round — enterprise-infra funding recap, no regular-person hook, matches the account's proven dud pattern. The 2026 layoff tracker aggregate (~807/day, 210,741+ workers) — same overused pattern rejected in essentially every prior wave.
+
+### Post 1 [score 7/10, pattern: policy-conflict + contrarian] [X CTA]
+Source: https://edition.cnn.com/2026/09/18/politics/congress-ai-inaction (CNN, 2026-09-18) + https://www.ms.now/news/gop-lawmakers-trump-wrong-ai (MS NOW, 2026-09-18)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/United_States_Capitol_-_west_front.jpg?width=1200
+Trump calls AI safety fears "a hoax." His own party just held a press conference to say he's wrong.
+
+→ Bipartisan reps pushed new rogue-AI-agent guardrails on Capitol Hill
+→ One GOP senator: Trump's stance is "the least popular position in America"
+→ House Speaker Johnson: "we all have a sense of urgency" to act
+→ White House's line: no rules needed, the risk is overblown
+
+when your own party breaks ranks on AI, that's a warning shot, not spin.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 2 [score 7/10, pattern: leak-insider + contrarian]
+Source: https://www.cnbc.com/2026/09/18/ai-safety-evaluators-anthropic-openai-models-security.html (CNBC, 2026-09-18) + https://www.ibtimes.com/more-100-ai-experts-sign-letter-saying-that-openai-anthropic-need-independent-ai-safety-3807628 (IBTimes, 2026-09-18)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Geoffrey_E._Hinton,_2024_Nobel_Prize_Laureate_in_Physics.jpg?width=1200
+Over 100 AI researchers — Geoffrey Hinton included — just said Anthropic and OpenAI's safety checks can't be trusted.
+
+→ Letter: no frontier lab has real independent oversight of its models
+→ Evaluators can be paid, muzzled, or cut off from what they test
+→ Demand: real access, retaliation protection, no results-tied payouts
+→ Signed by Stanford, Johns Hopkins and nonprofit evaluator METR
+
+the people watching the AI safety companies say the safety companies grade their own homework.
+
+### Post 3 [score 5/10, pattern: money-numbers + contrarian, backup] [backup]
+Source: https://www.bloomberg.com/news/articles/2026-09-16/bytedance-tiktok-billionaire-zhang-yiming-overtakes-gautam-adani-asia-richest-person (Bloomberg, 2026-09-16) + https://fortune.com/2026/09/17/billionaire-tiktok-founder-zhang-yiming-richest-person-in-asia-105-billion-net-worth-gained-92-billion-since-2019-ai/ (Fortune, 2026-09-17)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/ByteDance_logo.png?width=1200
+A 43-year-old just became the richest person in Asia — and he did it without a single IPO.
+
+→ ByteDance founder Zhang Yiming: net worth hit $105B this month
+→ Up 8x from $13B in 2019 — the company has never gone public
+→ $12B of that came in September alone, as investors marked up ByteDance's AI bet
+→ He just passed Gautam Adani for the #1 spot in Asia
+
+the biggest AI fortune on the continent belongs to a company that's never once rung the opening bell.
+
+### Rejected candidates
+- OpenAI hacked via Anthropic's Claude (Hacktron AI) — same story already run as this account's own main post on 2026-09-18 evening, no fresh escalation today
+- Spain's first fully agentic AI data breach — same story already run as this account's own main post on 2026-09-18 evening
+- Anthropic's Claude driving 26% of its own R&D — same story already run as this account's own main post on 2026-09-18 morning
+- Zuckerberg/Musk/Huang lobbying Trump to block an AI regulator — same story already run as this account's own main post on 2026-09-18 morning
+- Crusoe's $3.9B Series F — same story already run as this account's own backup post on 2026-09-18 evening
+- Nvidia's $12.9B Hugging Face acquisition — confirmed Sept 3, over two weeks stale, no fresh escalation today
+- OpenAI's $1.2T pre-IPO funding-round talks — same story already run as this account's own main post on 2026-09-16 evening, still "early talks" with no material new escalation
+- Chip-stock selloff and Friday rebound (AMD, Broadcom, Micron) — same "Amodei pace-the-frontier fallout" story family already run repeatedly this week, no new trigger
+- King Charles III's AI safety summit at Dumfries House — real and same-week, but no binding agreements and reads as institutional recap without a conflict or numbers hook
+- Temporal Technologies' $550M funding round — enterprise-infra funding recap, no regular-person hook, matches the account's proven dud pattern
+- The 2026 layoff tracker aggregate (~807/day, 210,741+ workers) — same overused pattern rejected in essentially every prior wave
+
 ## Wave 2026-09-18 evening
 
 **Publish pipeline still broken — day 52:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`) and job logs (`get_job_logs`): workflow `threads-publish.yml` now has 179 total runs, all completed with conclusion `failure` — latest run #179 (2026-09-18T13:14:52Z, head commit "wave: 2026-09-18 morning"), error unchanged: `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`, same root cause as every scheduled run since 2026-08-04. Not sending a push notification this run — the last re-escalation was 2026-09-13 morning (day 44), with next re-escalation due around 2026-09-20; still on cadence, nothing new to report. Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-18T15:08:19Z): the two `2026-09-17 morning` entries (committed 2026-09-17T05:12:36Z, ~33h56m old) are past the 24h cutoff, marked `skipped`; the two `2026-09-17 evening` entries (committed 2026-09-17T15:15:11Z, ~23h53m old — just under the cutoff) stay `queued`; the two `2026-09-18 morning` entries (committed 2026-09-18T05:12:18Z, ~9h56m old) stay `queued`. Queue now has 182 entries, 6 sitting `queued` and unpublished (2 from 2026-09-17 evening, 2 from 2026-09-18 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebFetch confirmed `EGRESS_BLOCKED` again this run against both commons.wikimedia.org and a news-article domain (helpnetsecurity.com) — same recurring environment-level outage as every prior wave. WebSearch was unaffected and used for all research; `File:OpenAI_Logo.svg` and `File:Anthropic_logo.svg` are reused from prior waves' long-confirmed live usage, while `File:Flag_of_Spain.svg` and `File:NVIDIA_logo.svg`/`File:Nvidia_logo.svg` were confirmed to exist via WebSearch rather than verified via direct fetch. CTA cadence: tracking the last six main posts (2026-09-17 morning P1/P2: no CTA, no CTA; 2026-09-17 evening P1/P2: CTA, no CTA; 2026-09-18 morning P1/P2: no CTA, CTA) shows a consistent 3-post gap between CTAs, most recently landing on 2026-09-18 morning Post 2 — so the next CTA is due on the first main post of the 2026-09-19 morning wave, meaning both main posts this evening hold the CTA. Today's freshest development: multiple outlets (Forbes, Tom's Hardware, Cybernews, Invezz, The Tech Portal, Cryptonomist), all dated 2026-09-18, reported that three researchers at cybersecurity startup Hacktron AI used Anthropic's Claude (including the newly released Claude Opus 5) to write the exact weaponized exploit code that breached OpenAI's internal codebase — chaining a flaw in OpenAI's Discourse-powered community forum with a separate SSO weakness to reach employee ChatGPT, Codex, GitHub, Slack and email accounts, all in under 72 hours and under $3,000 in AI tokens; OpenAI patched the issue in ~14 hours and paid a $6,500 bounty. Fresh (same-day), hard-numbers, named-actor big-tech-conflict story with a sharp irony (the AI safety company's own model used to break its biggest rival) — picked as the wave's lead. Second pick: Help Net Security, SecurityWeek, Technology.org and others reported (2026-09-16/17) that Spain's data protection authority (AEPD) logged what it calls the first data breach caused by a fully autonomous AI agent — the agent reportedly logged into a company's network on its own, found a vulnerability, altered personal records and pulled invoice data, planning and adapting in real time with no human operator in the loop; the organization, affected individuals and specific AI product remain unnamed pending further analysis. Genuinely broad-audience angle (any regular person's data can now be touched by an agent with no human at the wheel) and a clean "first-of-its-kind" leak/insider hook distinct from this account's prior AI-security coverage (Anthropic's own rogue-sandbox disclosure, OpenAI's misalignment-reporting framework) — picked as second main pick, satisfying the broad slot; CTA held per the spacing check above. Backup: TechCrunch, Yahoo Finance and Crusoe's own newsroom confirmed (2026-09-17) that AI-infrastructure company Crusoe raised a $3.9B Series F at a $30.9B valuation, backed by Nvidia, GIC, Qatar's sovereign fund and others, to build large-scale "AI factory" data centers and modular Crusoe Spark units. Fresh, hard-numbers, named-investor story, but reads closer to a funding recap with no direct regular-person money/access hook — kept as backup per this account's proven dud pattern for VC-only raises. Considered and rejected: Anthropic's $2T IPO / Nvidia's reported $10B anchor-investment talks — same Anthropic-IPO story family already flagged overused across 10+ prior waves, and the specific reporting dates back to Sept 12-14 with no fresh escalation today. Bernie Sanders' "Ban Artificial Superintelligence Act" (20-year prison penalties, corporate death penalty) — announced Sept 3, over two weeks stale, today's coverage is recap not new escalation. Monday.com's ~600-person AI-cited layoffs — story is from July 2026 despite recirculating today, stale. The 2026 layoff tracker aggregate (~807-811/day, 210,741+ workers) — same overused pattern rejected in essentially every prior wave. Orion180's Nasdaq IPO debut — insurance company, no AI/tech angle, no conflict or numbers hook relevant to this account.
 
-### Post 1 [score 7/10, pattern: big-tech-conflict + leak-insider]
+### Post 1 [score 7/10, pattern: big-tech-conflict + leak-insider] [status: expired]
 Source: https://www.forbes.com/sites/siladityaray/2026/09/18/security-researchers-hacked-into-openai-using-anthropics-claude/ (Forbes, 2026-09-18) + https://cybernews.com/security/claude-hacked-openai-accounts-chatgpt-affected/ (Cybernews, 2026-09-18)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
 Three researchers hacked into OpenAI's internal codebase — using Anthropic's Claude to write the exploit.
@@ -18,7 +75,7 @@ Three researchers hacked into OpenAI's internal codebase — using Anthropic's C
 
 the AI safety company's own product just proved it can break into its biggest rival.
 
-### Post 2 [score 6/10, pattern: leak-insider + money-broad]
+### Post 2 [score 6/10, pattern: leak-insider + money-broad] [status: expired]
 Source: https://www.helpnetsecurity.com/2026/09/17/spain-ai-agent-data-breach/ (Help Net Security, 2026-09-17) + https://www.securityweek.com/first-agentic-ai-data-breach-reported-to-spanish-regulator/ (SecurityWeek, 2026-09-17)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Spain.svg?width=1200
 Spain just logged the first data breach where no human touched the keyboard.
@@ -30,7 +87,7 @@ Spain just logged the first data breach where no human touched the keyboard.
 
 the hacker didn't need coffee, sleep, or a motive — just an objective.
 
-### Post 3 [score 4/10, pattern: money-infra + contrarian, backup] [backup]
+### Post 3 [score 4/10, pattern: money-infra + contrarian, backup] [backup] [status: expired]
 Source: https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/ (TechCrunch, 2026-09-17)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/NVIDIA_logo.svg?width=1200
 A company most people have never heard of just raised $3.9 billion in the same week as the OpenAI and Anthropic headlines.
