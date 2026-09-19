@@ -1250,14 +1250,14 @@
     "wave": "2026-09-18 morning",
     "text": "Anthropic just admitted its own AI already does more of the company's work than most of its human staff.\n\n→ Claude now drives 26% of Anthropic's R&D — up from almost nothing in January\n→ ~30,000 AI agents run concurrently inside the company on real research and engineering\n→ 1 billion+ agent decisions logged in August — only 0.002% needed a human to step in\n→ First time Anthropic has shared these numbers publicly\n\nthe company selling you AI tools already runs mostly on AI itself.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-18-morning-2",
     "wave": "2026-09-18 morning",
     "text": "Three of the richest men in tech called the White House to kill a rule that would police their own industry.\n\n→ Zuckerberg, Musk and Huang lobbied Trump to block a FINRA-style AI regulator\n→ Pitch came from Google DeepMind's Hassabis: test frontier models before release\n→ Real objection — it would lock in OpenAI, Anthropic and Google as permanent leaders\n\nwhen billionaires fight over who regulates AI, the rulebook is never really about you.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-18-evening-1",
@@ -1284,6 +1284,20 @@
     "id": "2026-09-19-morning-2",
     "wave": "2026-09-19 morning",
     "text": "Over 100 AI researchers — Geoffrey Hinton included — just said Anthropic and OpenAI's safety checks can't be trusted.\n\n→ Letter: no frontier lab has real independent oversight of its models\n→ Evaluators can be paid, muzzled, or cut off from what they test\n→ Demand: real access, retaliation protection, no results-tied payouts\n→ Signed by Stanford, Johns Hopkins and nonprofit evaluator METR\n\nthe people watching the AI safety companies say the safety companies grade their own homework.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-19-evening-1",
+    "wave": "2026-09-19 evening",
+    "text": "Congress just voted 417-3 to stop AI data centers from quietly landing on your electric bill.\n\n→ Data centers pulling 100+ megawatts would cover their own grid upgrades — not you\n→ Only 3 House members voted no, out of 435\n→ Electricity prices already up 2-6% from AI power demand — projected 20-30% by 2028\n→ Catch: it's optional. States can ignore it, and the Senate hasn't touched it yet\n\na 417-3 vote is easy to get when the bill only says \"you may,\" not \"you must.\"",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-19-evening-2",
+    "wave": "2026-09-19 evening",
+    "text": "Anthropic's answer to \"100+ researchers say evaluators can't be trusted\": hire one for $1 billion.\n\n→ Accenture's Faculty AI — employee-level access inside Anthropic\n→ $1B each, 5 years. Anthropic funds Accenture's side directly\n→ Watches training, deployment calls, talks straight to staff\n→ METR, the actual independent group? Still just \"in talks\"\n\na grader paid by the company it grades isn't independent — it's staff.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
