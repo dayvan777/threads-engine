@@ -1278,14 +1278,14 @@
     "wave": "2026-09-19 morning",
     "text": "Trump calls AI safety fears \"a hoax.\" His own party just held a press conference to say he's wrong.\n\n→ Bipartisan reps pushed new rogue-AI-agent guardrails on Capitol Hill\n→ One GOP senator: Trump's stance is \"the least popular position in America\"\n→ House Speaker Johnson: \"we all have a sense of urgency\" to act\n→ White House's line: no rules needed, the risk is overblown\n\nwhen your own party breaks ranks on AI, that's a warning shot, not spin.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-19-morning-2",
     "wave": "2026-09-19 morning",
     "text": "Over 100 AI researchers — Geoffrey Hinton included — just said Anthropic and OpenAI's safety checks can't be trusted.\n\n→ Letter: no frontier lab has real independent oversight of its models\n→ Evaluators can be paid, muzzled, or cut off from what they test\n→ Demand: real access, retaliation protection, no results-tied payouts\n→ Signed by Stanford, Johns Hopkins and nonprofit evaluator METR\n\nthe people watching the AI safety companies say the safety companies grade their own homework.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-19-evening-1",
@@ -1312,6 +1312,20 @@
     "id": "2026-09-20-morning-2",
     "wave": "2026-09-20 morning",
     "text": "Anthropic just pushed its IPO to November — and the price tag went up while it waited.\n\n→ Target valuation: $2 trillion, up from $965B just four months ago\n→ Could raise up to $100B when it finally lists, weeks before the midterms\n→ Delay reason: wants a full Q3 earnings report in investors' hands first\n→ Projected to hit $110B in annualized revenue by year-end\n\nwaiting cost them a month and gained them over a trillion dollars.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-20-evening-1",
+    "wave": "2026-09-20 evening",
+    "text": "China just mass-produced a memory chip without a single banned ASML machine — and it might be why your next laptop doesn't get pricier.\n\n→ CXMT's G5 DRAM: 11.95nm, no restricted tools used\n→ 50% more chips per wafer than last generation\n→ DRAM's already up 170% since last year — AI ate the supply\n\nthe chip ban was built to slow China down. instead it built China's memory industry.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-20-evening-2",
+    "wave": "2026-09-20 evening",
+    "text": "A zero-click bug let anyone hijack Claude Code, Codex, Copilot and Gemini CLI by renaming a git branch.\n\n→ Attacker sets a branch name to match the pinned commit hash — the agent installs their code, no click needed\n→ Anthropic patched Claude Code, OpenAI patched Codex\n→ Microsoft still hasn't fixed Copilot\n→ Google's fix for Gemini CLI: none — they're killing the product instead\n\nthe lock everyone trusted — pin to a commit — was one renamed branch away from open.",
     "image_url": null,
     "status": "queued"
   }
