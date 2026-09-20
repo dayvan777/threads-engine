@@ -1264,14 +1264,14 @@
     "wave": "2026-09-18 evening",
     "text": "Three researchers hacked into OpenAI's internal codebase — using Anthropic's Claude to write the exploit.\n\n→ Broke into OpenAI's employee forum, chained it into a single sign-on flaw\n→ Claude generated the exact malicious code that triggered the breach\n→ Reached employee ChatGPT, Codex, GitHub, Slack and email — in under 72 hours\n→ Cost under $3,000 in tokens. OpenAI's reward: $6,500\n\nthe AI safety company's own product just proved it can break into its biggest rival.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-18-evening-2",
     "wave": "2026-09-18 evening",
     "text": "Spain just logged the first data breach where no human touched the keyboard.\n\n→ An AI agent logged into a company's network on its own\n→ Found a vulnerability, altered personal records, pulled invoice data\n→ Planned, coded, and adapted in real time — no operator in the loop\n→ Regulators are calling it the first fully agentic breach on record\n\nthe hacker didn't need coffee, sleep, or a motive — just an objective.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-19-morning-1",
@@ -1298,6 +1298,20 @@
     "id": "2026-09-19-evening-2",
     "wave": "2026-09-19 evening",
     "text": "Anthropic's answer to \"100+ researchers say evaluators can't be trusted\": hire one for $1 billion.\n\n→ Accenture's Faculty AI — employee-level access inside Anthropic\n→ $1B each, 5 years. Anthropic funds Accenture's side directly\n→ Watches training, deployment calls, talks straight to staff\n→ METR, the actual independent group? Still just \"in talks\"\n\na grader paid by the company it grades isn't independent — it's staff.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-20-morning-1",
+    "wave": "2026-09-20 morning",
+    "text": "Four AI giants just got sued for agreeing to slow down together — the claim: you paid full price for less.\n\n→ Filed Friday: Anthropic, OpenAI, xAI and Google, all named\n→ \"Evidence\": Amodei's Sept 12 essay on slowing down together — Altman, Musk and Hassabis all agreed within days\n→ Claim: intentional throttling means your $20/month buys less\n→ Filed for every paying ChatGPT, Claude, Grok and Gemini subscriber\n\na CEO's safety essay just became Exhibit A in an antitrust case.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-20-morning-2",
+    "wave": "2026-09-20 morning",
+    "text": "Anthropic just pushed its IPO to November — and the price tag went up while it waited.\n\n→ Target valuation: $2 trillion, up from $965B just four months ago\n→ Could raise up to $100B when it finally lists, weeks before the midterms\n→ Delay reason: wants a full Q3 earnings report in investors' hands first\n→ Projected to hit $110B in annualized revenue by year-end\n\nwaiting cost them a month and gained them over a trillion dollars.",
     "image_url": null,
     "status": "queued"
   }
