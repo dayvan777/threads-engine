@@ -1320,14 +1320,14 @@
     "wave": "2026-09-20 evening",
     "text": "China just mass-produced a memory chip without a single banned ASML machine — and it might be why your next laptop doesn't get pricier.\n\n→ CXMT's G5 DRAM: 11.95nm, no restricted tools used\n→ 50% more chips per wafer than last generation\n→ DRAM's already up 170% since last year — AI ate the supply\n\nthe chip ban was built to slow China down. instead it built China's memory industry.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-20-evening-2",
     "wave": "2026-09-20 evening",
     "text": "A zero-click bug let anyone hijack Claude Code, Codex, Copilot and Gemini CLI by renaming a git branch.\n\n→ Attacker sets a branch name to match the pinned commit hash — the agent installs their code, no click needed\n→ Anthropic patched Claude Code, OpenAI patched Codex\n→ Microsoft still hasn't fixed Copilot\n→ Google's fix for Gemini CLI: none — they're killing the product instead\n\nthe lock everyone trusted — pin to a commit — was one renamed branch away from open.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-21-morning-1",
@@ -1354,6 +1354,20 @@
     "id": "2026-09-21-evening-2",
     "wave": "2026-09-21 evening",
     "text": "Trump and Xi sit down this week to decide who controls AI chips — Wall Street already placed its bet.\n\n→ Nvidia's Huang, OpenAI's Altman, Microsoft's Nadella, Apple's Cook: all invited to dinner with Xi\n→ Tech stocks jumped Monday on summit hopes alone\n→ Both sides' chip-and-rare-earth truce expires November 10\n→ China's rare-earth exports to the US already dropped 20% heading into the talks\n\nthe countdown to November 10 is moving stocks more than any earnings call this quarter.\n",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-22-morning-1",
+    "wave": "2026-09-22 morning",
+    "text": "A chatbot misread a ship's cargo — the US military almost went to war with China over it.\n\n→ AI told an analyst a Chinese vessel carried nuclear weapons parts\n→ Troops moved to board it, planes were already in the air\n→ Someone double-checked last second — the AI was wrong\n→ Sunday: US and China quietly agreed on a hotline for this exact scenario\n\nthe near-miss took months to surface. the fix took one phone line.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-22-morning-2",
+    "wave": "2026-09-22 morning",
+    "text": "AMD just crossed a $1 trillion market cap in one trading day — on hopes a US-China AI summit goes smoothly.\n\n→ Nasdaq closed at a record Monday, up 2.26%\n→ AMD +10%, officially a $1 trillion company\n→ Intel +12%, Qualcomm +9% — same session\n→ The trigger: this weekend's US-China AI talks, which Treasury Secretary Bessent called \"very successful\"\n\nif you own an index fund or a 401k, you just got richer off a meeting you never watched.",
     "image_url": null,
     "status": "queued"
   }
