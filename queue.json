@@ -1376,14 +1376,14 @@
     "wave": "2026-09-22 evening",
     "text": "Trump cleared Nvidia to sell AI chips to China — Beijing said no thanks, and it's costing Jensen Huang $30 billion.\n\n→ Every H200 gets US-inspected in transit, Nvidia pays 25% of each sale to the Treasury\n→ China's answer since December: zero chips approved\n→ KeyBanc: Chinese demand could be 1.5M chips/year — about $30B Nvidia isn't collecting\n→ Trump: Beijing \"chose not to\" buy — they'd rather build their own\n\nthe chip war didn't need new restrictions. the buyer just stopped showing up.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-22-evening-2",
     "wave": "2026-09-22 evening",
     "text": "Tomorrow, OpenAI, Anthropic and DeepSeek brief the UN Security Council together — the industry warning its own creation could go rogue.\n\n→ Sept 23: Altman appears in person, Anthropic and DeepSeek send reps too\n→ First time this many AI rivals have faced the Council together\n→ Weeks earlier, Anthropic's Amodei warned: rogue AI swarms could seize the internet in 6-12 months\n\nthe companies racing to build it are now asking the UN to help stop it.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-23-morning-1",
@@ -1396,6 +1396,20 @@
     "id": "2026-09-23-morning-2",
     "wave": "2026-09-23 morning",
     "text": "A company under US sanctions since 2023 has been quietly buying billions in banned Nvidia chips — through a subsidiary Washington forgot to blacklist.\n\n→ Inspur Group: blacklisted. Its California unit Aivres: not\n→ Aivres shipped $5.6B to Southeast Asia since 2024, $3B+ in Blackwell servers\n→ Those servers quietly reached ByteDance and Alibaba in China\n→ Trump and Xi meet tomorrow on chips — this loophole is what's clouding the room\n\nthe ban had a name on it. the shipment found one it didn't.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-23-evening-1",
+    "wave": "2026-09-23 evening",
+    "text": "OpenAI just cut the price of frontier AI in half — and quietly admitted the \"safety premium\" was never real.\n\n→ GPT-6 Sol: $2/$10 per million tokens — half of Astra's price, newer model\n→ Luna: $0.10/$0.50 — near giveaway pricing\n→ Landed a day after xAI's Grok 4.7 undercut everyone\n→ OpenAI and Anthropic had held $10/$50 pricing for months. That truce just ended\n\nif $2 buys the same safety $10 did last month, the $10 was never about safety.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-23-evening-2",
+    "wave": "2026-09-23 evening",
+    "text": "The senators writing America's AI laws aren't allowed to use the AI they're regulating.\n\n→ Senate staff get 3 basic chat tools: Copilot Chat, Gemini Chat, ChatGPT Enterprise\n→ Agentic tools — Claude Code, Codex, Cowork — are off-limits, the exact tech at the center of the AI safety debate\n→ The rule came from an internal sergeant-at-arms memo, never made public\n→ Industry advocates: how do you regulate a tool you've never opened\n\nCongress is drafting rules for AI agents it isn't allowed to run.",
     "image_url": null,
     "status": "queued"
   }
