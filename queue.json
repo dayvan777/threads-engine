@@ -1348,28 +1348,28 @@
     "wave": "2026-09-21 evening",
     "text": "A California retiree put 30% of his net worth into Anthropic \"stock\" that Anthropic says doesn't legally exist yet.\n\n→ Spread across 8 brokerages chasing early exposure before the IPO\n→ Anthropic warned 8 platforms, Forge and Hiive included, unauthorized transfers are void\n→ Private valuation: near $2 trillion. The real listing keeps slipping, now eyed for October\n\nyou can wire money into paper with Anthropic's name on it. whether it's a real share is Anthropic's call, not yours.\n",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-21-evening-2",
     "wave": "2026-09-21 evening",
     "text": "Trump and Xi sit down this week to decide who controls AI chips — Wall Street already placed its bet.\n\n→ Nvidia's Huang, OpenAI's Altman, Microsoft's Nadella, Apple's Cook: all invited to dinner with Xi\n→ Tech stocks jumped Monday on summit hopes alone\n→ Both sides' chip-and-rare-earth truce expires November 10\n→ China's rare-earth exports to the US already dropped 20% heading into the talks\n\nthe countdown to November 10 is moving stocks more than any earnings call this quarter.\n",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-22-morning-1",
     "wave": "2026-09-22 morning",
     "text": "A chatbot misread a ship's cargo — the US military almost went to war with China over it.\n\n→ AI told an analyst a Chinese vessel carried nuclear weapons parts\n→ Troops moved to board it, planes were already in the air\n→ Someone double-checked last second — the AI was wrong\n→ Sunday: US and China quietly agreed on a hotline for this exact scenario\n\nthe near-miss took months to surface. the fix took one phone line.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-22-morning-2",
     "wave": "2026-09-22 morning",
     "text": "AMD just crossed a $1 trillion market cap in one trading day — on hopes a US-China AI summit goes smoothly.\n\n→ Nasdaq closed at a record Monday, up 2.26%\n→ AMD +10%, officially a $1 trillion company\n→ Intel +12%, Qualcomm +9% — same session\n→ The trigger: this weekend's US-China AI talks, which Treasury Secretary Bessent called \"very successful\"\n\nif you own an index fund or a 401k, you just got richer off a meeting you never watched.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-22-evening-1",
@@ -1382,6 +1382,20 @@
     "id": "2026-09-22-evening-2",
     "wave": "2026-09-22 evening",
     "text": "Tomorrow, OpenAI, Anthropic and DeepSeek brief the UN Security Council together — the industry warning its own creation could go rogue.\n\n→ Sept 23: Altman appears in person, Anthropic and DeepSeek send reps too\n→ First time this many AI rivals have faced the Council together\n→ Weeks earlier, Anthropic's Amodei warned: rogue AI swarms could seize the internet in 6-12 months\n\nthe companies racing to build it are now asking the UN to help stop it.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-23-morning-1",
+    "wave": "2026-09-23 morning",
+    "text": "Banks are warning that letting AI shop for you might be the easiest way yet to lose your money.\n\n→ NatWest, Bank of America + 3 more banks just set rules for AI shopping agents\n→ Agents can type your card number into checkout, no second look\n→ At John Lewis, AI-agent shopping traffic jumped from 0.3% to 2.5% of searches in a year\n→ Half of Americans already let AI help buy something. Only 1 in 4 would hand it the payment\n\nthe industry shipped the checkout button before anyone built the seatbelt.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-23-morning-2",
+    "wave": "2026-09-23 morning",
+    "text": "A company under US sanctions since 2023 has been quietly buying billions in banned Nvidia chips — through a subsidiary Washington forgot to blacklist.\n\n→ Inspur Group: blacklisted. Its California unit Aivres: not\n→ Aivres shipped $5.6B to Southeast Asia since 2024, $3B+ in Blackwell servers\n→ Those servers quietly reached ByteDance and Alibaba in China\n→ Trump and Xi meet tomorrow on chips — this loophole is what's clouding the room\n\nthe ban had a name on it. the shipment found one it didn't.",
     "image_url": null,
     "status": "queued"
   }
