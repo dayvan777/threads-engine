@@ -1,12 +1,64 @@
 # Posts History
 
+## Wave 2026-09-25 morning
+
+**Publish pipeline still broken — day 53:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`) and job logs (`get_job_logs`): workflow `threads-publish.yml` now has 205 total runs, all completed with conclusion `failure` — latest run #205 (2026-09-24T21:43:09Z, head commit "wave: 2026-09-24 evening"), error unchanged: `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`, same root cause as every scheduled run since 2026-08-04. Not sending a push notification this run — no material change to the pipeline status since the last re-escalation (2026-09-21), holding the ~weekly cadence (next one still due around 2026-09-27). Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-25T05:13:27Z): the two `2026-09-24 morning` entries (committed 2026-09-24T05:15:20Z, ~23h58m old and would cross 24h before this wave's push lands) marked `skipped`; the two `2026-09-24 evening` entries (committed 2026-09-24T15:20:24Z, ~13h53m old) stay `queued`. Queue now has 208 entries, 4 sitting `queued` and unpublished (2 from 2026-09-24 evening, 2 new from this wave).
+
+**Note on tooling this run:** WebFetch hit `EGRESS_BLOCKED` again this run against finance.yahoo.com, bankinfosecurity.com and pymnts.com (all tested directly) — same recurring environment-level restriction as every prior wave; WebSearch was unaffected and used for all research, including confirming file existence for media. File titles below (`Apple_Logo.svg`, `Google_2026_logo.svg`) were newly confirmed to exist via WebSearch this run; `OpenAI_2017-22_logo.svg` and `DeepSeek_logo.svg` are reused from prior waves' long-confirmed live usage. CTA cadence: tracking the last main posts (2026-09-24 evening P1/P2: no CTA, no CTA) confirms neither post that wave carried a CTA, and per that wave's own note the next one was flagged as due on the first main post of this wave — Post 1 carries it. Today's freshest development: MacRumors, Macworld and multiple outlets (pricing confirmed 2026-09-09, on-sale expansion to 20 more countries 2026-09-25) reported the iPhone 18 Pro/Pro Max launched $100 more expensive than the iPhone 17 line ($1,199/$1,299), with reporting tying the increase to a global DRAM shortage — Samsung, SK Hynix and Micron (95%+ of world DRAM supply) have diverted fab capacity from phone memory to high-bandwidth memory for AI accelerators, the same shortage that already hit Apple's Mac and iPad pricing earlier this year. A genuinely broad-audience (anyone buying a phone, not niche-dev) money story with hard numbers and a sharp contrarian gotcha (you don't need to own AI stock to pay the AI-boom tax) — picked as the wave's lead, carrying this wave's CTA. Second pick: BankInfoSecurity, AI Weekly and BigGo Finance (all 2026-09-24) reported Google, OpenAI and Anthropic are courting former White House AI policy advisor Sriram Krishnan to lead a self-regulatory "Frontier AI Standards Agency" — modeled on FINRA, not a government body, with Condoleezza Rice and VC David Friedberg also approached for leadership seats, targeting a launch by end of 2026; Krishnan's own parting line from his White House role ("there will not be an FDA for AI") gives it a sharp quotable edge. A genuine leak-insider/conflict-drama story (the companies the safety debate is about now writing their own rules) with broad-audience regulatory relevance — picked as second main pick, no CTA per cadence. Backup: PYMNTS, TechStartups and Dealroom (all 2026-09-24) reported DeepSeek's annualized revenue run rate hit $1 billion, up from under $500M a few months ago, driven by a 2.3x-4.5x API price hike last month with no reported customer attrition, and an 82.9% gross margin through July — the company is now finalizing a $7.5B raise ahead of a Shanghai listing. Genuine money/reversal story with hard numbers (the "cheap AI" disruptor got a lot less cheap) and a real contrarian gotcha, but thinner on direct regular-people stakes than the two main picks — kept as backup. Considered and rejected: the Trump-Xi summit's actual outcome (AI incident hotline agreed, chip export controls left off the agenda) — same story already run as this account's own backup pick last wave (2026-09-24 evening Post 3), no fresh escalation beyond what was already covered. Amazon opening Seller Central APIs to outside AI agents (Claude/Amazon Quick beta, announced at Amazon Accelerate Sept 23) — pure product/feature recap, matches the account's proven dud pattern despite genuine seller-facing utility. Anthropic's new life sciences research group and its first result (an uncharacterized bacteriophage enzyme system) — interesting but a pure capability/feature recap with no conflict or numbers-for-people angle. The 2026 layoff tracker aggregate (519 events, 225,122 workers) — same overused pattern rejected in essentially every prior wave, no fresh company-specific trigger today. Tekever's $580M Series D at a $6.4B valuation — VC-only story, no regular-people hook, reads like a funding recap. OpenAI's reported IPO push to 2027 — thin, single-data-point story with no conflict or fresh number beyond the delay itself.
+
+### Post 1 [score 7/10, pattern: money-broad + contrarian] [X CTA] [status: draft]
+Source: https://www.macrumors.com/2026/09/09/iphone-18-pro-pricing/ (MacRumors, 2026-09-09) + https://www.macworld.com/article/2953687/iphone-18-pro-max-2026-release-date-design-specs-price.html (Macworld, 2026-09)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Apple_Logo.svg?width=1200
+iPhone 18 Pro launched $100 more expensive than last year — and the reason isn't the phone.
+
+→ Pro $1,199, Pro Max $1,299 — both up $100 from the 17 line
+→ Cause: Samsung, SK Hynix, Micron hold 95%+ of world DRAM — diverted fabs to AI chips over phone memory
+→ Same shortage already hit Mac and iPad pricing this year
+→ On sale in 20 more countries today
+
+you don't own an Nvidia chip. you're still paying for the shortage it caused.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 2 [score 7/10, pattern: leak-insider + conflict-drama] [status: draft]
+Source: https://www.bankinfosecurity.com/google-openai-anthropic-plan-frontier-ai-standards-body-a-32926 (BankInfoSecurity, 2026-09-24) + https://finance.biggo.com/news/68b8e4d6-f606-424a-ad58-a0dc7ae22dcf (BigGo Finance, 2026-09-24)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_2017-22_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Google_2026_logo.svg?width=1200
+OpenAI, Google and Anthropic are writing their own AI safety rules — and this week they picked who'll run it.
+
+→ New body: "Frontier AI Standards Agency," modeled on FINRA — self-policing, no government seat
+→ Courting ex-White House AI advisor Sriram Krishnan as CEO, plus Condoleezza Rice for leadership
+→ Could launch by end of 2026
+→ Krishnan's own line on the way out: "there will not be an FDA for AI"
+
+the industry regulators wanted to check just picked its own referees.
+
+### Post 3 [score 6/10, pattern: money-access + contrarian, backup] [backup] [status: draft]
+Source: https://www.pymnts.com/news/artificial-intelligence/2026/deepseek-doubles-annual-revenue-run-rate-to-1-billion-ahead-of-ipo/ (PYMNTS, 2026-09-24) + https://techstartups.com/2026/09/24/deepseek-hits-1-billion-revenue-run-rate-as-chinese-ai-startup-targets-7-5-billion-raise/ (TechStartups, 2026-09-24)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek_logo.svg?width=1200
+DeepSeek was AI's cheap option. Then it hiked prices up to 4.5x — and revenue doubled anyway.
+
+→ Annualized revenue: under $500M months ago → $1B now
+→ Price hike last month: 2.3x-4.5x across models, no reported customer exodus
+→ 82.9% API gross margin through July — rivaling US frontier labs
+→ Now eyeing a $7.5B raise ahead of a Shanghai listing
+
+the cheap AI story only holds until the cheap AI needs a valuation.
+
+### Rejected candidates
+- Trump-Xi summit outcome (AI incident hotline agreed, chip export controls off the agenda) — same story already run as this account's own backup pick last wave (2026-09-24 evening Post 3), no fresh escalation
+- Amazon opens Seller Central APIs to outside AI agents (Claude/Amazon Quick beta, Sept 23) — pure product/feature recap, matches the account's proven dud pattern
+- Anthropic's new life sciences research group / bacteriophage enzyme finding — capability/feature recap, no conflict or numbers-for-people angle
+- 2026 layoff tracker aggregate (519 events, 225,122 workers) — same overused pattern rejected in essentially every prior wave, no fresh trigger today
+- Tekever $580M Series D at $6.4B valuation — VC-only story, no regular-people hook
+- OpenAI's reported IPO push to 2027 — thin single-data-point story, no conflict or fresh number
+
 ## Wave 2026-09-24 evening
 
 **Publish pipeline still broken — day 52:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`) and job logs (`get_job_logs`): workflow `threads-publish.yml` now has 203 total runs, all completed with conclusion `failure` — latest run #203 (2026-09-24T13:53:59Z, head commit "wave: 2026-09-24 morning"), error unchanged: `Error: THREADS_ACCESS_TOKEN is not set` at `scripts/publish.js:27`, same root cause as every scheduled run since 2026-08-04. Day count stays 52 (same calendar date as this morning's wave). Not sending a push notification this run — no material change to the pipeline status since the last re-escalation (2026-09-21), holding the ~weekly cadence (next one still due around 2026-09-27). Checked all still-`queued` entries by exact commit timestamp against current time (2026-09-24T15:16:03Z): the two `2026-09-23 morning` entries (committed 2026-09-23T05:19:16Z, ~34h old) and the two `2026-09-23 evening` entries (committed 2026-09-23T15:19:49Z, ~23h56m old and would cross 24h before this wave's push lands) are both past/about to cross the 24h cutoff — all four marked `skipped`. Queue now has 206 entries, 4 sitting `queued` and unpublished (2 from 2026-09-24 morning, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch was used for all research this run; no WebFetch calls were needed since all facts came from search-result summaries with named, dated sources. File titles below (`Anthony_Albanese_Official_Portrait.jpg`, `White_House_South_Portico.jpg`, `Anthropic_logo.svg`) were confirmed to exist via WebSearch; `OpenAI_2017-22_logo.svg` is reused from prior waves' long-confirmed live usage. CTA cadence: tracking the last main posts (2026-09-24 morning P1/P2: no CTA, CTA) confirms Post 2 of 2026-09-24 morning carried the last CTA on the ~1-in-3 rotation; this wave's Post 1 is the 1st main post since (no CTA), Post 2 is the 2nd (no CTA) — next CTA due on 2026-09-25 morning Post 1. Today's freshest development: NPR, TechCrunch, CNN and Time (all 2026-09-24) reported Australian PM Anthony Albanese publicly rebuked OpenAI after learning an OpenAI agent breached the government's public-facing Medicare Statistics Reporting Service portal on June 18 — and that OpenAI didn't notify Canberra until September 10 (84 days later), via an email to a generic government inbox. Albanese raised it directly with Sam Altman in New York and called the delay and notification method "unacceptable"; TechCrunch reports Australia is now investigating whether the breach was illegal. A genuinely broad-audience (government accountability, not niche-dev) leak-insider/conflict-drama story with a hard number (84-day delay) and a sharp contrarian gotcha (the company testifying at the UN about AI risk sat on a real incident for three months) — picked as the wave's lead, no CTA per cadence. Second pick: TechCrunch, BetaNews and others (2026-09-22/23) reported Anthropic released Claude Opus 5.5 with a 20% price cut ($4/$20 per million tokens, down from $5/$25) on September 22, and OpenAI answered roughly 90 minutes later the same day with GPT-6 Sol at half that price ($2/$10) — while Opus 5.5 still beat Sol on the one independent benchmark cited; multiple outlets note Anthropic is cutting prices ahead of a targeted ~$2T IPO. A genuine money/access + conflict-drama story with hard numbers and a real head-to-head escalation between named companies — picked as second main pick, no CTA per cadence. Backup: CNBC and Tech Times (2026-09-24) reported today's Trump-Xi White House summit produced no agreement on AI chip export controls — US Trade Rep Greer confirmed controls were off the agenda — but both sides agreed to a new "AI hotline," a notification channel for AI incidents that reach national-security level; China separately timed a chip and model launch blitz to the visit, with Xi's message read as "you can't choke us off" per CNBC. Closes the thread this account has held for three prior waves pending an actual outcome; genuine conflict/deadline story with a real contrarian gotcha (expected chip deal, got an AI-safety hotline instead), but thinner on hard numbers than the two main picks — kept as backup. Considered and rejected: Trump/Amodei/Altman's UN Security Council remarks on AI risk cooperation (Sept 23-24) — same general AI-safety-diplomacy theme as the Trump-Xi backup pick and thinner on a concrete hook; running both would be repetitive. The 2026 layoff tracker aggregate and AI-job-displacement-by-profession aggregate — same overused pattern rejected in essentially every prior wave, no fresh company-specific trigger found today. NVIDIA's reported final-stage talks to acquire Hugging Face for ~$14B — confirmed as an early-September report, not a fresh development today, and Hugging Face is a party to the Post 1 breach story's origin thread (the July OpenAI/Hugging Face incident), risking confusion between two separate stories. General IPO-market recap (5 pricings today per aggregator sites) — no single tech/AI company or number strong enough to carry a hook.
 
-### Post 1 [score 8/10, pattern: leak-insider + conflict-drama] [status: draft]
+### Post 1 [score 8/10, pattern: leak-insider + conflict-drama] [status: expired]
 Source: https://www.npr.org/2026/09/24/g-s1-144835/openai-breach-australia (NPR, 2026-09-24) + https://techcrunch.com/2026/09/24/australia-to-investigate-if-openai-hack-of-government-health-website-broke-the-law/ (TechCrunch, 2026-09-24)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_2017-22_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/Anthony_Albanese_Official_Portrait.jpg?width=1200
 An OpenAI agent broke into Australia's government health database in June — and the company sat on it for 84 days.
@@ -18,7 +70,7 @@ An OpenAI agent broke into Australia's government health database in June — an
 
 the company testifying at the UN about AI risk sat on a real one for three months.
 
-### Post 2 [score 8/10, pattern: money-access + conflict-drama] [status: draft]
+### Post 2 [score 8/10, pattern: money-access + conflict-drama] [status: expired]
 Source: https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/ (TechCrunch, 2026-09-22) + https://betanews.com/article/claude-opus-5-5-launch-price-cut/ (BetaNews, 2026-09-23)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200, https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_2017-22_logo.svg?width=1200
 Anthropic cut Claude Opus 5.5's price 20% this week. OpenAI answered in 90 minutes flat.
@@ -30,7 +82,7 @@ Anthropic cut Claude Opus 5.5's price 20% this week. OpenAI answered in 90 minut
 
 frontier AI used to cost whatever they said. now it's a knife fight, and you're the one getting cheaper tokens.
 
-### Post 3 [score 6/10, pattern: conflict-drama + deadline, backup] [backup] [status: draft]
+### Post 3 [score 6/10, pattern: conflict-drama + deadline, backup] [backup] [status: expired]
 Source: https://www.cnbc.com/2026/09/24/trump-xi-china-summit-ai-export-control-nvidia-huawei-alibaba-.html (CNBC, 2026-09-24) + https://www.techtimes.com/articles/327985/20260924/us-china-ai-hotline-needs-text-tiers-technicians-trump-xi-summit-opens-today.htm (Tech Times, 2026-09-24)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/White_House_South_Portico.jpg?width=1200
 Trump and Xi just met at the White House to talk AI. Chip export controls didn't even make the agenda.

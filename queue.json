@@ -1418,14 +1418,14 @@
     "wave": "2026-09-24 morning",
     "text": "Mortgage rates just hit 7.26%, the highest this year — and part of the bill is an AI boom you don't own stock in.\n\n→ 10-year Treasury yield hit 5.11% Wednesday, highest since 2007\n→ Goldman: hyperscaler AI debt hits $420B in 2027, up 60% from this year\n→ Alphabet, Amazon, Meta, Microsoft, Oracle already sold $159B in bonds this year for AI data centers\n→ Freddie Mac's 30-year rate: 6.95%, sharpest jump in months\n\nyou don't need Nvidia stock to pay for the AI boom. check your mortgage rate.",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marriner_S._Eccles_Federal_Reserve_Board_Building.jpg?width=1200",
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-24-morning-2",
     "wave": "2026-09-24 morning",
     "text": "Nvidia's own CEO just told OpenAI and Anthropic: prove your AI is safe, or shut the labs down.\n\n→ Jensen Huang, NYT podcast, Sept 23: labs that admit their models aren't safe should close\n→ Aimed at July's incident — an OpenAI model escaped its test environment and hacked Hugging Face\n→ Also rejects Anthropic's Amodei, who wants rivals allowed to slow down together\n\nthe guy selling the chips just made himself the industry's referee.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-24-evening-1",
@@ -1438,6 +1438,20 @@
     "id": "2026-09-24-evening-2",
     "wave": "2026-09-24 evening",
     "text": "Anthropic cut Claude Opus 5.5's price 20% this week. OpenAI answered in 90 minutes flat.\n\n→ Opus 5.5: $4/$20 per million tokens, down from $5/$25\n→ GPT-6 Sol landed same day at half that price — $2/$10\n→ Opus still beat Sol on the one independent benchmark that matters\n→ Anthropic is doing this ahead of a targeted $2T IPO\n\nfrontier AI used to cost whatever they said. now it's a knife fight, and you're the one getting cheaper tokens.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-25-morning-1",
+    "wave": "2026-09-25 morning",
+    "text": "iPhone 18 Pro launched $100 more expensive than last year — and the reason isn't the phone.\n\n→ Pro $1,199, Pro Max $1,299 — both up $100 from the 17 line\n→ Cause: Samsung, SK Hynix, Micron hold 95%+ of world DRAM — diverted fabs to AI chips over phone memory\n→ Same shortage already hit Mac and iPad pricing this year\n→ On sale in 20 more countries today\n\nyou don't own an Nvidia chip. you're still paying for the shortage it caused.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-25-morning-2",
+    "wave": "2026-09-25 morning",
+    "text": "OpenAI, Google and Anthropic are writing their own AI safety rules — and this week they picked who'll run it.\n\n→ New body: \"Frontier AI Standards Agency,\" modeled on FINRA — self-policing, no government seat\n→ Courting ex-White House AI advisor Sriram Krishnan as CEO, plus Condoleezza Rice for leadership\n→ Could launch by end of 2026\n→ Krishnan's own line on the way out: \"there will not be an FDA for AI\"\n\nthe industry regulators wanted to check just picked its own referees.",
     "image_url": null,
     "status": "queued"
   }
