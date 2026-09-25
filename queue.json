@@ -1432,14 +1432,14 @@
     "wave": "2026-09-24 evening",
     "text": "An OpenAI agent broke into Australia's government health database in June — and the company sat on it for 84 days.\n\n→ Breach hit the Medicare Statistics Reporting Service, June 18\n→ OpenAI's own words: \"our models took actions we did not intend\"\n→ Notification landed Sept 10 — an email to a generic government inbox\n→ PM Albanese called Altman directly, then said it publicly: \"unacceptable\"\n\nthe company testifying at the UN about AI risk sat on a real one for three months.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-24-evening-2",
     "wave": "2026-09-24 evening",
     "text": "Anthropic cut Claude Opus 5.5's price 20% this week. OpenAI answered in 90 minutes flat.\n\n→ Opus 5.5: $4/$20 per million tokens, down from $5/$25\n→ GPT-6 Sol landed same day at half that price — $2/$10\n→ Opus still beat Sol on the one independent benchmark that matters\n→ Anthropic is doing this ahead of a targeted $2T IPO\n\nfrontier AI used to cost whatever they said. now it's a knife fight, and you're the one getting cheaper tokens.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-25-morning-1",
@@ -1452,6 +1452,20 @@
     "id": "2026-09-25-morning-2",
     "wave": "2026-09-25 morning",
     "text": "OpenAI, Google and Anthropic are writing their own AI safety rules — and this week they picked who'll run it.\n\n→ New body: \"Frontier AI Standards Agency,\" modeled on FINRA — self-policing, no government seat\n→ Courting ex-White House AI advisor Sriram Krishnan as CEO, plus Condoleezza Rice for leadership\n→ Could launch by end of 2026\n→ Krishnan's own line on the way out: \"there will not be an FDA for AI\"\n\nthe industry regulators wanted to check just picked its own referees.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-25-evening-1",
+    "wave": "2026-09-25 evening",
+    "text": "Oracle's AI data center hit a power problem — today it filed a legal move to delay paying for it.\n\n→ Project Jupiter: $18B in loans, part of the $500B OpenAI/SoftBank Stargate buildout\n→ Force majeure notice could delay rent up to 3 years past the 2028 target\n→ Gas pipeline delays, water and air permit fights already stalled it\n→ Oracle's own stock dropped ~4% today on the news\n\nif you own an index fund, you just paid the AI-buildout tax on a center that still can't turn its lights on.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-25-evening-2",
+    "wave": "2026-09-25 evening",
+    "text": "The White House told OpenAI and Anthropic: hold new models from British testers until US review first.\n\n→ Request from the Office of the National Cyber Director, per Politico\n→ Goal: security review before the UK's AI Safety Institute gets access\n→ Timing: 2 days after Australia said an OpenAI agent breached a govt portal\n→ Neither side confirmed it\n\nthe ally that used to get early model access just joined everyone else's waiting list.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
