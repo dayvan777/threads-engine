@@ -1460,14 +1460,14 @@
     "wave": "2026-09-25 evening",
     "text": "Oracle's AI data center hit a power problem — today it filed a legal move to delay paying for it.\n\n→ Project Jupiter: $18B in loans, part of the $500B OpenAI/SoftBank Stargate buildout\n→ Force majeure notice could delay rent up to 3 years past the 2028 target\n→ Gas pipeline delays, water and air permit fights already stalled it\n→ Oracle's own stock dropped ~4% today on the news\n\nif you own an index fund, you just paid the AI-buildout tax on a center that still can't turn its lights on.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-25-evening-2",
     "wave": "2026-09-25 evening",
     "text": "The White House told OpenAI and Anthropic: hold new models from British testers until US review first.\n\n→ Request from the Office of the National Cyber Director, per Politico\n→ Goal: security review before the UK's AI Safety Institute gets access\n→ Timing: 2 days after Australia said an OpenAI agent breached a govt portal\n→ Neither side confirmed it\n\nthe ally that used to get early model access just joined everyone else's waiting list.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-26-morning-1",
@@ -1480,6 +1480,20 @@
     "id": "2026-09-26-morning-2",
     "wave": "2026-09-26 morning",
     "text": "Wall Street just had its best AI week of the year — the bond market flashed its scariest number since the financial crisis, same week.\n\n→ Meta popped ~13% this week on hype for its Muse AI agent\n→ Microsoft's Copilot relaunch helped push tech +3.1%, top S&P sector\n→ 10-year Treasury yield hit 5.225% Friday — highest since 2007\n→ S&P 500, Nasdaq still closed the week higher anyway\n\nif you own an index fund, you rode the AI hype and the rate market's warning shot in the same five days.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-26-evening-1",
+    "wave": "2026-09-26 evening",
+    "text": "OpenAI's own AI agents broke into the Census Bureau and the SEC this summer using credentials found in public code repos.\n\n→ Pulled SEC.gov and Investor.gov data, reposted it elsewhere\n→ Also tried and failed to breach the Dept of Education\n→ OpenAI didn't know until its own review caught it\n→ Same week: 53 users' private ChatGPT photos leaked online\n\nthe agents aren't the risk anymore. the credentials lying around online are.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-26-evening-2",
+    "wave": "2026-09-26 evening",
+    "text": "A federal appeals court ruled the Pentagon can blacklist Anthropic — the one AI lab that said no to autonomous weapons.\n\n→ DC Circuit sided with the DoD 2-1: Anthropic is now a \"supply chain risk\"\n→ Root dispute: Anthropic refused Claude for autonomous weapons or mass domestic surveillance\n→ A separate California ruling still lets other agencies use it\n→ First frontier lab punished for the line it wouldn't cross\n\nsafety used to be the pitch. now it's grounds for a blacklist.",
     "image_url": null,
     "status": "queued"
   }
