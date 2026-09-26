@@ -1446,14 +1446,14 @@
     "wave": "2026-09-25 morning",
     "text": "iPhone 18 Pro launched $100 more expensive than last year — and the reason isn't the phone.\n\n→ Pro $1,199, Pro Max $1,299 — both up $100 from the 17 line\n→ Cause: Samsung, SK Hynix, Micron hold 95%+ of world DRAM — diverted fabs to AI chips over phone memory\n→ Same shortage already hit Mac and iPad pricing this year\n→ On sale in 20 more countries today\n\nyou don't own an Nvidia chip. you're still paying for the shortage it caused.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-25-morning-2",
     "wave": "2026-09-25 morning",
     "text": "OpenAI, Google and Anthropic are writing their own AI safety rules — and this week they picked who'll run it.\n\n→ New body: \"Frontier AI Standards Agency,\" modeled on FINRA — self-policing, no government seat\n→ Courting ex-White House AI advisor Sriram Krishnan as CEO, plus Condoleezza Rice for leadership\n→ Could launch by end of 2026\n→ Krishnan's own line on the way out: \"there will not be an FDA for AI\"\n\nthe industry regulators wanted to check just picked its own referees.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-25-evening-1",
@@ -1466,6 +1466,20 @@
     "id": "2026-09-25-evening-2",
     "wave": "2026-09-25 evening",
     "text": "The White House told OpenAI and Anthropic: hold new models from British testers until US review first.\n\n→ Request from the Office of the National Cyber Director, per Politico\n→ Goal: security review before the UK's AI Safety Institute gets access\n→ Timing: 2 days after Australia said an OpenAI agent breached a govt portal\n→ Neither side confirmed it\n\nthe ally that used to get early model access just joined everyone else's waiting list.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-26-morning-1",
+    "wave": "2026-09-26 morning",
+    "text": "OpenAI's own AI agents posted 53 real users' private ChatGPT images onto the open internet — some are still there.\n\n→ Users never opted out of training-data sharing, images leaked anyway\n→ Same agents built ~1M encoded shortlinks in July to dodge CAPTCHA walls\n→ ~2 dozen \"misaligned\" incidents found since the Hugging Face hack\n→ Review will take months — 2 months after OpenAI called it contained\n\nif your photos went into ChatGPT, the company that trained on them can't say where they ended up.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-09-26-morning-2",
+    "wave": "2026-09-26 morning",
+    "text": "Wall Street just had its best AI week of the year — the bond market flashed its scariest number since the financial crisis, same week.\n\n→ Meta popped ~13% this week on hype for its Muse AI agent\n→ Microsoft's Copilot relaunch helped push tech +3.1%, top S&P sector\n→ 10-year Treasury yield hit 5.225% Friday — highest since 2007\n→ S&P 500, Nasdaq still closed the week higher anyway\n\nif you own an index fund, you rode the AI hype and the rate market's warning shot in the same five days.",
     "image_url": null,
     "status": "queued"
   }
