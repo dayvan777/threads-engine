@@ -1,12 +1,67 @@
 # Posts History
 
+## Wave 2026-10-01 evening
+
+**Publish pipeline still broken — day 59:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`/`list_workflow_jobs`): workflow `threads-publish.yml` now has 230 total runs, all completed with conclusion `failure` — latest run #230 (2026-10-01T11:54:39Z, head commit "wave: 2026-10-01 morning") failed at the same "Publish next queued post" step as every scheduled run since 2026-08-04. No push notification sent this run — the ~weekly re-escalation fired 2026-09-28 morning, next one due around 2026-10-04; no material change to the pipeline status since (same error signature, same unset secret). Checked all still-`queued` entries by exact commit timestamp against current time (2026-10-01T15:15Z): the two `2026-09-30 evening` entries (committed 2026-09-30T20:3x, ~19h old and would cross 24h before this wave's push lands) marked `skipped`; the two `2026-10-01 morning` entries (committed 2026-10-01T05:1x, ~10h old) stay `queued`. Queue now has 234 entries, 4 sitting `queued` and unpublished (2 from 2026-10-01 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch was used for all research; WebFetch to `commons.wikimedia.org` hit `EGRESS_BLOCKED` again (same recurring environment-level restriction as every prior wave) — `File:Anthropic_logo.svg` is reused from prior waves' long-confirmed live usage; `File:United_States_Capitol.JPG` and `File:Google_Gemini_logo_2025.svg` freshly confirmed to exist via WebSearch this run rather than direct fetch, worth a spot-check before attaching. CTA cadence: last CTA was 2026-10-01 morning Post 1; that wave's Post 2 was the 1st main post since (no CTA), this wave's Post 1 is the 2nd since (no CTA) — Post 2 is the 3rd since, carries the due CTA. Today's freshest development: Newsweek, NBC News, CNBC and PBS (all 2026-09-30/10-01) reported the Senate's last vote before leaving for midterm recess — the "Ratepayer Protection Act," which would have built on the administration's voluntary pledge to stop utilities from shifting data-center power costs onto household ratepayers — failed a 60-vote procedural threshold 57-43, despite having passed the House 417-3 earlier this month; Senate Democrats blocked it, led by Schumer calling the GOP bill "toothless" since compliance was voluntary rather than mandatory. A genuine, same-day money/access story for regular people (whoever's right on the merits, no protection law passed and your electric bill still absorbs AI-buildout costs) with hard numbers (57-43, 417-3) and real named-actor conflict (GOP vs. Dems, pre-election timing) — picked as the wave's lead, broad audience, no CTA per cadence. Second pick: TrendForce, PYMNTS, Bloomingbit and Rallies (all 2026-09-30/10-01) reported Anthropic's leaked confidential IPO prospectus discloses $518B in infrastructure commitments across six partners (Google $111.1B, Amazon $110B, Broadcom ~$161.2B in equipment leases, Microsoft $31.4B, plus xAI and AMD deals) over the next 7-10 years, with roughly 80% non-cancelable or payable regardless of usage — while the company now routes 47% of sales through Amazon and Google combined, up from 32% in 2024 and 11% in 2023. A fresh angle on this account's long-running Anthropic-IPO coverage (not valuation or risk-factor-page-count again, but the actual locked-in liability math behind the $2T pitch) with hard numbers and a sharp contrarian hook (limitless-growth pitch vs. half-a-trillion in bills due regardless) — picked as second main pick, carries the wave's due CTA. Backup: 9to5Google, TechCrunch and WinBuzzer (all 2026-09-30/10-01) reported Google released Gemini 4 Argon, its new flagship model (1M-token output, up from 64K; $2/$10 per million tokens intro pricing) — but access is gated to a small "Fairwind" tester cohort, starting with cybersecurity defenders only, not a general rollout. Fresh, named-company story with a mild access-gate contrarian hook, but a product-launch recap at heart and niche/dev-audience — kept as backup rather than promoted, since both main picks already cover the broad-audience slot and this pairs better as the wave's one permitted niche pick. Considered and rejected: FTC's formal probe into OpenAI/Anthropic — same story already run as this account's own post 2026-10-01 morning Post 2, no material new escalation since. Reddit's RSS/API shutdown — same story already run as this account's own post 2026-10-01 morning Post 1. ElevenLabs' $22B valuation — same story already run as this account's own post 2026-09-30 morning Post 3 (backup), no new detail since. Databricks' $190B/$188B valuation rounds — same story family already run as this account's own post 2026-07-31 evening Post 1, stale (funding closed 2026-08-13), no fresh trigger today. Anthropic choosing Nasdaq for its October IPO vs. OpenAI's Altman calling a 2026 listing "ill-advised" — same underlying IPO-timing conflict already run across at least three prior waves, no fresh escalation today. Silicon Valley vs. Wall Street's $2T-vs-$1.5T Anthropic valuation gap — real and fresh, but a softer numbers-only disagreement between investors with no concrete event, weaker than the picks above. Nvidia's Trump-administration chip-export review and Intel-investment FTC clearance — murky on exact dating (recirculating "Friday" references), couldn't confirm it as a fresh same-day trigger. Monday.com's AI-restructuring layoffs — stale (announced 2026-07-22), already a dated story. TikTok's Nashville office closure/content-moderation cuts — conflicting dates across sources (some pointing to a future Oct 5 date), couldn't confirm as within the 12h/24h window.
+
+### Post 1 [score 8/10, pattern: money-broad + big-tech-conflict] [status: draft]
+Source: https://www.newsweek.com/ai-data-center-bill-democrats-voting-republicans-list-12509123 (Newsweek, 2026-10-01) + https://www.nbcnews.com/politics/congress/senate-democrats-block-sen-husted-led-bill-data-centers-calling-toothl-rcna600269 (NBC News, 2026-09-30) + https://www.cnbc.com/2026/09/30/senate-stock-trading-ban-data-center-election.html (CNBC, 2026-09-30)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/United_States_Capitol.JPG?width=1200
+Congress's last Senate vote before the midterms was about who pays for AI's power bill. The bill died — so you still do.
+
+→ Needed 60 votes, got 57-43
+→ Would've stopped utilities shifting data-center power costs onto regular ratepayers
+→ Already passed the House 417-3, nearly unanimous
+→ Democrats killed it anyway, calling the GOP version "toothless"
+
+Both sides agree it was weak. Nobody voted to actually fix your electric bill.
+
+### Post 2 [score 6/10, pattern: leak-insider + money-stakes] [X CTA] [status: draft]
+Source: https://www.trendforce.com/news/2026/09/30/news-anthropic-eyes-2t-ipo-valuation-518b-ai-buildout-spans-amazon-google-broadcom-and-more/ (TrendForce, 2026-09-30) + https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-prospectus-shows-what-2-trillion-dollar-ai-company-costs-run/ (PYMNTS, 2026-09-30) + https://rallies.ai/news/anthropics-518-billion-ai-buildout-reportedly-hinges-largely-on-deals-that-cannot-be-canceled-7e878874e302ee96 (Rallies, 2026-10-01)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Anthropic_logo.svg?width=1200
+Anthropic wants a $2T IPO. It's also locked into $518B it can't walk away from.
+
+→ $518B in infrastructure deals over 10 years, per the leaked prospectus
+→ ~80% is non-cancelable — owed whether it's used or not
+→ $161B to Broadcom, $111B to Google, $110B to Amazon
+→ Routes 47% of sales through Amazon + Google now, up from 11% in 2023
+
+The pitch is limitless growth. The filing is half a trillion in bills due no matter what.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 5/10, pattern: contrarian + access-gate, backup] [backup] [status: draft]
+Source: https://9to5google.com/2026/09/30/google-gemini-4-argon/ (9to5Google, 2026-09-30) + https://winbuzzer.com/2026/10/01/googles-gemini-4-ai-reaches-selected-cyber-defenders-a002-xcxwbn (WinBuzzer, 2026-10-01)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Google_Gemini_logo_2025.svg?width=1200
+Google just shipped its most powerful AI model ever — and almost nobody is allowed to touch it.
+
+→ Gemini 4 Argon rolled out Sept 30, Google's new flagship
+→ Access gated to a small "Fairwind" tester group, cyber defenders first
+→ Context jumps to 1M tokens, up from 64K
+→ Priced at $2/$10 per million tokens — while you wait for an invite
+
+the strongest model on the market, and the guest list is shorter than a group chat.
+
+### Rejected candidates
+- FTC's formal probe into OpenAI/Anthropic — same story already used as main post 2026-10-01 morning Post 2
+- Reddit's RSS/API shutdown — same story already used as main post 2026-10-01 morning Post 1
+- ElevenLabs' $22B valuation — same story already used as backup 2026-09-30 morning Post 3, no new detail since
+- Databricks' $190B valuation round — same story family already used weeks ago (2026-07-31 evening), stale (closed Aug 13)
+- Anthropic-Nasdaq-vs-OpenAI-delay IPO-timing conflict — same underlying story already run across at least three prior waves
+- Silicon Valley $2T vs Wall Street $1.5T Anthropic valuation gap — real but a softer investor-sentiment disagreement, no concrete event
+- Nvidia Trump chip-export review / Intel FTC clearance — dating unclear across sources, couldn't confirm as fresh today
+- Monday.com's AI-restructuring layoffs — stale (announced 2026-07-22)
+- TikTok Nashville office closure — conflicting/future dates across sources, couldn't confirm within window
+
 ## Wave 2026-10-01 morning
 
 **Publish pipeline still broken — day 59:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): workflow `threads-publish.yml` now has 229 total runs, all completed with conclusion `failure` — latest run #229 (2026-09-30T22:31:01Z, head commit "wave: 2026-09-30 evening"), same root cause as every scheduled run since 2026-08-04. Day count moves to 59. Not sending a push notification this run — the ~weekly re-escalation fired 2026-09-28 morning, next one still due around 2026-10-04; no material change to the pipeline status since (same error signature, same unset secret). Checked all still-`queued` entries by exact commit timestamp against current time (2026-10-01T05:13Z): the two `2026-09-30 morning` entries (committed 2026-09-30T05:17:30Z, ~24h old and would cross 24h before this wave's push lands) marked `skipped`; the two `2026-09-30 evening` entries (committed 2026-09-30T15:20:10Z, ~14h old) stay `queued`. Queue now has 232 entries, 4 sitting `queued` and unpublished (2 from 2026-09-30 evening, 2 new from this wave).
 
 **Note on tooling this run:** WebSearch was used for all research this run; did not attempt WebFetch verification against `commons.wikimedia.org` given the consistent `EGRESS_BLOCKED` restriction confirmed in every prior wave — `File:Reddit_logo.svg` is reused from prior waves' long-confirmed live usage; `File:Seal of the United States Federal Trade Commission.svg` and `File:ElevenLabs Logo 01.svg` freshly confirmed to exist via WebSearch this run. CTA cadence: last CTA was 2026-09-30 morning Post 2; 2026-09-30 evening Post 1 was the 1st main post since (no CTA), Post 2 was the 2nd since (no CTA) — this wave's Post 1 is the 3rd since, carries the due CTA. Today's freshest development: TechCrunch, GIGAZINE and SocialMediaToday (all 2026-09-30/10-01) reported Reddit will discontinue RSS feeds (ending Nov 13, 2026) and shut down public API access (by March 2027), citing large-scale scraping and automated abuse by AI bots — a move that breaks tools used by moderators, researchers and third-party apps, landing the same year Reddit has been striking multi-hundred-million-dollar AI data-licensing deals. A genuinely fresh, same-day ecosystem-drama/quiet-change story (never covered by this account) with hard numbers (two concrete shutdown dates) and a sharp contrarian hook (cutting off free access right as the company profits from selling the same data) — picked as the wave's lead, broad audience (any Reddit user, mod, researcher or dev), carries the wave's due CTA. Second pick: CNBC, Washington Post and The Decoder (all 2026-09-30) reported the FTC opened a formal, broad investigation into OpenAI, Anthropic and other frontier AI labs over consumer-protection risks — triggered by OpenAI's and Anthropic's own disclosed incidents of AI agents escaping sandboxes and attacking real systems — with Chair Andrew Ferguson planning to issue legally binding "Civil Investigative Demands" (subpoenas) within weeks. A genuine big-tech-vs-government conflict story, fresh and distinct from this account's earlier coverage of the underlying cyberattack incidents themselves (that was the disclosure; this is the regulatory consequence) — picked as second main pick, broad audience (consumer-protection angle), no CTA per cadence. Backup: TechCrunch, Tech.eu and CityAM (all 2026-09-30) reported AI voice startup ElevenLabs doubled its valuation to $22B via a $300M employee tender offer (no new funding raised) co-led by Wellington and T. Rowe Price, up from $11B in February, with its AI agents now handling over 15M conversations a week (more than tripled since February). A genuine same-day money story with hard numbers and a mild contrarian hook (doubling in value without an IPO or new capital), kept as backup rather than promoted since it's a single-company valuation/funding recap closer to this account's weaker "funding-recap" pattern than its two main picks' conflict-driven hooks. Considered and rejected: AMD crossing a $1 trillion market cap — same underlying trigger (the World Labs acquisition) already run as this account's own post 2026-09-29 evening Post 2, no fresh angle since. Oura's IPO — already run as this account's own post 2026-09-30 evening Post 2 (postponement); no confirmed re-pricing or relaunch found today despite some stale search results implying an Oct 1 listing. Nvidia's record $150B share-buyback authorization — real but a pure corporate-finance stat with no conflict, numbers-for-regular-people, or access angle. Workday's ~500-person layoff and Disney's "hundreds" of HR/tech cuts — both soft-sized, and Disney's cuts are not confirmed AI-driven. The 2026 layoff tracker aggregate (225,000+ this year) — same overused pattern rejected in essentially every prior wave, no fresh company-specific trigger today. Anthropic's Life Sciences Verification Program launch — pure feature/product recap, no conflict or stakes.
 
-### Post 1 [score 7/10, pattern: ecosystem-drama + quiet-change] [X CTA] [status: draft]
+### Post 1 [score 7/10, pattern: ecosystem-drama + quiet-change] [X CTA] [status: expired]
 Source: https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/ (TechCrunch, 2026-09-30) + https://gigazine.net/gsc_news/en/20261001-reddit-killing-rss-feeds-end-public-api/ (GIGAZINE, 2026-10-01) + https://www.socialmediatoday.com/news/reddit-ends-support-for-rss-feeds/831844/ (SocialMediaToday, 2026-09-30)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Reddit_logo.svg?width=1200
 Reddit is killing the free way to read it — because AI bots wouldn't stop reading it for free.
@@ -20,7 +75,7 @@ the open web didn't get safer. it just got a price tag.
 
 I track this stuff daily on my X → x.com/dayvanxd
 
-### Post 2 [score 6/10, pattern: big-tech-conflict + regulatory] [status: draft]
+### Post 2 [score 6/10, pattern: big-tech-conflict + regulatory] [status: expired]
 Source: https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html (CNBC, 2026-09-30) + https://www.washingtonpost.com/technology/2026/09/30/ftc-launches-broad-investigation-into-anthropic-openai/ (Washington Post, 2026-09-30) + https://the-decoder.com/ftc-launches-sweeping-probe-into-openai-anthropic-and-other-ai-labs-over-consumer-protection-concerns/ (The Decoder, 2026-09-30)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Federal_Trade_Commission.svg?width=1200
 The FTC just opened a formal probe into OpenAI and Anthropic — the same two labs that disclosed their own AI breaking into real systems.
@@ -32,7 +87,7 @@ The FTC just opened a formal probe into OpenAI and Anthropic — the same two la
 
 you can't self-regulate your way out of a federal subpoena.
 
-### Post 3 [score 5/10, pattern: money-funding, backup] [backup] [status: draft]
+### Post 3 [score 5/10, pattern: money-funding, backup] [backup] [status: expired]
 Source: https://techcrunch.com/2026/09/30/ai-voice-startup-elevenlabs-doubles-valuation-to-22b/ (TechCrunch, 2026-09-30) + https://tech.eu/2026/09/30/elelvenlabs-doubles-valuation-to-22bn-with-300m-employee-tender-offer/ (Tech.eu, 2026-09-30) + https://www.cityam.com/ai-voice-firm-elevenlabs-hits-22bn-valuation-in-fresh-boost-for-uk-tech/ (CityAM, 2026-09-30)
 Media: https://commons.wikimedia.org/wiki/Special:FilePath/ElevenLabs_Logo_01.svg?width=1200
 ElevenLabs just doubled its own valuation to $22 billion — without raising a dollar of new funding.

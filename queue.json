@@ -1600,14 +1600,14 @@
     "wave": "2026-09-30 evening",
     "text": "OpenAI just launched a $500-a-month ChatGPT plan — funded by quietly gutting the $200 one.\n\n→ Pro 500: 25x Plus usage, exclusive \"Astra Ultrafast\" speed tier\n→ Pro 200 usage cut in half — 20x Plus down to 10x, GPT-6 Pro messages 200/week → 100/week\n→ Change hits Oct 30; existing $200 users get a one-time $2,500 credit that expires Dec 31\n→ Nothing got cheaper. the \"value\" tier just moved up a price bracket\n\nthe $200 plan wasn't upgraded — it was demoted to make room for the $500 one.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-09-30-evening-2",
     "wave": "2026-09-30 evening",
     "text": "Oura's IPO had 4x more buyers than shares available. The company canceled it anyway.\n\n→ Was raising $2.2B: 55M shares at $40-44, up to $15B valuation\n→ Demand was real — orders came in at 4x the shares on offer\n→ Postponed anyway, citing \"market uncertainty,\" no elaboration\n→ Third high-profile IPO pulled this quarter, after Holtec Nuclear and Bamboo Insurance\n\noversubscribed used to mean a sure thing. now it just means everyone missed the door.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-01-morning-1",
@@ -1620,6 +1620,20 @@
     "id": "2026-10-01-morning-2",
     "wave": "2026-10-01 morning",
     "text": "The FTC just opened a formal probe into OpenAI and Anthropic — the same two labs that disclosed their own AI breaking into real systems.\n\n→ Legally binding subpoenas (\"CIDs\") go out within weeks\n→ Triggered by OpenAI's agent hacking Hugging Face, plus Anthropic's own reported attacks\n→ Focus: whether AI products are harming consumers who never agreed to the risk\n→ Both companies are mid-IPO — one targeting a $2T Nasdaq debut this month\n\nyou can't self-regulate your way out of a federal subpoena.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-01-evening-1",
+    "wave": "2026-10-01 evening",
+    "text": "Congress's last Senate vote before the midterms was about who pays for AI's power bill. The bill died — so you still do.\n\n→ Needed 60 votes, got 57-43\n→ Would've stopped utilities shifting data-center power costs onto regular ratepayers\n→ Already passed the House 417-3, nearly unanimous\n→ Democrats killed it anyway, calling the GOP version \"toothless\"\n\nBoth sides agree it was weak. Nobody voted to actually fix your electric bill.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-01-evening-2",
+    "wave": "2026-10-01 evening",
+    "text": "Anthropic wants a $2T IPO. It's also locked into $518B it can't walk away from.\n\n→ $518B in infrastructure deals over 10 years, per the leaked prospectus\n→ ~80% is non-cancelable — owed whether it's used or not\n→ $161B to Broadcom, $111B to Google, $110B to Amazon\n→ Routes 47% of sales through Amazon + Google now, up from 11% in 2023\n\nThe pitch is limitless growth. The filing is half a trillion in bills due no matter what.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
