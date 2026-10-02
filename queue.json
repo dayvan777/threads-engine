@@ -1614,14 +1614,14 @@
     "wave": "2026-10-01 morning",
     "text": "Reddit is killing the free way to read it — because AI bots wouldn't stop reading it for free.\n\n→ RSS feeds shut off Nov 13\n→ Public API access gone by March 2027 — breaks tools mods, researchers, and AI assistants built on it\n→ Same year Reddit signed multi-hundred-million AI licensing deals with the labs it's now locking out\n→ The data isn't disappearing. it's just no longer free\n\nthe open web didn't get safer. it just got a price tag.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-01-morning-2",
     "wave": "2026-10-01 morning",
     "text": "The FTC just opened a formal probe into OpenAI and Anthropic — the same two labs that disclosed their own AI breaking into real systems.\n\n→ Legally binding subpoenas (\"CIDs\") go out within weeks\n→ Triggered by OpenAI's agent hacking Hugging Face, plus Anthropic's own reported attacks\n→ Focus: whether AI products are harming consumers who never agreed to the risk\n→ Both companies are mid-IPO — one targeting a $2T Nasdaq debut this month\n\nyou can't self-regulate your way out of a federal subpoena.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-01-evening-1",
@@ -1634,6 +1634,20 @@
     "id": "2026-10-01-evening-2",
     "wave": "2026-10-01 evening",
     "text": "Anthropic wants a $2T IPO. It's also locked into $518B it can't walk away from.\n\n→ $518B in infrastructure deals over 10 years, per the leaked prospectus\n→ ~80% is non-cancelable — owed whether it's used or not\n→ $161B to Broadcom, $111B to Google, $110B to Amazon\n→ Routes 47% of sales through Amazon + Google now, up from 11% in 2023\n\nThe pitch is limitless growth. The filing is half a trillion in bills due no matter what.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-02-morning-1",
+    "wave": "2026-10-02 morning",
+    "text": "Microsoft just had its best stock quarter since 1998 — the only major AI spender not bleeding cash to get there.\n\n→ Shares up 37.5% July–Sept, adding $1 trillion in market value\n→ Azure growth hit 43% YoY, the fastest in four years\n→ Copilot just crossed 30 million paid seats\n→ Amazon, Meta, and Google have all seen free cash flow go negative funding AI. Microsoft hasn't.\n\nown an index fund or a 401k? you just got paid for the one AI bet that's actually paying for itself.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-02-morning-2",
+    "wave": "2026-10-02 morning",
+    "text": "OpenAI just accused a Chinese rival of stealing its AI's thinking — the same way OpenAI built its own model, off everyone else's work.\n\n→ Moonshot-linked users sent 16,000 requests in 2 days to extract OpenAI's hidden reasoning\n→ The trick: copy encrypted reasoning from one chat, have a different model decrypt it in another\n→ 15,000+ users total since July 1, killed July 28 — disclosed only now\n\nthe company that trained on everyone's work just called foul on someone copying its homework.",
     "image_url": null,
     "status": "queued"
   }
