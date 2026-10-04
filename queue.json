@@ -1684,14 +1684,14 @@
     "wave": "2026-10-03 evening",
     "text": "AI will wipe out 36 million American jobs by 2035 — then create 40 million new ones. Net positive, McKinsey says.\n\n→ 25 million of the displaced stay in their field, industry growth absorbs them\n→ 11 million don't get that mercy — totally new career, from scratch\n→ That's 770,000 people a year switching fields, 3.6x the normal rate\n→ Workers without a degree take the brunt\n\nthe AI jobs math works out fine on a spreadsheet. for 11 million people, it means starting over.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-03-evening-2",
     "wave": "2026-10-03 evening",
     "text": "Elon Musk called Anthropic's AI \"evil.\" Anthropic just agreed to pay his company $84.5 billion anyway.\n\n→ $1.25B a month, through May 2029, for GPU space inside Musk's own xAI data centers\n→ Real reason: xAI's \"Colossus 1\" cluster in Memphis was sitting at ~11% utilization\n→ 220,000+ Nvidia GPUs, 300MW of power — barely used until Anthropic needed the overflow\n→ Disclosed only because SpaceX just filed to go public\n\nrivalry's for the cameras. the compute bill is real.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-04-morning-1",
@@ -1704,6 +1704,20 @@
     "id": "2026-10-04-morning-2",
     "wave": "2026-10-04 morning",
     "text": "OpenAI slashed its frontier AI price 80% — then launched a plan five times pricier than anything it's sold before.\n\n→ GPT-6.1 Sol: $2 per million input tokens, $10 output — a fifth of the old price\n→ Same week: new \"Pro 500\" tier, $500/month, $300 above the old ceiling\n→ Cheap tokens for developers. Ultrafast speed locked behind the $500 wall.\n\nFrontier AI is splitting into two products: a commodity, and a luxury.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-04-evening-1",
+    "wave": "2026-10-04 evening",
+    "text": "Google just downgraded free AI users — on purpose.\n\n→ From Oct 9, free Gemini users get locked to 3.5 Flash-Lite — Google's cheapest, weakest model\n→ 3.6 Flash and 3.1 Pro: not rate-limited, just gone\n→ Paying \"AI Plus\" subscribers lose Pro too — only the priciest tier keeps everything, plus a new \"Deep Think\" mode\n→ Nothing about the free product changed except what you're allowed to touch\n\nthe free tier was never free AI. it was a trial you didn't know was ending.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-04-evening-2",
+    "wave": "2026-10-04 evening",
+    "text": "Anthropic doesn't have $60 billion for AI chips. So Broadcom's bankers are raising it for them.\n\n→ $42B senior-secured debt from BofA, Citi, Morgan Stanley\n→ $18B subordinated, Blackstone fronting $9B itself\n→ Goal: Anthropic becomes Broadcom's #1 chip customer — carved out of Nvidia's lead\n→ Still unannounced. Just unnamed sources and syndication letters\n\nthe AI boom isn't running on profit yet. it's running on debt nobody's confirmed signing.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
