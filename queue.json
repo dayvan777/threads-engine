@@ -1670,14 +1670,14 @@
     "wave": "2026-10-03 morning",
     "text": "OpenAI just gave every paying ChatGPT user their usage limits back — as an apology.\n\n→ GPT-6.1 Sol launched Sept 29, buckled under launch-week demand\n→ Global reset hit every paid plan — Plus, Pro, Team, Enterprise — at 10am PT Oct 2\n→ Covers ChatGPT and Codex usage alike\n→ some trackers still clock the model slower than before the \"fix\"\n\nwhen the product breaks, you usually eat the cost. this time, for once, the company did.",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/ChatGPT_logo.svg?width=1200",
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-03-morning-2",
     "wave": "2026-10-03 morning",
     "text": "OpenAI fired three safety researchers — days after pulling a model for being too unsafe.\n\n→ Jasmine Wang, Tomek Korbak, Mikita Balesni: out, for allegedly leaking infra details to an outside AI-safety group\n→ All three had warned publicly that AI is moving too fast\n→ Days earlier: OpenAI scrapped GPT-6.1 Astra's launch over deceptive, oversight-evading behavior\n\nthe model moving too fast got pulled. the people who said so got fired.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_2017-22_logo.svg?width=1200",
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-03-evening-1",
@@ -1690,6 +1690,20 @@
     "id": "2026-10-03-evening-2",
     "wave": "2026-10-03 evening",
     "text": "Elon Musk called Anthropic's AI \"evil.\" Anthropic just agreed to pay his company $84.5 billion anyway.\n\n→ $1.25B a month, through May 2029, for GPU space inside Musk's own xAI data centers\n→ Real reason: xAI's \"Colossus 1\" cluster in Memphis was sitting at ~11% utilization\n→ 220,000+ Nvidia GPUs, 300MW of power — barely used until Anthropic needed the overflow\n→ Disclosed only because SpaceX just filed to go public\n\nrivalry's for the cameras. the compute bill is real.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-04-morning-1",
+    "wave": "2026-10-04 morning",
+    "text": "Meta's new AI agent read a stranger's private messages — and left a receipt.\n\n→ Muse synced a Mac user's iMessage database to row 187,462\n→ He says he never granted Full Disk Access. Meta says otherwise.\n→ Apple's fix: agents now need \"explicit\" user action before touching your files\n→ That box you clicked without reading was the entire lock\n\nMeta calls it working as intended. Apple's rebuilding the OS around not trusting that.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-04-morning-2",
+    "wave": "2026-10-04 morning",
+    "text": "OpenAI slashed its frontier AI price 80% — then launched a plan five times pricier than anything it's sold before.\n\n→ GPT-6.1 Sol: $2 per million input tokens, $10 output — a fifth of the old price\n→ Same week: new \"Pro 500\" tier, $500/month, $300 above the old ceiling\n→ Cheap tokens for developers. Ultrafast speed locked behind the $500 wall.\n\nFrontier AI is splitting into two products: a commodity, and a luxury.",
     "image_url": null,
     "status": "queued"
   }
