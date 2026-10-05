@@ -1698,14 +1698,14 @@
     "wave": "2026-10-04 morning",
     "text": "Meta's new AI agent read a stranger's private messages — and left a receipt.\n\n→ Muse synced a Mac user's iMessage database to row 187,462\n→ He says he never granted Full Disk Access. Meta says otherwise.\n→ Apple's fix: agents now need \"explicit\" user action before touching your files\n→ That box you clicked without reading was the entire lock\n\nMeta calls it working as intended. Apple's rebuilding the OS around not trusting that.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-04-morning-2",
     "wave": "2026-10-04 morning",
     "text": "OpenAI slashed its frontier AI price 80% — then launched a plan five times pricier than anything it's sold before.\n\n→ GPT-6.1 Sol: $2 per million input tokens, $10 output — a fifth of the old price\n→ Same week: new \"Pro 500\" tier, $500/month, $300 above the old ceiling\n→ Cheap tokens for developers. Ultrafast speed locked behind the $500 wall.\n\nFrontier AI is splitting into two products: a commodity, and a luxury.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-04-evening-1",
@@ -1718,6 +1718,20 @@
     "id": "2026-10-04-evening-2",
     "wave": "2026-10-04 evening",
     "text": "Anthropic doesn't have $60 billion for AI chips. So Broadcom's bankers are raising it for them.\n\n→ $42B senior-secured debt from BofA, Citi, Morgan Stanley\n→ $18B subordinated, Blackstone fronting $9B itself\n→ Goal: Anthropic becomes Broadcom's #1 chip customer — carved out of Nvidia's lead\n→ Still unannounced. Just unnamed sources and syndication letters\n\nthe AI boom isn't running on profit yet. it's running on debt nobody's confirmed signing.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-05-morning-1",
+    "wave": "2026-10-05 morning",
+    "text": "A solo coder built a GTA clone with AI for $10,000 — in three days it claims 1.2 million concurrent players.\n\n→ Taipei GTA: free, browser-based, built solo in ~1 month, 5-6 hrs/day\n→ 30+ AI models stitched together — DeepSeek, Kimi, others. No studio, no funding round\n→ 1.2M concurrent players, self-reported — no tracker confirms it independently\n\ngames used to need a 200-person studio and three years. this one needed one guy, a month, $10K in tokens.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-05-morning-2",
+    "wave": "2026-10-05 morning",
+    "text": "Trump just built a federal AI task force — 120 days to decide what Washington does about AI.\n\n→ \"Super Intelligence Force,\" chaired by DNI Jay Clayton\n→ Also on it: FTC chair Andrew Ferguson, a Pentagon tech chief, the head of federal personnel\n→ Its job: reach out to consumers, infrastructure, AI companies — and religious organizations\n→ Reports straight to Trump. No public rulebook yet\n\na federal AI task force reaching out to churches is, officially, the plan right now.",
     "image_url": null,
     "status": "queued"
   }
