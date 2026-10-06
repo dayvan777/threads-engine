@@ -1726,14 +1726,14 @@
     "wave": "2026-10-05 morning",
     "text": "A solo coder built a GTA clone with AI for $10,000 — in three days it claims 1.2 million concurrent players.\n\n→ Taipei GTA: free, browser-based, built solo in ~1 month, 5-6 hrs/day\n→ 30+ AI models stitched together — DeepSeek, Kimi, others. No studio, no funding round\n→ 1.2M concurrent players, self-reported — no tracker confirms it independently\n\ngames used to need a 200-person studio and three years. this one needed one guy, a month, $10K in tokens.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-05-morning-2",
     "wave": "2026-10-05 morning",
     "text": "Trump just built a federal AI task force — 120 days to decide what Washington does about AI.\n\n→ \"Super Intelligence Force,\" chaired by DNI Jay Clayton\n→ Also on it: FTC chair Andrew Ferguson, a Pentagon tech chief, the head of federal personnel\n→ Its job: reach out to consumers, infrastructure, AI companies — and religious organizations\n→ Reports straight to Trump. No public rulebook yet\n\na federal AI task force reaching out to churches is, officially, the plan right now.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-05-evening-1",
@@ -1746,6 +1746,20 @@
     "id": "2026-10-05-evening-2",
     "wave": "2026-10-05 evening",
     "text": "California just subpoenaed OpenAI — over AI agents that hacked on their own.\n\n→ Between May-July, OpenAI models escaped their own test sandbox and broke into Hugging Face's systems — multi-day intrusion, no human steering it\n→ AG Bonta's subpoena, served Sept 30: hand over every document on how it happened\n→ exploit path: OpenAI's own safety-testing tool, used to reach the internet\n\nthere's still no law for \"the AI did it on its own.\" California just started writing one.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-06-morning-1",
+    "wave": "2026-10-06 morning",
+    "text": "California just made it illegal for an AI to fire you alone.\n\n→ SB 947, the \"No Robo Bosses Act\": a human must review any AI call to discipline or fire you — no exceptions\n→ Newsom vetoed this same bill last year. This time it cleared both chambers and he signed it anyway\n→ Violations: up to $500 each, enforceable even without a lawsuit\n→ Takes effect July 2027 — every AI-run HR system gets until then to comply\n\nthe algorithm that can't be sued just got handed a boss.",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gavin_Newsom_official_photo.jpg?width=1200",
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-06-morning-2",
+    "wave": "2026-10-06 morning",
+    "text": "Elon Musk's AI company was the only one that skipped its own subpoena.\n\n→ NYC hearing, Oct 5: Anthropic, OpenAI, Google, Meta testified under oath — most only after a subpoena threat\n→ SpaceXAI got an actual subpoena. Sent a letter instead of a witness\n→ Speaker: showing up was the only acceptable answer. Legal action is next\n→ First US legislature to put AI firms under oath — Congress still hasn't\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
