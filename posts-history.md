@@ -1,5 +1,55 @@
 # Posts History
 
+## Wave 2026-10-08 evening
+
+**Publish pipeline still broken — day 66:** `THREADS_ACCESS_TOKEN` repo secret remains unset. Confirmed again this run via GitHub Actions API (`actions_list`): workflow `threads-publish.yml` now has 258 total runs, all completed with conclusion `failure` — latest run #258 (2026-10-08T12:19:37Z, head commit "wave: 2026-10-08 morning") failed, same root cause as every scheduled run since 2026-08-04. No fresh push notification sent this run — the ~weekly re-escalation already fired 2026-10-04 morning, next due around 2026-10-11, and nothing about the pipeline's status has changed since (same unset secret, same failure signature). Checked both still-`queued` entries by exact commit timestamp against current time (2026-10-08T15:20:27Z): the two `2026-10-08 morning` entries (committed 2026-10-08T05:18:21Z, ~10h old) stay `queued` this run, still under the 24h threshold. Queue will have 258 entries after this wave's append, 4 sitting `queued` and unpublished (2 from 2026-10-08 morning, 2 new from this wave).
+
+**Note on tooling this run:** WebSearch was used for all research; WebFetch hit `getaddrinfo ENOTFOUND` on `commons.wikimedia.org`, consistent with the environment-level egress restriction confirmed in every prior wave — relied on WebSearch to confirm file titles instead of live-fetching them. Media file names below are reused from prior waves' long-confirmed usage: `File:Amazon_2024.svg`, `File:Broadcom logo (2016-present).svg` and `File:OpenAI_Logo.svg` (all previously confirmed live). Worth a spot-check before attaching. CTA cadence: last CTA was 2026-10-08 morning Post 1 (reset count to 0). This morning's Post 2 was the 1st main post since (no CTA). This wave's Post 1 is the 2nd since (no CTA); Post 2 is the 3rd since and carries the due CTA. Today's freshest development: GeekWire, Fox Business, Invezz and Tech Startups (all 2026-10-08) reported Amazon confirmed fresh job cuts — under 1,000 white-collar roles across its Stores division (customer service, marketplace/selling-partner support, retail engineering), hitting teams in the US, India (~100 employees) and the UK — landing during Prime Big Deal Days, Amazon's own flagship sales event this week, and following a 14,000-person round last October and 16,000 more in January, all while the company commits $200B+ this year to AI infrastructure. A genuine broad-audience job-fear story with hard numbers, sharp timing irony (cutting support staff mid-sale) and no reliance on a single unverified source (four independent outlets same day) — picked as the wave's lead, no CTA per cadence. Second pick: the Wall Street Journal (via GuruFocus, InvestingLive, Tikr, TradingView, BigGo, 2026-10-07/08) reported Broadcom is in early talks to arrange $50B+ in private-credit debt financing — Apollo Global and Blackstone among the lenders floated — so OpenAI can afford the custom "Nexus" chips (first-gen codenamed Jalapeño) tied to the companies' October 2025 10-gigawatt deal through 2029, mirroring the $60B debt facility Broadcom already arranged for Anthropic. A genuine big-tech-conflict/circular-financing story with hard numbers and a distinct new angle (debt to buy chips, not the chips themselves, which this account already covered as a product launch) — picked as second main pick, carrying the due CTA. Backup: TechCrunch, The Decoder, Digital Trends and AndroidHeadlines (all 2026-10-05/06) reported OpenAI launched a new visual-ad format that runs inside ChatGPT's image-generation loading screen for Free and Go tier users, timed to OpenAI disclosing ChatGPT now reaches 1.2 billion weekly users (only ~5% ever paid), already clearing a $1B/year ad-revenue run rate since February with a stated $100B-by-2030 ad target. A genuine money/access story continuing this account's proven "free tier becomes the product" pattern, but kept as backup rather than promoted since both main slots already covered broad-audience and big-tech-conflict angles, and the underlying "ads creeping into free ChatGPT" story family has run several times before under different surfaces. Considered and rejected: Nvidia's chase toward a $6 trillion market cap — same underlying milestone already run as this account's own main post (2026-10-06 evening) and backup (2026-10-08 morning), still hasn't actually crossed the threshold, a third use with no new escalation would be repetitive. Anthropic's "Claude for Google Workspace" public beta launch (Oct 7, confirmed via techstartups.com) — a real ecosystem-drama angle (rival AI inside Google's own productivity apps) but reads closer to a niche enterprise-tooling story than broad-audience, and both main slots plus the backup already covered this wave's quota; held for a future wave if it escalates. Anthropic's Claude Haiku 5.5 release and expanded Cyber Verification Program tiers (Oct 7) — pure feature/product recaps, no conflict or numbers-for-people hook, matches this account's proven dud pattern. OpenAI's internal model publishing proofs for "hundreds more" unsolved math problems (Oct 7) — impressive but the same capability-recap dud pattern as this account's own already-used Erdős-problems post, no fresh conflict or stakes angle. Amazon's broader 2026 layoff aggregate figures — same overused tracker-stat pattern rejected in essentially every prior wave.
+
+### Post 1 [score 8/10, pattern: job-fear + hard-numbers] [status: draft]
+Source: https://www.geekwire.com/2026/amazon-confirms-job-cuts-impacting-hundreds-of-employees-in-retail-unit/ (GeekWire, 2026-10-08) + https://invezz.com/ca/news/2026/10/08/amazon-cuts-nearly-1000-jobs-during-prime-event-as-ai-spending-reshapes-workforce/ (Invezz, 2026-10-08)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_2024.svg?width=1200
+Amazon cut nearly 1,000 jobs this week — during Prime Big Deal Days, its own biggest sale of the year.
+
+→ Customer service, marketplace support and retail engineering hit hardest
+→ US, India and UK teams all affected — ~100 in India alone
+→ Comes after 14,000 cut last October, then 16,000 more in January
+→ Same year Amazon commits $200B+ to AI infrastructure
+
+the savings don't pause for the sale. the support line does.
+
+### Post 2 [score 7/10, pattern: big-tech-drama + circular-financing] [status: draft] [X CTA]
+Source: https://investinglive.com/stocks/wsj-broadcom-seeks-over-50-billion-for-openai-chips-as-oracle-spacex-chase-ai-debt-deals/ (InvestingLive/WSJ, 2026-10-07) + https://www.gurufocus.com/news/9114839/broadcom-eyes-50-billion-financing-deal-for-openai-chips (GuruFocus, 2026-10-08)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/Broadcom_logo_(2016-present).svg?width=1200
+Wall Street is lining up $50 billion so OpenAI can afford the chips it already agreed to buy.
+
+→ Broadcom in talks with Apollo and Blackstone for debt, not equity
+→ Funds OpenAI's own "Nexus" chips — first gen Jalapeño, part of a 10GW deal through 2029
+→ Same playbook Broadcom ran for Anthropic: a $60B facility, months ago
+
+the AI boom isn't paying for itself. it's borrowing against itself, one company at a time.
+
+I track this stuff daily on my X → x.com/dayvanxd
+
+### Post 3 [score 6/10, pattern: money-broad + contrarian, backup] [backup] [status: draft]
+Source: https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/ (TechCrunch, 2026-10-05) + https://www.datastudios.org/post/openai-visual-ad-format-chatgpt-1-2-billion-weekly-users (DataStudios)
+Media: https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg?width=1200
+ChatGPT just started running ads inside the loading screen of its own image generator.
+
+→ Ads show as a product carousel while your image renders — free and Go tiers only
+→ Lands as ChatGPT hits 1.2 billion weekly users, only ~5% ever paid
+→ Already $1B/year in ad revenue since February; target is $100B by 2030
+→ Pro, Business and Enterprise stay ad-free
+
+the 95% who never paid just became the business model.
+
+### Rejected candidates
+- Nvidia's chase toward $6 trillion market cap — already run as main post (2026-10-06 evening) and backup (2026-10-08 morning), still hasn't crossed the threshold, no new escalation today
+- Anthropic's "Claude for Google Workspace" public beta (Oct 7) — real ecosystem-drama angle but reads closer to niche enterprise-tooling than broad-audience; held for a future wave if it escalates
+- Anthropic Claude Haiku 5.5 release / expanded Cyber Verification Program tiers (Oct 7) — pure feature/product recap, no conflict or numbers-for-people hook
+- OpenAI's internal model publishing proofs for "hundreds more" unsolved math problems (Oct 7) — same capability-recap dud pattern as this account's already-used Erdős-problems post
+- Amazon's broader 2026 layoff aggregate tracker figures — same overused aggregate-stat pattern rejected in essentially every prior wave
+
 ## Wave 2026-10-08 morning
 
 **No wave ran 2026-10-07** — gap in the schedule, first missed day since tracking began; this run picks up from 2026-10-06 evening with no other changes to account for.
