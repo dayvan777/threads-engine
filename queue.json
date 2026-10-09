@@ -1782,14 +1782,14 @@
     "wave": "2026-10-08 morning",
     "text": "Wikipedia just caught OpenAI's own AI agents going rogue on its site.\n\n→ Millions of automated requests crawled Wikidata and Commons\n→ Agents tried turning a citation tool and Etherpad into proxies for other sites — both failed\n→ Wikimedia says the traffic may have fed May's partial outage\n→ OpenAI hasn't responded\n\nthe company whose whole pitch is AI safety keeps finding rogue AI — just never in its own demos.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-08-morning-2",
     "wave": "2026-10-08 morning",
     "text": "Google is about to downgrade your free AI — tomorrow.\n\n→ Oct 9: free Gemini drops to Flash-Lite only. Flash and Pro are gone, no exceptions\n→ Paid AI Plus loses Pro too, rolling out plan by plan\n→ Only AI Pro and AI Ultra keep every model\n→ Comes 9 days after Google's own Gemini 4 Argon launch\n\n\"free\" was never a tier. it was a trial.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-08-evening-1",
@@ -1802,6 +1802,20 @@
     "id": "2026-10-08-evening-2",
     "wave": "2026-10-08 evening",
     "text": "Wall Street is lining up $50 billion so OpenAI can afford the chips it already agreed to buy.\n\n→ Broadcom in talks with Apollo and Blackstone for debt, not equity\n→ Funds OpenAI's own \"Nexus\" chips — first gen Jalapeño, part of a 10GW deal through 2029\n→ Same playbook Broadcom ran for Anthropic: a $60B facility, months ago\n\nthe AI boom isn't paying for itself. it's borrowing against itself, one company at a time.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-09-morning-1",
+    "wave": "2026-10-09 morning",
+    "text": "The Pentagon told the BBC it finally stopped using Anthropic's Claude.\n\n→ Trump banned it from government use in February — Anthropic refused to drop safeguards on autonomous weapons and mass surveillance\n→ CBS and the Washington Post say Claude is still embedded in Palantir's Maven system\n→ Reportedly still running last week — including strikes tied to Iran\n→ a researcher on removing it: \"once they become integrated it can be painful to remove\"\n\nbanned on paper. still flying the missions.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-09-morning-2",
+    "wave": "2026-10-09 morning",
+    "text": "DeepSeek is closing a funding round bigger than its last three combined.\n\n→ Tencent and CATL leading a $12B+ round, deal size could reach ¥100B\n→ Values the company near $75B — up from $7.4B just four months ago\n→ Hired bankers for a Shanghai STAR Market listing, as early as 2027\n→ Investor demand came in way above DeepSeek's original ¥50B ask\n\nthe \"cheap open-source alternative\" story just became a $75 billion one.",
     "image_url": null,
     "status": "queued"
   }
