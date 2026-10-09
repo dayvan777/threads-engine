@@ -1796,14 +1796,14 @@
     "wave": "2026-10-08 evening",
     "text": "Amazon cut nearly 1,000 jobs this week — during Prime Big Deal Days, its own biggest sale of the year.\n\n→ Customer service, marketplace support and retail engineering hit hardest\n→ US, India and UK teams all affected — ~100 in India alone\n→ Comes after 14,000 cut last October, then 16,000 more in January\n→ Same year Amazon commits $200B+ to AI infrastructure\n\nthe savings don't pause for the sale. the support line does.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-08-evening-2",
     "wave": "2026-10-08 evening",
     "text": "Wall Street is lining up $50 billion so OpenAI can afford the chips it already agreed to buy.\n\n→ Broadcom in talks with Apollo and Blackstone for debt, not equity\n→ Funds OpenAI's own \"Nexus\" chips — first gen Jalapeño, part of a 10GW deal through 2029\n→ Same playbook Broadcom ran for Anthropic: a $60B facility, months ago\n\nthe AI boom isn't paying for itself. it's borrowing against itself, one company at a time.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-09-morning-1",
@@ -1816,6 +1816,20 @@
     "id": "2026-10-09-morning-2",
     "wave": "2026-10-09 morning",
     "text": "DeepSeek is closing a funding round bigger than its last three combined.\n\n→ Tencent and CATL leading a $12B+ round, deal size could reach ¥100B\n→ Values the company near $75B — up from $7.4B just four months ago\n→ Hired bankers for a Shanghai STAR Market listing, as early as 2027\n→ Investor demand came in way above DeepSeek's original ¥50B ask\n\nthe \"cheap open-source alternative\" story just became a $75 billion one.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-09-evening-1",
+    "wave": "2026-10-09 evening",
+    "text": "USA Today's owner just sued OpenAI for $250M+ — and it wants the models deleted, not just paid for.\n\n→ 19 newspapers named, including USA Today and Detroit Free Press\n→ Claims ChatGPT trained on and reproduces their reporting, credit stripped\n→ Willful infringement claim: up to $150K per article\n→ Also demands the training data itself be destroyed\n\nevery other publisher suing OpenAI wants a check. this one wants it erased.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-09-evening-2",
+    "wave": "2026-10-09 evening",
+    "text": "The top 10 stocks in the S&P 500 now make up 41% of the index — the most concentrated since 1980.\n\n→ At the dot-com peak, the top 10 were only 26% of the index\n→ Add OpenAI, Anthropic and SpaceX post-IPO and one estimate hits 48%\n→ Fund managers now rank an \"AI bubble\" as the market's #1 tail risk\n→ Your S&P 500, Nasdaq and target-date funds likely own the same 10 names\n\nif you own an index fund or a 401k, you're not diversified — you're just long AI with extra paperwork.",
     "image_url": null,
     "status": "queued"
   }
