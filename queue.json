@@ -1824,14 +1824,14 @@
     "wave": "2026-10-09 evening",
     "text": "USA Today's owner just sued OpenAI for $250M+ — and it wants the models deleted, not just paid for.\n\n→ 19 newspapers named, including USA Today and Detroit Free Press\n→ Claims ChatGPT trained on and reproduces their reporting, credit stripped\n→ Willful infringement claim: up to $150K per article\n→ Also demands the training data itself be destroyed\n\nevery other publisher suing OpenAI wants a check. this one wants it erased.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-09-evening-2",
     "wave": "2026-10-09 evening",
     "text": "The top 10 stocks in the S&P 500 now make up 41% of the index — the most concentrated since 1980.\n\n→ At the dot-com peak, the top 10 were only 26% of the index\n→ Add OpenAI, Anthropic and SpaceX post-IPO and one estimate hits 48%\n→ Fund managers now rank an \"AI bubble\" as the market's #1 tail risk\n→ Your S&P 500, Nasdaq and target-date funds likely own the same 10 names\n\nif you own an index fund or a 401k, you're not diversified — you're just long AI with extra paperwork.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-10-morning-1",
@@ -1844,6 +1844,20 @@
     "id": "2026-10-10-morning-2",
     "wave": "2026-10-10 morning",
     "text": "OpenAI built an invisible watermark for AI text — edit 10% of the words and detection drops from 92% to 66%.\n\n→ Rolling out to ChatGPT and Codex in the EU over the coming weeks, under the AI Act's Article 50\n→ textGrain tags word choices with a hidden statistical pattern\n→ Replace a quarter of the words and detection falls to 17%\n→ OpenAI's own tests found the loophole before any regulator did\n\nthe law says label the output. a light edit peels the label right off.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-10-evening-1",
+    "wave": "2026-10-10 evening",
+    "text": "OpenAI's real revenue is $20B lower than Wall Street thought — tech stocks dropped on the news.\n\n→ FT: OpenAI's annualized revenue near $50B, not the $70B investors priced in\n→ The gap isn't lost sales — Anthropic counts cloud-partner revenue that OpenAI doesn't\n→ Nasdaq had its worst day since mid-August anyway\n→ Reuters couldn't independently verify either company's numbers\n\nthe AI panic didn't need bad news. a different accountant was enough.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-10-evening-2",
+    "wave": "2026-10-10 evening",
+    "text": "Iran built seven fake journalists using ChatGPT — and real news outlets ran their stories anyway.\n\n→ OpenAI: ~100 articles placed across about a dozen outlets, some with real audiences\n→ Topic: pieces critical of the US war against Iran\n→ After publishing, the same operatives had ChatGPT write the social media reactions too\n→ Running since July 2025 — caught and banned only this week\n\nthe fake part wasn't just the byline. it was the whole reaction underneath it.",
     "image_url": null,
     "status": "queued"
   }
