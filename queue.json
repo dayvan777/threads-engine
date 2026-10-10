@@ -1810,14 +1810,14 @@
     "wave": "2026-10-09 morning",
     "text": "The Pentagon told the BBC it finally stopped using Anthropic's Claude.\n\n→ Trump banned it from government use in February — Anthropic refused to drop safeguards on autonomous weapons and mass surveillance\n→ CBS and the Washington Post say Claude is still embedded in Palantir's Maven system\n→ Reportedly still running last week — including strikes tied to Iran\n→ a researcher on removing it: \"once they become integrated it can be painful to remove\"\n\nbanned on paper. still flying the missions.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-09-morning-2",
     "wave": "2026-10-09 morning",
     "text": "DeepSeek is closing a funding round bigger than its last three combined.\n\n→ Tencent and CATL leading a $12B+ round, deal size could reach ¥100B\n→ Values the company near $75B — up from $7.4B just four months ago\n→ Hired bankers for a Shanghai STAR Market listing, as early as 2027\n→ Investor demand came in way above DeepSeek's original ¥50B ask\n\nthe \"cheap open-source alternative\" story just became a $75 billion one.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-09-evening-1",
@@ -1830,6 +1830,20 @@
     "id": "2026-10-09-evening-2",
     "wave": "2026-10-09 evening",
     "text": "The top 10 stocks in the S&P 500 now make up 41% of the index — the most concentrated since 1980.\n\n→ At the dot-com peak, the top 10 were only 26% of the index\n→ Add OpenAI, Anthropic and SpaceX post-IPO and one estimate hits 48%\n→ Fund managers now rank an \"AI bubble\" as the market's #1 tail risk\n→ Your S&P 500, Nasdaq and target-date funds likely own the same 10 names\n\nif you own an index fund or a 401k, you're not diversified — you're just long AI with extra paperwork.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-10-morning-1",
+    "wave": "2026-10-10 morning",
+    "text": "Anthropic is about to out-IPO SpaceX — in the same year SpaceX set the record.\n\n→ Oct 14: invites institutional investors to HQ for a first look, before any public filing\n→ Target valuation: $1.8–2 trillion, more than double its $965B private round from May\n→ Formal roadshow could open the week of Nov 9 — trading before Thanksgiving\n→ SpaceX's $1.77T IPO in June is the bar Anthropic wants to clear\n\nthe biggest IPO in history might happen twice before the year's out.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-10-morning-2",
+    "wave": "2026-10-10 morning",
+    "text": "OpenAI built an invisible watermark for AI text — edit 10% of the words and detection drops from 92% to 66%.\n\n→ Rolling out to ChatGPT and Codex in the EU over the coming weeks, under the AI Act's Article 50\n→ textGrain tags word choices with a hidden statistical pattern\n→ Replace a quarter of the words and detection falls to 17%\n→ OpenAI's own tests found the loophole before any regulator did\n\nthe law says label the output. a light edit peels the label right off.",
     "image_url": null,
     "status": "queued"
   }
