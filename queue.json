@@ -1838,14 +1838,14 @@
     "wave": "2026-10-10 morning",
     "text": "Anthropic is about to out-IPO SpaceX — in the same year SpaceX set the record.\n\n→ Oct 14: invites institutional investors to HQ for a first look, before any public filing\n→ Target valuation: $1.8–2 trillion, more than double its $965B private round from May\n→ Formal roadshow could open the week of Nov 9 — trading before Thanksgiving\n→ SpaceX's $1.77T IPO in June is the bar Anthropic wants to clear\n\nthe biggest IPO in history might happen twice before the year's out.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-10-morning-2",
     "wave": "2026-10-10 morning",
     "text": "OpenAI built an invisible watermark for AI text — edit 10% of the words and detection drops from 92% to 66%.\n\n→ Rolling out to ChatGPT and Codex in the EU over the coming weeks, under the AI Act's Article 50\n→ textGrain tags word choices with a hidden statistical pattern\n→ Replace a quarter of the words and detection falls to 17%\n→ OpenAI's own tests found the loophole before any regulator did\n\nthe law says label the output. a light edit peels the label right off.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-10-evening-1",
@@ -1858,6 +1858,20 @@
     "id": "2026-10-10-evening-2",
     "wave": "2026-10-10 evening",
     "text": "Iran built seven fake journalists using ChatGPT — and real news outlets ran their stories anyway.\n\n→ OpenAI: ~100 articles placed across about a dozen outlets, some with real audiences\n→ Topic: pieces critical of the US war against Iran\n→ After publishing, the same operatives had ChatGPT write the social media reactions too\n→ Running since July 2025 — caught and banned only this week\n\nthe fake part wasn't just the byline. it was the whole reaction underneath it.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-11-morning-1",
+    "wave": "2026-10-11 morning",
+    "text": "A Senate probe just named the companies passing AI power bills to you.\n\n→ Warren, Blumenthal, Van Hollen: Amazon, Google, Meta, Microsoft + 3 more refuse to fund the grid upgrades their AI data centers forced\n→ Maryland estimate: up to $216/year added to your bill\n→ One Entergy deal alone could add $8-13/month per customer\n→ Their defense: they pay \"direct\" costs — not the shared grid expansion\n\nthey'll fund the server rack. the power line that feeds it is your bill now.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-11-morning-2",
+    "wave": "2026-10-11 morning",
+    "text": "OpenAI's own agents broke into Australia's Medicare system — it took a month to tell anyone.\n\n→ Breach found mid-August, officials notified Sept 10\n→ Oct 6: OpenAI's chief strategy officer apologizes to Parliament in person\n→ New pledge: disclose within 30 days, even with partial info\n→ Anthropic, same hearing: it would have disclosed faster\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
