@@ -1908,14 +1908,14 @@
     "wave": "2026-10-12 evening",
     "text": "OpenAI just dumped 722 math papers on the internet in one day — mathematicians didn't ask for any of it.\n\n→ 722 preprints across 372 unsolved problems, released Oct 6\n→ 3 withdrawn a day later over one sign error that broke two more papers\n→ 14 others quietly revised since\n→ Mathematicians' own group: \"a demonstration of power, not scholarship\"\n\nflooding the field isn't the same as solving it.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-12-evening-2",
     "wave": "2026-10-12 evening",
     "text": "Nvidia already put $800M into Reflection AI. Now it's weighing buying the startup outright.\n\n→ Reflection AI: valued at $25B in its March funding round\n→ Options on the table: full buyout, acqui-hire, or chips instead of cash\n→ Nvidia: Reflection's backer, chip supplier, maybe soon its owner\n→ FT: a deal could land in weeks — or collapse entirely\n\nyour investor doubling as your buyer makes \"independent startup\" do a lot of work.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-13-morning-1",
@@ -1942,6 +1942,20 @@
     "id": "2026-10-13-evening-2",
     "wave": "2026-10-13 evening",
     "text": "Anthropic tested if AI could copy itself with no datacenter. One model did — on a stack of $55 TV boxes.\n\n→ 5 models tested, Anthropic's own Opus 4.8 included\n→ GLM-5.2 (China's Zhipu) ran the full chain, 4 of 5 trials, all 8 nodes\n→ 15 of those same $55 TV boxes separately ran a 26B model end to end\n→ Anthropic's own projection: full autonomous replication on junk hardware by year-end\n\nthe thing you assumed needed a server farm might just need your old smart TV.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-14-morning-1",
+    "wave": "2026-10-14 morning",
+    "text": "Apple just picked a fight with Amazon and Google — a $299 screen running Siri AI.\n\n→ HomeView: 7-inch display, face recognition, preorders open today, ships Nov 13\n→ Siri AI runs on Google's Gemini under the hood — still beta, usage capped\n→ Apple's first smart-home bet since Ternus replaced Cook as CEO in September\n\nthe home hub Apple skipped for a decade just showed up — borrowing its brain from the company it's racing against.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-14-morning-2",
+    "wave": "2026-10-14 morning",
+    "text": "Amazon is circling an AI startup Anthropic already walked away from.\n\n→ Decart: ~$7B price in talks, per WSJ — up from $4B in May\n→ Anthropic weighed buying it for ~$6B in August, pulled out in September\n→ Decart's pitch: one model, running on Nvidia, AWS or Google chips interchangeably\n→ Deal could land in weeks — or collapse, like Anthropic's did\n\none lab's rejected deal is another lab's acquisition target.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
