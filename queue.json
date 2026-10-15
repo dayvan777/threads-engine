@@ -1950,14 +1950,14 @@
     "wave": "2026-10-14 morning",
     "text": "Apple just picked a fight with Amazon and Google — a $299 screen running Siri AI.\n\n→ HomeView: 7-inch display, face recognition, preorders open today, ships Nov 13\n→ Siri AI runs on Google's Gemini under the hood — still beta, usage capped\n→ Apple's first smart-home bet since Ternus replaced Cook as CEO in September\n\nthe home hub Apple skipped for a decade just showed up — borrowing its brain from the company it's racing against.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-14-morning-2",
     "wave": "2026-10-14 morning",
     "text": "Amazon is circling an AI startup Anthropic already walked away from.\n\n→ Decart: ~$7B price in talks, per WSJ — up from $4B in May\n→ Anthropic weighed buying it for ~$6B in August, pulled out in September\n→ Decart's pitch: one model, running on Nvidia, AWS or Google chips interchangeably\n→ Deal could land in weeks — or collapse, like Anthropic's did\n\none lab's rejected deal is another lab's acquisition target.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-14-evening-1",
@@ -1984,6 +1984,20 @@
     "id": "2026-10-15-morning-2",
     "wave": "2026-10-15 morning",
     "text": "Anthropic showed investors $16.8B in Q3 revenue this week — up 50% in a quarter. They still didn't buy the $2 trillion price tag.\n\n→ $16.8B revenue, up from $11.5B in Q2; $42B net loss for the year\n→ One analyst: \"good, but not good enough.\" Another models up to 93% overvaluation\n→ Burry already pegged the smaller $965B figure at 78 S&P 500 companies — the IPO ask just doubled it\n\ngrowth can be real and the price can still be the bubble.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-15-evening-1",
+    "wave": "2026-10-15 evening",
+    "text": "Netflix just confirmed 1,000 job cuts — 6% of the whole company, in one memo.\n\nThe hit list: product, tech, legal, HR. Not the shows you watch — the people who ran the company behind them. Biggest round since 2022, dropped six days before Q3 earnings, while the stock keeps climbing.\n\ngrowth up, headcount down: that's the new playbook.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-15-evening-2",
+    "wave": "2026-10-15 evening",
+    "text": "The FTC just subpoenaed OpenAI and Anthropic — same week, same question: what are your chatbots doing to people.\n\n→ 50+ page demands each — safety incidents, safeguards, marketing claims, privacy policies\n→ FTC wants execs from both labs, plus research group METR, under oath\n→ Comes weeks after an Anthropic incident got flagged to Trump's \"Super Intelligence Force\"\n→ No guilt required — the subpoena alone is the story\n\nthe labs racing to build superintelligence are now racing lawyers instead.",
     "image_url": null,
     "status": "queued"
   }
