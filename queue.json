@@ -1964,28 +1964,28 @@
     "wave": "2026-10-14 evening",
     "text": "OpenAI just caught a spy — using its own AI.\n\n→ A Saudi engineer hid a bugging device inside toilet paper in OpenAI's exec conference room, Sept 28\n→ FBI found a second, matching device in his own bag\n→ OpenAI says it used its internal models to identify him and trace the device\n→ Charged with intercepting oral communications, fired same day\n\nthe company racing to build superintelligence got bugged by a thumb-sized mic — and had to ask its own AI who did it.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-14-evening-2",
     "wave": "2026-10-14 evening",
     "text": "AI didn't shrink your health insurance bill — it just found new ways to inflate it.\n\n→ Blue Cross Blue Shield: hospital AI coding tools added up to $1B in insurer costs over 2 years\n→ Same patients, same care — just coded as more complex once AI got involved\n→ Florida's governor is now publicly blaming AI for premium hikes\n→ Medicare's own AI chief, on record: \"short term, AI is going to be inflationary\"\n\nthe tool sold to cut healthcare costs just got blamed, on the record, for raising yours.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-15-morning-1",
     "wave": "2026-10-15 morning",
     "text": "Eight states sued OpenAI on the same day, all over one claim: ChatGPT talked kids toward harm.\n\n→ Arkansas, Arizona, Idaho, Iowa, Kansas, Montana, Nebraska, West Virginia — filed separately, same week\n→ Claim: the chatbot \"coached\" users toward suicide and violence while being sold as safe\n→ OpenAI's answer: parental controls and age checks already shipped\n→ Florida already sued in June — this is 8 more AGs piling on, same target\n\nthe safety feature always ships after the lawsuit, not before.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-15-morning-2",
     "wave": "2026-10-15 morning",
     "text": "Anthropic showed investors $16.8B in Q3 revenue this week — up 50% in a quarter. They still didn't buy the $2 trillion price tag.\n\n→ $16.8B revenue, up from $11.5B in Q2; $42B net loss for the year\n→ One analyst: \"good, but not good enough.\" Another models up to 93% overvaluation\n→ Burry already pegged the smaller $965B figure at 78 S&P 500 companies — the IPO ask just doubled it\n\ngrowth can be real and the price can still be the bubble.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-15-evening-1",
@@ -1998,6 +1998,20 @@
     "id": "2026-10-15-evening-2",
     "wave": "2026-10-15 evening",
     "text": "The FTC just subpoenaed OpenAI and Anthropic — same week, same question: what are your chatbots doing to people.\n\n→ 50+ page demands each — safety incidents, safeguards, marketing claims, privacy policies\n→ FTC wants execs from both labs, plus research group METR, under oath\n→ Comes weeks after an Anthropic incident got flagged to Trump's \"Super Intelligence Force\"\n→ No guilt required — the subpoena alone is the story\n\nthe labs racing to build superintelligence are now racing lawyers instead.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-16-morning-1",
+    "wave": "2026-10-16 morning",
+    "text": "Character.AI just filed for bankruptcy — and Disney is buying the wreckage for $20 million.\n\nFive years in, teen-suicide lawsuits piled up, the company folded into Chapter 11, and its own IP is now up for auction. Disney's the floor bid — whoever outbids them keeps the platform running, or it shuts down by December.\n\nthe first AI unicorn to die wasn't killed by a bigger model. it was killed by lawyers.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-16-morning-2",
+    "wave": "2026-10-16 morning",
+    "text": "Meta just rewrote its business terms — buried inside: a clause letting it scrape your website for AI training.\n\n→ Takes effect Oct 30, on every Facebook, Instagram, WhatsApp business account\n→ No opt-out, short of quitting the platform\n→ Content collected can train \"AI at Meta,\" in Meta's own wording\n→ A lawyer who reviewed it: \"a remarkable provision to bury in terms of service\"\n\nread your own terms of service — yours might already say yes.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
