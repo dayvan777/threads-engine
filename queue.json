@@ -1992,14 +1992,14 @@
     "wave": "2026-10-15 evening",
     "text": "Netflix just confirmed 1,000 job cuts — 6% of the whole company, in one memo.\n\nThe hit list: product, tech, legal, HR. Not the shows you watch — the people who ran the company behind them. Biggest round since 2022, dropped six days before Q3 earnings, while the stock keeps climbing.\n\ngrowth up, headcount down: that's the new playbook.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-15-evening-2",
     "wave": "2026-10-15 evening",
     "text": "The FTC just subpoenaed OpenAI and Anthropic — same week, same question: what are your chatbots doing to people.\n\n→ 50+ page demands each — safety incidents, safeguards, marketing claims, privacy policies\n→ FTC wants execs from both labs, plus research group METR, under oath\n→ Comes weeks after an Anthropic incident got flagged to Trump's \"Super Intelligence Force\"\n→ No guilt required — the subpoena alone is the story\n\nthe labs racing to build superintelligence are now racing lawyers instead.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-16-morning-1",
@@ -2012,6 +2012,20 @@
     "id": "2026-10-16-morning-2",
     "wave": "2026-10-16 morning",
     "text": "Meta just rewrote its business terms — buried inside: a clause letting it scrape your website for AI training.\n\n→ Takes effect Oct 30, on every Facebook, Instagram, WhatsApp business account\n→ No opt-out, short of quitting the platform\n→ Content collected can train \"AI at Meta,\" in Meta's own wording\n→ A lawyer who reviewed it: \"a remarkable provision to bury in terms of service\"\n\nread your own terms of service — yours might already say yes.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-16-evening-1",
+    "wave": "2026-10-16 evening",
+    "text": "The AI trade just lost $1 trillion in one week — and no bad earnings report did it.\n\n→ Nvidia, AMD, Intel, Dell all fell the same session — Dell dropped nearly 7%\n→ Trigger: Treasury yields past 5%, not weaker demand — AI data centers got pricier to finance\n→ Broadcom's and Intel's own CEOs warned days earlier: financing, not chips or power, is the real bottleneck now\n\nif you own an index fund, you just felt the AI bubble debate — whether you follow any of this or not.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-16-evening-2",
+    "wave": "2026-10-16 evening",
+    "text": "Anthropic's own investors just marked its IPO down by $500 billion — before it even prices.\n\n→ Investors now floating $1.5T for the November IPO, down from the $2T pitched at its Oct 14 investor day\n→ Why: Q3 revenue hit $16.8B, up 45% — strong, but a sharp slowdown from a quarter that more than doubled\n→ Anthropic's own numbers: $8B+ operating loss, $42B net loss for the year\n\nthe company pricing everyone else's future just got a preview of its own markdown.",
     "image_url": null,
     "status": "queued"
   }
