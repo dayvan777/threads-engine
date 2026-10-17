@@ -2020,14 +2020,14 @@
     "wave": "2026-10-16 evening",
     "text": "The AI trade just lost $1 trillion in one week — and no bad earnings report did it.\n\n→ Nvidia, AMD, Intel, Dell all fell the same session — Dell dropped nearly 7%\n→ Trigger: Treasury yields past 5%, not weaker demand — AI data centers got pricier to finance\n→ Broadcom's and Intel's own CEOs warned days earlier: financing, not chips or power, is the real bottleneck now\n\nif you own an index fund, you just felt the AI bubble debate — whether you follow any of this or not.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-16-evening-2",
     "wave": "2026-10-16 evening",
     "text": "Anthropic's own investors just marked its IPO down by $500 billion — before it even prices.\n\n→ Investors now floating $1.5T for the November IPO, down from the $2T pitched at its Oct 14 investor day\n→ Why: Q3 revenue hit $16.8B, up 45% — strong, but a sharp slowdown from a quarter that more than doubled\n→ Anthropic's own numbers: $8B+ operating loss, $42B net loss for the year\n\nthe company pricing everyone else's future just got a preview of its own markdown.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-17-morning-1",
@@ -2040,6 +2040,20 @@
     "id": "2026-10-17-morning-2",
     "wave": "2026-10-17 morning",
     "text": "China just published its own AI export ban list — 23 technologies, with a full ban on anything that can hack on its own.\n\n→ Covers model weights, chip designs, AI agents, training clusters\n→ Full ban on models over 2 trillion parameters, or in the global top 10\n→ Public comment runs to Nov 15 — pre-export registration is already live\n→ Comes after years of the US doing the exact same thing in reverse\n\nthe chip war just grew a second wall — this one guards the exit, not the entrance.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-17-evening-1",
+    "wave": "2026-10-17 evening",
+    "text": "Google just slid a shopping cart into Search and Gemini — one cart, every store, hunting price drops on its own.\n\n→ Live now in the US, built on Google's 60-billion-listing Shopping Graph\n→ Checkout via Nike, Sephora, Target, Walmart, Ulta, Wayfair — retailers stay seller of record\n→ Auto price-drop alerts and back-in-stock pings\n→ Blocked in the EU — antitrust rules won't allow it\n\nthe tab that used to compare prices for you now just skips straight to buying.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-17-evening-2",
+    "wave": "2026-10-17 evening",
+    "text": "Anthropic just handed outside investigators the keys to its own AI — but kept the eraser.\n\n→ Six staff from AI-safety nonprofit METR get employee-level access — same tools as its own risk team\n→ Can't block publication, but can force redactions in \"narrow\" categories\n→ Customer data, legal records, model architecture stay off-limits\n→ Its other paid evaluator, Accenture, got flak for being too close to collect\n\nno veto, just a red pen.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
