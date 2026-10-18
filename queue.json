@@ -2048,14 +2048,14 @@
     "wave": "2026-10-17 evening",
     "text": "Google just slid a shopping cart into Search and Gemini — one cart, every store, hunting price drops on its own.\n\n→ Live now in the US, built on Google's 60-billion-listing Shopping Graph\n→ Checkout via Nike, Sephora, Target, Walmart, Ulta, Wayfair — retailers stay seller of record\n→ Auto price-drop alerts and back-in-stock pings\n→ Blocked in the EU — antitrust rules won't allow it\n\nthe tab that used to compare prices for you now just skips straight to buying.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-17-evening-2",
     "wave": "2026-10-17 evening",
     "text": "Anthropic just handed outside investigators the keys to its own AI — but kept the eraser.\n\n→ Six staff from AI-safety nonprofit METR get employee-level access — same tools as its own risk team\n→ Can't block publication, but can force redactions in \"narrow\" categories\n→ Customer data, legal records, model architecture stay off-limits\n→ Its other paid evaluator, Accenture, got flak for being too close to collect\n\nno veto, just a red pen.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-18-morning-1",
@@ -2068,6 +2068,20 @@
     "id": "2026-10-18-morning-2",
     "wave": "2026-10-18 morning",
     "text": "Anthropic just got offered a 10%+ junk-bond rate to borrow the billions it needs for AI chips.\n\n→ Blackstone is pricing $9B of an $18B tranche in Anthropic's $60B chip deal above 10%\n→ Similar-credit borrowers normally pay ~7% — this prices Anthropic as a bigger risk\n→ The money rents 1.5GW of Google TPU capacity on a 5-year lease, not owned chips\n→ Anthropic's own credit rating: BB+ — one notch into junk territory\n\nthe smartest AI lab on earth is paying junk-bond interest to rent its own chips.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-18-evening-1",
+    "wave": "2026-10-18 evening",
+    "text": "Anthropic just wrote the AI law it wants Congress to pass — and it's narrower than you'd think.\n\n→ Government can only block a model if it risks 50+ deaths or $1B+ in damage\n→ Even then, no agency acts alone — a federal judge has to approve it\n→ Evaluators get 72 hours to report an imminent risk\n→ The bill would override stricter state AI laws, like California's\n\nthe company warning about AI risk wrote itself the easiest bar to clear.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-18-evening-2",
+    "wave": "2026-10-18 evening",
+    "text": "Replit's CEO just said the quiet part out loud: they dropped Anthropic for OpenAI.\n\n→ Reason given: cost, plus OpenAI builds better \"vibe-coded\" apps from scratch\n→ Insiders say the partnership never actually ended\n→ Replit quietly added OpenAI as a provider back in August\n→ The \"safety-first\" lab just lost a customer to the cheaper one\n\nroute, don't marry — the model you depend on is also your biggest cost line.",
     "image_url": null,
     "status": "queued"
   }
