@@ -2034,14 +2034,14 @@
     "wave": "2026-10-17 morning",
     "text": "CoreWeave's bond default risk just hit 64% — Nvidia's own CEO had to step in personally to calm the market.\n\n→ Credit insurance on its debt hit a record 1,194 basis points this week\n→ Huang: \"their cost of capital is actually decreasing\" — no Nvidia bailout needed\n→ The chip index just logged its 8th straight losing day — longest streak since 2008\n\nif you own an index fund, you're already long on whether this circular deal holds.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-17-morning-2",
     "wave": "2026-10-17 morning",
     "text": "China just published its own AI export ban list — 23 technologies, with a full ban on anything that can hack on its own.\n\n→ Covers model weights, chip designs, AI agents, training clusters\n→ Full ban on models over 2 trillion parameters, or in the global top 10\n→ Public comment runs to Nov 15 — pre-export registration is already live\n→ Comes after years of the US doing the exact same thing in reverse\n\nthe chip war just grew a second wall — this one guards the exit, not the entrance.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-17-evening-1",
@@ -2054,6 +2054,20 @@
     "id": "2026-10-17-evening-2",
     "wave": "2026-10-17 evening",
     "text": "Anthropic just handed outside investigators the keys to its own AI — but kept the eraser.\n\n→ Six staff from AI-safety nonprofit METR get employee-level access — same tools as its own risk team\n→ Can't block publication, but can force redactions in \"narrow\" categories\n→ Customer data, legal records, model architecture stay off-limits\n→ Its other paid evaluator, Accenture, got flak for being too close to collect\n\nno veto, just a red pen.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-18-morning-1",
+    "wave": "2026-10-18 morning",
+    "text": "Gartner just found a $4.9 trillion hole in the AI spending boom.\n\n→ AI data centers need $8.5T in revenue through 2030 to cover spending plus a 12% return\n→ Gartner's own forecast: total AI revenue tops out near $3.6T — less than half\n→ $3.5T of today's AI infrastructure spend now sits exposed to write-down risk\n→ Over 80% of GPU-rental \"neoclouds\" may not survive as independent companies by 2030\n\nthe compute is real. the revenue closing that gap on its own — isn't.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-18-morning-2",
+    "wave": "2026-10-18 morning",
+    "text": "Anthropic just got offered a 10%+ junk-bond rate to borrow the billions it needs for AI chips.\n\n→ Blackstone is pricing $9B of an $18B tranche in Anthropic's $60B chip deal above 10%\n→ Similar-credit borrowers normally pay ~7% — this prices Anthropic as a bigger risk\n→ The money rents 1.5GW of Google TPU capacity on a 5-year lease, not owned chips\n→ Anthropic's own credit rating: BB+ — one notch into junk territory\n\nthe smartest AI lab on earth is paying junk-bond interest to rent its own chips.",
     "image_url": null,
     "status": "queued"
   }
