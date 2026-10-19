@@ -2062,14 +2062,14 @@
     "wave": "2026-10-18 morning",
     "text": "Gartner just found a $4.9 trillion hole in the AI spending boom.\n\n→ AI data centers need $8.5T in revenue through 2030 to cover spending plus a 12% return\n→ Gartner's own forecast: total AI revenue tops out near $3.6T — less than half\n→ $3.5T of today's AI infrastructure spend now sits exposed to write-down risk\n→ Over 80% of GPU-rental \"neoclouds\" may not survive as independent companies by 2030\n\nthe compute is real. the revenue closing that gap on its own — isn't.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-18-morning-2",
     "wave": "2026-10-18 morning",
     "text": "Anthropic just got offered a 10%+ junk-bond rate to borrow the billions it needs for AI chips.\n\n→ Blackstone is pricing $9B of an $18B tranche in Anthropic's $60B chip deal above 10%\n→ Similar-credit borrowers normally pay ~7% — this prices Anthropic as a bigger risk\n→ The money rents 1.5GW of Google TPU capacity on a 5-year lease, not owned chips\n→ Anthropic's own credit rating: BB+ — one notch into junk territory\n\nthe smartest AI lab on earth is paying junk-bond interest to rent its own chips.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-18-evening-1",
@@ -2082,6 +2082,20 @@
     "id": "2026-10-18-evening-2",
     "wave": "2026-10-18 evening",
     "text": "Replit's CEO just said the quiet part out loud: they dropped Anthropic for OpenAI.\n\n→ Reason given: cost, plus OpenAI builds better \"vibe-coded\" apps from scratch\n→ Insiders say the partnership never actually ended\n→ Replit quietly added OpenAI as a provider back in August\n→ The \"safety-first\" lab just lost a customer to the cheaper one\n\nroute, don't marry — the model you depend on is also your biggest cost line.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-19-morning-1",
+    "wave": "2026-10-19 morning",
+    "text": "Schwab and JPMorgan just drew a line AI agents aren't allowed to cross: your money.\n\n→ Schwab blocks outside agents — including Meta's Muse — from moving client funds\n→ CEO Rick Wurster: \"who's liable?\" if something goes wrong\n→ Tens of agent attempts blocked every single week\n→ JPMorgan's Dimon: same stance, warns of \"rogue agents\"\n\nthe banks will let AI watch your money. they won't let it touch it.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-19-morning-2",
+    "wave": "2026-10-19 morning",
+    "text": "Anthropic just published the numbers on its own junior hiring — and wrote the obituary itself.\n\n→ Junior share of technical hires: 27% → 9% since early 2025\n→ Junior share of technical staff overall: 21% → 14%\n→ AI agent hours vs. employee hours: parity in March, 6-to-1 by August\n→ Not a leak — Anthropic's own economists published it\n\nthe company selling the AI just showed you who it replaces first.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
     "status": "queued"
   }
