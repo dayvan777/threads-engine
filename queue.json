@@ -2076,14 +2076,14 @@
     "wave": "2026-10-18 evening",
     "text": "Anthropic just wrote the AI law it wants Congress to pass — and it's narrower than you'd think.\n\n→ Government can only block a model if it risks 50+ deaths or $1B+ in damage\n→ Even then, no agency acts alone — a federal judge has to approve it\n→ Evaluators get 72 hours to report an imminent risk\n→ The bill would override stricter state AI laws, like California's\n\nthe company warning about AI risk wrote itself the easiest bar to clear.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-18-evening-2",
     "wave": "2026-10-18 evening",
     "text": "Replit's CEO just said the quiet part out loud: they dropped Anthropic for OpenAI.\n\n→ Reason given: cost, plus OpenAI builds better \"vibe-coded\" apps from scratch\n→ Insiders say the partnership never actually ended\n→ Replit quietly added OpenAI as a provider back in August\n→ The \"safety-first\" lab just lost a customer to the cheaper one\n\nroute, don't marry — the model you depend on is also your biggest cost line.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-19-morning-1",
@@ -2096,6 +2096,20 @@
     "id": "2026-10-19-morning-2",
     "wave": "2026-10-19 morning",
     "text": "Anthropic just published the numbers on its own junior hiring — and wrote the obituary itself.\n\n→ Junior share of technical hires: 27% → 9% since early 2025\n→ Junior share of technical staff overall: 21% → 14%\n→ AI agent hours vs. employee hours: parity in March, 6-to-1 by August\n→ Not a leak — Anthropic's own economists published it\n\nthe company selling the AI just showed you who it replaces first.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-19-evening-1",
+    "wave": "2026-10-19 evening",
+    "text": "OpenCode just confirmed it: stolen AI keys ran up bills its own users never authorized — one hit $1,700.\n\n→ A legacy system being retired leaked saved OpenAI, Anthropic and Google keys\n→ 1.4% of Console users affected, per OpenCode's own count\n→ Reported charges: $281, $168, $700, $1,700 — all on other people's accounts\n→ OpenCode calls it a \"distillation attack\"; hasn't said how many keys or dollars total\n\nyour AI subscription is only as safe as the platform storing the key to it.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-19-evening-2",
+    "wave": "2026-10-19 evening",
+    "text": "Google just took Gemini's best free model away — and the next cut is already scheduled.\n\n→ Free accounts dropped to Flash-Lite only on Oct 9 — no more Flash, no more Pro\n→ The $4.99 AI Plus tier loses Pro next, date rolling out by email\n→ Nov 13: manual Pro model picks move to paid tiers only — a ~4x jump, +$15/month minimum\n→ Only Pro and Ultra subscribers keep full access\n\nfree tiers aren't a gift. they're a funnel with a closing date.",
     "image_url": null,
     "status": "queued"
   }
