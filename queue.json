@@ -2118,14 +2118,14 @@
     "wave": "2026-10-20 morning",
     "text": "FICO just lost its legal monopoly on your credit score — and fired people in response.\n\n→ 15% of its workforce cut, SEC filing says — ~570 jobs\n→ $27M in severance charges this quarter\n→ Stock down 58% this year as regulators let lenders use VantageScore instead\n→ Company's own words: \"AI-driven product development,\" not the monopoly it lost\n\nthe score behind every mortgage in America just got a cheaper org chart and a worse excuse.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-20-morning-2",
     "wave": "2026-10-20 morning",
     "text": "Norway's biggest bank just said the quiet part out loud: the AI already does the job, so around 400 people don't need to.\n\n→ Cuts land in DNB's Technology & Services unit — about 4% of staff\n→ CEO Kjerstin Braathen: AI agents already verify customer data, run compliance checks, write code\n→ The stock rose on the announcement\n→ Charges hit this quarter, cuts wrap by year-end\n\nwhen the layoff makes the stock go up, you know exactly who the next round is for.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-20-evening-1",
@@ -2152,6 +2152,20 @@
     "id": "2026-10-21-morning-2",
     "wave": "2026-10-21 morning",
     "text": "ChatGPT can target ads at you using your email, your phone number, and the exact thing you typed — turning off \"personalization\" doesn't stop it.\n\n→ Advertisers upload contact lists — OpenAI matches them to real accounts\n→ Your own prompts can steer which ads you see, personalization on or off\n→ Campaigns need 25,000 matched users minimum — no cap on what gets uploaded\n→ OpenAI says uploaded lists are deleted within 24 hours\n\nthe opt-out button turned off the label, not the targeting.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-21-evening-1",
+    "wave": "2026-10-21 evening",
+    "text": "The US government banned DeepSeek from itself — and sat on it for 3 months before anyone found out.\n\n→ DHS's Removal Order #2026-01, signed in July, only surfaced via the Federal Register this week\n→ Covers DeepSeek, its affiliates, and any product built on its tech\n→ Exception window had already closed by the time this went public\n→ Reason: DeepSeek's servers and data sit inside China\n\nthe ban was real since July. you just found out now.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-21-evening-2",
+    "wave": "2026-10-21 evening",
+    "text": "Starlink now runs customer service almost entirely on AI — 20,000 calls a day, and 7 of every 10 never reach a human.\n\n→ Grok Voice verifies your identity, fixes your router, issues credits, orders replacements\n→ Volume jumped from 15K/day in August to 20K/day by October\n→ SpaceX calls the rest \"resolved\" — nobody's confirmed the problem actually went away\n→ Humans still work the queue, just a shrinking share of it\n\nthe job didn't disappear. it just stopped answering the phone.",
     "image_url": null,
     "status": "queued"
   }
