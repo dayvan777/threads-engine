@@ -2132,14 +2132,14 @@
     "wave": "2026-10-20 evening",
     "text": "Australia's biggest bank just cut 2,500 jobs — and won't say how many AI replaced.\n\n→ 6% of the workforce gone by mid-2027, 1,500 roles cut by year-end alone\n→ $300M booked in restructuring costs already\n→ A senator is demanding NAB \"come clean\" on AI's role\n→ The bank's own public filing doesn't mention AI once\n\nthe quieter the word \"AI\" gets in the press release, the louder it's doing the firing.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-20-evening-2",
     "wave": "2026-10-20 evening",
     "text": "Kroger says firing 3,000 people will make your groceries cheaper.\n\n→ 37% of its 8,200 corporate jobs cut over the next 3 years\n→ Memo ties it straight to AI and \"removing duplicated work\"\n→ Savings promised to fund lower prices and store-worker pay\n→ Comes weeks after Kroger said it's expanding AI across daily operations\n\nthe algorithm replacing your coworker is now also pricing your cart.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-21-morning-1",
@@ -2166,6 +2166,20 @@
     "id": "2026-10-21-evening-2",
     "wave": "2026-10-21 evening",
     "text": "Starlink now runs customer service almost entirely on AI — 20,000 calls a day, and 7 of every 10 never reach a human.\n\n→ Grok Voice verifies your identity, fixes your router, issues credits, orders replacements\n→ Volume jumped from 15K/day in August to 20K/day by October\n→ SpaceX calls the rest \"resolved\" — nobody's confirmed the problem actually went away\n→ Humans still work the queue, just a shrinking share of it\n\nthe job didn't disappear. it just stopped answering the phone.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-22-morning-1",
+    "wave": "2026-10-22 morning",
+    "text": "71% of Americans don't want an AI data center built near them — three senators just showed you why.\n\n→ Senate probe: Amazon, Google, Meta, Microsoft won't commit to covering grid-upgrade costs\n→ Meta and Amazon say they pay for the power they use — not the new wires built to deliver it\n→ A GOP senator calls data centers a \"scapegoat\" for high prices anyway\n→ Contracts that decide who pays stay confidential by default\n\nnobody disputes your bill is rising. everyone disputes whose name is on it.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-22-morning-2",
+    "wave": "2026-10-22 morning",
+    "text": "Google just rented 110,000 Nvidia GPUs — from SpaceX.\n\n→ $920M/month, October 2026 through June 2029, disclosed in a SpaceX regulatory filing\n→ Reason given: demand for Gemini Enterprise \"exceeded expectations\"\n→ Anthropic already pays SpaceX $1.25B/month for the same kind of deal\n→ Two of the three biggest AI labs now lease spare capacity from Elon's rocket company, not each other\n\nthe moat wasn't compute. it was whoever had spare compute lying around.",
     "image_url": null,
     "status": "queued"
   }
