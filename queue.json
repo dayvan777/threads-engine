@@ -2174,14 +2174,14 @@
     "wave": "2026-10-22 morning",
     "text": "71% of Americans don't want an AI data center built near them — three senators just showed you why.\n\n→ Senate probe: Amazon, Google, Meta, Microsoft won't commit to covering grid-upgrade costs\n→ Meta and Amazon say they pay for the power they use — not the new wires built to deliver it\n→ A GOP senator calls data centers a \"scapegoat\" for high prices anyway\n→ Contracts that decide who pays stay confidential by default\n\nnobody disputes your bill is rising. everyone disputes whose name is on it.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-22-morning-2",
     "wave": "2026-10-22 morning",
     "text": "Google just rented 110,000 Nvidia GPUs — from SpaceX.\n\n→ $920M/month, October 2026 through June 2029, disclosed in a SpaceX regulatory filing\n→ Reason given: demand for Gemini Enterprise \"exceeded expectations\"\n→ Anthropic already pays SpaceX $1.25B/month for the same kind of deal\n→ Two of the three biggest AI labs now lease spare capacity from Elon's rocket company, not each other\n\nthe moat wasn't compute. it was whoever had spare compute lying around.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-22-evening-1",
@@ -2208,6 +2208,20 @@
     "id": "2026-10-23-morning-2",
     "wave": "2026-10-23 morning",
     "text": "Google DeepMind staff are quitting over Google's AI — not because it's bad, but over who's buying it.\n\n→ Engineer Sofia Liguori quit this week over Google's AI work for the US and Israeli militaries\n→ Researcher Andreas Kirsch quit this month: Google's oversight can't safely govern military AI\n→ Objections include a reported $1.2B Google-Israel cloud deal\n→ Both signed non-disparagement clauses — and talked to the BBC anyway\n\nthe safety team walking out the door is its own kind of safety signal.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-23-evening-1",
+    "wave": "2026-10-23 evening",
+    "text": "AI memory chips are printing record profits. Micron's Taiwan workers just went on strike for a cut — a first for the island's chip industry.\n\n→ 99% of the union voted to strike after talks collapsed\n→ Demand: a permanent 15% of quarterly profit, not Micron's one-time bonus\n→ Samsung's union already got 10.5%, SK Hynix got 10%\n→ Taiwan makes 50-60% of Micron's output\n\neveryone's getting rich off the AI memory boom except the people making it.\n\nI track this stuff daily on my X → x.com/dayvanxd",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-23-evening-2",
+    "wave": "2026-10-23 evening",
+    "text": "Anthropic pitched Congress a bill to shut down dangerous AI models — and wrote itself a convenient rulebook.\n\n→ Trigger: a model foreseeably kills/injures 50+ people or causes $1B+ in damage\n→ Only the Commerce Dept could act — every other agency is legally barred from stepping in\n→ Evaluators checking the models can be paid by the AI labs themselves\n→ White House reportedly opposes it anyway\n\nthe company selling you AI safety just wrote the rules for who grades it.",
     "image_url": null,
     "status": "queued"
   }
