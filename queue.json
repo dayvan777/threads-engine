@@ -2188,14 +2188,14 @@
     "wave": "2026-10-22 evening",
     "text": "An AI found a decade-old bug in PHP — and AI hackers are racing to exploit it before the world patches.\n\n→ PHP2Shell: remote code execution, every PHP release from 5.4 to 8 affected\n→ PHP runs ~70% of the web — WordPress, stores, government portals\n→ AWS: already \"broadly exploited in the wild.\" South Korea raised its cyber alert.\n\nthe AI that found a 10-year-old bug just triggered a race against the AI trying to use it.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-22-evening-2",
     "wave": "2026-10-22 evening",
     "text": "Meta just posted $64.6 billion in quarterly revenue — and investors erased 6% of its value anyway.\n\n→ Capex raised again to $135-145B this year; free cash flow went negative for the first time since its 2012 IPO\n→ Disclosed $825B in data-center and energy leases through 2036\n→ 5-year credit default swaps hit a record high\n→ New non-voting stock class announced the same day\n\nif you own an index fund, you just funded Meta's AI bet whether the earnings beat or not.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-23-morning-1",
@@ -2222,6 +2222,20 @@
     "id": "2026-10-23-evening-2",
     "wave": "2026-10-23 evening",
     "text": "Anthropic pitched Congress a bill to shut down dangerous AI models — and wrote itself a convenient rulebook.\n\n→ Trigger: a model foreseeably kills/injures 50+ people or causes $1B+ in damage\n→ Only the Commerce Dept could act — every other agency is legally barred from stepping in\n→ Evaluators checking the models can be paid by the AI labs themselves\n→ White House reportedly opposes it anyway\n\nthe company selling you AI safety just wrote the rules for who grades it.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-24-morning-1",
+    "wave": "2026-10-24 morning",
+    "text": "OpenAI just got cut by $150 billion — before it even finished raising the round.\n\n→ Pitched investors a fixed $1.4 trillion valuation earlier this month\n→ Now closing at $1.25 trillion instead — UAE investors and Coatue leading\n→ It's a $30B bridge round, aimed at a 2027 IPO\n→ Signatures due by the end of next week\n\nthe most valuable AI company on paper just got told its paper isn't worth as much.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-24-morning-2",
+    "wave": "2026-10-24 morning",
+    "text": "A hacker broke into 100+ company websites using AI agents — for about $50 a breach.\n\n→ One operator, instructions under 100 Chinese characters\n→ AI agents then ran unsupervised against 1,200+ sites\n→ Confirmed hits: John Deere, SharkNinja, Cummins\n→ Total spend: ~$5,000 for 100+ break-ins\n\nhacking a company used to take a team. now it takes a sentence and a snack-sized budget.",
     "image_url": null,
     "status": "queued"
   }
