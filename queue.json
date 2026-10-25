@@ -2202,28 +2202,28 @@
     "wave": "2026-10-23 morning",
     "text": "SK Hynix just killed a $10B US IPO for its own chip unit — its own shareholders are who killed it.\n\n→ Solidigm's Nasdaq listing would've raised $10-15B for AI chip capacity\n→ SK Hynix investors objected: it risked discounting the parent and diluting their stake\n→ Korean regulators piled on a day earlier, citing \"duplicate-listing\" rules\n→ Same day: Korea's KOSPI fell 2%, dragged by Samsung on AI-growth fears\n\nthe people closest to the AI chip boom are the first ones hedging against it.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-23-morning-2",
     "wave": "2026-10-23 morning",
     "text": "Google DeepMind staff are quitting over Google's AI — not because it's bad, but over who's buying it.\n\n→ Engineer Sofia Liguori quit this week over Google's AI work for the US and Israeli militaries\n→ Researcher Andreas Kirsch quit this month: Google's oversight can't safely govern military AI\n→ Objections include a reported $1.2B Google-Israel cloud deal\n→ Both signed non-disparagement clauses — and talked to the BBC anyway\n\nthe safety team walking out the door is its own kind of safety signal.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-23-evening-1",
     "wave": "2026-10-23 evening",
     "text": "AI memory chips are printing record profits. Micron's Taiwan workers just went on strike for a cut — a first for the island's chip industry.\n\n→ 99% of the union voted to strike after talks collapsed\n→ Demand: a permanent 15% of quarterly profit, not Micron's one-time bonus\n→ Samsung's union already got 10.5%, SK Hynix got 10%\n→ Taiwan makes 50-60% of Micron's output\n\neveryone's getting rich off the AI memory boom except the people making it.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-23-evening-2",
     "wave": "2026-10-23 evening",
     "text": "Anthropic pitched Congress a bill to shut down dangerous AI models — and wrote itself a convenient rulebook.\n\n→ Trigger: a model foreseeably kills/injures 50+ people or causes $1B+ in damage\n→ Only the Commerce Dept could act — every other agency is legally barred from stepping in\n→ Evaluators checking the models can be paid by the AI labs themselves\n→ White House reportedly opposes it anyway\n\nthe company selling you AI safety just wrote the rules for who grades it.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-24-morning-1",
@@ -2250,6 +2250,20 @@
     "id": "2026-10-24-evening-2",
     "wave": "2026-10-24 evening",
     "text": "Goldman Sachs says AI could push 9% of US workers out of their jobs. Business leaders say they won't cut anyone.\n\n→ Goldman: ~9% of the US workforce temporarily displaced by AI\n→ Hit hardest: tech, consulting, design, admin — white-collar, entry-level\n→ Workday's own October survey: most leaders don't expect AI to shrink headcount\n→ Somebody's wrong — probably not the side paying salaries\n\nthe people signing the checks and the people studying the checks are telling two different stories.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-25-morning-1",
+    "wave": "2026-10-25 morning",
+    "text": "OpenAI just bought one of Anthropic's biggest customers — with a price cut.\n\n→ Replit moved most of its AI spend from Anthropic to OpenAI: $100M+/year deal\n→ OpenAI cut the price 30%+. Anthropic wouldn't match it — ended its own discount instead\n→ Same story at Rippling: OpenAI's share of coding work went 16% → 52% in five months. Anthropic's fell 57% → 18%\n\nthe company selling AI safety just lost a price war to the company that isn't.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-25-morning-2",
+    "wave": "2026-10-25 morning",
+    "text": "Amazon and Google just told investors the same thing: they can't build AI capacity fast enough to meet demand.\n\n→ Amazon's Jassy: 2026 supply won't cover demand — same gap expected in 2027, orders already locked for 2028\n→ Google's Pichai: \"we're compute-constrained\" — cloud revenue would've been higher with more capacity\n→ Google's 2027 capital spending is about to jump again\n\nthe two companies spending the most money in history on AI still can't make enough of it to sell.",
     "image_url": null,
     "status": "queued"
   }
