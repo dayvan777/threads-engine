@@ -2258,14 +2258,14 @@
     "wave": "2026-10-25 morning",
     "text": "OpenAI just bought one of Anthropic's biggest customers — with a price cut.\n\n→ Replit moved most of its AI spend from Anthropic to OpenAI: $100M+/year deal\n→ OpenAI cut the price 30%+. Anthropic wouldn't match it — ended its own discount instead\n→ Same story at Rippling: OpenAI's share of coding work went 16% → 52% in five months. Anthropic's fell 57% → 18%\n\nthe company selling AI safety just lost a price war to the company that isn't.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-25-morning-2",
     "wave": "2026-10-25 morning",
     "text": "Amazon and Google just told investors the same thing: they can't build AI capacity fast enough to meet demand.\n\n→ Amazon's Jassy: 2026 supply won't cover demand — same gap expected in 2027, orders already locked for 2028\n→ Google's Pichai: \"we're compute-constrained\" — cloud revenue would've been higher with more capacity\n→ Google's 2027 capital spending is about to jump again\n\nthe two companies spending the most money in history on AI still can't make enough of it to sell.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-25-evening-1",
@@ -2278,6 +2278,20 @@
     "id": "2026-10-25-evening-2",
     "wave": "2026-10-25 evening",
     "text": "Brazil's top electoral court just fined Meta $100,000 a day — because its own AI refused to draw the president.\n\n→ Meta AI on WhatsApp generated images of challenger Flávio Bolsonaro fine — but blocked the same requests for sitting president Lula\n→ The court ordered equal treatment starting today, during the actual runoff election\n→ Meta's excuse: a \"loophole,\" now fixed, it says\n\nan AI that can't draw both candidates the same way isn't neutral — it's just broken in one direction.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-26-morning-1",
+    "wave": "2026-10-26 morning",
+    "text": "Meta's AI can botch your ad — starting Thursday, you're on the hook, not Meta.\n\n→ Business AI Terms, effective Oct 30: advertisers must indemnify Meta for AI-related claims\n→ Meta's own liability stays capped, no lost profits, no damages\n→ Advertisers already call cleanup routine: garbled text, mangled products, slow refunds\n→ Meta's line: AI can make mistakes — reviewing it is \"the advertiser's responsibility\"\n\nfree to use, until it breaks something — then the bill's all yours.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-26-morning-2",
+    "wave": "2026-10-26 morning",
+    "text": "Starting Nov 12, you can get banned from Claude for being mean to it — not kidding.\n\n→ New usage policy bans \"needless cruelty\" toward Claude: sustained abuse with no real purpose\n→ Still fine: venting, pushback, dark fiction, red-teaming\n→ Enforcement: Claude ends the chat first — repeat offenders risk a suspension\n→ Same update quietly drops the old ban on AI-personalized political ads\n\nthe model that admits it sometimes resists shutdown just got protected from your insults.",
     "image_url": null,
     "status": "queued"
   }
