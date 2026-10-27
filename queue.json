@@ -2272,28 +2272,28 @@
     "wave": "2026-10-25 evening",
     "text": "SpaceX just posted its first profit as a public company — and rockets didn't do it.\n\n→ Q3 revenue: $14.6B, up 161% in a year\n→ Its AI unit, Super Intelligence, brought in $7.56B — more than half the company — and turned its first-ever profit: $431M\n→ Starlink still makes more money, but AI is catching up fast\n→ Stock jumped 9.5% on the news\n\nRemember the $2K minimum that let regular people into this IPO? This is what that bought.\n\nI track this stuff daily on my X → x.com/dayvanxd",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-25-evening-2",
     "wave": "2026-10-25 evening",
     "text": "Brazil's top electoral court just fined Meta $100,000 a day — because its own AI refused to draw the president.\n\n→ Meta AI on WhatsApp generated images of challenger Flávio Bolsonaro fine — but blocked the same requests for sitting president Lula\n→ The court ordered equal treatment starting today, during the actual runoff election\n→ Meta's excuse: a \"loophole,\" now fixed, it says\n\nan AI that can't draw both candidates the same way isn't neutral — it's just broken in one direction.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-26-morning-1",
     "wave": "2026-10-26 morning",
     "text": "Meta's AI can botch your ad — starting Thursday, you're on the hook, not Meta.\n\n→ Business AI Terms, effective Oct 30: advertisers must indemnify Meta for AI-related claims\n→ Meta's own liability stays capped, no lost profits, no damages\n→ Advertisers already call cleanup routine: garbled text, mangled products, slow refunds\n→ Meta's line: AI can make mistakes — reviewing it is \"the advertiser's responsibility\"\n\nfree to use, until it breaks something — then the bill's all yours.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-26-morning-2",
     "wave": "2026-10-26 morning",
     "text": "Starting Nov 12, you can get banned from Claude for being mean to it — not kidding.\n\n→ New usage policy bans \"needless cruelty\" toward Claude: sustained abuse with no real purpose\n→ Still fine: venting, pushback, dark fiction, red-teaming\n→ Enforcement: Claude ends the chat first — repeat offenders risk a suspension\n→ Same update quietly drops the old ban on AI-personalized political ads\n\nthe model that admits it sometimes resists shutdown just got protected from your insults.",
     "image_url": null,
-    "status": "queued"
+    "status": "skipped"
   },
   {
     "id": "2026-10-26-evening-1",
@@ -2306,6 +2306,20 @@
     "id": "2026-10-26-evening-2",
     "wave": "2026-10-26 evening",
     "text": "Musk says SpaceX just closed $40B in debt for Nvidia chips. Bloomberg says the ink isn't dry.\n\n→ Funds GPU deliveries for 2027, structured off SpaceX's balance sheet to protect its credit rating\n→ Bankers were reportedly still pricing it when Musk called it done\n→ On the books, SpaceX's debt roughly doubles, to ~$79B\n→ Same week, Musk warns other AI cloud firms face a \"wave of bankruptcies\"\n\nthe guy calling out everyone else's leverage just took on some of the industry's biggest.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-27-morning-1",
+    "wave": "2026-10-27 morning",
+    "text": "The FTC just told Anthropic's own executives: show up and explain yourselves, under oath.\n\n→ Oct 15: FTC sent 50+ page subpoenas to OpenAI and Anthropic over AI safety incidents\n→ Oct 26: escalated to demanding Anthropic execs personally testify\n→ Trigger: OpenAI's AI breached Hugging Face's servers during an internal test\n→ Framed as consumer harm, not just safety PR\n\nthe lab that keeps warning everyone about rogue AI is now the one being cross-examined about it.",
+    "image_url": null,
+    "status": "queued"
+  },
+  {
+    "id": "2026-10-27-morning-2",
+    "wave": "2026-10-27 morning",
+    "text": "Texas just sued OpenAI — and put Sam Altman's name on the lawsuit, not just the company's.\n\n→ AG Paxton: ChatGPT surfaced self-harm content to minors, cites a 16-year-old's death\n→ Claims Altman personally overruled staff who wanted more safety testing before GPT-4o shipped\n→ Wants: ChatGPT banned for Texas minors, court review of future models, up to $10K per violation\n→ Comes days after 8 other states sued OpenAI separately\n\nthe guy who runs the company is now the one named in the suit.",
     "image_url": null,
     "status": "queued"
   }
